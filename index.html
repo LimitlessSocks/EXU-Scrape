@@ -14,9 +14,12 @@
 <body>
 <h1>EXU Card Search [THIS SITE IS A WORK IN PROGRESS!]</h1>
 <h2>Please report all bugs to Sock#3222</h2>
-<button id="search">Search</button> Auto search? <input id=autoSearch type=checkbox>
-<div id=searchParamters>
-    <table>
+<button id="search">Search</button> Auto search? <input id=autoSearch type=checkbox checked>
+<div id=searchParamters><div>
+    <table id=mainStats>
+        <tr>
+            <th colspan=4>Primary Stats</th>
+        </tr>
         <tr>
             <td>Card name:</td>
             <td><input id="cardName"></td>
@@ -41,7 +44,41 @@
             </td>
         </tr>
     </table>
-</div>
+    <table id=conditionalStats>
+        <tr class="ifMonster ifSpell ifTrap">
+            <th colspan=2>Secondary Stats</th>
+        </tr>
+        <tr class="ifMonster">
+            <td>Level/Rank/Link Rating:</td>
+            <td><input type=number id=cardLevel></td>
+        </tr>
+        <tr class="ifSpell">
+            <td>Kind</td>
+            <td>
+                <select id="cardSpellKind">
+                    <option value=""></option>
+                    <option value=Normal>Normal Spell</option>
+                    <option value=Quick-Play>Quick-Play Spell</option>
+                    <option value=Field>Field Spell</option>
+                    <option value=Continuous>Continuous Spell</option>
+                    <option value=Ritual>Ritual Spell</option>
+                    <option value=Equip>Equip Spell</option>
+                </select>
+            </td>
+        </tr>
+        <tr class="ifTrap">
+            <td>Kind</td>
+            <td>
+                <select id="cardTrapKind">
+                    <option value=""></option>
+                    <option value=Normal>Normal Trap</option>
+                    <option value=Continuous>Continuous Card</option>
+                    <option value=Counter>Counter Card</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</div></div>
 <h2>Results</h2>
 <h3>Results found: <span id=resultCount>n/a</span></h3>
 <button id=previousPage>&lt;</button> Showing page <span id=currentPage>X</span> of <span id=pageCount>X</span> <button id=nextPage>&gt;</button>

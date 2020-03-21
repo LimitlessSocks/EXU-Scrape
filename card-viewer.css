@@ -15,6 +15,11 @@ p {
     line-height: 29px;
 }
 
+/* initially off */
+.ifMonster, .ifBackrow {
+    display: none;
+}
+
 button {
     padding: 5px;
     background: #330033;
@@ -24,6 +29,19 @@ button {
 }
 button:hover {
     background: #552255;
+}
+input, select {
+    background: #330033;
+    color: white;
+    border: 1px solid #eeaaee;
+    padding: 3px;
+}
+
+#searchParamters > div {
+    background: rgb(51, 0, 51, 0.8);
+    padding: 8px;
+    width: auto;
+    display: inline-block;
 }
 
 .result {

@@ -87,13 +87,20 @@ CardViewer.Filters.getFilter = (key) =>
     CardViewer.Filters.Dictionary[key];
 
 CardViewer.query = function () {
-    return {
+    let baseStats = {
         name:       CardViewer.Elements.cardName.val(),
         effect:     CardViewer.Elements.cardDescription.val(),
         type:       CardViewer.Elements.cardType.val(),
         id:         CardViewer.Elements.cardId.val(),
         author:     CardViewer.Elements.cardAuthor.val(),
     };
+    if(CardViewer.Elements.cardSpellKind.is(":visible")) {
+        baseStats.kind = CardViewer.Elements.cardSpellKind.val();
+    }
+    else if(CardViewer.Elements.cardTrapKind.is(":visible")) {
+        baseStats.kind = CardViewer.Elements.cardTrapKind.val();
+    }
+    return baseStats;
 };
 
 CardViewer.simplifyText = (text) =>
@@ -119,6 +126,10 @@ CardViewer.createFilter = function (query) {
         // author filter
         CardViewer.textComparator(query.author, _F.propda("username")),
     ];
+    
+    if(query.kind) {
+        filters.push(CardViewer.textComparator(query.kind, _F.propda("type")));
+    }
     
     return (card) => filters.every(filter => filter(card));
 };
@@ -222,9 +233,7 @@ CardViewer.composeResult = function (card) {
     }
     else {
         attribute.attr("src", getAttribute(card.card_type));
-        if(card.type !== "Normal") {
-            marking.append($("<img>").attr("src", getIcon(card.type)));
-        }
+        marking.append($("<img>").attr("src", getIcon(card.type)));
     }
     
     res.append($("<div class=result-inner>").append(id, name, author, stats,
@@ -266,6 +275,11 @@ let onLoad = async function () {
     CardViewer.Elements.nextPage = $("#nextPage");
     CardViewer.Elements.previousPage = $("#previousPage");
     CardViewer.Elements.cardId = $("#cardId");
+    CardViewer.Elements.ifMonster = $(".ifMonster");
+    CardViewer.Elements.ifSpell = $(".ifSpell");
+    CardViewer.Elements.ifTrap = $(".ifTrap");
+    CardViewer.Elements.cardSpellKind = $("#cardSpellKind");
+    CardViewer.Elements.cardTrapKind = $("#cardTrapKind");
     
     CardViewer.Elements.search.click(CardViewer.submit);
     CardViewer.Elements.previousPage.click(CardViewer.Search.previousPage);
@@ -275,6 +289,31 @@ let onLoad = async function () {
         CardViewer.autoSearch = this.checked;
     });
     CardViewer.Elements.autoSearch.change();
+    
+    CardViewer.Elements.cardType.change(function () {
+        let val = CardViewer.Elements.cardType.val();
+        if(val === "spell") {
+            CardViewer.Elements.ifMonster.toggle(false);
+            CardViewer.Elements.ifTrap.toggle(false);
+            CardViewer.Elements.ifSpell.toggle(true);
+        }
+        else if(val === "trap") {
+            CardViewer.Elements.ifMonster.toggle(false);
+            CardViewer.Elements.ifSpell.toggle(false);
+            CardViewer.Elements.ifTrap.toggle(true);
+        }
+        else if(val === "monster") {
+            CardViewer.Elements.ifTrap.toggle(false);
+            CardViewer.Elements.ifSpell.toggle(false);
+            CardViewer.Elements.ifMonster.toggle(true);
+        }
+        else {
+            CardViewer.Elements.ifMonster.toggle(false);
+            CardViewer.Elements.ifTrap.toggle(false);
+            CardViewer.Elements.ifSpell.toggle(false);
+        }
+    });
+    CardViewer.Elements.cardType.change();
     
     const elementChanged = function () {
         if(CardViewer.autoSearch) {
