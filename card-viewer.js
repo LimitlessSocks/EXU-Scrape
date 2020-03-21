@@ -138,7 +138,17 @@ CardViewer.filter = function (query) {
     return cards;
 };
 
+const getResource = (...path) =>
+    `https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/res/${path.join("/")}.png`;
 
+const getAttribute = (attr) =>
+    getResource("attribute", attr[0] + attr.slice(1).toLowerCase());
+
+const getStar = (star) =>
+    getResource("stars", star);
+
+const getIcon = (icon) =>
+    getResource("icon", icon);
 
 CardViewer.composeResult = function (card) {
     let img = $("<img class=img-result>").attr("src", card.src);
@@ -159,22 +169,37 @@ CardViewer.composeResult = function (card) {
     
     let stats = $("<div>");
     
+    let attribute = $("<img>");
+    let marking = $("<div>");
+    
     if(card.card_type === "Monster") {
-        name.prepend(
+        attribute.attr("src", getAttribute(card.attribute))
         let kind = [];
         
         let levelIndicator;
+        let star;
         switch(card.monster_color) {
             case "Link":
                 levelIndicator = "Link-";
                 break;
             case "Xyz":
                 levelIndicator = "Rank ";
+                star = "Xyz";
                 break;
             default:
                 levelIndicator = "Level ";
+                star = "Normal";
                 break;
         }
+        
+        if(star) {
+            for(let i = 0; i < card.level; i++) {
+                marking.append(
+                    $("<img class=star>").attr("src", getStar(star))
+                );
+            }
+        }
+        
         kind.push(levelIndicator + card.level);
         kind.push(card.attribute);
         kind.push(card.type);
@@ -195,11 +220,15 @@ CardViewer.composeResult = function (card) {
             stats.append($("<p>").text(`ATK/${card.atk} DEF/${card.def}`));
         }
     }
+    else {
+        attribute.attr("src", getAttribute(card.card_type));
+        marking.append($("<img>").attr("src", getIcon(card.type)));
+    }
     
     res.append($("<div class=result-inner>").append(id, name, author, stats,
         $("<table>").append(
             $("<tr>").append(
-                $("<td class=result-img-holder>").append(img),
+                $("<td class=result-img-holder>").append(img, attribute, marking),
                 $("<td class=result-effect>").append(effect)
             )
         )

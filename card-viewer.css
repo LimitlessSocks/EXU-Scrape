@@ -38,9 +38,15 @@ button:hover {
 
 .result-img-holder {
     vertical-align: center;
+    text-align: center;
 }
 .result-effect {
     vertical-align: top;
+}
+
+img.star {
+    width: 8%;
+    height: 8%;
 }
 
 .img-result {
@@ -48,7 +54,6 @@ button:hover {
     height: 128px;
     padding: 10px;
     border-radius: 15px;
-    display: block;
     margin: auto 0;
 }
 
