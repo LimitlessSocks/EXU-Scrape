@@ -94,11 +94,15 @@ CardViewer.query = function () {
         id:         CardViewer.Elements.cardId.val(),
         author:     CardViewer.Elements.cardAuthor.val(),
     };
-    if(CardViewer.Elements.cardSpellKind.is(":visible")) {
+    if(CardViewer.Elements.spellStats.is(":visible")) {
         baseStats.kind = CardViewer.Elements.cardSpellKind.val();
     }
-    else if(CardViewer.Elements.cardTrapKind.is(":visible")) {
+    else if(CardViewer.Elements.trapStats.is(":visible")) {
         baseStats.kind = CardViewer.Elements.cardTrapKind.val();
+    }
+    else if(CardViewer.Elements.monsterStats.is(":visible")) {
+        baseStats.level = CardViewer.Elements.cardLevel.val();
+        baseStats.monsterType = CardViewer.Elements.cardMonsterType.val();
     }
     return baseStats;
 };
@@ -111,6 +115,10 @@ CardViewer.textComparator = (needle, fn = _F.id) => {
     let simplified = CardViewer.simplifyText(needle);
     return (card) =>
         fn(card).toString().toLowerCase().indexOf(simplified) !== -1;
+};
+CardViewer.exactComparator = (needle, fn = _F.id) => {
+    return (card) =>
+        fn(card) === needle;
 };
 
 CardViewer.createFilter = function (query) {
@@ -128,7 +136,18 @@ CardViewer.createFilter = function (query) {
     ];
     
     if(query.kind) {
-        filters.push(CardViewer.textComparator(query.kind, _F.propda("type")));
+        filters.push(CardViewer.exactComparator(query.kind, _F.propda("type")));
+    }
+    
+    if(query.level) {
+        let level = parseInt(query.level, 10);
+        if(!Number.isNaN(level)) {
+            filters.push(CardViewer.exactComparator(level, _F.propda("level")));
+        }
+    }
+    
+    if(query.monsterType) {
+        filters.push(CardViewer.exactComparator(query.monsterType, _F.propda("type")));
     }
     
     return (card) => filters.every(filter => filter(card));
@@ -280,6 +299,12 @@ let onLoad = async function () {
     CardViewer.Elements.ifTrap = $(".ifTrap");
     CardViewer.Elements.cardSpellKind = $("#cardSpellKind");
     CardViewer.Elements.cardTrapKind = $("#cardTrapKind");
+    CardViewer.Elements.monsterStats = $("#monsterStats");
+    CardViewer.Elements.spellStats = $("#spellStats");
+    CardViewer.Elements.trapStats = $("#trapStats");
+    CardViewer.Elements.cardLevel = $("#cardLevel");
+    CardViewer.Elements.cardMonsterCategory = $("#cardMonsterCategory");
+    CardViewer.Elements.cardMonsterType = $("#cardMonsterType");
     
     CardViewer.Elements.search.click(CardViewer.submit);
     CardViewer.Elements.previousPage.click(CardViewer.Search.previousPage);
@@ -326,6 +351,28 @@ let onLoad = async function () {
     }
     
     CardViewer.submit();
+    
+    let updateBackground = () => {
+        if(localStorage.getItem("EXU_REDOX_MODE") === "true") {
+            $("html").css("background-image", "url(\"" + getResource("bg", "godzilla") + "\")");
+            $("html").css("background-size", "100% 100%");
+        }
+        else {
+            $("html").css("background-image", "");
+            $("html").css("background-size", "");
+        }
+    };
+    
+    $(window).keydown((ev) => {
+        let orig = ev.originalEvent;
+        if(ev.altKey && ev.key === "R") {
+            let wasActive = localStorage.getItem("EXU_REDOX_MODE") === "true";
+            localStorage.setItem("EXU_REDOX_MODE", !wasActive);
+            updateBackground();
+        }
+    });
+    
+    updateBackground();
 };
 
 window.addEventListener("load", onLoad);

@@ -48,35 +48,97 @@
         <tr class="ifMonster ifSpell ifTrap">
             <th colspan=2>Secondary Stats</th>
         </tr>
-        <tr class="ifMonster">
-            <td>Level/Rank/Link Rating:</td>
-            <td><input type=number id=cardLevel></td>
-        </tr>
-        <tr class="ifSpell">
-            <td>Kind</td>
-            <td>
-                <select id="cardSpellKind">
-                    <option value=""></option>
-                    <option value=Normal>Normal Spell</option>
-                    <option value=Quick-Play>Quick-Play Spell</option>
-                    <option value=Field>Field Spell</option>
-                    <option value=Continuous>Continuous Spell</option>
-                    <option value=Ritual>Ritual Spell</option>
-                    <option value=Equip>Equip Spell</option>
-                </select>
-            </td>
-        </tr>
-        <tr class="ifTrap">
-            <td>Kind</td>
-            <td>
-                <select id="cardTrapKind">
-                    <option value=""></option>
-                    <option value=Normal>Normal Trap</option>
-                    <option value=Continuous>Continuous Card</option>
-                    <option value=Counter>Counter Card</option>
-                </select>
-            </td>
-        </tr>
+        <tbody class="ifMonster" id="monsterStats">
+            <tr>
+                <td>Category</td>
+                <td>
+                    <select id="cardMonsterCategory">
+                        <option value=""></option>
+                        <option value="Normal">Normal</option>
+                        <option value="Effect">Effect</option>
+                        <option value="Ritual">Ritual</option>
+                        <option value="Fusion">Fusion</option>
+                        <option value="Synchro">Synchro</option>
+                        <option value="Xyz">Xyz</option>
+                        <option value="Pendulum">Pendulum</option>
+                        <option value="Link">Link</option>
+                        <option value="Leveled">Leveled</option>
+                        <option value="Extra Deck">Extra Deck</option>
+                        <option value="Non-Effect">Non-Effect</option>
+                        <option value="Gemini">Gemini</option>
+                        <option value="Flip">Flip</option>
+                        <option value="Spirit">Spirit</option>
+                        <option value="Toon">Toon</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Type</td>
+                <td>
+                    <select id="cardMonsterType">
+                        <option value=""></option>
+                        <option value="Aqua">Aqua</option>
+                        <option value="Beast">Beast</option>
+                        <option value="Beast-Warrior">Beast-Warrior</option>
+                        <option value="Cyberse">Cyberse</option>
+                        <option value="Dinosaur">Dinosaur</option>
+                        <option value="Dragon">Dragon</option>
+                        <option value="Fairy">Fairy</option>
+                        <option value="Fiend">Fiend</option>
+                        <option value="Fish">Fish</option>
+                        <option value="Insect">Insect</option>
+                        <option value="Machine">Machine</option>
+                        <option value="Plant">Plant</option>
+                        <option value="Psychic">Psychic</option>
+                        <option value="Pyro">Pyro</option>
+                        <option value="Reptile">Reptile</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Sea Serpent">Sea Serpent</option>
+                        <option value="Spellcaster">Spellcaster</option>
+                        <option value="Thunder">Thunder</option>
+                        <option value="Warrior">Warrior</option>
+                        <option value="Winged Beast">Winged Beast</option>
+                        <option value="Wyrm">Wyrm</option>
+                        <option value="Zombie">Zombie</option>
+                        <option value="Creator God">Creator God</option>
+                        <option value="Divine-Beast">Divine-Beast</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Level/Rank/Link Rating:</td>
+                <td><input type=number id=cardLevel min=0 max=12></td>
+            </tr>
+        </tbody>
+        <tbody class="ifSpell" id="spellStats">
+            <tr>
+                <td>Kind</td>
+                <td>
+                    <select id="cardSpellKind">
+                        <option value=""></option>
+                        <option value=Normal>Normal Spell</option>
+                        <option value=Quick-Play>Quick-Play Spell</option>
+                        <option value=Field>Field Spell</option>
+                        <option value=Continuous>Continuous Spell</option>
+                        <option value=Ritual>Ritual Spell</option>
+                        <option value=Equip>Equip Spell</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+        <tbody class="ifTrap" id="trapStats">
+            <tr>
+                <td>Kind</td>
+                <td>
+                    <select id="cardTrapKind">
+                        <option value=""></option>
+                        <option value=Normal>Normal Trap</option>
+                        <option value=Continuous>Continuous Card</option>
+                        <option value=Counter>Counter Card</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
     </table>
 </div></div>
 <h2>Results</h2>

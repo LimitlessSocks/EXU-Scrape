@@ -16,7 +16,7 @@ p {
 }
 
 /* initially off */
-.ifMonster, .ifBackrow {
+.ifMonster, .ifSpell, .ifTrap {
     display: none;
 }
 
