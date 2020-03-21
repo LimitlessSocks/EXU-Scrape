@@ -3,9 +3,46 @@
 <head>
     <title>EXU Card Viewer</title>
     <meta charset="UTF-8">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
     <script src="./card-viewer.js"></script>
+    <link rel="STYLESHEET" href="card-viewer.css">
+    
 </head>
 <body>
-
+<h1>EXU Card Search [THIS SITE IS A WORK IN PROGRESS!]</h1>
+<h2>Please report all bugs to Sock#3222</h2>
+<button id="search">Search</button> Auto search? <input id=autoSearch type=checkbox>
+<div id=searchParamters>
+    <table>
+        <tr>
+            <td>Card name:</td>
+            <td><input id="cardName"></td>
+            <td>Card ID:</td>
+            <td><input id="cardId" type=number></td>
+        </tr>
+        <tr>
+            <td>Card description:</td>
+            <td><input id="cardDescription"></td>
+        </tr>
+        <tr>
+            <td>Card type:</td>
+            <td>
+                <select id="cardType">
+                    <option value=any></option>
+                    <option value=monster>Monster Card</option>
+                    <option value=spell>Spell Card</option>
+                    <option value=trap>Trap Card</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</div>
+<h2>Results</h2>
+<h3>Results found: <span id=resultCount>n/a</span></h3>
+<button id=previousPage>&lt;</button> Showing page <span id=currentPage>X</span> of <span id=pageCount>X</span> <button id=nextPage>&gt;</button>
+<div id=results>nothing here</div>
 </body>
 </html>

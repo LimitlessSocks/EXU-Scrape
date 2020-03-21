@@ -1,3 +1,12 @@
+VALID_OPERATIONS = ["append", "refresh"]
+operation = ARGV[0]
+
+
+unless VALID_OPERATIONS.include? operation
+    STDERR.puts "Expected an operation [append, refresh], got: #{operation.inspect}"
+    exit 1
+end
+
 require 'capybara'
 start = Time.now
 
@@ -77,19 +86,11 @@ def comb_deck(id)
 end
 
 decks = [
-    3156058, #starless-knights
-    4810529, #blue-eyes support
-    4757288, #panda
-    4746493, #servus
-    3180755, #earthbound prisoners
-    4137538, #necro outlaw
-]
-decks = [
-    3156058, #Starless Knight
+    # 3156058, #Starless Knight - UNAPPROVED?
     4137538, #Necroutlaw
     4327693, #Lacrimosa
     4073173, #Fabled II
-    4327347, #Devaliers
+    # 4327347, #Devaliers
     4374978, #Insidious
     4367824, #Death Aspects
     3234334, #Chitinmera
@@ -106,7 +107,7 @@ decks = [
     4523067, #Voltron
     4617451, #Ordarim
     4385932, #Starbaric Crystal Beasts
-    4540185, #Emereheart
+    4540185, #Emereheart    
     4759875, #Goo Transformation II
     4226313, #Arcane Armament
     3734721, #Carcharrack
@@ -128,17 +129,18 @@ decks = [
     4327992, #Serpenteam
     4936132, #F.A Support
     4177191, #Lightray Support
+    4894268, #Kaiju Support
 ] + [
     4905031, #Custom Support - EXU Decks
-    4904905, #EXU Singles - Generic Monsters
     4849091, #EXU Singles - Generic Spells
     4904924, #EXU Singles - Generic Traps
     4904981, #Custom Support - TCG Decks
     
     5099556, #NOEDIT.1
+    4904905, #EXU Singles - Generic Monsters
 ]
 
-
+# if VALID_OPERATIONS
 database = {}
 counts = Hash.new 0
 decks.each { |id|
@@ -154,6 +156,6 @@ finish = Time.now
 
 puts "Time elapsed: #{finish - start}s"
 
-
+STDIN.gets
 
 

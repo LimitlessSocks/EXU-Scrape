@@ -1,0 +1,154 @@
+html {
+    background-image: url("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+    color: white;
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    padding: 5px;
+    background: #330033;
+    border: 1px solid #eeaaee;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+    background: #552255;
+}
+
+.result {
+    border-radius: 10px;
+    /* width: 40%; */
+    /* display: inline-block; */
+    width: 60%;
+    margin: 10px;
+    overflow: hidden;
+}
+.result-inner {
+    padding: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+}
+
+.result-img-holder {
+    vertical-align: center;
+}
+.result-effect {
+    vertical-align: top;
+}
+
+.img-result {
+    width: 128px;
+    height: 128px;
+    padding: 10px;
+    border-radius: 15px;
+    display: block;
+    margin: auto 0;
+}
+
+.result h4.result-id {
+    float: right;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.result.spell {
+    background: rgb(0, 134, 114, 0.8);
+}
+.result.trap {
+    background: rgba(162, 17, 99, 0.8);
+}
+
+.result.monster {
+    background: red; /* should never be seen */
+}
+.result.monster.effect {
+    background: rgba(173, 76, 34, 0.8);
+}
+.result.monster.effect.pendulum {
+    background: linear-gradient(180deg,
+        rgba(173,76,34,0.8) 15%,
+        rgba(0, 134, 114, 0.8) 85%
+    );
+}
+.result.monster.ritual {
+    background: rgba(75, 112, 185, 0.8);
+}
+.result.monster.ritual.pendulum {
+    background: linear-gradient(180deg,
+        rgba(75, 112, 185, 0.8) 15%,
+        rgba(0, 134, 114, 0.8) 85%
+    );
+}
+.result.monster.xyz {
+    background: rgba(19, 22, 25, 0.8);
+}
+.result.monster.xyz.pendulum {
+    background: linear-gradient(180deg,
+        rgba(19, 22, 25, 0.8) 15%,
+        rgba(0, 134, 114, 0.8) 85%
+    );
+}
+.result.monster.fusion {
+    background: rgba(125, 61, 138, 0.8);
+}
+.result.monster.fusion.pendulum {
+    background: linear-gradient(180deg,
+        rgba(125, 61, 138, 0.8) 15%,
+        rgba(0, 134, 114, 0.8) 85%
+    );
+}
+.result.monster.normal {
+    background: rgba(195, 148, 71, 0.8);
+}
+.result.monster.normal.pendulum {
+    background: linear-gradient(180deg,
+        rgba(195, 148, 71, 0.8) 15%,
+        rgba(0, 134, 114, 0.8) 85%
+    );
+}
+
+.result.monster.synchro {
+    background: rgba(155, 155, 156, 0.8);
+}
+.result.monster.synchro.pendulum {
+    background: linear-gradient(180deg,
+        rgba(155, 155, 156, 0.8) 15%,
+        rgba(0, 134, 114, 0.8) 85%
+    );
+}
+
+.result.monster.link {
+    background: none;
+    background-image: url("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/link-bg.png");
+    background-size: cover;
+}
+.result.monster.link .result-inner {
+    background: rgba(17, 76, 135, 0.8);
+    background: linear-gradient(180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(75, 112, 185, 0.8) 50%
+    );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
