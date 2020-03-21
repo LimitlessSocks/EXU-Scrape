@@ -1,5 +1,5 @@
 html {
-    background-image: url("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/background.jpg");
+    background-image: url("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/res/bg/background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -128,7 +128,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .result.monster.link {
     background: none;
-    background-image: url("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/link-bg.png");
+    background-image: url("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/res/bg/link-bg.png");
     background-size: cover;
 }
 .result.monster.link .result-inner {

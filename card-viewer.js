@@ -138,6 +138,8 @@ CardViewer.filter = function (query) {
     return cards;
 };
 
+
+
 CardViewer.composeResult = function (card) {
     let img = $("<img class=img-result>").attr("src", card.src);
     let name = $("<h3 class=result-name>").text(card.name);
@@ -158,6 +160,7 @@ CardViewer.composeResult = function (card) {
     let stats = $("<div>");
     
     if(card.card_type === "Monster") {
+        name.prepend(
         let kind = [];
         
         let levelIndicator;
