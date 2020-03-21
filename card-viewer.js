@@ -41,6 +41,9 @@ CardViewer.Search.processResults = function (val) {
 
 CardViewer.Search.showPage = function (id = CardViewer.Search.currentPage) {
     CardViewer.Elements.results.empty();
+    if(id < 0 || id >= CardViewer.Search.pages.length) {
+        return;
+    }
     for(let result of CardViewer.Search.pages[id]) {
         let composed = CardViewer.composeResult(result);
         CardViewer.Elements.results.append(composed);
@@ -89,6 +92,7 @@ CardViewer.query = function () {
         effect:     CardViewer.Elements.cardDescription.val(),
         type:       CardViewer.Elements.cardType.val(),
         id:         CardViewer.Elements.cardId.val(),
+        author:     CardViewer.Elements.cardAuthor.val(),
     };
 };
 
@@ -99,7 +103,7 @@ CardViewer.simplifyText = (text) =>
 CardViewer.textComparator = (needle, fn = _F.id) => {
     let simplified = CardViewer.simplifyText(needle);
     return (card) =>
-        fn(card).toString().toLowerCase().indexOf(needle) !== -1;
+        fn(card).toString().toLowerCase().indexOf(simplified) !== -1;
 };
 
 CardViewer.createFilter = function (query) {
@@ -112,6 +116,8 @@ CardViewer.createFilter = function (query) {
         CardViewer.textComparator(query.id, _F.propda("id")),
         // effect filter
         CardViewer.textComparator(query.effect, _F.propda("effect")),
+        // author filter
+        CardViewer.textComparator(query.author, _F.propda("username")),
     ];
     
     return (card) => filters.every(filter => filter(card));
@@ -168,6 +174,7 @@ CardViewer.composeResult = function (card) {
         }
         kind.push(levelIndicator + card.level);
         kind.push(card.attribute);
+        kind.push(card.type);
         kind.push(card.monster_color);
         
         if(card.pendulum) {
@@ -213,6 +220,7 @@ let onLoad = async function () {
     CardViewer.Elements.searchParameters = $("#searchParamters");
     
     CardViewer.Elements.cardType = $("#cardType");
+    CardViewer.Elements.cardAuthor = $("#cardAuthor");
     CardViewer.Elements.search = $("#search");
     CardViewer.Elements.results = $("#results");
     CardViewer.Elements.autoSearch = $("#autoSearch");
