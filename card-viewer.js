@@ -222,7 +222,9 @@ CardViewer.composeResult = function (card) {
     }
     else {
         attribute.attr("src", getAttribute(card.card_type));
-        marking.append($("<img>").attr("src", getIcon(card.type)));
+        if(card.type !== "Normal") {
+            marking.append($("<img>").attr("src", getIcon(card.type)));
+        }
     }
     
     res.append($("<div class=result-inner>").append(id, name, author, stats,

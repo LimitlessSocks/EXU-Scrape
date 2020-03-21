@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap');
+
 html {
     background-image: url("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/res/bg/background.jpg");
     background-repeat: no-repeat;
@@ -5,10 +7,12 @@ html {
     background-size: cover;
     background-color: black;
     color: white;
+    font-family: "Poppins", "Gadugi", sans-serif;
 }
 
 p {
     margin: 0;
+    line-height: 29px;
 }
 
 button {
