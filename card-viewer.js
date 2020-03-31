@@ -140,10 +140,10 @@ CardViewer.Search.showPage = function (id = CardViewer.Search.currentPage) {
     }
     let table = $("<table class=pagetable>");
     let row = [];
-    for(let result of CardViewer.Search.pages[id]) {
+    CardViewer.Search.pages[id].forEach((result, i, arr) => {
         let composed = CardViewer.composeResult(result);
         row.push(composed);
-        if(row.length === 2) {
+        if(row.length === 2 || i + 1 === arr.length) {
             let tr = $("<tr>");
             for(let c of row) {
                 tr.append($("<td>").append(c));
@@ -151,7 +151,8 @@ CardViewer.Search.showPage = function (id = CardViewer.Search.currentPage) {
             table.append(tr);
             row = [];
         }
-    }
+    });
+    
     CardViewer.Elements.results.append(table);
     // humans measure in 1-based indices
     CardViewer.Elements.currentPage.text(id + 1);
