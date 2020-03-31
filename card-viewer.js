@@ -485,7 +485,7 @@ CardViewer.composeResult = function (card) {
     if(card.exu_limit !== 3) {
         let banMarker = $("<img class=banicon>");
         banMarker.attr("src", BANLIST_ICONS[card.exu_limit]);
-        marking.prepend(banMarker);
+        marking.append($("<div>").append(banMarker));
     }
     
     res.append($("<div class=result-inner>").append(id, name, author, stats,

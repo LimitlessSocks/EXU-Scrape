@@ -63,12 +63,15 @@ input, select {
 }
 
 .result-img-holder {
-    vertical-align: center;
     text-align: center;
     width: 185px;
 }
 .result-effect {
     vertical-align: top;
+}
+
+.pagetable > tr > td {
+    width: 50%;
 }
 
 img.star {
