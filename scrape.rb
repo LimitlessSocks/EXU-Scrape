@@ -95,14 +95,14 @@ decks = [
     4367824, #Death Aspects
     3234334, #Chitinmera
     4376011, #Combat Mechs
-    4229422, #Dreadful
+    # 4229422, #Dreadful
     4251928, #Traptrix (Support)
     4436271, #Tsukumogami
     4298315, #Nordic (Support) - Might of Valhalla
     # 4484782, #Antiqua - ERROR DECK NOT FOUND
-    4415708, #Tenor Maidens
+    4415708, #Tensor Maidens
     4608403, #Goo Transformation
-    4395035, #Astral Dragons
+    # 4395035, #Astral Dragons
     4540976, #Zoodiac Support
     4523067, #Voltron
     4617451, #Ordarim
@@ -120,7 +120,7 @@ decks = [
     4959967, #Ravager
     4963487, #Battletech
     4547335, #Titanus
-    4466861, #Statues
+    # 4466861, #Statues
     4570517, #Harbinger
     4904567, #Pyrodent
     5003800, #Poppin Wave 2
@@ -130,14 +130,23 @@ decks = [
     4936132, #F.A Support
     4177191, #Lightray Support
     4894268, #Kaiju Support
+    4991716, #Modernotes
+    3669535, #Fundamental Dragons
+    3820609, #Amphibious Bugroth
+    5132465, #Esper V (MR5 Psychic Deck)
+    5089829, #Grand Knight
+    2788655, #Ravager (V2)
+    5075635, #Starships
+    5176216, #Antiqua (Updated Link)
+    4624534, #Harokais
+    5183280, #Titan Hunter
 ] + [
-    4905031, #Custom Support - EXU Decks
-    4849091, #EXU Singles - Generic Spells
-    4904924, #EXU Singles - Generic Traps
-    4904981, #Custom Support - TCG Decks
-    
-    5099556, #NOEDIT.1
-    4904905, #EXU Singles - Generic Monsters
+    5180324, #Semi-Generic Monsters
+    5179964, #Generic Monsters
+    5179965, #Generic Spells
+    5179966, #Generic Traps
+    5179972, #TCG Support
+    5179969, #Customs Support
 ]
 
 # if VALID_OPERATIONS
