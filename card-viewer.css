@@ -94,6 +94,14 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(162, 17, 99, 0.8);
 }
 
+.banicon {
+    width: 24px;
+}
+.markings img {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
 .result.monster {
     background: red; /* should never be seen */
 }

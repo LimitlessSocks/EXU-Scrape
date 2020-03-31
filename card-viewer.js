@@ -18,6 +18,100 @@ const CardViewer = {
     query: null,
 };
 
+const Banlist = {
+    // banned - tcg cards
+    91869203: 0,    // Amazoness Archer
+    65064143: 0,    // Anti-Aircraft Flower
+    74440055: 0,    // Cactus Fighter
+    11384280: 0,    // Cannon Soldier
+    14702066: 0,    // Cannon Soldier MK-2
+    67316075: 0,    // Darklord Nurse Reficule
+    33396948: 0,    // Exodia the Forbidden One
+    53257892: 0,    // Gigaplant
+    38572779: 0,    // Miscellaneousaurus
+    27869883: 0,    // Shadowpriestess of Ohm
+    63012333: 0,    // Soul-Absorbing Bone Tower
+    91258852: 0,    // SPYRAL Master Plan
+    35699   : 0,    // SPYRAL Sleeper
+    79875176: 0,    // Toon Cannon Soldier
+    6602300:  0,    // Blaze Fenix, the Burning Bombardment Bird
+    37818794: 0,    // Dragun of Red-Eyes
+    94977269: 0,    // El Shaddoll Winda
+    47611119: 0,    // Gem-Knight Lady Lapis Lazuli
+    76815942: 0,    // Lyrilusc - Independent Nightingale
+    4280258:  0,    // Apollousa, Bow of the Goddess
+    50588353: 0,    // Crystron Halqifibrax
+    59934749: 0,    // Isolde, Two Tales of the Noble Knights
+    83152482: 0,    // Union Carrier
+    15939229: 0,    // D/D/D Duo-Dawn King Kali Yuga
+    52653092: 0,    // Number S0: Utopic ZEXAL
+    88581108: 0,    // True King of All Calamities
+    85668449: 0,    // Brain Research Lab
+    85562745: 0,    // Dark Room of Nightmare
+    76375976: 0,    // Mystic Mine
+    27970830: 0,    // Gateway of the Six
+    14391920: 0,    // Inferno Tempest
+    91819979: 0,    // Magical Blast
+    5990062:  0,    // Reversal Quiz
+    24010609: 0,    // Sky Striker Mecha Modules - Multirole
+    61032879: 0,    // Synchronized Realm
+    68392533: 0,    // Telekinetic Charging Cell
+    40633297: 0,    // Bad Reaction to Simochi
+    48716527: 0,    // The Monarchs Erupt
+    // limited - TCG cards
+    53804307: 1,    // Blaster, Dragon Ruler of Infernos
+    83190280: 1,    // Lunalight Tiger
+    40318957: 1,    // Performapal Skullcrobat Joker
+    16428514: 1,    // Subterror Guru
+    30741503: 1,    // Galatea, the Orcust Automaton
+    74997493: 1,    // Saryuja Skull Dread
+    87871125: 1,    // Salamangreat Sunlight Wolf
+    93854893: 1,    // Dingirsu, the Orcust of the Evening Star
+    18144506: 1,    // Harpie's Feather Duster
+    // semi-limited - TCG cards
+    27552504: 2,    // Beatrice, Lady of the Eternal
+    2295440:  2,    // One for One
+    // unlimited - TCG cards
+    7902349:  3,    // Left Arm of the Forbidden One
+    44519536: 3,    // Left Leg of the Forbidden One
+    70903634: 3,    // Right Arm of the Forbidden One
+    8124921:  3,    // Right Leg of the Forbidden One
+    57143342: 3,    // Cir, Malebranche of the Burning Abyss
+    20758643: 3,    // Graff, Malebranche of the Burning Abyss
+    10802915: 3,    // Tour Guide From the Underworld
+    48063985: 3,    // Ritual Beast Ulti-Cannahawk
+    // 70369116: 3,    // Predaplant Verte Anaconda
+    37520316: 3,    // Mind Control
+    22842126: 3,    // Pantheism of the Monarchs
+    24940422: 3,    // Sekka's Light
+    89208725: 3,    // Metaverse
+    23002292: 3,    // Red Reboot
+    35125879: 3,    // True King's Return
+    // banned - EXU cards
+    787258:   0,    // Kanaloa, the Ultimate Carcharrack
+    1310678:  0,    // Titanus - Queen's Hideout
+    953394:   0,    // Supreme Astral Dragon Siegwurm-Nova
+    438478:   0,    // Astral Armored Tower
+    787290:   0,    // Submerged City of the Carcharracks
+    // limited - EXU cards
+    1310651:  1,    // Titanus - Fire Demon's Lair
+    787295:   1,    // First Sail of the Carcharracks
+    1061760:  1,    // Sacrificial Soul Reborn
+    1169172:  1,    // Thunder Dragon Rider
+};
+
+CardViewer.Database.banlist = Banlist;
+
+CardViewer.Database.setInitial = function (db) {
+    for(let [id, info] of Object.entries(db)) {
+        info.exu_limit = Banlist[id];
+        if(typeof info.exu_limit === "undefined") {
+            info.exu_limit = 3;
+        }
+    }
+    CardViewer.Database.cards = db;
+};
+
 // helper function methods
 const _F = {
     propda: (prop) => (obj) => obj[prop],
@@ -91,6 +185,7 @@ CardViewer.query = function () {
         name:       CardViewer.Elements.cardName.val(),
         effect:     CardViewer.Elements.cardDescription.val(),
         type:       CardViewer.Elements.cardType.val(),
+        limit:      CardViewer.Elements.cardLimit.val(),
         id:         CardViewer.Elements.cardId.val(),
         author:     CardViewer.Elements.cardAuthor.val(),
     };
@@ -103,6 +198,7 @@ CardViewer.query = function () {
     else if(CardViewer.Elements.monsterStats.is(":visible")) {
         baseStats.level = CardViewer.Elements.cardLevel.val();
         baseStats.monsterType = CardViewer.Elements.cardMonsterType.val();
+        baseStats.monsterCategory = CardViewer.Elements.cardMonsterCategory.val();
     }
     return baseStats;
 };
@@ -116,6 +212,9 @@ CardViewer.textComparator = (needle, fn = _F.id) => {
     return (card) =>
         fn(card).toString().toLowerCase().indexOf(simplified) !== -1;
 };
+CardViewer.textAnyComparator = (needle, fn = _F.id) =>
+    needle === "any" ? () => true : CardViewer.textComparator(needle, fn);
+
 CardViewer.exactComparator = (needle, fn = _F.id) => {
     return (card) =>
         fn(card) === needle;
@@ -133,6 +232,8 @@ CardViewer.createFilter = function (query) {
         CardViewer.textComparator(query.effect, _F.propda("effect")),
         // author filter
         CardViewer.textComparator(query.author, _F.propda("username")),
+        // limit filter
+        CardViewer.textAnyComparator(query.limit, _F.propda("exu_limit")),
     ];
     
     if(query.kind) {
@@ -148,6 +249,11 @@ CardViewer.createFilter = function (query) {
     
     if(query.monsterType) {
         filters.push(CardViewer.exactComparator(query.monsterType, _F.propda("type")));
+    }
+    
+    if(query.monsterCategory) {
+        // TODO: fix for other categories
+        filters.push(CardViewer.exactComparator(query.monsterCategory, _F.propda("monster_color")));
     }
     
     return (card) => filters.every(filter => filter(card));
@@ -180,6 +286,12 @@ const getStar = (star) =>
 const getIcon = (icon) =>
     getResource("icon", icon);
 
+const BANLIST_ICONS = {
+    0: getIcon("banlist-banned"),
+    1: getIcon("banlist-limited"),
+    2: getIcon("banlist-semilimited")
+};
+
 CardViewer.composeResult = function (card) {
     let img = $("<img class=img-result>").attr("src", card.src);
     let name = $("<h3 class=result-name>").text(card.name);
@@ -200,7 +312,7 @@ CardViewer.composeResult = function (card) {
     let stats = $("<div>");
     
     let attribute = $("<img>");
-    let marking = $("<div>");
+    let marking = $("<div class=markings>");
     
     if(card.card_type === "Monster") {
         attribute.attr("src", getAttribute(card.attribute))
@@ -255,6 +367,12 @@ CardViewer.composeResult = function (card) {
         marking.append($("<img>").attr("src", getIcon(card.type)));
     }
     
+    if(card.exu_limit !== 3) {
+        let banMarker = $("<img class=banicon>");
+        banMarker.attr("src", BANLIST_ICONS[card.exu_limit]);
+        marking.prepend(banMarker);
+    }
+    
     res.append($("<div class=result-inner>").append(id, name, author, stats,
         $("<table>").append(
             $("<tr>").append(
@@ -277,11 +395,12 @@ CardViewer.submit = function () {
 let onLoad = async function () {
     let response = await fetch("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/db.json");
     let db = await response.json();
-    CardViewer.Database.cards = db;
+    CardViewer.Database.setInitial(db);
     
     CardViewer.Elements.searchParameters = $("#searchParamters");
     
     CardViewer.Elements.cardType = $("#cardType");
+    CardViewer.Elements.cardLimit = $("#cardLimit");
     CardViewer.Elements.cardAuthor = $("#cardAuthor");
     CardViewer.Elements.search = $("#search");
     CardViewer.Elements.results = $("#results");
