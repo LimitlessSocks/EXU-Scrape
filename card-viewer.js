@@ -170,10 +170,95 @@ CardViewer.Filters.isSpell = (card) =>
 CardViewer.Filters.isTrap = (card) =>
     card.card_type === "Trap";
 
+CardViewer.Filters.monsterColorIs = (color) => (card) =>
+    card.monster_color === color;
+
+CardViewer.Filters.isLeveled = (card) =>
+    CardViewer.Filters.isMonster(card) &&
+    card.monster_color !== "Xyz" &&
+    card.monster_color !== "Link";
+
+let extraDeckColors = ["Fusion", "Synchro", "Xyz", "Link"];
+CardViewer.Filters.isExtraDeck = (card) =>
+    CardViewer.Filters.isMonster(card) &&
+    extraDeckColors.some(color => card.monster_color === color);
+
+CardViewer.Filters.isNormal = CardViewer.Filters.monsterColorIs("Normal");
+CardViewer.Filters.isEffect = CardViewer.Filters.monsterColorIs("Effect");
+CardViewer.Filters.isRitual = CardViewer.Filters.monsterColorIs("Ritual");
+CardViewer.Filters.isFusion = CardViewer.Filters.monsterColorIs("Fusion");
+CardViewer.Filters.isSynchro = CardViewer.Filters.monsterColorIs("Synchro");
+CardViewer.Filters.isXyz = CardViewer.Filters.monsterColorIs("Xyz");
+
+CardViewer.Filters.isNonEffect = (card) => {
+    if(!CardViewer.Filters.isMonster(card)) {
+        return card.cached_is_non_effect = false;
+    }
+    
+    if(typeof card.cached_is_non_effect !== "undefined") {
+        return card.cached_is_non_effect;
+    }
+    
+    if(CardViewer.Filters.isNormal(card)) {
+        return card.cached_is_non_effect = true;
+    }
+    
+    if(CardViewer.Filters.isRitual(card)) {
+        let sentences = card.effect
+            .replace(/".+?"/g, "")
+            .replace(/\.$/g, "")
+            .split(".");
+        
+        return card.cached_is_non_effect = sentences.length === 1;
+    }
+    
+    if(CardViewer.Filters.isExtraDeck(card)) {
+        let paras = card.effect.trim().split(/\r?\n|\r/g);
+        let sentences = card.effect
+            .replace(/".+?"/g, "")
+            .split(".");
+        let isNonEffect = paras.length === 1 && sentences.length === 1;
+        return card.cached_is_non_effect = isNonEffect;
+    }
+    
+    return card.cached_is_non_effect = false;
+}
+
+CardViewer.Filters.isFlipMonster = (card) =>
+    card.effect.indexOf("FLIP:") !== -1;
+
+CardViewer.Filters.isUnionMonster = (card) =>
+    card.ability === "Union";
+CardViewer.Filters.isTunerMonster = (card) =>
+    card.ability === "Tuner";
+CardViewer.Filters.isToonMonster = (card) =>
+    card.ability === "Toon";
+CardViewer.Filters.isGeminiMonster = (card) =>
+    card.ability === "Gemini";
+CardViewer.Filters.isSpiritMonster = (card) =>
+    card.ability === "Spirit";
+    
 CardViewer.Filters.Dictionary = {
     monster:    CardViewer.Filters.isMonster,
     spell:      CardViewer.Filters.isSpell,
     trap:       CardViewer.Filters.isTrap,
+    normal:     CardViewer.Filters.isNormal,
+    effect:     CardViewer.Filters.isEffect,
+    ritual:     CardViewer.Filters.isRitual,
+    fusion:     CardViewer.Filters.isFusion,
+    synchro:    CardViewer.Filters.isSynchro,
+    xyz:        CardViewer.Filters.isXyz,
+    pendulum:   _F.propda("pendulum"),
+    link:       _F.propda("is_link"),
+    leveled:    CardViewer.Filters.isLeveled,
+    extradeck:  CardViewer.Filters.isExtraDeck,
+    noneffect:  CardViewer.Filters.isNonEffect,
+    gemini:     CardViewer.Filters.isGeminiMonster,
+    flip:       CardViewer.Filters.isFlipMonster,
+    spirit:     CardViewer.Filters.isSpiritMonster,
+    tuner:      CardViewer.Filters.isTunerMonster,
+    toon:       CardViewer.Filters.isToonMonster,
+    union:      CardViewer.Filters.isUnionMonster,
     any:        () => true,
 };
 
@@ -199,6 +284,7 @@ CardViewer.query = function () {
         baseStats.level = CardViewer.Elements.cardLevel.val();
         baseStats.monsterType = CardViewer.Elements.cardMonsterType.val();
         baseStats.monsterCategory = CardViewer.Elements.cardMonsterCategory.val();
+        baseStats.monsterAbility = CardViewer.Elements.cardMonsterAbility.val();
     }
     return baseStats;
 };
@@ -252,8 +338,11 @@ CardViewer.createFilter = function (query) {
     }
     
     if(query.monsterCategory) {
-        // TODO: fix for other categories
-        filters.push(CardViewer.exactComparator(query.monsterCategory, _F.propda("monster_color")));
+        filters.push(CardViewer.Filters.getFilter(query.monsterCategory));
+    }
+    
+    if(query.monsterAbility) {
+        filters.push(CardViewer.Filters.getFilter(query.monsterAbility));
     }
     
     return (card) => filters.every(filter => filter(card));
@@ -345,6 +434,11 @@ CardViewer.composeResult = function (card) {
         kind.push(levelIndicator + card.level);
         kind.push(card.attribute);
         kind.push(card.type);
+        
+        if(card.ability) {
+            kind.push(card.ability);
+        }
+        
         kind.push(card.monster_color);
         
         if(card.pendulum) {
@@ -364,7 +458,7 @@ CardViewer.composeResult = function (card) {
     }
     else {
         attribute.attr("src", getAttribute(card.card_type));
-        marking.append($("<img>").attr("src", getIcon(card.type)));
+        marking.append($("<img class=cardicon>").attr("src", getIcon(card.type)));
     }
     
     if(card.exu_limit !== 3) {
@@ -423,6 +517,7 @@ let onLoad = async function () {
     CardViewer.Elements.trapStats = $("#trapStats");
     CardViewer.Elements.cardLevel = $("#cardLevel");
     CardViewer.Elements.cardMonsterCategory = $("#cardMonsterCategory");
+    CardViewer.Elements.cardMonsterAbility = $("#cardMonsterAbility");
     CardViewer.Elements.cardMonsterType = $("#cardMonsterType");
     
     CardViewer.Elements.search.click(CardViewer.submit);

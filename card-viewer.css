@@ -61,6 +61,7 @@ input, select {
 .result-img-holder {
     vertical-align: center;
     text-align: center;
+    width: 185px;
 }
 .result-effect {
     vertical-align: top;
@@ -97,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 .banicon {
     width: 24px;
 }
-.markings img {
+.banicon, .cardicon {
     margin-left: 3px;
     margin-right: 3px;
 }
