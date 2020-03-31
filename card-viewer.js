@@ -296,6 +296,8 @@ CardViewer.query = function () {
         baseStats.monsterType = CardViewer.Elements.cardMonsterType.val();
         baseStats.monsterCategory = CardViewer.Elements.cardMonsterCategory.val();
         baseStats.monsterAbility = CardViewer.Elements.cardMonsterAbility.val();
+        baseStats.atk = CardViewer.Elements.cardATK.val();
+        baseStats.def = CardViewer.Elements.cardDEF.val();
     }
     return baseStats;
 };
@@ -354,6 +356,14 @@ CardViewer.createFilter = function (query) {
     
     if(query.monsterAbility) {
         filters.push(CardViewer.Filters.getFilter(query.monsterAbility));
+    }
+    
+    if(query.atk) {
+        filters.push(CardViewer.exactComparator(query.atk, _F.propda("atk")));
+    }
+    
+    if(query.def) {
+        filters.push(CardViewer.exactComparator(query.def, _F.propda("def")));
     }
     
     return (card) => filters.every(filter => filter(card));
@@ -530,6 +540,8 @@ let onLoad = async function () {
     CardViewer.Elements.cardMonsterCategory = $("#cardMonsterCategory");
     CardViewer.Elements.cardMonsterAbility = $("#cardMonsterAbility");
     CardViewer.Elements.cardMonsterType = $("#cardMonsterType");
+    CardViewer.Elements.cardATK = $("#cardATK");
+    CardViewer.Elements.cardDEF = $("#cardDEF");
     CardViewer.Elements.toTopButton = $("#totop");
     
     CardViewer.Elements.search.click(CardViewer.submit);

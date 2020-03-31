@@ -56,7 +56,7 @@
     </table>
     <table id=conditionalStats>
         <tr class="ifMonster ifSpell ifTrap">
-            <th colspan=2>Secondary Stats</th>
+            <th colspan=4>Secondary Stats</th>
         </tr>
         <tbody class="ifMonster" id="monsterStats">
             <tr>
@@ -78,6 +78,8 @@
                         <option value="flip">Flip</option>
                     </select>
                 </td>
+                <td>ATK</td>
+                <td><input type=number id=cardATK min=0 max=9999 step=50></td>
             </tr>
             <tr>
                 <td>Ability</td>
@@ -91,6 +93,8 @@
                         <option value="toon">Toon</option>
                     </select>
                 </td>
+                <td>DEF</td>
+                <td><input type=number id=cardDEF min=0 max=9999 step=50></td>
             <tr>
                 <td>Type</td>
                 <td>
