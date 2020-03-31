@@ -138,10 +138,21 @@ CardViewer.Search.showPage = function (id = CardViewer.Search.currentPage) {
     if(id < 0 || id >= CardViewer.Search.pages.length) {
         return;
     }
+    let table = $("<table class=pagetable>");
+    let row = [];
     for(let result of CardViewer.Search.pages[id]) {
         let composed = CardViewer.composeResult(result);
-        CardViewer.Elements.results.append(composed);
+        row.push(composed);
+        if(row.length === 2) {
+            let tr = $("<tr>");
+            for(let c of row) {
+                tr.append($("<td>").append(c));
+            }
+            table.append(tr);
+            row = [];
+        }
     }
+    CardViewer.Elements.results.append(table);
     // humans measure in 1-based indices
     CardViewer.Elements.currentPage.text(id + 1);
 };
@@ -519,10 +530,18 @@ let onLoad = async function () {
     CardViewer.Elements.cardMonsterCategory = $("#cardMonsterCategory");
     CardViewer.Elements.cardMonsterAbility = $("#cardMonsterAbility");
     CardViewer.Elements.cardMonsterType = $("#cardMonsterType");
+    CardViewer.Elements.toTopButton = $("#totop");
     
     CardViewer.Elements.search.click(CardViewer.submit);
     CardViewer.Elements.previousPage.click(CardViewer.Search.previousPage);
     CardViewer.Elements.nextPage.click(CardViewer.Search.nextPage);
+    
+    CardViewer.Elements.toTopButton.click(() => {
+        $("html, body").animate(
+            { scrollTop: "0px" },
+            { duration: 200, }
+        );
+    });
     
     CardViewer.Elements.autoSearch.change(function () {
         CardViewer.autoSearch = this.checked;
