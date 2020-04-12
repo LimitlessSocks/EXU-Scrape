@@ -134,7 +134,7 @@ CardViewer.Search.processResults = function (val) {
 };
 
 CardViewer.Search.showPage = function (id = CardViewer.Search.currentPage) {
-    CardViewer.Elements.results.empty();
+    CardViewer.Elements.results.empty();
     if(id < 0 || id >= CardViewer.Search.pages.length) {
         return;
     }

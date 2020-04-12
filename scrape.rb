@@ -103,7 +103,7 @@ decks = [
     4415708, #Tensor Maidens
     4608403, #Goo Transformation
     # 4395035, #Astral Dragons
-    4540976, #Zoodiac Support
+    # 4540976, #Zoodiac Support
     4523067, #Voltron
     4617451, #Ordarim
     4385932, #Starbaric Crystal Beasts
@@ -113,7 +113,7 @@ decks = [
     3734721, #Carcharrack
     4810529, #Blue-Eyes Support
     4757288, #Pandas
-    4746493, #Servus
+    # 4746493, #Servus
     3180755, #Earthbound Prisoners
     4148322, #Dragonewts
     4861946, #Poppin
@@ -140,6 +140,11 @@ decks = [
     5176216, #Antiqua (Updated Link)
     4624534, #Harokais
     5183280, #Titan Hunter
+    5256943, #Vampop☆Star
+    4442461, #Titanic Dragons
+    4750943, #Ice Barrier Support
+    4604736, #Of the North
+    5269100, #Orb Magicians
 ] + [
     5180324, #Semi-Generic Monsters
     5179964, #Generic Monsters
