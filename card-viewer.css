@@ -10,6 +10,10 @@ html {
     font-family: "Poppins", "Gadugi", sans-serif;
 }
 
+select {
+    width: 100%;
+}
+
 p {
     margin: 0;
     line-height: 29px;

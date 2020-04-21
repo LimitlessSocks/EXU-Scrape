@@ -42,7 +42,6 @@ const Banlist = {
     4280258:  0,    // Apollousa, Bow of the Goddess
     50588353: 0,    // Crystron Halqifibrax
     59934749: 0,    // Isolde, Two Tales of the Noble Knights
-    83152482: 0,    // Union Carrier
     15939229: 0,    // D/D/D Duo-Dawn King Kali Yuga
     52653092: 0,    // Number S0: Utopic ZEXAL
     88581108: 0,    // True King of All Calamities
@@ -58,6 +57,8 @@ const Banlist = {
     68392533: 0,    // Telekinetic Charging Cell
     40633297: 0,    // Bad Reaction to Simochi
     48716527: 0,    // The Monarchs Erupt
+    76218313: 0,    // Dragon Buster Destruction Sword
+    69448290: 0,    // Mist Valley Thunderbird    
     // limited - TCG cards
     53804307: 1,    // Blaster, Dragon Ruler of Infernos
     83190280: 1,    // Lunalight Tiger
@@ -71,6 +72,8 @@ const Banlist = {
     // semi-limited - TCG cards
     27552504: 2,    // Beatrice, Lady of the Eternal
     2295440:  2,    // One for One
+    37520316: 2,    // Mind Control
+    14532163: 2,    // Lightning Storm
     // unlimited - TCG cards
     7902349:  3,    // Left Arm of the Forbidden One
     44519536: 3,    // Left Leg of the Forbidden One
@@ -80,8 +83,8 @@ const Banlist = {
     20758643: 3,    // Graff, Malebranche of the Burning Abyss
     10802915: 3,    // Tour Guide From the Underworld
     48063985: 3,    // Ritual Beast Ulti-Cannahawk
+    83152482: 3,    // Union Carrier
     // 70369116: 3,    // Predaplant Verte Anaconda
-    37520316: 3,    // Mind Control
     22842126: 3,    // Pantheism of the Monarchs
     24940422: 3,    // Sekka's Light
     89208725: 3,    // Metaverse
@@ -89,15 +92,17 @@ const Banlist = {
     35125879: 3,    // True King's Return
     // banned - EXU cards
     787258:   0,    // Kanaloa, the Ultimate Carcharrack
-    1310678:  0,    // Titanus - Queen's Hideout
     953394:   0,    // Supreme Astral Dragon Siegwurm-Nova
     438478:   0,    // Astral Armored Tower
     787290:   0,    // Submerged City of the Carcharracks
+    1307926:  0,    // Pyrodent Accelerator
     // limited - EXU cards
+    1310678:  1,    // Titanus - Queen's Hideout
     1310651:  1,    // Titanus - Fire Demon's Lair
     787295:   1,    // First Sail of the Carcharracks
     1061760:  1,    // Sacrificial Soul Reborn
     1169172:  1,    // Thunder Dragon Rider
+    979470:   1,    // Ravager Planet: LV-426
 };
 
 CardViewer.Database.banlist = Banlist;
@@ -295,6 +300,7 @@ CardViewer.query = function () {
     else if(CardViewer.Elements.monsterStats.is(":visible")) {
         baseStats.level = CardViewer.Elements.cardLevel.val();
         baseStats.monsterType = CardViewer.Elements.cardMonsterType.val();
+        baseStats.monsterAttribute = CardViewer.Elements.cardMonsterAttribute.val();
         baseStats.monsterCategory = CardViewer.Elements.cardMonsterCategory.val();
         baseStats.monsterAbility = CardViewer.Elements.cardMonsterAbility.val();
         baseStats.atk = CardViewer.Elements.cardATK.val();
@@ -349,6 +355,10 @@ CardViewer.createFilter = function (query) {
     
     if(query.monsterType) {
         filters.push(CardViewer.exactComparator(query.monsterType, _F.propda("type")));
+    }
+    
+    if(query.monsterAttribute) {
+        filters.push(CardViewer.exactComparator(query.monsterAttribute, _F.propda("attribute")));
     }
     
     if(query.monsterCategory) {
@@ -541,6 +551,7 @@ let onLoad = async function () {
     CardViewer.Elements.cardMonsterCategory = $("#cardMonsterCategory");
     CardViewer.Elements.cardMonsterAbility = $("#cardMonsterAbility");
     CardViewer.Elements.cardMonsterType = $("#cardMonsterType");
+    CardViewer.Elements.cardMonsterAttribute = $("#cardMonsterAttribute");
     CardViewer.Elements.cardATK = $("#cardATK");
     CardViewer.Elements.cardDEF = $("#cardDEF");
     CardViewer.Elements.toTopButton = $("#totop");

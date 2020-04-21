@@ -145,6 +145,17 @@ decks = [
     4750943, #Ice Barrier Support
     4604736, #Of the North
     5269100, #Orb Magicians
+    5177132, #Darklord Retrains
+    5336647, #Trickstar Support
+    5219266, #Phantom Beast Support
+    4460492, #Holifear
+    5323883, #Digitallias
+    4659249, #Malevolessence
+    4670325, #Blitzers
+    5408141, #Amorel
+    5145725, #Remnant
+    5260210, #Sylvan Support
+    5297494, #Thunderclap
 ] + [
     5180324, #Semi-Generic Monsters
     5179964, #Generic Monsters
