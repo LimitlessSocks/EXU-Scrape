@@ -105,6 +105,17 @@ const Banlist = {
     979470:   1,    // Ravager Planet: LV-426
 };
 
+const LINK_ARROWS = {
+    [0b10000000]: "\u2196\uFE0F",
+    [0b01000000]: "\u2B06\uFE0F",
+    [0b00100000]: "\u2197\uFE0F",
+    [0b00010000]: "\u27A1\uFE0F",
+    [0b00001000]: "\u2198\uFE0F",
+    [0b00000100]: "\u2B07\uFE0F",
+    [0b00000010]: "\u2199\uFE0F",
+    [0b00000001]: "\u2B05\uFE0F",
+};
+
 CardViewer.Database.banlist = Banlist;
 
 CardViewer.Database.setInitial = function (db) {
@@ -413,6 +424,31 @@ const BANLIST_ICONS = {
     2: getIcon("banlist-semilimited")
 };
 
+let arrowIterateOrder = [
+    // top row
+    [0b10000000, 0b01000000, 0b00100000],
+    // middle row
+    [0b00000001, 0b00000000, 0b00010000],
+    // bottom row
+    [0b00000010, 0b00000100, 0b00001000]
+]
+const getLinkArrowText = (arrows) => {
+    let integer = parseInt(arrows, 2);
+    let result = "";
+    for(let row of arrowIterateOrder) {
+        for(let key of row) {
+            if(integer & key) {
+                result += LINK_ARROWS[key];
+            }
+            else {
+                result += "\u2B1C";
+            }
+        }
+        result += "\n";
+    }
+    return result;
+};
+
 CardViewer.composeResult = function (card) {
     let img = $("<img class=img-result>").attr("src", card.src);
     let name = $("<h3 class=result-name>").text(card.name);
@@ -435,6 +471,7 @@ CardViewer.composeResult = function (card) {
     let attribute = $("<img>");
     let marking = $("<div class=markings>");
     
+    let linkArrows;
     if(card.card_type === "Monster") {
         attribute.attr("src", getAttribute(card.attribute))
         let kind = [];
@@ -483,6 +520,11 @@ CardViewer.composeResult = function (card) {
         
         if(card.monster_color === "Link") {
             stats.append($("<p>").text(`ATK/${card.atk}`));
+            linkArrows = $(
+                "<p class=link-arrows>" +
+                getLinkArrowText(card.arrows).replace(/\n/g,"<br>") +
+                "</p>"
+            );
         }
         else {
             stats.append($("<p>").text(`ATK/${card.atk} DEF/${card.def}`));
@@ -499,7 +541,7 @@ CardViewer.composeResult = function (card) {
         marking.append($("<div>").append(banMarker));
     }
     
-    res.append($("<div class=result-inner>").append(id, name, author, stats,
+    res.append($("<div class=result-inner>").append(id, name, linkArrows, author, stats,
         $("<table>").append(
             $("<tr>").append(
                 $("<td class=result-img-holder>").append(img, attribute, marking),

@@ -185,7 +185,12 @@ h1, h2, h3, h4, h5, h6 {
         rgba(75, 112, 185, 0.8) 50%
     );
 }
-
+.link-arrows {
+    line-height: 1.2em;
+    letter-spacing: -0.2em;
+    float: right;
+    user-select: none;
+}
 
 
 
