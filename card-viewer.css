@@ -41,6 +41,13 @@ input, select {
     padding: 3px;
 }
 
+#resultNote {
+    background: rgba(0,0,0,0.3);
+    display: table;
+    font-style: italic;
+    margin: 5px;
+}
+
 #searchParamters > div {
     background: rgb(51, 0, 51, 0.8);
     padding: 8px;

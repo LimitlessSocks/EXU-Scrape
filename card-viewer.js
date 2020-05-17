@@ -18,6 +18,25 @@ const CardViewer = {
     query: null,
 };
 
+const CardsOfTheWeek = [
+    1117429, //Battlewasp - Akiza the Berserker
+    1175945, //ON SALE!!!
+    1222148, //Called by the Spell Book
+    1000049, //Little Tanker
+    1411709, //Gradielle, Symphony of Harmony
+    1069476, //Elon Musk 1
+    // 1331629, //Elon Musk 2
+    // 1482984, //Wingbeat Wyrm (Elon Musk 3)
+    1311654, //Torrential Fusion
+    1079215, //Grasp
+    1298826, //Eye of the Shadows
+    1333641, //Chained Down
+    1061760, //Sacrificial Soul Reborn
+    1393301, //Cosmic Vacuum
+    1374705, //Bone Chimera
+    1268592, //Max Evolution Pill    
+];
+
 const Banlist = {
     // banned - tcg cards
     91869203: 0,    // Amazoness Archer
@@ -338,6 +357,9 @@ CardViewer.exactComparator = (needle, fn = _F.id) => {
 };
 
 CardViewer.createFilter = function (query) {
+    if(typeof query === "function") {
+        return query;
+    }
     let filters = [
         // type filter
         CardViewer.Filters.getFilter(query.type),
@@ -552,12 +574,19 @@ CardViewer.composeResult = function (card) {
     return res;
 };
 
-CardViewer.submit = function () {
-    let query = CardViewer.query();
+CardViewer.submit = function (firstTime = false) {
+    let query;
+    if (firstTime) {
+        query = card => CardsOfTheWeek.indexOf(card.id) !== -1;
+    }
+    else {
+        query = CardViewer.query();
+    }
     let results = CardViewer.filter(query);
     CardViewer.Search.processResults(results);
     CardViewer.Elements.resultCount.text(results.length);
     CardViewer.Search.currentPage = 0;
+    CardViewer.Elements.resultNote.text(firstTime ? "Note: You are currently viewing a curated selection of our cards. Please search again to see all available cards." : "");
     CardViewer.Search.showPage();
 };
 let onLoad = async function () {
@@ -580,6 +609,7 @@ let onLoad = async function () {
     CardViewer.Elements.pageCount = $("#pageCount");
     CardViewer.Elements.nextPage = $("#nextPage");
     CardViewer.Elements.previousPage = $("#previousPage");
+    CardViewer.Elements.resultNote = $("#resultNote");
     CardViewer.Elements.cardId = $("#cardId");
     CardViewer.Elements.ifMonster = $(".ifMonster");
     CardViewer.Elements.ifSpell = $(".ifSpell");
@@ -649,7 +679,7 @@ let onLoad = async function () {
         $(el).change(elementChanged);
     }
     
-    CardViewer.submit();
+    CardViewer.submit(true);
     
     let updateBackground = () => {
         if(localStorage.getItem("EXU_REDOX_MODE") === "true") {
