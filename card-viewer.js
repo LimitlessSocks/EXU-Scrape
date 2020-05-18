@@ -571,9 +571,10 @@ CardViewer.composeResult = function (card) {
     return res;
 };
 
-CardViewer.submit = function (firstTime = false) {
+CardViewer.firstTime = true;
+CardViewer.submit = function () {
     let query;
-    if (firstTime) {
+    if (CardViewer.firstTime) {
         query = card => CardsOfTheWeek.indexOf(card.id) !== -1;
     }
     else {
@@ -583,8 +584,9 @@ CardViewer.submit = function (firstTime = false) {
     CardViewer.Search.processResults(results);
     CardViewer.Elements.resultCount.text(results.length);
     CardViewer.Search.currentPage = 0;
-    CardViewer.Elements.resultNote.text(firstTime ? "Note: You are currently viewing a curated selection of our cards. Please search again to see all available cards." : "");
+    CardViewer.Elements.resultNote.text(CardViewer.firstTime ? "Note: You are currently viewing a curated selection of our cards. Please search again to see all available cards." : "");
     CardViewer.Search.showPage();
+    CardViewer.firstTime = false;
 };
 let onLoad = async function () {
     let response = await fetch("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/db.json");
@@ -676,12 +678,12 @@ let onLoad = async function () {
         $(el).change(elementChanged);
         $(el).keypress((event) => {
             if(event.originalEvent.code === "Enter") {
-                elementChanged();
+                CardViewer.submit();
             }
         });
     }
     
-    CardViewer.submit(true);
+    CardViewer.submit();
     
     let updateBackground = () => {
         if(localStorage.getItem("EXU_REDOX_MODE") === "true") {
