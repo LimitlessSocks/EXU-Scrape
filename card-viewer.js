@@ -34,7 +34,8 @@ const CardsOfTheWeek = [
     1061760, //Sacrificial Soul Reborn
     1393301, //Cosmic Vacuum
     1374705, //Bone Chimera
-    1268592, //Max Evolution Pill    
+    1268592, //Max Evolution Pill
+    1530819, //Destoroyah, the One True Devil
 ];
 
 const Banlist = {
