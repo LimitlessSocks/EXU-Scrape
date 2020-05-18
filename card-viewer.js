@@ -110,18 +110,16 @@ const Banlist = {
     23002292: 3,    // Red Reboot
     35125879: 3,    // True King's Return
     // banned - EXU cards
-    787258:   0,    // Kanaloa, the Ultimate Carcharrack
     953394:   0,    // Supreme Astral Dragon Siegwurm-Nova
-    438478:   0,    // Astral Armored Tower
-    787290:   0,    // Submerged City of the Carcharracks
     1307926:  0,    // Pyrodent Accelerator
+    667308:   0,    // Twilight Mountain Titan
     // limited - EXU cards
-    1310678:  1,    // Titanus - Queen's Hideout
-    1310651:  1,    // Titanus - Fire Demon's Lair
-    787295:   1,    // First Sail of the Carcharracks
     1061760:  1,    // Sacrificial Soul Reborn
-    1169172:  1,    // Thunder Dragon Rider
     979470:   1,    // Ravager Planet: LV-426
+    // unlimited - EXU cards
+    1169172:  3,    // Thunder Dragon Rider
+    1310678:  3,    // Titanus - Queen's Hideout
+    1310651:  3,    // Titanus - Fire Demon's Lair
 };
 
 const LINK_ARROWS = {
