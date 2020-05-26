@@ -36,6 +36,7 @@ const CardsOfTheWeek = [
     1374705, //Bone Chimera
     1268592, //Max Evolution Pill
     1530819, //Destoroyah, the One True Devil
+    1526913, //Spellbook of Forbidden Arts
 ];
 
 const Banlist = {
