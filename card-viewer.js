@@ -113,7 +113,7 @@ const Banlist = {
     35125879: 3,    // True King's Return
     // banned - EXU cards
     1307926:  0,    // Pyrodent Accelerator
-    667308:   0,    // Twilight Mountain Titan
+    667308:   1,    // Twilight Mountain Titan
     // limited - EXU cards
     1061760:  1,    // Sacrificial Soul Reborn
     979470:   1,    // Ravager Planet: LV-426
