@@ -63,7 +63,6 @@ const Banlist = {
     4280258:  0,    // Apollousa, Bow of the Goddess
     50588353: 0,    // Crystron Halqifibrax
     59934749: 0,    // Isolde, Two Tales of the Noble Knights
-    15939229: 0,    // D/D/D Duo-Dawn King Kali Yuga
     52653092: 0,    // Number S0: Utopic ZEXAL
     88581108: 0,    // True King of All Calamities
     85668449: 0,    // Brain Research Lab
@@ -80,22 +79,30 @@ const Banlist = {
     48716527: 0,    // The Monarchs Erupt
     76218313: 0,    // Dragon Buster Destruction Sword
     69448290: 0,    // Mist Valley Thunderbird    
+    83190280: 0,    // Lunalight Tiger
+    7480763:  0,    // Artifact Dagda
+    50588353: 0,    // Crystron Halqifibrax
+    44097050: 0,    // Mecha Phantom Beast Auroradon
+    83152482: 0,    // Union Carrier
+    18144506: 0,    // Harpie's Feather Duster
+    20612097: 0,    // Eldlixir of Scarlet Sanguine
     // limited - TCG cards
     53804307: 1,    // Blaster, Dragon Ruler of Infernos
-    83190280: 1,    // Lunalight Tiger
     40318957: 1,    // Performapal Skullcrobat Joker
-    16428514: 1,    // Subterror Guru
-    30741503: 1,    // Galatea, the Orcust Automaton
     74997493: 1,    // Saryuja Skull Dread
     87871125: 1,    // Salamangreat Sunlight Wolf
     93854893: 1,    // Dingirsu, the Orcust of the Evening Star
-    18144506: 1,    // Harpie's Feather Duster
+    85914562: 1,    // Adamancipator Researcher
+    31434645: 1,    // Cursed Eldland
+    47679935: 1,    // Magical Meltdown
     // semi-limited - TCG cards
     27552504: 2,    // Beatrice, Lady of the Eternal
     2295440:  2,    // One for One
     37520316: 2,    // Mind Control
     14532163: 2,    // Lightning Storm
     // unlimited - TCG cards
+    30741503: 3,    // Galatea, the Orcust Automaton
+    16428514: 3,    // Subterror Guru
     7902349:  3,    // Left Arm of the Forbidden One
     44519536: 3,    // Left Leg of the Forbidden One
     70903634: 3,    // Right Arm of the Forbidden One
@@ -104,7 +111,8 @@ const Banlist = {
     20758643: 3,    // Graff, Malebranche of the Burning Abyss
     10802915: 3,    // Tour Guide From the Underworld
     48063985: 3,    // Ritual Beast Ulti-Cannahawk
-    83152482: 3,    // Union Carrier
+    28388927: 3,    // Battlewasp - Sting the Poison
+    15939229: 3,    // D/D/D Duo-Dawn King Kali Yuga
     // 70369116: 3,    // Predaplant Verte Anaconda
     22842126: 3,    // Pantheism of the Monarchs
     24940422: 3,    // Sekka's Light
@@ -116,11 +124,11 @@ const Banlist = {
     667308:   1,    // Twilight Mountain Titan
     // limited - EXU cards
     1061760:  1,    // Sacrificial Soul Reborn
-    979470:   1,    // Ravager Planet: LV-426
     // unlimited - EXU cards
     1169172:  3,    // Thunder Dragon Rider
     1310678:  3,    // Titanus - Queen's Hideout
     1310651:  3,    // Titanus - Fire Demon's Lair
+    979470:   3,    // Ravager Planet: LV-426
 };
 
 const LINK_ARROWS = {
