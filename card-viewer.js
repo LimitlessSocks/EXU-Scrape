@@ -37,6 +37,7 @@ const CardsOfTheWeek = [
     1268592, //Max Evolution Pill
     1530819, //Destoroyah, the One True Devil
     1526913, //Spellbook of Forbidden Arts
+    930975,  //Equip Equality
 ];
 
 const Banlist = {

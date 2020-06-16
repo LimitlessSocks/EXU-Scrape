@@ -59,7 +59,9 @@ $comb_deck_fn = <<EOF
         let { width, height } = a.find("img.pic").css(["width", "height"]);
         let data = a.data();
         let src = data.custom > 0 ? CUSTOM_PICS_START : CARD_IMAGES_START;
-        src += data.id + ".jpg" + (data.pic != "1" ? "?version=" + a.pic : "");
+        let id = data.id;
+        let idMod = id - id % 100000;
+        src += idMod + "/" + id + ".jpg" + (data.pic != "1" ? "?version=" + a.pic : "");
         data.src = src;
         data.width = width;
         data.height = height;
@@ -86,7 +88,6 @@ end
 decks = [
     4327693, #Lacrimosa
     4367824, #Death Aspects
-    4810529, #Blue-eyes Support
     4376011, #Combat Mechs
     4251928, #Traptrix Support
     4523067, #Voltron
@@ -122,7 +123,7 @@ decks = [
     5416935, #Akatsuki
     5304027, #Pyre
     5372415, #Modernotes
-    4374978, #Insidious
+    # 4374978, #Insidious
     4415708, #Tensor Maidens
     4148322, #Dragonewts
     5089829, #Grand Knight
@@ -132,55 +133,109 @@ decks = [
     5187975, #Rulers of Name
     4868725, #Dominus
     5541864, #Kuroshiro
-    4395391, #Trapods
     5610680, #P@rol
     5597068, #Goo-T
     5576395, #Heaven-Knights
     5582929, #Seafolk
     4399429, #Hakaishin Archfiend
     5592020, #Bound
-] + [
+    4188326, #Anti-Luminescent Knights
     4933305, #Coccoon Support
     4936132, #F.A. Support
-    4177191, #Lightray Support
     4894268, #Kaiju Support
     5177132, #Darklord Support
     5336647, #Trickstar Support
     5219266, #Phantom Beast Support
     5260210, #Sylvan Support
-    5549756, #Assorted Single TCG Support
     5549851, #Time Thief Support
     5549841, #Ghostrick Support
     5549769, #Danger! Support
+    5577804, #Thunder Dragon Support
+    4540980, #Vampire Support
+    4780879, #Dinosaur Support
     4298315, #Nordic Support
     4073173, #Fabled Support
-    4750943, #Ice Barrier Support
+    # 4750943, #Ice Barrier Support
     5577782, #Dragonmaid Support
     5577790, #Zefra Support
-    5577804, #Thunder Dragon Support
     4390839, #Ancient Gear Support
-    4780879, #Dinosaur Support
     5515496, #Majestic Support
     4810529, #Blue-eyes Support
-    5496883, #Normal/non-Effect Monster Support
-    4540980, #Vampire Support
+    5496883, #Vanilla Pendulum Support
+    # 5637873, #Dhakira
+    5643273, #Itayin
+    4359326, #Eldertech
+    4050998, #Mage & Spell Tomes
+    5659403, #X-Saber Support
+    5615949, #Alchemaster
+    5647560, #Ophion
+    5642481, #Daemon Engine
+    5646060, #Ignation
+    5627288, #Titanus Support
+    4395391, #Trapod
+    5593625, #Orb Magicians
+    5549562, #Travelsha
+    5668288, #Volcanic Support
+    5687011, #Graydle Support
+    5713213, #Sky Striker Support
+    5705030, #Phantasm Spiral Support
+    4177191, #Lightray Support
+    5415163, #U.A. Support
+    5685303, #Resonator Support
+    4804758, #Draconia Support
+    5663187, #Ploceress
+    4950743, #Cyber Dragon Support
+    5683010, #Pendulum Gods
+    5717718, #Pixel Monsters
+    5720993, #Watt Support
+    5715247, #Crystron Support
+    5713627, #Yeet
+    4927027, #Wolvies
+    5109480, #Kyudo
+    5194131, #Fur Hire Support
+    5720588, #Hungry Burger
+    4337568, #Dreadator
+    5737230, #Siamese Turtles
+    5619459, #ANIMA
+    4410756, #Kuriboh Support
+    5733772, #Aurellia
+    5601607, #Chaos Performer
+    5744520, #Dream Mirror Support
+    5751277, #World Legacy Support (Krawler)
+    5274505, #Mayakashi Support
+    5691370, #GRECO
+    5755617, #Shagdi
+    5741889, #Titanus Support
+    5767298, #Holifear Support
+    5270321, #Apocrypha
 ] + [
     5522418, #Generic Monsters
     5522422, #Generic Monsters Part 2
     5629988, #Generic Monsters Part 3
     5522423, #Spells
     5522424, #Traps
+    5549756, #Assorted Single TCG Support
 ]
+
+deck_count = decks.size
+
+def progress(i, deck_count)
+    max_size = 20
+    ratio = i * max_size / deck_count
+    bar = ("#" * ratio).ljust max_size
+    print "#{i}/#{deck_count} [#{bar}]\r"
+end
 
 # if VALID_OPERATIONS
 database = {}
 counts = Hash.new 0
-decks.each { |id|
+decks.each.with_index(1) { |id, i|
     comb_deck(id).each { |card|
         id = card["id"]
         database[id] = card
         counts[id] += 1
     }
+    progress i, deck_count
 }
 puts database
 File.write "db.json", database.to_json
