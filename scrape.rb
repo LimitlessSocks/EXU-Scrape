@@ -233,6 +233,8 @@ decks = [
     4813673, #Thunder Dragon Support
     5844374, #Ghostrick Support
     5844363, #Time Thief Support
+    3256281, #B.E.S. Support
+    5010437, #Ugrovs
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
