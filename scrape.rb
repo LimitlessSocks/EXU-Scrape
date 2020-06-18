@@ -32,12 +32,14 @@ puts "Loaded!"
 
 $comb_deck_header = <<EOF
 (function(obj) {
+    window.scrapeReady = false;
     let promises = [];
     for(let [name, fn] of Object.entries(obj)) {
         promises.push(new Promise((resolve, reject) => {
             window[name] = function() {
-                fn();
+                let res = fn();
                 resolve();
+                return res;
             }
         }));
     }
@@ -50,8 +52,17 @@ EOF
 $comb_deck_fn = <<EOF
 (function() {
     if(!window.scrapeReady) {
+        let error = false;
+        try {
+            let message = document.getElementById("msg");
+            error = message.children[1].textContent === "Deck does not exist";
+        }
+        catch(e) {
+            // pass
+        }
         return {
-            success: false
+            success: false,
+            error: error,
         };
     }
     let results = [];
@@ -78,11 +89,15 @@ def comb_deck(id)
     $session.visit("https://www.duelingbook.com/deck?id=#{id}")
     $session.evaluate_script $comb_deck_header
     data = nil
-    loop do
+    results = loop do
         data = $session.evaluate_script $comb_deck_fn
-        break if data["success"]
+        break data["results"] if data["success"]
+        if data["error"]
+            puts "Deck with id #{id} not found, moving on"
+            break []
+        end
     end
-    results = data["results"]
+    results
 end
 
 decks = [
@@ -101,9 +116,9 @@ decks = [
     4570517, #Harbinger
     4910893, #Aria Fey
     4327992, #Serpenteam
-    3820609, #Amphibious Bugroth
-    3669535, #Fundamental Dragons
-    4670325, #Blitzers
+    # 3820609, #Amphibious Bugroth
+    # 3669535, #Fundamental Dragons
+    # 4670325, #Blitzers
     5132465, #Esper V
     2788655, #Ravager
     5075635, #Starships
@@ -147,17 +162,17 @@ decks = [
     5336647, #Trickstar Support
     5219266, #Phantom Beast Support
     5260210, #Sylvan Support
-    5549851, #Time Thief Support
-    5549841, #Ghostrick Support
-    5549769, #Danger! Support
-    5577804, #Thunder Dragon Support
+    # 5549851, #Time Thief Support
+    # 5549841, #Ghostrick Support
+    # 5549769, #Danger! Support
+    # 5577804, #Thunder Dragon Support
     4540980, #Vampire Support
     4780879, #Dinosaur Support
     4298315, #Nordic Support
     4073173, #Fabled Support
     # 4750943, #Ice Barrier Support
-    5577782, #Dragonmaid Support
-    5577790, #Zefra Support
+    # 5577782, #Dragonmaid Support
+    # 5577790, #Zefra Support
     4390839, #Ancient Gear Support
     5515496, #Majestic Support
     4810529, #Blue-eyes Support
@@ -190,14 +205,14 @@ decks = [
     5720993, #Watt Support
     5715247, #Crystron Support
     5713627, #Yeet
-    4927027, #Wolvies
+    # 4927027, #Wolvies
     5109480, #Kyudo
     5194131, #Fur Hire Support
     5720588, #Hungry Burger
     4337568, #Dreadator
     5737230, #Siamese Turtles
     5619459, #ANIMA
-    4410756, #Kuriboh Support
+    # 4410756, #Kuriboh Support
     5733772, #Aurellia
     5601607, #Chaos Performer
     5744520, #Dream Mirror Support
@@ -208,13 +223,23 @@ decks = [
     5741889, #Titanus Support
     5767298, #Holifear Support
     5270321, #Apocrypha
+    4963487, #Battletech
+    5782891, #The Weather Support
+    5758077, #Faust
+    5813034, #Gimmick Puppet Support
+    5844326, #Danger! Support
+    5432255, #Zefra Support
+    4871988, #Dragonmaid Support
+    4813673, #Thunder Dragon Support
+    5844374, #Ghostrick Support
+    5844363, #Time Thief Support
 ] + [
-    5522418, #Generic Monsters
-    5522422, #Generic Monsters Part 2
-    5629988, #Generic Monsters Part 3
-    5522423, #Spells
-    5522424, #Traps
-    5549756, #Assorted Single TCG Support
+    5812210, #Generic Monsters I
+    5812212, #Generic Monsters II
+    5812213, #Generic Monsters III
+    5812214, #Generic Spells
+    5812216, #Generic Traps
+    5812417, #Assorted TCG Single Support
 ]
 
 deck_count = decks.size
@@ -237,7 +262,7 @@ decks.each.with_index(1) { |id, i|
     }
     progress i, deck_count
 }
-puts database
+# puts database
 File.write "db.json", database.to_json
 finish = Time.now
 
