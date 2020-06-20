@@ -8,6 +8,7 @@ const CardViewer = {
     },
     Search: {
         pageSize: 30,
+        columnWidth: 2,
         pages: null,
         currentPage: null,
         processResults: null,
@@ -16,6 +17,7 @@ const CardViewer = {
     // methods
     submit: null,
     query: null,
+    excludeTcg: true,
 };
 
 const CardsOfTheWeek = [
@@ -147,6 +149,9 @@ CardViewer.Database.banlist = Banlist;
 
 CardViewer.Database.setInitial = function (db) {
     for(let [id, info] of Object.entries(db)) {
+        if(typeof info.exu_limit !== "undefined") {
+            continue;
+        }
         info.exu_limit = Banlist[id];
         if(typeof info.exu_limit === "undefined") {
             info.exu_limit = 3;
@@ -173,33 +178,51 @@ CardViewer.Search.processResults = function (val) {
         let page = res.splice(0, CardViewer.Search.pageSize);
         CardViewer.Search.pages.push(page);
     }
-    CardViewer.Elements.pageCount.text(CardViewer.Search.pages.length);
+    if(CardViewer.Elements.pageCount) {
+        CardViewer.Elements.pageCount.text(CardViewer.Search.pages.length);
+    }
 };
 
-CardViewer.Search.showPage = function (id = CardViewer.Search.currentPage) {
-    CardViewer.Elements.results.empty();
-
+CardViewer.Search.showPage = function (id = CardViewer.Search.currentPage, config = {}) {
+    let target = config.target || CardViewer.Elements.results;
+    if(!config.append) {
+        target.empty();
+    }
     if(id < 0 || id >= CardViewer.Search.pages.length) {
         return;
     }
-    let table = $("<table class=pagetable>");
-    let row = [];
-    CardViewer.Search.pages[id].forEach((result, i, arr) => {
-        let composed = CardViewer.composeResult(result);
-        row.push(composed);
-        if(row.length === 2 || i + 1 === arr.length) {
-            let tr = $("<tr>");
-            for(let c of row) {
-                tr.append($("<td>").append(c));
-            }
-            table.append(tr);
-            row = [];
-        }
-    });
     
-    CardViewer.Elements.results.append(table);
+    if(config.append) {
+        CardViewer.Search.pages[id].forEach((result, i, arr) => {
+            let composed = CardViewer.composeStrategy(result);
+            if(config.transform) {
+                composed = config.transform(composed, result);
+            }
+            target.append(composed);
+        });
+    }
+    else {
+        let table = $("<table class=pagetable>");
+        let row = [];
+        CardViewer.Search.pages[id].forEach((result, i, arr) => {
+            let composed = CardViewer.composeStrategy(result);
+            row.push(composed);
+            if(row.length === CardViewer.Search.columnWidth || i + 1 === arr.length) {
+                let tr = $("<tr>");
+                for(let c of row) {
+                    tr.append($("<td>").append(c));
+                }
+                table.append(tr);
+                row = [];
+            }
+        });
+        target.append(table);
+    }
+    
     // humans measure in 1-based indices
-    CardViewer.Elements.currentPage.text(id + 1);
+    if(CardViewer.Elements.currentPage) {
+        CardViewer.Elements.currentPage.text(id + 1);
+    }
 };
 
 CardViewer.Search.nextPage = function () {
@@ -319,7 +342,7 @@ CardViewer.Filters.Dictionary = {
 };
 
 CardViewer.Filters.getFilter = (key) =>
-    CardViewer.Filters.Dictionary[key];
+    CardViewer.Filters.Dictionary[key] || CardViewer.Filters.Dictionary.any;
 
 CardViewer.query = function () {
     let baseStats = {
@@ -353,6 +376,9 @@ CardViewer.simplifyText = (text) =>
         .toLowerCase();
 
 CardViewer.textComparator = (needle, fn = _F.id) => {
+    if(!needle) {
+        return () => true;
+    }
     let simplified = CardViewer.simplifyText(needle);
     return (card) =>
         fn(card).toString().toLowerCase().indexOf(simplified) !== -1;
@@ -426,7 +452,7 @@ CardViewer.filter = function (query) {
     let filter = CardViewer.createFilter(query);
     let cards = [];
     for(let [id, card] of Object.entries(CardViewer.Database.cards)) {
-        if(card.tcg || card.ocg) {
+        if(CardViewer.excludeTcg && (card.tcg || card.ocg)) {
             continue;
         }
         if(filter(card)) {
@@ -478,6 +504,119 @@ const getLinkArrowText = (arrows) => {
         result += "\n";
     }
     return result;
+};
+
+CardViewer.composeResultSmall = function (card) {
+    let img = $("<img class=img-result>")
+        .attr("src", card.src)
+        .attr("title", card.id);
+    let name = $("<h3 class=result-name>").text(card.name);
+    let id = $("<h4 class=result-id>").text(card.id);
+    let author = $("<h4 class=result-author>").text(card.username);
+    let res = $("<div class=result>");
+    res.addClass(card.card_type.toLowerCase());
+    res.addClass(card.monster_color.toLowerCase());
+    
+    let effect = card.effect;
+    if(card.pendulum) {
+        effect = "[Pendulum Effect]\n" + card.pendulum_effect + "\n-----------\n[Monster Effect]\n" + effect;
+        res.addClass("pendulum");
+    }
+    
+    effect = effect.split(/\r|\r?\n/).map(para => $("<p>").text(para));
+    
+    let stats = $("<div>");
+    
+    let attribute = $("<img class=result-attribute>");
+    let marking = $("<div class=markings>");
+    
+    let linkArrows;
+    if(card.card_type === "Monster") {
+        attribute.attr("src", getAttribute(card.attribute))
+        let kind = [];
+        
+        let levelIndicator;
+        let star;
+        switch(card.monster_color) {
+            case "Link":
+                levelIndicator = "Link-";
+                break;
+            case "Xyz":
+                levelIndicator = "Rank ";
+                star = "Xyz";
+                break;
+            default:
+                levelIndicator = "Level ";
+                star = "Normal";
+                break;
+        }
+        
+        if(star) {
+            for(let i = 0; i < card.level; i++) {
+                marking.append(
+                    $("<img class=star>").attr("src", getStar(star))
+                );
+            }
+        }
+        else {
+            marking.append(levelIndicator + card.level);
+        }
+        
+        kind.push(levelIndicator + card.level);
+        kind.push(card.attribute);
+        kind.push(card.type);
+        
+        if(card.ability) {
+            kind.push(card.ability);
+        }
+        
+        kind.push(card.monster_color);
+        
+        if(card.pendulum) {
+            kind.push("Pendulum");
+        }
+        
+        kind.push("Monster");
+        
+        stats.append($("<p>").text(kind.join(" ")));
+        
+        if(card.monster_color === "Link") {
+            stats.append($("<p>").text(`ATK/${card.atk}`));
+            linkArrows = $(
+                "<p class=link-arrows>" +
+                getLinkArrowText(card.arrows).replace(/\n/g,"<br>") +
+                "</p>"
+            );
+        }
+        else {
+            stats.append($("<p>").text(`ATK/${card.atk} DEF/${card.def}`));
+        }
+    }
+    else {
+        attribute.attr("src", getAttribute(card.card_type));
+        marking.append($("<img class=cardicon>").attr("src", getIcon(card.type)));
+    }
+    
+    if(card.exu_limit !== 3) {
+        let banMarker = $("<img class=banicon>");
+        banMarker.attr("src", BANLIST_ICONS[card.exu_limit]);
+        marking.append($("<div>").append(banMarker));
+    }
+    
+    res.append($("<div class=result-inner>").append(name, /*linkArrows, author, stats,*/
+        $("<div class=result-img-holder>").append(
+            $("<div>").append(img),
+            $("<div>").append(attribute, marking),
+            // $("<div>").append()
+        )
+        // $("<table>").append(
+            // $("<tr>").append(
+                // $("<td class=result-img-holder>").append(img, attribute, marking),
+                // $("<td class=result-effect>").append(effect)
+            // )
+        // )
+    ));
+    return res;
 };
 
 CardViewer.composeResult = function (card) {
@@ -582,6 +721,8 @@ CardViewer.composeResult = function (card) {
     ));
     return res;
 };
+
+CardViewer.composeStrategy = CardViewer.composeResult;
 
 CardViewer.firstTime = true;
 CardViewer.submit = function () {
