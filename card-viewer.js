@@ -192,8 +192,14 @@ CardViewer.Search.showPage = function (id = CardViewer.Search.currentPage, confi
         return;
     }
     
+    let page = CardViewer.Search.pages[id];
+    
+    if(config.sort) {
+        page = config.sort(page);
+    }
+    
     if(config.append) {
-        CardViewer.Search.pages[id].forEach((result, i, arr) => {
+        page.forEach((result, i, arr) => {
             let composed = CardViewer.composeStrategy(result);
             if(config.transform) {
                 composed = config.transform(composed, result);
@@ -204,7 +210,7 @@ CardViewer.Search.showPage = function (id = CardViewer.Search.currentPage, confi
     else {
         let table = $("<table class=pagetable>");
         let row = [];
-        CardViewer.Search.pages[id].forEach((result, i, arr) => {
+        page.forEach((result, i, arr) => {
             let composed = CardViewer.composeStrategy(result);
             row.push(composed);
             if(row.length === CardViewer.Search.columnWidth || i + 1 === arr.length) {

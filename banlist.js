@@ -18,6 +18,21 @@ let onLoad = async function () {
         6427, 8927, 7510, 979470
     ];
     
+    const GradeFilters = [
+        CardViewer.Filters.isNormal,
+        CardViewer.Filters.isEffect,
+        CardViewer.Filters.isRitual,
+        CardViewer.Filters.isFusion,
+        CardViewer.Filters.isSynchro,
+        CardViewer.Filters.isXyz,
+        _F.propda("is_link"),
+        CardViewer.Filters.isSpell,
+        CardViewer.Filters.isTrap,
+    ];
+    
+    const grade = (card) =>
+        GradeFilters.findIndex(filter => filter(card));
+    
     for(let i = 0; i <= 3; i++) {
         let sub = $("<div class=results-holder>");
         let results = CardViewer.filter({ limit: i.toString() });
@@ -36,6 +51,16 @@ let onLoad = async function () {
                 }
                 return el;
             },
+            sort: (page) =>
+                page.sort((a, b) => {
+                    let diff = grade(a) - grade(b);
+                    if(diff) {
+                        return diff;
+                    }
+                    else {
+                        return (a.name > b.name) - (a.name < b.name);
+                    }
+                }),
         });
         let header = $("<h2 class=main>").text(tags[i] + " Cards (" + CardViewer.Search.pages[0].length + ")");
         CardViewer.Elements.results.append(header);
