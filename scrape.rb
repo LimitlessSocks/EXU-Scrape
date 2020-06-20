@@ -1,9 +1,9 @@
-VALID_OPERATIONS = ["append", "refresh"]
+VALID_OPERATIONS = ["main", "banlist"]
 operation = ARGV[0]
 
 
 unless VALID_OPERATIONS.include? operation
-    STDERR.puts "Expected an operation [append, refresh], got: #{operation.inspect}"
+    STDERR.puts "Expected an operation [#{VALID_OPERATIONS * ", "}], got: #{operation.inspect}"
     exit 1
 end
 
@@ -100,7 +100,7 @@ def comb_deck(id)
     results
 end
 
-decks = [
+database = [
     4327693, #Lacrimosa
     4367824, #Death Aspects
     4376011, #Combat Mechs
@@ -235,6 +235,10 @@ decks = [
     5844363, #Time Thief Support
     3256281, #B.E.S. Support
     5010437, #Ugrovs
+    5675322, #Kojoten
+    4960158, #Skafos
+    5772283, #Ascension Sky
+    5837794, #Machina Support
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
@@ -243,6 +247,39 @@ decks = [
     5812216, #Generic Traps
     5812417, #Assorted TCG Single Support
 ]
+
+banlist = [
+    5855756, 5856014,
+    5857248,
+    5857281,
+    5857285
+]
+
+EXU_BANNED      = { "exu_limit" => 0 }
+EXU_LIMITED     = { "exu_limit" => 1 }
+EXU_SEMILIMITED = { "exu_limit" => 2 }
+EXU_UNLIMITED   = { "exu_limit" => 3 }
+extra_info = {
+    5855756 => EXU_BANNED,
+    5856014 => EXU_BANNED,
+    
+    5857248 => EXU_LIMITED,
+    
+    5857281 => EXU_SEMILIMITED,
+    
+    5857285 => EXU_UNLIMITED,
+}
+
+decks = nil
+outname = nil
+
+if operation == "main"
+    decks = database
+    outname = "db"
+else
+    decks = banlist
+    outname = "banlist"
+end
 
 deck_count = decks.size
 
@@ -257,15 +294,19 @@ end
 database = {}
 counts = Hash.new 0
 decks.each.with_index(1) { |id, i|
+    info = extra_info[id]
     comb_deck(id).each { |card|
         id = card["id"]
+        unless info.nil?
+            card.merge! info
+        end
         database[id] = card
         counts[id] += 1
     }
     progress i, deck_count
 }
 # puts database
-File.write "db.json", database.to_json
+File.write "#{outname}.json", database.to_json
 finish = Time.now
 
 puts "Time elapsed: #{finish - start}s"
