@@ -71,8 +71,11 @@ $comb_deck_fn = <<EOF
         let data = a.data();
         let src = data.custom > 0 ? CUSTOM_PICS_START : CARD_IMAGES_START;
         let id = data.id;
-        let idMod = id - id % 100000;
-        src += idMod + "/" + id + ".jpg" + (data.pic != "1" ? "?version=" + a.pic : "");
+        if(data.custom > 0) {
+            let idMod = id - id % 100000;
+            src += idMod + "/";
+        }
+        src += id + ".jpg" + (data.pic != "1" ? "?version=" + a.pic : "");
         data.src = src;
         data.width = width;
         data.height = height;
