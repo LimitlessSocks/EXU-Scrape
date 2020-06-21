@@ -9,6 +9,7 @@ let onLoad = async function () {
     CardViewer.Database.setInitial(db);
     
     CardViewer.Elements.results = $("#results");
+    CardViewer.Elements.tableOfContents = $("#toc");
     
     let tags = ["Forbidden", "Limited", "Semi-Limited", "Unlimited"];
     
@@ -62,9 +63,18 @@ let onLoad = async function () {
                     }
                 }),
         });
-        let header = $("<h2 class=main>").text(tags[i] + " Cards (" + CardViewer.Search.pages[0].length + ")");
+        let tag = tags[i];
+        let header = $("<h2 class=main>")
+            .text(tag + " Cards (" + CardViewer.Search.pages[0].length + ")")
+            .attr("id", tag)
+            .append($("<a class=top-arrow>").text("\u2b06").attr("href", "#top"));
         CardViewer.Elements.results.append(header);
         CardViewer.Elements.results.append(sub);
+        CardViewer.Elements.tableOfContents.append(
+            $("<li>").append($("<a>")
+                .attr("href", "#" + tag)
+                .text(tag))
+        );
     }
     
     // $("body").append(

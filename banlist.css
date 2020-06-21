@@ -23,6 +23,13 @@
     width: 100px;
     height: 100px;
 }
+a:visited, a {
+    color: blue;
+}
+.top-arrow {
+    margin: 10px;
+    font-size: 1.2em;
+}
 img.star {
     width: 15px;
 }
