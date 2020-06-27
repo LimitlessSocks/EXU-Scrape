@@ -192,6 +192,9 @@ h1, h2, h3, h4, h5, h6 {
         rgba(75, 112, 185, 0.8) 50%
     );
 }
+.result a, .result a:visited {
+    color: rgb(200, 200, 255);
+}
 .link-arrows {
     line-height: 1.2em;
     letter-spacing: -0.2em;
@@ -199,15 +202,6 @@ h1, h2, h3, h4, h5, h6 {
     user-select: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+.retrainText {
+    margin-top: 0.5em;
+}

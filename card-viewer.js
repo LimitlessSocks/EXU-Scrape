@@ -133,6 +133,26 @@ const Banlist = {
     1310651:  3,    // Titanus - Fire Demon's Lair
     979470:   3,    // Ravager Planet: LV-426
 };
+    
+const RetrainMap = {
+    1318550: 2694,      //Reynard Chemist -> Magical Scientist
+    1319024: 549,       //Occult Lab -> Brain Research Lab
+    1373133: 9074,      //Iseult -> Isolde
+    1169172: 9501,      //TD Rider -> Colossus
+    1326492: 9501,      //Twin Flash -> Colossus
+    1576121: 9082,      //System Synchronizer -> Halqifibrax
+    1318485: 3688,      //Ambush Lotus -> Samsara Lotus
+    1591766: 10500,     //Union Conductor -> Union Carrier
+    1377692: 9253,      //Armor Up! -> Multirole
+    1372758: 9245,      //Launch! -> Engage!
+    1319058: 589,       //Resurrected Blade of Elma -> Butterfly Dagger - Elma
+    1319017: 4217,      //Telekinetic Rehabilitation -> Telekinetic Charging Cell
+    1067872: 7308,      //Mirror Fusion -> Brilliant Fusion
+    1318849: 4396,      //Power Seal -> Time Seal
+    1318524: 3307,      //Hippeastrum -> Amaryllis
+    1319245: 5167,      //Lavalval Chain
+    1318580: 8509,      //Stellar Bunting -> Independent Nightingale
+};
 
 const LINK_ARROWS = {
     [0b10000000]: "\u2196\uFE0F",
@@ -537,7 +557,9 @@ CardViewer.composeResultSmall = function (card) {
     let name = $("<h3 class=result-name>").text(card.name);
     let id = $("<h4 class=result-id>").text(card.id);
     let author = $("<h4 class=result-author>").text(card.username);
+    
     let res = $("<div class=result>");
+    res.attr("id", "card" + card.id);
     res.addClass(card.card_type.toLowerCase());
     res.addClass(card.monster_color.toLowerCase());
     
@@ -648,7 +670,9 @@ CardViewer.composeResult = function (card) {
     let name = $("<h3 class=result-name>").text(card.name);
     let id = $("<h4 class=result-id>").text(card.id);
     let author = $("<h4 class=result-author>").text(card.username);
+    
     let res = $("<div class=result>");
+    res.attr("id", "card" + card.id);
     res.addClass(card.card_type.toLowerCase());
     res.addClass(card.monster_color.toLowerCase());
     
@@ -657,8 +681,6 @@ CardViewer.composeResult = function (card) {
         effect = "[Pendulum Effect]\n" + card.pendulum_effect + "\n-----------\n[Monster Effect]\n" + effect;
         res.addClass("pendulum");
     }
-    
-    effect = effect.split(/\r|\r?\n/).map(para => $("<p>").text(para));
     
     let stats = $("<div>");
     
@@ -733,6 +755,22 @@ CardViewer.composeResult = function (card) {
         let banMarker = $("<img class=banicon>");
         banMarker.attr("src", BANLIST_ICONS[card.exu_limit]);
         marking.append($("<div>").append(banMarker));
+    }
+    
+    effect = effect.split(/\r|\r?\n/).map(para => $("<p>").text(para));
+    
+    let retrain = RetrainMap[card.id];
+    let retrainCard = CardViewer.Database.cards[retrain];
+    if(retrain && retrainCard) {
+        let retrainText = "Retrain of: " + retrainCard.name;
+        // retrainText += " (Id #" + retrain + ")";
+        let link = $("<a>").text(retrainText);
+        if(CardViewer.linkRetrain) {
+            link.attr("href", "#card" + retrain)
+        }
+        effect.push($("<p class=retrainText>").append($("<i>").append(
+            link
+        )));
     }
     
     res.append($("<div class=result-inner>").append(id, name, linkArrows, author, stats,
