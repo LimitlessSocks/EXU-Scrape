@@ -1,18 +1,25 @@
 .pagetable > tr > td {
     width: auto;
 }
-.result {
+#results .result {
     text-align: center;
     /* height: 15%; */
     width: 15%;
 }
-.result-img-holder {
+#results .result.clickable {
+    cursor: pointer;
+    transition: transform 100ms ease-in-out;
+}
+#results .result.clickable:hover {
+    transform: scale(1.12);
+}
+#results .result-img-holder {
     width: 100%;
     text-align: center;
     display: flex;
     justify-content: space-evenly;
 }
-.results-holder {
+#results .results-holder {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -20,9 +27,27 @@
     justify-content: flex-start;
     align-items: stretch;
 }
-.img-result {
+#results .img-result {
     width: 100px;
     height: 100px;
+}
+#results img.star {
+    width: 15px;
+}
+#results .result-attribute {
+    margin: 2px auto;
+    display: block;
+}
+#results h3.result-name {
+    font-size: 0.9em;
+}
+#results .result.new {
+    box-shadow: 0 0 20px 10px gold;
+    order: -5;
+}
+#results .result.different {
+    box-shadow: 0 0 10px 5px #ff3366;
+    order: -3;
 }
 a:visited, a {
     color: blue;
@@ -30,16 +55,6 @@ a:visited, a {
 .top-arrow {
     margin: 10px;
     font-size: 1.2em;
-}
-img.star {
-    width: 15px;
-}
-.result-attribute {
-    margin: 2px auto;
-    display: block;
-}
-h3.result-name {
-    font-size: 0.9em;
 }
 h1 {
     font-size: 3em;
@@ -49,11 +64,22 @@ h2.main {
     margin: 30px;
     font-size: 2em;
 }
-.result.new {
-    box-shadow: 0 0 20px 10px gold;
-    order: -5;
+#popup {
+    display: none;
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
 }
-.result.different {
-    box-shadow: 0 0 10px 5px #ff3366;
-    order: -3;
+#popupResults {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#popupResults .result {
+    width: 50%;
 }

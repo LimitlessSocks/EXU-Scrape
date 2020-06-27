@@ -20,6 +20,7 @@ let onLoad = async function () {
     CardViewer.Elements.previousPage = $("#previousPage");
     CardViewer.Elements.resultNote = $("#resultNote");
     CardViewer.Elements.cardId = $("#cardId");
+    CardViewer.Elements.cardIsRetrain = $("#cardIsRetrain");
     CardViewer.Elements.ifMonster = $(".ifMonster");
     CardViewer.Elements.ifSpell = $(".ifSpell");
     CardViewer.Elements.ifTrap = $(".ifTrap");
@@ -84,7 +85,7 @@ let onLoad = async function () {
         }
     };
     
-    for(let el of CardViewer.Elements.searchParameters.find("select, input:not(:checkbox)")) {
+    for(let el of CardViewer.Elements.searchParameters.find("select, input")) {
         $(el).change(elementChanged);
         $(el).keypress((event) => {
             if(event.originalEvent.code === "Enter") {

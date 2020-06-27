@@ -2,7 +2,8 @@ let onLoad = async function () {
     CardViewer.excludeTcg = false;
     CardViewer.Search.pageSize = Infinity;
     CardViewer.Search.columnWidth = -1;
-    CardViewer.composeStrategy = CardViewer.composeResultSmall;
+    CardViewer.Elements.popupResults = $("#popupResults");
+    CardViewer.Elements.popup = $("#popup");
     
     let response = await fetch("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/banlist.json");
     let db = await response.json();
@@ -10,6 +11,17 @@ let onLoad = async function () {
     
     CardViewer.Elements.results = $("#results");
     CardViewer.Elements.tableOfContents = $("#toc");
+    
+    const togglePopup = () => {
+        CardViewer.Elements.popup.toggle();
+    };
+    
+    CardViewer.Elements.popup.click((ev) => {
+        // console.log(ev);
+        if(["popup", "popupResults"].indexOf(ev.target.id) !== -1) {
+            togglePopup();
+        }
+    });
     
     let tags = ["Forbidden", "Limited", "Semi-Limited", "Unlimited"];
     
@@ -41,6 +53,7 @@ let onLoad = async function () {
     
     const appendSearchPage = (results, tag) => {
         let sub = $("<div class=results-holder>");
+        CardViewer.composeStrategy = CardViewer.composeResultSmall;
         CardViewer.Search.processResults(results);
         CardViewer.Search.currentPage = 0;
         CardViewer.Search.showPage(0, {
@@ -53,6 +66,18 @@ let onLoad = async function () {
                 else if(card.exu_limit != card.tcg_limit) {
                     el.addClass("different");
                 }
+                el.addClass("clickable");
+                el.click(() => {
+                    togglePopup();
+                    CardViewer.Elements.popupResults.empty();
+                    CardViewer.composeStrategy = CardViewer.composeResult;
+                    CardViewer.Search.processResults([ card ]);
+                    CardViewer.Search.showPage(0, {
+                        append: true,
+                        target: CardViewer.Elements.popupResults,
+                    });
+                    console.log(card.id);
+                });
                 return el;
             },
             sort: (page) =>
