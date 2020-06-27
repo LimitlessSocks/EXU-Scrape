@@ -4,6 +4,7 @@ let onLoad = async function () {
     CardViewer.Search.columnWidth = -1;
     CardViewer.Elements.popupResults = $("#popupResults");
     CardViewer.Elements.popup = $("#popup");
+    CardViewer.linkRetrain = true;
     
     let response = await fetch("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/banlist.json");
     let db = await response.json();
@@ -17,8 +18,12 @@ let onLoad = async function () {
     };
     
     CardViewer.Elements.popup.click((ev) => {
-        // console.log(ev);
         if(["popup", "popupResults"].indexOf(ev.target.id) !== -1) {
+            togglePopup();
+        }
+    });
+    $("body").keydown((ev) => {
+        if(CardViewer.Elements.popup.is(":visible") && ev.originalEvent.code === "Escape") {
             togglePopup();
         }
     });
@@ -30,11 +35,6 @@ let onLoad = async function () {
         10669, 10695, 1376287, 8429, 8803, 8861, 10138,
         6427, 8927, 7510, 979470
     ];
-    
-    const RetrainMap = {
-        1318550: 34206604, //Reynard Chemist -> Magical Scientist
-        1319024: 85668449, //Occult Lab -> Brain Research Lab
-    };
     
     const GradeFilters = [
         CardViewer.Filters.isNormal,
@@ -69,6 +69,7 @@ let onLoad = async function () {
                 el.addClass("clickable");
                 el.click(() => {
                     togglePopup();
+                    
                     CardViewer.Elements.popupResults.empty();
                     CardViewer.composeStrategy = CardViewer.composeResult;
                     CardViewer.Search.processResults([ card ]);
@@ -76,7 +77,6 @@ let onLoad = async function () {
                         append: true,
                         target: CardViewer.Elements.popupResults,
                     });
-                    console.log(card.id);
                 });
                 return el;
             },
