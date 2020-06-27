@@ -19,6 +19,11 @@ let onLoad = async function () {
         6427, 8927, 7510, 979470
     ];
     
+    const RetrainMap = {
+        1318550: 34206604, //Reynard Chemist -> Magical Scientist
+        1319024: 85668449, //Occult Lab -> Brain Research Lab
+    };
+    
     const GradeFilters = [
         CardViewer.Filters.isNormal,
         CardViewer.Filters.isEffect,
@@ -34,12 +39,10 @@ let onLoad = async function () {
     const grade = (card) =>
         GradeFilters.findIndex(filter => filter(card));
     
-    for(let i = 0; i <= 3; i++) {
+    const appendSearchPage = (results, tag) => {
         let sub = $("<div class=results-holder>");
-        let results = CardViewer.filter({ limit: i.toString() });
         CardViewer.Search.processResults(results);
         CardViewer.Search.currentPage = 0;
-        let a = true;
         CardViewer.Search.showPage(0, {
             append: true,
             target: sub,
@@ -63,7 +66,6 @@ let onLoad = async function () {
                     }
                 }),
         });
-        let tag = tags[i];
         let header = $("<h2 class=main>")
             .text(tag + " Cards (" + CardViewer.Search.pages[0].length + ")")
             .attr("id", tag)
@@ -75,6 +77,16 @@ let onLoad = async function () {
                 .attr("href", "#" + tag)
                 .text(tag))
         );
+    };
+    
+    
+    let results = CardViewer.filter({ retrain: true, });
+    appendSearchPage(results, "Retrained");
+    
+    for(let i = 0; i <= 3; i++) {
+        let results = CardViewer.filter({ limit: i.toString() }, { retrain: true });
+        let tag = tags[i];
+        appendSearchPage(results, tag);
     }
     
     // $("body").append(

@@ -358,6 +358,7 @@ CardViewer.query = function () {
         limit:      CardViewer.Elements.cardLimit.val(),
         id:         CardViewer.Elements.cardId.val(),
         author:     CardViewer.Elements.cardAuthor.val(),
+        retrain:    CardViewer.Elements.cardIsRetrain.is(":checked"),
     };
     if(CardViewer.Elements.spellStats.is(":visible")) {
         baseStats.kind = CardViewer.Elements.cardSpellKind.val();
@@ -392,14 +393,25 @@ CardViewer.textComparator = (needle, fn = _F.id) => {
 CardViewer.textAnyComparator = (needle, fn = _F.id) =>
     needle === "any" ? () => true : CardViewer.textComparator(needle, fn);
 
+CardViewer.boolExclusiveComparator = (needle, fn = _F.id) =>
+    (card) => needle ? fn(card) : true;
+
 CardViewer.exactComparator = (needle, fn = _F.id) => {
     return (card) =>
         fn(card) === needle;
 };
 
-CardViewer.createFilter = function (query) {
+CardViewer.createFilter = function (query, exclude = null) {
+    if(exclude) {
+        exclude = CardViewer.createFilter(exclude);
+    }
     if(typeof query === "function") {
-        return query;
+        if(exclude) {
+            return (...args) => query(...args) && !exclude(args);
+        }
+        else {
+            return query;
+        }
     }
     let filters = [
         // type filter
@@ -414,6 +426,8 @@ CardViewer.createFilter = function (query) {
         CardViewer.textComparator(query.author, _F.propda("username")),
         // limit filter
         CardViewer.textAnyComparator(query.limit, _F.propda("exu_limit")),
+        // retrain filter
+        CardViewer.boolExclusiveComparator (query.retrain, _F.propda("exu_retrain")),
     ];
     
     if(query.kind) {
@@ -451,11 +465,15 @@ CardViewer.createFilter = function (query) {
         filters.push(CardViewer.exactComparator(query.def, _F.propda("def")));
     }
     
-    return (card) => filters.every(filter => filter(card));
+    let filter = (card) => filters.every(filter => filter(card));
+    if(exclude) {
+        return (card) => filter(card) && !exclude(card);
+    }
+    return filter;
 };
 
-CardViewer.filter = function (query) {
-    let filter = CardViewer.createFilter(query);
+CardViewer.filter = function (query, exclude = null) {
+    let filter = CardViewer.createFilter(query, exclude);
     let cards = [];
     for(let [id, card] of Object.entries(CardViewer.Database.cards)) {
         if(CardViewer.excludeTcg && (card.tcg || card.ocg)) {

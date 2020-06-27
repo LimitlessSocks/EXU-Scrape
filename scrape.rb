@@ -134,7 +134,7 @@ database = [
     5269100, #Orb Magician
     4460492, #Holifear
     5323883, #Digitallias
-    4659249, #Malevolessence
+    # 4659249, #Malevolessence
     5145725, #Remnant
     5297494, #Thunderclap
     4657652, #Elixstar/Potions
@@ -198,7 +198,7 @@ database = [
     5713213, #Sky Striker Support
     5705030, #Phantasm Spiral Support
     4177191, #Lightray Support
-    5415163, #U.A. Support
+    # 5415163, #U.A. Support
     5685303, #Resonator Support
     4804758, #Draconia Support
     5663187, #Ploceress
@@ -228,7 +228,7 @@ database = [
     5270321, #Apocrypha
     4963487, #Battletech
     5782891, #The Weather Support
-    5758077, #Faust
+    # 5758077, #Faust
     5813034, #Gimmick Puppet Support
     5844326, #Danger! Support
     5432255, #Zefra Support
@@ -242,6 +242,14 @@ database = [
     4960158, #Skafos
     5772283, #Ascension Sky
     5837794, #Machina Support
+    5813169, #Tanticore
+    5856439, #Might of Valhalla
+    5860710, #Uwumancer
+    5749949, #Ancient Warrior Support
+    5541683, #Hydrovenal
+    5841822, #Tomes & Fate
+    5877005, #Destruction Military Garrison (DMG)
+    5894044, #Shino Support
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
@@ -252,17 +260,21 @@ database = [
 ]
 
 banlist = [
-    5855756, 5856014,
-    5857248,
-    5857281,
-    5857285
+    5895579,          #Retrains
+    5855756, 5856014, #Forbidden
+    5857248,          #Limited
+    5857281,          #Semi-Limited
+    5857285           #Unlimited
 ]
 
 EXU_BANNED      = { "exu_limit" => 0 }
 EXU_LIMITED     = { "exu_limit" => 1 }
 EXU_SEMILIMITED = { "exu_limit" => 2 }
 EXU_UNLIMITED   = { "exu_limit" => 3 }
+EXU_RETRAIN     = { "exu_limit" => 3, "exu_retrain" => true }
 extra_info = {
+    5895579 => EXU_RETRAIN,
+    
     5855756 => EXU_BANNED,
     5856014 => EXU_BANNED,
     
@@ -284,6 +296,10 @@ else
     outname = "banlist"
 end
 
+decks += extra_info.keys
+
+decks.uniq!
+
 deck_count = decks.size
 
 def progress(i, deck_count)
@@ -296,14 +312,18 @@ end
 # if VALID_OPERATIONS
 database = {}
 counts = Hash.new 0
-decks.each.with_index(1) { |id, i|
-    info = extra_info[id]
-    comb_deck(id).each { |card|
+decks.each.with_index(1) { |deck_id, i|
+    info = extra_info[deck_id]
+    # p deck_id
+    # p i, info
+    comb_deck(deck_id).each { |card|
         id = card["id"]
         unless info.nil?
             card.merge! info
+            # p card if deck_id == 5895579
         end
-        database[id] = card
+        database[id] ||= {}
+        database[id].merge! card
         counts[id] += 1
     }
     progress i, deck_count
