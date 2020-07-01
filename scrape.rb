@@ -104,7 +104,7 @@ def comb_deck(id)
 end
 
 database = [
-    4327693, #Lacrimosa
+    5919456, #Lacrimosa
     4367824, #Death Aspects
     4376011, #Combat Mechs
     4251928, #Traptrix Support
@@ -228,7 +228,7 @@ database = [
     5270321, #Apocrypha
     4963487, #Battletech
     5782891, #The Weather Support
-    # 5758077, #Faust
+    5895706, #Faust
     5813034, #Gimmick Puppet Support
     5844326, #Danger! Support
     5432255, #Zefra Support
@@ -250,6 +250,14 @@ database = [
     5841822, #Tomes & Fate
     5877005, #Destruction Military Garrison (DMG)
     5894044, #Shino Support
+    5873653, #Nether
+    5766412, #Karmasattva
+    5903684, #Prank-Kids Support
+    5907048, #Elementsaber Support
+    5834507, #Nadiupant
+    4806770, #Chronotiger
+    4383650, #BOOM! Mechs
+    5907001, #Battlewasp Support
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
