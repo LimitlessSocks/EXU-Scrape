@@ -37,6 +37,8 @@ let onLoad = async function () {
     CardViewer.Elements.cardATK = $("#cardATK");
     CardViewer.Elements.cardDEF = $("#cardDEF");
     CardViewer.Elements.toTopButton = $("#totop");
+    CardViewer.Elements.saveSearch = $("#saveSearch");
+    CardViewer.Elements.clearSearch = $("#clearSearch");
     
     CardViewer.Elements.search.click(CardViewer.submit);
     CardViewer.Elements.previousPage.click(CardViewer.Search.previousPage);
@@ -48,6 +50,76 @@ let onLoad = async function () {
             { duration: 200, }
         );
     });
+    
+    CardViewer.Elements.saveSearch.click(() => {
+        let strs = [];
+        for(let [key, value] of Object.entries(CardViewer.query())) {
+            if(value !== "" && value !== "any") {
+                if(key === "retrain" && !value) continue;
+                strs.push(key + "=" + value);
+            }
+        }
+        if(strs.length || window.location.search) {
+            window.location.search = strs.join(",");
+        }
+    });
+    
+    const KeyToElement = {
+        name:               CardViewer.Elements.cardName,
+        effect:             CardViewer.Elements.cardDescription,
+        type:               CardViewer.Elements.cardType,
+        limit:              CardViewer.Elements.cardLimit,
+        id:                 CardViewer.Elements.cardId,
+        author:             CardViewer.Elements.cardAuthor,
+        retrain:            CardViewer.Elements.cardIsRetrain,
+        level:              CardViewer.Elements.cardLevel,
+        monsterType:        CardViewer.Elements.cardMonsterType,
+        monsterAttribute:   CardViewer.Elements.cardMonsterAttribute,
+        monsterCategory:    CardViewer.Elements.cardMonsterCategory,
+        monsterAbility:     CardViewer.Elements.cardMonsterAbility,
+        atk:                CardViewer.Elements.cardATK,
+        def:                CardViewer.Elements.cardDEF,
+    };
+    
+    const parseStringValue = (str) => {
+        if(str === "true" || str === "false") {
+            return str === "true";
+        }
+        
+        let tryInt = parseInt(str);
+        if(!Number.isNaN(tryInt)) {
+            return tryInt;
+        }
+        
+        return str;
+    }
+    
+    if(window.location.search) {
+        CardViewer.firstTime = false;
+        let type = null;
+        for(let pair of window.location.search.slice(1).split(",")) {
+            let [ key, value ] = pair.split(/=(.+)?/);
+            let el = KeyToElement[key];
+            if(!el && key === "kind") {
+                if(type === "spell") {
+                    el = CardViewer.Elements.cardSpellKind
+                }
+                else {
+                    el = CardViewer.Elements.cardTrapKind;
+                }
+            }
+            value = parseStringValue(value);
+            if(el.is("[type='checkbox']")) {
+                el.prop("checked", value);
+            }
+            else {
+                el.val(value);
+            }
+            if(key === "type") {
+                type = value;
+            }
+        }
+    }
     
     CardViewer.Elements.autoSearch.change(function () {
         CardViewer.autoSearch = this.checked;
@@ -85,7 +157,8 @@ let onLoad = async function () {
         }
     };
     
-    for(let el of CardViewer.Elements.searchParameters.find("select, input")) {
+    let allInputs = CardViewer.Elements.searchParameters.find("select, input");
+    for(let el of allInputs) {
         $(el).change(elementChanged);
         $(el).keypress((event) => {
             if(event.originalEvent.code === "Enter") {
@@ -93,6 +166,22 @@ let onLoad = async function () {
             }
         });
     }
+    CardViewer.Elements.clearSearch.click(() => {
+        for(let el of allInputs) {
+            el = $(el);
+            if(el.is("select")) {
+                el.val(el.children().first().val());
+            }
+            else if(el.is("checkbox")) {
+                el.prop("checked", !!el.attr("checked"));
+            }
+            else {
+                el.val("");
+            }
+        }
+        elementChanged();
+        CardViewer.Elements.cardType.change();
+    });
     
     CardViewer.submit();
     

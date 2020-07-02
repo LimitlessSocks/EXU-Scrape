@@ -34,6 +34,12 @@ button {
 button:hover {
     background: #552255;
 }
+.danger-button {
+    background: #771144;
+}
+.danger-button:hover {
+    background: #993366;
+}
 input, select {
     background: #330033;
     color: white;
