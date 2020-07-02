@@ -258,6 +258,10 @@ database = [
     4806770, #Chronotiger
     4383650, #BOOM! Mechs
     5907001, #Battlewasp Support
+    5145725, #Remnant
+    5839316, #Duo-Attribute Support
+    5587605, #Hot Pink
+    5448052, #Modernotes 2: Idols and Icons
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II

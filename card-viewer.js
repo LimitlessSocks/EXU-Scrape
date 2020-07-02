@@ -40,6 +40,9 @@ const CardsOfTheWeek = [
     1530819, //Destoroyah, the One True Devil
     1526913, //Spellbook of Forbidden Arts
     930975,  //Equip Equality
+    1471876, //Flimsy Shot
+    1537498, //Ghost Wind & Bright Mist
+    1492408, //Ghost Wheel & Floating Lantern
 ];
 
 const Banlist = {
