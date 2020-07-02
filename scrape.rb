@@ -1,4 +1,4 @@
-VALID_OPERATIONS = ["main", "banlist"]
+VALID_OPERATIONS = ["main", "banlist", "test"]
 operation = ARGV[0]
 
 
@@ -275,6 +275,10 @@ banlist = [
     5857285           #Unlimited
 ]
 
+test = [
+    5925194, #Yurei
+]
+
 EXU_BANNED      = { "exu_limit" => 0 }
 EXU_LIMITED     = { "exu_limit" => 1 }
 EXU_SEMILIMITED = { "exu_limit" => 2 }
@@ -299,9 +303,12 @@ outname = nil
 if operation == "main"
     decks = database
     outname = "db"
-else
+elsif operation == "banlist"
     decks = banlist
     outname = "banlist"
+else
+    decks = test
+    outname = "test"
 end
 
 decks += extra_info.keys
@@ -317,18 +324,18 @@ def progress(i, deck_count)
     print "#{i}/#{deck_count} [#{bar}]\r"
 end
 
-# if VALID_OPERATIONS
 database = {}
 counts = Hash.new 0
+type_replace = /(.*?This monster's original Type is treated as (.+?) rather than (.+?)[,.].*?)/
 decks.each.with_index(1) { |deck_id, i|
     info = extra_info[deck_id]
-    # p deck_id
-    # p i, info
     comb_deck(deck_id).each { |card|
         id = card["id"]
         unless info.nil?
             card.merge! info
-            # p card if deck_id == 5895579
+        end
+        if type_replace === card["effect"]
+            card["type"] = $2
         end
         database[id] ||= {}
         database[id].merge! card
