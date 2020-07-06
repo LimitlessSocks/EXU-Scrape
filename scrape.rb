@@ -262,6 +262,8 @@ database = [
     5839316, #Duo-Attribute Support
     5587605, #Hot Pink
     5448052, #Modernotes 2: Idols and Icons
+    4422086, #Mystrick Support
+    5936560, #The Agent Support
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
@@ -340,6 +342,9 @@ decks.each.with_index(1) { |deck_id, i|
         end
         if type_replace === card["effect"]
             card["type"] = $2
+        end
+        if database[id] and operation == "banlist"
+            p "warning: duplicate id #{id} (#{card["name"]})"
         end
         database[id] ||= {}
         database[id].merge! card
