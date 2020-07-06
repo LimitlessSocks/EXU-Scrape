@@ -156,6 +156,8 @@ const RetrainMap = {
     1319245: 5167,      //Lavalval Chain
     1318580: 8509,      //Stellar Bunting -> Independent Nightingale
     1638076: 5684,      //Horror of the Depths -> Abyss Dweller
+    1477949: 144,       //Ancient Sprite Dragon -> Ancient Fairy Dragon
+    1477964: 8827,      //Eros, the Dead Drake of Dread -> Destrudo the Lost Dragon's Frisson
 };
 
 const LINK_ARROWS = {

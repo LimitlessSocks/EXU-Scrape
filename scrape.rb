@@ -264,6 +264,7 @@ database = [
     5448052, #Modernotes 2: Idols and Icons
     4422086, #Mystrick Support
     5936560, #The Agent Support
+    5917260, #Koala
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
