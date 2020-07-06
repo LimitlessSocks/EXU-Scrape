@@ -155,6 +155,7 @@ const RetrainMap = {
     1318524: 3307,      //Hippeastrum -> Amaryllis
     1319245: 5167,      //Lavalval Chain
     1318580: 8509,      //Stellar Bunting -> Independent Nightingale
+    1638076: 5684,      //Horror of the Depths -> Abyss Dweller
 };
 
 const LINK_ARROWS = {

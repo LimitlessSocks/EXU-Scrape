@@ -171,7 +171,7 @@ database = [
     # 5577804, #Thunder Dragon Support
     4540980, #Vampire Support
     4780879, #Dinosaur Support
-    4298315, #Nordic Support
+    # 4298315, #Nordic Support
     4073173, #Fabled Support
     # 4750943, #Ice Barrier Support
     # 5577782, #Dragonmaid Support
