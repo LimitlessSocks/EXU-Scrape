@@ -95,9 +95,10 @@ let onLoad = async function () {
     }
     
     if(window.location.search) {
+        let searchString = decodeURIComponent(window.location.search);
         CardViewer.firstTime = false;
         let type = null;
-        for(let pair of window.location.search.slice(1).split(",")) {
+        for(let pair of searchString.slice(1).split(",")) {
             let [ key, value ] = pair.split(/=(.+)?/);
             let el = KeyToElement[key];
             if(!el && key === "kind") {
