@@ -293,6 +293,11 @@ let extraDeckColors = ["Fusion", "Synchro", "Xyz", "Link"];
 CardViewer.Filters.isExtraDeck = (card) =>
     CardViewer.Filters.isMonster(card) &&
     extraDeckColors.some(color => card.monster_color === color);
+CardViewer.Filters.isMainDeck = (card) =>
+    CardViewer.Filters.isMonster(card) &&
+    !CardViewer.Filters.isExtraDeck(card);
+
+
 
 CardViewer.Filters.isNormal = CardViewer.Filters.monsterColorIs("Normal");
 CardViewer.Filters.isEffect = CardViewer.Filters.monsterColorIs("Effect");
@@ -363,6 +368,7 @@ CardViewer.Filters.Dictionary = {
     link:       _F.propda("is_link"),
     leveled:    CardViewer.Filters.isLeveled,
     extradeck:  CardViewer.Filters.isExtraDeck,
+    maindeck:   CardViewer.Filters.isMainDeck,
     noneffect:  CardViewer.Filters.isNonEffect,
     gemini:     CardViewer.Filters.isGeminiMonster,
     flip:       CardViewer.Filters.isFlipMonster,
@@ -405,8 +411,7 @@ CardViewer.query = function () {
 };
 
 CardViewer.simplifyText = (text) =>
-    text.replace(/\s*/, "")
-        .toLowerCase();
+    text.toLowerCase();
 
 CardViewer.textComparator = (needle, fn = _F.id) => {
     if(!needle) {
@@ -415,6 +420,22 @@ CardViewer.textComparator = (needle, fn = _F.id) => {
     let simplified = CardViewer.simplifyText(needle);
     return (card) =>
         fn(card).toString().toLowerCase().indexOf(simplified) !== -1;
+};
+const escapeRegExp = function (string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+CardViewer.regexComparator = (needle, fn = _F.id) => {
+    if(!needle) {
+        return () => true;
+    }
+    needle = escapeRegExp(needle)
+        .replace(/(?:\\\*){2}/g, "[^.]*?")
+        .replace(/\\\*/g, ".*?");
+    
+    let reg = new RegExp(needle, "i");
+    
+    return (card) =>
+        reg.test(fn(card).toString());
 };
 CardViewer.textAnyComparator = (needle, fn = _F.id) =>
     needle === "any" ? () => true : CardViewer.textComparator(needle, fn);
@@ -447,7 +468,7 @@ CardViewer.createFilter = function (query, exclude = null) {
         // id filter
         CardViewer.textComparator(query.id, _F.propda("id")),
         // effect filter
-        CardViewer.textComparator(query.effect, _F.propda("effect")),
+        CardViewer.regexComparator(query.effect, _F.propda("effect")),
         // author filter
         CardViewer.textComparator(query.author, _F.propda("username")),
         // limit filter
