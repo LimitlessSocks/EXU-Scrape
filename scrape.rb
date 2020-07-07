@@ -136,7 +136,7 @@ database = [
     5323883, #Digitallias
     # 4659249, #Malevolessence
     5145725, #Remnant
-    5297494, #Thunderclap
+    # 5297494, #Thunderclap
     4657652, #Elixstar/Potions
     5416935, #Akatsuki
     5304027, #Pyre
