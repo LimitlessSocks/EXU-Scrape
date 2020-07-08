@@ -329,11 +329,13 @@ CardViewer.Filters.isNonEffect = (card) => {
     }
     
     if(CardViewer.Filters.isExtraDeck(card)) {
-        let paras = card.effect.trim().split(/\r?\n|\r/g);
-        let sentences = card.effect
+        let parsed = card.effect
+            .replace(/\(.+?\)/g, "")
             .replace(/".+?"/g, "")
-            .split(".");
+        let paras = parsed.trim().split(/\r?\n|\r/g);
+        let sentences = parsed.split(".");
         let isNonEffect = paras.length === 1 && sentences.length === 1;
+        console.log(parsed, paras, sentences);
         return card.cached_is_non_effect = isNonEffect;
     }
     
