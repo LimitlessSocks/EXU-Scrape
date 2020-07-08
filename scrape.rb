@@ -195,7 +195,7 @@ database = [
     5549562, #Travelsha
     5668288, #Volcanic Support
     5687011, #Graydle Support
-    5713213, #Sky Striker Support
+    # 5713213, #Sky Striker Support
     5705030, #Phantasm Spiral Support
     4177191, #Lightray Support
     # 5415163, #U.A. Support
@@ -230,14 +230,14 @@ database = [
     5782891, #The Weather Support
     5895706, #Faust
     5813034, #Gimmick Puppet Support
-    5844326, #Danger! Support
+    # 5844326, #Danger! Support
     5432255, #Zefra Support
     4871988, #Dragonmaid Support
     4813673, #Thunder Dragon Support
     5844374, #Ghostrick Support
     5844363, #Time Thief Support
+    # 5010437, #Ugrovs
     3256281, #B.E.S. Support
-    5010437, #Ugrovs
     5675322, #Kojoten
     4960158, #Skafos
     5772283, #Ascension Sky
@@ -265,6 +265,9 @@ database = [
     4422086, #Mystrick Support
     5936560, #The Agent Support
     5917260, #Koala
+    2788655, #Ravager
+    5824862, #Titanic Moth
+    5844326, #Danger! Support
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
