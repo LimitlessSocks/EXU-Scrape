@@ -338,7 +338,7 @@ else
     outname = "test"
 end
 
-decks += extra_info.keys
+decks += extra_info.keys unless operation == "beta"
 
 decks.uniq!
 

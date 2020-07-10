@@ -1,5 +1,6 @@
+window.databaseToUse = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/db.json";
 let onLoad = async function () {
-    let response = await fetch("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/db.json");
+    let response = await fetch(window.databaseToUse);
     let db = await response.json();
     CardViewer.Database.setInitial(db);
     
