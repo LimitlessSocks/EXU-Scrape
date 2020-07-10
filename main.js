@@ -21,6 +21,7 @@ let onLoad = async function () {
     CardViewer.Elements.resultNote = $("#resultNote");
     CardViewer.Elements.cardId = $("#cardId");
     CardViewer.Elements.cardIsRetrain = $("#cardIsRetrain");
+    CardViewer.Elements.cardVisibility = $("#cardVisibility");
     CardViewer.Elements.ifMonster = $(".ifMonster");
     CardViewer.Elements.ifSpell = $(".ifSpell");
     CardViewer.Elements.ifTrap = $(".ifTrap");

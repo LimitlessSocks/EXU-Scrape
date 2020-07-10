@@ -211,3 +211,13 @@ h1, h2, h3, h4, h5, h6 {
 .retrainText {
     margin-top: 0.5em;
 }
+.result.private {
+    filter: opacity(80%) grayscale(50%);
+    -webkit-box-shadow: 0px 0px 30px 10px rgba(170,170,170,1);
+    -moz-box-shadow: 0px 0px 30px 10px rgba(170,170,170,1);
+    box-shadow: 0px 0px 30px 10px rgba(170,170,170,1);
+}
+.private .result-name i {
+    font-size: 0.8em;
+    color: #ddd;
+}

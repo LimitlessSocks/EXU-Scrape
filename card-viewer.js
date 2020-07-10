@@ -393,6 +393,7 @@ CardViewer.query = function () {
         id:         CardViewer.Elements.cardId.val(),
         author:     CardViewer.Elements.cardAuthor.val(),
         retrain:    CardViewer.Elements.cardIsRetrain.is(":checked"),
+        visibility: CardViewer.Elements.cardVisibility.val(),
     };
     if(CardViewer.Elements.spellStats.is(":visible")) {
         baseStats.kind = CardViewer.Elements.cardSpellKind.val();
@@ -476,7 +477,9 @@ CardViewer.createFilter = function (query, exclude = null) {
         // limit filter
         CardViewer.textAnyComparator(query.limit, _F.propda("exu_limit")),
         // retrain filter
-        CardViewer.boolExclusiveComparator (query.retrain, _F.propda("exu_retrain")),
+        CardViewer.boolExclusiveComparator(query.retrain, _F.propda("exu_retrain")),
+        // visibility filter
+        CardViewer.textAnyComparator(query.visibility, _F.propda("custom")),
     ];
     
     if(query.kind) {
@@ -592,6 +595,12 @@ CardViewer.composeResultSmall = function (card) {
     res.addClass(card.card_type.toLowerCase());
     res.addClass(card.monster_color.toLowerCase());
     
+    let isPrivate = card.custom && card.custom > 1
+    
+    if(isPrivate) {
+        res.addClass("private");
+    }
+    
     let effect = card.effect;
     if(card.pendulum) {
         effect = "[Pendulum Effect]\n" + card.pendulum_effect + "\n-----------\n[Monster Effect]\n" + effect;
@@ -704,6 +713,13 @@ CardViewer.composeResult = function (card) {
     res.attr("id", "card" + card.id);
     res.addClass(card.card_type.toLowerCase());
     res.addClass(card.monster_color.toLowerCase());
+    
+    let isPrivate = card.custom && card.custom > 1;
+    
+    if(isPrivate) {
+        res.addClass("private");
+        name.append($("<i>").text(" (private)"));
+    }
     
     let effect = card.effect;
     if(card.pendulum) {

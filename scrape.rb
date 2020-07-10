@@ -351,7 +351,10 @@ decks.each.with_index(1) { |deck_id, i|
             card["type"] = $2
         end
         if database[id] and operation == "banlist"
-            p "warning: duplicate id #{id} (#{card["name"]})"
+            puts "[#{deck_id}] warning: duplicate id #{id} (#{card["name"]})"
+        end
+        if card["custom"] and card["custom"] > 1
+            puts "[#{deck_id}] warning: card id #{id} (#{card["name"]}) is not public"
         end
         database[id] ||= {}
         database[id].merge! card
