@@ -73,6 +73,7 @@ let onLoad = async function () {
         id:                 CardViewer.Elements.cardId,
         author:             CardViewer.Elements.cardAuthor,
         retrain:            CardViewer.Elements.cardIsRetrain,
+        visibility:         CardViewer.Elements.cardVisibility,
         level:              CardViewer.Elements.cardLevel,
         monsterType:        CardViewer.Elements.cardMonsterType,
         monsterAttribute:   CardViewer.Elements.cardMonsterAttribute,
