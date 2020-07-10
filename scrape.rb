@@ -268,6 +268,9 @@ database = [
     2788655, #Ravager
     5824862, #Titanic Moth
     5844326, #Danger! Support
+    5925194, #Yurei
+    5868144, #Tsurumashi
+    5781120, #Stars
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II

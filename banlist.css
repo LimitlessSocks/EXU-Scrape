@@ -34,6 +34,9 @@
 #results img.star {
     width: 15px;
 }
+/* #results img.star + img.star {
+    margin-left: -5px;
+} */
 #results .result-attribute {
     margin: 2px auto;
     display: block;
