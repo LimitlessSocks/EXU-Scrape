@@ -1,4 +1,4 @@
-VALID_OPERATIONS = ["main", "banlist", "test"]
+VALID_OPERATIONS = ["main", "banlist", "test", "beta"]
 operation = ARGV[0]
 
 
@@ -289,8 +289,19 @@ banlist = [
 ]
 
 test = [
-    5925194, #Yurei
+    # 5925194, #Yurei
 ]
+
+beta = [
+    3947907, #Comedica Synchros
+    5935151, #Shirakashi
+    2952495, #Genjutsu
+    5959883, #Sky Dragon
+    5008957, #Akuma
+    4166948, #Fafner
+    5972342, #Crime Chaos
+]
+
 
 EXU_BANNED      = { "exu_limit" => 0 }
 EXU_LIMITED     = { "exu_limit" => 1 }
@@ -319,6 +330,9 @@ if operation == "main"
 elsif operation == "banlist"
     decks = banlist
     outname = "banlist"
+elsif operation == "beta"
+    decks = beta
+    outname = "beta"
 else
     decks = test
     outname = "test"
