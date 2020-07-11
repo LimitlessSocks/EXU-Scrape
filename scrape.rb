@@ -300,6 +300,7 @@ beta = [
     5008957, #Akuma
     4166948, #Fafner
     5972342, #Crime Chaos
+    5518399, #Darkgnis
 ]
 
 
