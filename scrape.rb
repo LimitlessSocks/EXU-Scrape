@@ -301,6 +301,8 @@ beta = [
     4166948, #Fafner
     5972342, #Crime Chaos
     5518399, #Darkgnis
+    5934147, #Neo Delta
+    5869257, #Yova
 ]
 
 
