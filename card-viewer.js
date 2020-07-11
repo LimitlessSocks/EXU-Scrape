@@ -43,6 +43,7 @@ const CardsOfTheWeek = [
     1471876, //Flimsy Shot
     1537498, //Ghost Wind & Bright Mist
     1492408, //Ghost Wheel & Floating Lantern
+    1510626, //Caltrops
 ];
 
 const Banlist = {
