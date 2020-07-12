@@ -10,6 +10,10 @@ html {
     font-family: "Poppins", "Gadugi", sans-serif;
 }
 
+html, body {
+    /* height: 100vh; */
+}
+
 select {
     width: 100%;
 }
@@ -198,7 +202,7 @@ h1, h2, h3, h4, h5, h6 {
         rgba(75, 112, 185, 0.8) 50%
     );
 }
-.result a, .result a:visited {
+a, a:visited {
     color: rgb(200, 200, 255);
 }
 .link-arrows {
@@ -220,4 +224,60 @@ h1, h2, h3, h4, h5, h6 {
 .private .result-name i {
     font-size: 0.8em;
     color: #ddd;
+}
+#page-link-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+.page-link {
+    width: 300px;
+    /* text-align: left; */
+    background: rgba(175,175,175,0.8);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border-radius: 10px;
+    transition: background 100ms, box-shadow 100ms;
+    padding-left: 7px;
+    margin: 20px;
+    cursor: pointer;
+}
+.page-link:hover {
+    background: rgba(230,200,200,0.8);
+    box-shadow: 0 0 10px white;
+}
+.page-link, .page-link:visited {
+    color: black;
+    text-decoration: none;
+    font-size: 2em;
+}
+h1.title {
+    font-size: 60px;
+    margin-top: 25px;
+}
+h2.subtitle {
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+h1.title, h2.subtitle {
+    text-align: center;
+    line-height: 1em;
+}
+.page-link img {
+    height: 80%;
+    padding: 5px;
+}
+p.byline {
+    font-size: 1.3em;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+}
+p.byline + p.byline {
+    margin-top: 25px;
 }
