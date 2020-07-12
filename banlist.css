@@ -5,6 +5,7 @@
     text-align: center;
     /* height: 15%; */
     width: 15%;
+    width: 225px;
 }
 #results .result.clickable {
     cursor: pointer;
