@@ -293,7 +293,11 @@ test = [
 ]
 
 beta = [
-    3947907, #Comedica Synchros
+    5979832, #The Draco
+    5983536, #Karakuri Support
+    3702740, #Comedica Generics
+    5682948, #LoD Cards
+    5993359, #Heat
     5935151, #Shirakashi
     2952495, #Genjutsu
     5959883, #Sky Dragon
@@ -303,6 +307,7 @@ beta = [
     5518399, #Darkgnis
     5934147, #Neo Delta
     5869257, #Yova
+    5984747, #PK Support
 ]
 
 
