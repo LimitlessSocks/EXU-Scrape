@@ -235,7 +235,7 @@ database = [
     4871988, #Dragonmaid Support
     4813673, #Thunder Dragon Support
     5844374, #Ghostrick Support
-    5844363, #Time Thief Support
+    # 5844363, #Time Thief Support
     # 5010437, #Ugrovs
     3256281, #B.E.S. Support
     5675322, #Kojoten
@@ -272,6 +272,7 @@ database = [
     5868144, #Tsurumashi
     5781120, #Stars
     5935151, #Shirakashi
+    2952495, #Genjutsu
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
@@ -294,13 +295,11 @@ test = [
 ]
 
 beta = [
-    5979832, #The Draco
+    #prio
+    5979832, #The Raycor
     5983536, #Karakuri Support
-    3702740, #Comedica Generics
-    5682948, #LoD Cards
-    5993359, #Heat
-    5935151, #Shirakashi
-    2952495, #Genjutsu
+    4608663, #Time Thief Support
+    #reg
     5959883, #Sky Dragon
     5008957, #Akuma
     4166948, #Fafner
