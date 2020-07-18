@@ -44,6 +44,7 @@ const CardsOfTheWeek = [
     1537498, //Ghost Wind & Bright Mist
     1492408, //Ghost Wheel & Floating Lantern
     1510626, //Caltrops
+    1409651, //Underwhelming Observations
 ];
 
 const OTKTools = [
