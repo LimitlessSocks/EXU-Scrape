@@ -286,7 +286,7 @@ p.byline + p.byline {
 
 #purposeFilter {
     /* float: right; */
-    display: inline-block;
+    /* display: inline-block; */
 }
 #message-holder {
     border-radius: 15px;
@@ -307,4 +307,11 @@ p.byline + p.byline {
     font-style: italic;
     margin-left: 15px;
     color: #ccc;
+}
+#searchParamters {
+    display: flex;
+    align-items: flex-start;
+}
+#contractPurpose {
+    display: none;
 }

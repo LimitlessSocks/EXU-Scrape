@@ -210,6 +210,24 @@ let onLoad = async function () {
     });
     
     updateBackground();
+    
+    const purposeFilter = $("#purposeFilter");
+    
+    for(let [name, group] of Object.entries(CardGroups)) {
+        let button = $("<button>");
+        button.text(name);
+        button.click(() => {
+            CardViewer.firstTime = false;
+            CardViewer.Elements.resultNote.text("This is an incomplete list. You can help by finding new cards in this category that are semi-generic, that is, able to be used by more than 1 particular strategy.");
+            CardViewer.demonstrate((card) => group.indexOf(card.id) !== -1);
+        });
+        button.toggle();
+        purposeFilter.append(button);
+    }
+    
+    $("#expandPurpose, #contractPurpose").click(function () {
+        $("#purposeFilter button").toggle();
+    });
 };
 
 window.addEventListener("load", onLoad);
