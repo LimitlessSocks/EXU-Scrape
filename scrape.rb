@@ -190,7 +190,7 @@ database = [
     5642481, #Daemon Engine
     5646060, #Ignation
     5627288, #Titanus Support
-    4395391, #Trapod
+    # 4395391, #Trapod
     5593625, #Orb Magicians
     5549562, #Travelsha
     5668288, #Volcanic Support
@@ -297,17 +297,22 @@ test = [
 beta = [
     #prio
     5979832, #The Raycor
-    5983536, #Karakuri Support
+    5682948, #LoD
+    6000654, #Laval
+    3702740, #Comedica Generics
     4608663, #Time Thief Support
+    6011815, #Lswarm
+    6011896, #Generaider
+    6014002, #Cipher
     #reg
-    5959883, #Sky Dragon
     5008957, #Akuma
-    4166948, #Fafner
-    5972342, #Crime Chaos
     5518399, #Darkgnis
     5934147, #Neo Delta
     5869257, #Yova
-    5984747, #PK Support
+    3068977, #Nekojishi
+    2922227, #Powerlock
+    4166948, #Fafner
+    6009768, #Gale
 ]
 
 

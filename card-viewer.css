@@ -227,9 +227,11 @@ a, a:visited {
 }
 #page-link-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 50px;
     flex-wrap: wrap;
+    width: 70%;
+    margin-left: 15%;
 }
 .page-link {
     width: 300px;
@@ -280,4 +282,29 @@ p.byline {
 }
 p.byline + p.byline {
     margin-top: 25px;
+}
+
+#purposeFilter {
+    /* float: right; */
+    display: inline-block;
+}
+#message-holder {
+    border-radius: 15px;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+}
+#message-holder .error {
+    color: red;
+}
+#message-holder .success {
+    color: green;
+}
+#message-holder .header {
+    font-weight: bold;
+    text-decoration: underline;
+}
+#message-holder .hint {
+    font-style: italic;
+    margin-left: 15px;
+    color: #ccc;
 }

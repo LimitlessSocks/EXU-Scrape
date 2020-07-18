@@ -1,5 +1,5 @@
 let onLoad = async function () {
-    CardViewer.excludeTcg = false;
+    CardViewer.excludeTcg =  false;
     CardViewer.Search.pageSize = Infinity;
     CardViewer.Search.columnWidth = -1;
     CardViewer.Elements.popupResults = $("#popupResults");
