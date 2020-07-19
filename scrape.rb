@@ -299,23 +299,22 @@ test = [
 
 beta = [
     #prio
-    5979832, #The Raycor
     5682948, #LoD
     6000654, #Laval
     3702740, #Comedica Generics
     4608663, #Time Thief Support
-    6011815, #Lswarm
     6011896, #Generaider
     6014002, #Cipher
+    6025962, #Gatr singles
+    5936334, #Darkwater
     #reg
-    5008957, #Akuma
     5518399, #Darkgnis
     5934147, #Neo Delta
     5869257, #Yova
     3068977, #Nekojishi
     2922227, #Powerlock
-    4166948, #Fafner
     6009768, #Gale
+    5904696, #Contraptions
 ]
 
 
