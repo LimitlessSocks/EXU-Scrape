@@ -273,6 +273,9 @@ database = [
     5781120, #Stars
     5935151, #Shirakashi
     2952495, #Genjutsu
+    5979832, #Raycor
+    5008957, #Akuma
+    4166948, #Fafner
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
