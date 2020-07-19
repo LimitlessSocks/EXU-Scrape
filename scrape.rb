@@ -280,6 +280,7 @@ database = [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
     5812213, #Generic Monsters III
+    5974796, #Generic Monsters IV
     5812214, #Generic Spells
     5812216, #Generic Traps
     5812417, #Assorted TCG Single Support
