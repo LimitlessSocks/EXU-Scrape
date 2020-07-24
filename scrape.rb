@@ -275,7 +275,12 @@ database = [
     2952495, #Genjutsu
     5979832, #Raycor
     5008957, #Akuma
-    4166948, #Fafner
+    # 4166948, #Fafner
+    5518399, #Darkgnis
+    6000654, #Laval Support
+    4608663, #Time Thief Support
+    4501871, #Oni Assassins
+    5934147, #Neo Delta
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
@@ -300,22 +305,18 @@ test = [
 
 beta = [
     #prio
-    5682948, #LoD
-    6000654, #Laval
-    3702740, #Comedica Generics
-    4608663, #Time Thief Support
-    6011896, #Generaider
-    6014002, #Cipher
-    6025962, #Gatr singles
-    5936334, #Darkwater
+    6014002, #Cipher Support
+    6044655, #Vampop☆Star Support
+    6050332, #Nermusa
+    6057722, #Emeraheart/Plorceress Support
     #reg
-    5518399, #Darkgnis
-    5934147, #Neo Delta
     5869257, #Yova
-    3068977, #Nekojishi
-    2922227, #Powerlock
-    6009768, #Gale
-    5904696, #Contraptions
+    2022937, #Anti-Magic
+    5788288, #Variavrains
+    5098946, #Guildimension
+    5843697, #Flamiller
+    6009822, #Mecha Madness
+    6052417, #Ancifear
 ]
 
 
