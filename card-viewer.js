@@ -678,7 +678,7 @@ CardViewer.composeResult = function (card) {
     
     let effect = card.effect;
     if(card.pendulum) {
-        effect = "[Pendulum Effect]\n" + card.pendulum_effect + "\n-----------\n[Monster Effect]\n" + effect;
+        effect = "Scale = " + card.scale + "\n[Pendulum Effect]\n" + card.pendulum_effect + "\n-----------\n[Monster Effect]\n" + effect;
         res.addClass("pendulum");
     }
     
