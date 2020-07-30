@@ -87,10 +87,42 @@ const DrawCards = [
     // 159726,  //Consistency Potion
 ];
 
+const HandTraps = [
+    1481211, //Amorel Rachel
+    1661909, //Child of the Forlorn Clouds
+    1473788, //Malformed Test Subject
+    1343784, //Mermaidol Maiden
+    1585405, //Scripture Golem
+    1704232, //Sojourned Alchemist
+    1494123, //Clever Forte & West's Viola
+    1357705, //D.D. Crane
+    1537498, //Ghost Wind & Bright Mist
+    1565554, //Two Tuners' Lampoon
+    1671524, //Aromaseraphy Ginkgo
+    1349617, //Faergon, Watcher of the Forest
+    1372900, //Kazu Geiko
+    1372884, //Kufu Geiko
+    1372872, //Mitori Geiko
+    1473822, //Sunvine Maiden
+];
+
 const CardGroups = {
-    "Cards of the Week": CardsOfTheWeek,
-    "OTK Tools": OTKTools,
+    cotw: {
+        name: "Cards of the Week",
+        data: CardsOfTheWeek,
+    },
+    otk: {
+        name: "OTK Tools",
+        data: OTKTools,
+    },
+    handtraps: {
+        name: "Handtraps",
+        data: HandTraps,
+    },
 };
+for(let [key, value] of Object.entries(CardGroups)) {
+    value.id = key;
+}
 
 const RetrainMap = {
     1318550: 2694,      //Reynard Chemist -> Magical Scientist

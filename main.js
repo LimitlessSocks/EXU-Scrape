@@ -112,6 +112,9 @@ let onLoad = async function () {
                     el = CardViewer.Elements.cardTrapKind;
                 }
             }
+            else if(!el && key === "group") {
+                continue;
+            }
             value = parseStringValue(value);
             if(el.is("[type='checkbox']")) {
                 el.prop("checked", value);
@@ -213,16 +216,28 @@ let onLoad = async function () {
     
     const purposeFilter = $("#purposeFilter");
     
-    for(let [name, group] of Object.entries(CardGroups)) {
+    for(let obj of Object.values(CardGroups)) {
+        let { id, name, data } = obj;
         let button = $("<button>");
         button.text(name);
         button.click(() => {
             CardViewer.firstTime = false;
             CardViewer.Elements.resultNote.text("This is an incomplete list. You can help by finding new cards in this category that are semi-generic, that is, able to be used by more than 1 particular strategy.");
-            CardViewer.demonstrate((card) => group.indexOf(card.id) !== -1);
+            CardViewer.demonstrate((card) => data.indexOf(card.id) !== -1);
+        });
+        button.contextmenu((e) => {
+            window.location.search = "group=" + id;
+            e.preventDefault();
         });
         button.toggle();
         purposeFilter.append(button);
+        obj.button = button;
+    }
+    
+    let match = window.location.search.match(/group=(\w+)/);
+    if(match) {
+        // console.log(match[1]);
+        CardGroups[match[1]].button.click();
     }
     
     $("#expandPurpose, #contractPurpose").click(function () {
