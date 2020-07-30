@@ -127,7 +127,7 @@ database = [
     5075635, #Starships
     5176216, #Antiqua
     4624534, #Harokai
-    5183280, #Titan Hunter
+    # 5183280, #Titan Hunter
     5256943, #Vampop☆Star
     4442461, #Titanic Dragon
     4604736, #of the North
@@ -137,7 +137,7 @@ database = [
     # 4659249, #Malevolessence
     5145725, #Remnant
     # 5297494, #Thunderclap
-    4657652, #Elixstar/Potions
+    # 4657652, #Elixstar/Potions
     5416935, #Akatsuki
     5304027, #Pyre
     5372415, #Modernotes
@@ -151,7 +151,7 @@ database = [
     5187975, #Rulers of Name
     4868725, #Dominus
     5541864, #Kuroshiro
-    5610680, #P@rol
+    # 5610680, #P@rol
     5597068, #Goo-T
     5576395, #Heaven-Knights
     5582929, #Seafolk
@@ -290,6 +290,10 @@ database = [
     5812214, #Generic Spells
     5812216, #Generic Traps
     5812417, #Assorted TCG Single Support
+] + [
+    #temp prio
+    6063436, #Sock Generic I
+    6082121, #Sock Generic II
 ]
 
 banlist = [
