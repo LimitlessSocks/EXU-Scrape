@@ -145,6 +145,7 @@ const RetrainMap = {
     1638076: 5684,      //Horror of the Depths -> Abyss Dweller
     1477949: 144,       //Ancient Sprite Dragon -> Ancient Fairy Dragon
     1477964: 8827,      //Eros, the Dead Drake of Dread -> Destrudo the Lost Dragon's Frisson
+    1708820: 10958,     //Numeron Extraction -> Numeron Calling
 };
 
 const LINK_ARROWS = {
