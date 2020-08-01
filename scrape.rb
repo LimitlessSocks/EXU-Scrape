@@ -128,7 +128,7 @@ database = [
     5176216, #Antiqua
     4624534, #Harokai
     # 5183280, #Titan Hunter
-    5256943, #Vampop☆Star
+    # 5256943, #Vampop☆Star
     4442461, #Titanic Dragon
     4604736, #of the North
     5269100, #Orb Magician
