@@ -310,10 +310,16 @@ test = [
 
 beta = [
     #prio
-    6014002, #Cipher Support
-    6044655, #Vampop☆Star Support
-    6050332, #Nermusa
-    6057722, #Emeraheart/Plorceress Support
+    6044655, #Vampop☆Star
+    6075292, #Scarlet
+    6078350, #Majecore
+    6065677, #ARTIFACT SUPPORT
+    5904696, #Contraptions
+    6107156, #Arcana Knight
+    6108874, #Set Ablaze
+    6108307, #Gate Guardian
+    6111199, #Insectum
+    6109070, #Normal Monster support
     #reg
     5869257, #Yova
     2022937, #Anti-Magic
@@ -322,6 +328,13 @@ beta = [
     5843697, #Flamiller
     6009822, #Mecha Madness
     6052417, #Ancifear
+    6044732, #Armorizer
+    3930398, #HOUSAMO
+    5217851, #Forcefire
+    3689114, #LeSpookie
+    6090560, #Yunoscope
+    6113749, #Cyber City
+    6113772, #FlavorFlov Singles
 ]
 
 
