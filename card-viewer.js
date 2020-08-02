@@ -45,6 +45,7 @@ const CardsOfTheWeek = [
     1492408, //Ghost Wheel & Floating Lantern
     1510626, //Caltrops
     1409651, //Underwhelming Observations
+    1473788, //Malformed Test Subject
 ];
 
 const OTKTools = [
