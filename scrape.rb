@@ -282,6 +282,7 @@ database = [
     4501871, #Oni Assassins
     5934147, #Neo Delta
     6050332, #Nermusa
+    6014002, #Cipher Support
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II

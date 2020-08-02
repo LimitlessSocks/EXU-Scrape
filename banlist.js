@@ -31,9 +31,10 @@ let onLoad = async function () {
     let tags = ["Forbidden", "Limited", "Semi-Limited", "Unlimited"];
     
     const NewCards = [
-        10669, 884, 10606, 9070, 10503, 3057, 5684, 3895, 10958,
-        9553, 9639, 1314,
-        9019
+        9984, 7601, 8344,
+        // 10669, 884, 10606, 9070, 10503, 3057, 5684, 3895, 10958,
+        // 9553, 9639, 1314,
+        // 9019
     ];
     //ADAMANCIPATOR RESEARCHER
     //CYBER-STEIN
