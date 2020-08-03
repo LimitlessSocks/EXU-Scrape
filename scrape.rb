@@ -283,6 +283,9 @@ database = [
     5934147, #Neo Delta
     6050332, #Nermusa
     6014002, #Cipher Support
+    6078350, #Majecore
+    5869257, #Yova
+    6109070, #Normal Support
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
@@ -313,16 +316,13 @@ beta = [
     #prio
     6044655, #Vampop☆Star
     6075292, #Scarlet
-    6078350, #Majecore
     6065677, #ARTIFACT SUPPORT
     5904696, #Contraptions
     6107156, #Arcana Knight
     6108874, #Set Ablaze
     6108307, #Gate Guardian
     6111199, #Insectum
-    6109070, #Normal Monster support
     #reg
-    5869257, #Yova
     2022937, #Anti-Magic
     5788288, #Variavrains
     5098946, #Guildimension
