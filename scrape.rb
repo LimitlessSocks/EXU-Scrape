@@ -286,6 +286,9 @@ database = [
     6078350, #Majecore
     5869257, #Yova
     6109070, #Normal Support
+    6129587, #Tindangle Support
+    5098946, #Guildimension
+    6044732, #Armorizer
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
