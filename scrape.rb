@@ -8,6 +8,7 @@ unless VALID_OPERATIONS.include? operation
 end
 
 require 'capybara'
+require 'json'
 start = Time.now
 
 # ids = [1231402, 1291692, 902755, 1318524, 1319058]
@@ -96,7 +97,7 @@ def comb_deck(id)
         data = $session.evaluate_script $comb_deck_fn
         break data["results"] if data["success"]
         if data["error"]
-            puts "Deck with id #{id} not found, moving on"
+            log id, "Deck with id #{id} not found, moving on"
             break []
         end
     end
@@ -312,33 +313,34 @@ banlist = [
 ]
 
 test = [
-    # 5925194, #Yurei
+    5925194, #Yurei
+    5857285, #test
 ]
 
 beta = [
     #prio
     6044655, #Vampop☆Star
-    6075292, #Scarlet
-    6065677, #ARTIFACT SUPPORT
     5904696, #Contraptions
     6107156, #Arcana Knight
     6108874, #Set Ablaze
-    6108307, #Gate Guardian
+    6108307, #Gate Guardian Support
     6111199, #Insectum
+    6100353, #Support drop for Modernote Idols + an extra, Modernote Electro
+    5936334, #Darkwater
+    5297494, #Thunderclap
+    5932979, #Subterror Behemoth Support
+    5932326, #Round 3 of Ani Generics
+    5839353, #Wave 2 of Dual Attribute Support
+    6135219, #The Parallel
+    6088519, #More More More Generics
     #reg
-    2022937, #Anti-Magic
-    5788288, #Variavrains
-    5098946, #Guildimension
-    5843697, #Flamiller
     6009822, #Mecha Madness
-    6052417, #Ancifear
-    6044732, #Armorizer
-    3930398, #HOUSAMO
-    5217851, #Forcefire
     3689114, #LeSpookie
     6090560, #Yunoscope
     6113749, #Cyber City
+    4184071, #Banyugeni
     6113772, #FlavorFlov Singles
+    4349406, #Franknstech: Inglorious Amalgamations
 ]
 
 
@@ -377,7 +379,9 @@ else
     outname = "test"
 end
 
-decks += extra_info.keys unless operation == "beta"
+ignore_banlist = ["test", "beta"]
+
+decks += extra_info.keys unless ignore_banlist.include? operation
 
 decks.uniq!
 
@@ -387,40 +391,112 @@ def progress(i, deck_count)
     max_size = 20
     ratio = i * max_size / deck_count
     bar = ("#" * ratio).ljust max_size
-    print "#{i}/#{deck_count} [#{bar}]\r"
+    puts "#{i}/#{deck_count} [#{bar}]"
 end
 
+def string_normalize(s)
+    s.gsub(/\r/, "")
+end
+
+def approximately_equal(a, b)
+    if String === a
+        a = string_normalize a
+        b = string_normalize b
+    end
+    a == b
+end
+
+now_time_name = Time.now.strftime("log/#{outname}-%m-%d-%Y.%H.%M.%S.txt")
+
+$log_file = File.open(now_time_name, "w:UTF-8")
+def log(src, info)
+    str = "[#{src}] #{info}"
+    puts str
+    $log_file.puts str if $log_file
+end
+
+log "main", "Created log file #{now_time_name}"
+
+old_database = if File.exist? "#{outname}.json"
+    file = File.open "#{outname}.json", "r:UTF-8"
+    text = file.read
+    file.close
+    log "main", "Reading #{outname}.json"
+    JSON.parse text
+else
+    log "main", "Creating new file #{outname}.json"
+    {}
+end
 database = {}
 counts = Hash.new 0
 type_replace = /(.*?This monster's original Type is treated as (.+?) rather than (.+?)[,.].*?)/
+attr_checks = [
+    "name",
+    "effect",
+    "pendulum_effect",
+    "attribute",
+    "scale",
+    "atk",
+    "def",
+    "monster_color",
+    "level",
+    "arrows",
+    "card_type",
+    "ability",
+]
+log "main", "Started scraping"
 decks.each.with_index(1) { |deck_id, i|
     info = extra_info[deck_id]
+    log deck_id, "STARTING TO SCRAPE DECK #{deck_id}"
     comb_deck(deck_id).each { |card|
-        id = card["id"]
+        id = card["id"].to_s
         unless info.nil?
             card.merge! info
         end
         if type_replace === card["effect"]
             card["type"] = $2
         end
+        
+        # log operations
+        display_text = "#{id} (#{card["name"]})"
         if database[id] and operation == "banlist"
-            puts "[#{deck_id}] warning: duplicate id #{id} (#{card["name"]})"
+            log deck_id, "warning: duplicate id #{display_text}"
         end
         if card["custom"] and card["custom"] > 1
-            puts "[#{deck_id}] warning: card id #{id} (#{card["name"]}) is not public"
+            log deck_id, "warning: card id #{display_text} is not public"
         end
+        if old_database[id]
+            old_entry = old_database[id]
+            attr_checks.each { |check|
+                unless approximately_equal(old_entry[check], card[check])
+                    log deck_id, "note: property '#{check}' of card id #{display_text} was changed"
+                    log deck_id, "from: #{old_entry[check]}"
+                    log deck_id, "to: #{card[check]}"
+                end
+            }
+        else
+            log deck_id, "note: [+] added new card #{display_text}"
+        end
+        
         database[id] ||= {}
         database[id].merge! card
         counts[id] += 1
     }
     progress i, deck_count
+    log deck_id, "Finished scraping."
 }
-# puts database
-File.write "#{outname}.json", database.to_json
+
+old_database.each { |id, card|
+    unless database[id]
+        log "main", "note: [-] removed old card #{id} (#{card["name"]})"
+    end
+}
+
 finish = Time.now
 
-puts "Time elapsed: #{finish - start}s"
+log "main", "Time elapsed: #{finish - start}s"
 
+$log_file.close
+puts "Press ENTER to confirm database entry."
 STDIN.gets
-
-
+File.write "#{outname}.json", database.to_json
