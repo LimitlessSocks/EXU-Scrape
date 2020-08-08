@@ -275,7 +275,7 @@ database = [
     5935151, #Shirakashi
     2952495, #Genjutsu
     5979832, #Raycor
-    5008957, #Akuma
+    # 5008957, #Akuma
     # 4166948, #Fafner
     5518399, #Darkgnis
     6000654, #Laval Support
