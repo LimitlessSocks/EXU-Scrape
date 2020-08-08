@@ -290,6 +290,7 @@ database = [
     6129587, #Tindangle Support
     5098946, #Guildimension
     6044732, #Armorizer
+    5936334, #Darkwater
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
@@ -395,7 +396,7 @@ def progress(i, deck_count)
 end
 
 def string_normalize(s)
-    s.gsub(/\r/, "")
+    s.gsub(/[\r\n\t]/, "")
 end
 
 def approximately_equal(a, b)
@@ -411,7 +412,7 @@ now_time_name = Time.now.strftime("log/#{outname}-%m-%d-%Y.%H.%M.%S.txt")
 $log_file = File.open(now_time_name, "w:UTF-8")
 def log(src, info)
     str = "[#{src}] #{info}"
-    puts str
+    puts str.gsub(/\r/, "\n")
     $log_file.puts str if $log_file
 end
 
@@ -443,6 +444,7 @@ attr_checks = [
     "arrows",
     "card_type",
     "ability",
+    "custom",
 ]
 log "main", "Started scraping"
 decks.each.with_index(1) { |deck_id, i|
@@ -469,9 +471,14 @@ decks.each.with_index(1) { |deck_id, i|
             old_entry = old_database[id]
             attr_checks.each { |check|
                 unless approximately_equal(old_entry[check], card[check])
-                    log deck_id, "note: property '#{check}' of card id #{display_text} was changed"
-                    log deck_id, "from: #{old_entry[check]}"
-                    log deck_id, "to: #{card[check]}"
+                    if check == "custom"
+                        mode = ["public", "private"][card[check] - 1]
+                        log deck_id, "note: card id #{display_text} was made #{mode}"
+                    else
+                        log deck_id, "note: property '#{check}' of card id #{display_text} was changed"
+                        log deck_id, "from: #{old_entry[check]}"
+                        log deck_id, "to: #{card[check]}"
+                    end
                 end
             }
         else
