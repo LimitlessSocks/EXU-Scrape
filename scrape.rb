@@ -322,26 +322,26 @@ beta = [
     #prio
     6044655, #Vampop☆Star
     5904696, #Contraptions
-    6107156, #Arcana Knight
     6108874, #Set Ablaze
     6108307, #Gate Guardian Support
     6111199, #Insectum
     6100353, #Support drop for Modernote Idols + an extra, Modernote Electro
     5936334, #Darkwater
     5297494, #Thunderclap
-    5932979, #Subterror Behemoth Support
     5932326, #Round 3 of Ani Generics
     5839353, #Wave 2 of Dual Attribute Support
     6135219, #The Parallel
-    6088519, #More More More Generics
+    6152840, #Neo Delta
+    6155621, #Magnet Warrior Support
+    6099647, #(more) Magnet Warrior Support
+    6158644, #Titanus Support
     #reg
-    6009822, #Mecha Madness
     3689114, #LeSpookie
-    6090560, #Yunoscope
     6113749, #Cyber City
     4184071, #Banyugeni
-    6113772, #FlavorFlov Singles
     4349406, #Franknstech: Inglorious Amalgamations
+    6155436, #Insomnia
+    5830740, #New Order
 ]
 
 
