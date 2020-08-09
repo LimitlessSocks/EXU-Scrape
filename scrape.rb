@@ -328,7 +328,7 @@ beta = [
     6111199, #Insectum
     6100353, #Support drop for Modernote Idols + an extra, Modernote Electro
     5936334, #Darkwater
-    5297494, #Thunderclap
+    # 5297494, #Thunderclap
     5932326, #Round 3 of Ani Generics
     5839353, #Wave 2 of Dual Attribute Support
     6135219, #The Parallel
