@@ -291,6 +291,7 @@ database = [
     5098946, #Guildimension
     6044732, #Armorizer
     5936334, #Darkwater
+    6162086, #Magnet Warrior Support
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
@@ -332,7 +333,6 @@ beta = [
     5839353, #Wave 2 of Dual Attribute Support
     6135219, #The Parallel
     6152840, #Neo Delta
-    6155621, #Magnet Warrior Support
     6099647, #(more) Magnet Warrior Support
     6158644, #Titanus Support
     #reg
