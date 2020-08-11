@@ -410,8 +410,10 @@ CardViewer.textComparator = (needle, fn = _F.id) => {
         return () => true;
     }
     let simplified = CardViewer.simplifyText(needle);
-    return (card) =>
-        fn(card).toString().toLowerCase().indexOf(simplified) !== -1;
+    return (card) => {
+        let f = fn(card);
+        return f !== null && f.toString().toLowerCase().indexOf(simplified) !== -1;
+    }
 };
 const escapeRegExp = function (string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -440,6 +442,8 @@ CardViewer.exactComparator = (needle, fn = _F.id) => {
         fn(card) === needle;
 };
 
+CardViewer.or = (...fns) => (...args) => fns.some(fn => fn(...args));
+
 CardViewer.createFilter = function (query, exclude = null) {
     if(exclude) {
         exclude = CardViewer.createFilter(exclude);
@@ -456,7 +460,10 @@ CardViewer.createFilter = function (query, exclude = null) {
         // type filter
         CardViewer.Filters.getFilter(query.type),
         // name filter
-        CardViewer.textComparator(query.name, _F.propda("name")),
+        CardViewer.or(
+            CardViewer.textComparator(query.name, _F.propda("name")),
+            CardViewer.textComparator(query.name, _F.propda("also_archetype")),
+        ),
         // id filter
         CardViewer.textComparator(query.id, _F.propda("id")),
         // effect filter
