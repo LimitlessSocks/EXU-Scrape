@@ -127,7 +127,8 @@ database = [
     2788655, #Ravager
     5075635, #Starships
     5176216, #Antiqua
-    4624534, #Harokai
+    # 4624534, #Harokai
+    5189158, #Harokai
     # 5183280, #Titan Hunter
     # 5256943, #Vampop☆Star
     4442461, #Titanic Dragon
@@ -292,6 +293,7 @@ database = [
     6044732, #Armorizer
     5936334, #Darkwater
     6162086, #Magnet Warrior Support
+    5904696, #Contraptions
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
@@ -315,8 +317,9 @@ banlist = [
 ]
 
 test = [
-    5925194, #Yurei
-    5857285, #test
+    # 5925194, #Yurei
+    # 5857285, #test
+    6174343
 ]
 
 beta = [
@@ -430,7 +433,8 @@ else
 end
 database = {}
 counts = Hash.new 0
-type_replace = /(.*?This monster's original Type is treated as (.+?) rather than (.+?)[,.].*?)/
+type_replace = /\(.*?This monster's original Type is treated as (.+?) rather than (.+?)[,.].*?\)/
+archetype_treatment = /\(.*This card is always treated as an? "(.+?)" card.*\)/
 attr_checks = [
     "name",
     "effect",
@@ -456,7 +460,12 @@ decks.each.with_index(1) { |deck_id, i|
             card.merge! info
         end
         if type_replace === card["effect"]
-            card["type"] = $2
+            card["type"] = $1
+        end
+        if archetype_treatment === card["effect"]
+            card["also_archetype"] = $1
+        else
+            card["also_archetype"] = nil
         end
         
         # log operations
