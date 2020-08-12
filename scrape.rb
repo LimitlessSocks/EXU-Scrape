@@ -294,6 +294,7 @@ database = [
     5936334, #Darkwater
     6162086, #Magnet Warrior Support
     5904696, #Contraptions
+    4349406, #Franknstech
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
