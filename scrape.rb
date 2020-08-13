@@ -329,27 +329,27 @@ test = [
 
 beta = [
     #prio
-    6044655, #Vampop☆Star
-    5904696, #Contraptions
     6108874, #Set Ablaze
     6108307, #Gate Guardian Support
     6111199, #Insectum
-    6100353, #Support drop for Modernote Idols + an extra, Modernote Electro
-    5936334, #Darkwater
-    # 5297494, #Thunderclap
-    5932326, #Round 3 of Ani Generics
-    5839353, #Wave 2 of Dual Attribute Support
     6135219, #The Parallel
-    6152840, #Neo Delta
     6099647, #(more) Magnet Warrior Support
-    6158644, #Titanus Support
+    6163866, #Black blood
+    6152840, #Neo Delta Support
+    5615821, #Onomat/Utopia Support
+    6176395, #BLAZE'S EXU SINGLES PACK (VERSION 3)
+    3300698, #AL-Knight
+    1744106, #The Daemon Void
+    6116920, #Frozen _ Beyond the Ice Barrier
     #reg
     3689114, #LeSpookie
     6113749, #Cyber City
     4184071, #Banyugeni
-    4349406, #Franknstech: Inglorious Amalgamations
     6155436, #Insomnia
     5830740, #New Order
+    6156281, #FlavorFlov singles
+    6163245, #KryMP
+    6173753, #Lurid
 ]
 
 
