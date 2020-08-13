@@ -147,6 +147,8 @@ const RetrainMap = {
     1477949: 144,       //Ancient Sprite Dragon -> Ancient Fairy Dragon
     1477964: 8827,      //Eros, the Dead Drake of Dread -> Destrudo the Lost Dragon's Frisson
     1708820: 10958,     //Numeron Extraction -> Numeron Calling
+    1743438: 5844,      //Spellbook of Silence -> Spellbook of Judgment
+    1684963: 9501,      //The Thunder Dragon's Rider -> Thunder Dragon Colossus
 };
 
 const LINK_ARROWS = {

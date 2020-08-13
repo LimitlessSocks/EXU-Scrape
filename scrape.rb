@@ -154,6 +154,7 @@ database = [
     4868725, #Dominus
     5541864, #Kuroshiro
     # 5610680, #P@rol
+    6110085, #P@rol (Ani)
     5597068, #Goo-T
     5576395, #Heaven-Knights
     5582929, #Seafolk
@@ -295,6 +296,7 @@ database = [
     6162086, #Magnet Warrior Support
     5904696, #Contraptions
     4349406, #Franknstech
+    6169009, #Aquaactress Support
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
@@ -307,6 +309,8 @@ database = [
     #temp prio
     6063436, #Sock Generic I
     6082121, #Sock Generic II
+    5932326, #Round 3 of Ani Generics (Generic Singles)
+    5839353, #Wave 2 of Dual-Attribute Support
 ]
 
 banlist = [
