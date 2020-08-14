@@ -297,6 +297,9 @@ database = [
     5904696, #Contraptions
     4349406, #Franknstech
     6169009, #Aquaactress Support
+    6044655, #Vampop☆Star
+    6135219, #The Parallel
+    6155436, #Insomnia
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
