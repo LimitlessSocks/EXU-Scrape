@@ -310,7 +310,7 @@ database = [
     5812417, #Assorted TCG Single Support
 ] + [
     #temp prio
-    6063436, #Sock Generic I
+    # 6063436, #Sock Generic I
     6082121, #Sock Generic II
     5932326, #Round 3 of Ani Generics (Generic Singles)
     5839353, #Wave 2 of Dual-Attribute Support
@@ -325,9 +325,7 @@ banlist = [
 ]
 
 test = [
-    # 5925194, #Yurei
-    # 5857285, #test
-    6174343
+    banlist[-1], 6192766
 ]
 
 beta = [
@@ -505,6 +503,15 @@ decks.each.with_index(1) { |deck_id, i|
         database[id] ||= {}
         database[id].merge! card
         counts[id] += 1
+        
+        # not an extra archetype
+        unless extra_info.include? deck_id
+            if counts[id] > 1
+                log deck_id, "warning: card id #{display_text} was duplicated in <#{deck_id}> from <#{database[id]["submission_source"]}>"
+            else
+                database[id]["submission_source"] = deck_id
+            end
+        end
     }
     progress i, deck_count
     log deck_id, "Finished scraping."
