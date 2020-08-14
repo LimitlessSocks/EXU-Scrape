@@ -189,7 +189,7 @@ database = [
     4050998, #Mage & Spell Tomes
     5659403, #X-Saber Support
     5615949, #Alchemaster
-    5647560, #Ophion
+    # 5647560, #Ophion
     5642481, #Daemon Engine
     5646060, #Ignation
     5627288, #Titanus Support
