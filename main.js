@@ -62,7 +62,8 @@ let onLoad = async function () {
             }
         }
         if(strs.length || window.location.search) {
-            window.location.search = strs.join(",");
+            window.location.search = encodeURI(strs.join(","))
+                .replaceAll(".", "%2E");
         }
     });
     
