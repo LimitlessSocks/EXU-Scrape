@@ -704,7 +704,16 @@ CardViewer.composeResultSmall = function (card) {
 CardViewer.composeResult = function (card) {
     let img = $("<img class=img-result>").attr("src", card.src);
     let name = $("<h3 class=result-name>").text(card.name);
-    let id = $("<h4 class=result-id>").text(card.id);
+    
+    let idText = card.id;
+    let altText = `(~${card.submission_source})`;
+    let id = $("<h4 class=result-id>")
+        .contextmenu((e) => {
+            e.preventDefault();
+            idText = idText === card.id ? altText : card.id;
+            id.text(idText);
+        })
+        .text(idText);
     let author = $("<h4 class=result-author>").text(card.username);
     
     let res = $("<div class=result>");
