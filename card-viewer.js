@@ -46,6 +46,7 @@ const CardsOfTheWeek = [
     1510626, //Caltrops
     1409651, //Underwhelming Observations
     1473788, //Malformed Test Subject
+    1558753, //Charismatic Priestess
 ];
 
 const OTKTools = [
