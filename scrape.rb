@@ -162,7 +162,7 @@ database = [
     5592020, #Bound
     4188326, #Anti-Luminescent Knights
     4933305, #Coccoon Support
-    4936132, #F.A. Support
+    # 4936132, #F.A. Support
     4894268, #Kaiju Support
     5177132, #Darklord Support
     5336647, #Trickstar Support
@@ -251,7 +251,7 @@ database = [
     5749949, #Ancient Warrior Support
     5541683, #Hydrovenal
     5841822, #Tomes & Fate
-    5877005, #Destruction Military Garrison (DMG)
+    # 5877005, #Destruction Military Garrison (DMG)
     5894044, #Shino Support
     5873653, #Nether
     5766412, #Karmasattva
@@ -301,6 +301,13 @@ database = [
     6135219, #The Parallel
     6155436, #Insomnia
     3689114, #LeSpookie
+    6111199, #Insectum
+    6209092, #Acrimonic
+    5703615, #World Chalice
+    5830740, #New Order
+    5884678, #Arsenal
+    6221979, #Tindangle Support
+    6173753, #Lurid
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
