@@ -162,10 +162,10 @@ database = [
     5592020, #Bound
     4188326, #Anti-Luminescent Knights
     4933305, #Coccoon Support
-    # 4936132, #F.A. Support
+    4936132, #F.A. Support
     4894268, #Kaiju Support
     5177132, #Darklord Support
-    5336647, #Trickstar Support
+    # 5336647, #Trickstar Support
     5219266, #Phantom Beast Support
     5260210, #Sylvan Support
     # 5549851, #Time Thief Support
@@ -197,7 +197,7 @@ database = [
     5593625, #Orb Magicians
     5549562, #Travelsha
     5668288, #Volcanic Support
-    5687011, #Graydle Support
+    # 5687011, #Graydle Support
     # 5713213, #Sky Striker Support
     5705030, #Phantasm Spiral Support
     4177191, #Lightray Support
@@ -223,7 +223,7 @@ database = [
     5601607, #Chaos Performer
     5744520, #Dream Mirror Support
     5751277, #World Legacy Support (Krawler)
-    5274505, #Mayakashi Support
+    # 5274505, #Mayakashi Support
     5691370, #GRECO
     5755617, #Shagdi
     5741889, #Titanus Support
@@ -245,7 +245,7 @@ database = [
     4960158, #Skafos
     5772283, #Ascension Sky
     5837794, #Machina Support
-    5813169, #Tanticore
+    # 5813169, #Tanticore
     5856439, #Might of Valhalla
     5860710, #Uwumancer
     5749949, #Ancient Warrior Support
@@ -255,8 +255,8 @@ database = [
     5894044, #Shino Support
     5873653, #Nether
     5766412, #Karmasattva
-    5903684, #Prank-Kids Support
-    5907048, #Elementsaber Support
+    # 5903684, #Prank-Kids Support
+    # 5907048, #Elementsaber Support
     5834507, #Nadiupant
     4806770, #Chronotiger
     4383650, #BOOM! Mechs
@@ -285,7 +285,7 @@ database = [
     4501871, #Oni Assassins
     5934147, #Neo Delta
     6050332, #Nermusa
-    6014002, #Cipher Support
+    # 6014002, #Cipher Support
     6078350, #Majecore
     5869257, #Yova
     6109070, #Normal Support
@@ -308,6 +308,7 @@ database = [
     5884678, #Arsenal
     6221979, #Tindangle Support
     6173753, #Lurid
+    6065677, #Artifact Support
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
