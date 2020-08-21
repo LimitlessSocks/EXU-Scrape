@@ -150,6 +150,7 @@ const RetrainMap = {
     1708820: 10958,     //Numeron Extraction -> Numeron Calling
     1743438: 5844,      //Spellbook of Silence -> Spellbook of Judgment
     1684963: 9501,      //The Thunder Dragon's Rider -> Thunder Dragon Colossus
+    1649898: 9863,      //Ib, World Chalice's Reincarnation -> Ib the World Chalice Justiciar
 };
 
 const LINK_ARROWS = {
