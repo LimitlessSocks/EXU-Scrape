@@ -255,7 +255,6 @@ database = [
     5894044, #Shino Support
     5873653, #Nether
     5766412, #Karmasattva
-    # 5903684, #Prank-Kids Support
     # 5907048, #Elementsaber Support
     5834507, #Nadiupant
     4806770, #Chronotiger
@@ -309,6 +308,10 @@ database = [
     6221979, #Tindangle Support
     6173753, #Lurid
     6065677, #Artifact Support
+    6121762, #Hydromunculus
+    6239335, #Plorceress Support
+    6239411, #Prank-Kids Support
+    6236137, #Tacticore
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
