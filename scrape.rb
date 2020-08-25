@@ -339,27 +339,12 @@ test = [
 
 beta = [
     #prio
-    6108874, #Set Ablaze
-    6108307, #Gate Guardian Support
-    6111199, #Insectum
-    6135219, #The Parallel
-    6099647, #(more) Magnet Warrior Support
-    6163866, #Black blood
-    6152840, #Neo Delta Support
-    5615821, #Onomat/Utopia Support
-    6176395, #BLAZE'S EXU SINGLES PACK (VERSION 3)
-    3300698, #AL-Knight
-    1744106, #The Daemon Void
-    6116920, #Frozen _ Beyond the Ice Barrier
+    5954949, #Yokai stuff
+    6121762, #Hydromunculus
+    6040042, #Kuuroma
+    6226538, #Insomnia Support Wave 2 out of 3
     #reg
-    3689114, #LeSpookie
-    6113749, #Cyber City
-    4184071, #Banyugeni
-    6155436, #Insomnia
-    5830740, #New Order
-    6156281, #FlavorFlov singles
-    6163245, #KryMP
-    6173753, #Lurid
+    
 ]
 
 

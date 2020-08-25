@@ -8,7 +8,13 @@ puts "Loading capybara..."
 $session = Capybara::Session.new(:selenium)
 puts "Loaded!"
 
-weekly11 = [
+ReplayInfo = Struct.new(:name, :replays) do
+    def merge(name, *others)
+        ReplayInfo.new name, replays + others.flat_map(&:replays)
+    end
+end
+
+weekly11 = ReplayInfo.new("weekly11", [
     "343487-20661105",
     "14422-20660958",
     "481907-20660901",
@@ -26,9 +32,9 @@ weekly11 = [
     "14422-20663529",
     "14422-20664735",
     "332143-20666201",
-]
+])
 
-ycs_dino_devestation = [
+ycs_dino_devestation = ReplayInfo.new("ycs_dino_devestation", [
     "534677-20358748",
     "453279-20358512",
     "453279-20368153",
@@ -70,10 +76,78 @@ ycs_dino_devestation = [
     "356-20167424",
     "479696-20167096",
     "441001-20166224I",
-]
+])
 
-focus = ycs_dino_devestation
-name = "ycs_dino_devestation"
+# note: missing replay
+weekly12 = ReplayInfo.new("weekly12", [
+    "77474-20835283",
+    "332143-20835190",
+    "453279-20835247",
+    "332143-20835986",
+    "349034-20836022",
+    "163270-20835724&",
+    "453279-20836359",
+    "349034-20836864",
+    "453279-20836986",
+    "332143-20837515",
+    "205781-20836741",
+    "205781-20837511",
+    "205781-20838212",
+    "453279-20838314",
+    "488933-20838937",
+    "488933-20839571",
+])
+
+# madness; missing replay
+exu_1_year_anniversary = ReplayInfo.new("exu_1_year_anniversary", [
+    "479696-20858956",
+    "205781-20859136",
+    "349034-20859188",
+    "441001-20858945",
+    "343487-20859256",
+    "481907-20859026",
+    "205781-20859722",
+    "343487-20860117",
+    "509709-20860803",
+    "205781-20861010",
+    "205781-20861351",
+])
+
+weekly10 = ReplayInfo.new("weekly10", [
+    "77474-20488301",
+    "332143-20488300",
+    "452058-20488555",
+    "77474-20488753",
+    "406828-20488198",
+    "334828-20488224",
+    "77474-20489166",
+    "441001-20488658",
+    "205781-20488795",
+    "349034-20488681",
+    "282034-20489985",
+    "332143-20490309",
+    "349034-20490343",
+    "354255-20490321",
+    "343487-20490749",
+    "406828-20490771",
+    "343487-20491406",
+    "77474-20491966",
+    "77474-20493014",
+    "406828-20493741",
+])
+
+weeklies10_12 = weekly10.merge("weeklies10_12", weekly11, weekly12)
+
+# change this to change results
+focus = weeklies10_12
+
+name = focus[:name]
+focus = focus[:replays]
+# name = "exu_1_year_anniversary"
+# focus = weekly12
+# name = "weekly12"
+# focus = ycs_dino_devestation
+# name = "ycs_dino_devestation"
 # focus = weekly11
 # name = "weekly11"
 
