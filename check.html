@@ -10,13 +10,31 @@
     <script src="./card-viewer.js"></script>
     <script src="./check.js"></script>
     <link rel="STYLESHEET" href="./card-viewer.css">
-    
+    <style>
+        select {
+            width: auto;
+        }
+    </style>
 </head>
 <body>
 <h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1>
 <h1 id="top">EXU Deck Check</h1>
 <p>Note: This deck checker currently cannot detect OCG cards. Please double check your deck for cards that aren't released yet. Thanks!</p>
-<input type="file" id="deck-input" accept=".xml"> <button id="check-submit">Check</button>
+<p><label for="format-selector">Format: </label><select id="format-selector">
+    <option disabled>[-- EXU FORMATS --]</option>
+    <option default>EXU Standard</option>
+    <option>EXU Modern</option>
+    <option>EXU Classic</option>
+    <option disabled>[-- TCG FORMATS --]</option>
+    <option>TCG Modern</option>
+    <option>OCG Modern</option>
+    <option>January 2020 Format</option>
+    <option>Zoodiac Format</option>
+    <option>Goat Format</option>
+    <option>2014 HAT Format</option>
+    <option>2008 Light of Destruction Format</option>
+</select></p>
+<p><input type="file" id="deck-input" accept=".xml"> <button id="check-submit">Check</button></p>
 <h2>Results</h2>
 <div id="message-holder">
 <i>Upload a file and press "Check".</i>

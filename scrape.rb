@@ -47,6 +47,9 @@ $comb_deck_header = <<EOF
     Promise.all(promises).then(() => {
         window.scrapeReady = true;
     });
+    setTimeout(() => {
+        window.scrapeReady = true;
+    }, 10000);
 })({ countMain: countMain, countSide: countSide, countExtra: countExtra });
 EOF
     

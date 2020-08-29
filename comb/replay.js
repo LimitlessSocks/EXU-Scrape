@@ -28,6 +28,7 @@
         obj.play === "Quit duel";
     
     let canParse = true;
+    let isMatch = replay_arr.some(e => e.over);
     
     const collectGame = () => {
         if(!canParse) {
@@ -40,6 +41,7 @@
         }
         let det = replay_actions.shift();
         console.log("Determinator:", det);
+        console.log("Actions:", actions);
         let loser = det.username;
         console.log("Round loser:", loser);
         let winner = players[loser === players[0] ? 1 : 0]
@@ -47,7 +49,7 @@
         roundsWon[winner]++;
         
         // info for next collect
-        if(det.over || replay_actions.length === 0) {
+        if(det.over || replay_actions.length === 0 || !isMatch) {
             canParse = false;
         }
         

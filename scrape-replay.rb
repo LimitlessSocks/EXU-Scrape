@@ -138,8 +138,22 @@ weekly10 = ReplayInfo.new("weekly10", [
 
 weeklies10_12 = weekly10.merge("weeklies10_12", weekly11, weekly12)
 
+ladder = ReplayInfo.new("ladder", [
+    "205781-20945615", #8-26-2020
+    "453279-20958986", #8-26-2020
+    "343043-20975731", #8-27-2020
+    "205781-20979077", #8-27-2020
+    "205781-20979462", #8-27-2020
+    "205781-20987072", #8-27-2020
+    "453279-20987617", #8-27-2020
+    "349034-20996905", #8-28-2020
+    "349034-20997284", #8-28-2020
+    "343043-21006633", #8-28-2020 (1 dud, 1 single)
+    "343043-21005563", #8-28-2020
+])
+
 # change this to change results
-focus = weeklies10_12
+focus = ladder
 
 name = focus[:name]
 focus = focus[:replays]

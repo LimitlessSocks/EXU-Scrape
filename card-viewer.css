@@ -18,6 +18,12 @@ select {
     width: 100%;
 }
 
+option[disabled] {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: red;
+}
+
 p {
     margin: 0;
     line-height: 29px;
