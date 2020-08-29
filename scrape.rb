@@ -294,7 +294,7 @@ database = [
     5936334, #Darkwater
     6162086, #Magnet Warrior Support
     5904696, #Contraptions
-    4349406, #Franknstech
+    # 4349406, #Franknstech
     6169009, #Aquaactress Support
     6044655, #Vampop☆Star
     6135219, #The Parallel
@@ -312,6 +312,10 @@ database = [
     6239335, #Plorceress Support
     6239411, #Prank-Kids Support
     6236137, #Tacticore
+    6233896, #Mirror Force Legacy Support/Archetype
+    4667428, #Xiuhqui
+    6245917, #Marincess Support
+    6040042, #Kuuroma
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
@@ -337,7 +341,7 @@ banlist = [
 ]
 
 test = [
-    banlist[-1], 6192766
+    6254262
 ]
 
 beta = [
@@ -454,6 +458,7 @@ attr_checks = [
     "custom",
 ]
 log "main", "Started scraping"
+changed_ids = []
 decks.each.with_index(1) { |deck_id, i|
     info = extra_info[deck_id]
     log deck_id, "STARTING TO SCRAPE DECK #{deck_id}"
@@ -483,6 +488,7 @@ decks.each.with_index(1) { |deck_id, i|
             old_entry = old_database[id]
             attr_checks.each { |check|
                 unless approximately_equal(old_entry[check], card[check])
+                    changed_ids << id
                     if check == "custom"
                         mode = ["public", "private"][card[check] - 1]
                         log deck_id, "note: card id #{display_text} was made #{mode}"
@@ -524,7 +530,144 @@ finish = Time.now
 
 log "main", "Time elapsed: #{finish - start}s"
 
-$log_file.close
+log "interact", "Beginning interaction phase."
+
+log "interact", "Changed ids: #{changed_ids}"
+
+def get_option(opts)
+    puts "=============================="
+    finish = opts.delete :finish
+    opts.each { |key, val|
+        puts " #{key}) #{val}"
+    }
+    if finish
+        puts "------------------------------"
+        puts " ENTER) finish"
+        opts[""] = true
+    end
+    puts "=============================="
+    option = nil
+    until opts.include? option
+        unless option.nil?
+            puts "Invalid option #{option.inspect}"
+        end
+        option = STDIN.gets.chomp
+    end
+    option
+end
+
+def display_key(obj)
+    if String === obj
+        puts obj.gsub(/^/m, "    ")
+    else
+        p obj
+    end
+end
+
+new_database = database.dup
+
+puts "=============================="
+puts "DATABASE INTERACTION"
+loop {
+begin
+    # puts "=============================="
+    # puts " 1) Select card by id"
+    # puts " X) Select card by deck source"
+    # puts " X) Select card by pattern search"
+    # puts "------------------------------"
+    # puts " ENTER) finish"
+    # puts "=============================="
+    option = get_option(
+        "i" => "Select card by [i]d",
+        "s" => "Select card by deck [s]ource",
+        "p" => "Select card by [p]attern search",
+        "r" => "[r]emove newly-added card",
+        "k" => "[k]eep removed card",
+        finish: true
+    )
+    if option.empty?
+        log "interact", "Exiting interaction"
+        break
+    end
+    log "interact", "Keypress: #{option.inspect}"
+    case option
+    when "i"
+        puts "Input card id:"
+        card_id = nil
+        until old_database[card_id] or new_database[card_id]
+            unless card_id.nil?
+                puts "Invalid ID #{card_id.inspect}"
+            end
+            card_id = STDIN.gets.chomp
+        end
+        # puts card_id
+        
+        old_entry = old_database[card_id]
+        new_entry = new_database[card_id]
+        
+        old_name = old_entry && old_entry["name"]
+        new_name = new_entry && new_entry["name"]
+        
+        name = if old_name == new_name
+            old_name
+        else
+            "#{old_name} / #{new_name}"
+        end
+        
+        puts "== #{name} (#{card_id}) =="
+        
+        puts "Enter input parameter (or ENTER, to see entire hash):"
+        parameter = STDIN.gets.chomp
+        
+        
+        
+        if old_entry == new_entry
+            puts "No changes made to #{card_id} (#{name})"
+        else
+            puts ">> Old entry <<"
+            old_value = old_entry && !parameter.empty? ? old_entry[parameter] : old_entry
+            display_key old_value
+            puts 
+            
+            puts ">> New entry <<"
+            new_value = new_entry && !parameter.empty? ? new_entry[parameter] : new_entry
+            display_key new_value
+            puts
+            
+            old_or_new = get_option(
+                "o" => "Replace with [o]ld entry",
+                "n" => "Replace with [n]ew entry",
+                "x" => "No action [x]",
+            )
+            
+            if old_or_new == "o"
+                database[card_id] = old_entry
+                log "interact", "Saved old version of #{card_id} (#{name})"
+            elsif old_or_new == "n"
+                database[card_id] = new_entry
+                log "interact", "Saved new version of #{card_id} (#{name})"
+            else
+                #no action
+                log "interact", "No action taken"
+            end
+        
+        end
+        
+        
+    else
+        log "interact", "Unrecognized input command."
+    end
+rescue Interrupt => e
+    puts "Are you sure you want to exit interaction? ^C again to quit. ENTER to continue."
+    begin
+        STDIN.gets
+    rescue Interrupt => e
+        break
+    end
+end
+}
+
 puts "Press ENTER to confirm database entry."
 STDIN.gets
+$log_file.close
 File.write "#{outname}.json", database.to_json
