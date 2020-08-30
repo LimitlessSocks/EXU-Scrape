@@ -466,9 +466,12 @@ decks.each.with_index(1) { |deck_id, i|
     log deck_id, "Finished scraping."
 }
 
+removed_ids = []
+
 old_database.each { |id, card|
     unless database[id]
-        log "main", "note: [-] removed old card #{id} (#{card["name"]})"
+        log "main", "note: [-] removed old card #{id} (#{card && card["name"]})"
+        removed_ids << id
     end
 }
 
@@ -525,10 +528,8 @@ begin
     # puts "=============================="
     option = get_option(
         "i" => "Select card by [i]d",
-        "s" => "Select card by deck [s]ource",
+        # "s" => "Select card by deck [s]ource",
         "p" => "Select card by [p]attern search",
-        "r" => "[r]emove newly-added card",
-        "k" => "[k]eep removed card",
         finish: true
     )
     if option.empty?
@@ -537,6 +538,76 @@ begin
     end
     log "interact", "Keypress: #{option.inspect}"
     case option
+    when "p"
+        puts "Target parameter (default: name):"
+        parameter = STDIN.gets.chomp
+        parameter = "name" if parameter.empty?
+        
+        puts "Input pattern (regular expression):"
+        pattern = Regexp.new STDIN.gets.chomp, Regexp::IGNORECASE
+        
+        matches = []
+        
+        new_database.each { |key, value|
+            if pattern === value[parameter]
+                matches << value
+            end
+        }
+        removed_ids.each { |rid|
+            value = old_database[rid]
+            if pattern === value[parameter]
+                matches << value
+            end
+        }
+        
+        count = matches.size
+        
+        matches.each.with_index(1) { |match, i|
+            puts "(#{i}/#{count}) #{match["id"]} #{match["name"]}"
+            display_key match["effect"]
+        }
+        ids = matches.map { |match| match["id"].to_s }
+        if count.zero?
+            log "interact", "No cards found matching #{pattern.inspect}."
+        else
+            log "interact", "Found cards with ids #{ids}."
+        
+            operation = nil
+            while operation.nil? or operation == "d"
+                if operation == "d"
+                    puts "Enter space-separated id(s):"
+                    ids = STDIN.gets.chomp.split
+                    matches.select! { |match| ids.include? match["id"] }
+                    log "interact", "Removed from selection: #{ids}"
+                end
+                operation = get_option(
+                    "r" => "[r]eject all changes (save old versions)",
+                    "a" => "[a]ccept all changes (save new versions)",
+                    "d" => "[d]elete id(s) from operation selection and re-prompt",
+                    finish: true,
+                )
+                if operation.empty?
+                    log "interact", "No action taken."
+                end
+            end
+            
+            case operation
+            when "r"
+                source_db = old_database
+                log "interact", "Replacing ids with old version: #{ids}"
+            when "a"
+                source_db = new_database
+                log "interact", "Replacing ids with new version: #{ids}"
+            end
+            
+            if source_db
+                ids.each { |id|
+                    database[id] = source_db[id] || database[id]
+                }
+            end
+        end
+        
+        
     when "i"
         puts "Input card id:"
         card_id = nil
