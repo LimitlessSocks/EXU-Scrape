@@ -262,6 +262,10 @@ database = [
     4667428, #Xiuhqui
     6245917, #Marincess Support
     6040042, #Kuuroma
+    6116920, #Frozen
+    5954949, #Ani's Yokai Stuff
+    6247363, #Rowa - Elusive Power
+    6163866, #Black Blood
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
