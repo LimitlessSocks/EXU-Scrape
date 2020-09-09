@@ -4,9 +4,9 @@ $comb_replay = File.read("comb/replay.js")
 # replay_arr.filter(e => plays.indexOf(e.play))
 require 'json'
 require 'capybara'
-puts "Loading capybara..."
+STDERR.puts "Loading capybara..."
 $session = Capybara::Session.new(:selenium)
-puts "Loaded!"
+STDERR.puts "Loaded!"
 
 ReplayInfo = Struct.new(:name, :replays) do
     def merge(name, *others)
@@ -160,12 +160,32 @@ ladder = ReplayInfo.new("ladder", [
     "205781-20979462", #8-27-2020
     "205781-20987072", #8-27-2020
     "453279-20987617", #8-27-2020
+    
     "349034-20996905", #8-28-2020
     "349034-20997284", #8-28-2020
     "343043-21006633", #8-28-2020 (1 dud, 1 single)
     "343043-21005563", #8-28-2020
+    
     "344433-21042427", #8-29-2020
+    
+    "453279-21054712", #8-30-2020
+    
+    "205781-21112869", #9-01-2020
+    "205781-21113434", #9-01-2020
+    "349034-21126735", #9-01-2020
+    
+    "122221-21135632", #9-02-2020
+    "453279-21143155", #9-02-2020
+    
+    "205781-21191410", #9-04-2020
+    "205781-21191991", #9-04-2020
+    
+    "343043-21270921", #9-07-2020
+    
+    "453279-21292423", #9-08-2020
 ])
+
+
 
 # change this to change results
 focus = ladder
@@ -190,6 +210,7 @@ $valid_actions = [
     "SS ATK", "SS DEF",
     "OL ATK", "OL DEF",
     "Activate Field Spell",
+    "Mill",
 ]
 
 focus.each { |link|
@@ -207,10 +228,15 @@ focus.each { |link|
         
         actions.select! { |action|
             card = action["card"]
-            # log = action["log"]
             play = action["play"]
-            card and play and $valid_actions.include?(play)
-            # card and log and log["public_log"].include?(card["name"])
+            if card and play and $valid_actions.include?(play)
+                
+                # only counter cards player owns
+                # card["username"] and action["username"] ? card["username"] == action["username"] : true
+                true
+            else
+                false
+            end
         }
         actions.each { |action|
             card = action["card"]

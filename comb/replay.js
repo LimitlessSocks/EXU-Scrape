@@ -28,7 +28,9 @@
         obj.play === "Quit duel";
     
     let canParse = true;
-    let isMatch = replay_arr.some(e => e.over);
+    let overCount = replay_arr.filter(e => e.over).length;
+    let isMatch = overCount >= 1;
+    let hasSingleOver = overCount === 1;
     
     const collectGame = () => {
         if(!canParse) {
@@ -40,6 +42,12 @@
             actions.push(replay_actions.shift());
         }
         let det = replay_actions.shift();
+        
+        if(!det) {
+            console.error("No determiner to be found.");
+            return null;
+        }
+        
         console.log("Determinator:", det);
         console.log("Actions:", actions);
         let loser = det.username;
@@ -49,7 +57,7 @@
         roundsWon[winner]++;
         
         // info for next collect
-        if(det.over || replay_actions.length === 0 || !isMatch) {
+        if(det.over && hasSingleOver || replay_actions.length === 0 || !isMatch) {
             canParse = false;
         }
         

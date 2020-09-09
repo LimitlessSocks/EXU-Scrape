@@ -170,7 +170,7 @@ database = [
     5744520, #Dream Mirror Support
     5751277, #World Legacy Support (Krawler)
     # 5274505, #Mayakashi Support
-    5691370, #GRECO
+    # 5691370, #GRECO
     5755617, #Shagdi
     5741889, #Titanus Support
     5767298, #Holifear Support
@@ -189,7 +189,7 @@ database = [
     3256281, #B.E.S. Support
     5675322, #Kojoten
     4960158, #Skafos
-    5772283, #Ascension Sky
+    # 5772283, #Ascension Sky
     5837794, #Machina Support
     # 5813169, #Tanticore
     5856439, #Might of Valhalla
@@ -245,7 +245,7 @@ database = [
     6044655, #Vampop☆Star
     6135219, #The Parallel
     6155436, #Insomnia
-    3689114, #LeSpookie
+    # 3689114, #LeSpookie
     6111199, #Insectum
     6209092, #Acrimonic
     5703615, #World Chalice
@@ -266,6 +266,14 @@ database = [
     5954949, #Ani's Yokai Stuff
     6247363, #Rowa - Elusive Power
     6163866, #Black Blood
+    6227419, #Deep Burrower
+    3080272, #Nightshade
+    6086340, #Zeniphyr
+    6267789, #Armamemento
+    6292623, #Ninja Support
+    6252579, #"Big" Game Hunter
+    6308672, #Darkwater Support
+    6291306, #Galaxieve
 ] + [
     5812210, #Generic Monsters I
     5812212, #Generic Monsters II
@@ -278,6 +286,7 @@ database = [
     #temp prio
     # 6063436, #Sock Generic I
     6082121, #Sock Generic II
+    6088519, #Sock Generic IV
     5932326, #Round 3 of Ani Generics (Generic Singles)
     5839353, #Wave 2 of Dual-Attribute Support
 ]
