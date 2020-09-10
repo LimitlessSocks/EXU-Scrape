@@ -90,10 +90,10 @@ database = [
     5304027, #Pyre
     5372415, #Modernotes
     # 4374978, #Insidious
-    4415708, #Tensor Maidens
-    4148322, #Dragonewts
-    5089829, #Grand Knight
-    5408141, #Amorel
+    # 4415708, #Tensor Maidens
+    # 4148322, #Dragonewts
+    # 5089829, #Grand Knight
+    # 5408141, #Amorel
     5396113, #Terra Basilisk
     5490132, #Sunavalon
     5187975, #Rulers of Name
@@ -118,10 +118,10 @@ database = [
     # 5549841, #Ghostrick Support
     # 5549769, #Danger! Support
     # 5577804, #Thunder Dragon Support
-    4540980, #Vampire Support
-    4780879, #Dinosaur Support
+    # 4540980, #Vampire Support
+    # 4780879, #Dinosaur Support
     # 4298315, #Nordic Support
-    4073173, #Fabled Support
+    # 4073173, #Fabled Support
     # 4750943, #Ice Barrier Support
     # 5577782, #Dragonmaid Support
     # 5577790, #Zefra Support
@@ -130,14 +130,14 @@ database = [
     4810529, #Blue-eyes Support
     5496883, #Vanilla Pendulum Support
     # 5637873, #Dhakira
-    5643273, #Itayin
+    # 5643273, #Itayin
     4359326, #Eldertech
     4050998, #Mage & Spell Tomes
     5659403, #X-Saber Support
     5615949, #Alchemaster
     # 5647560, #Ophion
     5642481, #Daemon Engine
-    5646060, #Ignation
+    # 5646060, #Ignation
     5627288, #Titanus Support
     # 4395391, #Trapod
     5593625, #Orb Magicians
@@ -165,7 +165,7 @@ database = [
     5737230, #Siamese Turtles
     5619459, #ANIMA
     # 4410756, #Kuriboh Support
-    5733772, #Aurellia
+    # 5733772, #Aurellia
     5601607, #Chaos Performer
     5744520, #Dream Mirror Support
     5751277, #World Legacy Support (Krawler)
@@ -173,15 +173,15 @@ database = [
     # 5691370, #GRECO
     5755617, #Shagdi
     5741889, #Titanus Support
-    5767298, #Holifear Support
+    # 5767298, #Holifear Support
     5270321, #Apocrypha
     4963487, #Battletech
     5782891, #The Weather Support
     5895706, #Faust
     5813034, #Gimmick Puppet Support
     # 5844326, #Danger! Support
-    5432255, #Zefra Support
-    4871988, #Dragonmaid Support
+    # 5432255, #Zefra Support
+    # 4871988, #Dragonmaid Support
     4813673, #Thunder Dragon Support
     5844374, #Ghostrick Support
     # 5844363, #Time Thief Support
@@ -192,14 +192,14 @@ database = [
     # 5772283, #Ascension Sky
     5837794, #Machina Support
     # 5813169, #Tanticore
-    5856439, #Might of Valhalla
+    # 5856439, #Might of Valhalla
     5860710, #Uwumancer
     5749949, #Ancient Warrior Support
     5541683, #Hydrovenal
-    5841822, #Tomes & Fate
+    # 5841822, #Tomes & Fate
     # 5877005, #Destruction Military Garrison (DMG)
     5894044, #Shino Support
-    5873653, #Nether
+    # 5873653, #Nether
     5766412, #Karmasattva
     # 5907048, #Elementsaber Support
     5834507, #Nadiupant
@@ -246,13 +246,13 @@ database = [
     6135219, #The Parallel
     6155436, #Insomnia
     # 3689114, #LeSpookie
-    6111199, #Insectum
+    # 6111199, #Insectum
     6209092, #Acrimonic
     5703615, #World Chalice
     5830740, #New Order
     5884678, #Arsenal
     6221979, #Tindangle Support
-    6173753, #Lurid
+    # 6173753, #Lurid
     6065677, #Artifact Support
     6121762, #Hydromunculus
     6239335, #Plorceress Support
@@ -271,24 +271,18 @@ database = [
     6086340, #Zeniphyr
     6267789, #Armamemento
     6292623, #Ninja Support
-    6252579, #"Big" Game Hunter
+    # 6252579, #"Big" Game Hunter
     6308672, #Darkwater Support
     6291306, #Galaxieve
 ] + [
-    5812210, #Generic Monsters I
-    5812212, #Generic Monsters II
-    5812213, #Generic Monsters III
-    5974796, #Generic Monsters IV
-    5812214, #Generic Spells
-    5812216, #Generic Traps
-    5812417, #Assorted TCG Single Support
-] + [
-    #temp prio
-    # 6063436, #Sock Generic I
-    6082121, #Sock Generic II
-    6088519, #Sock Generic IV
-    5932326, #Round 3 of Ani Generics (Generic Singles)
-    5839353, #Wave 2 of Dual-Attribute Support
+    6353294, #Generic Monsters I
+    6353380, #Generic Monsters II
+    6353400, #Generic Monsters III
+    6353414, #Generic Monsters IV
+    6353430, #Generic Spells
+    6353449, #Generic Traps
+    6353457, #Assorted TCG Single Support
+    #6353465, #Staples
 ]
 
 banlist = [
