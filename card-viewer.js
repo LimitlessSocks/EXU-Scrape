@@ -827,9 +827,18 @@ CardViewer.composeResult = function (card) {
         marking.append($("<img class=cardicon>").attr("src", getIcon(card.type)));
     }
     
-    if(card.exu_limit !== 3) {
-        let banMarker = $("<img class=banicon>");
+    let banMarker = $("<img class=banicon>");
+    if(card.exu_ban_import) {
+        banMarker.attr("src", BANLIST_ICONS.notImported);
+    }
+    else if(card.exu_limit !== 3) {
         banMarker.attr("src", BANLIST_ICONS[card.exu_limit]);
+    }
+    else if(card.exu_import) {
+        banMarker.attr("src", BANLIST_ICONS.imported);
+    }
+    
+    if(banMarker.attr("src")) {
         marking.append($("<div>").append(banMarker));
     }
     
