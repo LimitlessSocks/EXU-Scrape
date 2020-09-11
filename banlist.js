@@ -31,7 +31,8 @@ let onLoad = async function () {
     let tags = ["Forbidden", "Limited", "Semi-Limited", "Unlimited"];
     
     const NewCards = [
-        9984, 7601, 8344, 10855
+        9984, 7601, 8344, 10855,
+        11127, 11128, 11129
         // 10669, 884, 10606, 9070, 10503, 3057, 5684, 3895, 10958,
         // 9553, 9639, 1314,
         // 9019
@@ -121,11 +122,17 @@ let onLoad = async function () {
     let results = CardViewer.filter({ retrain: true, });
     appendSearchPage(results, "Retrained");
     
+    let importResults = CardViewer.filter({ imported: true, });
+    appendSearchPage(importResults, "Imported");
+    
     for(let i = 0; i <= 3; i++) {
-        let results = CardViewer.filter({ limit: i.toString() }, { retrain: true });
+        let results = CardViewer.filter({ limit: i.toString(), notImported: false }, { retrain: true });
         let tag = tags[i];
         appendSearchPage(results, tag);
     }
+    
+    let notImportResults = CardViewer.filter({ notImported: true, });
+    appendSearchPage(notImportResults, "Unimported");
     
     // $("body").append(
         // CardViewer.composeResult(CardViewer.Database.cards[9138])

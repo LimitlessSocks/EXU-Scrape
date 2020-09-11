@@ -380,14 +380,16 @@ CardViewer.Filters.getFilter = (key) =>
 
 CardViewer.query = function () {
     let baseStats = {
-        name:       CardViewer.Elements.cardName.val(),
-        effect:     CardViewer.Elements.cardDescription.val(),
-        type:       CardViewer.Elements.cardType.val(),
-        limit:      CardViewer.Elements.cardLimit.val(),
-        id:         CardViewer.Elements.cardId.val(),
-        author:     CardViewer.Elements.cardAuthor.val(),
-        retrain:    CardViewer.Elements.cardIsRetrain.is(":checked"),
-        visibility: CardViewer.Elements.cardVisibility.val(),
+        name:         CardViewer.Elements.cardName.val(),
+        effect:       CardViewer.Elements.cardDescription.val(),
+        type:         CardViewer.Elements.cardType.val(),
+        limit:        CardViewer.Elements.cardLimit.val(),
+        id:           CardViewer.Elements.cardId.val(),
+        author:       CardViewer.Elements.cardAuthor.val(),
+        retrain:      CardViewer.Elements.cardIsRetrain.is(":checked"),
+        visibility:   CardViewer.Elements.cardVisibility.val(),
+        imported:     false,
+        notImported:  false,
     };
     if(CardViewer.Elements.spellStats.is(":visible")) {
         baseStats.kind = CardViewer.Elements.cardSpellKind.val();
@@ -442,6 +444,9 @@ CardViewer.textAnyComparator = (needle, fn = _F.id) =>
 CardViewer.boolExclusiveComparator = (needle, fn = _F.id) =>
     (card) => needle ? fn(card) : true;
 
+CardViewer.boolExactComparator = (needle, fn = _F.id) =>
+    (card) => !!fn(card) == !!needle;
+
 CardViewer.exactComparator = (needle, fn = _F.id) => {
     return (card) =>
         fn(card) === needle;
@@ -479,6 +484,10 @@ CardViewer.createFilter = function (query, exclude = null) {
         CardViewer.textAnyComparator(query.limit, _F.propda("exu_limit")),
         // retrain filter
         CardViewer.boolExclusiveComparator(query.retrain, _F.propda("exu_retrain")),
+        // import filter
+        CardViewer.boolExactComparator(query.imported, _F.propda("exu_import")),
+        // not imported filter
+        CardViewer.boolExactComparator(query.notImported, _F.propda("exu_ban_import")),
         // visibility filter
         CardViewer.textAnyComparator(query.visibility, _F.propda("custom")),
     ];
@@ -555,7 +564,10 @@ const getIcon = (icon) =>
 const BANLIST_ICONS = {
     0: getIcon("banlist-banned"),
     1: getIcon("banlist-limited"),
-    2: getIcon("banlist-semilimited")
+    2: getIcon("banlist-semilimited"),
+    
+    imported: getIcon("banlist-import"),
+    notImported: getIcon("banlist-no-import"),
 };
 
 let arrowIterateOrder = [
@@ -682,9 +694,18 @@ CardViewer.composeResultSmall = function (card) {
         marking.append($("<img class=cardicon>").attr("src", getIcon(card.type)));
     }
     
-    if(card.exu_limit !== 3) {
-        let banMarker = $("<img class=banicon>");
+    let banMarker = $("<img class=banicon>");
+    if(card.exu_ban_import) {
+        banMarker.attr("src", BANLIST_ICONS.notImported);
+    }
+    else if(card.exu_limit !== 3) {
         banMarker.attr("src", BANLIST_ICONS[card.exu_limit]);
+    }
+    else if(card.exu_import) {
+        banMarker.attr("src", BANLIST_ICONS.imported);
+    }
+    
+    if(banMarker.attr("src")) {
         marking.append($("<div>").append(banMarker));
     }
     

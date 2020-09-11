@@ -150,8 +150,8 @@ database = [
     # 5415163, #U.A. Support
     5685303, #Resonator Support
     4804758, #Draconia Support
-    5663187, #Ploceress
-    4950743, #Cyber Dragon Support
+    # 5663187, #Ploceress
+    # 4950743, #Cyber Dragon Support
     5683010, #Pendulum Gods
     5717718, #Pixel Monsters
     5720993, #Watt Support
@@ -182,7 +182,7 @@ database = [
     # 5844326, #Danger! Support
     # 5432255, #Zefra Support
     # 4871988, #Dragonmaid Support
-    4813673, #Thunder Dragon Support
+    # 4813673, #Thunder Dragon Support
     5844374, #Ghostrick Support
     # 5844363, #Time Thief Support
     # 5010437, #Ugrovs
@@ -228,13 +228,13 @@ database = [
     6000654, #Laval Support
     4608663, #Time Thief Support
     4501871, #Oni Assassins
-    5934147, #Neo Delta
+    # 5934147, #Neo Delta
     6050332, #Nermusa
     # 6014002, #Cipher Support
     6078350, #Majecore
     5869257, #Yova
     6109070, #Normal Support
-    6129587, #Tindangle Support
+    # 6129587, #Tindangle Support
     5098946, #Guildimension
     6044732, #Armorizer
     5936334, #Darkwater
@@ -249,7 +249,7 @@ database = [
     # 6111199, #Insectum
     6209092, #Acrimonic
     5703615, #World Chalice
-    5830740, #New Order
+    # 5830740, #New Order
     5884678, #Arsenal
     6221979, #Tindangle Support
     # 6173753, #Lurid
@@ -273,7 +273,15 @@ database = [
     6292623, #Ninja Support
     # 6252579, #"Big" Game Hunter
     6308672, #Darkwater Support
-    6291306, #Galaxieve
+    # 6291306, #Galaxieve
+    6262300, #Muntu
+    6255607, #Titan Hunter
+    5663187, #Plorceress
+    5297494, #Thunderclap
+    6294677, #Diabolition
+    6307561, #Crypt
+    6334551, #Wild Hunt
+    6135922, #TUBA
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
@@ -290,7 +298,10 @@ banlist = [
     5855756, 5856014, #Forbidden
     5857248,          #Limited
     5857281,          #Semi-Limited
-    5857285           #Unlimited
+    5857285,          #Unlimited
+    
+    6358712,          #Imported
+    6358715,          #Unimported
 ]
 
 test = [
@@ -313,6 +324,8 @@ EXU_LIMITED     = { "exu_limit" => 1 }
 EXU_SEMILIMITED = { "exu_limit" => 2 }
 EXU_UNLIMITED   = { "exu_limit" => 3 }
 EXU_RETRAIN     = { "exu_limit" => 3, "exu_retrain" => true }
+EXU_IMPORT      = { "exu_limit" => 3, "exu_import" => true }
+EXU_NO_IMPORT   = { "exu_limit" => 0, "exu_ban_import" => true }
 extra_info = {
     5895579 => EXU_RETRAIN,
     
@@ -324,6 +337,10 @@ extra_info = {
     5857281 => EXU_SEMILIMITED,
     
     5857285 => EXU_UNLIMITED,
+    
+    6358712 => EXU_IMPORT,
+    
+    6358715 => EXU_NO_IMPORT
 }
 
 decks = nil
