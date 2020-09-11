@@ -419,6 +419,7 @@ CardViewer.textComparator = (needle, fn = _F.id) => {
     let simplified = CardViewer.simplifyText(needle);
     return (card) => {
         let f = fn(card);
+        console.log(f, needle, fn, card);
         return f !== null && f.toString().toLowerCase().indexOf(simplified) !== -1;
     }
 };
