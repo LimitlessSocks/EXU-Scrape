@@ -329,7 +329,6 @@ CardViewer.Filters.isNonEffect = (card) => {
         let paras = parsed.trim().split(/\r?\n|\r/g);
         let sentences = parsed.split(".");
         let isNonEffect = paras.length === 1 && sentences.length === 1;
-        console.log(parsed, paras, sentences);
         return card.cached_is_non_effect = isNonEffect;
     }
     
