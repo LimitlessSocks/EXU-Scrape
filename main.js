@@ -56,7 +56,7 @@ let onLoad = async function () {
     CardViewer.Elements.saveSearch.click(() => {
         let strs = [];
         for(let [key, value] of Object.entries(CardViewer.query())) {
-            if(value !== "" && value !== "any") {
+            if(value !== "" && value !== "any" && key !== "imported" && key !== "notImported") {
                 if(key === "retrain" && !value) continue;
                 strs.push(key + "=" + value);
             }
