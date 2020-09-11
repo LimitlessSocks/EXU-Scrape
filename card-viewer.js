@@ -695,20 +695,20 @@ CardViewer.composeResultSmall = function (card) {
     }
     
     let banMarker = $("<img class=banicon>");
-    let importicon = $("<img class=banicon>");
+    let importMarker = $("<img class=banicon>");
     if(card.exu_ban_import) {
-        importicon.attr("src", BANLIST_ICONS.notImported);
+        importMarker.attr("src", BANLIST_ICONS.notImported);
     }
     else if(card.exu_import) {
-        importicon.attr("src", BANLIST_ICONS.imported);
+        importMarker.attr("src", BANLIST_ICONS.imported);
     }
     
     if(card.exu_limit !== 3) {
         banMarker.attr("src", BANLIST_ICONS[card.exu_limit]);
     }
     
-    if(importicon.attr("src")) {
-        marking.append($("<div>").append(importicon));
+    if(importMarker.attr("src")) {
+        marking.append($("<div>").append(importMarker));
     }
     if(banMarker.attr("src")) {
         marking.append($("<div>").append(banMarker));
@@ -833,20 +833,20 @@ CardViewer.composeResult = function (card) {
     }
     
     let banMarker = $("<img class=banicon>");
-    let importicon = $("<img class=banicon>");
+    let importMarker = $("<img class=importicon>");
     if(card.exu_ban_import) {
-        importicon.attr("src", BANLIST_ICONS.notImported);
+        importMarker.attr("src", BANLIST_ICONS.notImported);
     }
     else if(card.exu_import) {
-        importicon.attr("src", BANLIST_ICONS.imported);
+        importMarker.attr("src", BANLIST_ICONS.imported);
     }
     
     if(card.exu_limit !== 3) {
         banMarker.attr("src", BANLIST_ICONS[card.exu_limit]);
     }
     
-    if(importicon.attr("src")) {
-        marking.append($("<div>").append(importicon));
+    if(importMarker.attr("src")) {
+        marking.append($("<div>").append(importMarker));
     }
     if(banMarker.attr("src")) {
         marking.append($("<div>").append(banMarker));

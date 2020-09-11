@@ -323,8 +323,8 @@ EXU_BANNED      = { "exu_limit" => 0 }
 EXU_LIMITED     = { "exu_limit" => 1 }
 EXU_SEMILIMITED = { "exu_limit" => 2 }
 EXU_UNLIMITED   = { "exu_limit" => 3 }
-EXU_RETRAIN     = { "exu_limit" => 3, "exu_retrain" => true }
-EXU_IMPORT      = { "exu_limit" => 3, "exu_import" => true }
+EXU_RETRAIN     = { "exu_retrain" => true }
+EXU_IMPORT      = { "exu_import" => true }
 EXU_NO_IMPORT   = { "exu_limit" => 0, "exu_ban_import" => true }
 extra_info = {
     5895579 => EXU_RETRAIN,
