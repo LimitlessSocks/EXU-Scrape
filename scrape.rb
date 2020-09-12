@@ -481,9 +481,8 @@ decks.each.with_index(1) { |deck_id, i|
         unless extra_info.include? deck_id
             if counts[id] > 1
                 log deck_id, "warning: card id #{display_text} was duplicated in <#{deck_id}> from <#{database[id]["submission_source"]}>"
-            else
-                database[id]["submission_source"] = deck_id
             end
+            database[id]["submission_source"] ||= deck_id
         end
     }
     progress i, deck_count
