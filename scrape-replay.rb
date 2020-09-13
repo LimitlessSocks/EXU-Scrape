@@ -217,6 +217,7 @@ ladder = ReplayInfo.new("ladder", [
     "344433-21321837", #9-09-2020
     
     "332143-21348609", #9-10-2020
+    "332143-21420481", #9-12-2020
 ])
 
 # change this to change results

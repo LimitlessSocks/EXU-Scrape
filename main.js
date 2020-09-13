@@ -180,8 +180,8 @@ let onLoad = async function () {
             if(el.is("select")) {
                 el.val(el.children().first().val());
             }
-            else if(el.is("checkbox")) {
-                el.prop("checked", !!el.attr("checked"));
+            else if(el.is("input[type=checkbox]")) {
+                el.prop("checked", false);
             }
             else {
                 el.val("");
@@ -190,6 +190,28 @@ let onLoad = async function () {
         elementChanged();
         CardViewer.Elements.cardType.change();
     });
+    
+    // check if any input data
+    for(let el of allInputs) {
+        let hasValue = false;
+        el = $(el);
+        if(el.is("select")) {
+            if(el.val() != el.children().first().val()) {
+                hasValue = true;
+            }
+        }
+        else if(el.is("input[type=checkbox]")) {
+            console.log(el.attr("checked"));
+            hasValue = el.is(":checked");
+        }
+        else {
+            hasValue = el.val() != "";
+        }
+        if(hasValue) {
+            CardViewer.firstTime = false;
+            break;
+        }
+    }
     
     CardViewer.submit();
     
