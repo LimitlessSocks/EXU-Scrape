@@ -221,7 +221,7 @@ ladder = ReplayInfo.new("ladder", [
 ])
 
 # change this to change results
-focus = weeklies10_14
+focus = ladder
 
 
 
