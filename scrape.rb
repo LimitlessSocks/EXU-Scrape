@@ -282,6 +282,10 @@ database = [
     6307561, #Crypt
     6334551, #Wild Hunt
     6135922, #TUBA
+    6359238, #Galaxieve
+    6359389, #New Order
+    5412159, #FishurANT
+    6360689, #Digital Bug Support
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
