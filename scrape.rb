@@ -59,13 +59,13 @@ database = [
     4385932, #Starbaric Crystal Beasts
     4540185, #Emeraheart
     4757288, #Pandas
-    3180755, #Earthbound Prisoners
+    # 3180755, #Earthbound Prisoners
     4861946, #Poppin 1
     5003800, #Poppin 2
     4547335, #Titanus
     4570517, #Harbinger
     4910893, #Aria Fey
-    4327992, #Serpenteam
+    # 4327992, #Serpenteam
     # 3820609, #Amphibious Bugroth
     # 3669535, #Fundamental Dragons
     # 4670325, #Blitzers
@@ -106,8 +106,8 @@ database = [
     5582929, #Seafolk
     4399429, #Hakaishin Archfiend
     5592020, #Bound
-    4188326, #Anti-Luminescent Knights
-    4933305, #Coccoon Support
+    # 4188326, #Anti-Luminescent Knights
+    # 4933305, #Cocoon Support
     4936132, #F.A. Support
     4894268, #Kaiju Support
     5177132, #Darklord Support
@@ -125,7 +125,7 @@ database = [
     # 4750943, #Ice Barrier Support
     # 5577782, #Dragonmaid Support
     # 5577790, #Zefra Support
-    4390839, #Ancient Gear Support
+    # 4390839, #Ancient Gear Support
     5515496, #Majestic Support
     4810529, #Blue-eyes Support
     5496883, #Vanilla Pendulum Support
@@ -148,21 +148,21 @@ database = [
     5705030, #Phantasm Spiral Support
     4177191, #Lightray Support
     # 5415163, #U.A. Support
-    5685303, #Resonator Support
+    # 5685303, #Resonator Support
     4804758, #Draconia Support
     # 5663187, #Ploceress
     # 4950743, #Cyber Dragon Support
     5683010, #Pendulum Gods
     5717718, #Pixel Monsters
     5720993, #Watt Support
-    5715247, #Crystron Support
+    # 5715247, #Crystron Support
     5713627, #Yeet
     # 4927027, #Wolvies
     5109480, #Kyudo
     5194131, #Fur Hire Support
-    5720588, #Hungry Burger
+    # 5720588, #Hungry Burger
     4337568, #Dreadator
-    5737230, #Siamese Turtles
+    # 5737230, #Siamese Turtles
     5619459, #ANIMA
     # 4410756, #Kuriboh Support
     # 5733772, #Aurellia
@@ -171,7 +171,7 @@ database = [
     5751277, #World Legacy Support (Krawler)
     # 5274505, #Mayakashi Support
     # 5691370, #GRECO
-    5755617, #Shagdi
+    # 5755617, #Shangdi
     5741889, #Titanus Support
     # 5767298, #Holifear Support
     5270321, #Apocrypha
@@ -190,7 +190,7 @@ database = [
     5675322, #Kojoten
     4960158, #Skafos
     # 5772283, #Ascension Sky
-    5837794, #Machina Support
+    # 5837794, #Machina Support
     # 5813169, #Tanticore
     # 5856439, #Might of Valhalla
     5860710, #Uwumancer
@@ -204,8 +204,8 @@ database = [
     # 5907048, #Elementsaber Support
     5834507, #Nadiupant
     4806770, #Chronotiger
-    4383650, #BOOM! Mechs
-    5907001, #Battlewasp Support
+    # 4383650, #BOOM! Mechs
+    # 5907001, #Battlewasp Support
     5145725, #Remnant
     5839316, #Duo-Attribute Support
     5587605, #Hot Pink
@@ -238,7 +238,7 @@ database = [
     5098946, #Guildimension
     6044732, #Armorizer
     5936334, #Darkwater
-    6162086, #Magnet Warrior Support
+    # 6162086, #Magnet Warrior Support
     5904696, #Contraptions
     # 4349406, #Franknstech
     6169009, #Aquaactress Support
@@ -281,11 +281,16 @@ database = [
     6294677, #Diabolition
     6307561, #Crypt
     6334551, #Wild Hunt
-    6135922, #TUBA
+    # 6135922, #TUBA
     6359238, #Galaxieve
     6359389, #New Order
     5412159, #FishurANT
     6360689, #Digital Bug Support
+    6124612, #Metaphys Support
+    6365184, #Nephthys Support
+    4237940, #Taida
+    4769548, #Empyreal
+    6407622, #Chemicritter Support
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II

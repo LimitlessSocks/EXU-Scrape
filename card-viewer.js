@@ -335,6 +335,38 @@ CardViewer.Filters.isNonEffect = (card) => {
     return card.cached_is_non_effect = false;
 }
 
+CardViewer.initializeByName = () => {
+    if(CardViewer.Database.byName) {
+        return;
+    }
+    CardViewer.Database.byName = {};
+    
+    for(let card of Object.values(CardViewer.Database.cards)) {
+        CardViewer.Database.byName[card.name] = card;
+    }
+};
+
+CardViewer.listArchetypes = () => {
+    CardViewer.initializeByName();
+    
+    let archetypes = new Set();
+    
+    for(let card of Object.values(CardViewer.Database.cards)) {
+        if(card.tcg || card.ocg) {
+            continue;
+        }
+        for(let [match, g1] of card.effect.matchAll(/"([^"]*?[^\s"])(?:\(s\))?"/g)) {
+            // exclude card names
+            g1 = g1.trim();
+            if(!CardViewer.Database.byName[g1] && g1.indexOf("Token") === -1) {
+                archetypes.add(g1);
+            }
+        }
+    }
+    
+    return [...archetypes].sort();
+};
+
 CardViewer.Filters.isFlipMonster = (card) =>
     card.effect.indexOf("FLIP:") !== -1;
 
