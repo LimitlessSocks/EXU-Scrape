@@ -126,7 +126,7 @@ database = [
     # 5577782, #Dragonmaid Support
     # 5577790, #Zefra Support
     # 4390839, #Ancient Gear Support
-    5515496, #Majestic Support
+    # 5515496, #Majestic Support
     4810529, #Blue-eyes Support
     5496883, #Vanilla Pendulum Support
     # 5637873, #Dhakira
