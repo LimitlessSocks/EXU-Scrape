@@ -319,12 +319,16 @@ test = [
 
 beta = [
     #prio
-    5954949, #Yokai stuff
-    6121762, #Hydromunculus
-    6040042, #Kuuroma
-    6226538, #Insomnia Support Wave 2 out of 3
+    6398835, #Sock's Link Pack 2
+    6412660, #Some numbers
+    6418163, #Laclade/clad
+    6402157, #D/D/D support
+    6400810, #D/D/D support (noodle)
     #reg
-    
+    5770634, #Orb Magicians - Match-3
+    6240110, #Spacial Demons
+    6100353, #Modernote Idol Support
+    3363706, #Gravitron
 ]
 
 
