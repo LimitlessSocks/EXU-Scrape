@@ -276,7 +276,7 @@ database = [
     # 6291306, #Galaxieve
     6262300, #Muntu
     # 6255607, #Titan Hunter
-    5663187, #Plorceress
+    # 5663187, #Plorceress
     5297494, #Thunderclap
     6294677, #Diabolition
     6307561, #Crypt
