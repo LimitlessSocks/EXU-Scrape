@@ -367,6 +367,25 @@ CardViewer.listArchetypes = () => {
     return [...archetypes].sort();
 };
 
+CardViewer.listDeckSources = () =>
+    [...new Set(
+        CardViewer.Search
+            .pages.flat()
+            .map(e => e.submission_source)
+    )];
+
+CardViewer.formatDeckSources = () =>
+    CardViewer.listDeckSources().map(
+        sourceId => `${sourceId} - \n${
+            CardViewer.Search
+                .pages.flat()
+                .filter(e => e.submission_source == sourceId)
+                .map(e => "  " + JSON.stringify(e.name) + ` (${e.id})`)
+                .join("\n")
+            }`
+    ).join("\n\n");
+
+
 CardViewer.Filters.isFlipMonster = (card) =>
     card.effect.indexOf("FLIP:") !== -1;
 
