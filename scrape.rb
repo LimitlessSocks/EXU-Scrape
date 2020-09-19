@@ -224,7 +224,7 @@ database = [
     5979832, #Raycor
     # 5008957, #Akuma
     # 4166948, #Fafner
-    5518399, #Darkgnis
+    # 5518399, #Darkgnis
     6000654, #Laval Support
     4608663, #Time Thief Support
     4501871, #Oni Assassins
@@ -244,7 +244,7 @@ database = [
     6169009, #Aquaactress Support
     6044655, #Vampop☆Star
     6135219, #The Parallel
-    6155436, #Insomnia
+    # 6155436, #Insomnia
     # 3689114, #LeSpookie
     # 6111199, #Insectum
     6209092, #Acrimonic
@@ -255,7 +255,7 @@ database = [
     # 6173753, #Lurid
     6065677, #Artifact Support
     6121762, #Hydromunculus
-    6239335, #Plorceress Support
+    # 6239335, #Plorceress Support
     6239411, #Prank-Kids Support
     6236137, #Tacticore
     6233896, #Mirror Force Legacy Support/Archetype
@@ -275,7 +275,7 @@ database = [
     6308672, #Darkwater Support
     # 6291306, #Galaxieve
     6262300, #Muntu
-    6255607, #Titan Hunter
+    # 6255607, #Titan Hunter
     5663187, #Plorceress
     5297494, #Thunderclap
     6294677, #Diabolition
@@ -284,7 +284,7 @@ database = [
     # 6135922, #TUBA
     6359238, #Galaxieve
     6359389, #New Order
-    5412159, #FishurANT
+    # 5412159, #FishurANT
     6360689, #Digital Bug Support
     6124612, #Metaphys Support
     6365184, #Nephthys Support
@@ -419,7 +419,7 @@ else
 end
 database = {}
 counts = Hash.new 0
-type_replace = /\(.*?This monster's original Type is treated as (.+?) rather than (.+?)[,.].*?\)/
+type_replace = /\(.*?This (card|monster)'s original Type is treated as (.+?) rather than (.+?)[,.].*?\)/
 archetype_treatment = /\(.*This card is always treated as an? "(.+?)" card.*\)/
 attr_checks = [
     "name",
