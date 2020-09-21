@@ -31,6 +31,7 @@ let onLoad = async function () {
     let tags = ["Forbidden", "Limited", "Semi-Limited", "Unlimited"];
     
     const NewCards = [
+        4858,
         9775,
         
         // 226, 9099, 1138, 5576, 3724, 6697, 9696, 9875, 5570, 7817, 10624, 3535, 10636, 2219, 9192, 3334,
