@@ -206,7 +206,7 @@ database = [
     4806770, #Chronotiger
     # 4383650, #BOOM! Mechs
     # 5907001, #Battlewasp Support
-    5145725, #Remnant
+    # 5145725, #Remnant
     5839316, #Duo-Attribute Support
     5587605, #Hot Pink
     5448052, #Modernotes 2: Idols and Icons
@@ -328,8 +328,9 @@ beta = [
     #prio
     6438706, #Constellar/Tellarknight support
     #reg
-    6240110, #Spacial Demons
-    4382580, #Mythical Winged Beasts
+    6434960, #World Reaper
+    4683240, #Level 3 Turbo Generics
+    3407125, #Heat Hound
 ]
 
 
