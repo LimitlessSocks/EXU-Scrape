@@ -79,7 +79,7 @@ database = [
     # 5256943, #Vampop☆Star
     4442461, #Titanic Dragon
     4604736, #of the North
-    5269100, #Orb Magician
+    # 5269100, #Orb Magician
     4460492, #Holifear
     5323883, #Digitallias
     # 4659249, #Malevolessence
@@ -140,7 +140,7 @@ database = [
     # 5646060, #Ignation
     5627288, #Titanus Support
     # 4395391, #Trapod
-    5593625, #Orb Magicians
+    # 5593625, #Orb Magicians
     5549562, #Travelsha
     5668288, #Volcanic Support
     # 5687011, #Graydle Support
@@ -291,6 +291,13 @@ database = [
     4237940, #Taida
     4769548, #Empyreal
     6407622, #Chemicritter Support
+    6412740, #Megalith Support
+    6402157, #D/D/D Support
+    5647256, #Meterao
+    6412660, #Umbral Horror/Numbers 43, 65, 80, and 96 Support
+    6405675, #Dark Kingdom
+    6438706, #Constellar/Tellarknight Support
+    4382580, #Mythical Winged Beasts
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
@@ -433,6 +440,7 @@ attr_checks = [
     "card_type",
     "ability",
     "custom",
+    "type",
 ]
 log "main", "Started scraping"
 changed_ids = []
