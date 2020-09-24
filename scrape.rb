@@ -326,11 +326,14 @@ test = [
 
 beta = [
     #prio
-    # 6438706, #Constellar/Tellarknight support
+    6434094, #Kugutsu
+    6309748, #Kuuroma
+    6450165, #Contraption 2
     #reg
     6434960, #World Reaper
-    4683240, #Level 3 Turbo Generics
-    3407125, #Heat Hound
+    6446977, #Tagteamer
+    3363706, #Gravitron
+    6166483, #Misbah
 ]
 
 
