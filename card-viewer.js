@@ -152,6 +152,7 @@ const RetrainMap = {
     1684963: 9501,      //The Thunder Dragon's Rider -> Thunder Dragon Colossus
     1649898: 9863,      //Ib, World Chalice's Reincarnation -> Ib the World Chalice Justiciar
     1653369: 3057,      //Naturia Baihu -> Naturia Beast
+    1768966: 9070,      //Hieratic Dragon of Khonsu -> Hieratic Seal of the Heavenly Spheres
 };
 
 const LINK_ARROWS = {

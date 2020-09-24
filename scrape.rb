@@ -73,8 +73,8 @@ database = [
     2788655, #Ravager
     5075635, #Starships
     # 5176216, #Antiqua
-    # 4624534, #Harokai
-    5189158, #Harokai
+    4624534, #Harokai
+    # 5189158, #Harokai
     # 5183280, #Titan Hunter
     # 5256943, #Vampop☆Star
     4442461, #Titanic Dragon
@@ -83,7 +83,7 @@ database = [
     4460492, #Holifear
     5323883, #Digitallias
     # 4659249, #Malevolessence
-    5145725, #Remnant
+    # 5145725, #Remnant
     # 5297494, #Thunderclap
     # 4657652, #Elixstar/Potions
     5416935, #Akatsuki
