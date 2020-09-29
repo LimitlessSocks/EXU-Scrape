@@ -326,14 +326,15 @@ test = [
 
 beta = [
     #prio
-    6434094, #Kugutsu
-    6309748, #Kuuroma
-    6450165, #Contraption 2
+    6491880, #Anon solo
     #reg
-    6434960, #World Reaper
-    6446977, #Tagteamer
-    3363706, #Gravitron
-    6166483, #Misbah
+    5818764, #Firewild
+    6009822, #Mecha Madness
+    6418747, #Prideful
+    6347993, #Headhunter
+    5269100, #Orb Magicians
+    5145725, #Remnant
+    6460257, #Dark Arts
 ]
 
 

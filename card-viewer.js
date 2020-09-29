@@ -153,6 +153,7 @@ const RetrainMap = {
     1649898: 9863,      //Ib, World Chalice's Reincarnation -> Ib the World Chalice Justiciar
     1653369: 3057,      //Naturia Baihu -> Naturia Beast
     1768966: 9070,      //Hieratic Dragon of Khonsu -> Hieratic Seal of the Heavenly Spheres
+    1731744: 10510,     //Artifact Ame-No-Nuboku -> Artifact Dagda
 };
 
 const LINK_ARROWS = {
