@@ -327,14 +327,14 @@ test = [
 beta = [
     #prio
     6491880, #Anon solo
+    4026672, #Fushioh Richie Support
+    6498753, #Kozmo
+    6496086, #Noodle Numbers
     #reg
     5818764, #Firewild
-    6009822, #Mecha Madness
-    6418747, #Prideful
-    6347993, #Headhunter
-    5269100, #Orb Magicians
-    5145725, #Remnant
     6460257, #Dark Arts
+    5145725, #Remnant
+    6496989, #S T R G R L
 ]
 
 
