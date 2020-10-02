@@ -26,9 +26,9 @@ const CardsOfTheWeek = [
     1222148, //Called by the Spell Book
     1000049, //Little Tanker
     1411709, //Gradielle, Symphony of Harmony
-    1069476, //Elon Musk 1
+    // 1069476, //Elon Musk 1
     // 1331629, //Elon Musk 2
-    // 1482984, //Wingbeat Wyrm (Elon Musk 3)
+    1482984, //Wingbeat Wyrm (Elon Musk 3)
     1311654, //Torrential Fusion
     1079215, //Grasp
     1298826, //Eye of the Shadows

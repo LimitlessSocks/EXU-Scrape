@@ -298,6 +298,15 @@ database = [
     6405675, #Dark Kingdom
     6438706, #Constellar/Tellarknight Support
     4382580, #Mythical Winged Beasts
+    6450641, #Gimmick Puppet Support
+    6450165, #Contraption Restoration Program
+    6445470, #Red-Eyes Support
+    6446977, #Tagteamer
+    6434960, #World Reaper
+    6256752, #Concept of Reality
+    4361777, #Eviction
+    6418747, #Prideful
+    6347993, #Headhunter
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
