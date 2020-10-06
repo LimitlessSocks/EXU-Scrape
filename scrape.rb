@@ -307,6 +307,12 @@ database = [
     4361777, #Eviction
     6418747, #Prideful
     6347993, #Headhunter
+    4026672, #Fushioh Richie Support
+    5818764, #Firewild
+    6460257, #Dark Arts
+    5269100, #Orb Magician Refreshed
+    5145725, #Remnant
+    6524605, #Borrel/Rokket Support
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
@@ -327,6 +333,11 @@ banlist = [
     5857248,          #Limited
     5857281,          #Semi-Limited
     5857285,          #Unlimited
+]
+
+alt_arts = [
+    6523837, # Noodle's Alt Arts
+    #TODO: alt art holder for 1856588, 1856605
 ]
 
 test = [

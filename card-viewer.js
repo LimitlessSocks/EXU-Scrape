@@ -43,7 +43,7 @@ const CardsOfTheWeek = [
     1471876, //Flimsy Shot
     1537498, //Ghost Wind & Bright Mist
     1492408, //Ghost Wheel & Floating Lantern
-    1510626, //Caltrops
+    1818868, //Caltrops
     1409651, //Underwhelming Observations
     1473788, //Malformed Test Subject
     1558753, //Charismatic Priestess
