@@ -349,6 +349,7 @@ beta = [
     5731990, #Entropy Beast
     6165011, #Round 5 of Ani's Generics
     4373826, #2 new eviction cards
+    6547017, #World Reaper Support
     #reg
     4616194, #Cyberchrome
     6477846, #Cosmic Primal
