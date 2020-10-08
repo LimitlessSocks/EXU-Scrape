@@ -346,15 +346,13 @@ test = [
 
 beta = [
     #prio
-    6491880, #Anon solo
-    4026672, #Fushioh Richie Support
-    6498753, #Kozmo
-    6496086, #Noodle Numbers
+    5731990, #Entropy Beast
+    6165011, #Round 5 of Ani's Generics
+    4373826, #2 new eviction cards
     #reg
-    5818764, #Firewild
-    6460257, #Dark Arts
-    5145725, #Remnant
-    6496989, #S T R G R L
+    4616194, #Cyberchrome
+    6477846, #Cosmic Primal
+    6395566, #Submerzan
 ]
 
 
@@ -449,7 +447,7 @@ else
 end
 database = {}
 counts = Hash.new 0
-type_replace = /\(.*?This (card|monster)'s original Type is treated as (.+?) rather than (.+?)[,.].*?\)/
+type_replace = /\(.*?This (?:card|monster)'s original Type is treated as (.+?) rather than (.+?)[,.].*?\)/
 archetype_treatment = /\(.*This card is always treated as an? "(.+?)" card.*\)/
 attr_checks = [
     "name",
