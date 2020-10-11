@@ -279,7 +279,7 @@ database = [
     # 5663187, #Plorceress
     5297494, #Thunderclap
     6294677, #Diabolition
-    6307561, #Crypt
+    # 6307561, #Crypt
     6334551, #Wild Hunt
     # 6135922, #TUBA
     6359238, #Galaxieve
@@ -313,6 +313,7 @@ database = [
     5269100, #Orb Magician Refreshed
     5145725, #Remnant
     6524605, #Borrel/Rokket Support
+    6537631, #Bucket Squad
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
