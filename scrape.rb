@@ -347,14 +347,18 @@ test = [
 
 beta = [
     #prio
-    5731990, #Entropy Beast
-    6165011, #Round 5 of Ani's Generics
-    4373826, #2 new eviction cards
-    6547017, #World Reaper Support
+    6548432, #Rose Dragon Support
+    6549655, #Sock's Generic X
+    6559744, #New Order Support
+    6560544, #Cosmic Primal Support
+    6560628, #Sock's Charismatic
+    6563124, #WIP's Charismatic
+    6567063, #Meow's Support
     #reg
-    4616194, #Cyberchrome
-    6477846, #Cosmic Primal
     6395566, #Submerzan
+    6559756, #Shinadow
+    6563112, #Net Terminal
+    6139769, #Aquarius
 ]
 
 
