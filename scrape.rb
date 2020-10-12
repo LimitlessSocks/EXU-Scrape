@@ -272,7 +272,7 @@ database = [
     6267789, #Armamemento
     6292623, #Ninja Support
     # 6252579, #"Big" Game Hunter
-    6308672, #Darkwater Support
+    # 6308672, #Darkwater Support
     # 6291306, #Galaxieve
     6262300, #Muntu
     # 6255607, #Titan Hunter
@@ -314,6 +314,8 @@ database = [
     5145725, #Remnant
     6524605, #Borrel/Rokket Support
     6537631, #Bucket Squad
+    6477846, #Cosmic Primal
+    6556030, #Gadget Support
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
