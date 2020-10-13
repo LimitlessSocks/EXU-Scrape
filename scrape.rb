@@ -69,7 +69,7 @@ database = [
     # 3820609, #Amphibious Bugroth
     # 3669535, #Fundamental Dragons
     # 4670325, #Blitzers
-    5132465, #Esper V
+    # 5132465, #Esper V
     2788655, #Ravager
     5075635, #Starships
     # 5176216, #Antiqua
@@ -328,14 +328,14 @@ database = [
 ]
 
 banlist = [
-    6358712,          #Imported
-    6358715,          #Unimported
-    
     5895579,          #Retrains
     5855756, 5856014, #Forbidden
     5857248,          #Limited
     5857281,          #Semi-Limited
     5857285,          #Unlimited
+    
+    6358712,          #Imported
+    6358715,          #Unimported
 ]
 
 alt_arts = [
@@ -491,6 +491,9 @@ decks.each.with_index(1) { |deck_id, i|
         else
             card["also_archetype"] = nil
         end
+        # if id == "11110"
+            # p card
+        # end
         
         # log operations
         display_text = "#{id} (#{card["name"]})"
