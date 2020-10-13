@@ -328,14 +328,14 @@ database = [
 ]
 
 banlist = [
+    6358712,          #Imported
+    6358715,          #Unimported
+    
     5895579,          #Retrains
     5855756, 5856014, #Forbidden
     5857248,          #Limited
     5857281,          #Semi-Limited
     5857285,          #Unlimited
-    
-    6358712,          #Imported
-    6358715,          #Unimported
 ]
 
 alt_arts = [
