@@ -387,6 +387,7 @@ extra_info = {
     
     6358715 => EXU_NO_IMPORT
 }
+extra_info_order = extra_info.keys.sort_by { |key| banlist.index key }
 
 decks = nil
 outname = nil
@@ -407,7 +408,7 @@ end
 
 ignore_banlist = ["test", "beta"]
 
-decks += extra_info.keys unless ignore_banlist.include? operation
+decks += extra_info_order unless ignore_banlist.include? operation
 
 decks.uniq!
 
