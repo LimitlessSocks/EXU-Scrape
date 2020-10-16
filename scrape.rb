@@ -95,7 +95,7 @@ database = [
     # 5089829, #Grand Knight
     # 5408141, #Amorel
     5396113, #Terra Basilisk
-    5490132, #Sunavalon
+    # 5490132, #Sunavalon
     5187975, #Rulers of Name
     4868725, #Dominus
     5541864, #Kuroshiro
@@ -305,7 +305,7 @@ database = [
     6434960, #World Reaper
     6256752, #Concept of Reality
     4361777, #Eviction
-    6418747, #Prideful
+    # 6418747, #Prideful
     6347993, #Headhunter
     4026672, #Fushioh Richie Support
     5818764, #Firewild
@@ -316,6 +316,10 @@ database = [
     6537631, #Bucket Squad
     6477846, #Cosmic Primal
     6556030, #Gadget Support
+    6549655, #Sock's Generic Pack X
+    6567063, #Hero of the West w/Hero of the East Support Card
+    6395566, #Submerzan
+    6578295, #Crypt
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
@@ -349,18 +353,19 @@ test = [
 
 beta = [
     #prio
-    6548432, #Rose Dragon Support
-    6549655, #Sock's Generic X
+    6548432, #Rose Dragon
     6559744, #New Order Support
-    6560544, #Cosmic Primal Support
-    6560628, #Sock's Charismatic
-    6563124, #WIP's Charismatic
-    6567063, #Meow's Support
+    6563124, #Evil Charismatic
+    6560628, #Best Charismatic
+    6582550, #Darkwater
+    6560544, #Cosmic Primal
+    6555891, #Sock's Generic Pack 13s
+    6586164, #Dark Arts
+    6586885, #Meow's generics
     #reg
-    6395566, #Submerzan
     6559756, #Shinadow
-    6563112, #Net Terminal
     6139769, #Aquarius
+    6575349, #Entity
 ]
 
 
