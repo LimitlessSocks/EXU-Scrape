@@ -47,6 +47,8 @@ const CardsOfTheWeek = [
     1409651, //Underwhelming Observations
     1473788, //Malformed Test Subject
     1558753, //Charismatic Priestess
+    1644436, //Solar Flare
+    1649242, //Mokey Mokey Shadow
     747487,  //Reset!
 ];
 
