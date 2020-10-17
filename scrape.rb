@@ -353,19 +353,8 @@ test = [
 
 beta = [
     #prio
-    6548432, #Rose Dragon
-    6559744, #New Order Support
-    6563124, #Evil Charismatic
-    6560628, #Best Charismatic
-    6582550, #Darkwater
-    6560544, #Cosmic Primal
-    6555891, #Sock's Generic Pack 13s
-    6586164, #Dark Arts
-    6586885, #Meow's generics
+    6595941, #fusion
     #reg
-    6559756, #Shinadow
-    6139769, #Aquarius
-    6575349, #Entity
 ]
 
 
