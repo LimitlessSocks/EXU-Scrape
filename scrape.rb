@@ -237,7 +237,7 @@ database = [
     # 6129587, #Tindangle Support
     5098946, #Guildimension
     6044732, #Armorizer
-    5936334, #Darkwater
+    # 5936334, #Darkwater
     # 6162086, #Magnet Warrior Support
     5904696, #Contraptions
     # 4349406, #Franknstech
@@ -320,6 +320,10 @@ database = [
     6567063, #Hero of the West w/Hero of the East Support Card
     6395566, #Submerzan
     6578295, #Crypt
+    6585445, #PPDC
+    6563112, #NTG
+    6582550, #Darkwater
+    6560628, #Charismatic
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
