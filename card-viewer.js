@@ -24,29 +24,30 @@ const CardsOfTheWeek = [
     1117429, //Battlewasp - Akiza the Berserker
     1175945, //ON SALE!!!
     1222148, //Called by the Spell Book
-    1000049, //Little Tanker
-    1411709, //Gradielle, Symphony of Harmony
+    // 1000049, //Little Tanker
+    // 1411709, //Gradielle, Symphony of Harmony
     // 1069476, //Elon Musk 1
     // 1331629, //Elon Musk 2
     1482984, //Wingbeat Wyrm (Elon Musk 3)
     1311654, //Torrential Fusion
-    1079215, //Grasp
+    // 1079215, //Grasp
     1298826, //Eye of the Shadows
     1333641, //Chained Down
     1061760, //Sacrificial Soul Reborn
     1393301, //Cosmic Vacuum
     1374705, //Bone Chimera
-    1268592, //Max Evolution Pill
-    1530819, //Destoroyah, the One True Devil
+    // 1268592, //Max Evolution Pill
+    1537818, //Destoroyah, the One True Devil
     1526913, //Spellbook of Forbidden Arts
     930975,  //Equip Equality
-    1471876, //Flimsy Shot
+    // 1471876, //Flimsy Shot
     1537498, //Ghost Wind & Bright Mist
-    1492408, //Ghost Wheel & Floating Lantern
+    // 1492408, //Ghost Wheel & Floating Lantern
     1818868, //Caltrops
     1409651, //Underwhelming Observations
     1473788, //Malformed Test Subject
     1558753, //Charismatic Priestess
+    747487,  //Reset!
 ];
 
 const OTKTools = [
