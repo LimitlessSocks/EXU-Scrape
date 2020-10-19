@@ -329,8 +329,11 @@ database = [
     6353380, #Generic Monsters II
     6353400, #Generic Monsters III
     6353414, #Generic Monsters IV
+    6511321, #Generic Monsters V
     6353430, #Generic Spells
+    6419184, #Generic Spells II
     6353449, #Generic Traps
+    6598717, #Generic Traps II
     6353457, #Assorted TCG Single Support
     #6353465, #Staples
 ]
@@ -347,8 +350,7 @@ banlist = [
 ]
 
 alt_arts = [
-    6523837, # Noodle's Alt Arts
-    #TODO: alt art holder for 1856588, 1856605
+    6532506, #1.0
 ]
 
 test = [
@@ -357,7 +359,10 @@ test = [
 
 beta = [
     #prio
-    6595941, #fusion
+    6600896, #Glow Gods
+    6606592, #Galaxieve support
+    6174382, #Ani's Generics Round 6
+    6604359, #Chronoruler
     #reg
 ]
 
