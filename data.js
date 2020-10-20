@@ -1,10 +1,14 @@
 window.databaseToUse = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/db.json";
 
-const cardsBy = (type, query = {}, exclude = null) => {
+const cardsBy = (fn, query = {}, exclude = null) => {
     let hash = {};
+    if(typeof fn !== "function") {
+        let type = fn;
+        fn = (card) => card[type];
+    }
     let swath = CardViewer.filter(query, exclude);
     for(let card of Object.values(swath)) {
-        let prop = card[type];
+        let prop = fn(card);
         hash[prop] = hash[prop] || 0;
         hash[prop]++;
     }

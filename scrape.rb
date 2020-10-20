@@ -359,11 +359,14 @@ test = [
 
 beta = [
     #prio
-    6600896, #Glow Gods
-    6606592, #Galaxieve support
-    6174382, #Ani's Generics Round 6
     6604359, #Chronoruler
+    6612334, #SHARK
     #reg
+    6579736, #Ashen
+    6611617, #Frostyre
+    6614461, #Anon Generics 2
+    6610500, #FlavorFlov more singles
+    6610145, #Darkest Forest
 ]
 
 
