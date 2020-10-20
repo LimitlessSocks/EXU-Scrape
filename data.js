@@ -1,8 +1,8 @@
 window.databaseToUse = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/db.json";
 
-const cardsBy = (type, query = {}) => {
+const cardsBy = (type, query = {}, exclude = null) => {
     let hash = {};
-    let swath = CardViewer.filter(query);
+    let swath = CardViewer.filter(query, exclude);
     for(let card of Object.values(swath)) {
         let prop = card[type];
         hash[prop] = hash[prop] || 0;
@@ -12,14 +12,18 @@ const cardsBy = (type, query = {}) => {
 };
 
 const compare = (x, y) => (x > y) - (x < y);
-
-
+const sortBy = (arr, gfn) => {
+    let graded = arr.map((v, e, oa) => [v, gfn(v, e, oa)]);
+    return graded.sort(([av, ag], [bv, bg]) => compare(ag, bg))
+        .map(([v, g]) => v);
+}
 
 class Feature {
-    constructor(id, disp, fn) {
+    constructor(id, disp, fn, options = {}) {
         this.id = id;
         this.disp = disp;
         this.fn = fn;
+        this.options = options;
     }
     
     addTo(src) {
@@ -52,8 +56,17 @@ class Feature {
             Statistics.focus.chart.destroy();
         }
         Statistics.focus = this;
-        let dat = Object.entries(this.fn())
-            .sort(([k1, v1], [k2, v2]) => compare(k1, k2));
+        
+        let sortIndex = this.options.sortIndex || Statistics.Options.sortIndex;
+        
+        let dat = Object.entries(this.fn());
+        
+        if(this.options.sort) {
+            dat = this.options.sort(dat);
+        }
+        else {
+            dat = dat.sort((a, b) => compare(a[sortIndex], b[sortIndex]));
+        }
         
         let [
             background, border,
@@ -108,6 +121,9 @@ const Statistics = {
         let feature = new Feature(...args);
         Statistics.Features[feature.id] = feature;
     },
+    Options: {
+        sortIndex: 0,
+    },
     ctx: null,
 };
 
@@ -121,6 +137,24 @@ Statistics.addFeature(
     "monsterTypePopularity",
     "Monster Type Popularity",
     () => cardsBy("type", { type: "monster" })
+);
+
+let attributeOrder = ["DARK", "EARTH", "FIRE", "LIGHT", "WATER", "WIND", "DIVINE"];
+Statistics.addFeature(
+    "monsterAttributePopularity",
+    "Monster Attribute Popularity",
+    () => cardsBy("attribute", { type: "monster" }),
+    {
+        sort: (dat) => {
+            return sortBy(dat, (e) => attributeOrder.indexOf(e));
+        }
+    }
+);
+
+Statistics.addFeature(
+    "monsterCardKind",
+    "Monster Card Kinds",
+    () => cardsBy("monster_color", { type: "monster" }, { monsterCategory: "effect" })
 );
 
 window.addEventListener("load", async function () {
