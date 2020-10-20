@@ -17,6 +17,13 @@ const sortBy = (arr, gfn) => {
     return graded.sort(([av, ag], [bv, bg]) => compare(ag, bg))
         .map(([v, g]) => v);
 }
+const objectFilter = (obj, fn) => {
+    let res = {};
+    for(let [key, value] of Object.entries(obj)) {
+        if(fn(key, value)) res[key] = value;
+    }
+    return res;
+}
 
 class Feature {
     constructor(id, disp, fn, options = {}) {
@@ -155,6 +162,12 @@ Statistics.addFeature(
     "monsterCardKind",
     "Monster Card Kinds",
     () => cardsBy("monster_color", { type: "monster" }, { monsterCategory: "effect" })
+);
+
+Statistics.addFeature(
+    "users",
+    "Users by Card",
+    () => objectFilter(cardsBy("username"), (u, v) => v >= 20)
 );
 
 window.addEventListener("load", async function () {
