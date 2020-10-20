@@ -239,7 +239,7 @@ database = [
     6044732, #Armorizer
     # 5936334, #Darkwater
     # 6162086, #Magnet Warrior Support
-    5904696, #Contraptions
+    # 5904696, #Contraptions
     # 4349406, #Franknstech
     6169009, #Aquaactress Support
     6044655, #Vampop☆Star
@@ -299,7 +299,7 @@ database = [
     6438706, #Constellar/Tellarknight Support
     4382580, #Mythical Winged Beasts
     6450641, #Gimmick Puppet Support
-    6450165, #Contraption Restoration Program
+    # 6450165, #Contraption Restoration Program
     6445470, #Red-Eyes Support
     6446977, #Tagteamer
     6434960, #World Reaper
@@ -311,7 +311,7 @@ database = [
     5818764, #Firewild
     6460257, #Dark Arts
     5269100, #Orb Magician Refreshed
-    5145725, #Remnant
+    # 5145725, #Remnant
     6524605, #Borrel/Rokket Support
     6537631, #Bucket Squad
     6477846, #Cosmic Primal
