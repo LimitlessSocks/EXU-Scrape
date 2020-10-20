@@ -65,14 +65,15 @@ class Feature {
         Statistics.focus = this;
         
         let sortIndex = this.options.sortIndex || Statistics.Options.sortIndex;
+        let sortOrder = this.options.sortOrder || Statistics.Options.sortOrder;
         
         let dat = Object.entries(this.fn());
         
-        if(this.options.sort) {
+        if(this.options.sort && sortIndex == 0) {
             dat = this.options.sort(dat);
         }
         else {
-            dat = dat.sort((a, b) => compare(a[sortIndex], b[sortIndex]));
+            dat = dat.sort((a, b) => sortOrder * compare(a[sortIndex], b[sortIndex]));
         }
         
         let [
@@ -130,6 +131,7 @@ const Statistics = {
     },
     Options: {
         sortIndex: 0,
+        sortOrder: 1, // 1 for ascending, -1 for descending
     },
     ctx: null,
 };
@@ -198,4 +200,24 @@ window.addEventListener("load", async function () {
     $("#share").click(() => {
         window.location.search = "?" + Statistics.focus.id;
     });
+    
+    let idToKey = {
+        sortIndexer: "sortIndex"
+    };
+    let inputElements = $("#otherOptions select, #otherOptions input");
+    let onUpdate = function () {
+        // console.log(this);
+        let val = idToKey[this.id];
+        
+        if(val === "sortIndex") {
+            Statistics.Options.sortOrder = this.value == "1" ? -1 : 1;
+        }
+        Statistics.Options[val] = this.value;
+        Statistics.focus.button.click();
+    };
+    
+    for(let el of inputElements) {
+        $(el).change(onUpdate);
+        onUpdate.bind(el)();
+    }
 });
