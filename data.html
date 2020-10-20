@@ -9,12 +9,35 @@
 			  crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <script src="./card-viewer.js"></script>
-    <script src="./main.js"></script>
+    <script src="./data.js"></script>
     <link rel="STYLESHEET" href="./card-viewer.css">
+    <style>
+    
+    html {
+        background-image: url("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/res/bg/background-data.jpg");
+        height: 100%;
+    }
+    #canvasHolder {
+        background: rgba(0,0,0,0.5);
+        padding: 10px;
+    }
+    #optionContainer button {
+        margin: 5px;
+    }
+    </style>
     
 </head>
 <body>
-<h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1>   
+<h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1>
+<h2>EXU Statistics</h2>
+<p>Click on one of these buttons to see the corresponding statistic!</p>
+<p><button id="share">Save sharing URL for this statistic</button></p>
+<h3>Options</h3>
+<div id="optionContainer">
 
+</div>
+<div id="canvasHolder">
+<canvas id="primaryChart" width="800" height="250"></canvas>
+</div>
 </body>
 </head>
