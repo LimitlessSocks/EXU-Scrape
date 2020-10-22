@@ -174,7 +174,7 @@ database = [
     # 5755617, #Shangdi
     5741889, #Titanus Support
     # 5767298, #Holifear Support
-    5270321, #Apocrypha
+    # 5270321, #Apocrypha
     4963487, #Battletech
     5782891, #The Weather Support
     5895706, #Faust

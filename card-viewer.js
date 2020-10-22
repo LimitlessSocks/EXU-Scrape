@@ -42,7 +42,7 @@ const CardsOfTheWeek = [
     930975,  //Equip Equality
     // 1471876, //Flimsy Shot
     1537498, //Ghost Wind & Bright Mist
-    // 1492408, //Ghost Wheel & Floating Lantern
+    1818903, //Ghost Wheel & Floating Lantern
     1818868, //Caltrops
     1409651, //Underwhelming Observations
     1473788, //Malformed Test Subject
@@ -157,6 +157,8 @@ const RetrainMap = {
     1653369: 3057,      //Naturia Baihu -> Naturia Beast
     1768966: 9070,      //Hieratic Dragon of Khonsu -> Hieratic Seal of the Heavenly Spheres
     1731744: 10510,     //Artifact Ame-No-Nuboku -> Artifact Dagda
+    9082: 1867327,      //Crystron Halqifibrax -> Crystron Glassfiber
+    10606: 1648511,     //Accesscode Talker -> Storm Accesscode Talker
 };
 
 const LINK_ARROWS = {
