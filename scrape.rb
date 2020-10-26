@@ -324,6 +324,13 @@ database = [
     6563112, #NTG
     6582550, #Darkwater
     6560628, #Charismatic
+    6598851, #Madoor Support
+    6598859, #of the dark Support
+    6600896, #Glow Gods
+    6606592, #Galaxieve Support
+    6604359, #Chronoruler
+    6622494, #Codebreaker Support
+    6601142, #Serpent Night
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
@@ -359,14 +366,17 @@ test = [
 
 beta = [
     #prio
-    6604359, #Chronoruler
-    6612334, #SHARK
+    6628828, #Oryja Singles
+    6645825, #Yubel Support
+    6641309, #Digitallias Support
+    6652544, #Mixed Attribute Support
     #reg
     6579736, #Ashen
     6611617, #Frostyre
-    6614461, #Anon Generics 2
-    6610500, #FlavorFlov more singles
     6610145, #Darkest Forest
+    6628957, #Maju Garzett Support
+    6649729, #Flamiller
+    4456007, #Latria
 ]
 
 
