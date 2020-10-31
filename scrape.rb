@@ -367,16 +367,18 @@ test = [
 beta = [
     #prio
     6628828, #Oryja Singles
-    6645825, #Yubel Support
     6641309, #Digitallias Support
-    6652544, #Mixed Attribute Support
+    6661353, #1-off fusions
+    4456007, #Lafria
+    6686412, #Paladin Support
     #reg
-    6579736, #Ashen
     6611617, #Frostyre
-    6610145, #Darkest Forest
-    6628957, #Maju Garzett Support
-    6649729, #Flamiller
-    4456007, #Latria
+    3068977, #Nekojishi
+    6434095, #Kugutsu
+    6674104, #Gesellschaft
+    6670355, #Railreich
+    6679538, #Doggoganger
+    6687652, #FlavorFlov singles
 ]
 
 

@@ -50,6 +50,7 @@ const CardsOfTheWeek = [
     1644436, //Solar Flare
     1649242, //Mokey Mokey Shadow
     747487,  //Reset!
+    1765725, //Number 108: Divine Wind Dragon
 ];
 
 const OTKTools = [
@@ -159,6 +160,7 @@ const RetrainMap = {
     1731744: 10510,     //Artifact Ame-No-Nuboku -> Artifact Dagda
     9082: 1867327,      //Crystron Halqifibrax -> Crystron Glassfiber
     10606: 1648511,     //Accesscode Talker -> Storm Accesscode Talker
+    1862633: 8514,      //True King of Dimension's End -> True King of All Calamities
 };
 
 const LINK_ARROWS = {
