@@ -331,6 +331,11 @@ database = [
     6604359, #Chronoruler
     6622494, #Codebreaker Support
     6601142, #Serpent Night
+    6645825, #Yubel Support
+    6628957, #Garzett Support
+    6649729, #Flamiller
+    6670355, #Railreich
+    6611617, #Frostyre
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
