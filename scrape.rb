@@ -88,7 +88,7 @@ database = [
     # 4657652, #Elixstar/Potions
     5416935, #Akatsuki
     5304027, #Pyre
-    5372415, #Modernotes
+    # 5372415, #Modernotes
     # 4374978, #Insidious
     # 4415708, #Tensor Maidens
     # 4148322, #Dragonewts
@@ -97,7 +97,7 @@ database = [
     5396113, #Terra Basilisk
     # 5490132, #Sunavalon
     5187975, #Rulers of Name
-    4868725, #Dominus
+    # 4868725, #Dominus
     5541864, #Kuroshiro
     # 5610680, #P@rol
     6110085, #P@rol (Ani)
@@ -209,7 +209,7 @@ database = [
     # 5145725, #Remnant
     5839316, #Duo-Attribute Support
     5587605, #Hot Pink
-    5448052, #Modernotes 2: Idols and Icons
+    # 5448052, #Modernotes 2: Idols and Icons
     4422086, #Mystrick Support
     5936560, #The Agent Support
     5917260, #Koala
@@ -310,7 +310,7 @@ database = [
     4026672, #Fushioh Richie Support
     5818764, #Firewild
     6460257, #Dark Arts
-    5269100, #Orb Magician Refreshed
+    # 5269100, #Orb Magician Refreshed
     # 5145725, #Remnant
     6524605, #Borrel/Rokket Support
     6537631, #Bucket Squad
@@ -319,7 +319,7 @@ database = [
     6549655, #Sock's Generic Pack X
     6567063, #Hero of the West w/Hero of the East Support Card
     6395566, #Submerzan
-    6578295, #Crypt
+    # 6578295, #Crypt
     6585445, #PPDC
     6563112, #NTG
     6582550, #Darkwater
@@ -336,6 +336,14 @@ database = [
     6649729, #Flamiller
     6670355, #Railreich
     6611617, #Frostyre
+    5145725, #Remnant
+    6686412, #Paladin Ritual Support
+    6677155, #Colossus
+    3068977, #Nekojishi
+    4456007, #Latria
+    6674104, #Gescellshcaft
+    6699578, #Galatic Gods
+    6707275, #Malevolessence
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
