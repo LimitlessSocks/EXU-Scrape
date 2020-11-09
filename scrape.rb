@@ -268,7 +268,7 @@ database = [
     6163866, #Black Blood
     6227419, #Deep Burrower
     3080272, #Nightshade
-    6086340, #Zeniphyr
+    # 6086340, #Zeniphyr
     6267789, #Armamemento
     6292623, #Ninja Support
     # 6252579, #"Big" Game Hunter

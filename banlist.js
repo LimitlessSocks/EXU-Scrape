@@ -31,10 +31,9 @@ let onLoad = async function () {
     let tags = ["Forbidden", "Limited", "Semi-Limited", "Unlimited"];
     
     const NewCards = [
-        4858,
-        9775,
-        1558753,
-        
+        10512,
+        3212,
+        11230,
         // imports
     ];
     //ADAMANCIPATOR RESEARCHER
