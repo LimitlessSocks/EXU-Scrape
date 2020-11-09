@@ -61,7 +61,7 @@ database = [
     4757288, #Pandas
     # 3180755, #Earthbound Prisoners
     4861946, #Poppin 1
-    5003800, #Poppin 2
+    # 5003800, #Poppin 2(integrated into Poppin 1)
     4547335, #Titanus
     4570517, #Harbinger
     4910893, #Aria Fey
@@ -138,7 +138,7 @@ database = [
     # 5647560, #Ophion
     5642481, #Daemon Engine
     # 5646060, #Ignation
-    5627288, #Titanus Support
+    # 5627288, #Titanus Support(integrated into Titanus)
     # 4395391, #Trapod
     # 5593625, #Orb Magicians
     5549562, #Travelsha
