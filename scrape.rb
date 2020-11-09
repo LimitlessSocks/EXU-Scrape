@@ -379,19 +379,16 @@ test = [
 
 beta = [
     #prio
-    6628828, #Oryja Singles
-    6641309, #Digitallias Support
-    6661353, #1-off fusions
-    4456007, #Lafria
-    6686412, #Paladin Support
+    6718219, #Dual Avatar Support
+    6708539, #Trickstar Support
+    6744648, #More. Numbers.
+    6008240, #Summoned Skull
     #reg
-    6611617, #Frostyre
-    3068977, #Nekojishi
-    6434095, #Kugutsu
-    6674104, #Gesellschaft
-    6670355, #Railreich
-    6679538, #Doggoganger
-    6687652, #FlavorFlov singles
+    6713995, #Kairi singles
+    5379060, #Wavering Wind
+    6733479, #Ookazi
+    6740706, #Cribal
+    6703727, #Windita's Esper
 ]
 
 
