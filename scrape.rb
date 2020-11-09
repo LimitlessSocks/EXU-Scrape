@@ -235,7 +235,7 @@ database = [
     5869257, #Yova
     6109070, #Normal Support
     # 6129587, #Tindangle Support
-    5098946, #Guildimension
+    # 5098946, #Guildimension
     6044732, #Armorizer
     # 5936334, #Darkwater
     # 6162086, #Magnet Warrior Support
@@ -310,7 +310,7 @@ database = [
     4026672, #Fushioh Richie Support
     5818764, #Firewild
     6460257, #Dark Arts
-    # 5269100, #Orb Magician Refreshed
+    5269100, #Orb Magician Refreshed
     # 5145725, #Remnant
     6524605, #Borrel/Rokket Support
     6537631, #Bucket Squad
@@ -359,7 +359,8 @@ database = [
 ]
 
 banlist = [
-    6358712,          #Imported
+    6358712,          #Imported 1
+    6751103,          #Imported 2
     6358715,          #Unimported
     
     5895579,          #Retrains
@@ -412,6 +413,7 @@ extra_info = {
     5857285 => EXU_UNLIMITED,
     
     6358712 => EXU_IMPORT,
+    6751103 => EXU_IMPORT,
     
     6358715 => EXU_NO_IMPORT
 }
