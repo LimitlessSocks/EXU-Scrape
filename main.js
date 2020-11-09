@@ -4,7 +4,7 @@ let onLoad = async function () {
     let db = await response.json();
     CardViewer.Database.setInitial(db);
     
-    CardViewer.Elements.searchParameters = $("#searchParamters");
+    CardViewer.Elements.searchParameters = $("#searchParameters");
     
     CardViewer.Elements.cardType = $("#cardType");
     CardViewer.Elements.cardLimit = $("#cardLimit");
@@ -134,30 +134,7 @@ let onLoad = async function () {
     });
     CardViewer.Elements.autoSearch.change();
     
-    CardViewer.Elements.cardType.change(function () {
-        let val = CardViewer.Elements.cardType.val();
-        if(val === "spell") {
-            CardViewer.Elements.ifMonster.toggle(false);
-            CardViewer.Elements.ifTrap.toggle(false);
-            CardViewer.Elements.ifSpell.toggle(true);
-        }
-        else if(val === "trap") {
-            CardViewer.Elements.ifMonster.toggle(false);
-            CardViewer.Elements.ifSpell.toggle(false);
-            CardViewer.Elements.ifTrap.toggle(true);
-        }
-        else if(val === "monster") {
-            CardViewer.Elements.ifTrap.toggle(false);
-            CardViewer.Elements.ifSpell.toggle(false);
-            CardViewer.Elements.ifMonster.toggle(true);
-        }
-        else {
-            CardViewer.Elements.ifMonster.toggle(false);
-            CardViewer.Elements.ifTrap.toggle(false);
-            CardViewer.Elements.ifSpell.toggle(false);
-        }
-    });
-    CardViewer.Elements.cardType.change();
+    CardViewer.setUpTabSearchSwitching();
     
     const elementChanged = function () {
         if(CardViewer.autoSearch) {

@@ -177,16 +177,15 @@ const LINK_ARROWS = {
 // CardViewer.Database.banlist = Banlist;
 
 CardViewer.Database.setInitial = function (db) {
-    // for(let [id, info] of Object.entries(db)) {
-        // if(typeof info.exu_limit !== "undefined") {
-            // continue;
-        // }
-        // info.exu_limit = Banlist[id];
-        // if(typeof info.exu_limit === "undefined") {
-            // info.exu_limit = 3;
-        // }
-    // }
     CardViewer.Database.cards = db;
+};
+CardViewer.Database.initialReadAll = async function (...names) {
+    let promises = names.map(name => fetch(name).then(response => response.json()));
+    
+    let dbs = await Promise.all(promises);
+    
+    let db = dbs.reduce((acc, next) => Object.assign(acc, next), {});
+    CardViewer.Database.setInitial(db);
 };
 
 // helper function methods
@@ -936,6 +935,35 @@ CardViewer.composeResult = function (card) {
         )
     ));
     return res;
+};
+
+CardViewer.setUpTabSearchSwitching = function () {
+    
+    
+    CardViewer.Elements.cardType.change(function () {
+        let val = CardViewer.Elements.cardType.val();
+        if(val === "spell") {
+            CardViewer.Elements.ifMonster.toggle(false);
+            CardViewer.Elements.ifTrap.toggle(false);
+            CardViewer.Elements.ifSpell.toggle(true);
+        }
+        else if(val === "trap") {
+            CardViewer.Elements.ifMonster.toggle(false);
+            CardViewer.Elements.ifSpell.toggle(false);
+            CardViewer.Elements.ifTrap.toggle(true);
+        }
+        else if(val === "monster") {
+            CardViewer.Elements.ifTrap.toggle(false);
+            CardViewer.Elements.ifSpell.toggle(false);
+            CardViewer.Elements.ifMonster.toggle(true);
+        }
+        else {
+            CardViewer.Elements.ifMonster.toggle(false);
+            CardViewer.Elements.ifTrap.toggle(false);
+            CardViewer.Elements.ifSpell.toggle(false);
+        }
+    });
+    CardViewer.Elements.cardType.change();
 };
 
 CardViewer.composeStrategy = CardViewer.composeResult;

@@ -34,14 +34,15 @@ p {
     display: none;
 }
 
-button {
+button, .fake-button {
     padding: 5px;
     background: #330033;
     border: 1px solid #eeaaee;
     color: white;
     cursor: pointer;
+    font-family: "Gadugi", sans-serif;
 }
-button:hover {
+button:hover, .fake-button:hover {
     background: #552255;
 }
 .danger-button {
@@ -64,7 +65,7 @@ input, select {
     margin: 5px;
 }
 
-#searchParamters > div {
+#searchParameters > div {
     background: rgb(51, 0, 51, 0.8);
     padding: 8px;
     width: auto;
@@ -314,7 +315,7 @@ p.byline + p.byline {
     margin-left: 15px;
     color: #ccc;
 }
-#searchParamters {
+#searchParameters {
     display: flex;
     align-items: flex-start;
 }
