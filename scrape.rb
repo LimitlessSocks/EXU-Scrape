@@ -344,6 +344,8 @@ database = [
     6674104, #Gescellshcaft
     6699578, #Galatic Gods
     6707275, #Malevolessence
+    6008240, #Summoned Skull Support
+    6708539, #Trickstar Support
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
