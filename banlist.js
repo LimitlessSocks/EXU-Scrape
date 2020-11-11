@@ -35,6 +35,9 @@ let onLoad = async function () {
         3212,
         11230,
         // imports
+        11046,
+        11045,
+        11095,
     ];
     //ADAMANCIPATOR RESEARCHER
     //CYBER-STEIN
