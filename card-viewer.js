@@ -158,8 +158,8 @@ const RetrainMap = {
     1653369: 3057,      //Naturia Baihu -> Naturia Beast
     1768966: 9070,      //Hieratic Dragon of Khonsu -> Hieratic Seal of the Heavenly Spheres
     1731744: 10510,     //Artifact Ame-No-Nuboku -> Artifact Dagda
-    9082: 1867327,      //Crystron Halqifibrax -> Crystron Glassfiber
-    10606: 1648511,     //Accesscode Talker -> Storm Accesscode Talker
+    1867327: 9082,      //Crystron Halqifibrax -> Crystron Glassfiber
+    1648511: 10606,     //Accesscode Talker -> Storm Accesscode Talker
     1862633: 8514,      //True King of Dimension's End -> True King of All Calamities
 };
 
