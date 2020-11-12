@@ -51,6 +51,7 @@ const CardsOfTheWeek = [
     1649242, //Mokey Mokey Shadow
     747487,  //Reset!
     1765725, //Number 108: Divine Wind Dragon
+    1805896, //Localized Tornado Dragon
 ];
 
 const OTKTools = [
