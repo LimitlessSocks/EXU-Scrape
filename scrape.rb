@@ -262,7 +262,7 @@ database = [
     4667428, #Xiuhqui
     6245917, #Marincess Support
     6040042, #Kuuroma
-    6116920, #Frozen
+    # 6116920, #Frozen
     5954949, #Ani's Yokai Stuff
     6247363, #Rowa - Elusive Power
     6163866, #Black Blood
@@ -346,6 +346,14 @@ database = [
     6707275, #Malevolessence
     6008240, #Summoned Skull Support
     6708539, #Trickstar Support
+    6746888, #Performapal Sky Magician & Odd-Eyes Support
+    6590945, #Constellar
+    4406016, #Onion Slice
+    6719358, #Vengeful Tox
+    6733479, #Ookazi
+    6188330, #Giga Havoc
+    6777854, #Nebulline
+    6772951, #Starter Squad
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II

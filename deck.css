@@ -47,6 +47,10 @@ header > * {
     display: inline;
 }
 
+.card-preview.monster.link {
+    background-size: auto;
+}
+
 .editor-item {
     text-align: center;
     display: inline-block;

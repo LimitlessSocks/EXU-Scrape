@@ -15,7 +15,9 @@ const cardsBy = (fn, query = {}, exclude = null) => {
     return hash;
 };
 
-const compare = (x, y) => (x > y) - (x < y);
+// const compare = (x, y) => (x > y) - (x < y);
+const compare = (x, y) => x.toString().localeCompare(y, undefined, { numeric: true });
+
 const sortBy = (arr, gfn) => {
     let graded = arr.map((v, e, oa) => [v, gfn(v, e, oa)]);
     return graded.sort(([av, ag], [bv, bg]) => compare(ag, bg))
@@ -70,14 +72,30 @@ class Feature {
         
         let sortIndex = this.options.sortIndex || Statistics.Options.sortIndex;
         let sortOrder = this.options.sortOrder || Statistics.Options.sortOrder;
+        let sortByGrader = this.options.sortBy || Statistics.Options.sortBy;
+        let limit = this.options.limit || Statistics.Options.limit;
         
         let dat = Object.entries(this.fn());
+        let sortedDat;
         
-        if(this.options.sort && sortIndex == 0) {
-            dat = this.options.sort(dat);
+        if(sortIndex == 0) {
+            if(this.options.sort) {
+                sortedDat = this.options.sort(dat);
+            }
+            else if(sortByGrader) {
+                sortedDat = sortBy(dat, a => sortByGrader(a[sortIndex]));
+            }
         }
-        else {
-            dat = dat.sort((a, b) => sortOrder * compare(a[sortIndex], b[sortIndex]));
+        if(!sortedDat) {
+            sortedDat = dat.sort((a, b) =>
+                sortOrder * compare(a[sortIndex], b[sortIndex])
+            );
+        }
+        
+        dat = sortedDat;
+        
+        if(limit) {
+            dat = dat.slice(0, limit);
         }
         
         let [
@@ -109,7 +127,7 @@ class Feature {
                             
                             // fontColor: "green",
                             // fontSize: 18,
-                        }
+                        },
                     }],
                     xAxes: [{
                         ticks: {
@@ -138,6 +156,7 @@ const Statistics = {
     Options: {
         sortIndex: 0,
         sortOrder: 1, // 1 for ascending, -1 for descending
+        sortBy: null,
     },
     ctx: null,
 };
@@ -160,9 +179,10 @@ Statistics.addFeature(
     "Monster Attribute Popularity",
     () => cardsBy("attribute", { type: "monster" }),
     {
-        sort: (dat) => {
-            return sortBy(dat, (e) => attributeOrder.indexOf(e));
-        }
+        // sort: (dat) => {
+            // return sortBy(dat, (e) => attributeOrder.indexOf(e));
+        // }
+        sortBy: e => attributeOrder.indexOf(e),
     }
 );
 
@@ -174,8 +194,64 @@ Statistics.addFeature(
 
 Statistics.addFeature(
     "users",
-    "Users by Card",
+    "Users by Card Count",
     () => objectFilter(cardsBy("username"), (u, v) => v >= 20)
+);
+
+Statistics.addFeature(
+    "atkMost",
+    "Most common ATK values",
+    () => objectFilter(cardsBy("atk"), (u, v) => v >= 20),
+    {
+        numericName: true,
+    }
+);
+
+Statistics.addFeature(
+    "defMost",
+    "Most common DEF values",
+    () => objectFilter(cardsBy("def", {}, { monsterCategory: "link" }), (u, v) => v >= 20),
+    {
+        numericName: true,
+    }
+);
+
+Statistics.addFeature(
+    "levels",
+    "Most common levels",
+    () => cardsBy("level", { monsterCategory: "leveled" }),
+    {
+        numericName: true,
+    }
+);
+
+Statistics.addFeature(
+    "ranks",
+    "Most common ranks",
+    () => cardsBy("level", { monsterCategory: "xyz" }),
+    {
+        numericName: true,
+    }
+);
+
+Statistics.addFeature(
+    "lratings",
+    "Most common link ratings",
+    () => cardsBy("level", { monsterCategory: "link" }),
+    {
+        numericName: true,
+    }
+);
+
+Statistics.addFeature(
+    "atkDefPair",
+    "Most common ATK/DEF pairings",
+    () => objectFilter(cardsBy((card) => `${card.atk}/${card.def}`, {}, { monsterCategory: "link" }), (u, v) => v >= 10),
+    {
+        // logarithmic: true,
+        numericName: true,
+        limit: 15,
+    }
 );
 
 window.addEventListener("load", async function () {
@@ -226,4 +302,18 @@ window.addEventListener("load", async function () {
         $(el).change(onUpdate);
         onUpdate.bind(el)();
     }
+    
+    let canvasHolder = $("#canvasHolder");
+    
+    let resize = () => {
+        let top = canvasHolder.position().top;
+        let windowHeight = $(window).height();
+        let height = windowHeight - top - 30;
+        console.log(top, windowHeight, height);
+        canvasHolder.css("height", height + "px");
+    };
+    
+    $(window).resize(resize);
+    
+    resize();
 });
