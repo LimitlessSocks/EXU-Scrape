@@ -354,6 +354,10 @@ database = [
     6188330, #Giga Havoc
     6777854, #Nebulline
     6772951, #Starter Squad
+    6760980, #Final Dream
+    6514931, #Dinomist Support
+    6774584, #Koa'ki Meiru Support
+    6785075, #TEMP: Sock's Generics 16
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
