@@ -254,6 +254,15 @@ Statistics.addFeature(
     }
 );
 
+Statistics.addFeature(
+    "attributeTypePair",
+    "Most common Attribute/Type pairings",
+    () => objectFilter(cardsBy((card) => `${card.attribute}/${card.type}`, { type: "monster" }, { monsterCategory: "link" }), (u, v) => v >= 20),
+    {
+        // limit: 15,
+    }
+);
+
 window.addEventListener("load", async function () {
     let response = await fetch(window.databaseToUse);
     let db = await response.json();
