@@ -246,7 +246,7 @@ Statistics.addFeature(
 Statistics.addFeature(
     "atkDefPair",
     "Most common ATK/DEF pairings",
-    () => objectFilter(cardsBy((card) => `${card.atk}/${card.def}`, {}, { monsterCategory: "link" }), (u, v) => v >= 10),
+    () => objectFilter(cardsBy((card) => `${card.atk}/${card.def}`, { type: "monster" }, { monsterCategory: "link" }), (u, v) => v >= 10),
     {
         // logarithmic: true,
         numericName: true,
