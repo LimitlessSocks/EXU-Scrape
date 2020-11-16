@@ -51,303 +51,202 @@ def comb_deck(id)
 end
 
 database = [
-    5919456, #Lacrimosa
+    # Support
+    6787178, #Super Quant Support
+    6774584, #Koa'ki Meiru Support
+    6514931, #Dinomist Support
+    6590945, #Constellar Support
+    6746888, #Performapal Sky Magician & Odd-Eyes Support
+    6708539, #Trickstar Support
+    6787363, #Random TCG Archetypes Support
+    6008240, #Summoned Skull Support
+    6686412, #Paladin Ritual Support
+    6628957, #Garzett Support
+    6645825, #Yubel Support
+    6622494, #Codebreaker Support
+    6598859, #of the Dark Support
+    6556030, #Boot-Up Gadget Support
+    6524605, #Pure Borrel/Rokket Support
+    6791911, #Kaiju Support
+    4026672, #Fushioh Richie Support
+    6791947, #Red-Eyes Support
+    6450641, #Gimmick Puppet Support
+    6438706, #Constellar/Tellarknight Support
+    6412660, #Umbral Horror/Numbers 43, 65, 80, and 96 Support
+    6402157, #D/D/D Support
+    6412740, #Megalith Support
+    6407622, #Chemicritter Support
+    6365184, #Nephthys Support
+    6124612, #Metaphys Support
+    6360689, #Digital Bug Support
+    6292623, #Ninja Support
+    6245917, #Marincess Support
+    5954949, #Yokai Support
+    5703615, #World Chalice/World Legacy Support
+    6169009, #Aquaactress Support
+    6109070, #Normal Monster Support
+    6000654, #Laval Support
+    5844326, #Danger! Support
+    5936560, #The Agent Support
+    4422086, #Mystrick Support
+    5839316, #Duo-Attribute Support
+    6239411, #Prank-Kids Support
+    5894044, #Shino Support
+    5749949, #Ancient Warriors Support
+    4251928, #Traptrix Support
+    4936132, #F.A. Support
+    5177132, #Darklord Support
+    5219266, #Phantom Beast Support
+    5260210, #Sylvan Support
+    4810529, #Blue-Eyes Support
+    5496883, #Normal Pendulum Support
+    3256281, #B.E.S. Support
+    5782891, #The Weather Support
+    5194131, #Fur Hire Support
+    5720993, #Watt Support
+    4804758, #Draconia Support
+    4177191, #Lightray Support
+    5705030, #Phantasm Spiral Support
+    5668288, #Volcanic Support
+    5741889, #Titanus Support
+    5659403, #X-Saber Support
+    5751277, #Krawler Support
+    5744520, #Dream Mirror Support
+    6771198, #Vendread Support
+    2775342, #Triamid Support
+    6785116, #Legendary Dragon, Fairy Tail, Dark World & Shiranui Support
+    6787972, #Orb Magician Support
+    6792668, #Jurrac Support
+    6792679, #Cyber Dragon Support
+    6793309, #Subterror Behemoth Support
+    6793437, #Artifact Support
+    6793424, #Time Thief Support
+    # Archetypes
+    # 4327693, #Lacrimosa
     4367824, #Death Aspects
     4376011, #Combat Mechs
-    4251928, #Traptrix Support
     4523067, #Voltron
     4385932, #Starbaric Crystal Beasts
     4540185, #Emeraheart
     4757288, #Pandas
-    # 3180755, #Earthbound Prisoners
-    4861946, #Poppin 1
-    # 5003800, #Poppin 2(integrated into Poppin 1)
+    4861946, #Poppin
     4547335, #Titanus
     4570517, #Harbinger
     4910893, #Aria Fey
-    # 4327992, #Serpenteam
-    # 3820609, #Amphibious Bugroth
-    # 3669535, #Fundamental Dragons
-    # 4670325, #Blitzers
-    # 5132465, #Esper V
-    2788655, #Ravager
     5075635, #Starships
-    # 5176216, #Antiqua
+    5176216, #Antiqua
     4624534, #Harokai
-    # 5189158, #Harokai
-    # 5183280, #Titan Hunter
-    # 5256943, #Vampop☆Star
     4442461, #Titanic Dragon
     4604736, #of the North
-    # 5269100, #Orb Magician
     4460492, #Holifear
     5323883, #Digitallias
-    # 4659249, #Malevolessence
-    # 5145725, #Remnant
-    # 5297494, #Thunderclap
-    # 4657652, #Elixstar/Potions
     5416935, #Akatsuki
     5304027, #Pyre
-    # 5372415, #Modernotes
-    # 4374978, #Insidious
-    # 4415708, #Tensor Maidens
-    # 4148322, #Dragonewts
-    # 5089829, #Grand Knight
-    # 5408141, #Amorel
     5396113, #Terra Basilisk
-    # 5490132, #Sunavalon
+    5490132, #Sunavalon
     5187975, #Rulers of Name
-    # 4868725, #Dominus
     5541864, #Kuroshiro
-    # 5610680, #P@rol
-    6110085, #P@rol (Ani)
+    5610680, #P@rol
     5597068, #Goo-T
-    5576395, #Heaven-Knights
+    # 5576395, #Heaven-Knights
     5582929, #Seafolk
     4399429, #Hakaishin Archfiend
     5592020, #Bound
-    # 4188326, #Anti-Luminescent Knights
-    # 4933305, #Cocoon Support
-    4936132, #F.A. Support
-    4894268, #Kaiju Support
-    5177132, #Darklord Support
-    # 5336647, #Trickstar Support
-    5219266, #Phantom Beast Support
-    5260210, #Sylvan Support
-    # 5549851, #Time Thief Support
-    # 5549841, #Ghostrick Support
-    # 5549769, #Danger! Support
-    # 5577804, #Thunder Dragon Support
-    # 4540980, #Vampire Support
-    # 4780879, #Dinosaur Support
-    # 4298315, #Nordic Support
-    # 4073173, #Fabled Support
-    # 4750943, #Ice Barrier Support
-    # 5577782, #Dragonmaid Support
-    # 5577790, #Zefra Support
-    # 4390839, #Ancient Gear Support
-    # 5515496, #Majestic Support
-    4810529, #Blue-eyes Support
-    5496883, #Vanilla Pendulum Support
-    # 5637873, #Dhakira
-    # 5643273, #Itayin
     4359326, #Eldertech
     4050998, #Mage & Spell Tomes
-    5659403, #X-Saber Support
     5615949, #Alchemaster
-    # 5647560, #Ophion
     5642481, #Daemon Engine
-    # 5646060, #Ignation
-    # 5627288, #Titanus Support(integrated into Titanus)
-    # 4395391, #Trapod
-    # 5593625, #Orb Magicians
+    4395391, #Trapod
     5549562, #Travelsha
-    5668288, #Volcanic Support
-    # 5687011, #Graydle Support
-    # 5713213, #Sky Striker Support
-    5705030, #Phantasm Spiral Support
-    4177191, #Lightray Support
-    # 5415163, #U.A. Support
-    # 5685303, #Resonator Support
-    4804758, #Draconia Support
-    # 5663187, #Ploceress
-    # 4950743, #Cyber Dragon Support
-    5683010, #Pendulum Gods
-    5717718, #Pixel Monsters
-    5720993, #Watt Support
-    # 5715247, #Crystron Support
+    5717718, #Pixel  Monsters
     5713627, #Yeet
-    # 4927027, #Wolvies
     5109480, #Kyudo
-    5194131, #Fur Hire Support
-    # 5720588, #Hungry Burger
     4337568, #Dreadator
-    # 5737230, #Siamese Turtles
-    5619459, #ANIMA
-    # 4410756, #Kuriboh Support
-    # 5733772, #Aurellia
     5601607, #Chaos Performer
-    5744520, #Dream Mirror Support
-    5751277, #World Legacy Support (Krawler)
-    # 5274505, #Mayakashi Support
-    # 5691370, #GRECO
-    # 5755617, #Shangdi
-    5741889, #Titanus Support
-    # 5767298, #Holifear Support
-    # 5270321, #Apocrypha
+    # 5755617, #Shagdi
     4963487, #Battletech
-    5782891, #The Weather Support
-    5895706, #Faust
-    5813034, #Gimmick Puppet Support
-    # 5844326, #Danger! Support
-    # 5432255, #Zefra Support
-    # 4871988, #Dragonmaid Support
-    # 4813673, #Thunder Dragon Support
-    5844374, #Ghostrick Support
-    # 5844363, #Time Thief Support
-    # 5010437, #Ugrovs
-    3256281, #B.E.S. Support
+    # 5758077, #Faust
     5675322, #Kojoten
     4960158, #Skafos
-    # 5772283, #Ascension Sky
-    # 5837794, #Machina Support
-    # 5813169, #Tanticore
-    # 5856439, #Might of Valhalla
+    6236137, #Tacticore
     5860710, #Uwumancer
-    5749949, #Ancient Warrior Support
     5541683, #Hydrovenal
-    # 5841822, #Tomes & Fate
-    # 5877005, #Destruction Military Garrison (DMG)
-    5894044, #Shino Support
-    # 5873653, #Nether
     5766412, #Karmasattva
-    # 5907048, #Elementsaber Support
     5834507, #Nadiupant
     4806770, #Chronotiger
-    # 4383650, #BOOM! Mechs
-    # 5907001, #Battlewasp Support
-    # 5145725, #Remnant
-    5839316, #Duo-Attribute Support
+    5145725, #Remnant
     5587605, #Hot Pink
-    # 5448052, #Modernotes 2: Idols and Icons
-    4422086, #Mystrick Support
-    5936560, #The Agent Support
     5917260, #Koala
     2788655, #Ravager
     5824862, #Titanic Moth
-    5844326, #Danger! Support
     5925194, #Yurei
     5868144, #Tsurumashi
     5781120, #Stars
+    5619459, #ANIMA
     5935151, #Shirakashi
     2952495, #Genjutsu
     5979832, #Raycor
-    # 5008957, #Akuma
-    # 4166948, #Fafner
-    # 5518399, #Darkgnis
-    6000654, #Laval Support
-    4608663, #Time Thief Support
     4501871, #Oni Assassins
-    # 5934147, #Neo Delta
     6050332, #Nermusa
-    # 6014002, #Cipher Support
     6078350, #Majecore
     5869257, #Yova
-    6109070, #Normal Support
-    # 6129587, #Tindangle Support
-    # 5098946, #Guildimension
+    5098946, #Guildimension
     6044732, #Armorizer
-    # 5936334, #Darkwater
-    # 6162086, #Magnet Warrior Support
-    # 5904696, #Contraptions
-    # 4349406, #Franknstech
-    6169009, #Aquaactress Support
     6044655, #Vampop☆Star
     6135219, #The Parallel
-    # 6155436, #Insomnia
-    # 3689114, #LeSpookie
-    # 6111199, #Insectum
+    3689114, #LeSpookie
     6209092, #Acrimonic
-    5703615, #World Chalice
-    # 5830740, #New Order
     5884678, #Arsenal
-    6221979, #Tindangle Support
-    # 6173753, #Lurid
-    6065677, #Artifact Support
     6121762, #Hydromunculus
-    # 6239335, #Plorceress Support
-    6239411, #Prank-Kids Support
-    6236137, #Tacticore
-    6233896, #Mirror Force Legacy Support/Archetype
+    6233896, #Mirror Force Archetype
     4667428, #Xiuhqui
-    6245917, #Marincess Support
     6040042, #Kuuroma
-    # 6116920, #Frozen
-    5954949, #Ani's Yokai Stuff
     6247363, #Rowa - Elusive Power
     6163866, #Black Blood
     6227419, #Deep Burrower
     3080272, #Nightshade
-    # 6086340, #Zeniphyr
     6267789, #Armamemento
-    6292623, #Ninja Support
-    # 6252579, #"Big" Game Hunter
-    # 6308672, #Darkwater Support
-    # 6291306, #Galaxieve
     6262300, #Muntu
-    # 6255607, #Titan Hunter
-    # 5663187, #Plorceress
     5297494, #Thunderclap
     6294677, #Diabolition
-    # 6307561, #Crypt
     6334551, #Wild Hunt
-    # 6135922, #TUBA
-    6359238, #Galaxieve
-    6359389, #New Order
-    # 5412159, #FishurANT
-    6360689, #Digital Bug Support
-    6124612, #Metaphys Support
-    6365184, #Nephthys Support
+    6291306, #Galaxieve
+    5830740, #New Order
     4237940, #Taida
     4769548, #Empyreal
-    6407622, #Chemicritter Support
-    6412740, #Megalith Support
-    6402157, #D/D/D Support
     5647256, #Meterao
-    6412660, #Umbral Horror/Numbers 43, 65, 80, and 96 Support
     6405675, #Dark Kingdom
-    6438706, #Constellar/Tellarknight Support
     4382580, #Mythical Winged Beasts
-    6450641, #Gimmick Puppet Support
-    # 6450165, #Contraption Restoration Program
-    6445470, #Red-Eyes Support
+    # 6309748, #Kuuroma Support
     6446977, #Tagteamer
     6434960, #World Reaper
     6256752, #Concept of Reality
     4361777, #Eviction
-    # 6418747, #Prideful
     6347993, #Headhunter
-    4026672, #Fushioh Richie Support
     5818764, #Firewild
     6460257, #Dark Arts
-    5269100, #Orb Magician Refreshed
-    # 5145725, #Remnant
-    6524605, #Borrel/Rokket Support
+    5145725, #Remnant
     6537631, #Bucket Squad
+    6547017, #World Reaper Support
     6477846, #Cosmic Primal
-    6556030, #Gadget Support
-    6549655, #Sock's Generic Pack X
-    6567063, #Hero of the West w/Hero of the East Support Card
     6395566, #Submerzan
-    # 6578295, #Crypt
+    6578295, #Crypt
     6585445, #PPDC
     6563112, #NTG
     6582550, #Darkwater
     6560628, #Charismatic
-    6598851, #Madoor Support
-    6598859, #of the dark Support
     6600896, #Glow Gods
-    6606592, #Galaxieve Support
     6604359, #Chronoruler
-    6622494, #Codebreaker Support
     6601142, #Serpent Night
-    6645825, #Yubel Support
-    6628957, #Garzett Support
     6649729, #Flamiller
     6670355, #Railreich
     6611617, #Frostyre
-    5145725, #Remnant
-    6686412, #Paladin Ritual Support
     6677155, #Colossus
     3068977, #Nekojishi
     4456007, #Latria
     6674104, #Gescellshcaft
-    6699578, #Galatic Gods
+    6699578, #GG (Galatic Gods)
     6707275, #Malevolessence
-    6008240, #Summoned Skull Support
-    6708539, #Trickstar Support
-    6746888, #Performapal Sky Magician & Odd-Eyes Support
-    6590945, #Constellar
     4406016, #Onion Slice
     6719358, #Vengeful Tox
     6733479, #Ookazi
@@ -355,9 +254,11 @@ database = [
     6777854, #Nebulline
     6772951, #Starter Squad
     6760980, #Final Dream
-    6514931, #Dinomist Support
-    6774584, #Koa'ki Meiru Support
-    6785075, #TEMP: Sock's Generics 16
+    6785271, #Aria Fey: Part 2
+    6116920, #Frozen Ritual
+    6793361, #Lacrimosa
+    6793365, #Faust
+    6793451, #P@rol
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
