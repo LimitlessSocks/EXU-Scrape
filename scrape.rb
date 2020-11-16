@@ -122,6 +122,7 @@ database = [
     6793437, #Artifact Support
     6793424, #Time Thief Support
     6771472, #Vendread Support
+    6794841, #Alien Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -297,11 +298,8 @@ test = [
 
 beta = [
     #prio
-    6794757, #Ani's joke
-    6794841, #Alien support
+    6798989, #DD
     #reg
-    4330341, #D.N.M.Q.
-    6793163, #Anon's solos
 ]
 
 
