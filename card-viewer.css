@@ -123,19 +123,19 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
-.result.spell {
-    background: rgb(0, 134, 114, 0.8);
-}
-.result.trap {
-    background: rgba(162, 17, 99, 0.8);
-}
-
 .banicon, .importicon {
     width: 24px;
 }
 .banicon, .importicon, .cardicon {
     margin-left: 3px;
     margin-right: 3px;
+}
+
+.result.spell {
+    background: rgb(0, 134, 114, 0.8);
+}
+.result.trap {
+    background: rgba(162, 17, 99, 0.8);
 }
 
 .result.monster {

@@ -1,11 +1,12 @@
 const CARD_BASE_WIDTH = 813;
 const CARD_BASE_HEIGHT = 1185;
+const MAX_WIDTHS = [ 40, 10, 10 ];
 class Deck {
-    constructor(editable = true) {
+    constructor(main = [], side = [], extra = [], editable = true) {
         this.decks = [
-            [], //main
-            [], //side
-            [], //extra
+            main,
+            side,
+            extra
         ];
         this.target = null;
         this.deckWidthInCards = 10;
@@ -33,19 +34,29 @@ class Deck {
         let totalHeight = unitHeight + marginWidth;
         
         let j = 0;
+        let cIndex = 0;
         for(let container of this.target.children()) {
             let i = 0;
+            let multiplier = 1;
+            if(this.decks[cIndex].length > MAX_WIDTHS[cIndex]) {
+                multiplier = 0.64;//about 2/3
+            }
+            let containerWidth = Math.floor(deckWidthInCards / multiplier);
+            console.log(containerWidth);
             for(let card of $(container).children()) {
                 card = $(card);
-                card.css("left", i * totalWidth);
+                card.css("left", i * multiplier * totalWidth);
                 card.css("top", j * totalHeight);
                 card.css("transform", `scale(${scaleRatio})`);
                 i++;
-                if(i === deckWidthInCards) {
+                if(i >= containerWidth) {
                     i = 0;
                     j++;
                 }
             }
+            if(i) j++;
+            j += 0.2;
+            cIndex++;
         }
     }
     
@@ -67,8 +78,18 @@ class Deck {
         });
     }
     
+    isEmpty() {
+        return this.decks.every(deck => deck.length === 0);
+    };
+    
     renderHTML(target) {
         this.target = target;
+        
+        if(this.isEmpty()) {
+            target.text("\xA0");//nbsp
+            return;
+        }
+        
         for(let deck of this.decks) {
             let container = $("<div class=sub-deck-container>");
             for(let id of deck) {
@@ -88,16 +109,17 @@ CardViewer.Editor = {};
 CardViewer.Editor.DeckInstance = new Deck();
 CardViewer.Editor.setPreview = function (id) {
     CardViewer.Elements.cardPreview.empty();
+    if(!id) return;
     CardViewer.Elements.cardPreview.append(
         CardViewer.composeResultCardPreview(CardViewer.Database.cards[id])
     );
 };
 CardViewer.Editor.recalculateView = function () {
-    let topPosition = $("#majorContainer").position().top;
+    let topPosition = CardViewer.Editor.MajorContainer.position().top;
     
     let max = $(window).height() - topPosition - 24;
     
-    $("#cardPreview, #deckEditor, #searchContainer").css("height", max + "px");
+    CardViewer.Editor.MajorContainer.children().css("height", max + "px");
     
     CardViewer.Editor.DeckInstance.applyCSS();
 };
@@ -236,7 +258,7 @@ CardViewer.composeResultCardPreview = function (card) {
     
     // effect = effect.split(/\r|\r?\n/).map(para => $("<p>").text(para));
     
-    res.append($("<div class=result-inner>").append(id, name, marking, img, linkArrows, author, stats, effect
+    res.append($("<div class=result-inner>").append(id, name, img, linkArrows, marking, author, stats, effect
         // $("<table>").append(
             // $("<tr>").append(
                 // $("<td class=result-img-holder>").append(img, attribute, marking),
@@ -274,6 +296,11 @@ const getLinkArrowImages = function (arrows) {
 };
 
 CardViewer.composeResultDeckPreview = function (card) {
+    // console.log(card);
+    if(!card) {
+        console.warn("No card passed to deck preview");
+        return $("");
+    }
     card.src = card.src || (
         "https://www.duelingbook.com/images/low-res/" + card.id + ".jpg"
     );
@@ -414,88 +441,10 @@ CardViewer.composeResultDeckPreview = function (card) {
     });
     return res;
 };
-CardViewer.composeStrategy = CardViewer.composeResultDeckPreview
+CardViewer.composeStrategy = CardViewer.composeResultDeckPreview;
 
-
-let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
-window.ycgDatabase = baseURL + "ycg.json";
-window.exuDatabase = baseURL + "db.json";
-
-let onLoad = async function () {
-    window.addEventListener("resize", CardViewer.Editor.recalculateView);
-    CardViewer.Editor.recalculateView();
-    
-    CardViewer.Elements.searchParameters = $("#searchParameters");
-    
-    CardViewer.Elements.cardType = $("#cardType");
-    CardViewer.Elements.cardLimit = $("#cardLimit");
-    CardViewer.Elements.cardAuthor = $("#cardAuthor");
-    CardViewer.Elements.search = $("#search");
-    CardViewer.Elements.results = $("#results");
-    CardViewer.Elements.autoSearch = $("#autoSearch");
-    CardViewer.Elements.cardName = $("#cardName");
-    CardViewer.Elements.resultCount = $("#resultCount");
-    CardViewer.Elements.cardDescription = $("#cardDescription");
-    CardViewer.Elements.currentPage = $("#currentPage");
-    CardViewer.Elements.pageCount = $("#pageCount");
-    CardViewer.Elements.nextPage = $("#nextPage");
-    CardViewer.Elements.previousPage = $("#previousPage");
-    CardViewer.Elements.resultNote = $("#resultNote");
-    CardViewer.Elements.cardId = $("#cardId");
-    CardViewer.Elements.cardIsRetrain = $("#cardIsRetrain");
-    CardViewer.Elements.cardVisibility = $("#cardVisibility");
-    CardViewer.Elements.ifMonster = $(".ifMonster");
-    CardViewer.Elements.ifSpell = $(".ifSpell");
-    CardViewer.Elements.ifTrap = $(".ifTrap");
-    CardViewer.Elements.cardSpellKind = $("#cardSpellKind");
-    CardViewer.Elements.cardTrapKind = $("#cardTrapKind");
-    CardViewer.Elements.monsterStats = $("#monsterStats");
-    CardViewer.Elements.spellStats = $("#spellStats");
-    CardViewer.Elements.trapStats = $("#trapStats");
-    CardViewer.Elements.cardLevel = $("#cardLevel");
-    CardViewer.Elements.cardMonsterCategory = $("#cardMonsterCategory");
-    CardViewer.Elements.cardMonsterAbility = $("#cardMonsterAbility");
-    CardViewer.Elements.cardMonsterType = $("#cardMonsterType");
-    CardViewer.Elements.cardMonsterAttribute = $("#cardMonsterAttribute");
-    CardViewer.Elements.cardATK = $("#cardATK");
-    CardViewer.Elements.cardDEF = $("#cardDEF");
-    CardViewer.Elements.toTopButton = $("#totop");
-    CardViewer.Elements.saveSearch = $("#saveSearch");
-    CardViewer.Elements.clearSearch = $("#clearSearch");
-    
-    CardViewer.Elements.deckEditor = $("#deckEditor");
-    CardViewer.Elements.cardPreview = $("#cardPreview");
-    
-    CardViewer.setUpTabSearchSwitching();
-    
-    await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
-    // load deck
-    testDeck();
-};
-
-let testDeck = function () {
-    let deck = [1593267, 1586518, 1768966, 1037312, 7421];
-    // let deck = [9551, 1647, 11107, 11110, 1768966, 1319245, 1318849, 1766297, 11235];
-    // let deck = [328, 382, 383, 562, 563, 5002, 9550, 9638, 9551, 9636, 907798, 9553, 1205167, 9639, 1307739, 1941, 4974, 2028, 2379, 5178, 6432, 3530, 3840, 5001, 3546, 4913, 82, 11107, 1039, 1041, 1647, 1753, 4971, 7207, 11110, 756, 9555, 7218, 2909, 7759, 3913, 7730];
-    for(let id of deck) {
-        CardViewer.Editor.DeckInstance.addCard(id);
-    }
-    // CardViewer.Editor.DeckInstance.addCard(1593267);
-    // CardViewer.Editor.DeckInstance.addCard(1593267);
-    // CardViewer.Editor.DeckInstance.addCard(1593267);
-    // CardViewer.Editor.DeckInstance.addCard(1220047);
-    // CardViewer.Editor.DeckInstance.addCard(1220047);
-    // CardViewer.Editor.DeckInstance.addCard(1220047);
-    // CardViewer.Editor.DeckInstance.addCard(1374705);
-    // CardViewer.Editor.DeckInstance.addCard(1613507);
-    // CardViewer.Editor.DeckInstance.addCard(370253);
-    // CardViewer.Editor.DeckInstance.addCard(1773359);
-    // CardViewer.Editor.DeckInstance.addCard(1849984);
+CardViewer.Editor.updateDeck = function (deckInstance = CardViewer.Editor.DeckInstance) {
     CardViewer.Elements.deckEditor.empty();
-    CardViewer.Elements.deckEditor.text("\xA0");//nbsp
-    i=0;
     CardViewer.Editor.DeckInstance.renderHTML(CardViewer.Elements.deckEditor);
-    CardViewer.Editor.setPreview(1593267);
+    CardViewer.Editor.setPreview(0);
 };
-
-window.addEventListener("load", onLoad);

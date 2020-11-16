@@ -1,0 +1,29 @@
+{
+    "order": [
+        "spotlight",
+        "structures",
+        "random"
+    ],
+    
+    "spotlight": {
+        "name": "The Spotlight",
+        "lists": [
+        ]
+    },
+    
+    "structures": {
+        "name": "EXU Structure Decks",
+        "lists": [
+            "SD_KingRises.xml",
+            "SD_SpiritSummoners.xml"
+        ]
+    },
+    
+    "random": {
+        "name": "Random Decks",
+        "lists": [
+            "ChainBeat.xml",
+            "Test1.xml"
+        ]
+    }
+}

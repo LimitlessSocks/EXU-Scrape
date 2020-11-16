@@ -2,7 +2,7 @@
 }
 
 #cardPreview {
-    width: 25%;
+    width: 27%;
     float: left;
     height: 100%;
     overflow-y: auto;
@@ -18,18 +18,23 @@
     }
     .card-preview .markings, .card-preview .banicon, .card-preview .importicon {
         float: right;
+        text-align: right;
     }
     
 #deckEditor {
-    width: 50%;
+    width: 43%;
     float: left;
     position: relative;
     height: 80%;
     overflow-y: auto;
 }
-#searchContainer {
+#searchContainer, #infoContainer {
     float: left;
-    width: 25%;
+    width: 30%;
+}
+
+.sub-deck-container {
+    margin-top: 25px;
 }
 
 .unselectable {
@@ -62,11 +67,12 @@ header > * {
     left: 0px;
     top: 0px;
     transition: filter 100ms;
+    box-shadow: 0 0 100px black;
 }
-.editor-item:hover, .editor-item:focus {
-    cursor: pointer;
-    filter: brightness(1.5);
-}
+    .editor-item:hover, .editor-item:focus {
+        cursor: pointer;
+        filter: brightness(1.5);
+    }
     .editor-item .result-name {
         position: absolute;
         transform-origin: top left;
@@ -206,4 +212,69 @@ header > * {
     .editor-item .arrow.bottomCenter {
         /* transform-origin: top left; */
         top: 823px;
+    }
+    /* color redeclares */
+    .result.spell {
+        background: rgb(0, 134, 114);
+    }
+    .result.trap {
+        background: rgba(162, 17, 99);
+    }
+    .editor-item.monster {
+        background: red; /* should never be seen */
+    }
+    .editor-item.monster.effect {
+        background: rgb(173, 76, 34);
+    }
+    .editor-item.monster.effect.pendulum {
+        background: linear-gradient(180deg,
+            rgb(173,76,34) 15%,
+            rgb(0, 134, 114) 85%
+        );
+    }
+    .editor-item.monster.ritual {
+        background: rgb(75, 112, 185);
+    }
+    .editor-item.monster.ritual.pendulum {
+        background: linear-gradient(180deg,
+            rgb(75, 112, 185) 15%,
+            rgb(0, 134, 114) 85%
+        );
+    }
+    .editor-item.monster.xyz {
+        background: rgb(19, 22, 25);
+    }
+    .editor-item.monster.xyz.pendulum {
+        background: linear-gradient(180deg,
+            rgb(19, 22, 25) 15%,
+            rgb(0, 134, 114) 85%
+        );
+    }
+    .editor-item.monster.fusion {
+        background: rgb(125, 61, 138);
+    }
+    .editor-item.monster.fusion.pendulum {
+        background: linear-gradient(180deg,
+            rgb(125, 61, 138) 15%,
+            rgb(0, 134, 114) 85%
+        );
+    }
+    .editor-item.monster.normal {
+        background: rgb(195, 148, 71);
+    }
+    .editor-item.monster.normal.pendulum {
+        background: linear-gradient(180deg,
+            rgb(195, 148, 71) 15%,
+            rgb(0, 134, 114) 85%
+        );
+    }
+
+    .editor-item.monster.synchro {
+        background: rgb(155, 155, 156);
+    }
+    .editor-item.monster.synchro.pendulum {
+        background: linear-gradient(180deg,
+            rgb(155, 155, 156) 15%,
+            rgb(0, 134, 114) 85%
+        );
     }
