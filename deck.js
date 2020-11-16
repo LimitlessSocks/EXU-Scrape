@@ -1,7 +1,7 @@
 const CARD_BASE_WIDTH = 813;
 const CARD_BASE_HEIGHT = 1185;
 class Deck {
-    constructor() {
+    constructor(editable = true) {
         this.decks = [
             [], //main
             [], //side
@@ -9,6 +9,7 @@ class Deck {
         ];
         this.target = null;
         this.deckWidthInCards = 10;
+        this.editable = editable;
     }
     
     addCard(card, location = 0) {
