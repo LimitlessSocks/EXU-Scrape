@@ -121,6 +121,8 @@ database = [
     6793309, #Subterror Behemoth Support
     6793437, #Artifact Support
     6793424, #Time Thief Support
+    6771472, #Vendread Support
+    
     # Archetypes
     # 4327693, #Lacrimosa
     4367824, #Death Aspects
@@ -295,16 +297,11 @@ test = [
 
 beta = [
     #prio
-    6718219, #Dual Avatar Support
-    6708539, #Trickstar Support
-    6744648, #More. Numbers.
-    6008240, #Summoned Skull
+    6794757, #Ani's joke
+    6794841, #Alien support
     #reg
-    6713995, #Kairi singles
-    5379060, #Wavering Wind
-    6733479, #Ookazi
-    6740706, #Cribal
-    6703727, #Windita's Esper
+    4330341, #D.N.M.Q.
+    6793163, #Anon's solos
 ]
 
 
