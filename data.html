@@ -31,6 +31,19 @@
     #optionContainer button {
         margin: 5px;
     }
+    #optionContainer {
+        overflow-y: auto;
+        height: 6.5em;
+        background: rgba(40,0,40,0.5);
+        padding: 20px;
+    }
+    #optionContainer .spacer {
+        display: inline-block;
+        width: 2ch;
+    }
+    p {
+        line-height: 1.1em;
+    }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3RKXFLZRZ"></script>
@@ -38,20 +51,31 @@
 </head>
 <body>
 <h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1>
-<h2>EXU Statistics</h2>
-<p>Click on one of these buttons to see the corresponding statistic!</p>
-<h3>Options <button id="share">Save sharing URL for this statistic</button></h3>
-<table id="otherOptions">
-    <tr>
-        <th>Sort by:</th>
-        <td><select id="sortIndexer">
-            <option value=0>Name</option>
-            <option value=1>Value</option>
-        </select></td>
-    </tr>
-</table>
-<div id="optionContainer">
+<h2>EXU Statistics <button id="share">Save sharing URL</button></h2>
+<div class="twoColumnHolder">
+    <div class="column">
+        <p>Click on one of these buttons to see the corresponding statistic!</p>
+        <table id="otherOptions">
+            <tr>
+                <th>Sort by:</th>
+                <td><select id="sortIndexer" class="inline">
+                    <option value=0>Name</option>
+                    <option value=1>Value</option>
+                </select></td>
+                <th>Limit to:</th>
+                <td><input type="number" class="inline" id="limiter"></td>
+            </tr>
+            <tr>
+                <th>Params:</th>
+                <td id="paramHolder" colspan=3>
+                    <em>None.</em>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="optionContainer" class="column">
 
+    </div>
 </div>
 <div id="canvasHolder">
 <canvas id="primaryChart" width="800" height="400"></canvas>

@@ -70,12 +70,19 @@ class Feature {
         }
         Statistics.focus = this;
         
+        if(this.options.parameters) {
+            Statistics.updateParameters(this.options.parameterType, this.options.parameters);
+        }
+        else {
+            Statistics.updateParameters(null, 0);
+        }
+        
         let sortIndex = this.options.sortIndex || Statistics.Options.sortIndex;
         let sortOrder = this.options.sortOrder || Statistics.Options.sortOrder;
         let sortByGrader = this.options.sortBy || Statistics.Options.sortBy;
-        let limit = this.options.limit || Statistics.Options.limit;
+        let limit = this.options.limit || Statistics.Options.limit || this.options.defaultLimit;
         
-        let dat = Object.entries(this.fn());
+        let dat = Object.entries(this.fn(...Statistics.parameters));
         let sortedDat;
         
         if(sortIndex == 0) {
@@ -137,6 +144,7 @@ class Feature {
                     }]
                 },
                 legend: {
+                    display: false
                     // labels: {
                         // fontColor: "blue",
                         // fontSize: 18
@@ -151,32 +159,116 @@ const Statistics = {
     Features: [],
     addFeature: (...args) => {
         let feature = new Feature(...args);
-        Statistics.Features[feature.id] = feature;
+        Statistics.Features.push(feature);
+    },
+    getFeature: (name) => 
+        Statistics.Features.find(feature => feature && feature.id === name),
+    addSpacer: () => {
+        Statistics.Features.push(null);
+    },
+    makeParamTemplate(arr) {
+        let sel = $("<select>")
+            .addClass("inline")
+            .addClass("param");
+        sel.append("<option value=null>---</option>");
+        let options = arr.map(([prop, name]) => 
+            $("<option>")
+                .attr("value", prop)
+                .text(name)
+        );
+        sel.append(options);
+        return sel;
+    },
+    update() {
+        Statistics.parameters = [...$("#paramHolder .param")]
+            .map(e => e.value)
+            .filter(e => e !== "null");
+        //commit
+        Statistics.focus.button.click();
+    },
+    parameters: [ "type", "attribute" ],
+    ParameterData: {
+        type: null,
+        count: null,
+    },
+    updateParameters(type, count) {
+        if(Statistics.ParameterData.type === type && Statistics.ParameterData.count === count) {
+            // no updates necessary
+            return;
+        }
+        Statistics.ParameterData.type = type;
+        Statistics.ParameterData.count = count;
+        let paramHolder = $("#paramHolder");
+        let template = Statistics.parameterTemplates[type];
+        paramHolder.empty();
+        
+        if(count === 0) {
+            paramHolder.append($("<em>None.</em>"));
+        }
+        
+        for(let i = 0; i < count; i++) {
+            let param = template.clone();
+            param.change(() => Statistics.update());
+            let oldParam = Statistics.parameters[i];
+            if(oldParam) {
+                param.val(oldParam);
+            }
+            paramHolder.append(param);
+        }
     },
     Options: {
         sortIndex: 0,
         sortOrder: 1, // 1 for ascending, -1 for descending
         sortBy: null,
+        limit: null,
     },
     ctx: null,
+};
+Statistics.parameterTemplates = {
+    monster: Statistics.makeParamTemplate([
+        ["level", "Level"],
+        ["attribute", "Attribute"],
+        ["type", "Type"],
+    ]),
 };
 
 Statistics.addFeature(
     "typePopularity",
-    "Card Type Popularity",
+    "Card Types",
     () => cardsBy("card_type")
 );
 
 Statistics.addFeature(
     "monsterTypePopularity",
-    "Monster Type Popularity",
+    "Monster Types",
     () => cardsBy("type", { type: "monster" })
 );
+
+Statistics.addFeature(
+    "spellKinds",
+    "Spell Types",
+    () => cardsBy(card => card.type, { type: "spell" }),
+);
+
+Statistics.addFeature(
+    "trapKinds",
+    "Trap Types",
+    () => cardsBy(card => card.type, { type: "trap" }),
+);
+
+Statistics.addSpacer();
+
+Statistics.addFeature(
+    "users",
+    "Users",
+    () => objectFilter(cardsBy("username"), (u, v) => v >= 20)
+);
+Statistics.addSpacer();
 
 let attributeOrder = ["DARK", "EARTH", "FIRE", "LIGHT", "WATER", "WIND", "DIVINE"];
 Statistics.addFeature(
     "monsterAttributePopularity",
-    "Monster Attribute Popularity",
+    "Monster Attributes",
     () => cardsBy("attribute", { type: "monster" }),
     {
         // sort: (dat) => {
@@ -191,16 +283,11 @@ Statistics.addFeature(
     "Monster Card Kinds",
     () => cardsBy("monster_color", { type: "monster" }, { monsterCategory: "effect" })
 );
-
-Statistics.addFeature(
-    "users",
-    "Users by Card Count",
-    () => objectFilter(cardsBy("username"), (u, v) => v >= 20)
-);
+Statistics.addSpacer();
 
 Statistics.addFeature(
     "atkMost",
-    "Most common ATK values",
+    "Commonest ATK values",
     () => objectFilter(cardsBy("atk"), (u, v) => v >= 20),
     {
         numericName: true,
@@ -209,7 +296,7 @@ Statistics.addFeature(
 
 Statistics.addFeature(
     "defMost",
-    "Most common DEF values",
+    "Commonest DEF values",
     () => objectFilter(cardsBy("def", {}, { monsterCategory: "link" }), (u, v) => v >= 20),
     {
         numericName: true,
@@ -218,7 +305,7 @@ Statistics.addFeature(
 
 Statistics.addFeature(
     "levels",
-    "Most common levels",
+    "Commonest levels",
     () => cardsBy("level", { monsterCategory: "leveled" }),
     {
         numericName: true,
@@ -227,7 +314,7 @@ Statistics.addFeature(
 
 Statistics.addFeature(
     "ranks",
-    "Most common ranks",
+    "Commonest ranks",
     () => cardsBy("level", { monsterCategory: "xyz" }),
     {
         numericName: true,
@@ -236,16 +323,61 @@ Statistics.addFeature(
 
 Statistics.addFeature(
     "lratings",
-    "Most common link ratings",
+    "Commonest link ratings",
     () => cardsBy("level", { monsterCategory: "link" }),
     {
         numericName: true,
     }
 );
 
+Statistics.addSpacer();
+Statistics.addFeature(
+    "monsterPairing",
+    "Monster Pairing Explorer",
+    (...params) => {
+        let accept = {
+            type: "monster",
+        };
+        // let reject = {};
+        
+        if(params.indexOf("level") !== -1) {
+            accept.monsterCategory = "leveled";
+        }
+        
+        let getData = (card) => params.map(p => card[p]).join("/");
+        if(params.length === 0) {
+            getData = () => "(no input)";
+        }
+        
+        let data = cardsBy(
+            getData,
+            accept,
+            // reject,
+        );
+        
+        // console.log(data, params);
+        
+        return data;
+    },
+    {
+        parameterType: "monster",
+        parameters: 2,
+    }
+);
+
+Statistics.addFeature(
+    "advancedMonsterPairing",
+    "Monster Pairing Explorer (Advanced)",
+    Statistics.getFeature("monsterPairing").fn,
+    {
+        parameterType: "monster",
+        parameters: 3,
+    }
+);
+/*
 Statistics.addFeature(
     "atkDefPair",
-    "Most common ATK/DEF pairings",
+    "Commonest ATK/DEF pairings",
     () => objectFilter(cardsBy((card) => `${card.atk}/${card.def}`, { type: "monster" }, { monsterCategory: "link" }), (u, v) => v >= 10),
     {
         // logarithmic: true,
@@ -256,12 +388,21 @@ Statistics.addFeature(
 
 Statistics.addFeature(
     "attributeTypePair",
-    "Most common Attribute/Type pairings",
-    () => objectFilter(cardsBy((card) => `${card.attribute}/${card.type}`, { type: "monster" }, { monsterCategory: "link" }), (u, v) => v >= 20),
+    "Commonest Attribute/Type pairings",
+    () => objectFilter(cardsBy((card) => `${card.attribute}/${card.type}`, { type: "monster" }), (u, v) => v >= 20),
     {
         // limit: 15,
     }
 );
+
+Statistics.addFeature(
+    "levelAttributePair",
+    "Commonest Level/Attribute pairings",
+    () => objectFilter(cardsBy((card) => `${card.attribute} ${card.level}`, { monsterCategory: "leveled" }), (u, v) => v >= 15),
+    {
+        // limit: 15,
+    }
+);*/
 
 window.addEventListener("load", async function () {
     let response = await fetch(window.databaseToUse);
@@ -271,17 +412,37 @@ window.addEventListener("load", async function () {
     // load buttons
     let optionContainer = $("#optionContainer");
     let firstFeature;
-    for(let feature of Object.values(Statistics.Features)) {
+    for(let feature of Statistics.Features) {
         firstFeature = firstFeature || feature;
-        feature.addTo(optionContainer);
+        if(feature === null) {
+            optionContainer.append($("<span class=spacer>"));
+        }
+        else {
+            feature.addTo(optionContainer);
+        }
     }
     
     Statistics.ctx = document.getElementById("primaryChart").getContext("2d");
     
+    const sortIndexer = $("#sortIndexer");
+    const limiter = $("#limiter");
+    
     let featureToClick = firstFeature;
     if(window.location.search.length > 1) {
-        let name = window.location.search.slice(1);
-        let feature = Statistics.Features[name]
+        let inputParams = window.location.search.slice(1).split(",");
+        let [ name, sortIndex, limit ] = inputParams;
+        
+        let dataParams = inputParams.slice(inputParams.lastIndexOf("") + 1);
+        
+        Statistics.parameters = dataParams;
+        
+        if(sortIndex) {
+            sortIndexer.val(sortIndex);
+        }
+        if(limit) {
+            limiter.val(limit);
+        }
+        let feature = Statistics.getFeature(name);
         if(feature) {
             featureToClick = feature;
         }
@@ -289,15 +450,23 @@ window.addEventListener("load", async function () {
     featureToClick.button.click();
     
     $("#share").click(() => {
-        window.location.search = "?" + Statistics.focus.id;
+        window.location.search = "?" + [
+            Statistics.focus.id,
+            sortIndexer.val(),
+            limiter.val(),
+            null,
+            ...Statistics.parameters
+        ].join(",");
     });
     
     let idToKey = {
-        sortIndexer: "sortIndex"
+        sortIndexer: "sortIndex",
+        limiter: "limit",
     };
     let inputElements = $("#otherOptions select, #otherOptions input");
     let onUpdate = function () {
         // console.log(this);
+        console.log(this.id, this, this.value);
         let val = idToKey[this.id];
         
         if(val === "sortIndex") {
@@ -314,10 +483,14 @@ window.addEventListener("load", async function () {
     
     let canvasHolder = $("#canvasHolder");
     
+    const MIN_HEIGHT = 200;
     let resize = () => {
         let top = canvasHolder.position().top;
         let windowHeight = $(window).height();
         let height = windowHeight - top - 30;
+        if(height < MIN_HEIGHT) {
+            height = windowHeight;
+        }
         console.log(top, windowHeight, height);
         canvasHolder.css("height", height + "px");
     };

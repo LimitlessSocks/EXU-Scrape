@@ -322,3 +322,17 @@ p.byline + p.byline {
 #contractPurpose {
     display: none;
 }
+
+.twoColumnHolder {
+    display: flex;
+}
+.twoColumnHolder .column {
+    /* flex: 50%; */
+}
+
+select.inline {
+    width: auto;
+}
+input[type=number].inline {
+    width: 8ch;
+}
