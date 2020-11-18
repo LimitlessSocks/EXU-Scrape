@@ -127,6 +127,12 @@ class Feature {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                title: {
+                    text: this.disp,
+                    display: true,
+                    fontColor: "#cccccc",
+                    fontSize: 16,
+                },
                 scales: {
                     yAxes: [{
                         ticks: {
@@ -189,7 +195,7 @@ const Statistics = {
     parameters: [ "type", "attribute" ],
     ParameterData: {
         type: null,
-        count: null,
+        count: 0,
     },
     updateParameters(type, count) {
         if(Statistics.ParameterData.type === type && Statistics.ParameterData.count === count) {
@@ -229,6 +235,8 @@ Statistics.parameterTemplates = {
         ["level", "Level"],
         ["attribute", "Attribute"],
         ["type", "Type"],
+        ["atk", "ATK"],
+        ["def", "DEF"],
     ]),
 };
 
@@ -338,11 +346,19 @@ Statistics.addFeature(
         let accept = {
             type: "monster",
         };
-        // let reject = {};
+        let reject = {};
         
-        if(params.indexOf("level") !== -1) {
-            accept.monsterCategory = "leveled";
+        for(let param of params) {
+            switch(param) {
+            case "level":
+                accept.monsterCategory = "leveled";
+                break;
+            case "DEF":
+                reject.monsterCategory = "link";
+                break;
+            }
         }
+        console.log(accept, reject);
         
         let getData = (card) => params.map(p => card[p]).join("/");
         if(params.length === 0) {
@@ -352,7 +368,7 @@ Statistics.addFeature(
         let data = cardsBy(
             getData,
             accept,
-            // reject,
+            // reject ? reject : null,
         );
         
         // console.log(data, params);
@@ -434,7 +450,9 @@ window.addEventListener("load", async function () {
         
         let dataParams = inputParams.slice(inputParams.lastIndexOf("") + 1);
         
-        Statistics.parameters = dataParams;
+        if(dataParams.length) {
+            Statistics.parameters = dataParams;
+        }
         
         if(sortIndex) {
             sortIndexer.val(sortIndex);
@@ -450,13 +468,14 @@ window.addEventListener("load", async function () {
     featureToClick.button.click();
     
     $("#share").click(() => {
-        window.location.search = "?" + [
+        let params = [
             Statistics.focus.id,
             sortIndexer.val(),
             limiter.val(),
             null,
-            ...Statistics.parameters
-        ].join(",");
+        ];
+        params.push(...Statistics.parameters.slice(0, Statistics.ParameterData.count));
+        window.location.search = "?" + params.join(",");//.replace(/,+$/, "");
     });
     
     let idToKey = {
