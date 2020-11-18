@@ -155,7 +155,6 @@ database = [
     5490132, #Sunavalon
     5187975, #Rulers of Name
     5541864, #Kuroshiro
-    5610680, #P@rol
     5597068, #Goo-T
     # 5576395, #Heaven-Knights
     5582929, #Seafolk
@@ -305,8 +304,11 @@ test = [
 
 beta = [
     #prio
-    6798989, #DD
+    4493192, #Meklord
+    6809934, #Khrey Tech
     #reg
+    6780728, #ORB!
+    6802790, #Blackclaw
 ]
 
 
