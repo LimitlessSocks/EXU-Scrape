@@ -123,6 +123,12 @@ database = [
     6793424, #Time Thief Support
     6771472, #Vendread Support
     6794841, #Alien Support
+    6798989, #D.D. Support
+    6807794, #Hydrovenal Support
+    6804358, #Amorphage Support
+    6804350, #Cipher Support
+    6804345, #Cyberdark Support
+    6804341, #Bujin Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -262,6 +268,7 @@ database = [
     6793361, #Lacrimosa
     6793365, #Faust
     6793451, #P@rol
+    4330341, #D.N.M.Q.
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
