@@ -305,10 +305,11 @@ test = [
 beta = [
     #prio
     4493192, #Meklord
-    6809934, #Khrey Tech
+    6811188, #Anon Solos
     #reg
-    6780728, #ORB!
     6802790, #Blackclaw
+    6811695, #Catacomb
+    5270321, #Apocrypha
 ]
 
 
