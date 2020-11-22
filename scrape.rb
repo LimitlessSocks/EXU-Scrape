@@ -129,6 +129,8 @@ database = [
     6804350, #Cipher Support
     6804345, #Cyberdark Support
     6804341, #Bujin Support
+    6780728, #Hieratic Support
+    4493192, #Meklord Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -238,7 +240,7 @@ database = [
     6547017, #World Reaper Support
     6477846, #Cosmic Primal
     6395566, #Submerzan
-    6578295, #Crypt
+    # 6578295, #Crypt
     6585445, #PPDC
     6563112, #NTG
     6582550, #Darkwater
@@ -268,6 +270,7 @@ database = [
     6793365, #Faust
     6793451, #P@rol
     4330341, #D.N.M.Q.
+    6807125, #Drakin
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
