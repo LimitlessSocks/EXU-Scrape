@@ -307,17 +307,15 @@ test = [
 
 beta = [
     #prio
-    4493192, #Meklord
-    6811188, #Anon Solos
-    6801590, #Earthbound support
-    6819403, #Sock's Generic Pack 17 - Iffy Edition
+    6801590, #Earthbound Immortal Support
     #reg
     6802790, #Blackclaw
-    6811695, #Catacomb
     5270321, #Apocrypha
     6616619, #Queltz
-    6621929, #de la foret
-    4349465, #Magenic
+    6712994, #Silent
+    5571430, #Plushmages 
+    6591759, #Suzerain
+    6834530, #Princess Connect
 ]
 
 
