@@ -131,6 +131,9 @@ database = [
     6804341, #Bujin Support
     6780728, #Hieratic Support
     4493192, #Meklord Support
+    6801590, #Earthbound Support
+    6858396, #Mayakashi Support
+    6858407, #Graydle Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -214,7 +217,7 @@ database = [
     6247363, #Rowa - Elusive Power
     6163866, #Black Blood
     6227419, #Deep Burrower
-    3080272, #Nightshade
+    # 3080272, #Nightshade
     6267789, #Armamemento
     6262300, #Muntu
     5297494, #Thunderclap
@@ -254,7 +257,7 @@ database = [
     6677155, #Colossus
     3068977, #Nekojishi
     4456007, #Latria
-    6674104, #Gescellshcaft
+    6674104, #Geschellschcaft
     6699578, #GG (Galatic Gods)
     6707275, #Malevolessence
     4406016, #Onion Slice
@@ -269,8 +272,12 @@ database = [
     6793361, #Lacrimosa
     6793365, #Faust
     6793451, #P@rol
-    4330341, #D.N.M.Q.
+    # 4330341, #D.N.M.Q.
     6807125, #Drakin
+    6834530, #Princess Connect!
+    5571430, #Plushmages
+    5269100, #Orb Magician
+    6616619, #Queltz
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
