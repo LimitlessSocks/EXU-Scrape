@@ -5,6 +5,7 @@ window.exuDatabase = baseURL + "db.json";
 let onLoad = async function () {
     CardViewer.Editor.MajorContainer = $("#majorContainer");
     window.addEventListener("resize", CardViewer.Editor.recalculateView);
+    CardViewer.Elements.results = $("#results");
     CardViewer.Editor.recalculateView();
     
     CardViewer.Elements.searchParameters = $("#searchParameters");
@@ -13,7 +14,6 @@ let onLoad = async function () {
     CardViewer.Elements.cardLimit = $("#cardLimit");
     CardViewer.Elements.cardAuthor = $("#cardAuthor");
     CardViewer.Elements.search = $("#search");
-    CardViewer.Elements.results = $("#results");
     CardViewer.Elements.autoSearch = $("#autoSearch");
     CardViewer.Elements.cardName = $("#cardName");
     CardViewer.Elements.resultCount = $("#resultCount");
@@ -51,8 +51,56 @@ let onLoad = async function () {
     CardViewer.setUpTabSearchSwitching();
     
     await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
-    // load deck
-    testDeck();
+    // // load deck
+    // testDeck();
+    
+    CardViewer.firstTime = false;
+    CardViewer.autoSearch = true;
+    CardViewer.Search.config.noTable = true;
+    CardViewer.Search.config.transform = (el, card) => {
+        el.addClass("clickable");
+        let id = card["id"];
+        CardViewer.Editor.addHoverTimerPreview(el, id);
+        el.click(() => {
+            CardViewer.Editor.DeckInstance.addCard(id);
+            CardViewer.Editor.updateDeck();
+            CardViewer.Editor.setPreview(id);
+        });
+        return el;
+    };
+    
+    const elementChanged = function () {
+        if(CardViewer.autoSearch) {
+            CardViewer.submit();
+        }
+    };
+    
+    let allInputs = CardViewer.Elements.searchParameters.find("select, input");
+    for(let el of allInputs) {
+        $(el).change(elementChanged);
+        $(el).keypress((event) => {
+            if(event.originalEvent.code === "Enter") {
+                CardViewer.submit();
+            }
+        });
+    }
+    CardViewer.Elements.clearSearch.click(() => {
+        for(let el of allInputs) {
+            el = $(el);
+            if(el.is("select")) {
+                el.val(el.children().first().val());
+            }
+            else if(el.is("input[type=checkbox]")) {
+                el.prop("checked", false);
+            }
+            else {
+                el.val("");
+            }
+        }
+        elementChanged();
+        CardViewer.Elements.cardType.change();
+    });
+    elementChanged();
 };
 
 let testDeck = function () {
@@ -73,10 +121,7 @@ let testDeck = function () {
     // CardViewer.Editor.DeckInstance.addCard(370253);
     // CardViewer.Editor.DeckInstance.addCard(1773359);
     // CardViewer.Editor.DeckInstance.addCard(1849984);
-    CardViewer.Elements.deckEditor.empty();
-    CardViewer.Elements.deckEditor.text("\xA0");//nbsp
-    i=0;
-    CardViewer.Editor.DeckInstance.renderHTML(CardViewer.Elements.deckEditor);
+    CardViewer.Editor.updateDeck();
     CardViewer.Editor.setPreview(1593267);
 };
 

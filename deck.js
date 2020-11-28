@@ -42,7 +42,7 @@ class Deck {
                 multiplier = 0.64;//about 2/3
             }
             let containerWidth = Math.floor(deckWidthInCards / multiplier);
-            console.log(containerWidth);
+            // console.log(containerWidth);
             for(let card of $(container).children()) {
                 card = $(card);
                 card.css("left", i * multiplier * totalWidth);
@@ -55,27 +55,9 @@ class Deck {
                 }
             }
             if(i) j++;
-            j += 0.2;
+            j += 0.2; //padding in between decks
             cIndex++;
         }
-    }
-    
-    applyHoverPreview(composed, id) {
-        let hoverTimer = null;
-        let setPreviewToThis = () => CardViewer.Editor.setPreview(id);
-        composed.click(setPreviewToThis);
-        composed.hover(() => {
-            if(hoverTimer !== null) {
-                // only set hover once
-                return;
-            }
-            hoverTimer = setTimeout(setPreviewToThis, 100);
-        });
-        composed.mouseleave(() => {
-            console.log("leaving");
-            clearTimeout(hoverTimer);
-            hoverTimer = null;
-        });
     }
     
     isEmpty() {
@@ -94,8 +76,8 @@ class Deck {
             let container = $("<div class=sub-deck-container>");
             for(let id of deck) {
                 let card = CardViewer.Database.cards[id];
-                let composed = CardViewer.composeStrategy(card);
-                this.applyHoverPreview(composed, id);
+                let composed = CardViewer.composeResultDeckPreview(card);
+                CardViewer.Editor.addHoverTimerPreview(composed, id);
                 container.append(composed);
             }
             target.append(container);
@@ -104,6 +86,7 @@ class Deck {
         this.applyCSS();
     }
 }
+
 
 CardViewer.Editor = {};
 CardViewer.Editor.DeckInstance = new Deck();
@@ -114,12 +97,35 @@ CardViewer.Editor.setPreview = function (id) {
         CardViewer.composeResultCardPreview(CardViewer.Database.cards[id])
     );
 };
+CardViewer.Editor.TIMER_DELAY = 100;//ms
+CardViewer.Editor.addHoverTimerPreview = function (composed, id) {
+    let hoverTimer = null;
+    let setPreviewToThis = () => CardViewer.Editor.setPreview(id);
+    composed.click(setPreviewToThis);
+    composed.hover(() => {
+        if(hoverTimer !== null) {
+            // only set hover once
+            return;
+        }
+        hoverTimer = setTimeout(setPreviewToThis, CardViewer.Editor.TIMER_DELAY);
+    });
+    composed.mouseleave(() => {
+        console.log("leaving");
+        clearTimeout(hoverTimer);
+        hoverTimer = null;
+    });
+};
 CardViewer.Editor.recalculateView = function () {
+    const MARGIN = 24;
+    let windowHeight = $(window).height();
+    
     let topPosition = CardViewer.Editor.MajorContainer.position().top;
-    
-    let max = $(window).height() - topPosition - 24;
-    
+    let max = windowHeight - topPosition - MARGIN;
     CardViewer.Editor.MajorContainer.children().css("height", max + "px");
+    
+    let resultTop = CardViewer.Elements.results.position().top;
+    let resultMax = windowHeight - resultTop - MARGIN;
+    CardViewer.Elements.results.css("height", resultMax + "px");
     
     CardViewer.Editor.DeckInstance.applyCSS();
 };
@@ -437,11 +443,12 @@ CardViewer.composeResultDeckPreview = function (card) {
         if(shorter >= longer) return;
         let scaleRatio = shorter / longer;
         name.css("transform", "scaleX(" + scaleRatio + ")");
-        console.log(longer, shorter);
+        // console.log(longer, shorter);
     });
     return res;
 };
-CardViewer.composeStrategy = CardViewer.composeResultDeckPreview;
+// CardViewer.composeStrategy = CardViewer.composeResultDeckPreview;
+CardViewer.composeStrategy = CardViewer.composeResultSmall;
 
 CardViewer.Editor.updateDeck = function (deckInstance = CardViewer.Editor.DeckInstance) {
     CardViewer.Elements.deckEditor.empty();

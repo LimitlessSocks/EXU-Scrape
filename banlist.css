@@ -1,25 +1,6 @@
 .pagetable > tr > td {
     width: auto;
 }
-#results .result {
-    text-align: center;
-    /* height: 15%; */
-    width: 15%;
-    width: 225px;
-}
-#results .result.clickable {
-    cursor: pointer;
-    transition: transform 100ms ease-in-out;
-}
-#results .result.clickable:hover {
-    transform: scale(1.12);
-}
-#results .result-img-holder {
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-}
 #results .results-holder {
     display: flex;
     flex-wrap: wrap;
@@ -27,31 +8,6 @@
     justify-content: space-evenly;
     justify-content: flex-start;
     align-items: stretch;
-}
-#results .img-result {
-    width: 100px;
-    height: 100px;
-}
-#results img.star {
-    width: 15px;
-}
-/* #results img.star + img.star {
-    margin-left: -5px;
-} */
-#results .result-attribute {
-    margin: 2px auto;
-    display: block;
-}
-#results h3.result-name {
-    font-size: 0.9em;
-}
-#results .result.new {
-    box-shadow: 0 0 20px 10px gold;
-    order: -5;
-}
-#results .result.different {
-    box-shadow: 0 0 10px 5px #ff3366;
-    order: -3;
 }
 .top-arrow {
     margin: 10px;

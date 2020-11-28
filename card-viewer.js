@@ -212,7 +212,9 @@ CardViewer.Search.processResults = function (val) {
     }
 };
 
-CardViewer.Search.showPage = function (id = CardViewer.Search.currentPage, config = {}) {
+CardViewer.Search.config = {};
+
+CardViewer.Search.showPage = function (id = CardViewer.Search.currentPage, config = CardViewer.Search.config) {
     let target = config.target || CardViewer.Elements.results;
     if(!config.append) {
         target.empty();
@@ -227,7 +229,7 @@ CardViewer.Search.showPage = function (id = CardViewer.Search.currentPage, confi
         page = config.sort(page);
     }
     
-    if(config.append) {
+    if(config.append || config.noTable) {
         page.forEach((result, i, arr) => {
             let composed = CardViewer.composeStrategy(result);
             if(config.transform) {
@@ -478,7 +480,7 @@ CardViewer.textComparator = (needle, fn = _F.id) => {
     let simplified = CardViewer.simplifyText(needle);
     return (card) => {
         let f = fn(card);
-        return f !== null && f.toString().toLowerCase().indexOf(simplified) !== -1;
+        return f !== null && f !== undefined && f.toString().toLowerCase().indexOf(simplified) !== -1;
     }
 };
 const escapeRegExp = function (string) {
@@ -664,6 +666,7 @@ CardViewer.composeResultSmall = function (card) {
     
     let res = $("<div class=result>");
     res.attr("id", "card" + card.id);
+    res.addClass("small");
     res.addClass(card.card_type.toLowerCase());
     res.addClass(card.monster_color.toLowerCase());
     
@@ -986,6 +989,7 @@ CardViewer.submit = function () {
     else {
         query = CardViewer.query();
     }
+    // console.log(query);
     CardViewer.demonstrate(query);
     CardViewer.Elements.resultNote.text(CardViewer.firstTime ? "Note: You are currently viewing a curated selection of our cards. Please search again to see all available cards." : "");
     CardViewer.firstTime = false;

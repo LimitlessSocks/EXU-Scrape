@@ -336,3 +336,49 @@ select.inline {
 input[type=number].inline {
     width: 8ch;
 }
+
+/* result.small */
+.result.small {
+    text-align: center;
+    /* height: 15%; */
+    width: 15%;
+    width: 225px;
+}
+.result.small.clickable {
+    cursor: pointer;
+    transition: transform 100ms ease-in-out;
+}
+.result.small.clickable:hover {
+    transform: scale(1.12);
+}
+.result.small .result-img-holder {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+.result.small .img-result {
+    width: 100px;
+    height: 100px;
+}
+.result.small img.star {
+    width: 15px;
+}
+/* .result.small img.star + img.star {
+    margin-left: -5px;
+} */
+.result.small .result-attribute {
+    margin: 2px auto;
+    display: block;
+}
+.result.small h3.result-name {
+    font-size: 0.9em;
+}
+.result.small.new {
+    box-shadow: 0 0 20px 10px gold;
+    order: -5;
+}
+.result.small.different {
+    box-shadow: 0 0 10px 5px #ff3366;
+    order: -3;
+}

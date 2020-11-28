@@ -1,8 +1,31 @@
 #majorContainer {
 }
 
+#results {
+    overflow-y: auto;
+}
+/* #results p { */
+    /* font-size: 0.7em; */
+    /* line-height: 1.2em; */
+/* } */
+
+#results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: space-evenly;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.result.small {
+    text-align: center;
+    /* height: 15%; */
+    width: 15%;
+    width: 210px;
+}
+
 #cardPreview {
-    width: 27%;
+    width: 25%;
     float: left;
     height: 100%;
     overflow-y: auto;
@@ -30,7 +53,7 @@
 }
 #searchContainer, #infoContainer {
     float: left;
-    width: 30%;
+    width: 32%;
 }
 
 .sub-deck-container {
