@@ -278,6 +278,7 @@ database = [
     5571430, #Plushmages
     5269100, #Orb Magician
     6616619, #Queltz
+    6785434, #Moira
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
