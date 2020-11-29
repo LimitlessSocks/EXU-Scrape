@@ -657,6 +657,9 @@ const getLinkArrowText = (arrows) => {
 };
 
 CardViewer.composeResultSmall = function (card) {
+    card.src = card.src || (
+        "https://www.duelingbook.com/images/low-res/" + card.id + ".jpg"
+    );
     let img = $("<img class=img-result>")
         .attr("src", card.src)
         .attr("title", card.id);

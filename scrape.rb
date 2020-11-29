@@ -317,15 +317,15 @@ test = [
 
 beta = [
     #prio
-    6801590, #Earthbound Immortal Support
+    6864075, #Anon Singles
+    6858740, #Elementsaber
+    6879409, #Genex
     #reg
     6802790, #Blackclaw
-    5270321, #Apocrypha
-    6616619, #Queltz
     6712994, #Silent
-    5571430, #Plushmages 
-    6591759, #Suzerain
-    6834530, #Princess Connect
+    6865300, #Anon Equips
+    6806175, #Chibright
+    6836561, #Hellvil
 ]
 
 

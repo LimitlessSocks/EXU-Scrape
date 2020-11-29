@@ -449,6 +449,7 @@ CardViewer.composeResultDeckPreview = function (card) {
 };
 // CardViewer.composeStrategy = CardViewer.composeResultDeckPreview;
 CardViewer.composeStrategy = CardViewer.composeResultSmall;
+CardViewer.excludeTcg = false;
 
 CardViewer.Editor.updateDeck = function (deckInstance = CardViewer.Editor.DeckInstance) {
     CardViewer.Elements.deckEditor.empty();
