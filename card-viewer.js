@@ -162,6 +162,9 @@ const RetrainMap = {
     1867327: 9082,      //Crystron Halqifibrax -> Crystron Glassfiber
     1648511: 10606,     //Accesscode Talker -> Storm Accesscode Talker
     1862633: 8514,      //True King of Dimension's End -> True King of All Calamities
+    1948923: 8653,      //Wallfire Dragon -> Firewall dragon
+    1951635: 4546,      //Penultimate Offering -> Ultimate Offering
+    1768996: 310,       //Curse of Overconfidence -> Bad Reaction to Simochi
 };
 
 const LINK_ARROWS = {
