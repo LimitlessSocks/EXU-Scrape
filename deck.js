@@ -11,11 +11,17 @@ class Deck {
         this.target = null;
         this.deckWidthInCards = 10;
         this.editable = editable;
+        this.units = {};
     }
     
-    addCard(card, location = 0) {
+    getLocation(cardId) {
+        let card = CardViewer.Database.cards[cardId];
+        return CardViewer.Filters.isExtraDeck(card) ? Deck.Location.EXTRA : Deck.Location.MAIN;
+    }
+    
+    addCard(cardId, location = this.getLocation(cardId)) {
         let destDeck = this.decks[location];
-        destDeck.push(card);
+        destDeck.push(cardId);
     }
     
     applyCSS() {
@@ -33,8 +39,13 @@ class Deck {
         let unitHeight = CARD_BASE_HEIGHT * scaleRatio;
         let totalHeight = unitHeight + marginWidth;
         
+        this.units.scaleRatio = scaleRatio;
+        this.units.totalWidth = totalWidth;
+        this.units.totalHeight = totalHeight;
+        
         let j = 0;
         let cIndex = 0;
+        console.log(this.target.children());
         for(let container of this.target.children()) {
             let i = 0;
             let multiplier = 1;
@@ -42,20 +53,23 @@ class Deck {
                 multiplier = 0.64;//about 2/3
             }
             let containerWidth = Math.floor(deckWidthInCards / multiplier);
-            // console.log(containerWidth);
+            // let containerWidth = Math.floor(deckWidthInCards / multiplier);
+            let cardFound = false;
             for(let card of $(container).children()) {
+                // console.log(i, cIndex, j);
+                let heightMultiplier = j + cIndex * 0.2;
                 card = $(card);
                 card.css("left", i * multiplier * totalWidth);
-                card.css("top", j * totalHeight);
+                card.css("top", heightMultiplier * totalHeight);
                 card.css("transform", `scale(${scaleRatio})`);
                 i++;
                 if(i >= containerWidth) {
                     i = 0;
                     j++;
                 }
+                cardFound = true;
             }
-            if(i) j++;
-            j += 0.2; //padding in between decks
+            if(i || !cardFound) j++;
             cIndex++;
         }
     }
@@ -73,18 +87,42 @@ class Deck {
         }
         
         for(let deck of this.decks) {
+            let i = 0;
             let container = $("<div class=sub-deck-container>");
             for(let id of deck) {
                 let card = CardViewer.Database.cards[id];
                 let composed = CardViewer.composeResultDeckPreview(card);
                 CardViewer.Editor.addHoverTimerPreview(composed, id);
+                if(this.editable) {
+                    composed.mousedown((e) => {
+                        let offset = getOffsetFrom(e.originalEvent, composed);
+                        CardViewer.Editor.trackMouse(this, container, composed, offset);
+                    });
+                }
+                composed.data("index", i);
                 container.append(composed);
+                i++;
             }
             target.append(container);
         }
         
         this.applyCSS();
     }
+}
+Deck.Location = {
+    MAIN: 0,
+    SIDE: 1,
+    EXTRA: 2,
+};
+
+
+const getOffsetFrom = (originalEvent, container) => {
+    let { pageX, pageY } = originalEvent;
+    let { left, top } = container.offset();
+    return {
+        x: pageX - left,
+        y: pageY - top,
+    };
 }
 
 
@@ -110,9 +148,53 @@ CardViewer.Editor.addHoverTimerPreview = function (composed, id) {
         hoverTimer = setTimeout(setPreviewToThis, CardViewer.Editor.TIMER_DELAY);
     });
     composed.mouseleave(() => {
-        console.log("leaving");
+        // console.log("leaving");
         clearTimeout(hoverTimer);
         hoverTimer = null;
+    });
+};
+CardViewer.Editor.trackMouse = function (deck, container, composed, offset) {
+    offset = offset || { x: 0, y: 0 };
+    composed.addClass("dragging");
+    offset.x += 10;
+    offset.y -= 15;
+    let sourceIndex = composed.data("index");
+    let onMove = (e) => {
+        let { x, y } = getOffsetFrom(e.originalEvent, container);
+        // x -= offset.x;
+        // y -= offset.y;
+        composed.css("left", (x - offset.x) + "px");
+        composed.css("top", (y - offset.y) + "px");
+        // let minDistance = Infinity;
+        // let minChild = null;
+        container.children().removeClass("focused");
+        let { screenX, screenY } = e.originalEvent;
+        let focusedChild = null;
+        for(let child of container.children()) {
+            child = $(child);
+            if(child.data("index") === sourceIndex) continue;
+            let childOffset = child.offset();
+            let containerOffset = container.offset();
+            let bounds = child.get(0).getBoundingClientRect();
+            let isLeftRightBounded = bounds.left <= screenX && screenX <= bounds.right;
+            // let isTopBottomBounded = bounds.top <= screenY && screenY <= bounds.bottom;
+            let isTopBottomBounded = bounds.bottom <= screenY && screenY <= bounds.top;//TODO: fix one of these
+            
+            // console.log(isLeftRightBounded, isTopBottomBounded);
+            if(isLeftRightBounded && isTopBottomBounded) {
+                console.log("Found!");
+                focusedChild = child;
+                break;
+            }
+        }
+        if(focusedChild) {
+            focusedChild.addClass("focused");
+        }
+    };
+    $(window).mousemove(onMove);
+    $(window).mouseup(() => {
+        composed.removeClass("dragging");
+        $(window).unbind("mousemove", onMove);
     });
 };
 CardViewer.Editor.recalculateView = function () {
@@ -123,9 +205,11 @@ CardViewer.Editor.recalculateView = function () {
     let max = windowHeight - topPosition - MARGIN;
     CardViewer.Editor.MajorContainer.children().css("height", max + "px");
     
-    let resultTop = CardViewer.Elements.results.position().top;
-    let resultMax = windowHeight - resultTop - MARGIN;
-    CardViewer.Elements.results.css("height", resultMax + "px");
+    if(CardViewer.Elements.results) {
+        let resultTop = CardViewer.Elements.results.position().top;
+        let resultMax = windowHeight - resultTop - MARGIN;
+        CardViewer.Elements.results.css("height", resultMax + "px");
+    }
     
     CardViewer.Editor.DeckInstance.applyCSS();
 };
@@ -445,6 +529,11 @@ CardViewer.composeResultDeckPreview = function (card) {
         name.css("transform", "scaleX(" + scaleRatio + ")");
         // console.log(longer, shorter);
     });
+    
+    //prevent dragable images
+    res.find("img")
+        .on("dragstart", (e) => e.preventDefault());
+    
     return res;
 };
 // CardViewer.composeStrategy = CardViewer.composeResultDeckPreview;

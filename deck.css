@@ -23,7 +23,6 @@
     width: 15%;
     width: 210px;
 }
-
 #cardPreview {
     width: 25%;
     float: left;
@@ -79,6 +78,17 @@ header > * {
     background-size: auto;
 }
 
+.placeholder {
+    transform-origin: top left;
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+    background-color: red;
+    margin: 10px;
+}
+.editor-item.dragging {
+    z-index: 5;
+}
 .editor-item {
     text-align: center;
     display: inline-block;
@@ -92,7 +102,7 @@ header > * {
     transition: filter 100ms;
     box-shadow: 0 0 100px black;
 }
-    .editor-item:hover, .editor-item:focus {
+    .editor-item:hover, .editor-item:focus, .editor-item.focused {
         cursor: pointer;
         filter: brightness(1.5);
     }

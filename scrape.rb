@@ -133,7 +133,11 @@ database = [
     4493192, #Meklord Support
     6801590, #Earthbound Support
     6858396, #Mayakashi Support
-    6858407, #Graydle Support
+    # 6858407, #Graydle Support
+    6845097, #Mystic Elf & Celtic Guardian
+    6881030, #Hazy Flame Support
+    6858740, #Elementsaber Support
+    6888197, #ABC-Dragon/Gradius Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -165,7 +169,7 @@ database = [
     5582929, #Seafolk
     4399429, #Hakaishin Archfiend
     5592020, #Bound
-    4359326, #Eldertech
+    # 4359326, #Eldertech
     4050998, #Mage & Spell Tomes
     5615949, #Alchemaster
     5642481, #Daemon Engine
@@ -279,6 +283,13 @@ database = [
     5269100, #Orb Magician
     6616619, #Queltz
     6785434, #Moira
+    6836561, #Hellvil
+    6874481, #Dark Hole
+    6895350, #Owlsh
+    6849044, #Nebulline
+    6806175, #Chibright
+    4330341, #D.N.M.Q.
+    6906385, #Legendary Golems
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
