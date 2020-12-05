@@ -329,15 +329,11 @@ test = [
 
 beta = [
     #prio
-    6864075, #Anon Singles
-    6858740, #Elementsaber
-    6879409, #Genex
+    6918022, #Cyberdarks
+    5793524, #Lionheart
     #reg
-    6802790, #Blackclaw
-    6712994, #Silent
-    6865300, #Anon Equips
-    6806175, #Chibright
-    6836561, #Hellvil
+    6802790, #Blackclaw (2nd try)
+    6904766, #19 Solo Fusions + 1 Normal Monster
 ]
 
 
