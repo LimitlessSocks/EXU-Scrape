@@ -53,6 +53,9 @@ indent = " " * 8
 deck_config["order"].each { |prop|
     cfg = deck_config[prop]
     res += "\n" + indent + "<h2>" + cfg["name"] + "</h2>"
+    if cfg["lists"].empty?
+        res += "\n" + indent + "<p><em>Nothing here yet.</em></p>"
+    end
     cfg["lists"].each { |list_name|
         ds = parse_deck! "./res/#{list_name}"
         res += "\n" + indent + "<a href=\"./#{ds["id"]}\">" + ds["name"] + "</a>"

@@ -1,8 +1,8 @@
 {
     "order": [
         "spotlight",
-        "structures",
-        "random"
+        "topping",
+        "structures"
     ],
     
     "spotlight": {
@@ -14,16 +14,14 @@
     "structures": {
         "name": "EXU Structure Decks",
         "lists": [
-            "SD_KingRises.xml",
-            "SD_SpiritSummoners.xml"
         ]
     },
     
-    "random": {
-        "name": "Random Decks",
+    "topping": {
+        "name": "Topping Decklists",
         "lists": [
-            "ChainBeat.xml",
-            "Test1.xml"
+            "top/Weekly22Queltz1stPlace.xml",
+            "top/Weekly23Tacticore1stPlace.xml"
         ]
     }
 }

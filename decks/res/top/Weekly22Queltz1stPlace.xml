@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<deck name="[EXU] Queltz">
+<deck id="Weekly22Queltz1stPlace">
+ <meta>
+  <author>Sock</author>
+  <description></description>
+  <name>Weekly 22, 1st Place: Queltz</name>
+ </meta>
  <main>
   <card id="8348" passcode="63845230">Eater of Millions</card>
   <card id="8348" passcode="63845230">Eater of Millions</card>
