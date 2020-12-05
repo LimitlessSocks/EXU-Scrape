@@ -462,13 +462,16 @@ CardViewer.query = function () {
         baseStats.kind = CardViewer.Elements.cardTrapKind.val();
     }
     else if(CardViewer.Elements.monsterStats.is(":visible")) {
-        baseStats.level = CardViewer.Elements.cardLevel.val();
         baseStats.monsterType = CardViewer.Elements.cardMonsterType.val();
         baseStats.monsterAttribute = CardViewer.Elements.cardMonsterAttribute.val();
         baseStats.monsterCategory = CardViewer.Elements.cardMonsterCategory.val();
         baseStats.monsterAbility = CardViewer.Elements.cardMonsterAbility.val();
+        baseStats.level = CardViewer.Elements.cardLevel.val();
         baseStats.atk = CardViewer.Elements.cardATK.val();
         baseStats.def = CardViewer.Elements.cardDEF.val();
+        baseStats.levelCompare = CardViewer.Elements.cardLevelCompare.val();
+        baseStats.atkCompare = CardViewer.Elements.cardATKCompare.val();
+        baseStats.defCompare = CardViewer.Elements.cardDEFCompare.val();
     }
     return baseStats;
 };
@@ -516,6 +519,35 @@ CardViewer.exactComparator = (needle, fn = _F.id) => {
         fn(card) === needle;
 };
 
+CardViewer.COMPARES = {
+    equal:          (a, b) => a == b,
+    unequal:        (a, b) => a != b,
+    lessequal:      (a, b) => a <= b,
+    less:           (a, b) => a <  b,
+    greaterequal:   (a, b) => a >= b,
+    greater:        (a, b) => a >  b,
+    choice:         (a, bs) => bs.some(b => a == b),
+}
+CardViewer.comparingComparator = (needle, compareString, fn = _F.id) => {
+    let cmp = CardViewer.COMPARES[compareString];
+    console.log(needle, compareString, cmp);
+    if(compareString === "choice") {
+        needle = needle.toString().split(/[,\s]\s*/)
+            .map(e => parseInt(e, 10));
+    }
+    else {
+        needle = parseInt(needle, 10);
+    }
+    let once = true;
+    return (card) => {
+        if(once){
+            once=false;
+            console.log(fn(card), needle, cmp(fn(card), needle));
+        }
+        return cmp(fn(card), needle);
+    }
+};
+
 CardViewer.or = (...fns) => (...args) => fns.some(fn => fn(...args));
 
 CardViewer.createFilter = function (query, exclude = null) {
@@ -560,13 +592,6 @@ CardViewer.createFilter = function (query, exclude = null) {
         filters.push(CardViewer.exactComparator(query.kind, _F.propda("type")));
     }
     
-    if(query.level) {
-        let level = parseInt(query.level, 10);
-        if(!Number.isNaN(level)) {
-            filters.push(CardViewer.exactComparator(level, _F.propda("level")));
-        }
-    }
-    
     if(query.monsterType) {
         filters.push(CardViewer.exactComparator(query.monsterType, _F.propda("type")));
     }
@@ -583,12 +608,31 @@ CardViewer.createFilter = function (query, exclude = null) {
         filters.push(CardViewer.Filters.getFilter(query.monsterAbility));
     }
     
+    if(query.level) {
+        let level = parseInt(query.level, 10);
+        if(!Number.isNaN(level)) {
+            filters.push(CardViewer.comparingComparator(
+                level,
+                query.levelCompare,
+                _F.propda("level")
+            ));
+        }
+    }
+    
     if(query.atk) {
-        filters.push(CardViewer.exactComparator(query.atk, _F.propda("atk")));
+        filters.push(CardViewer.comparingComparator(
+            query.atk,
+            query.atkCompare,
+            _F.propda("atk")
+        ));
     }
     
     if(query.def) {
-        filters.push(CardViewer.exactComparator(query.def, _F.propda("def")));
+        filters.push(CardViewer.comparingComparator(
+            query.def,
+            query.defCompare,
+            _F.propda("def")
+        ));
     }
     
     let filter = (card) => filters.every(filter => filter(card));
@@ -948,8 +992,6 @@ CardViewer.composeResult = function (card) {
 };
 
 CardViewer.setUpTabSearchSwitching = function () {
-    
-    
     CardViewer.Elements.cardType.change(function () {
         let val = CardViewer.Elements.cardType.val();
         if(val === "spell") {
@@ -984,6 +1026,10 @@ CardViewer.demonstrate = function (query) {
     CardViewer.Elements.resultCount.text(results.length);
     CardViewer.Search.currentPage = 0;
     CardViewer.Search.showPage();
+};
+
+CardViewer.setUpCompareCompares = function () {
+    //TODO:
 };
 
 CardViewer.firstTime = true;

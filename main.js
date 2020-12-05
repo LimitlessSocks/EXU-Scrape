@@ -38,6 +38,9 @@ let onLoad = async function () {
     CardViewer.Elements.cardMonsterAttribute = $("#cardMonsterAttribute");
     CardViewer.Elements.cardATK = $("#cardATK");
     CardViewer.Elements.cardDEF = $("#cardDEF");
+    CardViewer.Elements.cardLevelCompare = $("#cardLevelCompare");
+    CardViewer.Elements.cardATKCompare = $("#cardATKCompare");
+    CardViewer.Elements.cardDEFCompare = $("#cardDEFCompare");
     CardViewer.Elements.toTopButton = $("#totop");
     CardViewer.Elements.saveSearch = $("#saveSearch");
     CardViewer.Elements.clearSearch = $("#clearSearch");
@@ -58,6 +61,7 @@ let onLoad = async function () {
         for(let [key, value] of Object.entries(CardViewer.query())) {
             if(value !== "" && value !== "any" && key !== "imported" && key !== "notImported") {
                 if(key === "retrain" && !value) continue;
+                if(key.indexOf("Compare") !== -1 && value === "equal") continue;
                 strs.push(key + "=" + value);
             }
         }
@@ -76,13 +80,16 @@ let onLoad = async function () {
         author:             CardViewer.Elements.cardAuthor,
         retrain:            CardViewer.Elements.cardIsRetrain,
         visibility:         CardViewer.Elements.cardVisibility,
-        level:              CardViewer.Elements.cardLevel,
         monsterType:        CardViewer.Elements.cardMonsterType,
         monsterAttribute:   CardViewer.Elements.cardMonsterAttribute,
         monsterCategory:    CardViewer.Elements.cardMonsterCategory,
         monsterAbility:     CardViewer.Elements.cardMonsterAbility,
+        level:              CardViewer.Elements.cardLevel,
+        levelCompare:       CardViewer.Elements.cardLevelCompare,
         atk:                CardViewer.Elements.cardATK,
+        atkCompare:         CardViewer.Elements.cardATKCompare,
         def:                CardViewer.Elements.cardDEF,
+        defCompare:         CardViewer.Elements.cardDEFCompare,
     };
     
     const parseStringValue = (str) => {

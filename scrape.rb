@@ -290,6 +290,7 @@ database = [
     6806175, #Chibright
     4330341, #D.N.M.Q.
     6906385, #Legendary Golems
+    6848354, #The 9s
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II

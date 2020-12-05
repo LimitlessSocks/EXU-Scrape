@@ -382,3 +382,7 @@ input[type=number].inline {
     box-shadow: 0 0 10px 5px #ff3366;
     order: -3;
 }
+
+select.thin {
+    width: 10ch;
+}
