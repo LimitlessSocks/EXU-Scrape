@@ -52,6 +52,8 @@ const CardsOfTheWeek = [
     747487,  //Reset!
     1765725, //Number 108: Divine Wind Dragon
     1805896, //Localized Tornado Dragon
+    1736029, //Lost Wind's Cyclone
+    1409993, //Localized Typhoon
 ];
 
 const OTKTools = [
