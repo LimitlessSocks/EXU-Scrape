@@ -138,6 +138,7 @@ database = [
     6881030, #Hazy Flame Support
     6858740, #Elementsaber Support
     6888197, #ABC-Dragon/Gradius Support
+    6913421, #Vylon Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -216,7 +217,7 @@ database = [
     5884678, #Arsenal
     6121762, #Hydromunculus
     6233896, #Mirror Force Archetype
-    4667428, #Xiuhqui
+    # 4667428, #Xiuhqui
     6040042, #Kuuroma
     6247363, #Rowa - Elusive Power
     6163866, #Black Blood
