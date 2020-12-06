@@ -221,7 +221,7 @@ database = [
     6040042, #Kuuroma
     6247363, #Rowa - Elusive Power
     6163866, #Black Blood
-    6227419, #Deep Burrower
+    # 6227419, #Deep Burrower
     # 3080272, #Nightshade
     6267789, #Armamemento
     6262300, #Muntu
