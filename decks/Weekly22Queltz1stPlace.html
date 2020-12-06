@@ -20,7 +20,6 @@
 			  crossorigin="anonymous"></script>
     <script src="./../card-viewer.js"></script>
     <script src="./../deck.js"></script>
-    <script src="./onload.js"></script>
     <script>
         // statically loaded deck information
         CardViewer.Editor.DeckInstance = new Deck(
@@ -32,6 +31,7 @@
         window.deckId = "Weekly22Queltz1stPlace";
         window.thumb = parseInt("1894071");
     </script>
+    <script src="./onload.js"></script>
 </head>
 <body>
     <h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1>
@@ -39,7 +39,7 @@
         <div id="infoContainer">
             <h2>Weekly 22, 1st Place: Queltz</h2>
             <h3>Sock</h2>
-            <button id="downloadDeck">Download</button>
+            <div id="byline"><button id="downloadDeck">Download</button> <span id="cardCount">X</span> cards</div>
             <div id="description"><i>No description.</i></div>
         </div>
         <div id="deckEditor"></div>

@@ -11,24 +11,33 @@ def load_dbs
     if $DB_CUSTOM.nil?
         $DB_CUSTOM = JSON::parse File.read("../db.json")
     end
+    # if $DB_YCG.nil?
+        # $DB_YCG = JSON::parse File.read("../ycg.json")
+    # end
 end
 
 
 def get_url(id, custom=true)
     return if id.nil? || id.empty?
     load_dbs
-    $DB_CUSTOM[id]["src"]
+    if custom
+        $DB_CUSTOM[id]["src"]
+    else
+        "https://www.duelingbook.com/images/low-res/#{id}.jpg"
+    end
 end
 
-Deck = Struct.new(:id, :main, :side, :extra, :author, :name, :description, :thumb) {
+Deck = Struct.new(:id, :main, :side, :extra, :author, :name, :description, :thumb, :thumb_custom) {
     def to_html
         $BOILERPLATE % self.to_h
     end
     
     def make_link
         res = "<a class=\"deck-link\" href=\"./#{id}\">"
+        # p [thumb, thumb_custom]
         unless thumb.empty?
-            res += "<img src=\"#{get_url thumb}\"/>"
+            url = get_url thumb, thumb_custom
+            res += "<img src=\"#{url}\"/>"
         end
         # res += name
         res += "<p>" + name + "</p>"
@@ -61,7 +70,8 @@ def parse_deck!(deck_path)
             value = doc.css("meta #{name}").children.to_html.strip
             value = defaults[name] if value.empty?
             value
-        }
+        },
+        doc.css("meta thumb")[0]["custom"] != "false"
     )
     
     File.write("#{id}.html", ds.to_html)

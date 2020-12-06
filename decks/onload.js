@@ -3,6 +3,10 @@ window.ycgDatabase = baseURL + "ycg.json";
 window.exuDatabase = baseURL + "db.json";
 
 let onLoad = async function () {
+    // load static info
+    $("#cardCount").text(CardViewer.Editor.DeckInstance.decks[0].length);
+    
+    // card/deck display
     CardViewer.Editor.MajorContainer = $("#majorContainer");
     window.addEventListener("resize", CardViewer.Editor.recalculateView);
     CardViewer.Editor.recalculateView();
@@ -17,6 +21,7 @@ let onLoad = async function () {
     
     // CardViewer.setUpTabSearchSwitching();
     
+    CardViewer.Elements.deckEditor.text("Loading deck...");
     await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
     // load deck
     CardViewer.Editor.updateDeck();
