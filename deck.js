@@ -1,6 +1,22 @@
 const CARD_BASE_WIDTH = 813;
 const CARD_BASE_HEIGHT = 1185;
 const MAX_WIDTHS = [ 40, 10, 10 ];
+const NO_CARD = {
+    src: "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/res/no_img.png",
+    name: "Error: No Card",
+    id: -1,
+    username: "--",
+    card_type: "Monster",
+    monster_color: "Error",
+    custom: 0,
+    effect: "This card does not exist.",
+    attribute: "ERROR",
+    level: 0,
+    atk: -1,
+    def: -1,
+    exu_limit: 3,
+};
+
 class Deck {
     constructor(main = [], side = [], extra = [], editable = true) {
         this.decks = [
@@ -91,6 +107,12 @@ class Deck {
             let container = $("<div class=sub-deck-container>");
             for(let id of deck) {
                 let card = CardViewer.Database.cards[id];
+                if(!card) {
+                    console.warn("Card with id does not exist: " + id);
+                    card = CardViewer.Database.cards[id] = Object.assign({}, NO_CARD);
+                    card.effect += " Original ID: " + id;
+                    // continue;
+                }
                 let composed = CardViewer.composeResultDeckPreview(card);
                 CardViewer.Editor.addHoverTimerPreview(composed, id);
                 if(this.editable) {
@@ -389,7 +411,7 @@ const getLinkArrowImages = function (arrows) {
 CardViewer.composeResultDeckPreview = function (card) {
     // console.log(card);
     if(!card) {
-        console.warn("No card passed to deck preview");
+        console.warn("No card passed to deck preview (" + card + ")");
         return $("");
     }
     card.src = card.src || (
