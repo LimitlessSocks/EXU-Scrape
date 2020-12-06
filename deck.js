@@ -346,7 +346,8 @@ CardViewer.composeResultCardPreview = function (card) {
         marking.append($("<div>").append(banMarker));
     }
     
-    // effect = effect.split(/\r|\r?\n/).map(para => $("<p>").text(para));
+    effect = effect.split(/\r|\r?\n/).map(para => $("<p>").text(para));
+    // effect = 
     
     res.append($("<div class=result-inner>").append(id, name, img, linkArrows, marking, author, stats, effect
         // $("<table>").append(

@@ -1,8 +1,20 @@
 #majorContainer {
 }
 
-#results {
+#results, #infoContainer {
     overflow-y: auto;
+}
+#infoContainer #description {
+    margin-right: 15px;
+}
+#infoContainer p + p {
+    text-indent: 4ch;
+}
+#infoContainer h4 {
+    border-bottom: 1px solid;
+}
+#infoContainer ul, #infoContainer ol {
+    margin: 0;
 }
 /* #results p { */
     /* font-size: 0.7em; */

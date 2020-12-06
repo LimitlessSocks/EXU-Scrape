@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <script> -->
-    <!-- window.dataLayer = window.dataLayer || []; -->
-    <!-- function gtag(){dataLayer.push(arguments);} -->
-    <!-- gtag('js', new Date()); -->
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    <!-- gtag('config', 'G-Q3RKXFLZRZ'); -->
-    <!-- </script> -->
+    gtag('config', 'G-Q3RKXFLZRZ');
+    </script>
     <title>EXU Deck Browser</title>
     <meta charset="UTF-8">
     <link rel="STYLESHEET" href="./../card-viewer.css">
@@ -20,12 +20,18 @@
     <h2 class="subtitle">Sample decks</h2>
     <div id="listing">
         <h2>The Spotlight</h2>
-        <p><em>Nothing here yet.</em></p>
+        <div class=deck-link-listing>
+            <a class="deck-link" href="./Darkwater"><img src="https://www.duelingbook.com/./images/custom-pics/1600000/1610982.jpg"/><p>Darkwater</p></a>
+        </div>
         <h2>Topping Decklists</h2>
-        <a href="./Weekly22Queltz1stPlace">Weekly 22, 1st Place: Queltz</a>
-        <a href="./Weekly23Tacticore1stPlace">Weekly 23, 1st Place: Tacticore</a>
+        <div class=deck-link-listing>
+            <a class="deck-link" href="./Weekly22Queltz1stPlace"><img src="https://www.duelingbook.com/./images/custom-pics/1800000/1894071.jpg"/><p>Weekly 22, 1st Place: Queltz</p></a>
+            <a class="deck-link" href="./Weekly23Tacticore1stPlace"><img src="https://www.duelingbook.com/./images/custom-pics/1500000/1583474.jpg"/><p>Weekly 23, 1st Place: Tacticore</p></a>
+        </div>
         <h2>EXU Structure Decks</h2>
-        <p><em>Nothing here yet.</em></p>
+        <div class=deck-link-listing>
+            <p><em>Nothing here yet.</em></p>
+        </div>
     </div>
 </body>
 </html>

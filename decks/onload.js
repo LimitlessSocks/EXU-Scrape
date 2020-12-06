@@ -20,5 +20,8 @@ let onLoad = async function () {
     await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
     // load deck
     CardViewer.Editor.updateDeck();
+    if(window.thumb) {
+        CardViewer.Editor.setPreview(window.thumb);
+    }
 };
 window.addEventListener("load", onLoad);

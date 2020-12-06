@@ -5,9 +5,34 @@ $BOILERPLATE = File.read("boilerplate.html")
 $CONFIG_PATH = "./decks.json"
 $INDEX_PATH = "./index.html"
 
-Deck = Struct.new(:id, :main, :side, :extra, :author, :name, :description) {
+$DB_CUSTOM = nil
+$DB_YCG = nil
+def load_dbs
+    if $DB_CUSTOM.nil?
+        $DB_CUSTOM = JSON::parse File.read("../db.json")
+    end
+end
+
+
+def get_url(id, custom=true)
+    return if id.nil? || id.empty?
+    load_dbs
+    $DB_CUSTOM[id]["src"]
+end
+
+Deck = Struct.new(:id, :main, :side, :extra, :author, :name, :description, :thumb) {
     def to_html
         $BOILERPLATE % self.to_h
+    end
+    
+    def make_link
+        res = "<a class=\"deck-link\" href=\"./#{id}\">"
+        unless thumb.empty?
+            res += "<img src=\"#{get_url thumb}\"/>"
+        end
+        # res += name
+        res += "<p>" + name + "</p>"
+        res += "</a>"
     end
 }
 
@@ -24,6 +49,7 @@ def parse_deck!(deck_path)
         "author" => "(Unknown)",
         "name" => id,
         "description" => "<i>No description.</i>",
+        "thumb" => "",
     }
     
     ds = Deck.new(
@@ -31,7 +57,7 @@ def parse_deck!(deck_path)
         ids_of(doc.css("main card")),
         ids_of(doc.css("side card")),
         ids_of(doc.css("extra card")),
-        *%w(author name description).map { |name|
+        *%w(author name description thumb).map { |name|
             value = doc.css("meta #{name}").children.to_html.strip
             value = defaults[name] if value.empty?
             value
@@ -50,16 +76,19 @@ res = ""
 deck_config = JSON::parse File.read($CONFIG_PATH)
 
 indent = " " * 8
+sub_indent = " " * 12
 deck_config["order"].each { |prop|
     cfg = deck_config[prop]
     res += "\n" + indent + "<h2>" + cfg["name"] + "</h2>"
+    res += "\n" + indent + "<div class=deck-link-listing>"
     if cfg["lists"].empty?
-        res += "\n" + indent + "<p><em>Nothing here yet.</em></p>"
+        res += "\n" + sub_indent + "<p><em>Nothing here yet.</em></p>"
     end
     cfg["lists"].each { |list_name|
         ds = parse_deck! "./res/#{list_name}"
-        res += "\n" + indent + "<a href=\"./#{ds["id"]}\">" + ds["name"] + "</a>"
+        res += "\n" + sub_indent + ds.make_link
     }
+    res += "\n" + indent + "</div>"
     
     # listing.add_child "\n#{indent}<h2>#{cfg["name"]}</h2>"
     # listing.add_child "\n#{indent}<a href='#{prop}'>#{prop}</a>\n"

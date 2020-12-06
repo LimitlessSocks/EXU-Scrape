@@ -30,6 +30,7 @@
             false, //not editable
         );
         window.deckId = "%{id}";
+        window.thumb = parseInt("%{thumb}");
     </script>
 </head>
 <body>
@@ -39,7 +40,7 @@
             <h2>%{name}</h2>
             <h3>%{author}</h2>
             <button id="downloadDeck">Download</button>
-            <p>%{description}</p>
+            <div id="description">%{description}</div>
         </div>
         <div id="deckEditor"></div>
         <div id="cardPreview"></div>
