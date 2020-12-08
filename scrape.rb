@@ -330,13 +330,14 @@ test = [
 
 beta = [
     #prio
-    6918022, #Cyberdarks
-    5793524, #Lionheart
-    6887407, #Sock's singles
-    6928322, #Dawn's retrains
+    6930924, #Pokepack
+    6872790, #Ake Singles
+    6933325, #Gatr's SQ
+    6816736, #Ani's DIVINE
     #reg
     6802790, #Blackclaw (2nd try)
     6904766, #19 Solo Fusions + 1 Normal Monster
+    5904696, #Contraption
 ]
 
 
