@@ -265,7 +265,7 @@ database = [
     6604359, #Chronoruler
     6601142, #Serpent Night
     6649729, #Flamiller
-    6670355, #Railreich
+    # 6670355, #Railreich
     6611617, #Frostyre
     6677155, #Colossus
     3068977, #Nekojishi
@@ -340,14 +340,19 @@ test = [
 
 beta = [
     #prio
-    6930924, #Pokepack
-    6872790, #Ake Singles
-    6933325, #Gatr's SQ
     6816736, #Ani's DIVINE
+    6920452, #10 synchros
+    6952745, #Tindangle
+    4355718, #Wild Rose
+    6974199, #Butterspy
+    6942124, #Sock's Generics 21
+    4805092, #Legendary Dragon Support
     #reg
-    6802790, #Blackclaw (2nd try)
-    6904766, #19 Solo Fusions + 1 Normal Monster
-    5904696, #Contraption
+    5772283, #Ascension Sky
+    4475780, #Ascending Fire
+    6962184, #Spellmaker
+    6381613, #Crypt
+    6979146, #T.G. Support
 ]
 
 
