@@ -42,8 +42,9 @@ const cardsByRecord = (fn, holder, query = {}, exclude = null, cmp = compare) =>
     return resultHash;
 };
 
-const cardsByAverage = (fn, holder, query = {}, exclude = null, cmp = compare) => {
+const cardsByAverage = (fn, holder, min = 0, query = {}, exclude = null, cmp = compare) => {
     let hash = {};
+    let totals = {};
     if(typeof fn !== "function") {
         let type = fn;
         fn = (card) => card[type];
@@ -56,9 +57,20 @@ const cardsByAverage = (fn, holder, query = {}, exclude = null, cmp = compare) =
     for(let card of Object.values(swath)) {
         let prop = fn(card);
         let h = holder(card);
-        // console.log(h, hash[h]);
-        if(typeof hash[h] === "undefined" || cmp(hash[h].prop, prop) < 0) {
-            hash[h] = { prop: prop, card: card };
+        if(typeof totals[h] === "undefined") {
+            totals[h] = 0;
+            hash[h] = 0;
+        }
+        hash[h] += prop;
+        totals[h]++;
+    }
+    for(let key of Object.keys(hash)) {
+        let total = totals[key];
+        if(total < min) {
+            delete hash[key];
+        }
+        else {
+            hash[key] /= totals[key];
         }
     }
     return hash;
@@ -323,6 +335,24 @@ Statistics.addFeature(
     "users",
     "Users",
     () => objectFilter(cardsBy("username"), (u, v) => v >= 20)
+);
+Statistics.addSpacer();
+
+Statistics.addFeature(
+    "averageUsersCardWords",
+    "Users' Average Card (Words)",
+    () => cardsByAverage((card) => wordLength(card.effect) + wordLength(card.pendulum_effect), "username", 10),
+    {
+        defaultLimit: 15,
+    }
+);
+Statistics.addFeature(
+    "averageUsersCardCharacters",
+    "Users' Average Card (Characters)",
+    () => cardsByAverage((card) => card.effect.length + card.pendulum_effect.length, "username", 10),
+    {
+        defaultLimit: 15,
+    }
 );
 Statistics.addSpacer();
 
