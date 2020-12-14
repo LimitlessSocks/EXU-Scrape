@@ -139,6 +139,14 @@ database = [
     6858740, #Elementsaber Support
     6888197, #ABC-Dragon/Gradius Support
     6913421, #Vylon Support
+    5793524, #Number 54: Lion Heart Support
+    6918022, #Cyberdark Supports
+    6936982, #Thought Legacy Support
+    6933325, #Super Quant Support 2
+    6942144, #Mythical Beast Support
+    6318313, #Generation Fish Support
+    6858407, #Graydle Support
+    6819600, #Prometeor Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -208,7 +216,7 @@ database = [
     6050332, #Nermusa
     6078350, #Majecore
     5869257, #Yova
-    5098946, #Guildimension
+    # 5098946, #Guildimension
     6044732, #Armorizer
     6044655, #Vampop☆Star
     6135219, #The Parallel
@@ -292,6 +300,8 @@ database = [
     4330341, #D.N.M.Q.
     6906385, #Legendary Golems
     6848354, #The 9s
+    6948850, #Mekkallegiate
+    6933560, #Revived Beasts
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
