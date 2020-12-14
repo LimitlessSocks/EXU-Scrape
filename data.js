@@ -15,6 +15,57 @@ const cardsBy = (fn, query = {}, exclude = null) => {
     return hash;
 };
 
+const cardsByRecord = (fn, holder, query = {}, exclude = null, cmp = compare) => {
+    let hash = {};
+    if(typeof fn !== "function") {
+        let type = fn;
+        fn = (card) => card[type];
+    }
+    if(typeof holder !== "function") {
+        let type = holder;
+        holder = (card) => card[type];
+    }
+    let swath = CardViewer.filter(query, exclude);
+    for(let card of Object.values(swath)) {
+        let prop = fn(card);
+        let h = holder(card);
+        // console.log(h, hash[h]);
+        if(typeof hash[h] === "undefined" || cmp(hash[h].prop, prop) < 0) {
+            hash[h] = { prop: prop, card: card };
+        }
+    }
+    let resultHash = {};
+    
+    for(let [key, value] of Object.entries(hash)) {
+        resultHash[key + " (" + value.card.name + ")"] = value.prop;
+    }
+    return resultHash;
+};
+
+const cardsByAverage = (fn, holder, query = {}, exclude = null, cmp = compare) => {
+    let hash = {};
+    if(typeof fn !== "function") {
+        let type = fn;
+        fn = (card) => card[type];
+    }
+    if(typeof holder !== "function") {
+        let type = holder;
+        holder = (card) => card[type];
+    }
+    let swath = CardViewer.filter(query, exclude);
+    for(let card of Object.values(swath)) {
+        let prop = fn(card);
+        let h = holder(card);
+        // console.log(h, hash[h]);
+        if(typeof hash[h] === "undefined" || cmp(hash[h].prop, prop) < 0) {
+            hash[h] = { prop: prop, card: card };
+        }
+    }
+    return hash;
+};
+
+const wordLength = (str) => str.split(/\s/).length;
+
 // const compare = (x, y) => (x > y) - (x < y);
 const compare = (x, y) => x.toString().localeCompare(y, undefined, { numeric: true });
 
@@ -81,6 +132,7 @@ class Feature {
         let sortOrder = this.options.sortOrder || Statistics.Options.sortOrder;
         let sortByGrader = this.options.sortBy || Statistics.Options.sortBy;
         let limit = this.options.limit || Statistics.Options.limit || this.options.defaultLimit;
+        // console.log("Limit:", limit);
         
         let dat = Object.entries(this.fn(...Statistics.parameters));
         let sortedDat;
@@ -104,6 +156,7 @@ class Feature {
         if(limit) {
             dat = dat.slice(0, limit);
         }
+        console.log(dat.map(a => a.join(" - ")).join("\n"));
         
         let [
             background, border,
@@ -270,6 +323,24 @@ Statistics.addFeature(
     "users",
     "Users",
     () => objectFilter(cardsBy("username"), (u, v) => v >= 20)
+);
+Statistics.addSpacer();
+
+Statistics.addFeature(
+    "longestCardsWords",
+    "Longest User Cards (Words)",
+    () => cardsByRecord((card) => wordLength(card.effect) + wordLength(card.pendulum_effect), "username"),
+    {
+        defaultLimit: 15,
+    }
+);
+Statistics.addFeature(
+    "longestCardsCharacters",
+    "Longest User Cards (Characters)",
+    () => cardsByRecord((card) => card.effect.length + card.pendulum_effect.length, "username"),
+    {
+        defaultLimit: 15,
+    }
 );
 Statistics.addSpacer();
 
@@ -485,6 +556,7 @@ window.addEventListener("load", async function () {
     let inputElements = $("#otherOptions select, #otherOptions input");
     let onUpdate = function () {
         // console.log(this);
+        if(this.value === "") return;
         console.log(this.id, this, this.value);
         let val = idToKey[this.id];
         
@@ -510,7 +582,7 @@ window.addEventListener("load", async function () {
         if(height < MIN_HEIGHT) {
             height = windowHeight;
         }
-        console.log(top, windowHeight, height);
+        // console.log(top, windowHeight, height);
         canvasHolder.css("height", height + "px");
     };
     
