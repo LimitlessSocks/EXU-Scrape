@@ -208,7 +208,7 @@ database = [
     5925194, #Yurei
     5868144, #Tsurumashi
     5781120, #Stars
-    5619459, #ANIMA
+    # 5619459, #ANIMA
     5935151, #Shirakashi
     2952495, #Genjutsu
     5979832, #Raycor
@@ -249,7 +249,7 @@ database = [
     6256752, #Concept of Reality
     4361777, #Eviction
     6347993, #Headhunter
-    5818764, #Firewild
+    # 5818764, #Firewild
     6460257, #Dark Arts
     5145725, #Remnant
     6537631, #Bucket Squad
