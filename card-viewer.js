@@ -444,6 +444,7 @@ CardViewer.Filters.Dictionary = {
 CardViewer.Filters.getFilter = (key) =>
     CardViewer.Filters.Dictionary[key] || CardViewer.Filters.Dictionary.any;
 
+CardViewer.showImported = false;
 CardViewer.query = function () {
     let baseStats = {
         name:         CardViewer.Elements.cardName.val(),
@@ -454,7 +455,7 @@ CardViewer.query = function () {
         author:       CardViewer.Elements.cardAuthor.val(),
         retrain:      CardViewer.Elements.cardIsRetrain.is(":checked"),
         visibility:   CardViewer.Elements.cardVisibility.val(),
-        imported:     false,
+        imported:     CardViewer.showImported,
         notImported:  false,
     };
     if(CardViewer.Elements.spellStats.is(":visible")) {
@@ -648,6 +649,10 @@ CardViewer.filter = function (query, exclude = null) {
     let filter = CardViewer.createFilter(query, exclude);
     let cards = [];
     for(let [id, card] of Object.entries(CardViewer.Database.cards)) {
+        // if(id == 11086) {
+            // console.log(id, card);
+            // console.log(query, exclude);
+        // }
         if(CardViewer.excludeTcg && (card.tcg || card.ocg)) {
             continue;
         }

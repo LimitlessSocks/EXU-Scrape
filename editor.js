@@ -3,6 +3,9 @@ window.ycgDatabase = baseURL + "ycg.json";
 window.exuDatabase = baseURL + "db.json";
 
 let onLoad = async function () {
+    CardViewer.excludeTcg = false;
+    CardViewer.showImported = true;
+    
     CardViewer.Editor.MajorContainer = $("#majorContainer");
     window.addEventListener("resize", CardViewer.Editor.recalculateView);
     CardViewer.Elements.results = $("#results");
@@ -51,8 +54,13 @@ let onLoad = async function () {
     CardViewer.setUpTabSearchSwitching();
     
     await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
-    // // load deck
-    // testDeck();
+    
+    // remove ocg
+    // for(let [id, card] of Object.entries(CardViewer.Database.cards)) {
+        // if(card.tcg === 0 && !card.exu_limit && card.ocg > 0) {
+            // delete CardViewer.Database.cards[id];
+        // }
+    // }
     
     CardViewer.firstTime = false;
     CardViewer.autoSearch = true;
@@ -121,6 +129,7 @@ let testDeck = function () {
     // let deck = [9551, 1647, 11107, 11110, 1768966, 1319245, 1318849, 1766297, 11235];
     // let deck = [328, 382, 383, 562, 563, 5002, 9550, 9638, 9551, 9636, 907798, 9553, 1205167, 9639, 1307739, 1941, 4974, 2028, 2379, 5178, 6432, 3530, 3840, 5001, 3546, 4913, 82, 11107, 1039, 1041, 1647, 1753, 4971, 7207, 11110, 756, 9555, 7218, 2909, 7759, 3913, 7730];
     for(let id of deck) {
+        // console.log(id);
         CardViewer.Editor.DeckInstance.addCard(id);
     }
     CardViewer.Editor.updateDeck();
