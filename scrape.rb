@@ -182,7 +182,7 @@ database = [
     4050998, #Mage & Spell Tomes
     5615949, #Alchemaster
     5642481, #Daemon Engine
-    4395391, #Trapod
+    # 4395391, #Trapod
     5549562, #Travelsha
     5717718, #Pixel  Monsters
     5713627, #Yeet
@@ -340,19 +340,19 @@ test = [
 
 beta = [
     #prio
-    6816736, #Ani's DIVINE
-    6920452, #10 synchros
     6952745, #Tindangle
-    4355718, #Wild Rose
-    6974199, #Butterspy
     6942124, #Sock's Generics 21
-    4805092, #Legendary Dragon Support
+    6980225, #Vector's Generics
+    6981414, #Magical Hats Support
+    6992422, #Trapod
+    6993829, #LOD
     #reg
-    5772283, #Ascension Sky
-    4475780, #Ascending Fire
+    6222166, #Ananta
     6962184, #Spellmaker
-    6381613, #Crypt
-    6979146, #T.G. Support
+    6979146, #TG Support
+    6670355, #Railreich
+    6811695, #Catacomb
+    2942421, #Antrap
 ]
 
 
