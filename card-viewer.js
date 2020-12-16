@@ -455,8 +455,9 @@ CardViewer.query = function () {
         author:       CardViewer.Elements.cardAuthor.val(),
         retrain:      CardViewer.Elements.cardIsRetrain.is(":checked"),
         visibility:   CardViewer.Elements.cardVisibility.val(),
-        imported:     CardViewer.showImported,
+        imported:     false,
         notImported:  false,
+        alsoImported: CardViewer.showImported,
     };
     if(CardViewer.Elements.spellStats.is(":visible")) {
         baseStats.kind = CardViewer.Elements.cardSpellKind.val();
@@ -583,13 +584,18 @@ CardViewer.createFilter = function (query, exclude = null) {
         CardViewer.textAnyComparator(query.limit, _F.propda("exu_limit")),
         // retrain filter
         CardViewer.boolExclusiveComparator(query.retrain, _F.propda("exu_retrain")),
-        // import filter
-        CardViewer.boolExactComparator(query.imported, _F.propda("exu_import")),
-        // not imported filter
-        CardViewer.boolExactComparator(query.notImported, _F.propda("exu_ban_import")),
         // visibility filter
         CardViewer.textAnyComparator(query.visibility, _F.propda("custom")),
     ];
+    // import filters
+    if(!query.alsoImported) {
+        filters.push(
+            // import filter
+            CardViewer.boolExactComparator(query.imported, _F.propda("exu_import")),
+            // not imported filter
+            CardViewer.boolExactComparator(query.notImported, _F.propda("exu_ban_import")),
+        );
+    }
     
     if(query.kind) {
         filters.push(CardViewer.exactComparator(query.kind, _F.propda("type")));
