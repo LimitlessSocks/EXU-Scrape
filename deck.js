@@ -41,9 +41,13 @@ class Deck {
         return CardViewer.Filters.isExtraDeck(card) ? Deck.Location.EXTRA : Deck.Location.MAIN;
     }
     
-    addCard(cardId, location = this.getLocation(cardId)) {
+    addCard(cardId, location = this.getLocation(cardId), index = null) {
         let destDeck = this.decks[location];
-        destDeck.push(cardId);
+        if(index === null) {
+            index = destDeck.length;
+        }
+        console.log(this.decks, location);
+        destDeck.splice(index, 0, cardId);
     }
     
     swapCards(aloc, a, bloc, b) {
@@ -184,6 +188,7 @@ CardViewer.Editor.setPreview = function (id) {
         CardViewer.composeResultCardPreview(CardViewer.Database.cards[id])
     );
 };
+CardViewer.Editor
 CardViewer.Editor.TIMER_DELAY = 100;//ms
 CardViewer.Editor.addHoverTimerPreview = function (composed, id) {
     let hoverTimer = null;
@@ -232,9 +237,13 @@ CardViewer.Editor.trackMouse = function (deck, composed, offset) {
         
         for(let child of allCards) {
             child = $(child);
-            if(child.data("index") === sourceIndex) continue;
             let childLocation = deck.getLocation(child.data("id"));
-            if(childLocation !== sourceLocation) continue;
+            let isSame = child.data("index") === sourceIndex
+                && child.data("deck") === composed.data("deck");
+            let isInvalidDestination = childLocation !== sourceLocation;
+            if(isSame || isInvalidDestination) {
+                continue;
+            }
             let childOffset = child.offset();
             let containerOffset = container.offset();
             let bounds = child.get(0).getBoundingClientRect();
@@ -259,11 +268,19 @@ CardViewer.Editor.trackMouse = function (deck, composed, offset) {
             focusedChild = composed;
         }
         let myIndex = composed.data("index");
+        let myDeck = composed.data("deck");
         let targetIndex = focusedChild.data("index");
-        deck.swapCards(
-            composed.data("deck"), myIndex,
-            focusedChild.data("deck"), targetIndex
-        );
+        let targetDeck = focusedChild.data("deck");
+        if(myDeck === targetDeck) {
+            deck.swapCards(
+                myDeck, myIndex,
+                targetDeck, targetIndex
+            );
+        }
+        else {
+            deck.removeCard(myDeck, myIndex);
+            deck.addCard(composed.data("id"), targetDeck, targetIndex + 1);
+        }
         CardViewer.Editor.updateDeck();
     };
     $(window).mousemove(onMove);
@@ -590,17 +607,12 @@ CardViewer.composeResultDeckPreview = function (card) {
         name, attribute, img, marking, banMarker, importMarker,
         ...linkArrows, ...stats
     ));
-    // console.log(res);
-    // res.on("load", function () {
-        // console.log("Loaded!");
-    // });
     res.ready(function () {
         let longer = name.width();
         let shorter = name.parent().width() - attribute.width() - 24;
         if(shorter >= longer) return;
         let scaleRatio = shorter / longer;
         name.css("transform", "scaleX(" + scaleRatio + ")");
-        // console.log(longer, shorter);
     });
     
     //prevent dragable images

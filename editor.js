@@ -70,6 +70,7 @@ let onLoad = async function () {
     CardViewer.Search.config.noTable = true;
     CardViewer.Search.config.transform = (el, card) => {
         el.addClass("clickable");
+        el.addClass("unselectable");
         let id = card["id"];
         CardViewer.Editor.addHoverTimerPreview(el, id);
         el.click(() => {
@@ -166,7 +167,6 @@ let testDeck = function () {
     let deck = [
         1593267, 1593267, 1593267, 8859, 8859, 8859,
         1893760, 1893760, 1893760,
-        1893606, 1893606, 1893606,
         
         1586518, 1768966, 1037312, 7421];
     // let deck = [9551, 1647, 11107, 11110, 1768966, 1319245, 1318849, 1766297, 11235];
@@ -174,6 +174,11 @@ let testDeck = function () {
     for(let id of deck) {
         // console.log(id);
         CardViewer.Editor.DeckInstance.addCard(id);
+    }
+    for(let id of [
+        1893606, 1893606, 1893606
+    ]) {
+        CardViewer.Editor.DeckInstance.addCard(id, Deck.Location.SIDE);
     }
     CardViewer.Editor.updateDeck();
     // CardViewer.Editor.setPreview(1593267);

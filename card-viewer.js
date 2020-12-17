@@ -18,7 +18,31 @@ const CardViewer = {
     submit: null,
     query: null,
     excludeTcg: true,
+    SaveData: {
+        local: {},
+        KEY: "EXU",
+    },
 };
+
+CardViewer.SaveData.init = () => {
+    let localItem = localStorage.getItem(CardViewer.SaveData.KEY);
+    
+    CardViewer.SaveData.local = localItem === null ? {} : JSON.parse(localItem);
+    CardViewer.SaveData.sync();
+};
+CardViewer.SaveData.sync = () => {
+    console.log(CardViewer.SaveData.local, JSON.stringify(CardViewer.SaveData.local));
+    localStorage.setItem(CardViewer.SaveData.KEY, JSON.stringify(CardViewer.SaveData.local));
+};
+CardViewer.SaveData.get = (key) => {
+    return CardViewer.SaveData.local[key];
+};
+CardViewer.SaveData.set = (key, value) => {
+    CardViewer.SaveData.local[key] = value;
+    CardViewer.SaveData.sync();
+};
+
+CardViewer.SaveData.init();
 
 const CardsOfTheWeek = [
     1117429, //Battlewasp - Akiza the Berserker

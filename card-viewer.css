@@ -52,6 +52,10 @@ button:hover, .fake-button:hover {
 .danger-button:hover {
     background: #993366;
 }
+button[disabled] {
+    background: #333333;
+    cursor: not-allowed;
+}
 input, select {
     background: #330033;
     color: white;
