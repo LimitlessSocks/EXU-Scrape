@@ -59,7 +59,7 @@ let onLoad = async function () {
     CardViewer.Elements.saveSearch.click(() => {
         let strs = [];
         for(let [key, value] of Object.entries(CardViewer.query())) {
-            if(value !== "" && value !== "any" && key !== "imported" && key !== "notImported") {
+            if(value !== "" && value !== "any" && key !== "imported" && key !== "notImported" && key !== "alsoImported") {
                 if(key === "retrain" && !value) continue;
                 if(key.indexOf("Compare") !== -1 && value === "equal") continue;
                 strs.push(key + "=" + value);
@@ -120,7 +120,7 @@ let onLoad = async function () {
                     el = CardViewer.Elements.cardTrapKind;
                 }
             }
-            else if(!el && key === "group") {
+            else if(!el && (key === "group" || key === "alsoImported")) {
                 continue;
             }
             value = parseStringValue(value);
