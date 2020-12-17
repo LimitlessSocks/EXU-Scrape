@@ -61,7 +61,7 @@ class Deck {
         
         let j = 0;
         let cIndex = 0;
-        console.log(this.target.children());
+        // console.log(this.target.children());
         for(let container of this.target.children()) {
             let i = 0;
             let multiplier = 1;

@@ -31,26 +31,11 @@ let onLoad = async function () {
     let tags = ["Forbidden", "Limited", "Semi-Limited", "Unlimited"];
     
     const NewCards = [
-        10512,
-        3212,
-        11230,
-        // imports
-        11139, 11142, 11155, 11151, 11152, 11141, 11140, 11143, 11144, 
-        11145, 10704, 11146, 11153, 11154, 11157, 11156, 11149, 11148,
-        11150, 11158, 11147, 11159, 11160, 11161,
+        8521, 8118, 10208, 5788, 8489, 8490, 8488, 8335, 5035, 4599, 3885, 9624,
+        1673, 5543, 4909, 5188, 8452, 10694, 6339, 9242, 4878, 10505,
+        7229,
+        4396, 11110, 10669, 5793, 6874, 6873, 4432, 9693, 8537,
     ];
-    //ADAMANCIPATOR RESEARCHER
-    //CYBER-STEIN
-    //ACCESSCODE TALKER
-    //HIERATIC SEAL OF THE HEAVENLY SPHERES
-    //SIMORGH, BIRD OF SOVREIGNTY
-    //NATURIA BEAST
-    //ABYSS DWELLER
-    //SMOKE GRENADE OF THE THIEF
-    //DANGER?! JACKALOPE?
-    //DANGER?! TSUCHINOKO?
-    //E - EMERGENCY CALL
-    //THERE CAN BE ONLY ONE
     
     const GradeFilters = [
         CardViewer.Filters.isNormal,

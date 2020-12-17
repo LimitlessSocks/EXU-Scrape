@@ -733,6 +733,11 @@ CardViewer.composeResultSmall = function (card) {
     res.addClass(card.card_type.toLowerCase());
     res.addClass(card.monster_color.toLowerCase());
     
+    if(card.exu_ban_import) {
+        res.addClass("unimported");
+        console.log(card.name, res);
+    }
+    
     let isPrivate = card.custom && card.custom > 1
     
     if(isPrivate) {

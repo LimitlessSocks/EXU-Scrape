@@ -201,7 +201,7 @@ database = [
     5834507, #Nadiupant
     4806770, #Chronotiger
     5145725, #Remnant
-    5587605, #Hot Pink
+    # 5587605, #Hot Pink
     5917260, #Koala
     2788655, #Ravager
     5824862, #Titanic Moth
@@ -260,7 +260,7 @@ database = [
     6585445, #PPDC
     6563112, #NTG
     6582550, #Darkwater
-    6560628, #Charismatic
+    # 6560628, #Charismatic
     6600896, #Glow Gods
     6604359, #Chronoruler
     6601142, #Serpent Night
@@ -319,15 +319,15 @@ database = [
 ]
 
 banlist = [
-    6358712,          #Imported 1
-    6751103,          #Imported 2
-    6358715,          #Unimported
+    6358712,                    #Imported 1
+    6751103,                    #Imported 2
+    6358715,                    #Unimported
     
-    5895579,          #Retrains
-    5855756, 5856014, #Forbidden
-    5857248,          #Limited
-    5857281,          #Semi-Limited
-    5857285,          #Unlimited
+    5895579,                    #Retrains
+    5855756, 5856014, 7000259,  #Forbidden
+    5857248,                    #Limited
+    5857281,                    #Semi-Limited
+    5857285,                    #Unlimited
 ]
 
 alt_arts = [
@@ -368,6 +368,7 @@ extra_info = {
     
     5855756 => EXU_BANNED,
     5856014 => EXU_BANNED,
+    7000259 => EXU_BANNED,
     
     5857248 => EXU_LIMITED,
     
