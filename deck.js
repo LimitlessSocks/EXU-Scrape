@@ -46,7 +46,7 @@ class Deck {
         if(index === null) {
             index = destDeck.length;
         }
-        console.log(this.decks, location);
+        // console.log(this.decks, location);
         destDeck.splice(index, 0, cardId);
     }
     
@@ -238,9 +238,11 @@ CardViewer.Editor.trackMouse = function (deck, composed, offset) {
         for(let child of allCards) {
             child = $(child);
             let childLocation = deck.getLocation(child.data("id"));
+            let childCurrentDeck = child.data("deck");
             let isSame = child.data("index") === sourceIndex
-                && child.data("deck") === composed.data("deck");
+                && childCurrentDeck === composed.data("deck");
             let isInvalidDestination = childLocation !== sourceLocation;
+            isInvalidDestination = isInvalidDestination && childCurrentDeck !== Deck.Location.SIDE;
             if(isSame || isInvalidDestination) {
                 continue;
             }
