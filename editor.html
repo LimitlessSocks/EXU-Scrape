@@ -29,6 +29,8 @@
     <h1 id=top>EXU Deck Editor [WIP]</h1>
     <label for="importDeck" class="fake-button">Import deck</label>
     <input id="importDeck" type="file" style="position: fixed; top: -100em">
+    <button id="clearDeck">Clear</button>
+    <button id="sortDeck">Sort</button>
 </header>
 <div id="majorContainer">
 <div id="cardPreview"></div>
@@ -103,6 +105,63 @@
             </tr>
             <tbody class="ifMonster" id="monsterStats">
                 <tr>
+                    <td>Category</td>
+                    <td>
+                        <select id="cardMonsterCategory">
+                            <option value=any></option>
+                            <option value="normal">Normal</option>
+                            <option value="effect">Effect</option>
+                            <option value="ritual">Ritual</option>
+                            <option value="fusion">Fusion</option>
+                            <option value="synchro">Synchro</option>
+                            <option value="xyz">Xyz</option>
+                            <option value="pendulum">Pendulum</option>
+                            <option value="link">Link</option>
+                            <option value="leveled">Leveled</option>
+                            <option value="maindeck">Main Deck</option>
+                            <option value="extradeck">Extra Deck</option>
+                            <option value="noneffect">Non-Effect</option>
+                            <option value="flip">Flip</option>
+                        </select>
+                    </td>
+                    <td>ATK</td>
+                    <td><select id=cardATKCompare class=thin>
+                        <option value="equal">=</option>
+                        <option value="lessequal">&le;</option>
+                        <option value="less">&lt;</option>
+                        <option value="greaterequal">&ge;</option>
+                        <option value="greater">&gt;</option>
+                        <option value="unequal">&ne;</option>
+                        <!-- <option value="choice">any of</option> -->
+                    </select></td>
+                    <td><input type=number id=cardATK min=0 max=9999 step=50></td>
+                </tr>
+                <tr>
+                    <td>Ability</td>
+                    <td>
+                        <select id="cardMonsterAbility">
+                            <option value=any></option>
+                            <option value="union">Union</option>
+                            <option value="gemini">Gemini</option>
+                            <option value="spirit">Spirit</option>
+                            <option value="tuner">Tuner</option>
+                            <option value="toon">Toon</option>
+                            <option value="noneffect">Non-Effect</option>
+                        </select>
+                    </td>
+                    <td>DEF</td>
+                    <td><select id=cardDEFCompare class=thin>
+                        <option value="equal">=</option>
+                        <option value="lessequal">&le;</option>
+                        <option value="less">&lt;</option>
+                        <option value="greaterequal">&ge;</option>
+                        <option value="greater">&gt;</option>
+                        <option value="unequal">&ne;</option>
+                        <!-- <option value="choice">any of</option> -->
+                    </select></td>
+                    <td><input type=number id=cardDEF min=0 max=9999 step=50></td>
+                </tr>
+                <tr>
                     <td>Attribute</td>
                     <td>
                         <select id="cardMonsterAttribute">
@@ -116,6 +175,17 @@
                             <option value="DIVINE">DIVINE</option>
                         </select>
                     </td>
+                    <td>Level/Rank:</td>
+                    <td><select id=cardLevelCompare class=thin>
+                        <option value="equal">=</option>
+                        <option value="lessequal">&le;</option>
+                        <option value="less">&lt;</option>
+                        <option value="greaterequal">&ge;</option>
+                        <option value="greater">&gt;</option>
+                        <option value="unequal">&ne;</option>
+                        <!-- <option value="choice">any of</option> -->
+                    </select></td>
+                    <td><input type=number id=cardLevel min=0 max=12></td>
                 </tr>
                 <tr>
                     <td>Type</td>
@@ -148,53 +218,6 @@
                             <option value="Zombie">Zombie</option>
                             <option value="Creator God">Creator God</option>
                             <option value="Divine-Beast">Divine-Beast</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Level/Rank/Link Rating:</td>
-                    <td><input type=number id=cardLevel min=0 max=12></td>
-                </tr>
-                <tr>
-                    <td>ATK</td>
-                    <td><input type=number id=cardATK min=0 max=9999 step=50></td>
-                </tr>
-                <tr>
-                    <td>DEF</td>
-                    <td><input type=number id=cardDEF min=0 max=9999 step=50></td>
-                </tr>
-                <tr>
-                    <td>Category</td>
-                    <td>
-                        <select id="cardMonsterCategory">
-                            <option value=any></option>
-                            <option value="normal">Normal</option>
-                            <option value="effect">Effect</option>
-                            <option value="ritual">Ritual</option>
-                            <option value="fusion">Fusion</option>
-                            <option value="synchro">Synchro</option>
-                            <option value="xyz">Xyz</option>
-                            <option value="pendulum">Pendulum</option>
-                            <option value="link">Link</option>
-                            <option value="leveled">Leveled</option>
-                            <option value="maindeck">Main Deck</option>
-                            <option value="extradeck">Extra Deck</option>
-                            <option value="noneffect">Non-Effect</option>
-                            <option value="flip">Flip</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Ability</td>
-                    <td>
-                        <select id="cardMonsterAbility">
-                            <option value=any></option>
-                            <option value="union">Union</option>
-                            <option value="gemini">Gemini</option>
-                            <option value="spirit">Spirit</option>
-                            <option value="tuner">Tuner</option>
-                            <option value="toon">Toon</option>
-                            <option value="noneffect">Non-Effect</option>
                         </select>
                     </td>
                 </tr>

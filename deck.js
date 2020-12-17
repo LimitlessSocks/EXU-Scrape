@@ -46,6 +46,14 @@ class Deck {
         destDeck.push(cardId);
     }
     
+    swapCards(aloc, a, bloc, b) {
+        [this.decks[aloc][a], this.decks[bloc][b]] = [this.decks[bloc][b], this.decks[aloc][a]];
+    }
+    
+    removeCard(deck, index) {
+        this.decks[deck].splice(index, 1);
+    }
+    
     applyCSS() {
         if(!this.target) {
             return;
@@ -77,7 +85,9 @@ class Deck {
             let containerWidth = Math.floor(deckWidthInCards / multiplier);
             // let containerWidth = Math.floor(deckWidthInCards / multiplier);
             let cardFound = false;
-            for(let card of $(container).children()) {
+            let children = $(container).children();
+            let size = children.length;
+            for(let card of children) {
                 // console.log(i, cIndex, j);
                 let heightMultiplier = j + cIndex * 0.2;
                 card = $(card);
@@ -108,6 +118,7 @@ class Deck {
             return;
         }
         
+        let j = 0;
         for(let deck of this.decks) {
             let i = 0;
             let container = $("<div class=sub-deck-container>");
@@ -120,17 +131,27 @@ class Deck {
                     // continue;
                 }
                 let composed = CardViewer.composeResultDeckPreview(card);
+                composed.data("index", i);
+                composed.data("deck", j);
+                composed.data("id", id);
                 CardViewer.Editor.addHoverTimerPreview(composed, id);
                 if(this.editable) {
                     composed.mousedown((e) => {
+                        // only accept left mouse click
+                        if(e.which !== 1) return;
                         let offset = getOffsetFrom(e.originalEvent, composed);
-                        CardViewer.Editor.trackMouse(this, container, composed, offset);
+                        CardViewer.Editor.trackMouse(this, composed, offset);
+                    });
+                    composed.contextmenu((e) => {
+                        e.preventDefault();
+                        this.removeCard(composed.data("deck"), composed.data("index"));
+                        CardViewer.Editor.updateDeck();
                     });
                 }
-                composed.data("index", i);
                 container.append(composed);
                 i++;
             }
+            j++;
             target.append(container);
         }
         
@@ -176,17 +197,22 @@ CardViewer.Editor.addHoverTimerPreview = function (composed, id) {
         hoverTimer = setTimeout(setPreviewToThis, CardViewer.Editor.TIMER_DELAY);
     });
     composed.mouseleave(() => {
-        // console.log("leaving");
         clearTimeout(hoverTimer);
         hoverTimer = null;
     });
 };
-CardViewer.Editor.trackMouse = function (deck, container, composed, offset) {
+CardViewer.Editor.trackMouse = function (deck, composed, offset) {
     offset = offset || { x: 0, y: 0 };
     composed.addClass("dragging");
     offset.x += 10;
     offset.y -= 15;
     let sourceIndex = composed.data("index");
+    let sourceDeck = composed.data("deck");
+    let sourceLocation = deck.getLocation(composed.data("id"));
+    let focusedChild = null;
+    
+    let container = $(".sub-deck-container");
+    
     let onMove = (e) => {
         let { x, y } = getOffsetFrom(e.originalEvent, container);
         // x -= offset.x;
@@ -195,22 +221,26 @@ CardViewer.Editor.trackMouse = function (deck, container, composed, offset) {
         composed.css("top", (y - offset.y) + "px");
         // let minDistance = Infinity;
         // let minChild = null;
-        container.children().removeClass("focused");
-        let { screenX, screenY } = e.originalEvent;
-        let focusedChild = null;
-        for(let child of container.children()) {
+        let allCards = container.find(".editor-item");
+        allCards.removeClass("focused");
+        // let { screenX, screenY } = e.originalEvent;
+        let { clientX, clientY } = e.originalEvent;
+        
+        let myX, myY;
+        myX = clientX;
+        myY = clientY;
+        
+        for(let child of allCards) {
             child = $(child);
             if(child.data("index") === sourceIndex) continue;
+            let childLocation = deck.getLocation(child.data("id"));
+            if(childLocation !== sourceLocation) continue;
             let childOffset = child.offset();
             let containerOffset = container.offset();
             let bounds = child.get(0).getBoundingClientRect();
-            let isLeftRightBounded = bounds.left <= screenX && screenX <= bounds.right;
-            // let isTopBottomBounded = bounds.top <= screenY && screenY <= bounds.bottom;
-            let isTopBottomBounded = bounds.bottom <= screenY && screenY <= bounds.top;//TODO: fix one of these
-            
-            // console.log(isLeftRightBounded, isTopBottomBounded);
+            let isLeftRightBounded = bounds.left <= myX && myX <= bounds.right;
+            let isTopBottomBounded = bounds.top <= myY && myY <= bounds.bottom;
             if(isLeftRightBounded && isTopBottomBounded) {
-                console.log("Found!");
                 focusedChild = child;
                 break;
             }
@@ -219,11 +249,25 @@ CardViewer.Editor.trackMouse = function (deck, container, composed, offset) {
             focusedChild.addClass("focused");
         }
     };
-    $(window).mousemove(onMove);
-    $(window).mouseup(() => {
+    let onMouseUp = (e) => {
         composed.removeClass("dragging");
+        //TODO: just handle it with a single listener
         $(window).unbind("mousemove", onMove);
-    });
+        $(window).unbind("mouseup", onMouseUp);
+        
+        if(!focusedChild) {
+            focusedChild = composed;
+        }
+        let myIndex = composed.data("index");
+        let targetIndex = focusedChild.data("index");
+        deck.swapCards(
+            composed.data("deck"), myIndex,
+            focusedChild.data("deck"), targetIndex
+        );
+        CardViewer.Editor.updateDeck();
+    };
+    $(window).mousemove(onMove);
+    $(window).mouseup(onMouseUp);
 };
 CardViewer.Editor.recalculateView = function () {
     const MARGIN = 24;
@@ -572,5 +616,5 @@ CardViewer.excludeTcg = false;
 CardViewer.Editor.updateDeck = function (deckInstance = CardViewer.Editor.DeckInstance) {
     CardViewer.Elements.deckEditor.empty();
     CardViewer.Editor.DeckInstance.renderHTML(CardViewer.Elements.deckEditor);
-    CardViewer.Editor.setPreview(0);
+    // CardViewer.Editor.setPreview(0);
 };

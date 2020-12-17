@@ -44,6 +44,9 @@ let onLoad = async function () {
     CardViewer.Elements.cardMonsterAttribute = $("#cardMonsterAttribute");
     CardViewer.Elements.cardATK = $("#cardATK");
     CardViewer.Elements.cardDEF = $("#cardDEF");
+    CardViewer.Elements.cardLevelCompare = $("#cardLevelCompare");
+    CardViewer.Elements.cardATKCompare = $("#cardATKCompare");
+    CardViewer.Elements.cardDEFCompare = $("#cardDEFCompare");
     CardViewer.Elements.toTopButton = $("#totop");
     CardViewer.Elements.saveSearch = $("#saveSearch");
     CardViewer.Elements.clearSearch = $("#clearSearch");
@@ -95,6 +98,7 @@ let onLoad = async function () {
         $(el).keypress((event) => {
             if(event.originalEvent.code === "Enter") {
                 CardViewer.submit();
+                // alert("submitting");
             }
         });
     }
@@ -143,6 +147,19 @@ let onLoad = async function () {
         };
         reader.readAsText(file);
     });
+    
+    $("#clearDeck").click(() => {
+        CardViewer.Editor.DeckInstance.clear();
+        CardViewer.Editor.updateDeck();
+    });
+    
+    $("#minimizeSearchOptions").click(() => {
+        CardViewer.Elements.searchParameters.toggle();
+        CardViewer.Editor.recalculateView();
+    });
+    
+    CardViewer.Elements.nextPage.click(CardViewer.Search.nextPage);
+    CardViewer.Elements.previousPage.click(CardViewer.Search.previousPage);
 };
 
 let testDeck = function () {

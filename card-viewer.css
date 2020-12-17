@@ -41,6 +41,7 @@ button, .fake-button {
     color: white;
     cursor: pointer;
     font-family: "Gadugi", sans-serif;
+    font-size: 0.85em;
 }
 button:hover, .fake-button:hover {
     background: #552255;

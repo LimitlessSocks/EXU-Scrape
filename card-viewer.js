@@ -1032,6 +1032,9 @@ CardViewer.setUpTabSearchSwitching = function () {
             CardViewer.Elements.ifTrap.toggle(false);
             CardViewer.Elements.ifSpell.toggle(false);
         }
+        if(CardViewer.Editor) {
+            CardViewer.Editor.recalculateView();
+        }
     });
     CardViewer.Elements.cardType.change();
 };
