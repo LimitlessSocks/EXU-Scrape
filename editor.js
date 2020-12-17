@@ -117,6 +117,32 @@ let onLoad = async function () {
     elementChanged();
     
     testDeck();
+    
+    $("#importDeck").on("change", function () {
+        // console.log($(this).val());
+        let file = this.files[0];
+        let reader = new FileReader();
+        reader.onload = (e) => {
+            let text = e.target.result;
+            let parser = new DOMParser();
+            let xmlDoc = parser.parseFromString(text, "text/xml");
+            // window.xmlDoc = xmlDoc;
+            
+            CardViewer.Editor.DeckInstance.clear();
+            
+            let i = 0;
+            for(let deck of xmlDoc.querySelectorAll("main, side, extra")) {
+                for(let card of deck.querySelectorAll("card")) {
+                    CardViewer.Editor.DeckInstance.addCard(card.id, i);
+                }
+                i++;
+            }
+            
+            CardViewer.Editor.updateDeck();
+            // console.log(xmlDoc);
+        };
+        reader.readAsText(file);
+    });
 };
 
 let testDeck = function () {

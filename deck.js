@@ -30,6 +30,12 @@ class Deck {
         this.units = {};
     }
     
+    clear() {
+        for(let deck of this.decks) {
+            deck.splice(0);
+        }
+    }
+    
     getLocation(cardId) {
         let card = CardViewer.Database.cards[cardId];
         return CardViewer.Filters.isExtraDeck(card) ? Deck.Location.EXTRA : Deck.Location.MAIN;

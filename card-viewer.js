@@ -735,7 +735,7 @@ CardViewer.composeResultSmall = function (card) {
     
     if(card.exu_ban_import) {
         res.addClass("unimported");
-        console.log(card.name, res);
+        // console.log(card.name, res);
     }
     
     let isPrivate = card.custom && card.custom > 1
