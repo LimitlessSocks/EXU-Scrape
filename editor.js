@@ -224,9 +224,11 @@ let onLoad = async function () {
         });
     });
     
-    $("#minimizeSearchOptions").click(() => {
+    const minimizeSearchOptions = $("#minimizeSearchOptions");
+    minimizeSearchOptions.click(() => {
         CardViewer.Elements.searchParameters.toggle();
         CardViewer.Editor.recalculateView();
+        minimizeSearchOptions.text(minimizeSearchOptions.text() !== "Minimize Options" ? "Minimize Options" : "Maximize Options");
     });
     
     CardViewer.Elements.nextPage.click(CardViewer.Search.nextPage);
