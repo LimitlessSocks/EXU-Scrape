@@ -58,9 +58,19 @@ input[type=number] {
         width: 15px;
         height: 15px;
     }
-    .card-preview .markings, .card-preview .banicon, .card-preview .importicon {
+    .card-preview .markings,
+    .card-preview .banicon,
+    .card-preview .importicon,
+    .card-preview .attribute {
         float: right;
         text-align: right;
+    }
+    .card-preview .attribute {
+        width: 25px;
+        height: 25px;
+        padding: 5px;
+        position: relative;
+        top: -9px;
     }
     
 #deckEditor {

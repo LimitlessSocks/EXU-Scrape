@@ -417,7 +417,7 @@ CardViewer.composeResultCardPreview = function (card) {
     
     let stats = $("<div>");
     
-    let attribute = $("<img>");
+    let attribute = $("<img>").addClass("attribute");
     let marking = $("<div class=markings>");
     
     let linkArrows;
@@ -507,7 +507,7 @@ CardViewer.composeResultCardPreview = function (card) {
     effect = effect.split(/\r|\r?\n/).map(para => $("<p>").text(para));
     // effect = 
     
-    res.append($("<div class=result-inner>").append(id, name, img, linkArrows, marking, author, stats, effect
+    res.append($("<div class=result-inner>").append(id, name, img, attribute, linkArrows, marking, author, stats, effect
         // $("<table>").append(
             // $("<tr>").append(
                 // $("<td class=result-img-holder>").append(img, attribute, marking),
