@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <deck id="Dragon_Paladins">
  <meta>
-  <author>Ani</author>
-  <description>Dragon Paladins, otherwise known as the Paladins of [Adjective] Dragons, are a series of cards based on Level 4 Ritual Monsters that are meant to be alternative tech options for ease-of-access to certain cards based on that Paladin's steed. With support from ExaltedDawn, they are able to stand as a Deck all their own, with very easy access to the Rank 4 toolbox on turn 1, and formidable Battle Phases on later turns.</description>
+  <author>Ani (T.A.P.)</author>
+  <description>Dragon Paladins, otherwise known as the Paladins of [Adjective] Dragons, are a series of cards based on Level 4 Ritual Monsters that are meant to be alternative tech options for ease-of-access to certain cards based on that Paladin&apos;s steed. With support from ExaltedDawn, they are able to stand as a Deck all their own, with very easy access to the Rank 4 toolbox on turn 1, and formidable Battle Phases on later turns.</description>
   <name>Dragon Paladins</name>
+  <thumb>1916785</thumb>
  </meta>
  <main>
   <card id="1916785" passcode="">Dragon Paladin</card>
@@ -48,9 +49,9 @@
   <card id="9351" passcode="81306186">Renewal of the World</card>
  </main>
  <side>
-  <card id="11323" passcode="94145021">Droll & Lock Bird</card>
-  <card id="11323" passcode="94145021">Droll & Lock Bird</card>
-  <card id="11323" passcode="94145021">Droll & Lock Bird</card>
+  <card id="11323" passcode="94145021">Droll &amp; Lock Bird</card>
+  <card id="11323" passcode="94145021">Droll &amp; Lock Bird</card>
+  <card id="11323" passcode="94145021">Droll &amp; Lock Bird</card>
   <card id="10345" passcode="27204311">Nibiru, the Primal Being</card>
   <card id="10345" passcode="27204311">Nibiru, the Primal Being</card>
   <card id="10345" passcode="27204311">Nibiru, the Primal Being</card>

@@ -121,7 +121,7 @@ let onLoad = async function () {
     });
     elementChanged();
     
-    testDeck();
+    // testDeck();
     
     $("#importDeck").on("change", function () {
         // console.log($(this).val());
@@ -131,17 +131,27 @@ let onLoad = async function () {
             let text = e.target.result;
             let parser = new DOMParser();
             let xmlDoc = parser.parseFromString(text, "text/xml");
-            // window.xmlDoc = xmlDoc;
+            let deck = CardViewer.Editor.DeckInstance;
             
-            CardViewer.Editor.DeckInstance.clear();
+            deck.clear();
             
             let i = 0;
-            for(let deck of xmlDoc.querySelectorAll("main, side, extra")) {
-                for(let card of deck.querySelectorAll("card")) {
-                    CardViewer.Editor.DeckInstance.addCard(card.id, i);
+            for(let deckContainer of xmlDoc.querySelectorAll("main, side, extra")) {
+                for(let card of deckContainer.querySelectorAll("card")) {
+                    deck.addCard(card.id, i);
                 }
                 i++;
             }
+            
+            let author = xmlDoc.querySelector("meta author");
+            let description = xmlDoc.querySelector("meta description");
+            let name = xmlDoc.querySelector("meta name");
+            let thumb = xmlDoc.querySelector("meta thumb");
+            
+            if(author) deck.author = author.textContent;
+            if(description) deck.description = description.textContent;
+            if(name) deck.name = name.textContent;
+            if(thumb) deck.thumb = thumb.textContent;
             
             CardViewer.Editor.updateDeck();
             // console.log(xmlDoc);
@@ -172,14 +182,25 @@ let onLoad = async function () {
                     </tr>
                     <tr>
                         <th><label for="deckSaveThumb">Cover card:</label></th>
-                        <td><select id="deckSaveThumb"></select></td>
+                        <td><select id="deckSaveThumb">
+                            <option value="0"></option>
+                        </select></td>
                     </tr>
                 </table>
             `);
             let keys = [...new Set(CardViewer.Editor.DeckInstance.decks.flat())];
             html.find("#deckSaveThumb").append(
-                keys.map(key => $(`<option value="${key}">${CardViewer.Database.cards[key].name}</option>`))
+                keys.map(key =>
+                    $("<option>")
+                        .attr("value", key)
+                        .text(CardViewer.Database.cards[key].name)
+                )
             );
+            let deck = CardViewer.Editor.DeckInstance;
+            html.find("#deckSaveName").val(deck.name);
+            html.find("#deckSaveAuthor").val(deck.author);
+            html.find("#deckSaveDescription").val(deck.description);
+            html.find("#deckSaveThumb").val(deck.thumb);
             return html;
         },
         ["Save", "Cancel"],
@@ -194,6 +215,7 @@ let onLoad = async function () {
             deck.name        = html.find("#deckSaveName").val() || deck.name;
             deck.description = html.find("#deckSaveDescription").val() || deck.description;
             deck.author      = html.find("#deckSaveAuthor").val() || deck.author;
+            deck.thumb       = html.find("#deckSaveThumb").val() || deck.thumb;
             let xml = deck.toXML();
             downloadFile(xml, "text/xml", deck.getId() + ".xml");
         })

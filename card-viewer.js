@@ -53,6 +53,13 @@ const downloadFile = (content, type = "application/octet-stream", filename = nul
     anchor.get(0).click();
 };
 
+const escapeXMLString = (str) =>
+    str.replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&apos;");
+
 class Prompt {
     constructor(title, innerFn, buttons) {
         this.title = title;

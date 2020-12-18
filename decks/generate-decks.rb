@@ -71,7 +71,7 @@ def parse_deck!(deck_path)
             value = defaults[name] if value.empty?
             value
         },
-        doc.css("meta thumb")[0]["custom"] != "false"
+        (doc.css("meta thumb")[0]["custom"] != "false" rescue false)
     )
     
     File.write("#{id}.html", ds.to_html)

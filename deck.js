@@ -172,10 +172,10 @@ class Deck {
     
     toXML() {
         let deckString = ["main", "side", "extra"].map((name, i) =>
-            ` <${name}>\n` +
+            ` <${escapeXMLString(name)}>\n` +
             this.decks[i]
                 .map(id => CardViewer.Database.cards[id])
-                .map(card => `  <card id="${card.id}" passcode="${card.serial_number}">${card.name}</card>\n`
+                .map(card => `  <card id="${card.id}" passcode="${card.serial_number}">${escapeXMLString(card.name)}</card>\n`
                 ).join("") +
             ` </${name}>`
         ).join("\n");
@@ -183,9 +183,10 @@ class Deck {
 <?xml version="1.0" encoding="utf-8" ?>
 <deck id="${this.getId()}">
  <meta>
-  <author>${this.author}</author>
-  <description>${this.description}</description>
-  <name>${this.name}</name>
+  <author>${escapeXMLString(this.author)}</author>
+  <description>${escapeXMLString(this.description)}</description>
+  <name>${escapeXMLString(this.name)}</name>
+  <thumb>${this.thumb}</thumb>
  </meta>
 ${deckString}
 </deck>

@@ -2,6 +2,7 @@
     "order": [
         "spotlight",
         "topping",
+        "ready-made",
         "structures"
     ],
     
@@ -31,7 +32,8 @@
     "ready-made": {
         "name": "Ready-made Decklists",
         "lists": [
-            "ready-made/Dragon_Paladins.xml"
-        ],
+            "ready-made/Dragon_Paladins.xml",
+            "ready-made/Digital_Bugs.xml"
+        ]
     }
 }
