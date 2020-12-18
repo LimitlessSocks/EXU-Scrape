@@ -164,6 +164,12 @@ let onLoad = async function () {
         CardViewer.Editor.updateDeck();
     });
     
+    $("#sortDeck").click(() => {
+        CardViewer.Editor.DeckInstance.sort();
+        CardViewer.Editor.updateDeck();
+    });
+    
+    const deckInfoSavedPrompt = Prompt.OK("Deck Info Saved!");
     const exportPrompt = new Prompt("Export Deck",
         () => {
             let html = $(`
@@ -203,21 +209,29 @@ let onLoad = async function () {
             html.find("#deckSaveThumb").val(deck.thumb);
             return html;
         },
-        ["Save", "Cancel"],
+        ["Save Info", "Export Deck", "Cancel"],
+        "large",
     );
     $("#exportDeck").click(() => {
         exportPrompt.deploy().then(([buttonIndex, p]) => {
-            if(buttonIndex !== 0) {
+            if(buttonIndex === 2) {
                 return;
             }
+            
             let html = p.anchor;
             let deck = CardViewer.Editor.DeckInstance;
             deck.name        = html.find("#deckSaveName").val() || deck.name;
             deck.description = html.find("#deckSaveDescription").val() || deck.description;
             deck.author      = html.find("#deckSaveAuthor").val() || deck.author;
             deck.thumb       = html.find("#deckSaveThumb").val() || deck.thumb;
-            let xml = deck.toXML();
-            downloadFile(xml, "text/xml", deck.getId() + ".xml");
+            
+            if(buttonIndex === 0) {
+                deckInfoSavedPrompt.deploy();
+            }
+            else if(buttonIndex === 1) {
+                let xml = deck.toXML();
+                downloadFile(xml, "text/xml", deck.getId() + ".xml");
+            }
         })
         .catch(() => {
             //pass
@@ -233,6 +247,23 @@ let onLoad = async function () {
     
     CardViewer.Elements.nextPage.click(CardViewer.Search.nextPage);
     CardViewer.Elements.previousPage.click(CardViewer.Search.previousPage);
+    
+    /*
+    window.addEventListener("beforeunload", (event) => {
+        CardViewer.Editor.saveLocalDeck();
+    });
+    */
+    
+    const savePrompt = Prompt.OK("Deck Saved!");
+    
+    $("#saveDeck").click(() => {
+        CardViewer.Editor.saveLocalDeck();
+        savePrompt.deploy();
+    });
+    
+    if(CardViewer.Editor.loadLocalDeckIfAny()) {
+        CardViewer.Editor.setPreview(CardViewer.Editor.DeckInstance.thumb);
+    }
 };
 
 let testDeck = function () {

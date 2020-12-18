@@ -61,10 +61,11 @@ const escapeXMLString = (str) =>
         .replace(/'/g, "&apos;");
 
 class Prompt {
-    constructor(title, innerFn, buttons) {
+    constructor(title, innerFn, buttons, type = null) {
         this.title = title;
-        this.innerFn = innerFn;
+        this.innerFn = innerFn || (() => $(innerFn));
         this.buttons = buttons;
+        this.type = type;
     }
     
     deploy() {
@@ -76,13 +77,16 @@ class Prompt {
             }
             // console.log(e.target);
         });
-        let inner = this.innerFn(this);
+        let inner = this.innerFn(this) || $("");
         let buttonEls = this.buttons.map(text => $("<button>").text(text));
         inner = $("<div class=popup-inner>").append(
             $("<h2 class=popup-title>").text(this.title),
             inner,
-            buttonEls,
+            $("<div>").append(buttonEls),
         );
+        if(this.type !== null) {
+            inner.addClass(this.type);
+        }
         this.anchor.append(inner);
         return new Promise((resolve, reject) => {
             this.reject = reject;
@@ -106,6 +110,10 @@ class Prompt {
         if(reject && this.reject) {
             this.reject();
         }
+    }
+    
+    static OK(title) {
+        return new Prompt(title, null, ["OK"], "small");
     }
 };
 

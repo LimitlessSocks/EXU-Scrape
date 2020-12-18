@@ -34,8 +34,44 @@ class Deck {
         this.thumb = 0;
     }
     
+    toSimpleObject() {
+        return {
+            decks: this.decks,
+            editable: this.editable,
+            name: this.name,
+            description: this.description,
+            author: this.author,
+            thumb: this.thumb,
+            deckWidthInCards: this.deckWidthInCards,
+        };
+    }
+    
+    /*
+    static fromSimpleObject(obj) {
+        let res = new Deck();
+        Object.assign(res, obj);
+        return res;
+    }
+    */
+    
     getId() {
         return this.name.trim().replace(/[\s.\\\/"']/g, "_");
+    }
+    
+    sort() {
+        this.decks = this.decks.map(deck => {
+            let cards = deck.map(id => CardViewer.Database.cards[id]);
+            return [
+                "Monster",
+                "Spell",
+                "Trap",
+            ].flatMap(type => 
+                _F.sortBy(
+                    cards.filter(card => card.card_type === type),
+                    card => card.name
+                ).map(card => card.id)
+            );
+        });
     }
     
     clear() {
@@ -662,4 +698,17 @@ CardViewer.Editor.updateDeck = function (deckInstance = CardViewer.Editor.DeckIn
     CardViewer.Elements.deckEditor.empty();
     deckInstance.renderHTML(CardViewer.Elements.deckEditor);
     // CardViewer.Editor.setPreview(0);
+};
+
+CardViewer.Editor.saveLocalDeck = function () {
+    CardViewer.SaveData.set("deck", CardViewer.Editor.DeckInstance.toSimpleObject());
+};
+CardViewer.Editor.loadLocalDeckIfAny = function () {
+    let savedDeck = CardViewer.SaveData.get("deck");
+    if(savedDeck) {
+        Object.assign(CardViewer.Editor.DeckInstance, savedDeck);
+        CardViewer.Editor.updateDeck();
+        return true;
+    }
+    return false;
 };
