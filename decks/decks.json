@@ -26,5 +26,12 @@
             "top/Weekly23Tacticore1stPlace.xml",
             "top/EUCS1Titanus3rdPlace.xml"
         ]
+    },
+    
+    "ready-made": {
+        "name": "Ready-made Decklists",
+        "lists": [
+            "ready-made/Dragon_Paladins.xml"
+        ],
     }
 }

@@ -31,7 +31,6 @@ CardViewer.SaveData.init = () => {
     CardViewer.SaveData.sync();
 };
 CardViewer.SaveData.sync = () => {
-    console.log(CardViewer.SaveData.local, JSON.stringify(CardViewer.SaveData.local));
     localStorage.setItem(CardViewer.SaveData.KEY, JSON.stringify(CardViewer.SaveData.local));
 };
 CardViewer.SaveData.get = (key) => {
@@ -43,6 +42,65 @@ CardViewer.SaveData.set = (key, value) => {
 };
 
 CardViewer.SaveData.init();
+
+const downloadFile = (content, type = "application/octet-stream", filename = null) => {
+    let uri = "data:" + type + "," + encodeURIComponent(content);
+    let anchor = $("<a>");
+    anchor.attr("href", uri);
+    if(filename) {
+        anchor.attr("download", filename);
+    }
+    anchor.get(0).click();
+};
+
+class Prompt {
+    constructor(title, innerFn, buttons) {
+        this.title = title;
+        this.innerFn = innerFn;
+        this.buttons = buttons;
+    }
+    
+    deploy() {
+        this.anchor = $("<div>").addClass("popup-background");
+        
+        this.anchor.click(e => {
+            if(e.target == this.anchor.get(0)) {
+                this.close(true);
+            }
+            // console.log(e.target);
+        });
+        let inner = this.innerFn(this);
+        let buttonEls = this.buttons.map(text => $("<button>").text(text));
+        inner = $("<div class=popup-inner>").append(
+            $("<h2 class=popup-title>").text(this.title),
+            inner,
+            buttonEls,
+        );
+        this.anchor.append(inner);
+        return new Promise((resolve, reject) => {
+            this.reject = reject;
+            let i = 0;
+            for(let button of buttonEls) {
+                let v = i;
+                button.click(() => {
+                    resolve([v, this]);
+                    this.close();
+                });
+                i++;
+            }
+            $("body").append(this.anchor);
+        });
+    }
+    
+    close(reject = false) {
+        if(this.anchor) {
+            this.anchor.remove();
+        }
+        if(reject && this.reject) {
+            this.reject();
+        }
+    }
+};
 
 const CardsOfTheWeek = [
     1117429, //Battlewasp - Akiza the Berserker

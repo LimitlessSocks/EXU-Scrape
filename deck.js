@@ -28,6 +28,14 @@ class Deck {
         this.deckWidthInCards = 10;
         this.editable = editable;
         this.units = {};
+        this.name = "My Deck";
+        this.description = "";
+        this.author = "Anonymous";
+        this.thumb = 0;
+    }
+    
+    getId() {
+        return this.name.trim().replace(/[\s.\\\/"']/g, "_");
     }
     
     clear() {
@@ -160,6 +168,28 @@ class Deck {
         }
         
         this.applyCSS();
+    }
+    
+    toXML() {
+        let deckString = ["main", "side", "extra"].map((name, i) =>
+            ` <${name}>\n` +
+            this.decks[i]
+                .map(id => CardViewer.Database.cards[id])
+                .map(card => `  <card id="${card.id}" passcode="${card.serial_number}">${card.name}</card>\n`
+                ).join("") +
+            ` </${name}>`
+        ).join("\n");
+        return `
+<?xml version="1.0" encoding="utf-8" ?>
+<deck id="${this.getId()}">
+ <meta>
+  <author>${this.author}</author>
+  <description>${this.description}</description>
+  <name>${this.name}</name>
+ </meta>
+${deckString}
+</deck>
+        `.trim();
     }
 }
 Deck.Location = {
@@ -629,6 +659,6 @@ CardViewer.excludeTcg = false;
 
 CardViewer.Editor.updateDeck = function (deckInstance = CardViewer.Editor.DeckInstance) {
     CardViewer.Elements.deckEditor.empty();
-    CardViewer.Editor.DeckInstance.renderHTML(CardViewer.Elements.deckEditor);
+    deckInstance.renderHTML(CardViewer.Elements.deckEditor);
     // CardViewer.Editor.setPreview(0);
 };

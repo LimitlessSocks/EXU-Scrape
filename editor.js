@@ -154,6 +154,54 @@ let onLoad = async function () {
         CardViewer.Editor.updateDeck();
     });
     
+    const exportPrompt = new Prompt("Export Deck",
+        () => {
+            let html = $(`
+                <table>
+                    <tr>
+                        <th><label for="deckSaveName">Name:</label></th>
+                        <td><input id="deckSaveName"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="deckSaveAuthor">Author:</label></th>
+                        <td><input id="deckSaveAuthor"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="deckSaveDescription">Description:</label></th>
+                        <td><textarea id="deckSaveDescription"></textarea></td>
+                    </tr>
+                    <tr>
+                        <th><label for="deckSaveThumb">Cover card:</label></th>
+                        <td><select id="deckSaveThumb"></select></td>
+                    </tr>
+                </table>
+            `);
+            let keys = [...new Set(CardViewer.Editor.DeckInstance.decks.flat())];
+            html.find("#deckSaveThumb").append(
+                keys.map(key => $(`<option value="${key}">${CardViewer.Database.cards[key].name}</option>`))
+            );
+            return html;
+        },
+        ["Save", "Cancel"],
+    );
+    $("#exportDeck").click(() => {
+        exportPrompt.deploy().then(([buttonIndex, p]) => {
+            if(buttonIndex !== 0) {
+                return;
+            }
+            let html = p.anchor;
+            let deck = CardViewer.Editor.DeckInstance;
+            deck.name        = html.find("#deckSaveName").val() || deck.name;
+            deck.description = html.find("#deckSaveDescription").val() || deck.description;
+            deck.author      = html.find("#deckSaveAuthor").val() || deck.author;
+            let xml = deck.toXML();
+            downloadFile(xml, "text/xml", deck.getId() + ".xml");
+        })
+        .catch(() => {
+            //pass
+        });
+    });
+    
     $("#minimizeSearchOptions").click(() => {
         CardViewer.Elements.searchParameters.toggle();
         CardViewer.Editor.recalculateView();
