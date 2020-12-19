@@ -147,6 +147,11 @@ database = [
     6318313, #Generation Fish Support
     6858407, #Graydle Support
     6819600, #Prometeor Support
+    4805092, #Legendary Dragon Support
+    6981414, #Magical Hat Support
+    6952371, #True King Retrains
+    7003669, #Appliancer Support
+    6993829, #Lair of Darkness Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -302,6 +307,7 @@ database = [
     6848354, #The 9s
     6948850, #Mekkallegiate
     6933560, #Revived Beasts
+    4355718, #Wild Rose
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
