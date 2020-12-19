@@ -684,7 +684,7 @@ CardViewer.createFilter = function (query, exclude = null) {
         // visibility filter
         // CardViewer.textAnyComparator(query.visibility, _F.propda("custom")),
         (card) =>
-            query.visibility === "any"
+            query.visibility === "any" || !query.visibility
                 ? true
                 : query.visibility == 1 || query.visibility == 2
                     ? card.custom == query.visibility
@@ -695,6 +695,7 @@ CardViewer.createFilter = function (query, exclude = null) {
                             : card.custom,
     ];
     // import filters
+    // console.log(query, !query.alsoImported);
     if(!query.alsoImported) {
         filters.push(
             // import filter

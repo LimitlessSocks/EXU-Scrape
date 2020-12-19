@@ -92,8 +92,10 @@ let onLoad = async function () {
                     }
                 }),
         });
+        
+        let selection = CardViewer.Search.pages.flat();
         let header = $("<h2 class=main>")
-            .text(tag + " Cards (" + CardViewer.Search.pages[0].length + ")")
+            .text(tag + " Cards (" + selection.length + ")")
             .attr("id", tag)
             .append($("<a class=top-arrow>").text("\u2b06").attr("href", "#top"));
         CardViewer.Elements.results.append(header);
@@ -110,6 +112,7 @@ let onLoad = async function () {
     appendSearchPage(results, "Retrained");
     
     let importResults = CardViewer.filter({ imported: true, });
+    console.log(importResults);
     appendSearchPage(importResults, "Imported");
     
     for(let i = 0; i <= 3; i++) {
