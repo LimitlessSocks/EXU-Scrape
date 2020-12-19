@@ -340,19 +340,21 @@ test = [
 
 beta = [
     #prio
-    6952745, #Tindangle
-    6942124, #Sock's Generics 21
-    6980225, #Vector's Generics
-    6981414, #Magical Hats Support
+    6980225, #Vector Singles
+    7002660, #Cipher
+    7003838, #Anon Singles
+    2021204, #Benten Retrain
     6992422, #Trapod
-    6993829, #LOD
+    7015993, #Sacred Beast Support
     #reg
     6222166, #Ananta
-    6962184, #Spellmaker
     6979146, #TG Support
     6670355, #Railreich
     6811695, #Catacomb
     2942421, #Antrap
+    5967432, #Masquerado
+    6770598, #Bleakstory
+    6560628, #Charismatic
 ]
 
 
