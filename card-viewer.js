@@ -631,7 +631,7 @@ CardViewer.COMPARES = {
 }
 CardViewer.comparingComparator = (needle, compareString, fn = _F.id) => {
     let cmp = CardViewer.COMPARES[compareString];
-    console.log(needle, compareString, cmp);
+    // console.log(needle, compareString, cmp);
     if(compareString === "choice") {
         needle = needle.toString().split(/[,\s]\s*/)
             .map(e => parseInt(e, 10));
@@ -639,12 +639,12 @@ CardViewer.comparingComparator = (needle, compareString, fn = _F.id) => {
     else {
         needle = parseInt(needle, 10);
     }
-    let once = true;
+    // let once = true;
     return (card) => {
-        if(once){
-            once=false;
-            console.log(fn(card), needle, cmp(fn(card), needle));
-        }
+        // if(once){
+            // once=false;
+            // console.log(fn(card), needle, cmp(fn(card), needle));
+        // }
         return cmp(fn(card), needle);
     }
 };
@@ -682,7 +682,17 @@ CardViewer.createFilter = function (query, exclude = null) {
         // retrain filter
         CardViewer.boolExclusiveComparator(query.retrain, _F.propda("exu_retrain")),
         // visibility filter
-        CardViewer.textAnyComparator(query.visibility, _F.propda("custom")),
+        // CardViewer.textAnyComparator(query.visibility, _F.propda("custom")),
+        (card) =>
+            query.visibility === "any"
+                ? true
+                : query.visibility == 1 || query.visibility == 2
+                    ? card.custom == query.visibility
+                    : query.visibility == 3
+                        ? card.tcg && !card.ocg
+                        : query.visibility == 4
+                            ? card.ocg && !card.tcg
+                            : card.custom,
     ];
     // import filters
     if(!query.alsoImported) {
@@ -759,6 +769,9 @@ CardViewer.filter = function (query, exclude = null) {
         if(CardViewer.excludeTcg && (card.tcg || card.ocg)) {
             continue;
         }
+        if(card.rush) {
+            continue;
+        }
         if(filter(card)) {
             cards.push(card);
         }
@@ -786,6 +799,7 @@ const BANLIST_ICONS = {
     
     imported: getIcon("banlist-import"),
     notImported: getIcon("banlist-no-import"),
+    ocg: getIcon("ocg"),
 };
 
 let arrowIterateOrder = [
@@ -928,6 +942,10 @@ CardViewer.composeResultSmall = function (card) {
     }
     else if(card.exu_import) {
         importMarker.attr("src", BANLIST_ICONS.imported);
+    }
+    else if(!card.custom && !card.tcg && card.ocg) {
+        importMarker.addClass("wide");
+        importMarker.attr("src", BANLIST_ICONS.ocg);
     }
     
     if(card.exu_limit !== 3) {

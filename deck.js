@@ -655,6 +655,10 @@ CardViewer.composeResultDeckPreview = function (card) {
     if(card.exu_import) {
         importMarker.attr("src", BANLIST_ICONS.imported);
     }
+    else if(!card.custom && !card.tcg && card.ocg) {
+        importMarker.addClass("wide");
+        importMarker.attr("src", BANLIST_ICONS.ocg);
+    }
     let hasBanMarker = !!banMarker.attr("src");
     let hasImportMarker = !!importMarker.attr("src");
     let iconPosition = 0;

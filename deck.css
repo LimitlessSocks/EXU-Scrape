@@ -193,6 +193,9 @@ header > * {
         width: 250px;
         height: 250px;
     }
+    .editor-item .wide {
+        width: 500px;
+    }
     .editor-item .icon0 {
         top: 100px;
     }

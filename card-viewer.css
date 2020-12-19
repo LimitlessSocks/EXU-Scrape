@@ -173,6 +173,9 @@ h1, h2, h3, h4, h5, h6 {
 .banicon, .importicon {
     width: 24px;
 }
+.wide {
+    width: 48px;
+}
 .banicon, .importicon, .cardicon {
     margin-left: 3px;
     margin-right: 3px;
