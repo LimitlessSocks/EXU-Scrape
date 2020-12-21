@@ -200,7 +200,7 @@ database = [
     5675322, #Kojoten
     4960158, #Skafos
     6236137, #Tacticore
-    5860710, #Uwumancer
+    # 5860710, #Uwumancer
     5541683, #Hydrovenal
     5766412, #Karmasattva
     5834507, #Nadiupant
@@ -349,18 +349,36 @@ beta = [
     6980225, #Vector Singles
     7002660, #Cipher
     7003838, #Anon Singles
-    2021204, #Benten Retrain
     6992422, #Trapod
     7015993, #Sacred Beast Support
+    6976617, #Evil HERO Support
+    5833853, #Gatr's Crabs
+    7022063, #Fisherman
+    7022155, #Halvoran
+    7022231, #White Aura
+    7008268, #Fiendfyre
+    7016480, #Sock's Generics
+    7022668, #Ava's Generics
+    6845786, #Powerpuff
+    7027706, #Anon solos
+    7027863, #Golden Ladybug Support
+    
     #reg
     6222166, #Ananta
-    6979146, #TG Support
     6670355, #Railreich
     6811695, #Catacomb
-    2942421, #Antrap
     5967432, #Masquerado
     6770598, #Bleakstory
     6560628, #Charismatic
+    6891534, #Harpie Support
+    6248536, #Kounat
+    7020690, #Primal Forest
+    7025794, #Performage Support
+    6579736, #Ashen
+    7026758, #Battleseer
+    7027802, #Deus X
+    7027111, #Medaka
+    6640772, #POG
 ]
 
 

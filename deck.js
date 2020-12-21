@@ -55,7 +55,7 @@ class Deck {
     */
     
     getId() {
-        return this.name.trim().replace(/[\s.\\\/"']/g, "_");
+        return this.name.trim().replace(/\W+/g, "");
     }
     
     sort() {
