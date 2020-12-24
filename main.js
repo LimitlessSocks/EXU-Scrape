@@ -67,7 +67,8 @@ let onLoad = async function () {
         }
         if(strs.length || window.location.search) {
             window.location.search = encodeURI(strs.join(","))
-                .replaceAll(".", "%2E");
+                .replaceAll(".", "%2E")
+                .replaceAll(",", "%2C");
         }
     });
     
@@ -106,10 +107,14 @@ let onLoad = async function () {
     }
     
     if(window.location.search) {
-        let searchString = decodeURI(window.location.search.replace("%2E", "."));
+        let searchString = decodeURI(window.location.search);
         CardViewer.firstTime = false;
         let type = null;
         for(let pair of searchString.slice(1).split(",")) {
+            pair = pair.replace(
+                /%([0-9A-Fa-f]{2})/g,
+                (_, $1) => String.fromCharCode(parseInt($1, 16))
+            );
             let [ key, value ] = pair.split(/=(.+)?/);
             let el = KeyToElement[key];
             if(!el && key === "kind") {

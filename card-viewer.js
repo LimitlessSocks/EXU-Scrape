@@ -465,7 +465,7 @@ CardViewer.listArchetypes = () => {
     let archetypes = new Set();
     
     for(let card of Object.values(CardViewer.Database.cards)) {
-        if(card.tcg || card.ocg) {
+        if(card.tcg || card.ocg || CardViewer.Filters.isNormal(card)) {
             continue;
         }
         for(let [match, g1] of card.effect.matchAll(/"([^"]*?[^\s"])(?:\(s\))?"/g)) {

@@ -156,7 +156,7 @@ database = [
     # Archetypes
     # 4327693, #Lacrimosa
     4367824, #Death Aspects
-    4376011, #Combat Mechs
+    # 4376011, #Combat Mechs
     4523067, #Voltron
     4385932, #Starbaric Crystal Beasts
     4540185, #Emeraheart
@@ -181,7 +181,7 @@ database = [
     5597068, #Goo-T
     # 5576395, #Heaven-Knights
     5582929, #Seafolk
-    4399429, #Hakaishin Archfiend
+    # 4399429, #Hakaishin Archfiend
     5592020, #Bound
     # 4359326, #Eldertech
     4050998, #Mage & Spell Tomes
