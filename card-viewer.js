@@ -265,6 +265,8 @@ const RetrainMap = {
     1951635: 4546,      //Penultimate Offering -> Ultimate Offering
     1768996: 310,       //Curse of Overconfidence -> Bad Reaction to Simochi
     1865422: 7489,      //Majespecter Dragon - Ryu -> Majespecter Unicorn - Kirin
+    1994622: 8335,      //True King Lepresocis, the Diseased -> True King Lithosagym, the Disaster
+    1961738: 8521,      //True King's Diagram -> Dragonic Diagram
 };
 
 const LINK_ARROWS = {
