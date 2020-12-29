@@ -152,6 +152,11 @@ database = [
     6952371, #True King Retrains
     7003669, #Appliancer Support
     6993829, #Lair of Darkness Support
+    7015993, #Sacred Beast Support
+    7027863, #Golden Ladybug Support
+    7002660, #Cipher Support
+    5833853, #Crab King Support
+    7025794, #Performage Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -173,7 +178,7 @@ database = [
     4460492, #Holifear
     5323883, #Digitallias
     5416935, #Akatsuki
-    5304027, #Pyre
+    # 5304027, #Pyre
     5396113, #Terra Basilisk
     5490132, #Sunavalon
     5187975, #Rulers of Name
@@ -308,6 +313,15 @@ database = [
     6948850, #Mekkallegiate
     6933560, #Revived Beasts
     4355718, #Wild Rose
+    7003838, #Mechatech Dragons Eclipse and Nova + Overfunded Research
+    5967432, #Masquerado
+    7008268, #Fiendfyre
+    7020690, #Primal Forest
+    6845786, #Powerpuff
+    7022155, #Halvoran
+    6811695, #Catacomb
+    6670355, #Railreich
+    7027111, #Medaka
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
