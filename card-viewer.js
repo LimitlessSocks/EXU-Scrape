@@ -264,6 +264,7 @@ const RetrainMap = {
     1948923: 8653,      //Wallfire Dragon -> Firewall dragon
     1951635: 4546,      //Penultimate Offering -> Ultimate Offering
     1768996: 310,       //Curse of Overconfidence -> Bad Reaction to Simochi
+    1865422: 7489,      //Majespecter Dragon - Ryu -> Majespecter Unicorn - Kirin
 };
 
 const LINK_ARROWS = {
