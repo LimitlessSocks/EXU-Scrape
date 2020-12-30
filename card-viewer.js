@@ -298,9 +298,14 @@ CardViewer.Database.initialReadAll = async function (...names) {
 const _F = {
     propda: (prop) => (obj) => obj[prop],
     id: x => x,
-    sortBy: (list, fn) =>
-        list.map(e => [e, fn(e)])
-            .sort(([l, lc], [r, rc]) => (lc > rc) - (lc < rc))
+    sortBy: (list, ...fns) =>
+        list.map(e => [e, fns.map(fn => fn(e))])
+            .sort(([l, lcs], [r, rcs]) =>
+                lcs.map((lc, i) => {
+                    rc = rcs[i];
+                    return (lc > rc) - (lc < rc);
+                }).find(x => x) || 0
+            )
             .map(([e, ec]) => e),
 };
 

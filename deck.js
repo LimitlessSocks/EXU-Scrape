@@ -73,18 +73,31 @@ class Deck {
     }
     
     sort() {
+        const CardTypeIterator = [
+            "Monster",
+            "Spell",
+            "Trap",
+        ];
+        const MonsterColorIterator = [
+            // "Pendulum",
+            "Fusion",
+            "Synchro",
+            "Xyz",
+            "Link",
+        ];
         this.decks = this.decks.map(deck => {
             let cards = deck.map(id => CardViewer.Database.cards[id]);
-            return [
-                "Monster",
-                "Spell",
-                "Trap",
-            ].flatMap(type => 
-                _F.sortBy(
+            
+            return CardTypeIterator.flatMap(type => {
+                
+                let subCards = _F.sortBy(
                     cards.filter(card => card.card_type === type),
-                    card => card.name
-                ).map(card => card.id)
-            );
+                    card => MonsterColorIterator.indexOf(card.monster_color),
+                    card => card.name,
+                );
+                
+                return subCards.map(card => card.id);
+            });
         });
     }
     
