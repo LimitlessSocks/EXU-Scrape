@@ -1,6 +1,5 @@
 const CARD_BASE_WIDTH = 813;
 const CARD_BASE_HEIGHT = 1185;
-const MAX_WIDTHS = [ 40, 10, 10 ];
 const NO_CARD = {
     src: "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/res/no_img.png",
     name: "Error: No Card",
@@ -17,6 +16,20 @@ const NO_CARD = {
     exu_limit: 3,
 };
 
+const splitInto = (total, bucketCount, min = 0) => {
+    let base = total / bucketCount | 0;
+    let remainder = total % bucketCount;
+    let needOverflow = bucketCount - remainder;
+    let buckets = [];
+    for(let i = 0; i < bucketCount; i++) {
+        buckets[i] = Math.max(min, base);
+        if(i >= needOverflow) {
+            buckets[i]++;
+        }
+    }
+    return buckets;
+};
+
 class Deck {
     constructor(main = [], side = [], extra = [], editable = true) {
         this.decks = [
@@ -26,6 +39,7 @@ class Deck {
         ];
         this.target = null;
         this.deckWidthInCards = 10;
+        this.mainDeckRowCount = 4;
         this.editable = editable;
         this.units = {};
         this.name = "My Deck";
@@ -98,6 +112,12 @@ class Deck {
         [this.decks[aloc][a], this.decks[bloc][b]] = [this.decks[bloc][b], this.decks[aloc][a]];
     }
     
+    moveInFrontOf(deck, drag, end) {
+        let destDeck = this.decks[deck];
+        let [val] = destDeck.splice(drag, 1);
+        destDeck.splice(end, 0, val);
+    }
+    
     removeCard(deck, index) {
         this.decks[deck].splice(index, 1);
     }
@@ -106,50 +126,84 @@ class Deck {
         if(!this.target) {
             return;
         }
-        const deckWidthInCards = this.deckWidthInCards;
-        let width = this.target.width() - 30;
-        let marginWidth = 5;
-        let unitWidth = width - (deckWidthInCards - 1) * marginWidth;
-        unitWidth /= deckWidthInCards;
-        let totalWidth = unitWidth + marginWidth;
         
-        let scaleRatio = unitWidth / CARD_BASE_WIDTH;
-        let unitHeight = CARD_BASE_HEIGHT * scaleRatio;
-        let totalHeight = unitHeight + marginWidth;
-        
-        this.units.scaleRatio = scaleRatio;
-        this.units.totalWidth = totalWidth;
-        this.units.totalHeight = totalHeight;
+        let pixelWidth = this.target.width() - 30;
+        let getUnits = (deckWidthInCards) => {
+            let marginWidth = 5;
+            let unitWidth = pixelWidth - (deckWidthInCards - 1) * marginWidth;
+            unitWidth /= deckWidthInCards;
+            let totalWidth = unitWidth + marginWidth;
+            
+            let scaleRatio = unitWidth / CARD_BASE_WIDTH;
+            let unitHeight = CARD_BASE_HEIGHT * scaleRatio;
+            let totalHeight = unitHeight + marginWidth;
+            
+            return {
+                scaleRatio: scaleRatio,
+                totalWidth: totalWidth,
+                totalHeight: totalHeight,
+                // unitWidth: unitWidth,
+            };
+        };
         
         let j = 0;
         let cIndex = 0;
-        // console.log(this.target.children());
+        let baseUnits = getUnits(this.deckWidthInCards);
+        
+        const inBetweenMultiplier = 0.3;
+        
         for(let container of this.target.children()) {
             let i = 0;
-            let multiplier = 1;
-            if(this.decks[cIndex].length > MAX_WIDTHS[cIndex]) {
-                multiplier = 0.64;//about 2/3
-            }
-            let containerWidth = Math.floor(deckWidthInCards / multiplier);
-            // let containerWidth = Math.floor(deckWidthInCards / multiplier);
             let cardFound = false;
+            
+            $(container).find(".container-info").remove();
+            
             let children = $(container).children();
             let size = children.length;
+            let widths;
+            if(cIndex === 0) {
+                widths = splitInto(size, this.mainDeckRowCount, this.deckWidthInCards);
+            }
             for(let card of children) {
-                // console.log(i, cIndex, j);
-                let heightMultiplier = j + cIndex * 0.2;
+                let w = this.deckWidthInCards;
+                if(cIndex === 0) {
+                    w = widths[j];
+                }
+                else if(size > this.deckWidthInCards) {
+                    w = size;
+                }
+                let diff = this.deckWidthInCards - w;
+                let r = diff / (w - 1);
+                let q = r * baseUnits.totalWidth;
+                
+                let heightMultiplier = j + cIndex * inBetweenMultiplier;
                 card = $(card);
-                card.css("left", i * multiplier * totalWidth);
-                card.css("top", heightMultiplier * totalHeight);
-                card.css("transform", `scale(${scaleRatio})`);
+                card.css("left", i * baseUnits.totalWidth + q * i);
+                card.css("top", heightMultiplier * baseUnits.totalHeight);
+                card.css("transform", `scale(${baseUnits.scaleRatio})`);
                 i++;
-                if(i >= containerWidth) {
+                if(i >= w) {
                     i = 0;
                     j++;
                 }
                 cardFound = true;
             }
+            
+            // container info
+            let info = $("<div class=container-info>");
+            
+            $(container).append(info);
+            
             if(i || !cardFound) j++;
+            
+            info.text(`${["Main", "Side", "Extra"][cIndex]} Deck (${size})`);
+            info.css({
+                top: (j + cIndex * inBetweenMultiplier) * baseUnits.totalHeight + 7.5,
+                // fontSize: 0.25 * baseUnits.totalHeight + "px",
+                height: 0.3 * baseUnits.totalHeight + "px",
+                width: pixelWidth,
+            });
+            
             cIndex++;
         }
     }
@@ -302,15 +356,20 @@ CardViewer.Editor.trackMouse = function (deck, composed, offset) {
         myX = clientX;
         myY = clientY;
         
+        focusedChild = null;
+        
         for(let child of allCards) {
             child = $(child);
             let childLocation = deck.getLocation(child.data("id"));
             let childCurrentDeck = child.data("deck");
-            let isSame = child.data("index") === sourceIndex
+            
+            let isSameExactCard = child.data("index") === sourceIndex
                 && childCurrentDeck === composed.data("deck");
+            
             let isInvalidDestination = childLocation !== sourceLocation;
-            isInvalidDestination = isInvalidDestination && childCurrentDeck !== Deck.Location.SIDE;
-            if(isSame || isInvalidDestination) {
+            let isChildInSide = childCurrentDeck === Deck.Location.SIDE;
+            
+            if(isSameExactCard || isInvalidDestination && !isChildInSide) {
                 continue;
             }
             let childOffset = child.offset();
@@ -341,10 +400,11 @@ CardViewer.Editor.trackMouse = function (deck, composed, offset) {
         let targetIndex = focusedChild.data("index");
         let targetDeck = focusedChild.data("deck");
         if(myDeck === targetDeck) {
-            deck.swapCards(
-                myDeck, myIndex,
-                targetDeck, targetIndex
-            );
+            // deck.swapCards(
+                // myDeck, myIndex,
+                // targetDeck, targetIndex
+            // );
+            deck.moveInFrontOf(myDeck, myIndex, targetIndex);
         }
         else {
             deck.removeCard(myDeck, myIndex);

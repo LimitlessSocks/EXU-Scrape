@@ -5,6 +5,15 @@ input[type=number] {
     order: 10;
 }
 
+.container-info {
+    z-index: 30;
+    position: absolute;
+    left: 10px;
+    font-size: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+}
+
 #majorContainer {
 }
 

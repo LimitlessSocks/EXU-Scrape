@@ -131,6 +131,7 @@ let onLoad = async function () {
             let text = e.target.result;
             let parser = new DOMParser();
             let xmlDoc = parser.parseFromString(text, "text/xml");
+            // CardViewer.Editor.DeckInstance = new Deck();
             let deck = CardViewer.Editor.DeckInstance;
             
             deck.clear();
