@@ -35,7 +35,8 @@
         "name": "Ready-made Decklists",
         "lists": [
             "ready-made/Dragon_Paladins.xml",
-            "ready-made/DigitalBugs.xml"
+            "ready-made/DigitalBugs.xml",
+            "ready-made/CyberDragon.xml"
         ]
     }
 }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q3RKXFLZRZ');
+    </script>
+    <title>EXU Deck: Cyber Dragon</title>
+    <meta charset="UTF-8">
+    <link rel="STYLESHEET" href="./../card-viewer.css">
+    <link rel="STYLESHEET" href="./../deck.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3RKXFLZRZ"></script> -->
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script src="./../card-viewer.js"></script>
+    <script src="./../deck.js"></script>
+    <script>
+        // statically loaded deck information
+        CardViewer.Editor.DeckInstance = new Deck(
+            ["856", "856", "856", "6311", "6311", "6311", "1945626", "1945626", "9294", "9294", "9294", "9547", "9547", "9293", "9389", "9389", "9389", "6315", "6315", "9338", "9433", "9352", "9435", "6419", "6419", "6419", "10444", "10444", "10444", "3241", "3241", "2656", "2656", "2656", "8030", "8030", "8030", "9201", "9201", "9201", "4574"],
+            ["687", "7850", "9352", "1300", "1300", "1300", "10345", "10345", "10345", "2113", "2113", "2113", "1644436", "1644436", "1644436"],
+            ["687", "8937", "8937", "7231", "7231", "1942628", "8427", "6451", "10717", "10717", "6313", "6313", "9325", "9325", "9814"],
+            false, //not editable
+        );
+        window.deckId = "CyberDragon";
+        window.thumb = parseInt("1942628");
+        window.deckPath = "./res/ready-made/CyberDragon.xml";
+    </script>
+    <script src="./onload.js"></script>
+</head>
+<body>
+    <h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1>
+    <div id="majorContainer">
+        <div id="infoContainer">
+            <h2>Cyber Dragon</h2>
+            <h3>Sock (LimitlessSocks)</h2>
+            <div id="byline"><button id="downloadDeck">Download</button> <span id="cardCount">X</span> cards</div>
+            <div id="description">A strong go-second combo deck that also has going first potential. Best described as an aggro midrange deck, Cyber Dragon is both explosive and capable of respectable grind, thanks to the custom card Cyber Dragon Fuhrev.</div>
+        </div>
+        <div id="deckEditor"></div>
+        <div id="cardPreview"></div>
+    </div>
+</body>
+</html>
