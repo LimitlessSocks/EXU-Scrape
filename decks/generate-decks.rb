@@ -27,7 +27,7 @@ def get_url(id, custom=true)
     end
 end
 
-Deck = Struct.new(:id, :main, :side, :extra, :author, :name, :description, :thumb, :thumb_custom) {
+Deck = Struct.new(:id, :main, :side, :extra, :author, :name, :description, :thumb, :thumb_custom, :deck_path) {
     def to_html
         $BOILERPLATE % self.to_h
     end
@@ -71,7 +71,8 @@ def parse_deck!(deck_path)
             value = defaults[name] if value.empty?
             value
         },
-        (doc.css("meta thumb")[0]["custom"] != "false" rescue false)
+        (doc.css("meta thumb")[0]["custom"] != "false" rescue false),
+        deck_path,
     )
     
     File.write("#{id}.html", ds.to_html)

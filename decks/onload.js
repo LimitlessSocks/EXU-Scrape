@@ -16,7 +16,7 @@ let onLoad = async function () {
     CardViewer.Elements.downloadDeck = $("#downloadDeck");
     
     CardViewer.Elements.downloadDeck.click(() => {
-        window.open("./res/" + deckId + ".xml", "_blank");
+        window.open("./" + window.deckPath, "_blank");
     });
     
     // CardViewer.setUpTabSearchSwitching();
