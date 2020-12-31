@@ -6,7 +6,7 @@ input[type=number] {
 }
 
 .container-info {
-    z-index: 30;
+    z-index: 3;
     position: absolute;
     left: 10px;
     font-size: 100%;

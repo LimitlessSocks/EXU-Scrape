@@ -599,20 +599,61 @@ CardViewer.textComparator = (needle, fn = _F.id) => {
     }
 };
 const escapeRegExp = function (string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+};
+
+const extractInlineRegexes = function * (str) {
+    let build = "";
+    let readingRegex = false;
+    
+    for(let i = 0; i < str.length; i++) {
+        let ch = str[i];
+        if(ch === "[") {
+            readingRegex = true;
+        }
+        else if(ch === "]") {
+            yield build + ch;
+            build = "";
+            readingRegex = false;
+        }
+        if(!readingRegex) continue;
+        build += ch;
+        if(ch === "\\") {
+            build += str[++i];
+        }
+    }
+};
+
 CardViewer.regexComparator = (needle, fn = _F.id) => {
     if(!needle) {
         return () => true;
     }
+    
+    let accept = [];
+    let reject = [];
+    
+    for(let regStr of extractInlineRegexes(needle)) {
+        let [whole, tag, regInner] = regStr.trim().match(/^\[(.\|)?(.+)\]$/);
+        let reg = new RegExp(regInner, "i");
+        if(/^[ner]/i.test(tag)) {
+            reject.push(reg);
+        }
+        else {
+            accept.push(reg);
+        }
+        needle = needle.replace(regStr, "");
+    }
+    
     needle = escapeRegExp(needle)
         .replace(/(?:\\\*){2}/g, "[^.]*?")
         .replace(/\\\*/g, ".*?");
     
     let reg = new RegExp(needle, "i");
+    accept.push(reg);
     
     return (card) =>
-        reg.test(fn(card).toString());
+        accept.every(reg => reg.test(fn(card)))
+        && !reject.some(reg => reg.test(fn(card)));
 };
 CardViewer.textAnyComparator = (needle, fn = _F.id) =>
     needle === "any" ? () => true : CardViewer.textComparator(needle, fn);
