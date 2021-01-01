@@ -30,6 +30,14 @@ const splitInto = (total, bucketCount, min = 0) => {
     return buckets;
 };
 
+// https://stackoverflow.com/a/12646864/4119004
+const shuffleInPlace = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+};
+
 class Deck {
     constructor(main = [], side = [], extra = [], editable = true) {
         this.decks = [
@@ -99,6 +107,12 @@ class Deck {
                 return subCards.map(card => card.id);
             });
         });
+    }
+    
+    shuffle() {
+        for(let deck of this.decks) {
+            shuffleInPlace(deck);
+        }
     }
     
     clear() {

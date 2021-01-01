@@ -170,7 +170,13 @@ let onLoad = async function () {
         CardViewer.Editor.updateDeck();
     });
     
+    $("#shuffleDeck").click(() => {
+        CardViewer.Editor.DeckInstance.shuffle();
+        CardViewer.Editor.updateDeck();
+    });
+    
     const deckInfoSavedPrompt = Prompt.OK("Deck Info Saved!");
+    const deckInfoClearedPrompt = Prompt.OK("Cleared!");
     const exportPrompt = new Prompt("Export Deck",
         () => {
             let html = $(`
@@ -210,12 +216,22 @@ let onLoad = async function () {
             html.find("#deckSaveThumb").val(deck.thumb);
             return html;
         },
-        ["Save Info", "Export Deck", "Cancel"],
+        ["Save Info", "Export Deck", "Clear Export Info", "Cancel"],
         "large",
     );
     $("#exportDeck").click(() => {
         exportPrompt.deploy().then(([buttonIndex, p]) => {
+            //Cancel
+            if(buttonIndex === 3) {
+                return;
+            }
+            //Clear Export Info
             if(buttonIndex === 2) {
+                let deck = CardViewer.Editor.DeckInstance;
+                deck.name = deck.author = deck.description = "";
+                deck.thumb = 0;
+                CardViewer.Editor.saveLocalDeck();
+                deckInfoClearedPrompt.deploy().then(() => $("#exportDeck").trigger("click")).catch(() => {});
                 return;
             }
             
@@ -227,6 +243,7 @@ let onLoad = async function () {
             deck.thumb       = html.find("#deckSaveThumb").val() || deck.thumb;
             
             if(buttonIndex === 0) {
+                CardViewer.Editor.saveLocalDeck();
                 deckInfoSavedPrompt.deploy();
             }
             else if(buttonIndex === 1) {
