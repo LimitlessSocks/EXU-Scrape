@@ -23,7 +23,7 @@ const splitInto = (total, bucketCount, min = 0) => {
     let buckets = [];
     for(let i = 0; i < bucketCount; i++) {
         buckets[i] = Math.max(min, base);
-        if(i >= needOverflow) {
+        if(i >= needOverflow && base >= min) {
             buckets[i]++;
         }
     }
