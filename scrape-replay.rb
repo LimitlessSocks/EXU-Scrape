@@ -894,11 +894,21 @@ eucs_3 = ReplayInfo.new("eucs_3", [
     "362746-24333360",
     "123-24336112",
     "123-24336844",
+])
 
+weekly25 = ReplayInfo.new("weekly25", [
+    "77474-24498648",
+    "406828-24498885",
+    "469397-24498955",
+    "331437-24499711",
+    "353260-24501127",
+    "331437-24502913",
+    "123-24500595",
+    "123-24503469",
 ])
 
 # change this to change results
-focus = ladder
+focus = weekly25
 
 name = focus[:name]
 focus = focus[:replays]
@@ -926,12 +936,16 @@ focus.each.with_index(1) { |link, i|
     while data.nil?
         data = $session.evaluate_script $comb_replay
     end
-
+    
     data["games"].each { |game|
+        # puts "Parsing next game!"
         winner = game["winner"]
         loser = game["loser"]
         actions = game["actions"]
         cards_appear = {}
+        # p "Winner : #{game["winner"]}"
+        # p "Loser  : #{game["loser"]}"
+        # STDIN.gets
         
         actions.select! { |action|
             card = action["card"]
@@ -961,7 +975,18 @@ focus.each.with_index(1) { |link, i|
             
             $database[id] ||= card["name"]
             
+            # p "ID:", id
+            # p "ID_UNIQUE:", id_unique
+            # p "ACTION:", action
+            # p "WINNER?", winner
+            # gets
+            
             next if cards_appear.include? id_unique
+            
+            # if id == 1088520
+                # puts "Found a unique occurrence of 1088520, #{id_unique}"
+                # puts 
+            # end
             
             # count occurrence
             cards_appear[id_unique] = true
@@ -972,6 +997,11 @@ focus.each.with_index(1) { |link, i|
                 $cards_win_count[id] += 1
             end
         }
+        # p "Win counts:"
+        # p $cards_win_count
+        # p "Wins/total of 1088520:"
+        # p $cards_win_count[1088520], $cards_total_count[1088520]
+        # STDIN.gets
     }
 }
 

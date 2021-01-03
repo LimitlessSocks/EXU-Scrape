@@ -420,6 +420,7 @@ CardViewer.Filters.isRitual = CardViewer.Filters.monsterColorIs("Ritual");
 CardViewer.Filters.isFusion = CardViewer.Filters.monsterColorIs("Fusion");
 CardViewer.Filters.isSynchro = CardViewer.Filters.monsterColorIs("Synchro");
 CardViewer.Filters.isXyz = CardViewer.Filters.monsterColorIs("Xyz");
+CardViewer.Filters.isLink = CardViewer.Filters.monsterColorIs("Link");
 
 CardViewer.Filters.isNonEffect = (card) => {
     if(!CardViewer.Filters.isMonster(card)) {
@@ -532,7 +533,8 @@ CardViewer.Filters.Dictionary = {
     synchro:    CardViewer.Filters.isSynchro,
     xyz:        CardViewer.Filters.isXyz,
     pendulum:   _F.propda("pendulum"),
-    link:       _F.propda("is_link"),
+    link:       CardViewer.Filters.isLink,
+    // link:       _F.propda("is_link"),
     leveled:    CardViewer.Filters.isLeveled,
     extradeck:  CardViewer.Filters.isExtraDeck,
     maindeck:   CardViewer.Filters.isMainDeck,

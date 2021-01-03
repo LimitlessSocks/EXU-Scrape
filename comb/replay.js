@@ -28,7 +28,7 @@
         obj.play === "Quit duel";
     
     let canParse = true;
-    let overCount = replay_arr.filter(e => e.over).length;
+    let overCount = replay_arr.filter(e => "over" in e).length;
     let isMatch = overCount >= 1;
     let hasSingleOver = overCount === 1;
     
@@ -37,7 +37,7 @@
             console.log("Can no longer parse games, as the match is over.");
             return null;
         }
-        let actions = [];
+        let actions = [];   
         while(replay_actions.length && !isDeterminator(replay_actions[0])) {
             actions.push(replay_actions.shift());
         }
