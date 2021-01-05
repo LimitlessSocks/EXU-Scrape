@@ -214,7 +214,7 @@ database = [
     # 5587605, #Hot Pink
     5917260, #Koala
     2788655, #Ravager
-    5824862, #Titanic Moth
+    # 5824862, #Titanic Moth
     5925194, #Yurei
     5868144, #Tsurumashi
     5781120, #Stars
