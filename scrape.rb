@@ -363,18 +363,19 @@ beta = [
     6980225, #Spirit Girls
     7022231, #White Aura Support
     7121262, #Fairy + Zombie Singles
-    7105144, #Ritual Support
-    7094020, #1001 nights
     7050731, #Sock's singles
+    7127621, #Dark Imp
+    7139454, #Slime
     
     #reg
-    7085230, #Chaos Support
     6922630, #Empowered Warrior
     5731990, #Entropy Beast
     7027697, #Titanus 2: Monster Island Boogaloo
     7123560, #Metal XO
     7124125, #Anglory
-    7125865, #Highlander
+    6869158, #Infrastructure
+    6770598, #Bleakstory
+    7138655, #Witchwood
 ]
 
 
