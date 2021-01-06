@@ -157,6 +157,9 @@ database = [
     7002660, #Cipher Support
     5833853, #Crab King Support
     7025794, #Performage Support
+    6891534, #Harpie Support
+    7094214, #Evil HERO Support
+    7085230, #Chaos Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -319,9 +322,13 @@ database = [
     7020690, #Primal Forest
     6845786, #Powerpuff
     7022155, #Halvoran
-    6811695, #Catacomb
+    # 6811695, #Catacomb
     6670355, #Railreich
     7027111, #Medaka
+    6560628, #Charismatic
+    7027802, #Deus Ex
+    6869158, #Infrastructure
+    6770598, #Bleakstory
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
