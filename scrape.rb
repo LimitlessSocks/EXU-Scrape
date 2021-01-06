@@ -192,7 +192,7 @@ database = [
     # 4399429, #Hakaishin Archfiend
     5592020, #Bound
     # 4359326, #Eldertech
-    4050998, #Mage & Spell Tomes
+    # 4050998, #Mage & Spell Tomes
     5615949, #Alchemaster
     5642481, #Daemon Engine
     # 4395391, #Trapod
@@ -200,7 +200,7 @@ database = [
     5717718, #Pixel  Monsters
     5713627, #Yeet
     5109480, #Kyudo
-    4337568, #Dreadator
+    # 4337568, #Dreadator
     5601607, #Chaos Performer
     # 5755617, #Shagdi
     4963487, #Battletech
