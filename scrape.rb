@@ -367,22 +367,19 @@ test = [
 
 beta = [
     #prio
-    6980225, #Spirit Girls
-    7022231, #White Aura Support
     7121262, #Fairy + Zombie Singles
-    7050731, #Sock's singles
-    7127621, #Dark Imp
-    7139454, #Slime
-    
+    7155530, #Ake Singles
+    7150914, #Legacy
     #reg
-    6922630, #Empowered Warrior
     5731990, #Entropy Beast
     7027697, #Titanus 2: Monster Island Boogaloo
-    7123560, #Metal XO
     7124125, #Anglory
-    6869158, #Infrastructure
-    6770598, #Bleakstory
     7138655, #Witchwood
+    6440270, #Wavering Winds
+    3617894, #O.F.F.
+    7160763, #uwu
+    7022063, #Fisherman
+    7123560, #Metal XO
 ]
 
 
