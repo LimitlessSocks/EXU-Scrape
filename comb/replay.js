@@ -16,7 +16,18 @@
     const findBy = (props, arr = replay_arr) =>
         arr.find(el => match(props, el));
     
-    let players = findBy({ play: "Pick first" }).order;
+    
+    let players;
+    try {
+        players = findBy({ play: "Pick first" }).order;
+    }
+    catch(e) {
+        return {
+            error: true,
+            message: "Could not find a 'Pick First'"
+        };
+    }
+    
     let roundsWon = {};
     for(let player of players) {
         roundsWon[player] = 0;
