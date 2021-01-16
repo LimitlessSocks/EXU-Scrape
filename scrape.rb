@@ -160,6 +160,7 @@ database = [
     6891534, #Harpie Support
     7094214, #Evil HERO Support
     7085230, #Chaos Support
+    7022231, #White Aura Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -329,6 +330,10 @@ database = [
     7027802, #Deus Ex
     6869158, #Infrastructure
     6770598, #Bleakstory
+    7140843, #Pendant
+    7127621, #Dark Imp
+    7124125, #Anglory
+    7138655, #Witchwood
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
@@ -336,11 +341,14 @@ database = [
     6353414, #Generic Monsters IV
     6511321, #Generic Monsters V
     6871713, #Generic Monsters VI
+    7193018, #Generic Monsters VII
     6353430, #Generic Spells
     6419184, #Generic Spells II
     6871664, #Generic Spells III
+    7193014, #Generic Spells IV
     6353449, #Generic Traps
     6598717, #Generic Traps II
+    7193016, #Generic Traps III
     6353457, #Assorted TCG Single Support
     #6353465, #Staples
 ]

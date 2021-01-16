@@ -151,6 +151,9 @@ const CardsOfTheWeek = [
     1805896, //Localized Tornado Dragon
     1736029, //Lost Wind's Cyclone
     1409993, //Localized Typhoon
+    1951637, //Half-Exchanged Spirit
+    1956938, //Shattered Heart
+    1770162, //Number 129: Lost Chained Dragon
 ];
 
 const OTKTools = [
