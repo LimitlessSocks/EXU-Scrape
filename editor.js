@@ -237,13 +237,13 @@ let onLoad = async function () {
             
             let html = p.anchor;
             let deck = CardViewer.Editor.DeckInstance;
-            deck.name        = html.find("#deckSaveName").val() || deck.name;
-            deck.description = html.find("#deckSaveDescription").val() || deck.description;
-            deck.author      = html.find("#deckSaveAuthor").val() || deck.author;
-            deck.thumb       = html.find("#deckSaveThumb").val() || deck.thumb;
+            deck.name        = html.find("#deckSaveName").val();// || deck.name;
+            deck.description = html.find("#deckSaveDescription").val();// || deck.description;
+            deck.author      = html.find("#deckSaveAuthor").val();// || deck.author;
+            deck.thumb       = html.find("#deckSaveThumb").val();// || deck.thumb;
             
+            CardViewer.Editor.saveLocalDeck();
             if(buttonIndex === 0) {
-                CardViewer.Editor.saveLocalDeck();
                 deckInfoSavedPrompt.deploy();
             }
             else if(buttonIndex === 1) {
