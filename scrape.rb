@@ -175,7 +175,7 @@ database = [
     4570517, #Harbinger
     4910893, #Aria Fey
     5075635, #Starships
-    5176216, #Antiqua
+    # 5176216, #Antiqua
     4624534, #Harokai
     4442461, #Titanic Dragon
     4604736, #of the North
@@ -189,7 +189,7 @@ database = [
     5541864, #Kuroshiro
     5597068, #Goo-T
     # 5576395, #Heaven-Knights
-    5582929, #Seafolk
+    # 5582929, #Seafolk
     # 4399429, #Hakaishin Archfiend
     5592020, #Bound
     # 4359326, #Eldertech
@@ -355,7 +355,8 @@ database = [
 
 banlist = [
     6358712,                    #Imported 1
-    6751103,                    #Imported 2
+    7260456,                    #Imported 2
+    6751103,                    #Imported 3
     6358715,                    #Unimported
     
     5895579,                    #Retrains
