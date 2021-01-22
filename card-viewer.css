@@ -181,6 +181,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 3px;
     margin-right: 3px;
 }
+.cardicon {
+    width: 24px;
+    height: 24px;
+}
 
 .result.spell {
     background: rgb(0, 134, 114, 0.8);
