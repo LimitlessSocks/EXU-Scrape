@@ -161,6 +161,8 @@ database = [
     7094214, #Evil HERO Support
     7085230, #Chaos Support
     7022231, #White Aura Support
+    5615821, #Onomat Support
+    7251527, #Dream Mirror Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -198,8 +200,7 @@ database = [
     5642481, #Daemon Engine
     # 4395391, #Trapod
     5549562, #Travelsha
-    5717718, #Pixel  Monsters
-    5713627, #Yeet
+    5717718, #Pixel Monsters
     5109480, #Kyudo
     # 4337568, #Dreadator
     5601607, #Chaos Performer
@@ -319,7 +320,7 @@ database = [
     4355718, #Wild Rose
     7003838, #Mechatech Dragons Eclipse and Nova + Overfunded Research
     5967432, #Masquerado
-    7008268, #Fiendfyre
+    # 7008268, #Fiendfyre
     7020690, #Primal Forest
     6845786, #Powerpuff
     7022155, #Halvoran
@@ -334,6 +335,12 @@ database = [
     7127621, #Dark Imp
     7124125, #Anglory
     7138655, #Witchwood
+    7184403, #Crystalion
+    7256172, #Wavering Winds
+    7123560, #Metal XO
+    
+    #order shenanigans
+    5713627, #Yeet (Must be after Charismatic)
 ] + [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
