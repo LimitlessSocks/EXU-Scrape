@@ -46,6 +46,7 @@ class Deck {
             extra
         ];
         this.target = null;
+        this.showSideDeck = true;
         this.deckWidthInCards = 10;
         this.mainDeckRowCount = 4;
         this.editable = editable;
@@ -174,7 +175,8 @@ class Deck {
         };
         
         let j = 0;
-        let cIndex = 0;
+        let cIndexOffset = 0;
+        let containerIndex = 0;
         let baseUnits = getUnits(this.deckWidthInCards);
         
         const inBetweenMultiplier = 0.3;
@@ -182,18 +184,25 @@ class Deck {
         for(let container of this.target.children()) {
             let i = 0;
             let cardFound = false;
+            console.log(i, cIndexOffset, containerIndex);
             
             $(container).find(".container-info").remove();
+            
+            if(containerIndex === 1 && !this.showSideDeck) {
+                $(container).empty();
+                containerIndex++;
+                continue;
+            }
             
             let children = $(container).children();
             let size = children.length;
             let widths;
-            if(cIndex === 0) {
+            if(containerIndex === 0) {
                 widths = splitInto(size, this.mainDeckRowCount, this.deckWidthInCards);
             }
             for(let card of children) {
                 let w = this.deckWidthInCards;
-                if(cIndex === 0) {
+                if(containerIndex === 0) {
                     w = widths[j];
                 }
                 else if(size > this.deckWidthInCards) {
@@ -203,7 +212,7 @@ class Deck {
                 let r = diff / (w - 1);
                 let q = r * baseUnits.totalWidth;
                 
-                let heightMultiplier = j + cIndex * inBetweenMultiplier;
+                let heightMultiplier = j + cIndexOffset * inBetweenMultiplier;
                 card = $(card);
                 card.css("left", i * baseUnits.totalWidth + q * i);
                 card.css("top", heightMultiplier * baseUnits.totalHeight);
@@ -223,15 +232,17 @@ class Deck {
             
             if(i || !cardFound) j++;
             
-            info.text(`${["Main", "Side", "Extra"][cIndex]} Deck (${size})`);
+            info.text(`${["Main", "Side", "Extra"][containerIndex]} Deck (${size})`);
             info.css({
-                top: (j + cIndex * inBetweenMultiplier) * baseUnits.totalHeight + 7.5,
+                top: (j + cIndexOffset * inBetweenMultiplier) * baseUnits.totalHeight + 7.5,
                 // fontSize: 0.25 * baseUnits.totalHeight + "px",
                 height: 0.3 * baseUnits.totalHeight + "px",
                 width: pixelWidth,
             });
             
-            cIndex++;
+            
+            cIndexOffset++;
+            containerIndex++;
         }
     }
     
@@ -279,6 +290,9 @@ class Deck {
                 }
                 container.append(composed);
                 i++;
+            }
+            if(j === 1 && !this.showSideDeck) {
+                container.empty();
             }
             j++;
             target.append(container);
