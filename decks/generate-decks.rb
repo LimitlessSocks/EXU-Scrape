@@ -1,53 +1,9 @@
+require_relative '../gen.rb'
 require 'nokogiri'
-require 'json'
 
-$BOILERPLATE = File.read("boilerplate.html")
 $CONFIG_PATH = "./decks.json"
 $INDEX_PATH = "./index.html"
-
-$DB_CUSTOM = nil
-$DB_YCG = nil
-def load_dbs
-    if $DB_CUSTOM.nil?
-        $DB_CUSTOM = JSON::parse File.read("../db.json")
-    end
-    # if $DB_YCG.nil?
-        # $DB_YCG = JSON::parse File.read("../ycg.json")
-    # end
-end
-
-
-def get_url(id, custom=true)
-    return if id.nil? || id.empty?
-    load_dbs
-    if custom
-        $DB_CUSTOM[id]["src"]
-    else
-        "https://www.duelingbook.com/images/low-res/#{id}.jpg"
-    end
-end
-
-Deck = Struct.new(:id, :main, :side, :extra, :author, :name, :description, :thumb, :thumb_custom, :deck_path) {
-    def to_html
-        $BOILERPLATE % self.to_h
-    end
-    
-    def make_link
-        res = "<a class=\"deck-link\" href=\"./#{id}\">"
-        # p [thumb, thumb_custom]
-        unless thumb.empty?
-            url = get_url thumb, thumb_custom
-            res += "<img src=\"#{url}\"/>"
-        end
-        # res += name
-        res += "<p>" + name + "</p>"
-        res += "</a>"
-    end
-}
-
-def ids_of(thing)
-    thing.map { |e| e["id"] }
-end
+$BOILERPLATE = File.read("boilerplate.html")
 
 def parse_deck!(deck_path)
     xml = File.read(deck_path)
