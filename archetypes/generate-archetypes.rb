@@ -9,7 +9,7 @@ def parse_archetype!(obj)
     ds.name = obj["name"]
     ds.thumb = obj["thumb"]
     ds.thumb_custom = true
-    ds.id = ds.name.gsub(/\s+/, "")
+    ds.id = ds.name.gsub(/@/, "at").gsub(/[^a-zA-Z0-9]+/, "")
     ds.author = obj["author"]
     ds.description = obj["description"]
     ds.main = obj["deckIds"]
@@ -19,7 +19,7 @@ def parse_archetype!(obj)
     ds
 end
 
-index = File.read($INDEX_PATH)
+index = File.read($INDEX_PATH, :encoding => "utf-8")
 
 archetype_data = JSON::parse File.read($CONFIG_PATH)
 res = ""
@@ -39,4 +39,4 @@ archetype_data["data"].each { |obj|
 index.sub!(/(<div id="listing".+?>)[\s\S]+?(\n    <\/div>)/, '\1' + res + '\2')
 
 # puts index
-File.write $INDEX_PATH, index
+File.write $INDEX_PATH, index, :encoding => "utf-8"
