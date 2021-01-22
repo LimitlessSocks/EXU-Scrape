@@ -1,0 +1,20 @@
+{
+    "data": [
+        {
+            "name": "Nadiupant",
+            "deckIds": [5834507],
+            "cardIds": [],
+            "thumb": "1611807",
+            "author": "Sock",
+            "description": "A grind archetype that builds up advantage, and while it doesn't disrupt your opponent proactively, it can protect itself quite well, and can be quite hard to deal with. Most of the interaction with this archetype lies in the Battle Phase, having a Negate Attack which bounces, a themed Wall of Disruption, and an Armades/Leviair tech Spell."
+        },
+        {
+            "name": "Aria Fey",
+            "deckIds": [4910893, 6785271],
+            "cardIds": [],
+            "thumb": "1648946",
+            "author": "Sock",
+            "description": "2 Level 3 Fairy monsters that combine into a monster negate."
+        }
+    ]
+}
