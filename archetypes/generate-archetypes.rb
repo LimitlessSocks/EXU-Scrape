@@ -26,7 +26,7 @@ res = ""
 
 indent = " " * 8
 sub_indent = " " * 12
-archetype_data["data"].each { |obj|
+archetype_data["data"].sort_by { |obj| obj["name"].downcase }.each { |obj|
     ds = parse_archetype!(obj)
     res += "\n" + indent + ds.make_link
     # }
