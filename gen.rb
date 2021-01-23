@@ -16,7 +16,7 @@ def get_url(id, custom=true)
     return if id.nil? || id.empty?
     load_dbs
     if custom
-        $DB_CUSTOM[id]["src"]
+        $DB_CUSTOM[id]["src"] rescue "null"
     else
         "https://www.duelingbook.com/images/low-res/#{id}.jpg"
     end

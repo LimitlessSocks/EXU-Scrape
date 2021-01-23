@@ -85,7 +85,7 @@ database = [
     5703615, #World Chalice/World Legacy Support
     6169009, #Aquaactress Support
     6109070, #Normal Monster Support
-    6000654, #Laval Support
+    # 6000654, #Laval Support
     5844326, #Danger! Support
     5936560, #The Agent Support
     4422086, #Mystrick Support
@@ -186,7 +186,7 @@ database = [
     5416935, #Akatsuki
     # 5304027, #Pyre
     5396113, #Terra Basilisk
-    5490132, #Sunavalon
+    # 5490132, #Sunavalon
     5187975, #Rulers of Name
     5541864, #Kuroshiro
     5597068, #Goo-T
@@ -227,20 +227,20 @@ database = [
     5935151, #Shirakashi
     2952495, #Genjutsu
     5979832, #Raycor
-    4501871, #Oni Assassins
+    # 4501871, #Oni Assassins
     6050332, #Nermusa
     6078350, #Majecore
     5869257, #Yova
     # 5098946, #Guildimension
     6044732, #Armorizer
-    6044655, #Vampop☆Star
+    # 6044655, #Vampop☆Star
     6135219, #The Parallel
     3689114, #LeSpookie
     6209092, #Acrimonic
     5884678, #Arsenal
     6121762, #Hydromunculus
     6233896, #Mirror Force Archetype
-    # 4667428, #Xiuhqui
+    4667428, #Xiuhqui
     6040042, #Kuuroma
     6247363, #Rowa - Elusive Power
     6163866, #Black Blood
@@ -284,7 +284,7 @@ database = [
     6611617, #Frostyre
     6677155, #Colossus
     3068977, #Nekojishi
-    4456007, #Latria
+    # 4456007, #Latria
     6674104, #Geschellschcaft
     6699578, #GG (Galatic Gods)
     6707275, #Malevolessence
@@ -292,7 +292,6 @@ database = [
     6719358, #Vengeful Tox
     6733479, #Ookazi
     6188330, #Giga Havoc
-    6777854, #Nebulline
     6772951, #Starter Squad
     6760980, #Final Dream
     6785271, #Aria Fey: Part 2
@@ -310,6 +309,7 @@ database = [
     6836561, #Hellvil
     6874481, #Dark Hole
     6895350, #Owlsh
+    # 6777854, #Nebulline
     6849044, #Nebulline
     6806175, #Chibright
     4330341, #D.N.M.Q.
@@ -335,6 +335,9 @@ database = [
     7127621, #Dark Imp
     7124125, #Anglory
     7138655, #Witchwood
+    7200158, #Strannaut
+    7203610, #Andromeda
+    7180332, #Dual Asset
     7184403, #Crystalion
     7256172, #Wavering Winds
     7123560, #Metal XO
