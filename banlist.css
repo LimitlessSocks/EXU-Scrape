@@ -21,6 +21,10 @@ h2.main {
     margin: 30px;
     font-size: 2em;
 }
+.cardicon {
+    width: 24px;
+    height: 24px;
+}
 #popup {
     display: none;
     background: rgba(0,0,0,0.3);
