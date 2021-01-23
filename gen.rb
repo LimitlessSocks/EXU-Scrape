@@ -28,7 +28,7 @@ Deck = Struct.new(:id, :main, :side, :extra, :author, :name, :description, :thum
     end
     
     def make_link
-        res = "<a class=\"deck-link\" href=\"./#{id}\">"
+        res = "<a class=\"deck-link\" href=\"./#{id}\" id=\"#{id}\">"
         # p [thumb, thumb_custom]
         unless thumb.empty?
             url = get_url thumb, thumb_custom
