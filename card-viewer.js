@@ -799,6 +799,9 @@ CardViewer.createFilter = function (query, exclude = null) {
             _F.propda("atk")
         ));
     }
+    else if(query.atkCompare === "question") {
+        filters.push(CardViewer.exactComparator("?", _F.propda("atk")));
+    }
     
     if(query.def) {
         filters.push(CardViewer.comparingComparator(
@@ -806,6 +809,9 @@ CardViewer.createFilter = function (query, exclude = null) {
             query.defCompare,
             _F.propda("def")
         ));
+    }
+    else if(query.defCompare === "question") {
+        filters.push(CardViewer.exactComparator("?", _F.propda("def")));
     }
     
     let filter = (card) => filters.every(filter => filter(card));
