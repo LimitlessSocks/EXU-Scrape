@@ -746,7 +746,9 @@ CardViewer.createFilter = function (query, exclude = null) {
                         ? card.tcg && !card.ocg
                         : query.visibility == 4
                             ? card.ocg && !card.tcg
-                            : card.custom,
+                            : card.visibility == 5
+                                ? card.custom
+                                : card.ocg || card.tcg,
     ];
     // import filters
     // console.log(query, !query.alsoImported);
