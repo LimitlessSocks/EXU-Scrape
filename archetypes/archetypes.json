@@ -177,7 +177,7 @@
             "thumb": "1536652",
             "author": "Khreygond",
             "description": "A mill-based Deck that focuses primarily on OTK-ing the opponent.",
-            "tags": "combo aggro gy link"
+            "tags": ["combo", "aggro", "gy", "link"]
         },
         {
             "name": "Travelsha",
