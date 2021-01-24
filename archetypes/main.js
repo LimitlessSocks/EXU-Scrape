@@ -73,7 +73,7 @@ window.addEventListener("load", function () {
                     range = [
                         entry.name,
                         entry.author,
-                        ...(entry.tags || [])
+                        ...(entry.tags || ["untagged"])
                     ].join(" ");
                     // range = entry.name + " " + entry.author;
                 }
