@@ -45,25 +45,37 @@
     transition: width 1s linear;
     /* justify-content: space-between; */
 }
-#filterByToggle {
+.toggleIcon {
     display: inline-block;
     padding: 10px;
     cursor: pointer;
     transition: background 0.2s ease-in-out;
     border-radius: 15px;
 }
-#filterByToggle:hover, #filterByToggle.toggled {
+.toggleIcon:hover, .toggleIcon.toggled {
     background: rgba(200,200,230,0.8);
 }
-#filterByToggle, #filterByToggle img {
+.toggleIcon, .toggleIcon img {
     width: 35px;
     height: 35px;
     margin: 0;
     /* margin-top: 4px; */
 }
-#filterByInner {
+.toggleable {
     display: none;
 }
+
+/*
+#tagContainer {
+    position: absolute;
+    top: -300px;
+    height: 300px;
+    background: red;
+    width: 200px;
+    right: -62.5px;
+}
+*/
+
 #filterBy input[type="text"] {
     /* width: calc(100% - 35px - 20px - 15px); */
     /* height: 25px; */

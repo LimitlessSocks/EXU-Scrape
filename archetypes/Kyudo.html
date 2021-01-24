@@ -22,8 +22,10 @@
     <script src="./../card-viewer.js"></script>
     <script src="./../deck.js"></script>
     <script>
+        //ik these aren't exactly correct but I'm too lazy to make right names
         window.sourceIds = [5109480];
         window.extraIds = [];
+        window.tags = ["control", "gimmick"];
         // statically loaded deck information
         CardViewer.Editor.DeckInstance = new Deck(
             [],
@@ -34,7 +36,6 @@
         CardViewer.Editor.DeckInstance.deckWidthInCards = 7;
         CardViewer.Editor.DeckInstance.showSideDeck = false;
         window.thumb = parseInt("1372799");
-        <!-- window.deckPath = ""; -->
     </script>
     <script src="./onload.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
@@ -45,7 +46,7 @@
         <div id="infoContainer">
             <h2>Kyudo</h2>
             <h3>Ani</h3>
-            <!-- <div id="byline"><button id="downloadDeck">Download</button> <span id="cardCount">X</span> cards</div> -->
+            <div id="tags"></div>
             <div id="description">A Warrior archetype that reveals their monsters in hand, activates effects and has an Xyz Monster to round it all out.</div>
         </div>
         <div id="deckEditor"></div>

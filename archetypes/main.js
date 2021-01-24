@@ -10,7 +10,7 @@ window.addEventListener("load", function () {
     inner.val("");
     filterByToggle.click(() => {
         filterByToggle.toggleClass("toggled");
-        inner.toggle();
+        $("#filterBy .toggleable").toggle();
         
         if(filterByToggle.hasClass("toggled")) {
             filterBy.css("width", "70%");
@@ -54,35 +54,45 @@ window.addEventListener("load", function () {
         let links = $("#listing a");
         for(let link of links) {
             let entry = Database[link.id];
-            let isSearch = words.every(({ value, exact }) => {
+            if(anchor && !words.some(({ exact }) => exact)) {
+                words = words.reduce((o1, o2) => ({
+                    value: o1.value + " " + o2.value,
+                    exact: false,
+                }));
+                words = [ words ];
+                window.wordTest = words;
+                // console.log(words);
+            }
+            let isSearch = words.every(({ value, exact }, i) => {
                 let range;
                 
                 if(anchor) {
                     range = entry.name;
                 }
                 else {
-                    range = entry.name + " " + entry.author;
+                    range = [
+                        entry.name,
+                        entry.author,
+                        ...(entry.tags || [])
+                    ].join(" ");
+                    // range = entry.name + " " + entry.author;
                 }
                 
                 range = range.toLowerCase();
                 
-                if(exact || anchor) {
+                if(exact) {
                     range = range.split(/\s+/);
                 }
                 
                 if(anchor) {
                     let isValid = true;
                     if(anchor & ANCHOR_START) {
-                        isValid = isValid && range[0].startsWith(value);
+                        isValid = isValid && range.startsWith(value);
                     }
                     if(anchor & ANCHOR_END) {
-                        isValid = isValid && range[range.length - 1].endsWith(value);
+                        isValid = isValid && range.endsWith(value);
                     }
                     return isValid;
-                    // return range.some(v =>
-                        // (anchor & ANCHOR_START ? v.startsWith(value) : true) &&
-                        // (anchor & ANCHOR_END   ? v.endsWith(value) : true)
-                    // );
                 }
                 else {
                     return range.indexOf(value) !== -1;
@@ -98,35 +108,5 @@ window.addEventListener("load", function () {
             onInput.bind(this)();
         }
     });
-    /*
-    let filterBy = document.getElementById("filterBy");
-    let filterToggle = document.getElementById("filterByToggle");
-    let inner = document.getElementById("filterByInner");
-    filterToggle.addEventListener("click", function (e) {
-        filterBy.style.width = filterIsShowing ? "auto" : "70%";
-        inner.style.display = filterIsShowing ? "none" : "inline";
-        if(filterIsShowing) {
-            this.classList.remove("toggled");
-        }
-        else {
-            this.classList.add("toggled");
-        }
-        
-        filterIsShowing = !filterIsShowing;
-    });
-    
-    let onInput = function () {
-        //console.log("Filtering!");
-        let filter = this.value.toLowerCase().split(/\s+/);
-        let links = document.querySelectorAll("#listing a");
-        for(let link of links) {
-            let entry = Database[link.id];
-            let isSearch = filter.every((word) => entry.search.indexOf(word) !== -1);
-            console.log(isSearch);
-        }
-    };
-    inner.addEventListener("input", onInput);
-    inner.addEventListener("keydown", onInput);
-    */
     
 });

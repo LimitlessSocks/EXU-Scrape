@@ -22,8 +22,10 @@
     <script src="./../card-viewer.js"></script>
     <script src="./../deck.js"></script>
     <script>
+        //ik these aren't exactly correct but I'm too lazy to make right names
         window.sourceIds = [5935151];
         window.extraIds = [];
+        window.tags = [];
         // statically loaded deck information
         CardViewer.Editor.DeckInstance = new Deck(
             [],
@@ -34,7 +36,6 @@
         CardViewer.Editor.DeckInstance.deckWidthInCards = 7;
         CardViewer.Editor.DeckInstance.showSideDeck = false;
         window.thumb = parseInt("1649836");
-        <!-- window.deckPath = ""; -->
     </script>
     <script src="./onload.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
@@ -45,7 +46,7 @@
         <div id="infoContainer">
             <h2>Shirakashi</h2>
             <h3>Ryck</h3>
-            <!-- <div id="byline"><button id="downloadDeck">Download</button> <span id="cardCount">X</span> cards</div> -->
+            <div id="tags"></div>
             <div id="description">With tricky banish effects based on the Shiranui, combined with the powerful Synchro toolbox of the Mayakashi, Shirakashi is a deck with several tricks up its sleeve and a formidable grind game.</div>
         </div>
         <div id="deckEditor"></div>

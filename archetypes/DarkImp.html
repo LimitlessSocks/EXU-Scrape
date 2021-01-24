@@ -22,8 +22,10 @@
     <script src="./../card-viewer.js"></script>
     <script src="./../deck.js"></script>
     <script>
+        //ik these aren't exactly correct but I'm too lazy to make right names
         window.sourceIds = [7127621];
         window.extraIds = [];
+        window.tags = ["stun", "burn", "grind", "gy"];
         // statically loaded deck information
         CardViewer.Editor.DeckInstance = new Deck(
             [],
@@ -34,7 +36,6 @@
         CardViewer.Editor.DeckInstance.deckWidthInCards = 7;
         CardViewer.Editor.DeckInstance.showSideDeck = false;
         window.thumb = parseInt("2049693");
-        <!-- window.deckPath = ""; -->
     </script>
     <script src="./onload.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
@@ -45,7 +46,7 @@
         <div id="infoContainer">
             <h2>Dark Imp</h2>
             <h3>46</h3>
-            <!-- <div id="byline"><button id="downloadDeck">Download</button> <span id="cardCount">X</span> cards</div> -->
+            <div id="tags"></div>
             <div id="description">A Level 3 burn Deck where all the Main Deck monsters are identical. The win condition is Achacha Warlord - he does the most burning. You don't usually end on any strong monsters apart from Warlord, but the Traps provide interruption and the Continuous Spells make the Deck have a grind.</div>
         </div>
         <div id="deckEditor"></div>

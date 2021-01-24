@@ -46,5 +46,9 @@ let onLoad = async function () {
     if(window.thumb) {
         CardViewer.Editor.setPreview(window.thumb);
     }
+    
+    $("#tags").append(
+        tags.map(tag => $("<span class=tag>").text(tag))
+    );
 };
 window.addEventListener("load", onLoad);

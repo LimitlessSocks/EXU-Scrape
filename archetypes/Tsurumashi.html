@@ -22,8 +22,10 @@
     <script src="./../card-viewer.js"></script>
     <script src="./../deck.js"></script>
     <script>
+        //ik these aren't exactly correct but I'm too lazy to make right names
         window.sourceIds = [5868144];
         window.extraIds = [];
+        window.tags = [];
         // statically loaded deck information
         CardViewer.Editor.DeckInstance = new Deck(
             [],
@@ -34,7 +36,6 @@
         CardViewer.Editor.DeckInstance.deckWidthInCards = 7;
         CardViewer.Editor.DeckInstance.showSideDeck = false;
         window.thumb = parseInt("1617139");
-        <!-- window.deckPath = ""; -->
     </script>
     <script src="./onload.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
@@ -45,7 +46,7 @@
         <div id="infoContainer">
             <h2>Tsurumashi</h2>
             <h3>Mevs</h3>
-            <!-- <div id="byline"><button id="downloadDeck">Download</button> <span id="cardCount">X</span> cards</div> -->
+            <div id="tags"></div>
             <div id="description">Part of a combined effort to introduce the new Type "Yokai", as well as the type-changing clause (This monster's original Type is treated as Yokai rather than TYPE.). A Ritual Control deck that aims to bring out 1 or both of its Rituals turn 1 maybe with a Set card or 2. It uses "Kami Tokens" to turbo out said Rituals, also it truly uses the GY as a resource for effects by shuffling them into the Deck. You will likely have little cards in hand at the end of the turn and you are fine with that.</div>
         </div>
         <div id="deckEditor"></div>

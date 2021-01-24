@@ -22,8 +22,10 @@
     <script src="./../card-viewer.js"></script>
     <script src="./../deck.js"></script>
     <script>
+        //ik these aren't exactly correct but I'm too lazy to make right names
         window.sourceIds = [6537631];
         window.extraIds = [];
+        window.tags = [];
         // statically loaded deck information
         CardViewer.Editor.DeckInstance = new Deck(
             [],
@@ -34,7 +36,6 @@
         CardViewer.Editor.DeckInstance.deckWidthInCards = 7;
         CardViewer.Editor.DeckInstance.showSideDeck = false;
         window.thumb = parseInt("1859159");
-        <!-- window.deckPath = ""; -->
     </script>
     <script src="./onload.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
@@ -45,7 +46,7 @@
         <div id="infoContainer">
             <h2>Bucket Squad</h2>
             <h3>FlavorFlov</h3>
-            <!-- <div id="byline"><button id="downloadDeck">Download</button> <span id="cardCount">X</span> cards</div> -->
+            <div id="tags"></div>
             <div id="description">A Fire Fighter themed archetype consisting of FIRE Aqua monsters in the main and FIRE Aqua and Machine monsters in the Extra Deck, mainly utilizing Link Monsters and sometimes Synchro Monsters. They're kind of similar to Salamangreat, except their main gimmick is that they do unfair things against other opposing FIRE centric strategies. They also somewhat support the "roid" archetype and use the card "Link Restart" as part of their main Link climb strategy.</div>
         </div>
         <div id="deckEditor"></div>

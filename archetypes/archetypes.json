@@ -35,10 +35,11 @@
         {
             "name": "Panda",
             "deckIds": [4757288],
-            "cardIds": [],
+            "cardIds": [8642, 1751935],
             "thumb": "1261407",
             "author": "Sock",
-            "description": "A Beast Deck that relies on banishing to get the job done (and banishing their entire GY if they feel like it!)."
+            "description": "A Beast Deck that relies on banishing to get the job done (and banishing their entire GY if they feel like it!).",
+            "tags": ["midrange", "banish", "gy", "support", "pendulum", "link"]
         },
         {
             "name": "Poppin",
@@ -70,7 +71,8 @@
             "cardIds": [],
             "thumb": "1648946",
             "author": "Sock",
-            "description": "A fairy combo deck that revolves around making turn 1 Xyz Monsters supported by archetypal backrow and supporting tools to grind somewhat decently. Also can be used as an engine for fairy decks, featuring 0-3 Day and 0-3 Lune as a base."
+            "description": "A fairy combo deck that revolves around making turn 1 Xyz Monsters supported by archetypal backrow and supporting tools to grind somewhat decently. Also can be used as an engine for fairy decks, featuring 0-3 Day and 0-3 Lune as a base.",
+            "tags": ["engine", "gy", "midrange", "xyz"]
         },
         {
             "name": "Starships",
@@ -174,7 +176,8 @@
             "cardIds": [],
             "thumb": "1536652",
             "author": "Khreygond",
-            "description": "A mill-based Deck that focuses primarily on OTK-ing the opponent."
+            "description": "A mill-based Deck that focuses primarily on OTK-ing the opponent.",
+            "tags": "combo aggro gy link"
         },
         {
             "name": "Travelsha",
@@ -198,7 +201,8 @@
             "cardIds": [],
             "thumb": "1372799",
             "author": "Ani",
-            "description": "A Warrior archetype that reveals their monsters in hand, activates effects and has an Xyz Monster to round it all out."
+            "description": "A Warrior archetype that reveals their monsters in hand, activates effects and has an Xyz Monster to round it all out.",
+            "tags": ["control", "gimmick"]
         },
         {
             "name": "Chaos Performer",
@@ -215,13 +219,24 @@
             "thumb": "1220411",
             "author": "Gatr",
             "description": "A control the castle-esque Ritual strategy where you build up into a big boss monster and rain on the parade from there on out."
-        },        {
+        },
+        {
+            "name": "Faust",
+            "deckIds": [6793365],
+            "cardIds": [],
+            "thumb": "1582209",
+            "author": "Khreygond",
+            "description": "A Trap Deck with 2 Normal Monsters and an incessant grind.",
+            "tags": ["combo", "grind", "gy", "normal"]
+        },
+        {
             "name": "Kojoten",
             "deckIds": [5675322],
             "cardIds": [],
             "thumb": "1361323",
             "author": "Ani",
-            "description": "An archetype comprising of DARK Beast-Warrior monsters that can also inadvertently support other Beast-Warrior strategies."
+            "description": "An archetype comprising of DARK Beast-Warrior monsters that can also inadvertently support other Beast-Warrior strategies.",
+            "tags": ["beatdown", "combo", "link", "engine", "support"]
         },
         {
             "name": "Skafos",
@@ -237,7 +252,8 @@
             "cardIds": [],
             "thumb": "1583661",
             "author": "Kiyousa Fujin",
-            "description": "A Tribute-based strategy that focuses on controlling advantage and disrupting the opponent through a slew of Book of Moon-type effects."
+            "description": "A Tribute-based strategy that focuses on controlling advantage and disrupting the opponent through a slew of Book of Moon-type effects.",
+            "tags": ["control", "link", "grind", "tribute"]
         },
         {
             "name": "Hydrovenal",
@@ -261,7 +277,8 @@
             "cardIds": [],
             "thumb": "1611807",
             "author": "Sock",
-            "description": "A grind archetype that builds up advantage, and while it doesn't disrupt your opponent proactively, it can protect itself quite well, and can be quite hard to deal with. Most of the interaction with this archetype lies in the Battle Phase, having a Negate Attack which bounces, a themed Wall of Disruption, and an Armades/Leviair tech Spell."
+            "description": "A grind archetype that builds up advantage, and while it doesn't disrupt your opponent proactively, it can protect itself quite well, and can be quite hard to deal with. Most of the interaction with this archetype lies in the Battle Phase, having a Negate Attack which bounces, a themed Wall of Disruption, and an Armades/Leviair tech Spell.",
+            "tags": ["ramp", "battle", "grind", "gy", "banish", "float", "pendulum"]
         },
         {
             "name": "Chronotiger",
@@ -285,7 +302,8 @@
             "cardIds": [],
             "thumb": "1642964",
             "author": "Sock",
-            "description": "Building off of the existing \"support\" (Side Deck in above link), it's a Beast/Fusion/Flip archetype that benefits from the existing generic Beast and Fusion support. It usually operates under a heavy, multi-turn Beast lock (Watchful on field, Studious' effect)."
+            "description": "Building off of the existing \"support\" (Side Deck in above link), it's a Beast/Fusion/Flip archetype that benefits from the existing generic Beast and Fusion support. It usually operates under a heavy, multi-turn Beast lock (Watchful on field, Studious' effect).",
+            "tags": ["fusion", "support", "flip"]
         },
         {
             "name": "Ravager",
@@ -301,7 +319,8 @@
             "cardIds": [],
             "thumb": "1646199",
             "author": "Sock",
-            "description": "Part of a combined effort to introduce the new Type \"Yokai\", as well as the type-changing clause (This monster's original Type is treated as Yokai rather than TYPE.). A stun-oriented \"protect the castle\" archetype surrounded around bringing out an archetypal normal monster, and equipping it with archetypal monsters from the GY during the End Phase. Focusing on low-commitment plays, it is easily disrupted, both before and after executing their semi-linear combo. However, if left unhandled, the Yurei can punch through many boards."
+            "description": "Part of a combined effort to introduce the new Type \"Yokai\", as well as the type-changing clause (This monster's original Type is treated as Yokai rather than TYPE.). A stun-oriented \"protect the castle\" archetype surrounded around bringing out an archetypal normal monster, and equipping it with archetypal monsters from the GY during the End Phase. Focusing on low-commitment plays, it is easily disrupted, both before and after executing their semi-linear combo. However, if left unhandled, the Yurei can punch through many boards.",
+            "tags": ["normal", "grind", "control"]
         },
         {
             "name": "Tsurumashi",
@@ -357,7 +376,8 @@
             "cardIds": [],
             "thumb": "1624355",
             "author": "Ani",
-            "description": "A control-y Deck that revolves around trying to resolve Yova as many times as the Earth has revolved around the Sun, along with her support cards that also like to be used a bunch."
+            "description": "A control-y Deck that revolves around trying to resolve Yova as many times as the Earth has revolved around the Sun, along with her support cards that also like to be used a bunch.",
+            "tags": ["control", "gy"]
         },
         {
             "name": "Armorizer",
@@ -397,7 +417,8 @@
             "cardIds": [],
             "thumb": "1753661",
             "author": "Ani",
-            "description": "A Fusion Deck that does neat shenanigans with their combos."
+            "description": "A Fusion Deck that does neat shenanigans with their combos.",
+            "tags": ["control", "grind", "fusion", "gy"]
         },
         {
             "name": "Arsenal",
@@ -461,7 +482,8 @@
             "cardIds": [],
             "thumb": "1265862",
             "author": "Sock",
-            "description": "A Thunder Deck that loves to Synchro, Link Summon and nuke the board."
+            "description": "A Thunder Deck that loves to Synchro, Link Summon and nuke the board.",
+            "tags": ["synchro", "link", "control", "midrange", "aggro"]
         },
         {
             "name": "Diabolition",
@@ -477,7 +499,8 @@
             "cardIds": [],
             "thumb": "1796891",
             "author": "Khreygond",
-            "description": "A Synchro Deck based on The Witcher. The game plan is to make Caranthir alongside other soft disruptions, and work through his looping capabilities into Imlerith, then Eredin is your final gameplan. The Traps work to Special Summon a monster, or as an omni-negate at the cost of banishing 1 \"Wild Hunt\" monster from your hand or face-up field."
+            "description": "A Synchro Deck based on The Witcher. The game plan is to make Caranthir alongside other soft disruptions, and work through his looping capabilities into Imlerith, then Eredin is your final gameplan. The Traps work to Special Summon a monster, or as an omni-negate at the cost of banishing 1 \"Wild Hunt\" monster from your hand or face-up field.",
+            "tags": ["midrange", "synchro", "banish"]
         },
         {
             "name": "Meterao",
@@ -525,7 +548,8 @@
             "cardIds": [],
             "thumb": "1802233",
             "author": "Sock",
-            "description": "A Pendulum control Deck focused around accumulating and managing \"Head Counters\" and using them for powerful disruptions."
+            "description": "A Pendulum control Deck focused around accumulating and managing \"Head Counters\" and using them for powerful disruptions.",
+            "tags": ["pendulum", "counter", "ramp", "control"]
         },
         {
             "name": "Dark Arts",
@@ -581,7 +605,8 @@
             "cardIds": [],
             "thumb": "1558753",
             "author": "Sock",
-            "description": "A LIGHT Spellcaster based Link Deck."
+            "description": "A LIGHT Spellcaster based Link Deck.",
+            "tags": ["link", "midrange"]
         },
         {
             "name": "Colossus",
@@ -589,7 +614,8 @@
             "cardIds": [],
             "thumb": "1854883",
             "author": "NoodleDoodle21",
-            "description": "A control Deck that combines the styles of both True Draco and Eldlich."
+            "description": "A control Deck that combines the styles of both True Draco and Eldlich.",
+            "tags": ["control", "beatdown", "gy", "fusion"]
         },
         {
             "name": "Nekojishi",
@@ -621,15 +647,17 @@
             "cardIds": [],
             "thumb": "1921675",
             "author": "Sock",
-            "description": "A DARK Yokai Fusion Deck that aims to build a Link-3 monster with an effect similar to Albaz and recur advantage with supporting cards."
+            "description": "A DARK Yokai Fusion Deck that aims to build a Link-3 monster with an effect similar to Albaz and recur advantage with supporting cards.",
+            "tags": ["control", "fusion", "link", "engine"]
         },
         {
-            "name": "Ookazi",
+            "name": "Ookazi Archetype",
             "deckIds": [6733479],
             "cardIds": [],
             "thumb": "1930992",
             "author": "Ani",
-            "description": "It's an archetype... For Ookazi... Yeah I never thought I would see it either but here we are."
+            "description": "It's an archetype... For Ookazi... Yeah I never thought I would see it either but here we are.",
+            "tags": ["burn", "support"]
         },
         {
             "name": "Giga Havoc",
@@ -677,7 +705,8 @@
             "cardIds": [],
             "thumb": "1922768",
             "author": "Ani",
-            "description": "Normal Wyrm FIRE monsters that offer generic as well as in archetype effects and plays."
+            "description": "Normal Wyrm FIRE monsters that offer generic as well as in archetype effects and plays.",
+            "tags": ["control", "normal"]
         },
         {
             "name": "Plushmage",
@@ -701,7 +730,8 @@
             "cardIds": [],
             "thumb": "1892679",
             "author": "Sock",
-            "description": "A Ritual Deck that revolves around banishing cards, primarily from the top of the Deck face-down and controlling the board with Traps and a myriad of on-field effects which are fueled by the otherwise mandatory maintenance costs throughout the archetype, strongly encouraging a 60 card playstyle."
+            "description": "A Ritual Deck that revolves around banishing cards, primarily from the top of the Deck face-down and controlling the board with Traps and a myriad of on-field effects which are fueled by the otherwise mandatory maintenance costs throughout the archetype, strongly encouraging a 60 card playstyle.",
+            "tags": ["ritual", "banish", "control"]
         },
         {
             "name": "Moira",
@@ -709,7 +739,8 @@
             "cardIds": [],
             "thumb": "1974339",
             "author": "46",
-            "description": "A Deck that revolves around a monster that Summons himself and 2 Tokens during your opponent's End Phase. The archetype has a Wobaku and a hand-trap to keep you alive, since the only monster you're going to ever be Summoning is Necrophobe who Summons himself at the end of your opponent's turn."
+            "description": "A Deck that revolves around a monster that Summons himself and 2 Tokens during your opponent's End Phase. The archetype has a Wobaku and a hand-trap to keep you alive, since the only monster you're going to ever be Summoning is Necrophobe who Summons himself at the end of your opponent's turn.",
+            "tags": ["stun", "beatdown", "gy"]
         },
         {
             "name": "Dark Hole Archetype",
@@ -717,7 +748,8 @@
             "cardIds": [],
             "thumb": "1974743",
             "author": "Sock",
-            "description": "A fine line between support and a standalone archetype, this pack of cards help support the Dark Hole strategy while also spicing things up with different unique effects."
+            "description": "A fine line between support and a standalone archetype, this pack of cards help support the Dark Hole strategy while also spicing things up with different unique effects.",
+            "tags": ["support", "ramp"]
         },
         {
             "name": "Nebulline",
@@ -765,7 +797,8 @@
             "cardIds": [],
             "thumb": "2006097",
             "author": "Ani",
-            "description": "A Control Deck in a similar vein as Sky Striker - being adaptable, being able to take advantage of strong going 2nd cards and requiring somewhat specific setup to boot."
+            "description": "A Control Deck in a similar vein as Sky Striker - being adaptable, being able to take advantage of strong going 2nd cards and requiring somewhat specific setup to boot.",
+            "tags": ["aggro", "control", "link"]
         },
         {
             "name": "Masquerado",
@@ -821,7 +854,8 @@
             "cardIds": [],
             "thumb": "2080185",
             "author": "Khreygond",
-            "description": "A Level 8 DARK Fiend Deck with a sole monster that exploits the DARK Spirit control play style to the max."
+            "description": "A Level 8 DARK Fiend Deck with a sole monster that exploits the DARK Spirit control play style to the max.",
+            "tags": ["control", "grind", "ramp", "float", "gy"]
         },
         {
             "name": "Dual Asset",
@@ -853,7 +887,8 @@
             "cardIds": [],
             "thumb": "1708833",
             "author": "Sock",
-            "description": "Taking inspiration from different effects of Konami made cards, these guys have their own unique effects, but with a twist."
+            "description": "Taking inspiration from different effects of Konami made cards, these guys have their own unique effects, but with a twist.",
+            "tags": ["control", "rainbow"]
         },
         {
             "name": "Revived Beasts",
@@ -893,7 +928,8 @@
             "cardIds": [],
             "thumb": "646031",
             "author": "Sock",
-            "description": "A very unique protect the castle-style stun Deck that utilizes their 1 monster with several Equip Cards to get the job done."
+            "description": "A very unique protect the castle-style stun Deck that utilizes their 1 monster with several Equip Cards to get the job done.",
+            "tags": ["equip", "stun"]
         },
         {
             "name": "Rowa - Elusive Power",
@@ -901,7 +937,8 @@
             "cardIds": [],
             "thumb": "1759190",
             "author": "Sock",
-            "description": "A Yokai control Deck boasting impressive consistency and good going second capabilities. Easily one of the most innovative and competent Spell/Trap control Decks in the server."
+            "description": "A Yokai control Deck boasting impressive consistency and good going second capabilities. Easily one of the most innovative and competent Spell/Trap control Decks in the server.",
+            "tags": ["control", "grind"]
         },
         {
             "name": "Taida",
@@ -917,7 +954,8 @@
             "cardIds": [],
             "thumb": "1116704",
             "author": "Ghostricker",
-            "description": "A Level 3 WIND Winged Beast control deck in a similar vein as Salamangreat."
+            "description": "A Level 3 WIND Winged Beast control deck in a similar vein as Salamangreat.",
+            "tags": ["midrange", "grind", "ramp", "gy", "link", "xyz"]
         },
         {
             "name": "Dark Imp",
@@ -925,7 +963,8 @@
             "cardIds": [],
             "thumb": "2049693",
             "author": "46",
-            "description": "A Level 3 burn Deck where all the Main Deck monsters are identical. The win condition is Achacha Warlord - he does the most burning. You don't usually end on any strong monsters apart from Warlord, but the Traps provide interruption and the Continuous Spells make the Deck have a grind."
+            "description": "A Level 3 burn Deck where all the Main Deck monsters are identical. The win condition is Achacha Warlord - he does the most burning. You don't usually end on any strong monsters apart from Warlord, but the Traps provide interruption and the Continuous Spells make the Deck have a grind.",
+            "tags": ["stun", "burn", "grind", "gy"]
         },
         {
             "name": "Xiuhqui",
@@ -957,7 +996,8 @@
             "cardIds": [],
             "thumb": "1623151",
             "author": "Khreygond",
-            "description": "A DARK Aqua Pendulum beat down focused strategy."
+            "description": "A DARK Aqua Pendulum beat down focused strategy.",
+            "tags": ["grind", "midrange", "beatdown", "banish", "pendulum"]
         },
         {
             "name": "Glow Gods",
@@ -988,7 +1028,7 @@
             "deckIds": [6649729],
             "cardIds": [],
             "thumb": "1218064",
-            "author": "4K HD Ookazi Turbo",
+            "author": "Styrofoam",
             "description": "A FIRE-based mill archetype focused on a central Equip Spell."
         },
         {
@@ -1021,7 +1061,8 @@
             "cardIds": [],
             "thumb": "1993786",
             "author": "NoodleDoodle21",
-            "description": "A Cyberse Pendulum combo Deck that utilizes Rank 7 Xyz Monsters."
+            "description": "A Cyberse Pendulum combo Deck that utilizes Rank 7 Xyz Monsters.",
+            "tags": ["combo", "pendulum", "xyz"]
         },
         {
             "name": "Medaka",
@@ -1037,7 +1078,8 @@
             "cardIds": [],
             "thumb": "1888081",
             "author": "Sock",
-            "description": "A small WATER Beast archetype that revolves around banishing its monsters that also has a Continuous Spell."
+            "description": "A small WATER Beast archetype that revolves around banishing its monsters that also has a Continuous Spell.",
+            "tags": ["engine", "control"]
         },
         {
             "name": "Gesellschaft",

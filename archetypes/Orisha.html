@@ -22,8 +22,10 @@
     <script src="./../card-viewer.js"></script>
     <script src="./../deck.js"></script>
     <script>
+        //ik these aren't exactly correct but I'm too lazy to make right names
         window.sourceIds = [6262300];
         window.extraIds = [];
+        window.tags = [];
         // statically loaded deck information
         CardViewer.Editor.DeckInstance = new Deck(
             [],
@@ -34,7 +36,6 @@
         CardViewer.Editor.DeckInstance.deckWidthInCards = 7;
         CardViewer.Editor.DeckInstance.showSideDeck = false;
         window.thumb = parseInt("1770782");
-        <!-- window.deckPath = ""; -->
     </script>
     <script src="./onload.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
@@ -45,7 +46,7 @@
         <div id="infoContainer">
             <h2>Orisha</h2>
             <h3>FlavorFlov</h3>
-            <!-- <div id="byline"><button id="downloadDeck">Download</button> <span id="cardCount">X</span> cards</div> -->
+            <div id="tags"></div>
             <div id="description">A Deck that's mostly centered around building big beaters to beat down your opponent. The better first turn boards apply pressure to your opponent's combo strategies. Their Fusion Spell gives them an edge against other WATER and Thunder based strategies, and the Fusion's deck out effects (usually milling 1 to 5 cards each) can apply a lot of pressure against mass milling strategies.</div>
         </div>
         <div id="deckEditor"></div>

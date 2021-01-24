@@ -22,8 +22,10 @@
     <script src="./../card-viewer.js"></script>
     <script src="./../deck.js"></script>
     <script>
+        //ik these aren't exactly correct but I'm too lazy to make right names
         window.sourceIds = [5834507];
         window.extraIds = [];
+        window.tags = ["ramp", "battle", "grind", "gy", "banish", "float", "pendulum"];
         // statically loaded deck information
         CardViewer.Editor.DeckInstance = new Deck(
             [],
@@ -34,7 +36,6 @@
         CardViewer.Editor.DeckInstance.deckWidthInCards = 7;
         CardViewer.Editor.DeckInstance.showSideDeck = false;
         window.thumb = parseInt("1611807");
-        <!-- window.deckPath = ""; -->
     </script>
     <script src="./onload.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
@@ -45,7 +46,7 @@
         <div id="infoContainer">
             <h2>Nadiupant</h2>
             <h3>Sock</h3>
-            <!-- <div id="byline"><button id="downloadDeck">Download</button> <span id="cardCount">X</span> cards</div> -->
+            <div id="tags"></div>
             <div id="description">A grind archetype that builds up advantage, and while it doesn't disrupt your opponent proactively, it can protect itself quite well, and can be quite hard to deal with. Most of the interaction with this archetype lies in the Battle Phase, having a Negate Attack which bounces, a themed Wall of Disruption, and an Armades/Leviair tech Spell.</div>
         </div>
         <div id="deckEditor"></div>

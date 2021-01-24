@@ -17,12 +17,14 @@ def parse_archetype!(obj)
     ds.description = obj["description"]
     ds.main = obj["deckIds"]
     ds.side = obj["cardIds"]
+    ds.extra = obj["tags"] || []
     
     $generated[ds.id] = {
         name: ds.name,
         # id: ds.id,
         author: ds.author,
         description: ds.description,
+        tags: obj["tags"]
     }
     
     File.write("#{ds.id}.html", ds.to_html)
@@ -40,8 +42,6 @@ sub_indent = " " * 12
 archetype_data["data"].sort_by { |obj| obj["name"].downcase }.each { |obj|
     ds = parse_archetype!(obj)
     res += "\n" + indent + ds.make_link
-    # }
-    # res += "\n" + indent + "</div>"
 }
 
 # puts res
