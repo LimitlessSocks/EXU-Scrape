@@ -14,7 +14,8 @@
             "cardIds": [],
             "thumb": "1182404",
             "author": "Lyoko",
-            "description": "Pendulum Monsters that can protect themselves by destroying their scales and a Deck that can OTK you if you don't respond quick enough."
+            "description": "Pendulum Monsters that can protect themselves by destroying their scales and a Deck that can OTK you if you don't respond quick enough.",
+            "tags": ["pendulum", "aggro", "beatdown", "otk", "grind"]
         },
         {
             "name": "Starbaric Crystal Beasts",
@@ -30,7 +31,8 @@
             "cardIds": [],
             "thumb": "1193249",
             "author": "Mevs",
-            "description": "A Plant Xyz Deck that can Xyz Summon in a new way and use Plants as generic support."
+            "description": "A Plant Xyz Deck that can Xyz Summon in a new way and use Plants as generic support.",
+            "tags": ["xyz", "combo", "banish", "support"]
         },
         {
             "name": "Panda",
@@ -39,7 +41,7 @@
             "thumb": "1261407",
             "author": "Sock",
             "description": "A Beast Deck that relies on banishing to get the job done (and banishing their entire GY if they feel like it!).",
-            "tags": ["midrange", "banish", "gy", "support", "pendulum", "link"]
+            "tags": ["midrange", "banish", "gy", "support", "pendulum", "link", "beatdown", "aggro"]
         },
         {
             "name": "Poppin",
@@ -63,7 +65,8 @@
             "cardIds": [],
             "thumb": "1953527",
             "author": "Redox",
-            "description": "An aggro OTK Deck that loves to use Equip Cards and deal tons of damage."
+            "description": "An aggro OTK Deck that loves to use Equip Cards and deal tons of damage.",
+            "tags": ["second", "aggro", "otk", "beatdown", "link", "castle", "equip"]
         },
         {
             "name": "Aria Fey",
@@ -72,7 +75,7 @@
             "thumb": "1648946",
             "author": "Sock",
             "description": "A fairy combo deck that revolves around making turn 1 Xyz Monsters supported by archetypal backrow and supporting tools to grind somewhat decently. Also can be used as an engine for fairy decks, featuring 0-3 Day and 0-3 Lune as a base.",
-            "tags": ["engine", "gy", "midrange", "xyz"]
+            "tags": ["first", "engine", "gy", "midrange", "xyz"]
         },
         {
             "name": "Starships",
@@ -128,7 +131,8 @@
             "cardIds": [],
             "thumb": "1451728",
             "author": "Mac",
-            "description": "An archetype of Warrior monsters that focus on changing their battle positions and attacking the opponent, with inspiration taken from the TCG archetype 'Karikuri'."
+            "description": "An archetype of Warrior monsters that focus on changing their battle positions and attacking the opponent, with inspiration taken from the TCG archetype 'Karikuri'.",
+            "tags": ["combo", "synchro", "xyz", "beatdown"]
         },
         {
             "name": "Rulers of Name",
@@ -185,7 +189,8 @@
             "cardIds": [],
             "thumb": "1565479",
             "author": "Slinkiee",
-            "description": "A truly innovative take on Ritual Monsters. Through Trap Cards, this archetype is able to pop off and pop cards."
+            "description": "A truly innovative take on Ritual Monsters. Through Trap Cards, this archetype is able to pop off and pop cards.",
+            "tags": ["ritual", "control", "grind", "gy", "float"]
         },
         {
             "name": "Pixel Monsters",
@@ -210,7 +215,8 @@
             "cardIds": [],
             "thumb": "1519128",
             "author": "Novaksis",
-            "description": "A grind archetype where your opponent decides how the game will play out."
+            "description": "A grind archetype where your opponent decides how the game will play out.",
+            "tags": ["control", "grind", "gimmick"]
         },
         {
             "name": "Battletech",
@@ -227,7 +233,7 @@
             "thumb": "1582209",
             "author": "Khreygond",
             "description": "A Trap Deck with 2 Normal Monsters and an incessant grind.",
-            "tags": ["combo", "grind", "gy", "normal"]
+            "tags": ["control", "grind", "gy", "normal", "no-extra"]
         },
         {
             "name": "Kojoten",
@@ -294,7 +300,8 @@
             "cardIds": [],
             "thumb": "1383523",
             "author": "OceanPhantom ",
-            "description": "A Trap Fusion Deck that uses Normal Monsters and disruptions to close out games."
+            "description": "A Trap Fusion Deck that uses Normal Monsters and disruptions to close out games.",
+            "tags": ["control", "fusion", "grind", "stun", "float"]
         },
         {
             "name": "Koala",
@@ -311,7 +318,8 @@
             "cardIds": [],
             "thumb": "1117371",
             "author": "OceanPhantom",
-            "description": "A Synchro based Strategy, able to Summon power control based Synchro monsters or OTK through powerful Insect Synchro Monsters."
+            "description": "A Synchro based Strategy, able to Summon power control based Synchro monsters or OTK through powerful Insect Synchro Monsters.",
+            "tags": ["combo", "aggro", "synchro", "tribute"]
         },
         {
             "name": "Yurei",
@@ -320,7 +328,7 @@
             "thumb": "1646199",
             "author": "Sock",
             "description": "Part of a combined effort to introduce the new Type \"Yokai\", as well as the type-changing clause (This monster's original Type is treated as Yokai rather than TYPE.). A stun-oriented \"protect the castle\" archetype surrounded around bringing out an archetypal normal monster, and equipping it with archetypal monsters from the GY during the End Phase. Focusing on low-commitment plays, it is easily disrupted, both before and after executing their semi-linear combo. However, if left unhandled, the Yurei can punch through many boards.",
-            "tags": ["normal", "grind", "control", "castle"]
+            "tags": ["first", "normal", "grind", "control", "castle"]
         },
         {
             "name": "Tsurumashi",
@@ -344,7 +352,8 @@
             "cardIds": [],
             "thumb": "1649836",
             "author": "Ryck",
-            "description": "With tricky banish effects based on the Shiranui, combined with the powerful Synchro toolbox of the Mayakashi, Shirakashi is a deck with several tricks up its sleeve and a formidable grind game."
+            "description": "With tricky banish effects based on the Shiranui, combined with the powerful Synchro toolbox of the Mayakashi, Shirakashi is a deck with several tricks up its sleeve and a formidable grind game.",
+            "tags": ["synchro", "link", "control", "gy", "banish", "float"]
         },
         {
             "name": "Genjutsu",
@@ -352,7 +361,8 @@
             "cardIds": [],
             "thumb": "574158",
             "author": "Gatr",
-            "description": "Genjutsu is a monster-only Ritual Deck that uses Ritual monsters to Ritual Summon. They are a tempo-focused deck that excels at going 2nd and breaking boards, then out resourcing the opponent. Each Ritual has a removal effect on Summon, and the deck is capable of Summoning them as a Quick Effect."
+            "description": "Genjutsu is a monster-only Ritual Deck that uses Ritual monsters to Ritual Summon. They are a tempo-focused deck that excels at going 2nd and breaking boards, then out resourcing the opponent. Each Ritual has a removal effect on Summon, and the deck is capable of Summoning them as a Quick Effect.",
+            "tags": ["second", "aggro", "ritual", "link", "grind", "beatdown"]
         },
         {
             "name": "Raycor",
@@ -385,7 +395,8 @@
             "cardIds": [],
             "thumb": "1691479",
             "author": "Dawn",
-            "description": "A Deck focused around a singular monster, loading it with various effects via its Fusion Materials. Played pure it can feel very \"protect the castle\"-like."
+            "description": "A Deck focused around a singular monster, loading it with various effects via its Fusion Materials. Played pure it can feel very \"protect the castle\"-like.",
+            "tags": ["engine", "fusion", "control", "castle"]
         },
         {
             "name": "Vampop\u2606Star",
@@ -450,7 +461,8 @@
             "cardIds": [],
             "thumb": "1831213",
             "author": "Gatr",
-            "description": "A Trap Deck with a few monsters it uses and revolves around."
+            "description": "A Trap Deck with a few monsters it uses and revolves around.",
+            "tags": ["control", "first", "support"]
         },
         {
             "name": "Black Blood",
@@ -508,7 +520,8 @@
             "cardIds": [],
             "thumb": "1558338",
             "author": "Mevs",
-            "description": "A Dinosaur-type Deck with effects based on Nibiru, the Primal Being, and Spells/Traps that are benefitted by either player Special Summoning from the hand. It has a reliance on the opponent, but can go first due to Charismatic Priestess."
+            "description": "A Dinosaur-type Deck with effects based on Nibiru, the Primal Being, and Spells/Traps that are benefited by either player Special Summoning from the hand. It has a heavy reliance on the opponent.",
+            "tags": ["control", "gimmick", "support"]
         },
         {
             "name": "Dark Kingdom",
@@ -549,7 +562,7 @@
             "thumb": "1802233",
             "author": "Sock",
             "description": "A Pendulum control Deck focused around accumulating and managing \"Head Counters\" and using them for powerful disruptions.",
-            "tags": ["pendulum", "counter", "ramp", "control"]
+            "tags": ["first", "pendulum", "counter", "ramp", "control"]
         },
         {
             "name": "Dark Arts",
@@ -589,7 +602,8 @@
             "cardIds": [],
             "thumb": "1807122",
             "author": "Gatr",
-            "description": "This flip deck has a unique gimmick that makes it stand out from other flip decks: they have their own version of Shifting Shadows, and they use this to catch your opponent by surprise. If they activate an effect in the wrong column, or if they target the wrong monster, you can trigger the effects of your monsters."
+            "description": "This flip deck has a unique gimmick that makes it stand out from other flip decks: they have their own version of Shifting Shadows, and they use this to catch your opponent by surprise. If they activate an effect in the wrong column, or if they target the wrong monster, you can trigger the effects of your monsters.",
+            "tags": ["control", "stun", "grind", "flip"]
         },
         {
             "name": "PPDC",
@@ -597,7 +611,8 @@
             "cardIds": [],
             "thumb": "1753931",
             "author": "Samm99663",
-            "description": "A WATER/DARK Machine-based Fusion and Link Deck."
+            "description": "A WATER/DARK Machine-based Fusion and Link Deck.",
+            "tags": ["fusion", "link", "beatdown", "grind"]
         },
         {
             "name": "Charismatic",
@@ -606,7 +621,7 @@
             "thumb": "1558753",
             "author": "Sock",
             "description": "A LIGHT Spellcaster based Link Deck.",
-            "tags": ["link", "midrange"]
+            "tags": ["first", "second", "link", "midrange"]
         },
         {
             "name": "Colossus",
@@ -623,7 +638,8 @@
             "cardIds": [],
             "thumb": "1102959",
             "author": "Gatr",
-            "description": "Nekojishi mainly focuses on having Continuous Spells which apply passive effects to the monsters in their column."
+            "description": "Nekojishi mainly focuses on having Continuous Spells which apply passive effects to the monsters in their column.",
+            "tags": ["second", "aggro", "link", "synchro", "beatdown"]
         },
         {
             "name": "Malevolessence",
@@ -631,7 +647,8 @@
             "cardIds": [],
             "thumb": "1228052",
             "author": "Khreygond",
-            "description": "A Fusion-based GY Deck that works by having a very recursive engine that Fusion Summons on the opponent's turn."
+            "description": "A Fusion-based GY Deck that works by having a very recursive engine that Fusion Summons on the opponent's turn.",
+            "tags": ["engine", "fusion", "grind", "gimmick"]
         },
         {
             "name": "Onion Slice",
@@ -639,7 +656,8 @@
             "cardIds": [],
             "thumb": "1918117",
             "author": "46",
-            "description": "A going 2nd Warrior combo Deck that aims to get some specific monsters in the GY so they can banish themselves to Summon their Fusion counterparts."
+            "description": "A going 2nd Warrior combo Deck that aims to get some specific monsters in the GY so they can banish themselves to Summon their Fusion counterparts.",
+            "tags": ["fusion", "aggro", "control", "gy", "grind"]
         },
         {
             "name": "Vengeful Tox",
@@ -722,7 +740,8 @@
             "cardIds": [],
             "thumb": "1516304",
             "author": "Ava",
-            "description": "A Spellcaster Deck focused on Special and Fusion Summoning."
+            "description": "A Spellcaster Deck focused on Special and Fusion Summoning.",
+            "tags": ["fusion", "beatdown", "support"]
         },
         {
             "name": "Queltz",
@@ -731,7 +750,7 @@
             "thumb": "1892679",
             "author": "Sock",
             "description": "A Ritual Deck that revolves around banishing cards, primarily from the top of the Deck face-down and controlling the board with Traps and a myriad of on-field effects which are fueled by the otherwise mandatory maintenance costs throughout the archetype, strongly encouraging a 60 card playstyle.",
-            "tags": ["ritual", "banish", "control"]
+            "tags": ["first", "ritual", "banish", "control"]
         },
         {
             "name": "Moira",
@@ -749,7 +768,7 @@
             "thumb": "1974743",
             "author": "Sock",
             "description": "A fine line between support and a standalone archetype, this pack of cards help support the Dark Hole strategy while also spicing things up with different unique effects.",
-            "tags": ["support", "ramp"]
+            "tags": ["second", "first", "support", "ramp"]
         },
         {
             "name": "Nebulline",
@@ -757,7 +776,8 @@
             "cardIds": [],
             "thumb": "1985258",
             "author": "AkeDragon",
-            "description": "A Beast Deck that focuses on Xyz Summoning and modifying Levels, also featuring a new monster: Shin Chimera, Power."
+            "description": "A Beast Deck that focuses on Xyz Summoning and modifying Levels, also featuring a new monster: Shin Chimera, Power.",
+            "tags": ["combo", "xyz", "support", "beatdown"]
         },
         {
             "name": "Chibright",
@@ -773,7 +793,8 @@
             "cardIds": [],
             "thumb": "1088520",
             "author": "C.C.",
-            "description": "A Link based space-themed Deck that relies on Speed Counters and more to get going."
+            "description": "A Link based space-themed Deck that relies on Speed Counters and more to get going.",
+            "tags": ["control", "link", "stun", "equip", "float"]
         },
         {
             "name": "Legendary Golems",
@@ -806,7 +827,8 @@
             "cardIds": [],
             "thumb": "1805483",
             "author": "Diego",
-            "description": "A very aggressive Spellcaster Tribute-based Deck that mainly wants to get out their beefy Level 10s, with the 7s added as flavor and 3 Level 4s that basically make the wheels spin."
+            "description": "A very aggressive Spellcaster Tribute-based Deck that mainly wants to get out their beefy Level 10s, with the 7s added as flavor and 3 Level 4s that basically make the wheels spin.",
+            "tags": ["aggro", "engine", "xyz"]
         },
         {
             "name": "Railreich",
@@ -814,7 +836,8 @@
             "cardIds": [],
             "thumb": "1767767",
             "author": "Rail, Unevenly Matched",
-            "description": "An aggro column-based domino Deck that forces the opponent to make crucial decisions based on what's on the board."
+            "description": "An aggro column-based domino Deck that forces the opponent to make crucial decisions based on what's on the board.",
+            "tags": ["control", "link", "column", "gimmick"]
         },
         {
             "name": "Deus Ex",
@@ -822,7 +845,8 @@
             "cardIds": [],
             "thumb": "2029366",
             "author": "Ryck",
-            "description": "A Deck similar in vein to Darklord but more focused around battling and EARTH Machine things."
+            "description": "A Deck similar in vein to Darklord but more focused around battling and EARTH Machine things.",
+            "tags": ["tribute", "support", "gy", "grind"]
         },
         {
             "name": "Anglory",
@@ -838,7 +862,8 @@
             "cardIds": [],
             "thumb": "2060162",
             "author": "Cryselle",
-            "description": "An Xyz and Synchro Deck that banishes and is somewhat in a similar vein to Mythical Winged Beasts, another EXU-approved Deck. Certainly something."
+            "description": "An Xyz and Synchro Deck that banishes and is somewhat in a similar vein to Mythical Winged Beasts, another EXU-approved Deck. Certainly something.",
+            "tags": ["synchro", "xyz", "midrange", "banish", "engine"]
         },
         {
             "name": "Strannaut",
@@ -871,7 +896,8 @@
             "cardIds": [],
             "thumb": "1888810",
             "author": "NoodleDoodle21",
-            "description": "A Link and Xyz-based Deck focused around modulation of Levels and ranking up."
+            "description": "A Link and Xyz-based Deck focused around modulation of Levels and ranking up.",
+            "tags": ["xyz", "link", "aggro", "beatdown"]
         },
         {
             "name": "New Order",
@@ -888,7 +914,7 @@
             "thumb": "1708833",
             "author": "Sock",
             "description": "Taking inspiration from different effects of Konami made cards, these guys have their own unique effects, but with a twist.",
-            "tags": ["control", "rainbow"]
+            "tags": ["first", "control", "rainbow"]
         },
         {
             "name": "Revived Beasts",
@@ -896,7 +922,8 @@
             "cardIds": [],
             "thumb": "2000686",
             "author": "Ryck",
-            "description": "A Pokemon-themed Deck ultimately focused on bringing out its big Fusion Monster boss - Ho-Oh - Lord of the Revived Beasts. It's also pseudo-Fire King support."
+            "description": "A Pokemon-themed Deck ultimately focused on bringing out its big Fusion Monster boss - Ho-Oh - Lord of the Revived Beasts. It's also pseudo-Fire King support.",
+            "tags": ["engine", "support", "fusion", "control", "castle"]
         },
         {
             "name": "Mechatech",
@@ -905,7 +932,7 @@
             "thumb": "2021037",
             "author": "Anon",
             "description": "A small high Level Machine/Dragon hybrid engine that has a unique Ritual Spell that Ritual Summons by fusing monsters with double the needed Levels.",
-            "tags": []
+            "tags": ["untagged"]
         },
         {
             "name": "Primal Forest",
@@ -913,7 +940,8 @@
             "cardIds": [],
             "thumb": "1955780",
             "author": "Anon",
-            "description": "A bunch of gimmicks packed into a single Deck."
+            "description": "A bunch of gimmicks packed into a single Deck.",
+            "tags": ["first", "second", "control", "midrange", "otk", "grind", "ramp", "beatdown", "link", "gimmick"]
         },
         {
             "name": "Bleakstory",
@@ -939,7 +967,7 @@
             "thumb": "1759190",
             "author": "Sock",
             "description": "A Yokai control Deck boasting impressive consistency and good going second capabilities. Easily one of the most innovative and competent Spell/Trap control Decks in the server.",
-            "tags": ["control", "grind"]
+            "tags": ["first", "second", "control", "grind"]
         },
         {
             "name": "Taida",
@@ -973,7 +1001,8 @@
             "cardIds": [],
             "thumb": "1236817",
             "author": "Gatr",
-            "description": "A Fusion Pendulum Deck that aims to first place Fusions from the face-down Extra Deck into the face-up Extra Deck, then place them into the scales. It grinds via Pendulum Summoning a single Main Deck monster and using its effect to Fusion Summon. It gets better over time, and all the Fusions can be quite disruptive."
+            "description": "A Fusion Pendulum Deck that aims to first place Fusions from the face-down Extra Deck into the face-up Extra Deck, then place them into the scales. It grinds via Pendulum Summoning a single Main Deck monster and using its effect to Fusion Summon. It gets better over time, and all the Fusions can be quite disruptive.",
+            "tags": ["fusion", "pendulum", "combo"]
         },
         {
             "name": "Empyreal",
@@ -981,7 +1010,9 @@
             "cardIds": [],
             "thumb": "797973",
             "author": "Heavens Karma",
-            "description": "An angelic grind Deck. The monsters gain extra effects if there are copies of them banished in your possession, and the Fusion Monsters can dodge a la Redoer."
+            "description": "An angelic grind Deck. The monsters gain extra effects if there are copies of them banished in your possession, and the Fusion Monsters can dodge a la Redoer.",
+            "tags": ["fusion", "control", "grind", "banish"]
+
         },
         {
             "name": "NTG",
@@ -989,7 +1020,8 @@
             "cardIds": [],
             "thumb": "1764824",
             "author": "FlavorFlov",
-            "description": "A Gemini archetype with a lot of Traps and a grind."
+            "description": "A Gemini archetype with a lot of Traps and a grind.",
+            "tags": ["control", "grind", "gy", "no ed"]
         },
         {
             "name": "Darkwater",
@@ -1006,7 +1038,8 @@
             "cardIds": [],
             "thumb": "1751687",
             "author": "AkeDragon",
-            "description": "A Magical Musket-esque control Deck, except it's Fairies. It can play stun cards, draw Spells, Solemn Judgment and has neat column based interactions."
+            "description": "A Magical Musket-esque control Deck, except it's Fairies. It can play stun cards, draw Spells, Solemn Judgment and has neat column based interactions.",
+            "tags": ["control", "stun", "grind", "no-extra"]
         },
         {
             "name": "Chronoruler",
@@ -1039,7 +1072,8 @@
             "cardIds": [],
             "thumb": "1966229",
             "author": "JDan",
-            "description": "A DARK Fiend going second beatdown Deck focusing on Link climbing and Fusion plays. Lots of battle oriented effects, and Continuous backrow that provide a burst of short term power but tend to starve you out with their long term cost of milling your Deck."
+            "description": "A DARK Fiend going second beatdown Deck focusing on Link climbing and Fusion plays. Lots of battle oriented effects, and Continuous backrow that provide a burst of short term power but tend to starve you out with their long term cost of milling your Deck.",
+            "tags": ["aggro", "beatdown", "fusion", "link deck"]
         },
         {
             "name": "Wild Rose",
@@ -1055,7 +1089,8 @@
             "cardIds": [],
             "thumb": "1968946",
             "author": "Ryck",
-            "description": "A very versatile Level 4 Pendulum control Deck that focuses on making a big Synchro that can recur itself and banish cards from the opponent's GY, while resetting advantage and a Quick-Play targeted pop every turn."
+            "description": "A very versatile Level 4 Pendulum control Deck that focuses on making a big Synchro that can recur itself and banish cards from the opponent's GY, while resetting advantage and a Quick-Play targeted pop every turn.",
+            "tags": ["control", "stun", "pendulum", "synchro", "grind"]
         },
         {
             "name": "Infrastructure",
@@ -1081,7 +1116,7 @@
             "thumb": "1888081",
             "author": "Sock",
             "description": "A small WATER Beast archetype that revolves around banishing its monsters that also has a Continuous Spell.",
-            "tags": ["engine", "control"]
+            "tags": ["first", "engine", "control"]
         },
         {
             "name": "Gesellschaft",
@@ -1139,7 +1174,8 @@
             "cardIds": [],
             "thumb": "2056667",
             "author": "AkeDragon",
-            "description": "An Insect Fusion Deck capable of switching between offense and defense quickly and able to adjust to any tempo."
+            "description": "An Insect Fusion Deck capable of switching between offense and defense quickly and able to adjust to any tempo.",
+            "tags": ["fusion", "control", "castle", "grind"]
         }
     ]
 }
