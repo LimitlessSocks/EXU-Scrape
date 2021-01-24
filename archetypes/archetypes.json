@@ -224,7 +224,8 @@
             "cardIds": [],
             "thumb": "1220411",
             "author": "Gatr",
-            "description": "A control the castle-esque Ritual strategy where you build up into a big boss monster and rain on the parade from there on out."
+            "description": "A control the castle-esque Ritual strategy where you build up into a big boss monster and rain on the parade from there on out.",
+            "tags": ["ritual", "control", "castle", "equip"]
         },
         {
             "name": "Faust",
