@@ -525,6 +525,9 @@ CardViewer.Filters.isGeminiMonster = (card) =>
 CardViewer.Filters.isSpiritMonster = (card) =>
     card.ability === "Spirit";
     
+CardViewer.Filters.isAtkOrDef = (atkDefVal) => (card) =>
+    card.atk == atkDefVal || (!CardViewer.Filters.isLink && card.def == atkDefVal);
+
 CardViewer.Filters.Dictionary = {
     monster:    CardViewer.Filters.isMonster,
     spell:      CardViewer.Filters.isSpell,
@@ -548,6 +551,7 @@ CardViewer.Filters.Dictionary = {
     tuner:      CardViewer.Filters.isTunerMonster,
     toon:       CardViewer.Filters.isToonMonster,
     union:      CardViewer.Filters.isUnionMonster,
+    qq:         CardViewer.Filters.isAtkOrDef("?"),
     any:        () => true,
 };
 
@@ -811,7 +815,10 @@ CardViewer.createFilter = function (query, exclude = null) {
         ));
     }
     else if(query.defCompare === "question") {
-        filters.push(CardViewer.exactComparator("?", _F.propda("def")));
+        filters.push((card) =>
+            card.def == "?" && !CardViewer.Filters.isLink(card)
+        );
+        // filters.push(CardViewer.exactComparator("?", _F.propda("def")));
     }
     
     let filter = (card) => filters.every(filter => filter(card));
