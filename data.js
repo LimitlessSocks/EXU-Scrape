@@ -546,7 +546,10 @@ window.addEventListener("load", async function () {
     
     let featureToClick = firstFeature;
     if(window.location.search.length > 1) {
-        let inputParams = window.location.search.slice(1).split(",");
+        let inputParams = window.location.search
+            .replaceAll("%2C", ",")
+            .slice(1)
+            .split(",");
         let [ name, sortIndex, limit ] = inputParams;
         
         let dataParams = inputParams.slice(inputParams.lastIndexOf("") + 1);
@@ -576,7 +579,7 @@ window.addEventListener("load", async function () {
             null,
         ];
         params.push(...Statistics.parameters.slice(0, Statistics.ParameterData.count));
-        window.location.search = "?" + params.join(",");//.replace(/,+$/, "");
+        window.location.search = "?" + params.join(",").replaceAll(",", "%2C");
     });
     
     let idToKey = {

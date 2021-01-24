@@ -107,7 +107,9 @@ let onLoad = async function () {
     }
     
     if(window.location.search) {
-        let searchString = decodeURI(window.location.search);
+        let searchString = decodeURI(
+            window.location.search.replaceAll("%2C", ",")
+        )
         CardViewer.firstTime = false;
         let type = null;
         for(let pair of searchString.slice(1).split(",")) {

@@ -320,7 +320,7 @@
             "thumb": "1646199",
             "author": "Sock",
             "description": "Part of a combined effort to introduce the new Type \"Yokai\", as well as the type-changing clause (This monster's original Type is treated as Yokai rather than TYPE.). A stun-oriented \"protect the castle\" archetype surrounded around bringing out an archetypal normal monster, and equipping it with archetypal monsters from the GY during the End Phase. Focusing on low-commitment plays, it is easily disrupted, both before and after executing their semi-linear combo. However, if left unhandled, the Yurei can punch through many boards.",
-            "tags": ["normal", "grind", "control"]
+            "tags": ["normal", "grind", "control", "castle"]
         },
         {
             "name": "Tsurumashi",
@@ -904,7 +904,8 @@
             "cardIds": [],
             "thumb": "2021037",
             "author": "Anon",
-            "description": "A small high Level Machine/Dragon hybrid engine that has a unique Ritual Spell that Ritual Summons by fusing monsters with double the needed Levels."
+            "description": "A small high Level Machine/Dragon hybrid engine that has a unique Ritual Spell that Ritual Summons by fusing monsters with double the needed Levels.",
+            "tags": []
         },
         {
             "name": "Primal Forest",
@@ -929,7 +930,7 @@
             "thumb": "646031",
             "author": "Sock",
             "description": "A very unique protect the castle-style stun Deck that utilizes their 1 monster with several Equip Cards to get the job done.",
-            "tags": ["equip", "stun"]
+            "tags": ["equip", "stun", "castle"]
         },
         {
             "name": "Rowa - Elusive Power",
@@ -1013,7 +1014,8 @@
             "cardIds": [],
             "thumb": "1887992",
             "author": "Anon",
-            "description": "A Level 11 archetype based around the turn count and Spells/Traps that shuffle themselves while banished into the Deck."
+            "description": "A Level 11 archetype based around the turn count and Spells/Traps that shuffle themselves while banished into the Deck.",
+            "tags": ["stun", "grind", "reverse-ramp", "banish", "no-extra", "gimmick"]
         },
         {
             "name": "Serpent Night",
@@ -1087,7 +1089,8 @@
             "cardIds": [],
             "thumb": "1916181",
             "author": "Anon",
-            "description": "A beat down protect the castle-type Deck based off Level 10 or higher monsters."
+            "description": "A beat down protect the castle-type Deck based off Level 10 or higher monsters.",
+            "tags": ["first", "aggro", "beatdown", "no-extra"]
         },
         {
             "name": "Frozen",
@@ -1111,7 +1114,8 @@
             "cardIds": [],
             "thumb": "1920588",
             "author": "Anon",
-            "description": "Level 12 Chaos monsters that focus on changing the name, Type or Attribute of monsters on the field as a way of disruption."
+            "description": "Level 12 Chaos monsters that focus on changing the name, Type or Attribute of monsters on the field as a way of disruption.",
+            "tags": ["control", "stun", "ramp", "banish", "chaos", "no-extra", "gimmick"]
         },
         {
             "name": "Crystalion",
