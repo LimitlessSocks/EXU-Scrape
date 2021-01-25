@@ -750,7 +750,7 @@ CardViewer.createFilter = function (query, exclude = null) {
                         ? card.tcg && !card.ocg
                         : query.visibility == 4
                             ? card.ocg && !card.tcg
-                            : card.visibility == 5
+                            : query.visibility == 5
                                 ? card.custom
                                 : card.ocg || card.tcg,
     ];

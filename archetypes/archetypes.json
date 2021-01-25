@@ -933,7 +933,7 @@
             "thumb": "2021037",
             "author": "Anon",
             "description": "A small high Level Machine/Dragon hybrid engine that has a unique Ritual Spell that Ritual Summons by fusing monsters with double the needed Levels.",
-            "tags": ["untagged"]
+            "tags": ["control", "ramp", "ritual", "fusion"]
         },
         {
             "name": "Primal Forest",
