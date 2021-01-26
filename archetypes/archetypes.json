@@ -623,7 +623,7 @@
             "thumb": "1558753",
             "author": "Sock",
             "description": "A LIGHT Spellcaster based Link Deck.",
-            "tags": ["first", "second", "link", "midrange"]
+            "tags": ["first", "second", "link", "midrange", "ritual", "normal"]
         },
         {
             "name": "Colossus",
@@ -1184,6 +1184,15 @@
             "author": "AkeDragon",
             "description": "An Insect Fusion Deck capable of switching between offense and defense quickly and able to adjust to any tempo.",
             "tags": ["fusion", "control", "castle", "grind"]
+        },
+        {
+            "name": "Malus",
+            "deckIds": [6837403],
+            "cardIds": [],
+            "thumb": "1962995",
+            "author": "Ani",
+            "description": "A Normal-based Deck that likes to banish and is also The Golden Apples support.",
+            "tags": ["banish", "support"]
         }
     ]
 }

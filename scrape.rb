@@ -74,7 +74,7 @@ database = [
     6438706, #Constellar/Tellarknight Support
     6412660, #Umbral Horror/Numbers 43, 65, 80, and 96 Support
     6402157, #D/D/D Support
-    6412740, #Megalith Support
+    # 6412740, #Megalith Support
     6407622, #Chemicritter Support
     6365184, #Nephthys Support
     6124612, #Metaphys Support
@@ -341,6 +341,7 @@ database = [
     7184403, #Crystalion
     7256172, #Wavering Winds
     7123560, #Metal XO
+    6837403, #Malus
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
@@ -423,6 +424,7 @@ extra_info = {
     5857285 => EXU_UNLIMITED,
     
     6358712 => EXU_IMPORT,
+    7260456 => EXU_IMPORT,
     6751103 => EXU_IMPORT,
     
     6358715 => EXU_NO_IMPORT
