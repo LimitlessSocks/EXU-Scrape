@@ -270,6 +270,8 @@ const RetrainMap = {
     1865422: 7489,      //Majespecter Dragon - Ryu -> Majespecter Unicorn - Kirin
     1994622: 8335,      //True King Lepresocis, the Diseased -> True King Lithosagym, the Disaster
     1961738: 8521,      //True King's Diagram -> Dragonic Diagram
+    2021204: 8118,      //Cyber Angel Benzaiten -> Cyber Angel Benten
+    1619088: 1602,      //Fishborg Defender -> Fishborg Blaster
 };
 
 const LINK_ARROWS = {
