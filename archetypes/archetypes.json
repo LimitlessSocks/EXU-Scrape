@@ -438,7 +438,8 @@
             "cardIds": [],
             "thumb": "1621953",
             "author": "Gus",
-            "description": "A simple control WATER Cyberse Ritual Deck with good aggressive options that focus on popping stuff and profiting from it."
+            "description": "A simple control WATER Cyberse Ritual Deck with good aggressive options that focus on popping stuff and profiting from it.",
+            "tags": ["control", "beatdown", "ritual", "link"]
         },
         {
             "name": "Hydromunculus",
@@ -692,7 +693,8 @@
             "cardIds": [],
             "thumb": "1944080",
             "author": "Ava",
-            "description": "A mid range Deck that doesn't put up too much turn 1 but left alone really punches hard. The Deck's goal is to be able to conquer the board with their Braves, before ending in style by Summoning the Violet Sorceress herself, complete with the ability to bounce a card you control to pop a card during either player's turn."
+            "description": "A mid range Deck that doesn't put up too much turn 1 but left alone really punches hard. The Deck's goal is to be able to conquer the board with their Braves, before ending in style by Summoning the Violet Sorceress herself, complete with the ability to bounce a card you control to pop a card during either player's turn.",
+            "tags": ["midrange", "beatdown", "rainbow", "engine"]
         },
         {
             "name": "Final Dream",
@@ -786,7 +788,8 @@
             "cardIds": [],
             "thumb": "1970794",
             "author": "Ava",
-            "description": "A Link Fairy Deck that uses Traps, monsters and a Spell to get plays done."
+            "description": "A Link Fairy Deck that uses Traps, monsters and a Spell to get plays done.",
+            "tags": ["combo", "float", "engine", "link"]
         },
         {
             "name": "D.N.M.Q.",
@@ -803,7 +806,8 @@
             "cardIds": [],
             "thumb": "1991507",
             "author": "Ryck",
-            "description": "A Deck focused on surviving the first 5 turns of the Duel, then kicking it into high gear with a big boss."
+            "description": "A Deck focused on surviving the first 5 turns of the Duel, then kicking it into high gear with a big boss.",
+            "tags": ["stun", "stall", "castle", "grind", "beatdown"]
         },
         {
             "name": "The 9s",
@@ -950,7 +954,8 @@
             "cardIds": [],
             "thumb": "1934158",
             "author": "Ava",
-            "description": "A Link-based Deck that relies on Special Summoning and banishing face-down to get plays done."
+            "description": "A Link-based Deck that relies on Special Summoning and banishing face-down to get plays done.",
+            "tags": ["combo", "control", "otk", "grind", "burn", "banish", "gy", "link"]
         },
         {
             "name": "Pendant",
@@ -1057,7 +1062,8 @@
             "cardIds": [],
             "thumb": "1885077",
             "author": "Ryck",
-            "description": "A small Fusion engine revolving around Serpent Nightmare Dragon."
+            "description": "A small Fusion engine revolving around Serpent Nightmare Dragon.",
+            "tags": ["control", "engine", "fusion", "castle"]
         },
         {
             "name": "Flamiller",
@@ -1108,7 +1114,8 @@
             "cardIds": [],
             "thumb": "2029132",
             "author": "Ryck",
-            "description": "In a similar vein to Tenyi, but with different Types and Attributes and a more anime-influenced style to it."
+            "description": "In a similar vein to Tenyi, but with different Types and Attributes and a more anime-influenced style to it.",
+            "tags": ["stun", "grind", "gy", "link"]
         },
         {
             "name": "Halvoran",
