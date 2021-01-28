@@ -86,14 +86,6 @@
             "description": "A DARK Machine Synchro Deck that also utilizes 2 Normal Monsters for its combo plays."
         },
         {
-            "name": "Harokai",
-            "deckIds": [4624534],
-            "cardIds": [],
-            "thumb": "1821412",
-            "author": "Diego",
-            "description": "A Tribute Summon boss Deck with Level 1 and Level 11 monsters."
-        },
-        {
             "name": "Titanic Dragon",
             "deckIds": [4442461],
             "cardIds": [],
@@ -325,7 +317,7 @@
         {
             "name": "Yurei",
             "deckIds": [5925194],
-            "cardIds": [],
+            "cardIds": [1778133 ],
             "thumb": "1646199",
             "author": "Sock",
             "description": "Part of a combined effort to introduce the new Type \"Yokai\", as well as the type-changing clause (This monster's original Type is treated as Yokai rather than TYPE.). A stun-oriented \"protect the castle\" archetype surrounded around bringing out an archetypal normal monster, and equipping it with archetypal monsters from the GY during the End Phase. Focusing on low-commitment plays, it is easily disrupted, both before and after executing their semi-linear combo. However, if left unhandled, the Yurei can punch through many boards.",

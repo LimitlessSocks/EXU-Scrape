@@ -730,6 +730,7 @@ CardViewer.createFilter = function (query, exclude = null) {
         CardViewer.or(
             CardViewer.textComparator(query.name, _F.propda("name")),
             CardViewer.textComparator(query.name, _F.propda("also_archetype")),
+            CardViewer.textComparator(query.name, _F.propda("serial_number")),
         ),
         // id filter
         CardViewer.textComparator(query.id, _F.propda("id")),
