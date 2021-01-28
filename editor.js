@@ -190,9 +190,16 @@ let onLoad = async function () {
         }
     }
     
-    const addRandomCard = () => {
+    const addRandomCard = (kind=null) => {
         let cache = CardViewer.Search.pages.flat();
+        if(kind === Deck.Location.MAIN) {
+            cache = cache.filter(card => !CardViewer.Filters.isExtraDeck(card));
+        }
+        else if(kind === Deck.Location.EXTRA) {
+            cache = cache.filter(CardViewer.Filters.isExtraDeck);
+        }
         let card = cache[Math.random() * cache.length | 0];
+        if(!card) return null;
         CardViewer.Editor.DeckInstance.addCard(card.id);
         return card.id;
     };
@@ -229,23 +236,21 @@ let onLoad = async function () {
             () => {
                 let idAdded;
                 let instance = CardViewer.Editor.DeckInstance;
-                while(
-                    instance.decks[Deck.Location.MAIN].length < 60
-                    || instance.decks[Deck.Location.EXTRA].length < 15
-                ) {
-                    let id = addRandomCard();
-                    if(!idAdded) {
-                        idAdded = id;
-                    }
+                while(instance.decks[Deck.Location.MAIN].length < 60) {
+                    let id = addRandomCard(Deck.Location.MAIN);
+                    if(!id) break;
+                    idAdded = id;
+                }
+                while(instance.decks[Deck.Location.EXTRA].length < 15) {
+                    let id = addRandomCard(Deck.Location.EXTRA);
+                    if(!id) break;
+                    idAdded = id;
                 }
                 // remove extra cards
                 instance.trimToNormalSize(Deck.Location.MAIN);
                 instance.trimToNormalSize(Deck.Location.EXTRA);
-                // while(instance.decks[Deck.Location.MAIN].length > 60) {
-                    // let id = instance.removeCard(Deck.Location.MAIN, instance.decks[Deck.Location.MAIN].length - 1);
-                    // instance.addCard(Deck.Location.SIDE, id);
-                // }
                 
+                // preview
                 CardViewer.Editor.updateDeck();
                 CardViewer.Editor.setPreview(idAdded);
             }
