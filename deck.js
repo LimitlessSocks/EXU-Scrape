@@ -88,6 +88,8 @@ class Deck {
             "Trap",
         ];
         const MonsterColorIterator = [
+            "Ritual",
+            "Normal",
             // "Pendulum",
             "Fusion",
             "Synchro",
@@ -101,7 +103,13 @@ class Deck {
                 
                 let subCards = _F.sortBy(
                     cards.filter(card => card.card_type === type),
-                    card => MonsterColorIterator.indexOf(card.monster_color),
+                    card => {
+                        let i = MonsterColorIterator.indexOf(card.monster_color);
+                        if(CardViewer.Filters.Dictionary.pendulum(card)) {
+                            i += MonsterColorIterator.length;
+                        }
+                        return i;
+                    },
                     card => card.name,
                 );
                 
@@ -147,7 +155,17 @@ class Deck {
     }
     
     removeCard(deck, index) {
-        this.decks[deck].splice(index, 1);
+        return this.decks[deck].splice(index, 1)[0];
+    }
+    
+    trimToNormalSize(deck) {
+        let size = deck === Deck.Location.MAIN ? 60 : 15;
+        while(this.decks[deck].length > size) {
+            let id = this.removeCard(deck, this.decks[deck].length - 1);
+            if(deck !== Deck.Location.SIDE) {
+                this.addCard(id, Deck.Location.SIDE);
+            }
+        }
     }
     
     applyCSS() {
@@ -184,7 +202,7 @@ class Deck {
         for(let container of this.target.children()) {
             let i = 0;
             let cardFound = false;
-            console.log(i, cIndexOffset, containerIndex);
+            // console.log(i, cIndexOffset, containerIndex);
             
             $(container).find(".container-info").remove();
             

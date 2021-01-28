@@ -175,6 +175,117 @@ let onLoad = async function () {
         CardViewer.Editor.updateDeck();
     });
     
+    class SpecialButton {
+        constructor(id, text, fn) {
+            this.id = id;
+            this.text = text;
+            this.fn = fn;
+        }
+        
+        toHTML() {
+            return $("<button>")
+                .attr("id", this.id)
+                .text(this.text)
+                .click((...args) => this.fn(this, ...args));
+        }
+    }
+    
+    const addRandomCard = () => {
+        let cache = CardViewer.Search.pages.flat();
+        let card = cache[Math.random() * cache.length | 0];
+        CardViewer.Editor.DeckInstance.addCard(card.id);
+        return card.id;
+    };
+    const clearLocation = (loc) => {
+        CardViewer.Editor.DeckInstance.decks[loc].splice(0);
+        CardViewer.Editor.updateDeck();
+    };
+    
+    const specialButtonList = [
+        new SpecialButton(
+            "addRandom",
+            "Add random card",
+            () => {
+                let idAdded = addRandomCard();
+                CardViewer.Editor.updateDeck();
+                CardViewer.Editor.setPreview(idAdded);
+            }
+        ),
+        new SpecialButton(
+            "addRandom10",
+            "Add 10 random cards",
+            () => {
+                let idAdded;
+                for(let i = 0; i < 10; i++) {
+                    idAdded = addRandomCard();
+                }
+                CardViewer.Editor.updateDeck();
+                CardViewer.Editor.setPreview(idAdded);
+            }
+        ),
+        new SpecialButton(
+            "addRandomAll",
+            "Fill deck randomly",
+            () => {
+                let idAdded;
+                let instance = CardViewer.Editor.DeckInstance;
+                while(
+                    instance.decks[Deck.Location.MAIN].length < 60
+                    || instance.decks[Deck.Location.EXTRA].length < 15
+                ) {
+                    let id = addRandomCard();
+                    if(!idAdded) {
+                        idAdded = id;
+                    }
+                }
+                // remove extra cards
+                instance.trimToNormalSize(Deck.Location.MAIN);
+                instance.trimToNormalSize(Deck.Location.EXTRA);
+                // while(instance.decks[Deck.Location.MAIN].length > 60) {
+                    // let id = instance.removeCard(Deck.Location.MAIN, instance.decks[Deck.Location.MAIN].length - 1);
+                    // instance.addCard(Deck.Location.SIDE, id);
+                // }
+                
+                CardViewer.Editor.updateDeck();
+                CardViewer.Editor.setPreview(idAdded);
+            }
+        ),
+        new SpecialButton(
+            "clearMain",
+            "Clear main deck",
+            () => clearLocation(Deck.Location.MAIN)
+        ),
+        new SpecialButton(
+            "clearMain",
+            "Clear side deck",
+            () => clearLocation(Deck.Location.SIDE)
+        ),
+        new SpecialButton(
+            "clearExtra",
+            "Clear extra deck",
+            () => clearLocation(Deck.Location.EXTRA)
+        ),
+    ];
+    const specialMenuPrompt = new Prompt("Special Functions",
+        () => {
+            let html = $("<div>");
+            
+            for(let button of specialButtonList) {
+                html.append(button.toHTML());
+            }
+            
+            return html;
+        },
+        // ["Add random card", "Add 10 random cards"],
+        ["Done"],
+    );
+    const deploySpecial = () => {
+        specialMenuPrompt.deploy()
+            // .then(() => {})
+            .catch(() => {}); //pass
+    };
+    $("#specialMenu").click(deploySpecial);
+    
     const deckInfoSavedPrompt = Prompt.OK("Deck Info Saved!");
     const deckInfoClearedPrompt = Prompt.OK("Cleared!");
     const exportPrompt = new Prompt("Export Deck",
