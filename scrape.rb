@@ -163,6 +163,10 @@ database = [
     7022231, #White Aura Support
     5615821, #Onomat Support
     7251527, #Dream Mirror Support
+    5615821, #Onomat Support
+    7251527, #Dream Mirror Support
+    7263281, #Hayabusa Support
+    2104843, #Vampire Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -205,7 +209,7 @@ database = [
     # 4337568, #Dreadator
     5601607, #Chaos Performer
     # 5755617, #Shagdi
-    4963487, #Battletech
+    4294973, #Battletech
     # 5758077, #Faust
     5675322, #Kojoten
     4960158, #Skafos
@@ -342,6 +346,7 @@ database = [
     7256172, #Wavering Winds
     7123560, #Metal XO
     6837403, #Malus
+    7284131, #Iterators
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)

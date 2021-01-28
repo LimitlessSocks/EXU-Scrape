@@ -1193,6 +1193,15 @@
             "author": "Ani",
             "description": "A Normal-based Deck that likes to banish and is also The Golden Apples support.",
             "tags": ["banish", "support"]
+        },
+        {
+            "name": "The Iterators",
+            "deckIds": [7284131],
+            "cardIds": [],
+            "thumb": "2107307",
+            "author": "Sock",
+            "description": "Sock's take on a series of Xyz Monsters akin to the Numbers. Please contact Sock#3222 if you wish to collaborate.",
+            "tags": ["xyz"]
         }
     ]
 }
