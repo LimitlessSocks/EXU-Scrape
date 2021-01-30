@@ -221,7 +221,7 @@
         },
         {
             "name": "Faust",
-            "deckIds": [6793365],
+            "deckIds": [5895706],
             "cardIds": [],
             "thumb": "1582209",
             "author": "Khreygond",
@@ -317,7 +317,7 @@
         {
             "name": "Yurei",
             "deckIds": [5925194],
-            "cardIds": [1778133 ],
+            "cardIds": [1778133],
             "thumb": "1646199",
             "author": "Sock",
             "description": "Part of a combined effort to introduce the new Type \"Yokai\", as well as the type-changing clause (This monster's original Type is treated as Yokai rather than TYPE.). A stun-oriented \"protect the castle\" archetype surrounded around bringing out an archetypal normal monster, and equipping it with archetypal monsters from the GY during the End Phase. Focusing on low-commitment plays, it is easily disrupted, both before and after executing their semi-linear combo. However, if left unhandled, the Yurei can punch through many boards.",
@@ -977,7 +977,7 @@
         },
         {
             "name": "Mythical Winged Beasts",
-            "deckIds": [4382580],
+            "deckIds": [7318790],
             "cardIds": [],
             "thumb": "1116704",
             "author": "Ghostricker",

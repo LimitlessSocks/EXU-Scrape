@@ -167,6 +167,8 @@ database = [
     7251527, #Dream Mirror Support
     7263281, #Hayabusa Support
     2104843, #Vampire Support
+    7306486, #Galaxy Photon Support
+    7311070, #Virus Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -261,7 +263,7 @@ database = [
     4769548, #Empyreal
     5647256, #Meterao
     6405675, #Dark Kingdom
-    4382580, #Mythical Winged Beasts
+    7318790, #Mythical Winged Beasts
     # 6309748, #Kuuroma Support
     6446977, #Tagteamer
     6434960, #World Reaper
@@ -301,7 +303,7 @@ database = [
     6785271, #Aria Fey: Part 2
     6116920, #Frozen Ritual
     6793361, #Lacrimosa
-    6793365, #Faust
+    5895706, #Faust
     6793451, #P@rol
     # 4330341, #D.N.M.Q.
     6807125, #Drakin
