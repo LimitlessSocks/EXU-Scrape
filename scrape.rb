@@ -393,20 +393,7 @@ test = [
 ]
 
 beta = [
-    #prio
-    7121262, #Fairy + Zombie Singles
-    7155530, #Ake Singles
-    7150914, #Legacy
-    #reg
-    5731990, #Entropy Beast
-    7027697, #Titanus 2: Monster Island Boogaloo
-    7124125, #Anglory
-    7138655, #Witchwood
-    6440270, #Wavering Winds
-    3617894, #O.F.F.
-    7160763, #uwu
-    7022063, #Fisherman
-    7123560, #Metal XO
+    7166789
 ]
 
 
