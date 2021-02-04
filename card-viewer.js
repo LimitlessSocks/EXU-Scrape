@@ -645,7 +645,12 @@ CardViewer.regexComparator = (needle, fn = _F.id) => {
     
     for(let regStr of extractInlineRegexes(needle)) {
         let [whole, tag, regInner] = regStr.trim().match(/^\[(.\|)?(.+)\]$/);
-        let reg = new RegExp(regInner, "i");
+        let flag = "i";
+        // case sensitive
+        if(/^[cs]/i.test(tag)) {
+            flag = "";
+        }
+        let reg = new RegExp(regInner, flag);
         if(/^[ner]/i.test(tag)) {
             reject.push(reg);
         }
@@ -728,9 +733,9 @@ CardViewer.createFilter = function (query, exclude = null) {
         CardViewer.Filters.getFilter(query.type),
         // name filter
         CardViewer.or(
-            CardViewer.textComparator(query.name, _F.propda("name")),
-            CardViewer.textComparator(query.name, _F.propda("also_archetype")),
-            CardViewer.textComparator(query.name, _F.propda("serial_number")),
+            CardViewer.regexComparator(query.name, _F.propda("name")),
+            CardViewer.regexComparator(query.name, _F.propda("also_archetype")),
+            CardViewer.exactComparator(query.name, _F.propda("serial_number")),
         ),
         // id filter
         CardViewer.textComparator(query.id, _F.propda("id")),
