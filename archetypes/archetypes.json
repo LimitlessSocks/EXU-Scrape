@@ -615,7 +615,8 @@
             "thumb": "1558753",
             "author": "Sock",
             "description": "A LIGHT Spellcaster based Link Deck.",
-            "tags": ["first", "second", "link", "midrange", "ritual", "normal"]
+            "tags": ["first", "second", "link", "midrange", "ritual", "normal"],
+            "deckWidth": 8
         },
         {
             "name": "Colossus",
