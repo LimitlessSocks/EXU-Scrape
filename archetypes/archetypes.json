@@ -1188,12 +1188,21 @@
         },
         {
             "name": "The Iterators",
-            "deckIds": [7284131],
+            "deckIds": [7284131, 7294550],
             "cardIds": [],
-            "thumb": "2107307",
+            "thumb": "2110094",
             "author": "Sock",
             "description": "Sock's take on a series of Xyz Monsters akin to the Numbers. Please contact Sock#3222 if you wish to collaborate.",
             "tags": ["xyz"]
+        },
+        {
+            "name": "Intimidraco",
+            "deckIds": [7247437],
+            "cardIds": [],
+            "thumb": "1687216",
+            "author": "FlavorFlov",
+            "description": "A FIRE Dragon Deck focused on scaring your opponent, equipping Spells, modulating ATK and more.",
+            "tags": ["equip"]
         }
     ]
 }

@@ -349,6 +349,8 @@ database = [
     7123560, #Metal XO
     6837403, #Malus
     7284131, #Iterators
+    7294550, #Iterators: Part 2
+    7247437, #Intimidraco
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
