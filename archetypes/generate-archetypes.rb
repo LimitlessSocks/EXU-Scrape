@@ -1,9 +1,13 @@
 require_relative '../gen.rb'
 
-$CONFIG_PATH = "./archetypes.json"
-$INDEX_START_PATH = "./index-pre.html"
-$INDEX_PATH = "./index.html"
-$BOILERPLATE = File.read("boilerplate.html")
+$BASE = File.dirname(__FILE__)
+
+$CONFIG_PATH        = File.join $BASE, "archetypes.json"
+$INDEX_START_PATH   = File.join $BASE, "index-pre.html"
+$INDEX_PATH         = File.join $BASE, "index.html"
+$BOILERPLATE_PATH   = File.join $BASE, "boilerplate.html"
+
+$BOILERPLATE = File.read $BOILERPLATE_PATH
 
 $generated = {}
 
@@ -27,7 +31,9 @@ def parse_archetype!(obj)
         tags: obj["tags"]
     }
     
-    File.write("#{ds.id}.html", ds.to_html)
+    out_path = File.join $BASE, "#{ds.id}.html"
+    
+    File.write(out_path, ds.to_html)
     
     ds
 end

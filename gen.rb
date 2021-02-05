@@ -4,11 +4,13 @@ $DB_CUSTOM = nil
 $DB_YCG = nil
 
 def load_dbs
+    db_path = File.join File.dirname(__FILE__), "db.json"
+    ycg_path = File.join File.dirname(__FILE__), "ycg.json"
     if $DB_CUSTOM.nil?
-        $DB_CUSTOM = JSON::parse File.read("../db.json")
+        $DB_CUSTOM = JSON::parse File.read(db_path)
     end
     # if $DB_YCG.nil?
-        # $DB_YCG = JSON::parse File.read("../ycg.json")
+        # $DB_YCG = JSON::parse File.read("ycg_path")
     # end
 end
 
