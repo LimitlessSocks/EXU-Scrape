@@ -47,14 +47,32 @@ class Deck {
         ];
         this.target = null;
         this.showSideDeck = true;
-        this.deckWidthInCards = 10;
-        this.mainDeckRowCount = 4;
+        // this.deckWidthInCards = 10;
+        // this.mainDeckRowCount = 4;
         this.editable = editable;
         this.units = {};
         this.name = "My Deck";
         this.description = "";
         this.author = "Anonymous";
         this.thumb = 0;
+        this.rowCounts = {
+            [Deck.Location.MAIN]: 4,
+            [Deck.Location.SIDE]: 1,
+            [Deck.Location.EXTRA]: 1,
+        };
+        this.deckWidths = {
+            [Deck.Location.MAIN]: 10,
+            [Deck.Location.SIDE]: 0,
+            [Deck.Location.EXTRA]: 0,
+        }
+    }
+    
+    setDeckWidth(width) {
+        this.deckWidths[Deck.Location.MAIN] = width;
+    }
+    
+    setRows(location, rowCount=1) {
+        this.rowCounts[location] = rowCount;
     }
     
     toSimpleObject() {
@@ -65,7 +83,9 @@ class Deck {
             description: this.description,
             author: this.author,
             thumb: this.thumb,
-            deckWidthInCards: this.deckWidthInCards,
+            rowCounts: this.rowCounts,
+            deckWdiths: this.deckWidths,
+            // deckWidthInCards: this.deckWidthInCards,
         };
     }
     
@@ -195,12 +215,16 @@ class Deck {
         let j = 0;
         let cIndexOffset = 0;
         let containerIndex = 0;
-        let baseUnits = getUnits(this.deckWidthInCards);
+        
+        let deckWidthInCards = this.deckWidths[Deck.Location.MAIN];
+        
+        let baseUnits = getUnits(deckWidthInCards);
         
         const inBetweenMultiplier = 0.3;
         
         for(let container of this.target.children()) {
             let i = 0;
+            let deckJ = 0;
             let cardFound = false;
             // console.log(i, cIndexOffset, containerIndex);
             
@@ -214,19 +238,13 @@ class Deck {
             
             let children = $(container).children();
             let size = children.length;
-            let widths;
-            if(containerIndex === 0) {
-                widths = splitInto(size, this.mainDeckRowCount, this.deckWidthInCards);
-            }
+            let widths = splitInto(size, this.rowCounts[containerIndex], this.deckWidths[containerIndex]);
             for(let card of children) {
-                let w = this.deckWidthInCards;
-                if(containerIndex === 0) {
-                    w = widths[j];
+                let w = widths[deckJ];
+                if(w < deckWidthInCards) {
+                    w = deckWidthInCards;
                 }
-                else if(size > this.deckWidthInCards) {
-                    w = size;
-                }
-                let diff = this.deckWidthInCards - w;
+                let diff = deckWidthInCards - w;
                 let r = diff / (w - 1);
                 let q = r * baseUnits.totalWidth;
                 
@@ -239,6 +257,7 @@ class Deck {
                 if(i >= w) {
                     i = 0;
                     j++;
+                    deckJ++;
                 }
                 cardFound = true;
             }

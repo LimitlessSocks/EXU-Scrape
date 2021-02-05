@@ -1193,7 +1193,9 @@
             "thumb": "2110094",
             "author": "Sock",
             "description": "Sock's take on a series of Xyz Monsters akin to the Numbers. Please contact Sock#3222 if you wish to collaborate.",
-            "tags": ["xyz"]
+            "tags": ["xyz"],
+            "deckWidth": 8,
+            "extraRows": 3
         },
         {
             "name": "Intimidraco",

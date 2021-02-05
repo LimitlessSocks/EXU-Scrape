@@ -24,7 +24,19 @@ def get_url(id, custom=true)
     end
 end
 
-Deck = Struct.new(:id, :main, :side, :extra, :author, :name, :description, :thumb, :thumb_custom, :deck_path) {
+Deck = Struct.new(
+    #common properties
+    :id,
+    :author, :name,
+    :thumb, :thumb_custom,
+    :description,
+    #deck properties
+    :main, :side, :extra, :deck_path,
+    #archetype properties
+    :deckIds, :cardIds,
+    :deckWidth, :extraRows,
+    :tags,
+) {
     def to_html
         $BOILERPLATE % self.to_h
     end

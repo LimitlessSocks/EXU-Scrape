@@ -11,6 +11,8 @@ $BOILERPLATE = File.read $BOILERPLATE_PATH
 
 $generated = {}
 
+$DEFAULT_DECK_WIDTH = 7
+
 def parse_archetype!(obj)
     ds = Deck.new
     ds.name = obj["name"]
@@ -19,9 +21,11 @@ def parse_archetype!(obj)
     ds.id = ds.name.gsub(/@/, "at").gsub(/[^a-zA-Z0-9]+/, "")
     ds.author = obj["author"]
     ds.description = obj["description"]
-    ds.main = obj["deckIds"]
-    ds.side = obj["cardIds"]
-    ds.extra = obj["tags"] || []
+    ds.deckIds = obj["deckIds"]
+    ds.cardIds = obj["cardIds"]
+    ds.tags = obj["tags"] || ["untagged"]
+    ds.deckWidth = obj["deckWidth"] || $DEFAULT_DECK_WIDTH
+    ds.extraRows = obj["extraRows"] || "null"
     
     $generated[ds.id] = {
         name: ds.name,

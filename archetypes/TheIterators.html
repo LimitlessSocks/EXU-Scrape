@@ -33,7 +33,11 @@
             [],
             false, //not editable
         );
-        CardViewer.Editor.DeckInstance.deckWidthInCards = 7;
+        CardViewer.Editor.DeckInstance.setDeckWidth(8);
+        let extraRows = 3;
+        if(extraRows) {
+            CardViewer.Editor.DeckInstance.setRows(Deck.Location.EXTRA, extraRows);
+        }
         CardViewer.Editor.DeckInstance.showSideDeck = false;
         window.thumb = parseInt("2110094");
     </script>

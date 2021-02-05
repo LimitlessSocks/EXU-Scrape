@@ -17,19 +17,18 @@ def parse_deck!(deck_path)
         "thumb" => "",
     }
     
-    ds = Deck.new(
-        id,
-        ids_of(doc.css("main card")),
-        ids_of(doc.css("side card")),
-        ids_of(doc.css("extra card")),
-        *%w(author name description thumb).map { |name|
-            value = doc.css("meta #{name}").children.to_html.strip
-            value = defaults[name] if value.empty?
-            value
-        },
-        (doc.css("meta thumb")[0]["custom"] != "false" rescue false),
-        deck_path,
-    )
+    ds = Deck.new
+    ds.id = id
+    ds.main = ids_of(doc.css("main card")),
+    ds.side = ids_of(doc.css("side card")),
+    ds.extra = ids_of(doc.css("extra card")),
+    %w(author name description thumb).map { |name|
+        value = doc.css("meta #{name}").children.to_html.strip
+        value = defaults[name] if value.empty?
+        ds[name] = value
+    }
+    ds.thumb_custom = (doc.css("meta thumb")[0]["custom"] != "false" rescue false),
+    ds.deck_path = deck_path
     
     File.write("#{id}.html", ds.to_html)
     

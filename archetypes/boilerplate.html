@@ -23,9 +23,9 @@
     <script src="./../deck.js"></script>
     <script>
         //ik these aren't exactly correct but I'm too lazy to make right names
-        window.sourceIds = %{main};
-        window.extraIds = %{side};
-        window.tags = %{extra};
+        window.sourceIds = %{deckIds};
+        window.extraIds = %{cardIds};
+        window.tags = %{tags};
         // statically loaded deck information
         CardViewer.Editor.DeckInstance = new Deck(
             [],
@@ -33,7 +33,11 @@
             [],
             false, //not editable
         );
-        CardViewer.Editor.DeckInstance.deckWidthInCards = 7;
+        CardViewer.Editor.DeckInstance.setDeckWidth(%{deckWidth});
+        let extraRows = %{extraRows};
+        if(extraRows) {
+            CardViewer.Editor.DeckInstance.setRows(Deck.Location.EXTRA, extraRows);
+        }
         CardViewer.Editor.DeckInstance.showSideDeck = false;
         window.thumb = parseInt("%{thumb}");
     </script>
