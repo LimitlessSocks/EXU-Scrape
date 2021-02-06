@@ -108,7 +108,7 @@ database = [
     4177191, #Lightray Support
     5705030, #Phantasm Spiral Support
     5668288, #Volcanic Support
-    5741889, #Titanus Support
+    # 5741889, #Titanus Support
     5659403, #X-Saber Support
     5751277, #Krawler Support
     5744520, #Dream Mirror Support
@@ -169,6 +169,9 @@ database = [
     2104843, #Vampire Support
     7306486, #Galaxy Photon Support
     7311070, #Virus Support
+    6011815, #lswarm Support
+    7297777, #Star Seraph Support
+    7252887, #Fabled Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -179,7 +182,7 @@ database = [
     4540185, #Emeraheart
     4757288, #Pandas
     4861946, #Poppin
-    4547335, #Titanus
+    # 4547335, #Titanus
     4570517, #Harbinger
     4910893, #Aria Fey
     5075635, #Starships
