@@ -308,7 +308,12 @@ const _F = {
             .sort(([l, lcs], [r, rcs]) =>
                 lcs.map((lc, i) => {
                     rc = rcs[i];
-                    return (lc > rc) - (lc < rc);
+                    if(typeof lc === "string" && typeof rc === "string") {
+                        return lc.localeCompare(rc, undefined, { numeric: true, sensitivity: "base" });
+                    }
+                    else {
+                        return (lc > rc) - (lc < rc);
+                    }
                 }).find(x => x) || 0
             )
             .map(([e, ec]) => e),
