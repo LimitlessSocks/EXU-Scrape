@@ -121,7 +121,7 @@ class Deck {
             
             return CardTypeIterator.flatMap(type => {
                 
-                let subCards = _F.sortBy(
+                let subCards = _F.sortByLocale(
                     cards.filter(card => card.card_type === type),
                     card => {
                         let i = MonsterColorIterator.indexOf(card.monster_color);
