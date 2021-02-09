@@ -354,6 +354,10 @@ database = [
     7284131, #Iterators
     7294550, #Iterators: Part 2
     7247437, #Intimidraco
+    5731990, #Entropy Beast
+    7022063, #Fishin'
+    3617894, #O.F.F
+    7310491, #Ak*ris
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
