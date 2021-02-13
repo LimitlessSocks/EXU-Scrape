@@ -19,6 +19,7 @@
 }
 .deck-link img {
     width: 80px;
+    height: 80px;
     border-radius: 10px;
 }
 .deck-link p {
