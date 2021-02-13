@@ -182,7 +182,8 @@
             "cardIds": [],
             "thumb": "1567293",
             "author": "james111",
-            "description": "An archetype of vanilla monsters that go into different Fusion Monsters to win the game."
+            "description": "An archetype of vanilla monsters that go into different Fusion Monsters to win the game.",
+            "tags": ["fusion", "normal", "theme"]
         },
         {
             "name": "Kyudo",
@@ -1016,7 +1017,7 @@
         },
         {
             "name": "Darkwater",
-            "deckIds": [6582550],
+            "deckIds": [6582550, 7311950],
             "cardIds": [],
             "thumb": "1623151",
             "author": "Khreygond",
@@ -1060,7 +1061,7 @@
         },
         {
             "name": "Hellvil",
-            "deckIds": [6836561],
+            "deckIds": [6836561, 7428988],
             "cardIds": [],
             "thumb": "1966229",
             "author": "JDan",
@@ -1197,7 +1198,70 @@
             "thumb": "1687216",
             "author": "FlavorFlov",
             "description": "A FIRE Dragon Deck focused on scaring your opponent, equipping Spells, modulating ATK and more.",
-            "tags": ["equip"]
+            "tags": ["equip", "FIRE"]
+        },
+        {
+            "name": "Entropy Beast",
+            "deckIds": [5731990],
+            "cardIds": [],
+            "thumb": "1573072",
+            "author": "Gatr",
+            "description": "An archetype revolved around 1 Xyz Monster boss 'Entropy King Morte' that can attach materials from anywhere, including your opponent's cards.",
+            "tags": ["xyz", "castle"]
+        },
+        {
+            "name": "Fishin'",
+            "deckIds": [7022063],
+            "cardIds": [],
+            "thumb": "2029468",
+            "author": "OceanPhantom",
+            "description": "An archetype revolving around Fishin' Fisherman, some Fish monsters and an array of Synchro Monsters, as well as a Link Monster.",
+            "tags": ["synchro"]
+        },
+        {
+            "name": "O.F.F",
+            "deckIds": [3617894],
+            "cardIds": [],
+            "thumb": "1733088",
+            "author": "Draco-_-999",
+            "description": "An archetype based on indie cult classic OFF, utilizing Spectral Counters, Traps, Spells and more to tell a story of vast proportions.",
+            "tags": ["theme"]
+        },
+        {
+            "name": "Ak*ris",
+            "deckIds": [7310491],
+            "cardIds": [],
+            "thumb": "2113390",
+            "author": "AkeDragon",
+            "description": "A Pendulum archetype that uses many Extra Deck monster types, such as Fusion, Xyz, Synchro and Link to make disruptions.",
+            "tags": ["pendulum", "combo", "rainbow"]
+        },
+        {
+            "name": "Armored Hunter / Raging Calamity",
+            "deckIds": [7318393],
+            "cardIds": [],
+            "thumb": "1897739",
+            "author": "Deltament",
+            "description": "A Union archetype focused on equipping, destruction and utilizing a Fusion, Synchro and Xyz to get in damage and make plays.",
+            "tags": ["equip", "union"]
+        },
+        {
+            "name": "Phylabeast",
+            "deckIds": [6526373],
+            "cardIds": [],
+            "thumb": "2140255",
+            "author": "Ommlettuce",
+            "description": "A GY Wyrm Deck focused around the Battle Phase.",
+            "tags": ["gy", "battle"]
+        },
+        {
+            "name": "Tokyo Terror",
+            "deckIds": [5822335, 7435843],
+            "cardIds": [],
+            "thumb": "1607455",
+            "author": "Redox",
+            "description": "An archetype made in a similar vein to Eldlich but based off Hideaki Anno's hit movie 'Shin Godzilla', utilizing backrow and slowly evolving your monster into its ultimate form.",
+            "tags": ["gy", "float", "control"]
         }
     ]
 }

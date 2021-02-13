@@ -172,6 +172,9 @@ database = [
     6011815, #lswarm Support
     7297777, #Star Seraph Support
     7252887, #Fabled Support
+    7311950, #Darkwater Support
+    7428988, #Hellvil Support
+    7435843, #Tokyo Terror Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -358,6 +361,9 @@ database = [
     7022063, #Fishin'
     3617894, #O.F.F
     7310491, #Ak*ris
+    7318393, #Armored Hunter / Raging Calamity
+    6526373, #Phylabeast
+    5822335, #Tokyo Terror
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
