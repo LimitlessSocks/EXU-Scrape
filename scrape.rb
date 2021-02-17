@@ -175,6 +175,7 @@ database = [
     7311950, #Darkwater Support
     7428988, #Hellvil Support
     7435843, #Tokyo Terror Support
+    7086187, #Crystron Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -245,7 +246,7 @@ database = [
     5869257, #Yova
     # 5098946, #Guildimension
     6044732, #Armorizer
-    # 6044655, #Vampop☆Star
+    7301908, #Vampop☆Star
     6135219, #The Parallel
     3689114, #LeSpookie
     6209092, #Acrimonic
@@ -318,7 +319,7 @@ database = [
     5269100, #Orb Magician
     6616619, #Queltz
     6785434, #Moira
-    6836561, #Hellvil
+    7428956, #Hellvil
     6874481, #Dark Hole
     6895350, #Owlsh
     # 6777854, #Nebulline
@@ -361,9 +362,11 @@ database = [
     7022063, #Fishin'
     3617894, #O.F.F
     7310491, #Ak*ris
-    7318393, #Armored Hunter / Raging Calamity
+    7464943, #Armored Hunter / Raging Calamity
     6526373, #Phylabeast
     5822335, #Tokyo Terror
+    5904696, #Contraption
+    3639246, #Tidalive
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
@@ -410,19 +413,19 @@ test = [
 beta = [
     7443406, #BETA SINGLES, NEVER DELETE!
     ###################
-    7421822, #Crypt
+    # 7421822, #Crypt
     
-    3639246, #Tidalive
-    7132540, #Headless Knights
-    5904696, #Contraption
-    7417728, #Series E
-    7367392, #Bas-Yak
-    6922630, #Empowered Warrior
-    7163783, #Lemuria
-    6997240, #Styrmwind
-    6857560, #Loving Cosmos
-    7410698, #Bright Planet
-    7443168, #Codebreaker
+    # 3639246, #Tidalive
+    # 7132540, #Headless Knights
+    # 5904696, #Contraption
+    # 7417728, #Series E
+    # 7367392, #Bas-Yak
+    # 6922630, #Empowered Warrior
+    # 7163783, #Lemuria
+    # 6997240, #Styrmwind
+    # 6857560, #Loving Cosmos
+    # 7410698, #Bright Planet
+    # 7443168, #Codebreaker
     # 7166789
 ]
 

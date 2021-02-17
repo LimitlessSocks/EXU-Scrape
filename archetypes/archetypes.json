@@ -386,9 +386,9 @@
         },
         {
             "name": "Vampop\u2606Star",
-            "deckIds": [6044655],
+            "deckIds": [7301908],
             "cardIds": [],
-            "thumb": "",
+            "thumb": "1363227",
             "author": "Faux",
             "description": "A Zombie Pendulum Deck that only Pendulum Summons from the GY. Although non-generic it can emphasizes on field preference in order to succeed."
         },
@@ -1061,7 +1061,7 @@
         },
         {
             "name": "Hellvil",
-            "deckIds": [6836561, 7428988],
+            "deckIds": [7428988, 7428956],
             "cardIds": [],
             "thumb": "1966229",
             "author": "JDan",
@@ -1238,7 +1238,7 @@
         },
         {
             "name": "Armored Hunter / Raging Calamity",
-            "deckIds": [7318393],
+            "deckIds": [7464943],
             "cardIds": [],
             "thumb": "1897739",
             "author": "Deltament",
@@ -1262,6 +1262,33 @@
             "author": "Redox",
             "description": "An archetype made in a similar vein to Eldlich but based off Hideaki Anno's hit movie 'Shin Godzilla', utilizing backrow and slowly evolving your monster into its ultimate form.",
             "tags": ["gy", "float", "control"]
+        },
+        {
+            "name": "Bas-Yak",
+            "deckIds": [7367392],
+            "cardIds": [],
+            "thumb": "1607455",
+            "author": "Sock",
+            "description": "A Special Summon and resource management control Deck.",
+            "tags": ["float", "control"]
+        },
+        {
+            "name": "Contraption",
+            "deckIds": [5822335, 7435843],
+            "cardIds": [],
+            "thumb": "1607455",
+            "author": "Diego",
+            "description": "A going second Machine Deck focused on outgrinding the opponent with Trap monsters, Fusion Monsters that can be Contact Fused and their Rank 5 toolbox - as well as decent turn 1 plays.",
+            "tags": ["second", "fusion", "xyz", "trap", "control"]
+        },
+        {
+            "name": "Tidalive",
+            "deckIds": [3639246],
+            "cardIds": [],
+            "thumb": "1607455",
+            "author": "Gatr",
+            "description": "A tempo-based Pendulum Deck with an emphasis on having completely different effects on your turn and the opponent's turn.",
+            "tags": ["pendulum"]
         }
     ]
 }
