@@ -242,7 +242,7 @@ database = [
     5979832, #Raycor
     # 4501871, #Oni Assassins
     6050332, #Nermusa
-    6078350, #Majecore
+    # 6078350, #Majecore
     5869257, #Yova
     # 5098946, #Guildimension
     6044732, #Armorizer
@@ -365,6 +365,7 @@ database = [
     7464943, #Armored Hunter / Raging Calamity
     6526373, #Phylabeast
     5822335, #Tokyo Terror
+    7367392, #Bas-Yak
     5904696, #Contraption
     3639246, #Tidalive
     
