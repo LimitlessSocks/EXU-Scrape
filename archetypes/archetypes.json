@@ -415,7 +415,7 @@
             "thumb": "1753661",
             "author": "Ani",
             "description": "A Fusion Deck that does neat shenanigans with their combos.",
-            "tags": ["control", "grind", "fusion", "gy"]
+            "tags": ["control", "grind", "fusion", "gy", "earth"]
         },
         {
             "name": "Arsenal",
@@ -545,11 +545,11 @@
         {
             "name": "Headhunter",
             "deckIds": [6347993],
-            "cardIds": [],
+            "cardIds": [2119621, 2119720],
             "thumb": "1802233",
             "author": "Sock",
             "description": "A Pendulum control Deck focused around accumulating and managing \"Head Counters\" and using them for powerful disruptions.",
-            "tags": ["first", "pendulum", "counter", "ramp", "control"]
+            "tags": ["first", "pendulum", "counter", "ramp", "control", "link", "earth"]
         },
         {
             "name": "Dark Arts",
@@ -1274,7 +1274,7 @@
         },
         {
             "name": "Contraption",
-            "deckIds": [5822335, 7435843],
+            "deckIds": [5904696],
             "cardIds": [],
             "thumb": "1830486",
             "author": "Diego",
