@@ -414,20 +414,19 @@ test = [
 beta = [
     7443406, #BETA SINGLES, NEVER DELETE!
     ###################
-    # 7421822, #Crypt
-    
-    # 3639246, #Tidalive
-    # 7132540, #Headless Knights
-    # 5904696, #Contraption
-    # 7417728, #Series E
-    # 7367392, #Bas-Yak
-    # 6922630, #Empowered Warrior
-    # 7163783, #Lemuria
-    # 6997240, #Styrmwind
-    # 6857560, #Loving Cosmos
-    # 7410698, #Bright Planet
-    # 7443168, #Codebreaker
-    # 7166789
+    7495126, #Sylphe
+    2122299, #Krel
+    7274175, #Xccel's designator
+    7463590, #Poppin 3rd wave
+    7458028, #Masaki support
+    7448539, #Wight support
+    6997240, #Styrmwind
+    7410698, #Bright planet
+    3906671, #Photogenic
+    7404351, #Hollow Depths
+    7318393, #Anomantic
+    7457819, #Neo Space
+    7462775, #Support armored
 ]
 
 
