@@ -166,7 +166,6 @@ database = [
     5615821, #Onomat Support
     7251527, #Dream Mirror Support
     7263281, #Hayabusa Support
-    2104843, #Vampire Support
     7306486, #Galaxy Photon Support
     7311070, #Virus Support
     6011815, #lswarm Support
@@ -410,7 +409,7 @@ database = [
     6598717, #Generic Traps II
     7193016, #Generic Traps III
     6353457, #Assorted TCG Single Support
-    # 6353465, #Staples
+    6353465, #Staples
 ]
 
 banlist = [
