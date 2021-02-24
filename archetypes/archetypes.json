@@ -45,7 +45,7 @@
         },
         {
             "name": "Poppin",
-            "deckIds": [4861946],
+            "deckIds": [4861946, 7463590],
             "cardIds": [],
             "thumb": "510957",
             "author": "Ara",
@@ -528,7 +528,7 @@
         },
         {
             "name": "World Reaper",
-            "deckIds": [6434960],
+            "deckIds": [6434960, 2166281],
             "cardIds": [],
             "thumb": "1825852",
             "author": "NoodleDoodle21",
@@ -1105,7 +1105,7 @@
         },
         {
             "name": "Halvoran",
-            "deckIds": [7022155],
+            "deckIds": [7022155, 7464737],
             "cardIds": [],
             "thumb": "1888081",
             "author": "Sock",
@@ -1202,7 +1202,7 @@
         },
         {
             "name": "Entropy Beast",
-            "deckIds": [5731990],
+            "deckIds": [5731990, 7454784],
             "cardIds": [],
             "thumb": "1573072",
             "author": "Gatr",
@@ -1220,7 +1220,7 @@
         },
         {
             "name": "O.F.F",
-            "deckIds": [3617894],
+            "deckIds": [3617894, 7499352],
             "cardIds": [],
             "thumb": "1733088",
             "author": "Draco-_-999",
@@ -1238,7 +1238,7 @@
         },
         {
             "name": "Armored Hunter / Raging Calamity",
-            "deckIds": [7464943],
+            "deckIds": [7464943, 7462775],
             "cardIds": [],
             "thumb": "1897739",
             "author": "Deltament",
@@ -1283,12 +1283,21 @@
         },
         {
             "name": "Tidalive",
-            "deckIds": [3639246],
+            "deckIds": [3639246, 7503066],
             "cardIds": [],
             "thumb": "2122458",
             "author": "Gatr",
             "description": "A tempo-based Pendulum Deck with an emphasis on having completely different effects on your turn and the opponent's turn.",
             "tags": ["pendulum"]
+        },
+        {
+            "name": "Doom Instruments",
+            "deckIds": [7443209],
+            "cardIds": [],
+            "thumb": "2161412",
+            "author": "Deus Vult",
+            "description": "A new take on an Xyz Deck - DARK Machine monsters that increase their Levels as Quick Effects, Xyz Summon DARK Machines using themselves and other monsters you control as material, send to recur resources and more.",
+            "tags": ["dark", "xyz"]
         }
     ]
 }

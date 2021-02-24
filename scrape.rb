@@ -176,6 +176,19 @@ database = [
     7428988, #Hellvil Support
     7435843, #Tokyo Terror Support
     7086187, #Crystron Support
+    2166281, #World Reaper Support
+    7446763, #Fusion Parasite Support
+    7478308, #Predap Support
+    6922630, #Empowered Warrior Support
+    7464737, #Halvoran Support
+    7458028, #Masaki Support
+    7484447, #Artifact Support
+    7462775, #Armored Hunter / Raging Calamity Support
+    5813034, #Gimmick Puppet Support
+    7463590, #Poppin
+    7499352, #O.F.F
+    7454784, #Entropy Beast Support
+    7503066, #Tidalive
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -368,6 +381,16 @@ database = [
     7367392, #Bas-Yak
     5904696, #Contraption
     3639246, #Tidalive
+    7443209, #Mokey Mokey OTK
+    7455513, #Doom Instruments
+    7163783, #Lemuria
+    5010437, #Ugrovs
+    7496225, #Primordial Driver
+    7166789, #Ancestagon
+    7318393, #Anomantic
+    6997240, #Stwyrmwind
+    7410698, #Bright Planet
+    7495126, #Sylphe
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
