@@ -410,7 +410,7 @@ database = [
     6598717, #Generic Traps II
     7193016, #Generic Traps III
     6353457, #Assorted TCG Single Support
-    #6353465, #Staples
+    # 6353465, #Staples
 ]
 
 banlist = [
