@@ -154,6 +154,8 @@ const CardsOfTheWeek = [
     1951637, //Half-Exchanged Spirit
     1956938, //Shattered Heart
     1770162, //Number 129: Lost Chained Dragon
+    1731724, //Artifact Teiws
+    1642313, //Rooftop Inu
 ];
 
 const OTKTools = [
