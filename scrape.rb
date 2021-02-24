@@ -340,7 +340,7 @@ database = [
     6806175, #Chibright
     4330341, #D.N.M.Q.
     6906385, #Legendary Golems
-    6848354, #The 9s
+    # 6848354, #The 9s
     6948850, #Mekkallegiate
     6933560, #Revived Beasts
     4355718, #Wild Rose

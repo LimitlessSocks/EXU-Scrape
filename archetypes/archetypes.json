@@ -1291,10 +1291,19 @@
             "tags": ["pendulum"]
         },
         {
-            "name": "Doom Instruments",
+            "name": "Mokey Mokey",
             "deckIds": [7443209],
-            "cardIds": [],
+            "cardIds": [1649242],
             "thumb": "2161412",
+            "author": "Deus Vult",
+            "description": "A relatively simple OTK Deck based on punching the opponent for huge damage that is also focused on the original Mokey Mokey gimmick of making 3000 ATK monsters to crush your opponent's monsters into the ground.",
+            "tags": ["normal", "otk"]
+        },
+        {
+            "name": "Doom Instruments",
+            "deckIds": [7455513],
+            "cardIds": [],
+            "thumb": "1948792",
             "author": "Khreygond",
             "description": "A new take on an Xyz Deck - DARK Machine monsters that increase their Levels as Quick Effects, Xyz Summon DARK Machines using themselves and other monsters you control as material, send to recur resources and more.",
             "tags": ["dark", "xyz"]
@@ -1354,7 +1363,7 @@
             "tags": ["wind", "pendulum"]
         },
         {
-            "name": "Stwyrmwind",
+            "name": "Bright Planet",
             "deckIds": [7410698],
             "cardIds": [],
             "thumb": "2149342",
