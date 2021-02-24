@@ -285,7 +285,7 @@
             "deckIds": [5145725],
             "cardIds": [],
             "thumb": "1383523",
-            "author": "OceanPhantom ",
+            "author": "OceanPhantom",
             "description": "A Trap Fusion Deck that uses Normal Monsters and disruptions to close out games.",
             "tags": ["control", "fusion", "grind", "stun", "float"]
         },
@@ -1295,9 +1295,81 @@
             "deckIds": [7443209],
             "cardIds": [],
             "thumb": "2161412",
-            "author": "Deus Vult",
+            "author": "Khreygond",
             "description": "A new take on an Xyz Deck - DARK Machine monsters that increase their Levels as Quick Effects, Xyz Summon DARK Machines using themselves and other monsters you control as material, send to recur resources and more.",
             "tags": ["dark", "xyz"]
+        },
+        {
+            "name": "Lemuria",
+            "deckIds": [7163783],
+            "cardIds": [],
+            "thumb": "2067845",
+            "author": "Andraith",
+            "description": "A WATER Synchro Deck focused around Special Summoning from the hand and effects during the Battle Phase.",
+            "tags": ["water", "battle"]
+        },
+        {
+            "name": "Ugrovs",
+            "deckIds": [5010437],
+            "cardIds": [],
+            "thumb": "1344429",
+            "author": "Gatr",
+            "description": "A Yokai Deck focused on putting pressure on the opponent by using high Level Spirit monsters which the Deck can Tribute Summon as a Quick Effect to their advantage.",
+            "tags": ["spirit", "stun", "tribute"]
+        },
+        {
+            "name": "Primordial Driver",
+            "deckIds": [7496225],
+            "cardIds": [],
+            "thumb": "2174607",
+            "author": "Sock",
+            "description": "A stun Deck that utilizes minor disruptions, floodgates and monsters that can Normal Summon without Tributing, but at the cost of making their ATK 0, to their advantage.",
+            "tags": ["stun"]
+        },
+        {
+            "name": "Ancestagon",
+            "deckIds": [7166789],
+            "cardIds": [],
+            "thumb": "2064348",
+            "author": "Dawn",
+            "description": "A Dinosaur Pendulum archetype that takes advantage of Pendulum Summoning capabilities to summon powerful bosses - with an additional Tributing gimmick.",
+            "tags": ["pendulum", "tribute", "beatdown"]
+        },
+        {
+            "name": "Anomantic",
+            "deckIds": [7318393],
+            "cardIds": [],
+            "thumb": "2169997",
+            "author": "Deltament",
+            "description": "A Spirit control archetype that utilizes trigger effects by returning to the hand and being able to be Normal Summoned during the opponent's turn and also revolving around their Link-1 and their Field Spell, with the Link-2 serving as the main payoff.",
+            "tags": ["spirit", "control"]
+        },
+        {
+            "name": "Stwyrmwind",
+            "deckIds": [6997240],
+            "cardIds": [],
+            "thumb": "2019739",
+            "author": "Andraith",
+            "description": "A WIND Pendulum archetype that uses discards, Spell monsters and Trap monsters and more to gain the upper advantage.",
+            "tags": ["wind", "pendulum"]
+        },
+        {
+            "name": "Stwyrmwind",
+            "deckIds": [7410698],
+            "cardIds": [],
+            "thumb": "2149342",
+            "author": "Masha",
+            "description": "A dice-based Xyz combo archetype where monsters are easily able to be Summoned and you roll the dice to determine what Level they become that's also versatile going first and second, with a Synchro in the mix to boot.",
+            "tags": ["gamble", "xyz"]
+        },
+        {
+            "name": "Sylphe",
+            "deckIds": [7495126],
+            "cardIds": [],
+            "thumb": "2149342",
+            "author": "46",
+            "description": "An unorthodox Fairy Pendulum flip archetype where the Pendulum Monsters add themselves to the Extra Deck face-up upon activation, providing setup for the boss monster.",
+            "tags": ["pendulum", "flip"]
         }
     ]
 }
