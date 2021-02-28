@@ -447,13 +447,11 @@ beta = [
     7516896, #Awor
     7544944, #Anon CW
     7545154, #Strannaut supp
-    7497252, #Dance of Swords
-    7499095, #Magistrophic
-    7507290, #Corrupted Hunter
-    6186812, #Azure Sky
-    7515216, #konosuba
+    7529948, #Highlander supp
     6979146, #T.G.
     7503795, #Pitch Black
+    7522856, #Abartech
+    7175502, #Ezurica
 ]
 
 
