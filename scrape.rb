@@ -188,6 +188,7 @@ database = [
     7499352, #O.F.F
     7454784, #Entropy Beast Support
     7503066, #Tidalive
+    6598851, #Madoor
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -195,7 +196,7 @@ database = [
     # 4376011, #Combat Mechs
     4523067, #Voltron
     4385932, #Starbaric Crystal Beasts
-    4540185, #Emeraheart
+    # 4540185, #Emeraheart
     4757288, #Pandas
     4861946, #Poppin
     # 4547335, #Titanus
@@ -375,7 +376,7 @@ database = [
     3617894, #O.F.F
     7310491, #Ak*ris
     7464943, #Armored Hunter / Raging Calamity
-    6526373, #Phylabeast
+    # 6526373, #Phylabeast
     5822335, #Tokyo Terror
     7367392, #Bas-Yak
     5904696, #Contraption
@@ -436,19 +437,23 @@ test = [
 beta = [
     7443406, #BETA SINGLES, NEVER DELETE!
     ###################
-    7495126, #Sylphe
-    2122299, #Krel
-    7274175, #Xccel's designator
-    7463590, #Poppin 3rd wave
-    7458028, #Masaki support
-    7448539, #Wight support
-    6997240, #Styrmwind
-    7410698, #Bright planet
-    3906671, #Photogenic
-    7404351, #Hollow Depths
-    7318393, #Anomantic
-    7457819, #Neo Space
-    7462775, #Support armored
+    7516633, #Fire Fist Support
+    7518961, #Anon Prio
+    7519054, #Rivers
+    7531842, #Psychic supp
+    7534065, #Volcanic Supp
+    6848354, #9s
+    7534403, #Magnet warrior
+    7516896, #Awor
+    7544944, #Anon CW
+    7545154, #Strannaut supp
+    7497252, #Dance of Swords
+    7499095, #Magistrophic
+    7507290, #Corrupted Hunter
+    6186812, #Azure Sky
+    7515216, #konosuba
+    6979146, #T.G.
+    7503795, #Pitch Black
 ]
 
 
