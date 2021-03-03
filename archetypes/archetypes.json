@@ -345,7 +345,7 @@
             "name": "Genjutsu",
             "deckIds": [2952495],
             "cardIds": [],
-            "thumb": "574158",
+            "thumb": "332816",
             "author": "Gatr",
             "description": "Genjutsu is a monster-only Ritual Deck that uses Ritual monsters to Ritual Summon. They are a tempo-focused deck that excels at going 2nd and breaking boards, then out resourcing the opponent. Each Ritual has a removal effect on Summon, and the deck is capable of Summoning them as a Quick Effect.",
             "tags": ["second", "aggro", "ritual", "link", "grind", "beatdown"]
@@ -577,7 +577,7 @@
         },
         {
             "name": "Cosmic Primal",
-            "deckIds": [6477846],
+            "deckIds": [7553027],
             "cardIds": [],
             "thumb": "1840310",
             "author": "Matsu",
@@ -851,9 +851,9 @@
             "name": "Witchwood",
             "deckIds": [7138655],
             "cardIds": [],
-            "thumb": "2060162",
+            "thumb": "2060472",
             "author": "Cryselle",
-            "description": "An Xyz and Synchro Deck that banishes and is somewhat in a similar vein to Mythical Winged Beasts, another EXU-approved Deck. Certainly something.",
+            "description": "A mid-range Xyz & Synchro deck that utilizes banishing to generate board presence which it then converts into a host of toolbox options including negation, protection, extension, and removal.",
             "tags": ["synchro", "xyz", "midrange", "banish", "engine"]
         },
         {

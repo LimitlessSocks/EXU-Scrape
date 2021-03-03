@@ -295,7 +295,7 @@ database = [
     5145725, #Remnant
     6537631, #Bucket Squad
     6547017, #World Reaper Support
-    6477846, #Cosmic Primal
+    7553027, #Cosmic Primal
     6395566, #Submerzan
     # 6578295, #Crypt
     6585445, #PPDC
