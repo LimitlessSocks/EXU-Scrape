@@ -415,10 +415,12 @@ database = [
     6511321, #Generic Monsters V
     6871713, #Generic Monsters VI
     7193018, #Generic Monsters VII
+    7552348, #Generic Monsters VIII
     6353430, #Generic Spells
     6419184, #Generic Spells II
     6871664, #Generic Spells III
     7193014, #Generic Spells IV
+    7552464, #Generic Spells V
     6353449, #Generic Traps
     6598717, #Generic Traps II
     7193016, #Generic Traps III
