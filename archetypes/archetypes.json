@@ -796,14 +796,6 @@
             "tags": ["stun", "stall", "castle", "grind", "beatdown"]
         },
         {
-            "name": "The 9s",
-            "deckIds": [6848354],
-            "cardIds": [],
-            "thumb": "1972646",
-            "author": "Vector",
-            "description": "A Psychic Link and Pendulum Deck that banishes and does neat stuff with different effects."
-        },
-        {
             "name": "Mekkallegiate",
             "deckIds": [6948850],
             "cardIds": [],
@@ -1246,15 +1238,6 @@
             "tags": ["equip", "union"]
         },
         {
-            "name": "Phylabeast",
-            "deckIds": [6526373],
-            "cardIds": [],
-            "thumb": "2140255",
-            "author": "Ommlettuce",
-            "description": "A GY Wyrm Deck focused around the Battle Phase.",
-            "tags": ["gy", "battle"]
-        },
-        {
             "name": "Tokyo Terror",
             "deckIds": [5822335, 7435843],
             "cardIds": [],
@@ -1346,7 +1329,7 @@
         },
         {
             "name": "Anomantic",
-            "deckIds": [7318393],
+            "deckIds": [7560045],
             "cardIds": [],
             "thumb": "2169997",
             "author": "Deltament",

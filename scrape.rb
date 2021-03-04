@@ -395,7 +395,8 @@ database = [
     5010437, #Ugrovs
     7496225, #Primordial Driver
     7166789, #Ancestagon
-    7318393, #Anomantic
+    # 7318393, #Anomantic
+    7560045, #Anomantic
     6997240, #Stwyrmwind
     7410698, #Bright Planet
     7495126, #Sylphe
