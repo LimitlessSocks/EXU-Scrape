@@ -189,6 +189,14 @@ database = [
     7454784, #Entropy Beast Support
     7503066, #Tidalive
     6598851, #Madoor
+    7448539, #Wight
+    7499374, #OFF 2
+    7544944, #Clear World
+    7516633, #Fire Fist
+    7529948, #Highlander Support
+    6979146, #T.G. Support
+    7545154, #Strannaut Support
+    7568710, #Windwitch Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -391,6 +399,11 @@ database = [
     6997240, #Stwyrmwind
     7410698, #Bright Planet
     7495126, #Sylphe
+    7516077, #Moonlit
+    7516896, #Darkest Power: Awor
+    7503795, #Pitch Black
+    7522856, #Abartech
+    7432421, #Fiendfyre
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)

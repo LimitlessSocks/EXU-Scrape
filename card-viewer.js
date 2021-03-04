@@ -156,6 +156,7 @@ const CardsOfTheWeek = [
     1770162, //Number 129: Lost Chained Dragon
     1731724, //Artifact Teiws
     1642313, //Rooftop Inu
+    1551870, //Exquisite Knowledge
 ];
 
 const OTKTools = [
