@@ -1379,6 +1379,51 @@
             "author": "46",
             "description": "An unorthodox Fairy Pendulum flip archetype where the Pendulum Monsters add themselves to the Extra Deck face-up upon activation, providing setup for the boss monster.",
             "tags": ["pendulum", "flip"]
+        },
+        {
+            "name": "Moonlit",
+            "deckIds": [7516077],
+            "cardIds": [],
+            "thumb": "2187412",
+            "author": "Deus Vult",
+            "description": "A heavy stun/control archetype based on shapeshifting - the titular \"Moonlit\" monsters \"transform\" into \"Cursebound Lycanthrope\" when a \"Moonlight\" Trap is activated in their column. In addition, the \"Moonlight\" Traps gain powerful second effects while you control \"Cursed Lycanthrope\", making them powerful blowout cards.",
+            "tags": ["stun", "control", "theme"]
+        },
+        {
+            "name": "Darkest Power: Awor",
+            "deckIds": [7516896],
+            "cardIds": [],
+            "thumb": "2187058",
+            "author": "Sock",
+            "description": "A FLIP Yokai archetype based around the thematic antagonists to Rowa and company, having a gimmick where if you control any of its Traps, you can only control 1 Effect Monster, effects that activate when your opponent Summons from the hand and floating effects when sent to the GY by an opponent's card.",
+            "tags": ["flip", "control", "normal"]
+        },
+        {
+            "name": "Pitch Black",
+            "deckIds": [7503795],
+            "cardIds": [],
+            "thumb": "2181817",
+            "author": "Tennoch",
+            "description": "A powerful archetype serving as the darker side to the Blue-Eyes White Dragon, utilizing powerful Extra Deck monsters, big bosses, Fusion Summoning and more to ensure victory over the light.",
+            "tags": ["fusion", "normal"]
+        },
+        {
+            "name": "Abartech",
+            "deckIds": [7522856],
+            "cardIds": [],
+            "thumb": "2189804",
+            "author": "Sock",
+            "description": "A control Cyberse strategy with some Link-based elements to it.",
+            "tags": ["control", "link"]
+        },
+        {
+            "name": "Fiendfyre",
+            "deckIds": [7432421],
+            "cardIds": [],
+            "thumb": "2022808",
+            "author": "Khreygond",
+            "description": "A Ritual OTK Chaos archetype that uses Fusion Monsters to ascend and win.",
+            "tags": ["ritual", "otk", "chaos", "light", "dark", "fusion"]
         }
     ]
 }
