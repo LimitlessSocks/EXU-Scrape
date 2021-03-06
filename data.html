@@ -46,6 +46,11 @@
     p {
         line-height: 1.1em;
     }
+    #filterHide {
+        position: absolute;
+        top: 0;
+        left: -10000px;
+    }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3RKXFLZRZ"></script>
@@ -53,7 +58,7 @@
 </head>
 <body>
 <h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1>
-<h2>EXU Statistics <button id="share">Save sharing URL</button></h2>
+<h2>EXU Statistics <button id="share">Save sharing URL</button> <button id="filter">Open Filter</button></h2>
 <div class="twoColumnHolder">
     <div class="column">
         <p>Click on one of these buttons to see the corresponding statistic!</p>
@@ -82,5 +87,8 @@
 <div id="canvasHolder">
 <canvas id="primaryChart" width="800" height="400"></canvas>
 </div>
+
+<div id="filterHide"></div>
+
 </body>
 </head>

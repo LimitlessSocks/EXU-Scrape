@@ -1,16 +1,32 @@
 window.databaseToUse = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/db.json";
 
+const getStatsFilter = (query, exclude = null) => {
+    let finalQuery = {};
+    let finalExclude = null;
+    if(!popupPrompt.needsSetup) {
+        Object.assign(finalQuery, CardViewer.query());
+    }
+    Object.assign(finalQuery, query);
+    finalExclude = exclude;
+    return CardViewer.filter(finalQuery, finalExclude);
+};
+
 const cardsBy = (fn, query = {}, exclude = null) => {
     let hash = {};
     if(typeof fn !== "function") {
         let type = fn;
         fn = (card) => card[type];
     }
-    let swath = CardViewer.filter(query, exclude);
+    let swath = getStatsFilter(query, exclude);
     for(let card of Object.values(swath)) {
         let prop = fn(card);
-        hash[prop] = hash[prop] || 0;
-        hash[prop]++;
+        if(!Array.isArray(prop)) {
+            prop = [prop];
+        }
+        for(let sub of prop) {
+            hash[sub] = hash[sub] || 0;
+            hash[sub]++;
+        }
     }
     return hash;
 };
@@ -25,7 +41,7 @@ const cardsByRecord = (fn, holder, query = {}, exclude = null, cmp = compare) =>
         let type = holder;
         holder = (card) => card[type];
     }
-    let swath = CardViewer.filter(query, exclude);
+    let swath = getStatsFilter(query, exclude);
     for(let card of Object.values(swath)) {
         let prop = fn(card);
         let h = holder(card);
@@ -53,7 +69,7 @@ const cardsByAverage = (fn, holder, min = 0, query = {}, exclude = null, cmp = c
         let type = holder;
         holder = (card) => card[type];
     }
-    let swath = CardViewer.filter(query, exclude);
+    let swath = getStatsFilter(query, exclude);
     for(let card of Object.values(swath)) {
         let prop = fn(card);
         let h = holder(card);
@@ -439,6 +455,21 @@ Statistics.addFeature(
     }
 );
 
+const getArrowArray = (card) => 
+    getLinkArrowText(card.arrows)
+        .replace(/[\u2B1C\n\uFE0F]/g, "")
+        .split("")
+        .map(arrow => arrow + "\uFE0F");
+
+Statistics.addFeature(
+    "arrows",
+    "Commonest link arrows",
+    () => cardsBy(getArrowArray, { monsterCategory: "link" }),
+    {
+        numericName: true,
+    }
+);
+
 Statistics.addSpacer();
 Statistics.addFeature(
     "monsterPairing",
@@ -521,6 +552,228 @@ Statistics.addFeature(
     }
 );*/
 
+const filterHTML = `
+<div id=searchParameters><div>
+    <table id=mainStats>
+        <tr>
+            <th colspan=4>Primary Stats</th>
+        </tr>
+        <tr>
+            <td>Card name:</td>
+            <td><input id="cardName"></td>
+            <td>Card ID:</td>
+            <td><input id="cardId" type=number></td>
+        </tr>
+        <tr>
+            <td>Card description:</td>
+            <td><input id="cardDescription"></td>
+            <td>Card author:</td>
+            <td><input id="cardAuthor"></td>
+        </tr>
+        <tr>
+            <td>Card type:</td>
+            <td>
+                <select id="cardType">
+                    <option value=any></option>
+                    <option value=monster>Monster Card</option>
+                    <option value=spell>Spell Card</option>
+                    <option value=trap>Trap Card</option>
+                </select>
+            </td>
+            <td>Card limit:</td>
+            <td>
+                <select id="cardLimit">
+                    <option value=any></option>
+                    <option value=3>Unlimited</option>
+                    <option value=2>Semi-limited</option>
+                    <option value=1>Limited</option>
+                    <option value=0>Forbidden</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="cardVisibility">Card visibility</label></td>
+            <td>
+                <select id="cardVisibility">
+                    <option value=any></option>
+                    <option value=1>Public</option>
+                    <option value=2>Private</option>
+                </select>
+            </td>
+            <td><label for="cardIsRetrain">Retrain?</label></td>
+            <td>
+                <input id="cardIsRetrain" type="checkbox">
+            </td>
+        </tr>
+    </table>
+    <table id=conditionalStats>
+        <tr class="ifMonster ifSpell ifTrap">
+            <th colspan=5>Secondary Stats</th>
+        </tr>
+        <tbody class="ifMonster" id="monsterStats">
+            <tr>
+                <td>Category</td>
+                <td>
+                    <select id="cardMonsterCategory">
+                        <option value=any></option>
+                        <option value="normal">Normal</option>
+                        <option value="effect">Effect</option>
+                        <option value="ritual">Ritual</option>
+                        <option value="fusion">Fusion</option>
+                        <option value="synchro">Synchro</option>
+                        <option value="xyz">Xyz</option>
+                        <option value="pendulum">Pendulum</option>
+                        <option value="link">Link</option>
+                        <option value="leveled">Leveled</option>
+                        <option value="maindeck">Main Deck</option>
+                        <option value="extradeck">Extra Deck</option>
+                        <option value="noneffect">Non-Effect</option>
+                        <option value="flip">Flip</option>
+                        <option value="qq">? ATK or DEF</option>
+                    </select>
+                </td>
+                <td>ATK</td>
+                <td><select id=cardATKCompare class=thin>
+                    <option value="equal">=</option>
+                    <option value="lessequal">&le;</option>
+                    <option value="less">&lt;</option>
+                    <option value="greaterequal">&ge;</option>
+                    <option value="greater">&gt;</option>
+                    <option value="unequal">&ne;</option>
+                    <option value="question">?</option>
+                    <!-- <option value="choice">any of</option> -->
+                </select></td>
+                <td><input type=number id=cardATK min=0 max=9999 step=50></td>
+            </tr>
+            <tr>
+                <td>Ability</td>
+                <td>
+                    <select id="cardMonsterAbility">
+                        <option value=any></option>
+                        <option value="union">Union</option>
+                        <option value="gemini">Gemini</option>
+                        <option value="spirit">Spirit</option>
+                        <option value="tuner">Tuner</option>
+                        <option value="toon">Toon</option>
+                        <option value="noneffect">Non-Effect</option>
+                    </select>
+                </td>
+                <td>DEF</td>
+                <td><select id=cardDEFCompare class=thin>
+                    <option value="equal">=</option>
+                    <option value="lessequal">&le;</option>
+                    <option value="less">&lt;</option>
+                    <option value="greaterequal">&ge;</option>
+                    <option value="greater">&gt;</option>
+                    <option value="unequal">&ne;</option>
+                    <option value="question">?</option>
+                    <!-- <option value="choice">any of</option> -->
+                </select></td>
+                <td><input type=number id=cardDEF min=0 max=9999 step=50></td>
+            </tr>
+            <tr>
+                <td>Attribute</td>
+                <td>
+                    <select id="cardMonsterAttribute">
+                        <option value=""></option>
+                        <option value="DARK">DARK</option>
+                        <option value="EARTH">EARTH</option>
+                        <option value="FIRE">FIRE</option>
+                        <option value="LIGHT">LIGHT</option>
+                        <option value="WATER">WATER</option>
+                        <option value="WIND">WIND</option>
+                        <option value="DIVINE">DIVINE</option>
+                    </select>
+                </td>
+                <td>Level/Rank:</td>
+                <td><select id=cardLevelCompare class=thin>
+                    <option value="equal">=</option>
+                    <option value="lessequal">&le;</option>
+                    <option value="less">&lt;</option>
+                    <option value="greaterequal">&ge;</option>
+                    <option value="greater">&gt;</option>
+                    <option value="unequal">&ne;</option>
+                    <!-- <option value="choice">any of</option> -->
+                </select></td>
+                <td><input type=number id=cardLevel min=0 max=12></td>
+            </tr>
+            <tr>
+                <td>Type</td>
+                <td>
+                    <select id="cardMonsterType">
+                        <option value=""></option>
+                        <option value="Aqua">Aqua</option>
+                        <option value="Beast">Beast</option>
+                        <option value="Beast-Warrior">Beast-Warrior</option>
+                        <option value="Cyberse">Cyberse</option>
+                        <option value="Dinosaur">Dinosaur</option>
+                        <option value="Dragon">Dragon</option>
+                        <option value="Fairy">Fairy</option>
+                        <option value="Fiend">Fiend</option>
+                        <option value="Fish">Fish</option>
+                        <option value="Insect">Insect</option>
+                        <option value="Machine">Machine</option>
+                        <option value="Plant">Plant</option>
+                        <option value="Psychic">Psychic</option>
+                        <option value="Pyro">Pyro</option>
+                        <option value="Reptile">Reptile</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Sea Serpent">Sea Serpent</option>
+                        <option value="Spellcaster">Spellcaster</option>
+                        <option value="Thunder">Thunder</option>
+                        <option value="Warrior">Warrior</option>
+                        <option value="Winged Beast">Winged Beast</option>
+                        <option value="Wyrm">Wyrm</option>
+                        <option value="Yokai">Yokai</option>
+                        <option value="Zombie">Zombie</option>
+                        <option value="Creator God">Creator God</option>
+                        <option value="Divine-Beast">Divine-Beast</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+        <tbody class="ifSpell" id="spellStats">
+            <tr>
+                <td>Kind</td>
+                <td>
+                    <select id="cardSpellKind">
+                        <option value=""></option>
+                        <option value=Normal>Normal Spell</option>
+                        <option value=Quick-Play>Quick-Play Spell</option>
+                        <option value=Field>Field Spell</option>
+                        <option value=Continuous>Continuous Spell</option>
+                        <option value=Ritual>Ritual Spell</option>
+                        <option value=Equip>Equip Spell</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+        <tbody class="ifTrap" id="trapStats">
+            <tr>
+                <td>Kind</td>
+                <td>
+                    <select id="cardTrapKind">
+                        <option value=""></option>
+                        <option value=Normal>Normal Trap</option>
+                        <option value=Continuous>Continuous Card</option>
+                        <option value=Counter>Counter Card</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+`;
+    
+    
+const popupPrompt = new Prompt(
+    "Filters",
+    $(filterHTML),
+    [ "Done" ],
+    "large"
+);
+popupPrompt.needsSetup = true;
+
 window.addEventListener("load", async function () {
     let response = await fetch(window.databaseToUse);
     let db = await response.json();
@@ -599,6 +852,53 @@ window.addEventListener("load", async function () {
         Statistics.Options[val] = this.value;
         Statistics.focus.button.click();
     };
+    
+    // window.popupPrompt = popupPrompt;
+    const filterHide = $("#filterHide");
+    $("#filter").click(() => {
+        if(popupPrompt.needsSetup) {
+            let innerFn = popupPrompt.innerFn();
+            console.log(innerFn);
+            CardViewer.Elements.cardType = innerFn.find("#cardType");
+            CardViewer.Elements.ifMonster = innerFn.find(".ifMonster");
+            CardViewer.Elements.ifSpell = innerFn.find(".ifSpell");
+            CardViewer.Elements.ifTrap = innerFn.find(".ifTrap");
+            CardViewer.Elements.monsterStats = innerFn.find("#monsterStats");
+            CardViewer.Elements.spellStats = innerFn.find("#spellStats");
+            CardViewer.Elements.trapStats = innerFn.find("#trapStats");
+            CardViewer.Elements.cardName = innerFn.find("#cardName");
+            CardViewer.Elements.cardDescription = innerFn.find("#cardDescription");
+            CardViewer.Elements.cardLimit = innerFn.find("#cardLimit");
+            CardViewer.Elements.cardId = innerFn.find("#cardId");
+            CardViewer.Elements.cardAuthor = innerFn.find("#cardAuthor");
+            CardViewer.Elements.cardIsRetrain = innerFn.find("#cardIsRetrain");
+            CardViewer.Elements.cardVisibility = innerFn.find("#cardVisibility");
+            CardViewer.Elements.cardSpellKind = innerFn.find("#cardSpellKind");
+            CardViewer.Elements.cardTrapKind = innerFn.find("#cardTrapKind");
+            CardViewer.Elements.cardMonsterType = innerFn.find("#cardMonsterType");
+            CardViewer.Elements.cardMonsterAttribute = innerFn.find("#cardMonsterAttribute");
+            CardViewer.Elements.cardMonsterCategory = innerFn.find("#cardMonsterCategory");
+            CardViewer.Elements.cardMonsterAbility = innerFn.find("#cardMonsterAbility");
+            CardViewer.Elements.cardLevel = innerFn.find("#cardLevel");
+            CardViewer.Elements.cardATK = innerFn.find("#cardATK");
+            CardViewer.Elements.cardDEF = innerFn.find("#cardDEF");
+            CardViewer.Elements.cardLevelCompare = innerFn.find("#cardLevelCompare");
+            CardViewer.Elements.cardATKCompare = innerFn.find("#cardATKCompare");
+            CardViewer.Elements.cardDEFCompare = innerFn.find("#cardDEFCompare");
+
+            CardViewer.setUpTabSearchSwitching();
+            popupPrompt.needsSetup = false;
+        }
+        
+        filterHide.empty();
+        popupPrompt.deploy().then(() => {
+            Statistics.focus.button.click();
+            popupPrompt.innerFn().appendTo(filterHide);
+            // filterHide.append(.clone());
+            // console.log(filterHide);
+        });
+        
+    });
     
     for(let el of inputElements) {
         $(el).change(onUpdate);

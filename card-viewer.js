@@ -63,7 +63,11 @@ const escapeXMLString = (str) =>
 class Prompt {
     constructor(title, innerFn, buttons, type = null) {
         this.title = title;
-        this.innerFn = innerFn || (() => $(innerFn));
+        if(typeof innerFn !== "function") {
+            let oldInnerFn = innerFn;
+            innerFn = () => oldInnerFn;
+        }
+        this.innerFn = innerFn;
         this.buttons = buttons;
         this.type = type;
     }
