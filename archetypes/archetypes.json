@@ -26,15 +26,6 @@
             "description": "A Crystal Beast side archetype that has the names of the Crystal Beasts and become much better by having actual effects."
         },
         {
-            "name": "Emeraheart",
-            "deckIds": [4540185],
-            "cardIds": [],
-            "thumb": "1193249",
-            "author": "Mevs",
-            "description": "A Plant Xyz Deck that can Xyz Summon in a new way and use Plants as generic support.",
-            "tags": ["xyz", "combo", "banish", "support"]
-        },
-        {
             "name": "Panda",
             "deckIds": [4757288],
             "cardIds": [8642, 1751935],
