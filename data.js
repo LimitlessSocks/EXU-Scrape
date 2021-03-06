@@ -350,7 +350,10 @@ Statistics.addSpacer();
 Statistics.addFeature(
     "users",
     "Users",
-    () => objectFilter(cardsBy("username"), (u, v) => v >= 20)
+    () => cardsBy("username"),
+    {
+        defaultLimit: 40,
+    }
 );
 Statistics.addSpacer();
 
@@ -413,18 +416,20 @@ Statistics.addSpacer();
 Statistics.addFeature(
     "atkMost",
     "Commonest ATK values",
-    () => objectFilter(cardsBy("atk"), (u, v) => v >= 20),
+    () => cardsBy("atk", { type: "monster" }),
     {
         numericName: true,
+        defaultLimit: 35,
     }
 );
 
 Statistics.addFeature(
     "defMost",
     "Commonest DEF values",
-    () => objectFilter(cardsBy("def", {}, { monsterCategory: "link" }), (u, v) => v >= 20),
+    () => cardsBy("def", { type: "monster" }, { monsterCategory: "link" }),
     {
         numericName: true,
+        defaultLimit: 35,
     }
 );
 
