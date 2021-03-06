@@ -841,11 +841,12 @@
         },
         {
             "name": "Strannaut",
-            "deckIds": [7200158],
+            "deckIds": [7200158, 7545154],
             "cardIds": [],
             "thumb": "2079343",
-            "author": "Reluctant Foo",
-            "description": "A control Deck based around controlling the Battle Phase and withering away your opponent's monsters until all that's left are the memories of what once was."
+            "author": "Himself17",
+            "description": "A control Deck based around controlling the Battle Phase and withering away your opponent's monsters until all that's left are the memories of what once was.",
+            "tags": ["control", "backrow", "first"]
         },
         {
             "name": "Andromeda",
