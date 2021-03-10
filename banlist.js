@@ -99,17 +99,17 @@ let onLoad = async function () {
             .append($("<a class=top-arrow>").text("\u2b06").attr("href", "#top"));
         CardViewer.Elements.results.append(header);
         CardViewer.Elements.results.append(sub);
-        CardViewer.Elements.tableOfContents.append(
-            $("<li>").append($("<a>")
-                .attr("href", "#" + tag)
-                .text(tag))
-        );
+        
+        $("#status").insertAfter(sub);
+        
+        return sub;
     };
     
     let results = CardViewer.filter({ retrain: true, });
     appendSearchPage(results, "Retrained");
     
-    for(let i = 0; i <= 3; i++) {
+    let i = 0;
+    let handleStep = () => {
         let limit = i.toString();
         let filter = { limit: limit, notImported: false };
         let exclude = { retrain: true };
@@ -128,7 +128,16 @@ let onLoad = async function () {
         
         let tag = tags[i];
         appendSearchPage(results, tag);
-    }
+        
+        if(i < 3) {
+            i++;
+            setTimeout(handleStep, 0);
+        }
+        else {
+            $("#status").remove();
+        }
+    };
+    handleStep();
     
     // let importResults = CardViewer.filter({ imported: true, });
     // console.log(importResults);
