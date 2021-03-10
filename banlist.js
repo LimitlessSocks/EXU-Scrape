@@ -1,3 +1,5 @@
+CardViewer.showImported = true;
+
 let onLoad = async function () {
     CardViewer.excludeTcg =  false;
     CardViewer.Search.pageSize = Infinity;
@@ -104,22 +106,34 @@ let onLoad = async function () {
         );
     };
     
-    
     let results = CardViewer.filter({ retrain: true, });
     appendSearchPage(results, "Retrained");
     
-    let importResults = CardViewer.filter({ imported: true, });
-    console.log(importResults);
-    appendSearchPage(importResults, "Imported");
-    
     for(let i = 0; i <= 3; i++) {
-        let results = CardViewer.filter({ limit: i.toString(), notImported: false }, { retrain: true });
+        let limit = i.toString();
+        let filter = { limit: limit, notImported: false };
+        let exclude = { retrain: true };
+        let results = CardViewer.filter(filter, exclude);
+        
+        if(i !== 3) {
+            if(i === 0) {
+                filter.notImported = true;
+            }
+            else {
+                filter.imported = true;
+            }
+            let notImportResults = CardViewer.filter(filter, exclude);
+            results = results.concat(notImportResults);
+        }
+        
         let tag = tags[i];
         appendSearchPage(results, tag);
     }
     
-    let notImportResults = CardViewer.filter({ notImported: true, });
-    appendSearchPage(notImportResults, "Unimported");
+    // let importResults = CardViewer.filter({ imported: true, });
+    // console.log(importResults);
+    // appendSearchPage(importResults, "Imported");
+    
     
     // $("body").append(
         // CardViewer.composeResult(CardViewer.Database.cards[9138])

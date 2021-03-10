@@ -949,7 +949,7 @@ CardViewer.composeResultSmall = function (card) {
         // console.log(card.name, res);
     }
     
-    let isPrivate = card.custom && card.custom > 1
+    let isPrivate = card.custom && card.custom > 1;
     
     if(isPrivate) {
         res.addClass("private");

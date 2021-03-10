@@ -434,7 +434,11 @@ input[type=number].inline {
     order: -5;
 }
 .result.small.different {
-    box-shadow: 0 0 10px 5px #ff3366;
+    box-shadow: 0 0 10px 5px #fe25f1;
+    order: -3;
+}
+.result.small.unimported {
+    box-shadow: 0 0 10px 5px #ff9966;
     order: -3;
 }
 

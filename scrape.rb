@@ -430,9 +430,9 @@ database = [
 ]
 
 banlist = [
-    6358712,                    #Imported 1
-    7260456,                    #Imported 2
-    6751103,                    #Imported 3
+    # 6358712,                    #Imported 1
+    # 7260456,                    #Imported 2
+    # 6751103,                    #Imported 3
     6358715,                    #Unimported
     
     5895579,                    #Retrains
@@ -491,9 +491,9 @@ extra_info = {
     
     5857285 => EXU_UNLIMITED,
     
-    6358712 => EXU_IMPORT,
-    7260456 => EXU_IMPORT,
-    6751103 => EXU_IMPORT,
+    # 6358712 => EXU_IMPORT,
+    # 7260456 => EXU_IMPORT,
+    # 6751103 => EXU_IMPORT,
     
     6358715 => EXU_NO_IMPORT
 }
