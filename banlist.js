@@ -19,7 +19,8 @@ $(document).ready(() => {
         for(let h2 of $("#results h2")) {
             h2 = $(h2);
             let cards = h2.next().find(".result:visible");
-            h2.text(h2.text().replace(/\d+/, (n) => cards.length));
+            let span = $(h2).find("span");
+            span.text(span.text().replace(/\d+/, (n) => cards.length));
         }
     };
     inner.on("input", onInput);
@@ -124,7 +125,7 @@ let onLoad = async function () {
         
         let selection = CardViewer.Search.pages.flat();
         let header = $("<h2 class=main>")
-            .text(tag + " Cards (" + selection.length + ")")
+            .append($("<span>").text(tag + " Cards (" + selection.length + ")"))
             .attr("id", tag)
             .append($("<a class=top-arrow>").text("\u2b06").attr("href", "#top"));
         CardViewer.Elements.results.append(header);
