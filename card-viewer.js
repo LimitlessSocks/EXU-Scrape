@@ -1268,6 +1268,21 @@ CardViewer.setUpCompareCompares = function () {
     //TODO:
 };
 
+CardViewer.setUpFilterByToggle = function (filterByToggle, filterBy, inner) {
+    inner.val("");
+    filterByToggle.click(() => {
+        filterByToggle.toggleClass("toggled");
+        filterBy.find(".toggleable").toggle();
+        
+        if(filterByToggle.hasClass("toggled")) {
+            filterBy.css("width", "70%");
+        }
+        else {
+            filterBy.css("width", "auto");
+        }
+    });
+};
+
 CardViewer.firstTime = true;
 CardViewer.submit = function () {
     let query;

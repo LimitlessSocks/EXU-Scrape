@@ -20,9 +20,18 @@
     <link rel="STYLESHEET" href="./banlist.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3RKXFLZRZ"></script>
+    <style>
+        #spacer { height: 6em; }
+    </style>
 </head>
 <body>
 <h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1>
+<div id="filterBy">
+    <div id="filterByToggle" class="toggleIcon"><img src="./res/search.png"/></div>
+    <input type="text" id="filterByInner" class="toggleable">
+    <!-- <div class="toggleIcon toggleable"><img src="./../res/plus.png"/><div id="tagContainer" class="popup">asdf</div></div> -->
+    
+</div>
 <h1 id=top>EXU Banlist</h1>
 <ul id=toc>
     <li><a href="#Retrained">Retrained</a></li>
@@ -33,5 +42,6 @@
 </ul>
 <div id=results><div id="status">Loading, please wait&hellip;</div></div>
 <div id=popup><div id=popupResults></div></div>
+<div id=spacer></div>
 </body>
 </html>

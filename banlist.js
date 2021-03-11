@@ -1,5 +1,35 @@
 CardViewer.showImported = true;
 
+$(document).ready(() => {
+    let filterByToggle = $("#filterByToggle");
+    let filterBy = $("#filterBy");
+    let inner = $("#filterByInner");
+    CardViewer.setUpFilterByToggle(filterByToggle, filterBy, inner);
+    let onInput = function () {
+        let filter = this.value.toLowerCase();
+        for(let card of $("#results .result")) {
+            let name = card
+                .querySelector(".result-name")
+                .textContent
+                .toLowerCase();
+            
+            $(card).toggle(name.indexOf(filter) !== -1);
+        }
+        // update numbers
+        for(let h2 of $("#results h2")) {
+            h2 = $(h2);
+            let cards = h2.next().find(".result:visible");
+            h2.text(h2.text().replace(/\d+/, (n) => cards.length));
+        }
+    };
+    inner.on("input", onInput);
+    inner.on("keydown", function (ev) {
+        if(ev.originalEvent.key === "Enter") {
+            onInput.bind(this)();
+        }
+    });
+});
+
 let onLoad = async function () {
     CardViewer.excludeTcg =  false;
     CardViewer.Search.pageSize = Infinity;

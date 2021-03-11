@@ -5,12 +5,13 @@ $(document).ready(function () {
     }
     
     let filterByToggle = $("#filterByToggle");
-    let filterBy= $("#filterBy");
+    let filterBy = $("#filterBy");
     let inner = $("#filterByInner");
+    // CardViewer.setUpFilterByToggle(filterByToggle, filterBy, inner);
     inner.val("");
     filterByToggle.click(() => {
         filterByToggle.toggleClass("toggled");
-        $("#filterBy .toggleable").toggle();
+        filterBy.find(".toggleable").toggle();
         
         if(filterByToggle.hasClass("toggled")) {
             filterBy.css("width", "70%");
@@ -19,6 +20,7 @@ $(document).ready(function () {
             filterBy.css("width", "auto");
         }
     });
+    
     
     const ANCHOR_NONE  = 0b000;
     const ANCHOR_START = 0b001;
