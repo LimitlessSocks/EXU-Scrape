@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {
+$(document).ready(function () {
     // let filterIsShowing = false;
     for(let [key, value] of Object.entries(Database)) {
         value.id = key;
@@ -19,6 +19,7 @@ window.addEventListener("load", function () {
             filterBy.css("width", "auto");
         }
     });
+    
     const ANCHOR_NONE  = 0b000;
     const ANCHOR_START = 0b001;
     const ANCHOR_END   = 0b010;
