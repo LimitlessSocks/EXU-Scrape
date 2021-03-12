@@ -15,6 +15,12 @@ $(document).ready(() => {
             
             $(card).toggle(name.indexOf(filter) !== -1);
         }
+        
+        if(!filter) {
+            $("#results .expander").toggle(true);
+            $("#results .expander .op").text("show");
+            $("#results .same").toggle(false);
+        }
         // update numbers
         for(let h2 of $("#results h2")) {
             h2 = $(h2);
@@ -105,6 +111,9 @@ let onLoad = async function () {
                 else if(card.exu_limit != card.tcg_limit) {
                     el.addClass("different");
                 }
+                else if(!card.custom) {
+                    el.addClass("same");
+                }
                 el.addClass("clickable");
                 el.click(() => {
                     togglePopup();
@@ -130,6 +139,28 @@ let onLoad = async function () {
                     }
                 }),
         });
+        
+        let sameGroup = sub.find(".same");
+        let useExpand = sameGroup.length > 1;
+        if(useExpand) {
+            sameGroup.toggle(false);
+            
+            let expand;
+            expand = $("<div>")
+                .addClass("result")
+                .addClass("small")
+                .addClass("monster")
+                .addClass("synchro")
+                .addClass("clickable")
+                .addClass("expander")
+                .click(() => {
+                    sameGroup.toggle();
+                    let op = expand.find(".op");
+                    op.text(op.text() == "show" ? "hide" : "show");
+                })
+                .append($(`<div><h3 class=result-name><em><u>Toggle Similarities</u></em></h3><em>Click to <span class=op>show</span> all ${sameGroup.length} cards with the same status as in the TCG.</em></div>`).addClass("result-inner"));
+            sub.append(expand);
+        }
         
         let selection = CardViewer.Search.pages.flat();
         let header = $("<h2 class=main>")
