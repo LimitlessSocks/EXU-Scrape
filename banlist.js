@@ -39,6 +39,8 @@ let onLoad = async function () {
     CardViewer.Elements.popup = $("#popup");
     CardViewer.linkRetrain = true;
     
+    // local testing
+    // let response = await fetch("./banlist.json");
     let response = await fetch("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/banlist.json");
     let db = await response.json();
     CardViewer.Database.setInitial(db);
@@ -64,7 +66,7 @@ let onLoad = async function () {
     let tags = ["Forbidden", "Limited", "Semi-Limited", "Unlimited"];
     
     const NewCards = [
-        
+        8825,11067,8462,5632,8865,1496,486,2537,3588,2538,3589,3943,1916,10991,7671,1079,3517,3574,9249,4878,9779,595,3898,11263,7712,2681,4687,11084,7229,11047,6339,1578,10505,6330,11235,1155,8509,11230,8653,1805,3135,9639,8827,988
     ];
     
     const GradeFilters = [
