@@ -279,6 +279,7 @@ const RetrainMap = {
     1961738: 8521,      //True King's Diagram -> Dragonic Diagram
     2021204: 8118,      //Cyber Angel Benzaiten -> Cyber Angel Benten
     1619088: 1602,      //Fishborg Defender -> Fishborg Blaster
+    2078157: 8865,      //Imposing Attraction -> Metaverse
 };
 
 const LINK_ARROWS = {
