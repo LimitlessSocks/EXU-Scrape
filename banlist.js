@@ -82,7 +82,13 @@ let onLoad = async function () {
     const grade = (card) =>
         GradeFilters.findIndex(filter => filter(card));
     
+    let nameExists = {};
     const appendSearchPage = (results, tag) => {
+        results = results.filter((card) => {
+            let exists = nameExists[card.name];
+            nameExists[card.name] = true;
+            return !exists;
+        });
         let sub = $("<div class=results-holder>");
         CardViewer.composeStrategy = CardViewer.composeResultSmall;
         CardViewer.Search.processResults(results);
