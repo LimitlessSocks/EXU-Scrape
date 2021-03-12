@@ -13,11 +13,14 @@ $(document).ready(() => {
                 .textContent
                 .toLowerCase();
             
-            $(card).toggle(name.indexOf(filter) !== -1);
+            let hasName = name.indexOf(filter) !== -1;
+            let hasClass = card.classList.contains(filter);
+            
+            $(card).toggle(hasName || hasClass);
         }
         
+        $("#results .expander").toggle(!filter);
         if(!filter) {
-            $("#results .expander").toggle(true);
             $("#results .expander .op").text("show");
             $("#results .same").toggle(false);
         }
@@ -113,6 +116,9 @@ let onLoad = async function () {
                 }
                 else if(!card.custom) {
                     el.addClass("same");
+                }
+                if(RetrainMap[card.id]) {
+                    el.addClass("retrain");
                 }
                 el.addClass("clickable");
                 el.click(() => {
