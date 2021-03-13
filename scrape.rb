@@ -197,6 +197,11 @@ database = [
     6979146, #T.G. Support
     7545154, #Strannaut Support
     7568710, #Windwitch Support
+    7534403, #Magnet Warrior Support
+    7452180, #Ceremonial Bell Support
+    7531842, #Psychic Support
+    7556770, #Battle Fader Support
+    7595121, #Ugrovs Support
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -405,6 +410,12 @@ database = [
     7503795, #Pitch Black
     7522856, #Abartech
     7432421, #Fiendfyre
+    7565819, #Mind Layer
+    3734721, #Carcharrack
+    5736933, #Armatos Legio
+    4377085, #The Horde
+    7548170, #Psycircuit
+    6848354, #The 9s
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)

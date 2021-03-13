@@ -101,15 +101,6 @@
             "description": "Cyberse Union cards that Fusion Summon themselves into beatsticks among other things."
         },
         {
-            "name": "Akatsuki",
-            "deckIds": [5416935],
-            "cardIds": [],
-            "thumb": "1451728",
-            "author": "Mac",
-            "description": "An archetype of Warrior monsters that focus on changing their battle positions and attacking the opponent, with inspiration taken from the TCG archetype 'Karikuri'.",
-            "tags": ["combo", "synchro", "xyz", "beatdown"]
-        },
-        {
             "name": "Rulers of Name",
             "deckIds": [5187975],
             "cardIds": [],
@@ -1399,6 +1390,60 @@
             "author": "Khreygond",
             "description": "A Ritual OTK Chaos archetype that uses Fusion Monsters to ascend and win.",
             "tags": ["ritual", "otk", "chaos", "light", "dark", "fusion"]
+        },
+        {
+            "name": "Mind Layer",
+            "deckIds": [7565819],
+            "cardIds": [],
+            "thumb": "2204099",
+            "author": "AkeDragon",
+            "description": "A Psychic Xyz archetype that revolves around banishing themselves for different effects, as well as utilizing Rank 3 Psychic Xyz Monsters and their arsenal of Level 3 monsters.",
+            "tags": []
+        },
+        {
+            "name": "Carcharrack",
+            "deckIds": [3734721],
+            "cardIds": [],
+            "thumb": "787248",
+            "author": "Gatr",
+            "description": "A WATER Aqua & Fish archetype revolving around the Carcharrack monsters, an army of shark boats that 'eat anything that moves' by banishing cards face-down - at the cost of not being able to Special Summon monsters from the Extra Deck. Their continuously resetting backrow cards allow them to keep up and eat their way to victory.",
+            "tags": []
+        },
+        {
+            "name": "Armatos Legio",
+            "deckIds": [5736933],
+            "cardIds": [],
+            "thumb": "1574628",
+            "author": "Andraith",
+            "description": "A LIGHT Cyberse archetype focused around being linked, Link Summoning and attacking - and also being Lightning's Deck in the Yu-Gi-Oh! VRAINS anime.",
+            "tags": []
+        },
+        {
+            "name": "The Horde",
+            "deckIds": [4377085],
+            "cardIds": [],
+            "thumb": "1113432",
+            "author": "C.C",
+            "description": "A Zombie Deck about Zombies that really don't want to stay dead, except it doesn't work too well with outside zombie support.",
+            "tags": []
+        },
+        {
+            "name": "Psycircuit",
+            "deckIds": [7548170],
+            "cardIds": [],
+            "thumb": "2196034",
+            "author": "Anon",
+            "description": "Gimmicky LV/RK5 Earth cyberse strat that is based around your your opponent revealing cards from their Extra Deck and specific counters.",
+            "tags": []
+        },
+        {
+            "name": "The 9s",
+            "deckIds": [6848354],
+            "cardIds": [],
+            "thumb": "1972646",
+            "author": "9thV9CT0R",
+            "description": "A combo-based Pendulum archetype featuring DARK Psychic monsters, banish plays and a solid Xyz Monster lineup.",
+            "tags": []
         }
     ]
 }
