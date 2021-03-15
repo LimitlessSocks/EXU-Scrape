@@ -24,6 +24,10 @@ const CardViewer = {
     },
 };
 
+// some constants
+const CATEGORY_RETRAIN = 1;
+const CATEGORY_ALT_ART = 2;
+
 CardViewer.SaveData.init = () => {
     let localItem = localStorage.getItem(CardViewer.SaveData.KEY);
     

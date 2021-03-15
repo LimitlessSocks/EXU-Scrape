@@ -181,14 +181,14 @@ let onLoad = async function () {
         return sub;
     };
     
-    let results = CardViewer.filter({ category: 1, });
+    let results = CardViewer.filter({ category: CATEGORY_RETRAIN, });
     appendSearchPage(results, "Retrained");
     
     let i = 0;
     let handleStep = () => {
         let limit = i.toString();
         let filter = { limit: limit, notImported: false };
-        let exclude = { category: 1 };
+        let exclude = { category: CATEGORY_RETRAIN };
         let results = CardViewer.filter(filter, exclude);
         
         if(i !== 3) {
