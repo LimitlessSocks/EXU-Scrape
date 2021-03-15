@@ -588,6 +588,7 @@ CardViewer.Filters.getFilter = (key) =>
     CardViewer.Filters.Dictionary[key] || CardViewer.Filters.Dictionary.any;
 
 CardViewer.showImported = false;
+
 CardViewer.query = function () {
     let baseStats = {
         name:         CardViewer.Elements.cardName.val(),
@@ -619,6 +620,27 @@ CardViewer.query = function () {
         baseStats.levelCompare = CardViewer.Elements.cardLevelCompare.val();
         baseStats.atkCompare = CardViewer.Elements.cardATKCompare.val();
         baseStats.defCompare = CardViewer.Elements.cardDEFCompare.val();
+        baseStats.exactArrows = false;
+        baseStats.arrowMask = null;
+        
+        // arrows
+        if(baseStats.monsterCategory === "link") {
+            let mask = 0;
+            let i = 0;
+            for(let el of $(".arrow-button")) {
+                if(el.classList.contains("toggled")) {
+                    if(el.id === "equals") {
+                        baseStats.exactArrows = true;
+                    }
+                    else {
+                        mask |= flatArrow[i];
+                    }
+                }
+                i++;
+            }
+            mask = mask.toString(2).padStart(8, "0");
+            baseStats.arrowMask = mask;
+        }
     }
     return baseStats;
 };
@@ -829,6 +851,16 @@ CardViewer.createFilter = function (query, exclude = null) {
         filters.push(CardViewer.Filters.getFilter(query.monsterAbility));
     }
     
+    if(query.arrowMask) {
+        let nArrowMask = parseInt(query.arrowMask, 2);
+        filters.push(
+            query.exactArrows
+                ? CardViewer.exactComparator(query.arrowMask, _F.propda("arrows"))
+                : (card) => (parseInt(card.arrows, 2) & nArrowMask) === nArrowMask
+        );
+        // console.log(query.arrowMask, query.exactArrows);
+    }
+    
     if(query.level) {
         let level = parseInt(query.level, 10);
         if(!Number.isNaN(level)) {
@@ -924,7 +956,8 @@ let arrowIterateOrder = [
     [0b00000001, 0b00000000, 0b00010000],
     // bottom row
     [0b00000010, 0b00000100, 0b00001000]
-]
+];
+let flatArrow = arrowIterateOrder.flat();
 const getLinkArrowText = (arrows) => {
     let integer = parseInt(arrows, 2);
     let result = "";
@@ -1272,6 +1305,16 @@ CardViewer.setUpTabSearchSwitching = function () {
             CardViewer.Editor.recalculateView();
         }
     });
+    CardViewer.Elements.cardMonsterCategory.change(function () {
+        let val = CardViewer.Elements.cardMonsterCategory.val();
+        if(val === "link") {
+            CardViewer.Elements.ifLink.toggle(true);
+        }
+        else {
+            CardViewer.Elements.ifLink.toggle(false);
+        }
+    });
+    CardViewer.Elements.cardMonsterCategory.change();
     CardViewer.Elements.cardType.change();
 };
 
@@ -1301,6 +1344,12 @@ CardViewer.setUpFilterByToggle = function (filterByToggle, filterBy, inner) {
         else {
             filterBy.css("width", "auto");
         }
+    });
+};
+
+CardViewer.setUpArrowToggle = function () {
+    $(".arrow-button").click(function () {
+        $(this).toggleClass("toggled");
     });
 };
 

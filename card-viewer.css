@@ -498,6 +498,18 @@ select.thin {
 }
 */
 
+.arrow-button {
+    width: 2.5em;
+    height: 2.5em;
+}
+.arrow-button.toggled {
+    background: #7e327e;
+}
+
+#conditionalStats {
+    float: left;
+}
+
 #filterBy input[type="text"] {
     /* width: calc(100% - 35px - 20px - 15px); */
     /* height: 25px; */

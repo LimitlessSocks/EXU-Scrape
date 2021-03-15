@@ -22,11 +22,12 @@ let onLoad = async function () {
     CardViewer.Elements.previousPage = $("#previousPage");
     CardViewer.Elements.resultNote = $("#resultNote");
     CardViewer.Elements.cardId = $("#cardId");
-    CardViewer.Elements.cardCategory= $("#cardCategory");
+    CardViewer.Elements.cardCategory = $("#cardCategory");
     CardViewer.Elements.cardVisibility = $("#cardVisibility");
     CardViewer.Elements.ifMonster = $(".ifMonster");
     CardViewer.Elements.ifSpell = $(".ifSpell");
     CardViewer.Elements.ifTrap = $(".ifTrap");
+    CardViewer.Elements.ifLink = $(".ifLink");
     CardViewer.Elements.cardSpellKind = $("#cardSpellKind");
     CardViewer.Elements.cardTrapKind = $("#cardTrapKind");
     CardViewer.Elements.monsterStats = $("#monsterStats");
@@ -121,16 +122,37 @@ let onLoad = async function () {
             );
             let [ key, value ] = pair.split(/=(.+)?/);
             let el = KeyToElement[key];
-            if(!el && key === "kind") {
-                if(type === "spell") {
-                    el = CardViewer.Elements.cardSpellKind
+            if(!el) {
+                if(key === "kind") {
+                    if(type === "spell") {
+                        el = CardViewer.Elements.cardSpellKind
+                    }
+                    else {
+                        el = CardViewer.Elements.cardTrapKind;
+                    }
                 }
-                else {
-                    el = CardViewer.Elements.cardTrapKind;
+                else if(key === "arrowMask") {
+                    let buttons = $(".arrow-button");
+                    let mask = parseInt(value, 2);
+                    
+                    for(let i = 0; i < flatArrow.length; i++) {
+                        let subMask = flatArrow[i];
+                        // console.log(subMask, i, flatArrow[i], mask);
+                        if(subMask && (mask & subMask) === subMask) {
+                            $(buttons[i]).toggleClass("toggled");
+                        }
+                    }
+                    continue;
                 }
-            }
-            else if(!el && (key === "group" || key === "alsoImported")) {
-                continue;
+                else if(key === "exactArrows") {
+                    if(value === "true") {
+                        $("#equals").toggleClass("toggled");
+                    }
+                    continue;
+                }
+                else if(key === "group" || key === "alsoImported") {
+                    continue;
+                }
             }
             value = parseStringValue(value);
             if(el.is("[type='checkbox']")) {
@@ -151,6 +173,7 @@ let onLoad = async function () {
     CardViewer.Elements.autoSearch.change();
     
     CardViewer.setUpTabSearchSwitching();
+    CardViewer.setUpArrowToggle();
     
     const elementChanged = function () {
         if(CardViewer.autoSearch) {
@@ -158,7 +181,7 @@ let onLoad = async function () {
         }
     };
     
-    let allInputs = CardViewer.Elements.searchParameters.find("select, input");
+    let allInputs = CardViewer.Elements.searchParameters.find("select, input, #linkTable button");
     for(let el of allInputs) {
         $(el).change(elementChanged);
         $(el).keypress((event) => {
@@ -166,6 +189,9 @@ let onLoad = async function () {
                 CardViewer.submit();
             }
         });
+        if(el.tagName === "BUTTON") {
+            $(el).click(elementChanged);
+        }
     }
     CardViewer.Elements.clearSearch.click(() => {
         for(let el of allInputs) {
