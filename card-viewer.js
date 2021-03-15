@@ -901,6 +901,7 @@ const BANLIST_ICONS = {
     imported: getIcon("banlist-import"),
     notImported: getIcon("banlist-no-import"),
     ocg: getIcon("ocg"),
+    altArt: getIcon("alt-art"),
 };
 
 let arrowIterateOrder = [
@@ -1048,6 +1049,9 @@ CardViewer.composeResultSmall = function (card) {
         importMarker.addClass("wide");
         importMarker.attr("src", BANLIST_ICONS.ocg);
     }
+    else if(card.alt_art) {
+        importMarker.attr("src", BANLIST_ICONS.altArt);
+    }
     
     if(card.exu_limit !== 3) {
         banMarker.attr("src", BANLIST_ICONS[card.exu_limit]);
@@ -1185,6 +1189,9 @@ CardViewer.composeResult = function (card) {
     }
     else if(card.exu_import) {
         importMarker.attr("src", BANLIST_ICONS.imported);
+    }
+    else if(card.alt_art) {
+        importMarker.attr("src", BANLIST_ICONS.altArt);
     }
     
     if(card.exu_limit !== 3) {

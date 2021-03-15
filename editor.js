@@ -1,4 +1,5 @@
 let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
+baseURL = "./";
 window.ycgDatabase = baseURL + "ycg.json";
 window.exuDatabase = baseURL + "db.json";
 

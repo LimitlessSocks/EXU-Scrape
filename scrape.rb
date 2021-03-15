@@ -438,6 +438,8 @@ database = [
     7193016, #Generic Traps III
     6353457, #Assorted TCG Single Support
     6353465, #Staples
+] + [
+    6532506, #Alt Arts I
 ]
 
 banlist = [
@@ -451,10 +453,6 @@ banlist = [
     5857248,                    #Limited
     5857281,                    #Semi-Limited
     5857285,                    #Unlimited
-]
-
-alt_arts = [
-    6532506, #1.0
 ]
 
 test = [
@@ -489,6 +487,7 @@ EXU_UNLIMITED   = { "exu_limit" => 3 }
 EXU_RETRAIN     = { "exu_limit" => 3, "exu_retrain" => true }
 EXU_IMPORT      = { "exu_limit" => 3, "exu_import" => true }
 EXU_NO_IMPORT   = { "exu_limit" => 0, "exu_ban_import" => true }
+EXU_ALT_ART     = { "alt_art" => true }
 extra_info = {
     5895579 => EXU_RETRAIN,
     
@@ -506,9 +505,11 @@ extra_info = {
     # 7260456 => EXU_IMPORT,
     # 6751103 => EXU_IMPORT,
     
-    6358715 => EXU_NO_IMPORT
+    6358715 => EXU_NO_IMPORT,
+    
+    6532506 => EXU_ALT_ART,
 }
-extra_info_order = extra_info.keys.sort_by { |key| banlist.index key }
+extra_info_order = extra_info.keys.sort_by { |key| banlist.index(key) or -1 }
 
 decks = nil
 outname = nil
