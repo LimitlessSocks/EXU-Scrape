@@ -239,7 +239,7 @@ database = [
     5642481, #Daemon Engine
     # 4395391, #Trapod
     5549562, #Travelsha
-    5717718, #Pixel Monsters
+    # 5717718, #Pixel Monsters
     5109480, #Kyudo
     # 4337568, #Dreadator
     5601607, #Chaos Performer

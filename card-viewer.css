@@ -6,6 +6,7 @@ html {
     background-attachment: fixed;
     background-size: cover;
     background-color: black;
+    background-position: center;
     color: white;
     font-family: "Poppins", "Gadugi", sans-serif;
 }
@@ -292,8 +293,12 @@ a, a:visited {
     justify-content: center;
     margin-top: 50px;
     flex-wrap: wrap;
-    width: 70%;
-    margin-left: 15%;
+}
+@media (min-width: 1503px) {
+    #page-link-container {        
+        width: 70%;
+        margin-left: 15%;
+    }
 }
 .page-link {
     width: 300px;
