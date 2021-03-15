@@ -592,7 +592,7 @@ CardViewer.query = function () {
         limit:        CardViewer.Elements.cardLimit.val(),
         id:           CardViewer.Elements.cardId.val(),
         author:       CardViewer.Elements.cardAuthor.val(),
-        retrain:      CardViewer.Elements.cardIsRetrain.is(":checked"),
+        category:     CardViewer.Elements.cardCategory.val(),
         visibility:   CardViewer.Elements.cardVisibility.val(),
         imported:     false,
         notImported:  false,
@@ -768,8 +768,17 @@ CardViewer.createFilter = function (query, exclude = null) {
         CardViewer.textComparator(query.author, _F.propda("username")),
         // limit filter
         CardViewer.textAnyComparator(query.limit, _F.propda("exu_limit")),
-        // retrain filter
-        CardViewer.boolExclusiveComparator(query.retrain, _F.propda("exu_retrain")),
+        // category filter
+        (card) =>
+            query.category === "any" || !query.category
+                ? true
+                : query.category == 1
+                    ? card.exu_retrain
+                    : query.category == 2
+                        ? card.alt_art
+                        : true,
+        // // retrain filter
+        // CardViewer.boolExclusiveComparator(query.retrain, _F.propda("exu_retrain")),
         // visibility filter
         // CardViewer.textAnyComparator(query.visibility, _F.propda("custom")),
         (card) =>

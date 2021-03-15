@@ -22,7 +22,7 @@ let onLoad = async function () {
     CardViewer.Elements.previousPage = $("#previousPage");
     CardViewer.Elements.resultNote = $("#resultNote");
     CardViewer.Elements.cardId = $("#cardId");
-    CardViewer.Elements.cardIsRetrain = $("#cardIsRetrain");
+    CardViewer.Elements.cardCategory= $("#cardCategory");
     CardViewer.Elements.cardVisibility = $("#cardVisibility");
     CardViewer.Elements.ifMonster = $(".ifMonster");
     CardViewer.Elements.ifSpell = $(".ifSpell");
@@ -80,7 +80,8 @@ let onLoad = async function () {
         limit:              CardViewer.Elements.cardLimit,
         id:                 CardViewer.Elements.cardId,
         author:             CardViewer.Elements.cardAuthor,
-        retrain:            CardViewer.Elements.cardIsRetrain,
+        // retrain:         CardViewer.Elements.cardIsRetrain,
+        category:           CardViewer.Elements.cardCategory,
         visibility:         CardViewer.Elements.cardVisibility,
         monsterType:        CardViewer.Elements.cardMonsterType,
         monsterAttribute:   CardViewer.Elements.cardMonsterAttribute,
