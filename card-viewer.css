@@ -74,7 +74,7 @@ p {
 }
 
 /* initially off */
-.ifMonster, .ifSpell, .ifTrap {
+.ifMonster, .ifSpell, .ifTrap, .ifLink {
     display: none;
 }
 

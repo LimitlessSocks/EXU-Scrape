@@ -413,7 +413,7 @@ database = [
     7565819, #Mind Layer
     3734721, #Carcharrack
     5736933, #Armatos Legio
-    4377085, #The Horde
+    # 4377085, #The Horde
     7548170, #Psycircuit
     6848354, #The 9s
     
