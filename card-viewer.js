@@ -1353,6 +1353,43 @@ CardViewer.setUpArrowToggle = function () {
     });
 };
 
+CardViewer.elementChanged = function () {
+    if(CardViewer.autoSearch) {
+        CardViewer.submit();
+    }
+};
+
+CardViewer.setUpAllInputs = function () {
+    let allInputs = CardViewer.Elements.searchParameters.find("select, input, #linkTable button");
+    for(let el of allInputs) {
+        $(el).change(CardViewer.elementChanged);
+        $(el).keypress((event) => {
+            if(event.originalEvent.code === "Enter") {
+                CardViewer.submit();
+            }
+        });
+        if(el.tagName === "BUTTON") {
+            $(el).click(CardViewer.elementChanged);
+        }
+    }
+    CardViewer.Elements.clearSearch.click(() => {
+        for(let el of allInputs) {
+            el = $(el);
+            if(el.is("select")) {
+                el.val(el.children().first().val());
+            }
+            else if(el.is("input[type=checkbox]")) {
+                el.prop("checked", false);
+            }
+            else {
+                el.val("");
+            }
+        }
+        CardViewer.elementChanged();
+        CardViewer.Elements.cardType.change();
+    });
+    return allInputs;
+};
 CardViewer.firstTime = true;
 CardViewer.submit = function () {
     let query;

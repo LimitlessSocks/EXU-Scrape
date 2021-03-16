@@ -17,6 +17,10 @@ input[type=number] {
 #majorContainer {
 }
 
+#mainStats {
+    float: left;
+}
+
 #results, #infoContainer {
     overflow-y: auto;
 }

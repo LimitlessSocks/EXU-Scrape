@@ -1,5 +1,5 @@
 let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
-baseURL = "./";
+// baseURL = "./";
 window.ycgDatabase = baseURL + "ycg.json";
 window.exuDatabase = baseURL + "db.json";
 
@@ -33,6 +33,7 @@ let onLoad = async function () {
     CardViewer.Elements.ifMonster = $(".ifMonster");
     CardViewer.Elements.ifSpell = $(".ifSpell");
     CardViewer.Elements.ifTrap = $(".ifTrap");
+    CardViewer.Elements.ifLink = $(".ifLink");
     CardViewer.Elements.cardSpellKind = $("#cardSpellKind");
     CardViewer.Elements.cardTrapKind = $("#cardTrapKind");
     CardViewer.Elements.monsterStats = $("#monsterStats");
@@ -56,6 +57,7 @@ let onLoad = async function () {
     CardViewer.Elements.cardPreview = $("#cardPreview");
     
     CardViewer.setUpTabSearchSwitching();
+    CardViewer.setUpArrowToggle();
     
     await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
     
@@ -88,39 +90,8 @@ let onLoad = async function () {
         return el;
     };
     
-    const elementChanged = function () {
-        if(CardViewer.autoSearch) {
-            CardViewer.submit();
-        }
-    };
-    
-    let allInputs = CardViewer.Elements.searchParameters.find("select, input");
-    for(let el of allInputs) {
-        $(el).change(elementChanged);
-        $(el).keypress((event) => {
-            if(event.originalEvent.code === "Enter") {
-                CardViewer.submit();
-                // alert("submitting");
-            }
-        });
-    }
-    CardViewer.Elements.clearSearch.click(() => {
-        for(let el of allInputs) {
-            el = $(el);
-            if(el.is("select")) {
-                el.val(el.children().first().val());
-            }
-            else if(el.is("input[type=checkbox]")) {
-                el.prop("checked", false);
-            }
-            else {
-                el.val("");
-            }
-        }
-        elementChanged();
-        CardViewer.Elements.cardType.change();
-    });
-    elementChanged();
+    let allInputs = CardViewer.setUpAllInputs();
+    CardViewer.elementChanged();
     
     // testDeck();
     

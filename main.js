@@ -175,40 +175,7 @@ let onLoad = async function () {
     CardViewer.setUpTabSearchSwitching();
     CardViewer.setUpArrowToggle();
     
-    const elementChanged = function () {
-        if(CardViewer.autoSearch) {
-            CardViewer.submit();
-        }
-    };
-    
-    let allInputs = CardViewer.Elements.searchParameters.find("select, input, #linkTable button");
-    for(let el of allInputs) {
-        $(el).change(elementChanged);
-        $(el).keypress((event) => {
-            if(event.originalEvent.code === "Enter") {
-                CardViewer.submit();
-            }
-        });
-        if(el.tagName === "BUTTON") {
-            $(el).click(elementChanged);
-        }
-    }
-    CardViewer.Elements.clearSearch.click(() => {
-        for(let el of allInputs) {
-            el = $(el);
-            if(el.is("select")) {
-                el.val(el.children().first().val());
-            }
-            else if(el.is("input[type=checkbox]")) {
-                el.prop("checked", false);
-            }
-            else {
-                el.val("");
-            }
-        }
-        elementChanged();
-        CardViewer.Elements.cardType.change();
-    });
+    let allInputs = CardViewer.setUpAllInputs();
     
     // check if any input data
     for(let el of allInputs) {
