@@ -1387,6 +1387,7 @@ CardViewer.setUpAllInputs = function () {
         }
         CardViewer.elementChanged();
         CardViewer.Elements.cardType.change();
+        CardViewer.Elements.cardMonsterCategory.change();
     });
     return allInputs;
 };
