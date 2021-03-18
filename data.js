@@ -605,9 +605,13 @@ const filterHTML = `
                     <option value=2>Private</option>
                 </select>
             </td>
-            <td><label for="cardIsRetrain">Retrain?</label></td>
+            <td><label for="cardCategory">Card Category:</label></td>
             <td>
-                <input id="cardIsRetrain" type="checkbox">
+                <select id="cardCategory">
+                    <option value=any></option>
+                    <option value=1>Retrain</option>
+                    <option value=2>Alt Art</option>
+                </select>
             </td>
         </tr>
     </table>
@@ -767,6 +771,28 @@ const filterHTML = `
             </tr>
         </tbody>
     </table>
+    <table id="linkTable">
+        <tbody class="ifLink">
+            <tr>
+                <th colspan=3>Link Arrows</th>
+            </tr>
+            <tr>
+                <td><button class="arrow-button">↖</button></td>
+                <td><button class="arrow-button">↑</button></td>
+                <td><button class="arrow-button">↗</button></td>
+            </tr>
+            <tr>
+                <td><button class="arrow-button">←</button></td>
+                <td><button class="arrow-button" id="equals">=</button></td>
+                <td><button class="arrow-button">→</button></td>
+            </tr>
+            <tr>
+                <td><button class="arrow-button">↙</button></td>
+                <td><button class="arrow-button">↓</button></td>
+                <td><button class="arrow-button">↘</button></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 `;
     
@@ -868,6 +894,8 @@ window.addEventListener("load", async function () {
             CardViewer.Elements.ifMonster = innerFn.find(".ifMonster");
             CardViewer.Elements.ifSpell = innerFn.find(".ifSpell");
             CardViewer.Elements.ifTrap = innerFn.find(".ifTrap");
+            CardViewer.Elements.ifLink = innerFn.find(".ifLink");
+            CardViewer.Elements.cardCategory = innerFn.find("#cardCategory");
             CardViewer.Elements.monsterStats = innerFn.find("#monsterStats");
             CardViewer.Elements.spellStats = innerFn.find("#spellStats");
             CardViewer.Elements.trapStats = innerFn.find("#trapStats");
@@ -876,7 +904,7 @@ window.addEventListener("load", async function () {
             CardViewer.Elements.cardLimit = innerFn.find("#cardLimit");
             CardViewer.Elements.cardId = innerFn.find("#cardId");
             CardViewer.Elements.cardAuthor = innerFn.find("#cardAuthor");
-            CardViewer.Elements.cardIsRetrain = innerFn.find("#cardIsRetrain");
+            // CardViewer.Elements.cardIsRetrain = innerFn.find("#cardIsRetrain");
             CardViewer.Elements.cardVisibility = innerFn.find("#cardVisibility");
             CardViewer.Elements.cardSpellKind = innerFn.find("#cardSpellKind");
             CardViewer.Elements.cardTrapKind = innerFn.find("#cardTrapKind");
