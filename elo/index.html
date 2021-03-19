@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q3RKXFLZRZ');
+    </script>
+    <title>EXU Elo Calculator</title>
+    <meta charset="UTF-8">
+    <link rel="STYLESHEET" href="./../card-viewer.css">
+    <link rel="STYLESHEET" href="./elo.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3RKXFLZRZ"></script>
+    <script src="./elo.js"></script>
+    <script src="./main.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <h1 class="title"><a href="./../">EXU: Extinction Unleashed</a></h1>
+    <table>
+    <tr>
+        <th><label for="roster">Enter current roster:</label></th>
+        <th><label for="changes">Enter record changes:</label></th>
+    </tr>
+    <tr>
+        <td><textarea id="roster" cols=40 rows=8 placeholder="Enter values like 'Username: 1000' on each line"></textarea></td>
+        <td><textarea id="changes" cols=40 rows=8 placeholder="Enter records like 'UserA 2-1 UserB' on each line. Use 1-1 for a tie, and 2-0 for a forfeit win."></textarea></td>
+    </tr>
+    </table>
+    
+    <button id="submit">Submit</button>
+    <div id="results">
+        <div id="notice">Press "Submit".</div>
+        <textarea id="output" cols=40 rows=8 placeholder="Output will go here..."></textarea>
+    </div>
+</body>
+</html>
