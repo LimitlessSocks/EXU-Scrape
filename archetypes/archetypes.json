@@ -46,8 +46,8 @@
             "name": "Harbinger",
             "deckIds": [4570517],
             "cardIds": [],
-            "thumb": "1953527",
-            "author": "Redox",
+            "thumb": "1191872",
+            "author": "OceanPhantom",
             "description": "An aggro OTK Deck that loves to use Equip Cards and deal tons of damage.",
             "tags": ["second", "aggro", "otk", "beatdown", "link", "castle", "equip"]
         },
@@ -224,7 +224,7 @@
             "name": "Tacticore",
             "deckIds": [6236137],
             "cardIds": [],
-            "thumb": "1583661",
+            "thumb": "1582420",
             "author": "Kiyousa Fujin",
             "description": "A Tribute-based strategy that focuses on controlling advantage and disrupting the opponent through a slew of Book of Moon-type effects.",
             "tags": ["control", "link", "grind", "tribute"]
@@ -266,7 +266,7 @@
             "name": "Remnant",
             "deckIds": [5145725],
             "cardIds": [],
-            "thumb": "1383523",
+            "thumb": "1380766",
             "author": "OceanPhantom",
             "description": "A Trap Fusion Deck that uses Normal Monsters and disruptions to close out games.",
             "tags": ["control", "fusion", "grind", "stun", "float"]
@@ -284,7 +284,7 @@
             "name": "Ravager",
             "deckIds": [2788655],
             "cardIds": [],
-            "thumb": "1117371",
+            "thumb": "952159",
             "author": "OceanPhantom",
             "description": "A Synchro based Strategy, able to Summon power control based Synchro monsters or OTK through powerful Insect Synchro Monsters.",
             "tags": ["combo", "aggro", "synchro", "tribute"]
@@ -659,7 +659,7 @@
             "name": "Starter Squad",
             "deckIds": [6772951],
             "cardIds": [],
-            "thumb": "1944080",
+            "thumb": "1944179",
             "author": "Ava",
             "description": "A mid range Deck that doesn't put up too much turn 1 but left alone really punches hard. The Deck's goal is to be able to conquer the board with their Braves, before ending in style by Summoning the Violet Sorceress herself, complete with the ability to bounce a card you control to pop a card during either player's turn.",
             "tags": ["midrange", "beatdown", "rainbow", "engine"]
@@ -745,7 +745,7 @@
             "name": "Nebulline",
             "deckIds": [6849044],
             "cardIds": [],
-            "thumb": "1985258",
+            "thumb": "1943901",
             "author": "AkeDragon",
             "description": "A Beast Deck that focuses on Xyz Summoning and modifying Levels, also featuring a new monster: Shin Chimera, Power.",
             "tags": ["combo", "xyz", "support", "beatdown"]
@@ -1368,7 +1368,7 @@
             "name": "Pitch Black",
             "deckIds": [7503795],
             "cardIds": [],
-            "thumb": "2181817",
+            "thumb": "2181627",
             "author": "Tennoch",
             "description": "A powerful archetype serving as the darker side to the Blue-Eyes White Dragon, utilizing powerful Extra Deck monsters, big bosses, Fusion Summoning and more to ensure victory over the light.",
             "tags": ["fusion", "normal"]
@@ -1419,15 +1419,6 @@
             "tags": []
         },
         {
-            "name": "The Horde",
-            "deckIds": [4377085],
-            "cardIds": [],
-            "thumb": "1113432",
-            "author": "C.C",
-            "description": "A Zombie Deck about Zombies that really don't want to stay dead, except it doesn't work too well with outside zombie support.",
-            "tags": []
-        },
-        {
             "name": "Psycircuit",
             "deckIds": [7548170],
             "cardIds": [],
@@ -1443,6 +1434,60 @@
             "thumb": "1972646",
             "author": "9thV9CT0R",
             "description": "A combo-based Pendulum archetype featuring DARK Psychic monsters, banish plays and a solid Xyz Monster lineup.",
+            "tags": []
+        },
+        {
+            "name": "Abyssal Enforcer",
+            "deckIds": [7594853],
+            "cardIds": [],
+            "thumb": "2084640",
+            "author": "AkeDragon",
+            "description": "A mainly FIRE-based Rock Synchro archetype that loves to battle.",
+            "tags": ["fire", "rock", "synchro", "battle"]
+        },
+        {
+            "name": "Anti-Goo",
+            "deckIds": [7439337],
+            "cardIds": [],
+            "thumb": "2159530",
+            "author": "Lyoko",
+            "description": "A DARK-based archetype that is the opposite of <a href=\"./GooT\">Goo-T</a>, denying Tributing as a result.",
+            "tags": ["dark", "theme"]
+        },
+        {
+            "name": "Tomes",
+            "deckIds": [5841822],
+            "cardIds": [],
+            "thumb": "1601866",
+            "author": "Cryselle",
+            "description": "A Fusion-based archetype that utilizes any monsters with 0 ATK or DEF from the Deck and GY as Fusion Materials for their Fusion Monsters, bringing along with it strong advantage plays, board breaking abilities and disruption going first - with engine potential to boot.",
+            "tags": ["fusion", "first"]
+        },
+        {
+            "name": "Nauticorpse",
+            "deckIds": [7547609],
+            "cardIds": [],
+            "thumb": "2211771",
+            "author": "Kiyousa Fujin",
+            "description": "A Ritual-based archetype consisting of WATER Zombie monsters whose strategy is to quickly bring out the boss monster, \"Nauticorpse, Necrocaptain\", with the use of cards such as \"Nauticorpse, Necroneer\" and \"Nauticorpse Black Spot\". The archetype then proceeds to banish as much of their cards as possible while giving more power to \"Necrocaptain\".",
+            "tags": ["water", "ritual"]
+        },
+        {
+            "name": "Solomons Studies",
+            "deckIds": [7645365],
+            "cardIds": [],
+            "thumb": "2229992",
+            "author": "Sun",
+            "description": "An extremely Spell heavy archetype with a playstyle that changes slightly depending on what Field Spell you have activated.",
+            "tags": ["spell", "field"]
+        },
+        {
+            "name": "Pyrabbit",
+            "deckIds": [7671393],
+            "cardIds": [],
+            "thumb": "2237994",
+            "author": "JustYourAverageJustin",
+            "description": "A compact archetype based on tagging out during the opponent's turn to proc various minor interruptions.",
             "tags": []
         }
     ]

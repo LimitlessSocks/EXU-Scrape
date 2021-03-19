@@ -202,6 +202,15 @@ database = [
     7531842, #Psychic Support
     7556770, #Battle Fader Support
     7595121, #Ugrovs Support
+    7389331, #Charismatic Support
+    7557629, #Thunderclap Support
+    7637725, #Non-Existent Gimmick Support
+    7608828, #Princess Connect! Support
+    7687348, #Mind Layer Support
+    6862415, #PK Support
+    7566464, #Z-ARC Support
+    7664359, #of the Wasteland Support
+    
     
     # Archetypes
     # 4327693, #Lacrimosa
@@ -416,6 +425,12 @@ database = [
     # 4377085, #The Horde
     7548170, #Psycircuit
     6848354, #The 9s
+    7594853, #Abyssal Enforcer
+    7439337, #Anti-Goo
+    5841822, #Tomes
+    7547609, #Nauticorpse
+    7645365, #Solomons Studies
+    7671393, #Pyrabbit
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)

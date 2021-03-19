@@ -105,6 +105,8 @@ input, select, textarea {
     color: white;
     border: 1px solid #eeaaee;
     padding: 3px;
+}
+textarea {
     font-family: "Consolas", monospace;
 }
 
