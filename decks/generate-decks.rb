@@ -8,7 +8,6 @@ $BOILERPLATE = File.read("boilerplate.html")
 def parse_deck!(deck_path)
     xml = File.read(deck_path)
     doc = Nokogiri::XML xml
-    p doc.css("main card").map { |e| e["id"] }
     id = doc.css("deck").first["id"] || File.basename(deck_path, ".xml")
     
     defaults = {
