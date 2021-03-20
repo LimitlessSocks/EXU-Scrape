@@ -347,7 +347,7 @@ class Deck {
                 ).join("") +
             ` </${name}>`
         ).join("\n");
-        return `
+        let xmlString = `
 <?xml version="1.0" encoding="utf-8" ?>
 <deck id="${this.getId()}">
  <meta>
@@ -359,6 +359,10 @@ class Deck {
 ${deckString}
 </deck>
         `.trim();
+        if(!CardViewer.Database.cards[this.thumb].custom) {
+            xmlString = xmlString.replace("<thumb>", "<thumb custom=\"false\">");
+        }
+        return xmlString;
     }
 }
 Deck.Location = {

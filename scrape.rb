@@ -233,7 +233,7 @@ database = [
     5323883, #Digitallias
     5416935, #Akatsuki
     # 5304027, #Pyre
-    5396113, #Terra Basilisk
+    # 5396113, #Terra Basilisk
     # 5490132, #Sunavalon
     5187975, #Rulers of Name
     5541864, #Kuroshiro
