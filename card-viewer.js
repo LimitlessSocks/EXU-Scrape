@@ -165,6 +165,8 @@ const CardsOfTheWeek = [
     1731724, //Artifact Teiws
     1642313, //Rooftop Inu
     1551870, //Exquisite Knowledge
+    1638767, //Abyss Insurgent
+    1599951, //Spawn of Exile
 ];
 
 const OTKTools = [
