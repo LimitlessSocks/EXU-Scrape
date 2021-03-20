@@ -8,6 +8,7 @@ $BOILERPLATE = File.read("boilerplate.html")
 def parse_deck!(deck_path)
     xml = File.read(deck_path)
     doc = Nokogiri::XML xml
+    p doc.css("main card").map { |e| e["id"] }
     id = doc.css("deck").first["id"] || File.basename(deck_path, ".xml")
     
     defaults = {
@@ -19,15 +20,15 @@ def parse_deck!(deck_path)
     
     ds = Deck.new
     ds.id = id
-    ds.main = ids_of(doc.css("main card")),
-    ds.side = ids_of(doc.css("side card")),
-    ds.extra = ids_of(doc.css("extra card")),
+    ds.main = ids_of(doc.css("main card"))
+    ds.side = ids_of(doc.css("side card"))
+    ds.extra = ids_of(doc.css("extra card"))
     %w(author name description thumb).map { |name|
         value = doc.css("meta #{name}").children.to_html.strip
         value = defaults[name] if value.empty?
         ds[name] = value
     }
-    ds.thumb_custom = (doc.css("meta thumb")[0]["custom"] != "false" rescue false),
+    ds.thumb_custom = (doc.css("meta thumb")[0]["custom"] != "false" rescue false)
     ds.deck_path = deck_path
     
     File.write("#{id}.html", ds.to_html)
