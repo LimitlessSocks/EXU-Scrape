@@ -459,7 +459,7 @@
         },
         {
             "name": "Thunderclap",
-            "deckIds": [5297494],
+            "deckIds": [5297494, 7557629],
             "cardIds": [],
             "thumb": "1265862",
             "author": "Sock",
@@ -585,7 +585,7 @@
         },
         {
             "name": "Charismatic",
-            "deckIds": [6560628],
+            "deckIds": [6560628, 7389331],
             "cardIds": [],
             "thumb": "1558753",
             "author": "Sock",
@@ -682,7 +682,7 @@
         },
         {
             "name": "Princess Connect!",
-            "deckIds": [6834530],
+            "deckIds": [6834530, 7608828],
             "cardIds": [],
             "thumb": "590022",
             "author": "TalosMistake",
@@ -1285,7 +1285,7 @@
         },
         {
             "name": "Ugrovs",
-            "deckIds": [5010437],
+            "deckIds": [5010437, 7595121],
             "cardIds": [],
             "thumb": "1344429",
             "author": "Gatr",
@@ -1393,7 +1393,7 @@
         },
         {
             "name": "Mind Layer",
-            "deckIds": [7565819],
+            "deckIds": [7565819, 7687348],
             "cardIds": [],
             "thumb": "2204099",
             "author": "AkeDragon",
