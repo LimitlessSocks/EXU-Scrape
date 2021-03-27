@@ -59,12 +59,30 @@ $(document).ready(function () {
             filter = filter.slice(0, -1);
         }
         
-        let words = filter
-            .split(/\s+/)
+        let words = [];
+        let inString = false;
+        let buildWord = "";
+        for(let ch of filter) {
+            if(ch == '"') inString = !inString;
+            else if(ch.match(/\s/) && !inString) {
+                if(buildWord) {
+                    words.push(buildWord);
+                    buildWord = "";
+                }
+                continue;
+            }
+            buildWord += ch;
+        }
+        if(buildWord) {
+            words.push(buildWord);
+        }
+        // console.log(words);
+        words = words
             .map(e => {
                 let res = {
                     value: e,
                     exact: false,
+                    split: true,
                     field: null,
                 };
                 
@@ -78,11 +96,12 @@ $(document).ready(function () {
                 
                 let quoteBounded = res.value.startsWith('"') && res.value.endsWith('"');
                 
-                if(quoteBounded && e.length >= 2) {
+                if(quoteBounded && res.value.length >= 2) {
                     res.value = res.value.slice(1, -1);
                     if(!hasField) {
                         res.exact = true;
                     }
+                    res.split = false;
                 }
                 res.value = res.value.replace(/["']/g, "");
                 return res;
@@ -96,12 +115,13 @@ $(document).ready(function () {
                     value: o1.value + " " + o2.value,
                     exact: false,
                     field: o1.field,
+                    split: o1.split,
                 }));
                 words = [ words ];
                 window.wordTest = words;
                 // console.log(words);
             }
-            let isSearch = words.every(({ value, exact, field }, i) => {
+            let isSearch = words.every(({ value, exact, field, split }, i) => {
                 let range;
                 if(anchor || field == "name") {
                     range = entry.name;
@@ -120,8 +140,8 @@ $(document).ready(function () {
                 // console.log(field, range, value);
                 
                 range = range.toLowerCase();
-                
-                if(exact) {
+                // console.log(split);
+                if(split) {
                     range = range.split(/\s+/);
                 }
                 
@@ -136,6 +156,7 @@ $(document).ready(function () {
                     return isValid;
                 }
                 else {
+                    // console.log(value, range);
                     return range.indexOf(value) !== -1;
                 }
                 
