@@ -80,7 +80,9 @@ $(document).ready(function () {
                 
                 if(quoteBounded && e.length >= 2) {
                     res.value = res.value.slice(1, -1);
-                    res.exact = true;
+                    if(!hasField) {
+                        res.exact = true;
+                    }
                 }
                 res.value = res.value.replace(/["']/g, "");
                 return res;
