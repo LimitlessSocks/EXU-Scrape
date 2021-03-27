@@ -308,7 +308,7 @@ database = [
     7318790, #Mythical Winged Beasts
     # 6309748, #Kuuroma Support
     6446977, #Tagteamer
-    6434960, #World Reaper
+    # 6434960, #World Reaper
     6256752, #Concept of Reality
     4361777, #Eviction
     6347993, #Headhunter
@@ -351,7 +351,7 @@ database = [
     6807125, #Drakin
     6834530, #Princess Connect!
     5571430, #Plushmages
-    5269100, #Orb Magician
+    # 5269100, #Orb Magician
     6616619, #Queltz
     6785434, #Moira
     7428956, #Hellvil

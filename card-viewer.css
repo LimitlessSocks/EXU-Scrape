@@ -457,19 +457,27 @@ select.thin {
 
 /*filterby*/
 
-#filterBy {
-    position: fixed;
+.square-button {
     background: rgba(100,100,130,0.8);
+    display: flex;
+    transition: width 1s linear;
+    position: fixed;
     padding: 10px;
     border-radius: 15px;
+    z-index: 15;
+}
+
+#filterBy {
     bottom: 20px;
     left: 20px;
     /* width: 70%; */
-    display: flex;
-    transition: width 1s linear;
     /* justify-content: space-between; */
-    z-index: 15;
 }
+#randomArchetype {
+    bottom: 20px;
+    left: 105px;
+}
+
 .toggleIcon {
     display: inline-block;
     padding: 10px;

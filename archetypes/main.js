@@ -7,7 +7,16 @@ $(document).ready(function () {
     let filterByToggle = $("#filterByToggle");
     let filterBy = $("#filterBy");
     let inner = $("#filterByInner");
+    let randomArchetype = $("#randomArchetype");
+    let randomArchetypeButton = $("#randomArchetypeButton");
     // CardViewer.setUpFilterByToggle(filterByToggle, filterBy, inner);
+    let resizeCalc = () => {
+        let left = filterBy.position().left;
+        let width = filterBy.width();
+        randomArchetype.css("left", 50 + width + "px");
+    };
+    resizeCalc();
+    $(window).resize(resizeCalc);
     inner.val("");
     filterByToggle.click(() => {
         filterByToggle.toggleClass("toggled");
@@ -19,6 +28,17 @@ $(document).ready(function () {
         else {
             filterBy.css("width", "auto");
         }
+        resizeCalc();
+    });
+    const archNames = [...$("#listing .deck-link")].map(e => e.textContent);
+    randomArchetypeButton.click(() => {
+        let r = archNames[Math.random() * archNames.length | 0];
+        if(!filterByToggle.hasClass("toggled")) {
+            filterByToggle.click();
+        }
+        setTimeout(resizeCalc, 0);
+        inner.val('name:"' + r + '"');
+        onInput.bind(inner[0])();
     });
     
     
@@ -44,9 +64,21 @@ $(document).ready(function () {
             .map(e => {
                 let res = {
                     value: e,
-                    exact: false
+                    exact: false,
+                    field: null,
                 };
-                if(e.startsWith('"') && e.endsWith('"') && e.length >= 2) {
+                
+                let hasField = e.match(/(\w+)([:=])/);
+                
+                if(hasField) {
+                    res.field = hasField[1];
+                    res.value = res.value.slice(hasField[0].length);
+                    res.exact = hasField[2] == "=";
+                }
+                
+                let quoteBounded = res.value.startsWith('"') && res.value.endsWith('"');
+                
+                if(quoteBounded && e.length >= 2) {
                     res.value = res.value.slice(1, -1);
                     res.exact = true;
                 }
@@ -61,16 +93,19 @@ $(document).ready(function () {
                 words = words.reduce((o1, o2) => ({
                     value: o1.value + " " + o2.value,
                     exact: false,
+                    field: o1.field,
                 }));
                 words = [ words ];
                 window.wordTest = words;
                 // console.log(words);
             }
-            let isSearch = words.every(({ value, exact }, i) => {
+            let isSearch = words.every(({ value, exact, field }, i) => {
                 let range;
-                
-                if(anchor) {
+                if(anchor || field == "name") {
                     range = entry.name;
+                }
+                else if(entry[field]) {
+                    range = entry[field];
                 }
                 else {
                     range = [
@@ -80,6 +115,7 @@ $(document).ready(function () {
                     ].join(" ");
                     // range = entry.name + " " + entry.author;
                 }
+                // console.log(field, range, value);
                 
                 range = range.toLowerCase();
                 

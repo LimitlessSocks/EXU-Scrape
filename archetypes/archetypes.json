@@ -159,15 +159,6 @@
             "tags": ["ritual", "control", "grind", "gy", "float"]
         },
         {
-            "name": "Pixel Monsters",
-            "deckIds": [5717718],
-            "cardIds": [],
-            "thumb": "1567293",
-            "author": "james111",
-            "description": "An archetype of vanilla monsters that go into different Fusion Monsters to win the game.",
-            "tags": ["fusion", "normal", "theme"]
-        },
-        {
             "name": "Kyudo",
             "deckIds": [5109480],
             "cardIds": [],
@@ -1369,7 +1360,7 @@
             "deckIds": [7503795],
             "cardIds": [],
             "thumb": "2181627",
-            "author": "Tennoch",
+            "author": "Black Hat",
             "description": "A powerful archetype serving as the darker side to the Blue-Eyes White Dragon, utilizing powerful Extra Deck monsters, big bosses, Fusion Summoning and more to ensure victory over the light.",
             "tags": ["fusion", "normal"]
         },
