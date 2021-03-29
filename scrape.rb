@@ -210,8 +210,15 @@ database = [
     6862415, #PK Support
     7566464, #Z-ARC Support
     7664359, #of the Wasteland Support
+    6226330, #Acrimonic Support
+    7679392, #Toon, Fire King & Windwitch Support
+    7647679, #Black Blood Support
+    6845360, #Starter Squad
+    7742679, #Fog+Beast
+    7659844, #Relinquished
+    7619657, #Panda Support
     
-    
+    #--------------------------------------------------------------------#
     # Archetypes
     # 4327693, #Lacrimosa
     4367824, #Death Aspects
@@ -266,7 +273,7 @@ database = [
     5145725, #Remnant
     # 5587605, #Hot Pink
     5917260, #Koala
-    2788655, #Ravager
+    # 2788655, #Ravager
     # 5824862, #Titanic Moth
     5925194, #Yurei
     5868144, #Tsurumashi
@@ -354,7 +361,7 @@ database = [
     # 5269100, #Orb Magician
     6616619, #Queltz
     6785434, #Moira
-    7428956, #Hellvil
+    7753448, #Hellvil
     6874481, #Dark Hole
     6895350, #Owlsh
     # 6777854, #Nebulline
@@ -395,7 +402,7 @@ database = [
     7247437, #Intimidraco
     5731990, #Entropy Beast
     7022063, #Fishin'
-    3617894, #O.F.F
+    # 3617894, #O.F.F
     7310491, #Ak*ris
     7464943, #Armored Hunter / Raging Calamity
     # 6526373, #Phylabeast
@@ -431,6 +438,15 @@ database = [
     7547609, #Nauticorpse
     7645365, #Solomons Studies
     7671393, #Pyrabbit
+    # 7685326, #Justice Knight
+    7499095, #Magistrophic
+    7093024, #Khremysis
+    7577360, #Tempo Warrior
+    7586564, #Straw Hat
+    6123628, #Stormrider
+    4587548, #Stage Girl
+    7723773, #Simulacra
+    7678716, #Vuluti
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
@@ -443,6 +459,7 @@ database = [
     6871713, #Generic Monsters VI
     7193018, #Generic Monsters VII
     7552348, #Generic Monsters VIII
+    7753395, #Generic Monsters IX
     6353430, #Generic Spells
     6419184, #Generic Spells II
     6871664, #Generic Spells III
@@ -477,21 +494,6 @@ test = [
 beta = [
     7443406, #BETA SINGLES, NEVER DELETE!
     ###################
-    7516633, #Fire Fist Support
-    7518961, #Anon Prio
-    7519054, #Rivers
-    7531842, #Psychic supp
-    7534065, #Volcanic Supp
-    6848354, #9s
-    7534403, #Magnet warrior
-    7516896, #Awor
-    7544944, #Anon CW
-    7545154, #Strannaut supp
-    7529948, #Highlander supp
-    6979146, #T.G.
-    7503795, #Pitch Black
-    7522856, #Abartech
-    7175502, #Ezurica
 ]
 
 

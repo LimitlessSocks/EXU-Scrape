@@ -27,7 +27,7 @@
         },
         {
             "name": "Panda",
-            "deckIds": [4757288],
+            "deckIds": [4757288, 7619657],
             "cardIds": [8642, 1751935],
             "thumb": "1261407",
             "author": "Sock",
@@ -383,7 +383,7 @@
         },
         {
             "name": "Acrimonic",
-            "deckIds": [6209092],
+            "deckIds": [6209092, 6226330],
             "cardIds": [],
             "thumb": "1753661",
             "author": "Ani",
@@ -426,7 +426,7 @@
         },
         {
             "name": "Black Blood",
-            "deckIds": [6163866],
+            "deckIds": [6163866, 7647679],
             "cardIds": [],
             "thumb": "1469629",
             "author": "Discount Light Yagami",
@@ -648,7 +648,7 @@
         },
         {
             "name": "Starter Squad",
-            "deckIds": [6772951],
+            "deckIds": [6772951, 6845360],
             "cardIds": [],
             "thumb": "1944179",
             "author": "Ava",
@@ -1027,7 +1027,7 @@
         },
         {
             "name": "Hellvil",
-            "deckIds": [7428988, 7428956],
+            "deckIds": [7753448, 7428956],
             "cardIds": [],
             "thumb": "1966229",
             "author": "JDan",
@@ -1479,6 +1479,78 @@
             "thumb": "2234966",
             "author": "JustYourAverageJustin",
             "description": "A compact archetype based on tagging out during the opponent's turn to proc various minor interruptions.",
+            "tags": []
+        },
+        {
+            "name": "Magistrophic",
+            "deckIds": [7499095],
+            "cardIds": [],
+            "thumb": "2178374",
+            "author": "Squid",
+            "description": "A Spellcaster archetype that Xyz Summons Xyz Monsters and uses them to contact fuse into Fusion Monsters. Each card deals with returning cards from the field to the hand while also aiming to Set 2-3 backrow cards and end on at least 1 Fusion Monster who gets certain effects based on the Xyz Monster(s) used for its Summon.",
+            "tags": []
+        },
+        {
+            "name": "Khremysis",
+            "deckIds": [7093024],
+            "cardIds": [],
+            "thumb": "2048316",
+            "author": "Diego",
+            "description": "A Spellcaster archetype that Xyz Summons Xyz Monsters and uses them to contact fuse into Fusion Monsters. Each card deals with returning cards from the field to the hand while also aiming to Set 2-3 backrow cards and end on at least 1 Fusion Monster who gets certain effects based on the Xyz Monster(s) used for its Summon.",
+            "tags": []
+        },
+        {
+            "name": "Tempo Warrior",
+            "deckIds": [7577360],
+            "cardIds": [],
+            "thumb": "2206478",
+            "author": "Knightmare",
+            "description": "A musical of a Synchro and Xyz archetype meant to mimic the idea of tempo. The pace increases during your turn as plays are made and damage is dealt, making the BPM go up, whereas on your opponent's turn, it slows down as you attempt to stop your opponent from playing and getting in for damage, making the BPM go down, with its supporting cards being based on other musical terms.",
+            "tags": []
+        },
+        {
+            "name": "Straw Hat",
+            "deckIds": [7586564],
+            "cardIds": [],
+            "thumb": "2211276",
+            "author": "KozukiOden",
+            "description": "An OTK archetype revolving around characters from the 'One Piece' franchise.",
+            "tags": ["theme", "otk"]
+        },
+        {
+            "name": "Stormrider",
+            "deckIds": [6123628],
+            "cardIds": [],
+            "thumb": "1720800",
+            "author": "Andraith",
+            "description": "A Link-based archetype revolving around the Spell & Trap Zones as well as being Windy's Deck from the Yu-Gi-Oh! VRAINS anime.",
+            "tags": ["link"]
+        },
+        {
+            "name": "Stage Girl",
+            "deckIds": [4587548],
+            "cardIds": [],
+            "thumb": "1189021",
+            "author": "TalosMistake",
+            "description": "A Fusion-based multi-Attribute Warrior archetype that conducts Fusion Summons by returning listed Fusion Materials to the hand.",
+            "tags": ["fusion"]
+        },
+        {
+            "name": "Simulacra",
+            "deckIds": [7723773],
+            "cardIds": [],
+            "thumb": "1189021",
+            "author": "The Awkward One",
+            "description": "A horror-themed archetype that relies on the eldritch creature known as the Simulacrum Core, a fiend that pulls the strings behind the curtain for its own malignant gain. Essentially, it's a control Deck that revolves around the Core and sets up interruptions through its various adaptations to slowly and gradually snowball for supremacy.",
+            "tags": []
+        },
+        {
+            "name": "Vuluti",
+            "deckIds": [7678716],
+            "cardIds": [],
+            "thumb": "2240926",
+            "author": "Sock",
+            "description": "A toolbox-based Link-1 Deck that has semi-disruptive effects while in the Main Monster Zone as well as Main Deck monsters that have Quick Effects in the GY that trigger whenever they're targeted.",
             "tags": []
         }
     ]
