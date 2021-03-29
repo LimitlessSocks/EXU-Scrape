@@ -1,4 +1,6 @@
 const Elo = (function() {
+    let eloRound = (n) => Math.round(n * 2) / 2;
+    
     function getRatingDelta(myRating, opponentRating, myGameResult) {
         if ([0, 0.5, 1].indexOf(myGameResult) === -1) {
             return null;
@@ -6,19 +8,19 @@ const Elo = (function() {
 
         var myChanceToWin = 1 / ( 1 + Math.pow(10, (opponentRating - myRating) / 400));
 
-        return Math.round(32 * (myGameResult - myChanceToWin));
+        return (32 * (myGameResult - myChanceToWin));
     }
 
     function getNewRating(myRating, opponentRating, myGameResult) {
-        return myRating + getRatingDelta(myRating, opponentRating, myGameResult);
+        return eloRound(myRating + getRatingDelta(myRating, opponentRating, myGameResult));
     }
 
     let twoWayCalculation = (a, b, aScore, bScore, mFactor = 1.5) => {
         let mScore = aScore < bScore ? 0 : aScore == bScore ? 0.5 : 1;
         let delta = Elo.getRatingDelta(a, b, mScore);
         if(aScore == 0 || bScore == 0) delta *= mFactor;
-        let aNew = a + delta;
-        let bNew = b - delta;
+        let aNew = eloRound(a + delta);
+        let bNew = eloRound(b - delta);
         return [aNew, bNew];
     };
 
@@ -27,6 +29,7 @@ const Elo = (function() {
         getRatingDelta: getRatingDelta,
         getNewRating: getNewRating,
         twoWayCalculation: twoWayCalculation,
+        eloRound: eloRound,
     };
 })();
 
