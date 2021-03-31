@@ -28,7 +28,8 @@ let onLoad = async function () {
     
     let cards = CardViewer.filter(
         CardViewer.createFilter((card) =>
-            sourceIds.indexOf(card.submission_source) !== -1
+            sourceIds.indexOf(card.submission_source) !== -1 &&
+            excludeIds.indexOf(card.id) === -1
         )
     );
     

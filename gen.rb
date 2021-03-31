@@ -33,7 +33,7 @@ Deck = Struct.new(
     #deck properties
     :main, :side, :extra, :deck_path,
     #archetype properties
-    :deckIds, :cardIds,
+    :deckIds, :cardIds, :excludeIds,
     :deckWidth, :extraRows,
     :tags,
 ) {

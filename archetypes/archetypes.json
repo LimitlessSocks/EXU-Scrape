@@ -808,6 +808,7 @@
             "name": "Anglory",
             "deckIds": [7124125],
             "cardIds": [],
+            "excludeIds": [5845, 1322, 3962, 9189, 7045, 5801, 7295, 1318, 9096, 9095],
             "thumb": "2030928",
             "author": "FlavorFlov",
             "description": "An EARTH Fish Pendulum archetype that relies on its Pendulum Summons and includes gimmicks like cleaning up either player's GY by banishing cards and floodgating Field Spell effects and Link-1 Link Monsters."

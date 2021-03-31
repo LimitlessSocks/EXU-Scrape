@@ -23,6 +23,7 @@ def parse_archetype!(obj)
     ds.description = obj["description"]
     ds.deckIds = obj["deckIds"]
     ds.cardIds = obj["cardIds"]
+    ds.excludeIds = obj["excludeIds"] || []
     ds.tags = obj["tags"] || ["untagged"]
     ds.deckWidth = obj["deckWidth"] || $DEFAULT_DECK_WIDTH
     ds.extraRows = obj["extraRows"] || "null"
