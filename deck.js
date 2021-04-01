@@ -162,6 +162,7 @@ class Deck {
         }
         // console.log(this.decks, location);
         destDeck.splice(index, 0, cardId);
+        return { destination: location, index: index };
     }
     
     swapCards(aloc, a, bloc, b) {
@@ -264,6 +265,7 @@ class Deck {
             
             // container info
             let info = $("<div class=container-info>");
+            info.data({ deck: containerIndex, index: null, });
             
             $(container).append(info);
             
@@ -409,6 +411,13 @@ CardViewer.Editor.addHoverTimerPreview = function (composed, id) {
         hoverTimer = null;
     });
 };
+
+const isBounded = (x, y, bounds) => {
+    let isLeftRightBounded = bounds.left <= x && x <= bounds.right;
+    let isTopBottomBounded = bounds.top <= y && y <= bounds.bottom;
+    return isLeftRightBounded && isTopBottomBounded;
+};  
+
 CardViewer.Editor.trackMouse = function (deck, composed, offset) {
     offset = offset || { x: 0, y: 0 };
     composed.addClass("dragging");
@@ -455,15 +464,38 @@ CardViewer.Editor.trackMouse = function (deck, composed, offset) {
                 continue;
             }
             let childOffset = child.offset();
-            let containerOffset = container.offset();
+            // let containerOffset = container.offset();
             let bounds = child.get(0).getBoundingClientRect();
-            let isLeftRightBounded = bounds.left <= myX && myX <= bounds.right;
-            let isTopBottomBounded = bounds.top <= myY && myY <= bounds.bottom;
-            if(isLeftRightBounded && isTopBottomBounded) {
+            // let isLeftRightBounded = bounds.left <= myX && myX <= bounds.right;
+            // let isTopBottomBounded = bounds.top <= myY && myY <= bounds.bottom;
+            if(isBounded(myX, myY, bounds)) {
                 focusedChild = child;
                 break;
             }
         }
+        
+        let infoChild;
+        for(let infoLabel of $(".container-info")) {
+            // $(".container-info")
+            let ilBounds = infoLabel.getBoundingClientRect();
+            // console.log(myY <= ilBounds.top, [myX, myY], ilBounds);
+            if(myY <= ilBounds.top) {
+                infoChild = infoLabel;
+                break;
+                // if(!focusedChild) {
+                    // focusedChild = $(infoLabel);
+                // }
+                // break;
+            }
+            // let scBounds = subContainer.getBoundingClientRect();
+            // console.log(myX, myY, scBounds, isBounded(myX, myY, scBounds));
+        }
+        // console.log(".");
+        // infoChild = $(infoChild);
+        if(!focusedChild) {
+            focusedChild = $(infoChild);
+        }
+        
         if(focusedChild) {
             focusedChild.addClass("focused");
         }
@@ -481,15 +513,14 @@ CardViewer.Editor.trackMouse = function (deck, composed, offset) {
         let myDeck = composed.data("deck");
         let targetIndex = focusedChild.data("index");
         let targetDeck = focusedChild.data("deck");
-        if(myDeck === targetDeck) {
-            // deck.swapCards(
-                // myDeck, myIndex,
-                // targetDeck, targetIndex
-            // );
+        if(targetIndex === null) {
+            deck.removeCard(myDeck, myIndex);
+            deck.addCard(composed.data("id"), targetDeck);
+        }
+        else if(myDeck === targetDeck) {
             deck.moveInFrontOf(myDeck, myIndex, targetIndex);
         }
         else {
-            deck.removeCard(myDeck, myIndex);
             deck.addCard(composed.data("id"), targetDeck, targetIndex + 1);
         }
         CardViewer.Editor.updateDeck();
@@ -816,7 +847,6 @@ CardViewer.composeResultDeckPreview = function (card) {
     }
     
     marking.prepend(attribute);
-    
     
     res.append($("<div class=result-inner>").append(
         name, attribute, img, marking, banMarker, importMarker,

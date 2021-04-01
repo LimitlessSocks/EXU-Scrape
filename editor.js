@@ -74,6 +74,7 @@ let onLoad = async function () {
     CardViewer.Search.config.transform = (el, card) => {
         el.addClass("clickable");
         el.addClass("unselectable");
+        el.attr("draggable", true);
         let id = card["id"];
         CardViewer.Editor.addHoverTimerPreview(el, id);
         el.click(() => {
@@ -86,6 +87,23 @@ let onLoad = async function () {
             CardViewer.Editor.DeckInstance.addCard(id, Deck.Location.SIDE);
             CardViewer.Editor.updateDeck();
             CardViewer.Editor.setPreview(id);
+        });
+        // let mouseDown;
+        // el.mousedown((e) => {
+            // mouseDown = e.originalEvent;
+        // });
+        el.on("dragstart", (e) => {
+            if(e.which !== 1) return;
+            e.preventDefault();
+            let { destination, index } = CardViewer.Editor.DeckInstance.addCard(id);
+            CardViewer.Editor.updateDeck();
+            CardViewer.Editor.setPreview(id);
+            // console.log(destination, index);
+            
+            let targetContainer = $($(".sub-deck-container")[destination]);
+            let target = $(targetContainer.find(".result")[index]);
+            let offset = { x: 10, y: 10 };
+            CardViewer.Editor.trackMouse(CardViewer.Editor.DeckInstance, target, offset);
         });
         return el;
     };
