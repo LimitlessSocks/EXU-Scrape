@@ -475,6 +475,7 @@ CardViewer.Editor.trackMouse = function (deck, composed, offset) {
         }
         
         let infoChild;
+        let i = 0;
         for(let infoLabel of $(".container-info")) {
             // $(".container-info")
             let ilBounds = infoLabel.getBoundingClientRect();
@@ -501,12 +502,14 @@ CardViewer.Editor.trackMouse = function (deck, composed, offset) {
         }
     };
     let onMouseUp = (e) => {
+        console.log("Mouse up handler!");
         composed.removeClass("dragging");
         //TODO: just handle it with a single listener
         $(window).unbind("mousemove", onMove);
         $(window).unbind("mouseup", onMouseUp);
         
         if(!focusedChild) {
+            return;
             focusedChild = composed;
         }
         let myIndex = composed.data("index");

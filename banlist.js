@@ -4,6 +4,7 @@ $(document).ready(() => {
     let filterByToggle = $("#filterByToggle");
     let filterBy = $("#filterBy");
     let inner = $("#filterByInner");
+    // console.log("fuck");
     CardViewer.setUpFilterByToggle(filterByToggle, filterBy, inner);
     let onInput = function () {
         let filter = this.value.toLowerCase();
