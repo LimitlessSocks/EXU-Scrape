@@ -168,6 +168,9 @@ let onLoad = async function () {
                 .append($(`<div><h3 class=result-name><em><u>Toggle Similarities</u></em></h3><em>Click to <span class=op>show</span> all ${sameGroup.length} cards with the same status as in the TCG.</em></div>`).addClass("result-inner"));
             sub.append(expand);
         }
+        else {
+            sameGroup.toggleClass("same");
+        }
         
         let selection = CardViewer.Search.pages.flat();
         let header = $("<h2 class=main>")
