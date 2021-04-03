@@ -272,15 +272,6 @@
             "tags": ["fusion", "support", "flip"]
         },
         {
-            "name": "Ravager",
-            "deckIds": [2788655],
-            "cardIds": [],
-            "thumb": "952159",
-            "author": "OceanPhantom",
-            "description": "A Synchro based Strategy, able to Summon power control based Synchro monsters or OTK through powerful Insect Synchro Monsters.",
-            "tags": ["combo", "aggro", "synchro", "tribute"]
-        },
-        {
             "name": "Yurei",
             "deckIds": [5925194],
             "cardIds": [1778133],
@@ -500,14 +491,6 @@
             "description": "A control/beatdown Deck that is meant to be able to be sided into a completely different strategy anchored by one of the 2 Field Spells and a corresponding Link Monster."
         },
         {
-            "name": "World Reaper",
-            "deckIds": [6434960, 2166281],
-            "cardIds": [],
-            "thumb": "1825852",
-            "author": "NoodleDoodle21",
-            "description": "World Reaper is a Deck focused around Tribute Summoning monsters, having effects to steal your opponent's cards and then use them for your Tribute Summons."
-        },
-        {
             "name": "Concept of Reality",
             "deckIds": [6256752],
             "cardIds": [],
@@ -695,15 +678,6 @@
             "thumb": "1506404",
             "author": "Mevs",
             "description": "A semi-generic lineup of Level/Rank 4 Spellcaster monsters that like to Xyz Summon and burn."
-        },
-        {
-            "name": "Orb Magician",
-            "deckIds": [5269100],
-            "cardIds": [],
-            "thumb": "1516304",
-            "author": "Ava",
-            "description": "A Spellcaster Deck focused on Special and Fusion Summoning.",
-            "tags": ["fusion", "beatdown", "support"]
         },
         {
             "name": "Queltz",
@@ -1186,15 +1160,6 @@
             "tags": ["synchro"]
         },
         {
-            "name": "O.F.F",
-            "deckIds": [3617894, 7499352, 7499374],
-            "cardIds": [],
-            "thumb": "1733088",
-            "author": "Draco-_-999",
-            "description": "An archetype based on indie cult classic OFF, utilizing Spectral Counters, Traps, Spells and more to tell a story of vast proportions.",
-            "tags": ["theme"]
-        },
-        {
             "name": "Ak*ris",
             "deckIds": [7310491],
             "cardIds": [],
@@ -1540,7 +1505,7 @@
             "name": "Simulacra",
             "deckIds": [7723773],
             "cardIds": [],
-            "thumb": "1189021",
+            "thumb": "1205136",
             "author": "The Awkward One",
             "description": "A horror-themed archetype that relies on the eldritch creature known as the Simulacrum Core, a fiend that pulls the strings behind the curtain for its own malignant gain. Essentially, it's a control Deck that revolves around the Core and sets up interruptions through its various adaptations to slowly and gradually snowball for supremacy.",
             "tags": []
