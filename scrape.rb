@@ -184,7 +184,7 @@ database = [
     7484447, #Artifact Support
     7462775, #Armored Hunter / Raging Calamity Support
     5813034, #Gimmick Puppet Support
-    7463590, #Poppin
+    # 7463590, #Poppin
     7499352, #O.F.F
     7454784, #Entropy Beast Support
     7503066, #Tidalive

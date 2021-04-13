@@ -36,7 +36,8 @@
     // parse into games
     const isDeterminator = (obj) =>
         obj.play === "Admit defeat" ||
-        obj.play === "Quit duel";
+        obj.play === "Quit duel" ||
+        obj.play === "Accept draw";
     
     let canParse = true;
     let overCount = replay_arr.filter(e => "over" in e).length;
@@ -59,11 +60,16 @@
             return null;
         }
         
+        if(det.play === "Accept draw") {
+            // skip to next game if draw
+            return collectGame();
+        }
+        
         console.log("Determinator:", det);
         console.log("Actions:", actions);
         let loser = det.username;
         console.log("Round loser:", loser);
-        let winner = players[loser === players[0] ? 1 : 0]
+        let winner = players[loser === players[0] ? 1 : 0];
         console.log("Round winner:", winner);
         roundsWon[winner]++;
         

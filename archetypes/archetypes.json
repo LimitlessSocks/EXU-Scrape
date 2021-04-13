@@ -35,14 +35,6 @@
             "tags": ["midrange", "banish", "gy", "support", "pendulum", "link", "beatdown", "aggro"]
         },
         {
-            "name": "Poppin",
-            "deckIds": [4861946, 7463590],
-            "cardIds": [],
-            "thumb": "510957",
-            "author": "Ara",
-            "description": "A hyperactive LIGHT Aqua Link-based Deck that loves to Link climb and banish."
-        },
-        {
             "name": "Harbinger",
             "deckIds": [4570517],
             "cardIds": [],

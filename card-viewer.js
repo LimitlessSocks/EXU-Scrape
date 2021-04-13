@@ -791,7 +791,10 @@ CardViewer.createFilter = function (query, exclude = null) {
         // id filter
         CardViewer.textComparator(query.id, _F.propda("id")),
         // effect filter
-        CardViewer.regexComparator(query.effect, _F.propda("effect")),
+        CardViewer.or(
+            CardViewer.regexComparator(query.effect, _F.propda("effect")),
+            CardViewer.regexComparator(query.effect, _F.propda("pendulum_effect")),
+        ),
         // author filter
         CardViewer.textComparator(query.author, _F.propda("username")),
         // limit filter
