@@ -217,6 +217,12 @@ database = [
     7742679, #Fog+Beast
     7659844, #Relinquished
     7619657, #Panda Support
+    7737487, #Hellvil Support
+    7695428, #Timelord Support
+    7758078, #Stromberg Support
+    7763073, #Darkwater Support
+    7771474, #Evil HERO Support
+    7834508, #Galaxieve Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -227,7 +233,7 @@ database = [
     4385932, #Starbaric Crystal Beasts
     # 4540185, #Emeraheart
     4757288, #Pandas
-    4861946, #Poppin
+    # 4861946, #Poppin
     # 4547335, #Titanus
     4570517, #Harbinger
     4910893, #Aria Fey
@@ -307,7 +313,7 @@ database = [
     6294677, #Diabolition
     6334551, #Wild Hunt
     6291306, #Galaxieve
-    5830740, #New Order
+    # 5830740, #New Order
     4237940, #Taida
     4769548, #Empyreal
     5647256, #Meterao
@@ -447,6 +453,16 @@ database = [
     4587548, #Stage Girl
     7723773, #Simulacra
     7678716, #Vuluti
+    7727566, #Supermega
+    7728700, #Devivain
+    7763820, #Nekker
+    7609855, #Kitsento
+    7714198, #Attack on Titan
+    7225933, #Chima
+    7236701, #Erwormwood
+    7730748, #Magistar
+    7769900, #Thunderstrike Dragon
+    7842189, #The Aarp
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
