@@ -187,7 +187,7 @@ database = [
     # 7463590, #Poppin
     7499352, #O.F.F
     7454784, #Entropy Beast Support
-    7503066, #Tidalive
+    7503066, #Tidalive Support
     6598851, #Madoor
     7448539, #Wight
     7499374, #OFF 2
@@ -201,7 +201,7 @@ database = [
     7452180, #Ceremonial Bell Support
     7531842, #Psychic Support
     7556770, #Battle Fader Support
-    7595121, #Ugrovs Support
+    # 7595121, #Ugrovs Support
     7389331, #Charismatic Support
     7557629, #Thunderclap Support
     7637725, #Non-Existent Gimmick Support
@@ -329,7 +329,7 @@ database = [
     6460257, #Dark Arts
     5145725, #Remnant
     6537631, #Bucket Squad
-    6547017, #World Reaper Support
+    # 6547017, #World Reaper Support
     7553027, #Cosmic Primal
     6395566, #Submerzan
     # 6578295, #Crypt
@@ -337,7 +337,7 @@ database = [
     6563112, #NTG
     6582550, #Darkwater
     # 6560628, #Charismatic
-    6600896, #Glow Gods
+    7877196, #Glow Gods
     6604359, #Chronoruler
     6601142, #Serpent Night
     6649729, #Flamiller
@@ -415,11 +415,11 @@ database = [
     5822335, #Tokyo Terror
     7367392, #Bas-Yak
     5904696, #Contraption
-    3639246, #Tidalive
+    7877183, #Tidalive
     7443209, #Mokey Mokey OTK
     7455513, #Doom Instruments
     7163783, #Lemuria
-    5010437, #Ugrovs
+    7877166, #Ugrovs
     7496225, #Primordial Driver
     7166789, #Ancestagon
     # 7318393, #Anomantic
@@ -498,7 +498,7 @@ banlist = [
     
     5895579,                    #Retrains
     5855756, 5856014, 7000259,  #Forbidden
-    5857248,                    #Limited
+    5857248, 7885271,           #Limited
     5857281,                    #Semi-Limited
     5857285,                    #Unlimited
 ]
@@ -529,6 +529,7 @@ extra_info = {
     7000259 => EXU_BANNED,
     
     5857248 => EXU_LIMITED,
+    7885271 => EXU_LIMITED,
     
     5857281 => EXU_SEMILIMITED,
     

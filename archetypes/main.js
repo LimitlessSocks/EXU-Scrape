@@ -82,7 +82,8 @@ $(document).ready(function () {
                 let res = {
                     value: e,
                     exact: false,
-                    split: true,
+                    // split: true,
+                    split: false,
                     field: null,
                 };
                 
@@ -103,9 +104,17 @@ $(document).ready(function () {
                     }
                     res.split = false;
                 }
+                
+                if(!res.field) {
+                    res.field = "name";
+                }
+                
                 res.value = res.value.replace(/["']/g, "");
+                console.log(words, res);
                 return res;
             });
+            
+        console.log(words);
         
         let links = $("#listing a");
         for(let link of links) {
@@ -114,7 +123,7 @@ $(document).ready(function () {
                 words = words.reduce((o1, o2) => ({
                     value: o1.value + " " + o2.value,
                     exact: false,
-                    field: o1.field,
+                    field: o1.field || o2.field,
                     split: o1.split,
                 }));
                 words = [ words ];
@@ -141,9 +150,9 @@ $(document).ready(function () {
                 
                 range = range.toLowerCase();
                 // console.log(split);
-                if(split) {
-                    range = range.split(/\s+/);
-                }
+                // if(split) {
+                    // range = range.split(/\s+/);
+                // }
                 
                 if(anchor) {
                     let isValid = true;
@@ -156,8 +165,12 @@ $(document).ready(function () {
                     return isValid;
                 }
                 else {
-                    // console.log(value, range);
-                    return range.indexOf(value) !== -1;
+                    if(exact) {
+                        return range == value;
+                    }
+                    else {
+                        return range.indexOf(value) !== -1;
+                    }
                 }
                 
             });
