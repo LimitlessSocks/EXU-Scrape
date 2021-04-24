@@ -95,7 +95,7 @@ database = [
     5749949, #Ancient Warriors Support
     4251928, #Traptrix Support
     4936132, #F.A. Support
-    5177132, #Darklord Support
+    # 5177132, #Darklord Support
     5219266, #Phantom Beast Support
     5260210, #Sylvan Support
     4810529, #Blue-Eyes Support
@@ -137,7 +137,7 @@ database = [
     6845097, #Mystic Elf & Celtic Guardian
     6881030, #Hazy Flame Support
     6858740, #Elementsaber Support
-    6888197, #ABC-Dragon/Gradius Support
+    # 6888197, #ABC-Dragon/Gradius Support
     6913421, #Vylon Support
     5793524, #Number 54: Lion Heart Support
     6918022, #Cyberdark Supports
@@ -223,11 +223,15 @@ database = [
     7763073, #Darkwater Support
     7771474, #Evil HERO Support
     7834508, #Galaxieve Support
+    7881252, #Vision HERO Support
+    7846987, #of the Wasteland Support
+    7852899, #Abartech Support
+    7885378, #Sunavalon Support
     
     #--------------------------------------------------------------------#
     # Archetypes
     # 4327693, #Lacrimosa
-    4367824, #Death Aspects
+    # 4367824, #Death Aspects
     # 4376011, #Combat Mechs
     4523067, #Voltron
     4385932, #Starbaric Crystal Beasts
@@ -240,7 +244,7 @@ database = [
     5075635, #Starships
     # 5176216, #Antiqua
     # 4624534, #Harokai
-    4442461, #Titanic Dragon
+    # 4442461, #Titanic Dragon
     4604736, #of the North
     4460492, #Holifear
     5323883, #Digitallias
@@ -463,6 +467,11 @@ database = [
     7730748, #Magistar
     7769900, #Thunderstrike Dragon
     7842189, #The Aarp
+    7882788, #Des Aspect
+    7783148, #Tamed Calamity / Armored Tamer
+    7823128, #Sisage
+    6222166, #Ananta
+    2795851, #Conqueror
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
@@ -476,11 +485,13 @@ database = [
     7193018, #Generic Monsters VII
     7552348, #Generic Monsters VIII
     7753395, #Generic Monsters IX
+    7934346, #Generic Monsters X
     6353430, #Generic Spells
     6419184, #Generic Spells II
     6871664, #Generic Spells III
     7193014, #Generic Spells IV
     7552464, #Generic Spells V
+    7934345, #Generic Spells VI
     6353449, #Generic Traps
     6598717, #Generic Traps II
     7193016, #Generic Traps III
