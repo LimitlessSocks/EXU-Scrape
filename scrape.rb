@@ -1,4 +1,4 @@
-VALID_OPERATIONS = ["main", "banlist", "test", "beta"]
+VALID_OPERATIONS = ["main", "banlist", "test", "beta", "bfyf"]
 operation = ARGV[0]
 
 
@@ -115,7 +115,7 @@ database = [
     6771198, #Vendread Support
     2775342, #Triamid Support
     6785116, #Legendary Dragon, Fairy Tail, Dark World & Shiranui Support
-    6787972, #Orb Magician Support
+    # 6787972, #Orb Magician Support
     6792668, #Jurrac Support
     6792679, #Cyber Dragon Support
     6793309, #Subterror Behemoth Support
@@ -377,7 +377,7 @@ database = [
     # 6777854, #Nebulline
     6849044, #Nebulline
     6806175, #Chibright
-    4330341, #D.N.M.Q.
+    # 4330341, #D.N.M.Q.
     6906385, #Legendary Golems
     # 6848354, #The 9s
     6948850, #Mekkallegiate
@@ -433,7 +433,7 @@ database = [
     7495126, #Sylphe
     7516077, #Moonlit
     7516896, #Darkest Power: Awor
-    7503795, #Pitch Black
+    # 7503795, #Pitch Black
     7522856, #Abartech
     7432421, #Fiendfyre
     7565819, #Mind Layer
@@ -523,6 +523,11 @@ beta = [
     ###################
 ]
 
+# baby's first yugioh format
+bfyf = [
+    8055759
+]
+
 
 EXU_BANNED      = { "exu_limit" => 0 }
 EXU_LIMITED     = { "exu_limit" => 1 }
@@ -568,12 +573,15 @@ elsif operation == "banlist"
 elsif operation == "beta"
     decks = beta
     outname = "beta"
+elsif operation == "bfyf"
+    decks = bfyf
+    outname = "bfyf"
 else
     decks = test
     outname = "test"
 end
 
-ignore_banlist = ["test", "beta"]
+ignore_banlist = ["test", "beta", "bfyf"]
 
 decks += extra_info_order unless ignore_banlist.include? operation
 
