@@ -90,7 +90,7 @@ let onLoad = async function () {
     CardViewer.Elements.saveSearch.click(() => {
         let strs = [];
         for(let [key, value] of Object.entries(CardViewer.query())) {
-            if(value !== "" && value !== "any" && key !== "imported" && key !== "notImported" && key !== "alsoImported") {
+            if(value !== "" && value !== "any" && key !== "imported" && key !== "notImported" && key !== "alsoImported" && key !== "bfyf") {
                 if(key === "notNormal" && !value) continue;
                 if(key.indexOf("Compare") !== -1 && value === "equal") continue;
                 strs.push(key + "=" + value);
@@ -179,7 +179,7 @@ let onLoad = async function () {
                     }
                     continue;
                 }
-                else if(key === "group" || key === "alsoImported") {
+                else if(key === "group" || key === "alsoImported" || key === "bfyf") {
                     continue;
                 }
             }
