@@ -605,6 +605,9 @@ CardViewer.query = function () {
         notImported:  false,
         alsoImported: CardViewer.showImported
     };
+    if(CardViewer.format) {
+        baseStats[CardViewer.format] = true;
+    }
     if(CardViewer.Elements.cardIsNotNormal) {
         baseStats.notNormal = CardViewer.Elements.cardIsNotNormal.is(":checked");
     }
@@ -841,6 +844,9 @@ CardViewer.createFilter = function (query, exclude = null) {
     
     if(query.notNormal) {
         filters.push((card) => !CardViewer.Filters.isNormal(card));
+    }
+    if(query.bfyf) {
+        filters.push((card) => card.bfyf_status >= 0);
     }
     
     if(query.kind) {

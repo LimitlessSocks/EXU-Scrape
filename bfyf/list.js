@@ -5,10 +5,14 @@ const listOfNamesToArrayFormat = (str) => {
         map.set(line, 0);
     }
     for(let [id, card] of Object.entries(CardViewer.Database.cards)) {
+        // if(card.name.indexOf("Atlantean") !== -1) {
+            // console.log(card.name, map.get(card.name));
+        // }
         if(map.get(card.name) === 0) {
             map.set(card.name, id);
         }
     }
+    // console.log(map.get("Atlantean Attack Squad"));
     let s = "[\n";
     for(let [name, id] of map) {
         if(id !== 0) {
@@ -29,6 +33,18 @@ const BFYF_CARD_IDS = [
     5689,      // Bacon Saver
     5095,      // Number 39: Utopia
     5069,      // Space Cyclone
+    422,       // Black Luster Ritual
+    3568,      // Resurrection of Chakra
+    3581,      // Revival of Dokurorider
+    372,       // Beastly Mirror Ritual
+    1665,      // Fortress Whale's Oath
+    1741,      // Garma Sword Oath
+    2315,      // Javelin Beetle Pact
+    425,       // Black Magic Ritual
+    753,       // Commencement Dance
+    4690,      // War-Lion Ritual
+    845,       // Curse of the Masked Beast
+    4895,      // Zera Ritual
     3336,      // Polymerization
     207,       // Arcana Force XIV - Temperance
     4289,      // The Flute of Summoning Kuriboh
@@ -178,7 +194,77 @@ const BFYF_CARD_IDS = [
     5096,      // Number 17: Leviathan Dragon
     5109,      // Kachi Kochi Dragon
     5498,      // Sword Breaker
+    1721,      // Gagaga Magician
+    5186,      // Gagaga Girl
+    5886,      // Gagaga Child
+    3508,      // Red Gadget
+    2024,      // Green Gadget
+    4880,      // Yellow Gadget
+    5687,      // Dododo Bot
+    6182,      // Dododo Witch
+    5179,      // Dododo Warrior
+    1365,      // Elemental HERO Bubbleman
+    1417,      // Elemental HERO Woodsman
+    1374,      // Elemental HERO Flame Wingman
+    1398,      // Elemental HERO Phoenix Enforcer
+    1402,      // Elemental HERO Rampart Blaster
+    1406,      // Elemental HERO Steam Healer
+    1389,      // Elemental HERO Mudballman
+    1412,      // Elemental HERO Thunder Giant
+    1403,      // Elemental HERO Shining Flare Wingman
+    1404,      // Elemental HERO Shining Phoenix Enforcer
+    1409,      // Elemental HERO Tempest
+    1388,      // Elemental HERO Mariner
+    378,       // Beelze Frog
+    1105,      // Des Frog
+    3329,      // Poison Draw Frog
+    4086,      // Submarine Frog
+    4186,      // T.A.D.P.O.L.E.
+    3547,      // Tradetoad
+    4559,      // Unifrog
+    910,       // D.3.S. Frog
+    1006,      // Dark Mimic LV1
+    1007,      // Dark Mimic LV3
+    3834,      // Silent Magician LV4
+    3835,      // Silent Magician LV8
+    4419,      // Toon Summoned Skull
+    4418,      // Toon Mermaid
+    2756,      // Manga Ryu-Ran
+    4421,      // Toon World
+    7758,      // Paleozoic Eldonia
+    7559,      // Paleozoic Hallucigenia
+    7761,      // Paleozoic Leanchoilia
+    5433,      // Maestroke the Symphony Djinn
+    6574,      // Humhumming the Key Djinn
+    5430,      // Melomelody the Brass Djinn
+    5432,      // Muzurhythm the String Djinn
+    5431,      // Temtempo the Percussion Djinn
+    1794,      // Gemini Summoner
+    1554,      // Featherizer
+    4124,      // Supervise
+    1786,      // Gemini Booster
+    5486,      // Atlantean Attack Squad
+    5543,      // Atlantean Dragoons
+    5532,      // Atlantean Heavy Infantry
+    5531,      // Atlantean Marksman
+    5533,      // Poseidra, the Atlantean Dragon
+    286,       // Aussa the Earth Charmer
+    1156,      // Dharc the Dark Charmer
+    1460,      // Eria the Water Charmer
+    2151,      // Hiita the Fire Charmer
+    2640,      // Lyna the Light Charmer
+    4838,      // Wynn the Wind Charmer
     3205,      // Ojama Yellow
     3196,      // Ojama Black
     3200,      // Ojama Green
+    3202,      // Ojama Knight
+    3198,      // Ojama Country
+    3206,      // Ojamagic
+    8484,      // Double Resonator
+    1016,      // Dark Resonator
+    1627,      // Flare Resonator
+    5835,      // Gogogo Gigas
+    1936,      // Gogogo Golem
+    5187,      // Gogogo Giant
+    6414,      // Number 55: Gogogo Goliath
 ];

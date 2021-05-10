@@ -10,14 +10,17 @@ let onLoad = async function () {
     await CardViewer.Database.initialReadAll(ycgDatabase, bfyfDatabase);
     CardViewer.firstTime = false;
     CardViewer.excludeTcg = false;
+    CardViewer.format = "bfyf";
     
     // remove tcg non-imported
     for(let [id, card] of Object.entries(CardViewer.Database.cards)) {
+        card.bfyf_status = 3;
         if(card.custom) continue;
         if(BFYF_CARD_IDS.indexOf(+id) !== -1) continue;
         if(CardViewer.Filters.isNormal(card) && !card.pendulum) continue;
         if(CardViewer.Filters.isNonEffect(card) && CardViewer.Filters.isRitual(card)) continue;
-        delete CardViewer.Database.cards[id];
+        card.bfyf_status = -1;
+        // delete CardViewer.Database.cards[id];
     }
     
     let b= true;
