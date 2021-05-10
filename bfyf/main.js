@@ -1,9 +1,32 @@
-window.databaseToUse = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/bfyf.json";
-// window.databaseToUse = "./db.json";
+let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
+// baseURL = "./";
+window.ycgDatabase = baseURL + "ycg.json";
+window.bfyfDatabase = baseURL + "bfyf.json";
+
 let onLoad = async function () {
-    let response = await fetch(window.databaseToUse);
-    let db = await response.json();
-    CardViewer.Database.setInitial(db);
+    // let response = await fetch(window.databaseToUse);
+    // let db = await response.json();
+    // CardViewer.Database.setInitial(db);
+    await CardViewer.Database.initialReadAll(ycgDatabase, bfyfDatabase);
+    CardViewer.firstTime = false;
+    CardViewer.excludeTcg = false;
+    
+    // remove tcg non-imported
+    for(let [id, card] of Object.entries(CardViewer.Database.cards)) {
+        if(!card.custom && BFYF_CARD_IDS.indexOf(+id) === -1) {
+            delete CardViewer.Database.cards[id];
+        }
+    }
+    
+    let b= true;
+    CardViewer.composeStrategy = function composeWithTcg(card) {
+        let k = CardViewer.composeResult(card);
+        let ir = k.find(".img-result");
+        if(!ir.attr("src")) {
+            ir.attr("src", "https://www.duelingbook.com/images/low-res/" + card.id + ".jpg");
+        }
+        return k;
+    };
     
     CardViewer.Elements.searchParameters = $("#searchParameters");
     
