@@ -603,8 +603,11 @@ CardViewer.query = function () {
         visibility:   CardViewer.Elements.cardVisibility.val(),
         imported:     false,
         notImported:  false,
-        alsoImported: CardViewer.showImported,
+        alsoImported: CardViewer.showImported
     };
+    if(CardViewer.Elements.cardIsNotNormal) {
+        baseStats.notNormal = CardViewer.Elements.cardIsNotNormal.is(":checked");
+    }
     if(CardViewer.Elements.spellStats.is(":visible")) {
         baseStats.kind = CardViewer.Elements.cardSpellKind.val();
     }
@@ -834,6 +837,10 @@ CardViewer.createFilter = function (query, exclude = null) {
             // not imported filter
             CardViewer.boolExactComparator(query.notImported, _F.propda("exu_ban_import")),
         );
+    }
+    
+    if(query.notNormal) {
+        filters.push((card) => !CardViewer.Filters.isNormal(card));
     }
     
     if(query.kind) {

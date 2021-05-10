@@ -13,9 +13,11 @@ let onLoad = async function () {
     
     // remove tcg non-imported
     for(let [id, card] of Object.entries(CardViewer.Database.cards)) {
-        if(!card.custom && BFYF_CARD_IDS.indexOf(+id) === -1) {
-            delete CardViewer.Database.cards[id];
-        }
+        if(card.custom) continue;
+        if(BFYF_CARD_IDS.indexOf(+id) !== -1) continue;
+        if(CardViewer.Filters.isNormal(card) && !card.pendulum) continue;
+        if(CardViewer.Filters.isNonEffect(card) && CardViewer.Filters.isRitual(card)) continue;
+        delete CardViewer.Database.cards[id];
     }
     
     let b= true;
@@ -43,6 +45,7 @@ let onLoad = async function () {
     CardViewer.Elements.pageCount = $("#pageCount");
     CardViewer.Elements.nextPage = $("#nextPage");
     CardViewer.Elements.previousPage = $("#previousPage");
+    CardViewer.Elements.cardIsNotNormal = $("#cardIsNotNormal");
     CardViewer.Elements.resultNote = $("#resultNote");
     CardViewer.Elements.cardId = $("#cardId");
     CardViewer.Elements.cardCategory = $("#cardCategory");
@@ -85,7 +88,7 @@ let onLoad = async function () {
         let strs = [];
         for(let [key, value] of Object.entries(CardViewer.query())) {
             if(value !== "" && value !== "any" && key !== "imported" && key !== "notImported" && key !== "alsoImported") {
-                if(key === "retrain" && !value) continue;
+                if(key === "notNormal" && !value) continue;
                 if(key.indexOf("Compare") !== -1 && value === "equal") continue;
                 strs.push(key + "=" + value);
             }
@@ -104,7 +107,7 @@ let onLoad = async function () {
         limit:              CardViewer.Elements.cardLimit,
         id:                 CardViewer.Elements.cardId,
         author:             CardViewer.Elements.cardAuthor,
-        // retrain:         CardViewer.Elements.cardIsRetrain,
+        notNormal:          CardViewer.Elements.cardIsNotNormal,
         category:           CardViewer.Elements.cardCategory,
         visibility:         CardViewer.Elements.cardVisibility,
         monsterType:        CardViewer.Elements.cardMonsterType,
@@ -199,6 +202,7 @@ let onLoad = async function () {
     CardViewer.setUpArrowToggle();
     
     let allInputs = CardViewer.setUpAllInputs();
+    allInputs.append(CardViewer.Elements.cardIsNotNormal);
     
     // check if any input data
     for(let el of allInputs) {
@@ -210,7 +214,7 @@ let onLoad = async function () {
             }
         }
         else if(el.is("input[type=checkbox]")) {
-            console.log(el.attr("checked"));
+            // console.log(el.attr("checked"));
             hasValue = el.is(":checked");
         }
         else {
@@ -245,36 +249,6 @@ let onLoad = async function () {
     });
     
     updateBackground();
-    
-    const purposeFilter = $("#purposeFilter");
-    
-    for(let obj of Object.values(CardGroups)) {
-        let { id, name, data } = obj;
-        let button = $("<button>");
-        button.text(name);
-        button.click(() => {
-            CardViewer.firstTime = false;
-            CardViewer.Elements.resultNote.text("This is an incomplete list. You can help by finding new cards in this category that are semi-generic, that is, able to be used by more than 1 particular strategy.");
-            CardViewer.demonstrate((card) => data.indexOf(card.id) !== -1);
-        });
-        button.contextmenu((e) => {
-            window.location.search = "group=" + id;
-            e.preventDefault();
-        });
-        button.toggle();
-        purposeFilter.append(button);
-        obj.button = button;
-    }
-    
-    let match = window.location.search.match(/group=(\w+)/);
-    if(match) {
-        // console.log(match[1]);
-        CardGroups[match[1]].button.click();
-    }
-    
-    $("#expandPurpose, #contractPurpose").click(function () {
-        $("#purposeFilter button").toggle();
-    });
 };
 
 window.addEventListener("load", onLoad);

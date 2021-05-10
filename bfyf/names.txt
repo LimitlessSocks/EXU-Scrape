@@ -9,6 +9,20 @@ Bacon Saver
 Number 39: Utopia
 Space Cyclone
 All non-Effect Ritual Monsters and their corresponding Ritual Spells
+------------
+Black Luster Ritual
+Resurrection of Chakra
+Revival of Dokurorider
+Beastly Mirror Ritual
+Fortress Whale's Oath
+Garma Sword Oath
+Javelin Beetle Pact
+Black Magic Ritual
+Commencement Dance
+War-Lion Ritual
+Curse of the Masked Beast
+Zera Ritual
+------------
 Polymerization
 Type Specific Field Spells, like Umi, Yami, Sogen, Forest, Wasteland, Mountain
 Arcana Force XIV - Temperance
@@ -164,3 +178,80 @@ Shark Stickers
 Number 17: Leviathan Dragon
 Kachi Kochi Dragon
 Sword Breaker
+----------------------------
+Gagaga Magician
+Gagaga Girl
+Gagaga Child
+Red Gadget
+Green Gadget
+Yellow Gadget
+Stronghold The Moving Fortress
+Dododo Bot
+Dododo Witch
+Dododo Warrior
+Elemental HERO Bubbleman
+Elemental HERO Woodsman
+Elemental HERO Flame Wingman
+Elemental HERO Phoenix Enforcer
+Elemental HERO Rampart Blaster
+Elemental HERO Steam Healer
+Elemental HERO Mudballman
+Elemental HERO Thunder Giant
+Elemental HERO Shining Flare Wingman
+Elemental HERO Shining Phoenix Enforcer
+Elemental HERO Tempest
+Elemental HERO Mariner
+Beelze Frog
+Des Frog
+Poison Draw Frog
+Submarine Frog
+T.A.D.P.O.L.E.
+Tradetoad
+Unifrog
+D.3.S. Frog
+Dark Mimic LV1
+Dark Mimic LV3
+Silent Magician LV4
+Silent Magician LV8
+Toon Blue-Eyes White Dragon
+Toon Summoned Skull
+Toon Mermaid
+Manga Ryu-Ran
+Toon World
+Paleozoic Eldonia
+Paleozoic Hallucigenia
+Paleozoic Leanchoilia
+Maestroke the Symphony Djinn
+Humhumming the Key Djinn
+Melomelody the Brass Djinn
+Muzurhythm the String Djinn
+Temtempo the Percussion Djinn
+All TCG legal Gemini monsters
+Gemini Summoner
+Featherizer
+Supervise
+Gemini Booster
+Atlantean Attack Squad
+Atlantean Dragoons
+Atlantean Heavy Infantry
+Atlantean Marksman
+Poseidra, the Atlantean Dragon
+Aussa the Earth Charmer
+Dharc the Dark Charmer
+Eria the Water Charmer
+Hiita the Fire Charmer
+Lyna the Light Charmer
+Wynn the Wind Charmer
+Ojama Yellow
+Ojama Black
+Ojama Green
+Ojama Knight
+Ojama Country
+Ojamagic
+Double Resonator
+Dark Resonator
+Flare Resonator
+Gogogo Gigas
+Gogogo Golem
+Gogogo Giant
+Number 55: Gogogo Goliath

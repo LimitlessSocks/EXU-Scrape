@@ -178,4 +178,7 @@ const BFYF_CARD_IDS = [
     5096,      // Number 17: Leviathan Dragon
     5109,      // Kachi Kochi Dragon
     5498,      // Sword Breaker
+    3205,      // Ojama Yellow
+    3196,      // Ojama Black
+    3200,      // Ojama Green
 ];
