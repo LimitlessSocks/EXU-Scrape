@@ -265,4 +265,18 @@ const BFYF_CARD_IDS = [
     5679,      // Giant Soldier of Steel
     2290,      // Iron Blacksmith Kotetsu
     3018,      // Mysterious Puppeteer
+    2509,      // Laser Cannon Armor
+    2553,      // Legendary Sword
+    2655,      // Machine Conversion Factory
+    3037,      // Mystical Moon
+    3362,      // Power of Kaishin
+    3474,      // Raise Body Heat
+    4629,      // Violet Crystal
+    362,       // Beast Fangs
+    529,       // Book of Secret Arts
+    979,       // Dark Energy
+    1254,      // Dragon Treasure
+    1348,      // Electro-Whip
+    1646,      // Follow Wind
+    4625,      // Vile Germs
 ];
