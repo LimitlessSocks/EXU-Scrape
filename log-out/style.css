@@ -1,22 +1,104 @@
-html {
-    
-}
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
 
 h1, h2, h3, p {
     margin: 0;
 }
 
+.diff-whole {
+    /* background: rgba(0,0,0,0.5); */
+    margin-bottom: 10px;
+}
+
+h2 a, h2 a:visited {
+    color: #88c;
+    text-decoration: none;
+}
+h2 a:hover {
+    color: #bbf;
+}
+
 .diff-entry {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .diff-side {
-  flex: 0 0 50%;
-  padding: 10px;
+    flex: 0 0 50%;
+    padding: 10px;
+	background: rgba(0,0,0,0.6);
 }
 
 .diff-side {
-  margin: 0;
-  box-sizing: border-box;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.diff {
+	overflow: auto;
+    line-height: 1em;
+}
+
+.diff ul {
+	overflow: auto;
+	font-size: 13px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: table;
+	width: 100%;
+}
+
+.diff del,
+.diff ins {
+	display: block;
+	text-decoration: none;
+}
+
+.diff li {
+	padding: 0;
+	display: table-row;
+	margin: 0;
+	height: 1em;
+}
+
+.diff li.ins {
+	background: rgba(25,25,75,0.8);
+	color: #ddf;
+}
+
+.diff li.del {
+	background: rgba(75,25,25,0.8);
+	color: #fdd;
+}
+
+.diff del,
+.diff ins,
+.diff span {
+	white-space: pre-wrap;
+    font-family: "Fira Mono", "Consolas", monospace;
+}
+
+.diff del strong {
+	/* font-weight: normal; */
+	background: rgba(150,100,100,0.8);
+}
+
+.diff ins strong {
+	/* font-weight: normal; */
+	background: rgba(100,100,150,0.8);
+}
+
+.diff li:hover {
+	background: rgba(150,150,100,0.8);
+}
+/* .diff li:hover strong { */
+    /* font-weight: bold; */
+/* } */
+
+.diff li.diff-comment {
+	display: none;
+}
+
+.diff li.diff-block-info {
+	background: none repeat scroll 0 0 gray;
 }
