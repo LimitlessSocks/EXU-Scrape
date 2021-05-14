@@ -70,7 +70,7 @@ database = [
     6791911, #Kaiju Support
     4026672, #Fushioh Richie Support
     6791947, #Red-Eyes Support
-    6450641, #Gimmick Puppet Support
+    # 6450641, #Gimmick Puppet Support
     6438706, #Constellar/Tellarknight Support
     6412660, #Umbral Horror/Numbers 43, 65, 80, and 96 Support
     6402157, #D/D/D Support
@@ -149,6 +149,7 @@ database = [
     6819600, #Prometeor Support
     4805092, #Legendary Dragon Support
     6981414, #Magical Hat Support
+    6952745, #Tindangle Support
     6952371, #True King Retrains
     7003669, #Appliancer Support
     6993829, #Lair of Darkness Support
@@ -182,8 +183,8 @@ database = [
     7464737, #Halvoran Support
     7458028, #Masaki Support
     7484447, #Artifact Support
-    7462775, #Armored Hunter / Raging Calamity Support
-    5813034, #Gimmick Puppet Support
+    # 7462775, #Armored Hunter / Raging Calamity Support
+    # 5813034, #Gimmick Puppet Support
     # 7463590, #Poppin
     7499352, #O.F.F
     7454784, #Entropy Beast Support
@@ -227,6 +228,12 @@ database = [
     7846987, #of the Wasteland Support
     7852899, #Abartech Support
     7885378, #Sunavalon Support
+    8079528, #Gimmick Puppet Support
+    7795290, #Superheavy Samurai Support
+    7973339, #Stage Girl Support
+    7995546, #NTG Support
+    5700651, #Kyudo Support
+    
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -337,7 +344,7 @@ database = [
     7553027, #Cosmic Primal
     6395566, #Submerzan
     # 6578295, #Crypt
-    6585445, #PPDC
+    # 6585445, #PPDC
     6563112, #NTG
     6582550, #Darkwater
     # 6560628, #Charismatic
@@ -414,7 +421,7 @@ database = [
     7022063, #Fishin'
     # 3617894, #O.F.F
     7310491, #Ak*ris
-    7464943, #Armored Hunter / Raging Calamity
+    # 7464943, #Armored Hunter / Raging Calamity
     # 6526373, #Phylabeast
     5822335, #Tokyo Terror
     7367392, #Bas-Yak
@@ -427,7 +434,7 @@ database = [
     7496225, #Primordial Driver
     7166789, #Ancestagon
     # 7318393, #Anomantic
-    7560045, #Anomantic
+    # 7560045, #Anomantic
     6997240, #Stwyrmwind
     7410698, #Bright Planet
     7495126, #Sylphe
@@ -472,6 +479,21 @@ database = [
     7823128, #Sisage
     6222166, #Ananta
     2795851, #Conqueror
+    7920705, #Gaia's Chosen
+    7816634, #Dusk Brigade
+    7985036, #Innsmouth
+    7937711, #Hotarugusa
+    3890554, #Fireworks Girl
+    7961741, #Pluraid
+    7519530, #Armourizer Series: Fleurcrux
+    7997640, #Unbeing
+    6635173, #Xana
+    7922328, #Harokai
+    7746134, #Superego
+    4475780, #Ascending Fire
+    7959099, #Intranger
+    7499374, #O.F.F
+    8034682, #Circersolar
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
