@@ -279,4 +279,23 @@ const BFYF_CARD_IDS = [
     1348,      // Electro-Whip
     1646,      // Follow Wind
     4625,      // Vile Germs
+    3920,      // Sonic Bird
+    3767,      // Senju of the Thousand Hands
+    4801,      // Woodland Archer
+    581,       // Burning Spear
+    2059,      // Gust Fan
+    4047,      // Steel Shell
+    2287,      // Invigoration
+    4150,      // Sword of Dark Destruction
+    1423,      // Elf's Light
+    1661,      // Formula Synchron
+    2255,      // Infinite Cards
+    741,       // Cold Enchanter
+    7706,      // Aegaion the Sea Castrum
+    282,       // Attack and Receive
+    3175,      // Numinous Healer
+    1292,      // Drill Barnacle
+    1596,      // Firewall
+    5551,      // Lemuria, the Forgotten City
+    4668,      // Vylon Ohm
 ];
