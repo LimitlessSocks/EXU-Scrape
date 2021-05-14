@@ -1,7 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;50;700&display=swap');
 
 h1, h2, h3, p {
     margin: 0;
+}
+
+.minimized {
+    display: none;
+}
+
+p.skip {
+    font-style: italic;
+    color: #ddd;
 }
 
 .diff-whole {
@@ -9,11 +18,11 @@ h1, h2, h3, p {
     margin-bottom: 10px;
 }
 
-h2 a, h2 a:visited {
+a.toplink, a.toplink:visited {
     color: #88c;
     text-decoration: none;
 }
-h2 a:hover {
+a.toplink:hover {
     color: #bbf;
 }
 
