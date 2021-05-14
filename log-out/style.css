@@ -1,0 +1,22 @@
+html {
+    
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+.diff-entry {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.diff-side {
+  flex: 0 0 50%;
+  padding: 10px;
+}
+
+.diff-side {
+  margin: 0;
+  box-sizing: border-box;
+}
