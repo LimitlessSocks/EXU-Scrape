@@ -160,6 +160,7 @@ class Feature {
         let sortOrder = this.options.sortOrder || Statistics.Options.sortOrder;
         let sortByGrader = this.options.sortBy || Statistics.Options.sortBy;
         let limit = this.options.limit || Statistics.Options.limit || this.options.defaultLimit;
+        let reverse = this.options.reverse;
         // console.log("Limit:", limit);
         
         let dat = Object.entries(this.fn(...Statistics.parameters));
@@ -181,9 +182,15 @@ class Feature {
         
         dat = sortedDat;
         
+        if(reverse) {
+            dat = dat.reverse();
+            console.log(dat);
+        }
+        
         if(limit) {
             dat = dat.slice(0, limit);
         }
+        
         console.log(dat.map(a => a.join(" - ")).join("\n"));
         
         let [
@@ -389,6 +396,26 @@ Statistics.addFeature(
     () => cardsByRecord((card) => card.effect.length + card.pendulum_effect.length, "username"),
     {
         defaultLimit: 15,
+    }
+);
+Statistics.addSpacer();
+
+Statistics.addFeature(
+    "shortestCardsWords",
+    "Shortest User Cards (Words)",
+    () => cardsByRecord((card) => wordLength(card.effect) + wordLength(card.pendulum_effect), "username", {}, null, (a, b) => b - a),
+    {
+        defaultLimit: 15,
+        reverse: true,
+    }
+);
+Statistics.addFeature(
+    "shortestCardsCharacters",
+    "Shortest User Cards (Characters)",
+    () => cardsByRecord((card) => card.effect.length + card.pendulum_effect.length, "username", {}, null, (a, b) => b - a),
+    {
+        defaultLimit: 15,
+        reverse: true,
     }
 );
 Statistics.addSpacer();
@@ -889,7 +916,7 @@ window.addEventListener("load", async function () {
     $("#filter").click(() => {
         if(popupPrompt.needsSetup) {
             let innerFn = popupPrompt.innerFn();
-            console.log(innerFn);
+            console.log(innerFn, popupPrompt);
             CardViewer.Elements.cardType = innerFn.find("#cardType");
             CardViewer.Elements.ifMonster = innerFn.find(".ifMonster");
             CardViewer.Elements.ifSpell = innerFn.find(".ifSpell");
@@ -919,16 +946,15 @@ window.addEventListener("load", async function () {
             CardViewer.Elements.cardATKCompare = innerFn.find("#cardATKCompare");
             CardViewer.Elements.cardDEFCompare = innerFn.find("#cardDEFCompare");
 
-            CardViewer.setUpTabSearchSwitching();
+            // CardViewer.setUpTabSearchSwitching();
             popupPrompt.needsSetup = false;
         }
         
         filterHide.empty();
+        CardViewer.setUpTabSearchSwitching();
         popupPrompt.deploy().then(() => {
-            Statistics.focus.button.click();
             popupPrompt.innerFn().appendTo(filterHide);
-            // filterHide.append(.clone());
-            // console.log(filterHide);
+            Statistics.focus.button.click();
         });
         
     });

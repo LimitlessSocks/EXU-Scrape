@@ -451,7 +451,7 @@ database = [
     6848354, #The 9s
     7594853, #Abyssal Enforcer
     7439337, #Anti-Goo
-    5841822, #Tomes
+    # 5841822, #Tomes
     7547609, #Nauticorpse
     7645365, #Solomons Studies
     7671393, #Pyrabbit
@@ -517,6 +517,7 @@ database = [
     6353449, #Generic Traps
     6598717, #Generic Traps II
     7193016, #Generic Traps III
+    7759421, #Generic Traps IV
     6353457, #Assorted TCG Single Support
     6353465, #Staples
 ] + [

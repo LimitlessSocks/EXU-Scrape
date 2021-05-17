@@ -124,7 +124,7 @@ outfile.puts "<body>"
 outfile.puts "<h1>Database Update Log for <code>#{path}</code></h1>"
 
 # toc
-outfile.puts "<ol>"
+outfile.puts "<ol id=\"toc\">"
 outfile.puts "  <li><a href=\"#newCards\">Newly Added Cards</a></li>"
 outfile.puts "  <li><a href=\"#removedCards\">Removed Cards</a></li>"
 outfile.puts "  <li><a href=\"#changedCards\">Changed Cards</a></li>"
