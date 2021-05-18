@@ -743,8 +743,9 @@ CardViewer.exactComparator = (needle, fn = _F.id) => {
         fn(card) === needle;
 };
 CardViewer.equalAnyComparator = (needle, fn = _F.id) => {
-    return (card) =>
-        needle === "any" || fn(card) == needle;
+    return needle === "any" || !needle
+        ? () => true
+        : (card) => fn(card) == needle;
 };
 
 CardViewer.COMPARES = {
@@ -792,6 +793,7 @@ CardViewer.createFilter = function (query, exclude = null) {
             return query;
         }
     }
+    console.log(query);
     let filters = [
         // type filter
         CardViewer.Filters.getFilter(query.type),
@@ -923,6 +925,10 @@ CardViewer.createFilter = function (query, exclude = null) {
         // filters.push(CardViewer.exactComparator("?", _F.propda("def")));
     }
     
+    console.log(filters);
+    if(window.DEBUG) {
+        return (card) => filters.map(f => [f, f(card)]);
+    }
     let filter = (card) => filters.every(filter => filter(card));
     if(exclude) {
         return (card) => filter(card) && !exclude(card);
