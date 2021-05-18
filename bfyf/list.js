@@ -27,6 +27,10 @@ const listOfNamesToArrayFormat = (str) => {
     return s;
 };
 
+const BFYF_CARD_BANLIST = {
+    3461: 1,    // Raigeki Break
+};
+
 const BFYF_CARD_IDS = [
     1721,      // Gagaga Magician
     5186,      // Gagaga Girl

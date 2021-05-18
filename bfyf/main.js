@@ -1,8 +1,3 @@
-let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
-// baseURL = "./";
-window.ycgDatabase = baseURL + "ycg.json";
-window.bfyfDatabase = baseURL + "bfyf.json";
-
 let onLoad = async function () {
     // let response = await fetch(window.databaseToUse);
     // let db = await response.json();
@@ -13,17 +8,8 @@ let onLoad = async function () {
     CardViewer.format = "bfyf";
     
     // remove tcg non-imported
-    for(let [id, card] of Object.entries(CardViewer.Database.cards)) {
-        card.bfyf_status = 3;
-        if(card.custom) continue;
-        if(BFYF_CARD_IDS.indexOf(+id) !== -1) continue;
-        if(CardViewer.Filters.isNormal(card) && !card.pendulum) continue;
-        if(CardViewer.Filters.isNonEffect(card) && CardViewer.Filters.isRitual(card)) continue;
-        card.bfyf_status = -1;
-        // delete CardViewer.Database.cards[id];
-    }
+    await CardViewer.loadBfyf();
     
-    let b= true;
     CardViewer.composeStrategy = function composeWithTcg(card) {
         let k = CardViewer.composeResult(card);
         let ir = k.find(".img-result");
