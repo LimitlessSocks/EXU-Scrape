@@ -69,7 +69,7 @@ database = [
     6524605, #Pure Borrel/Rokket Support
     6791911, #Kaiju Support
     4026672, #Fushioh Richie Support
-    6791947, #Red-Eyes Support
+    # 6791947, #Red-Eyes Support
     # 6450641, #Gimmick Puppet Support
     6438706, #Constellar/Tellarknight Support
     6412660, #Umbral Horror/Numbers 43, 65, 80, and 96 Support

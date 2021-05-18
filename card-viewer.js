@@ -22,6 +22,7 @@ const CardViewer = {
         local: {},
         KEY: "EXU",
     },
+    format: "exu"
 };
 
 // some constants
@@ -741,6 +742,10 @@ CardViewer.exactComparator = (needle, fn = _F.id) => {
     return (card) =>
         fn(card) === needle;
 };
+CardViewer.equalAnyComparator = (needle, fn = _F.id) => {
+    return (card) =>
+        needle === "any" || fn(card) == needle;
+};
 
 CardViewer.COMPARES = {
     equal:          (a, b) => a == b,
@@ -773,6 +778,8 @@ CardViewer.comparingComparator = (needle, compareString, fn = _F.id) => {
 
 CardViewer.or = (...fns) => (...args) => fns.some(fn => fn(...args));
 
+CardViewer.getLimitProperty = () => `${CardViewer.format}_limit`;
+
 CardViewer.createFilter = function (query, exclude = null) {
     if(exclude) {
         exclude = CardViewer.createFilter(exclude);
@@ -804,7 +811,8 @@ CardViewer.createFilter = function (query, exclude = null) {
         // author filter
         CardViewer.textComparator(query.author, _F.propda("username")),
         // limit filter
-        CardViewer.textAnyComparator(query.limit, _F.propda("exu_limit")),
+        // CardViewer.textAnyComparator(query.limit, _F.propda(CardViewer.getLimitProperty())),
+        CardViewer.equalAnyComparator(query.limit, _F.propda(CardViewer.getLimitProperty())),
         // category filter
         (card) =>
             query.category === "any" || !query.category
@@ -846,7 +854,7 @@ CardViewer.createFilter = function (query, exclude = null) {
         filters.push((card) => !CardViewer.Filters.isNormal(card));
     }
     if(query.bfyf) {
-        filters.push((card) => card.bfyf_status >= 0);
+        filters.push((card) => card.bfyf_limit >= 0);
     }
     
     if(query.kind) {
@@ -993,6 +1001,7 @@ const getLinkArrowText = (arrows) => {
     return result;
 };
 
+// CardViewer.
 CardViewer.composeResultSmall = function (card) {
     card.src = card.src || (
         "https://www.duelingbook.com/images/low-res/" + card.id + ".jpg"
@@ -1117,8 +1126,9 @@ CardViewer.composeResultSmall = function (card) {
         importMarker.attr("src", BANLIST_ICONS.altArt);
     }
     
-    if(card.exu_limit !== 3) {
-        banMarker.attr("src", BANLIST_ICONS[card.exu_limit]);
+    let limit = CardViewer.getLimitProperty();
+    if(card[limit] !== 3) {
+        banMarker.attr("src", BANLIST_ICONS[card[limit]]);
     }
     
     if(importMarker.attr("src")) {
@@ -1258,8 +1268,9 @@ CardViewer.composeResult = function (card) {
         importMarker.attr("src", BANLIST_ICONS.altArt);
     }
     
-    if(card.exu_limit !== 3) {
-        banMarker.attr("src", BANLIST_ICONS[card.exu_limit]);
+    let limit = CardViewer.getLimitProperty();
+    if(card[limit] !== 3) {
+        banMarker.attr("src", BANLIST_ICONS[card[limit]]);
     }
     
     if(importMarker.attr("src")) {
