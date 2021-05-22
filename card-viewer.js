@@ -793,7 +793,7 @@ CardViewer.createFilter = function (query, exclude = null) {
             return query;
         }
     }
-    console.log(query);
+    // console.log(query);
     let filters = [
         // type filter
         CardViewer.Filters.getFilter(query.type),
@@ -925,7 +925,7 @@ CardViewer.createFilter = function (query, exclude = null) {
         // filters.push(CardViewer.exactComparator("?", _F.propda("def")));
     }
     
-    console.log(filters);
+    // console.log(filters);
     if(window.DEBUG) {
         return (card) => filters.map(f => [f, f(card)]);
     }
