@@ -40,7 +40,7 @@ Humhumming the Key Djinn
 Melomelody the Brass Djinn
 Muzurhythm the String Djinn
 Temtempo the Percussion Djinn
-All TCG legal Gemini monsters
+#All TCG legal Gemini monsters
 Gemini Summoner
 Featherizer
 Supervise
@@ -79,14 +79,14 @@ Kuriboh
 Golden Ladybug
 Raigeki Break
 Black Ray Lancer
-All non-Pendulum Normal Monsters
+#All non-Pendulum Normal Monsters
 Toll
 Bacon Saver
 Number 39: Utopia
 Space Cyclone
-All non-Effect Ritual Monsters and their corresponding Ritual Spells
+#All non-Effect Ritual Monsters and their corresponding Ritual Spells
 Polymerization
-Type Specific Field Spells, like Umi, Yami, Sogen, Forest, Wasteland, Mountain
+#Type Specific Field Spells, like Umi, Yami, Sogen, Forest, Wasteland, Mountain
 Arcana Force XIV - Temperance
 The Flute of Summoning Kuriboh
 Linkuriboh
@@ -114,7 +114,7 @@ Fusion Sage
 Junk Synchron
 Speed Warrior
 Junk Warrior
-Type specific equips that gain 300 ATK (Legendary Sword, Laser Cannon Armor, etc.)
+#Type specific equips that gain 300 ATK (Legendary Sword, Laser Cannon Armor, etc.)
 Exiled Force
 Snipe Hunter
 Compulsory Escape Device
@@ -258,7 +258,7 @@ Vile Germs
 Sonic Bird
 Senju of the Thousand Hands
 Woodland Archer
-Sentry Solider of Stone
+Sentry Soldier of Stone
 Burning Spear
 Gust Fan
 Steel Shell
@@ -267,10 +267,10 @@ Sword of Dark Destruction
 Elf's Light
 Formula Synchron
 Infinite Cards
-Number
-Number
-Number
-Number
+Number 12: Crimson Shadow Armor Ninja
+Number 19: Freezadon
+Number 33: Chronomaly Machu Mech
+Number 28: Titanic Moth
 Cold Enchanter
 Aegaion the Sea Castrum
 Attack and Receive
@@ -279,3 +279,68 @@ Drill Barnacle
 Firewall
 Lemuria, the Forgotten City
 Vylon Ohm
+Hungry Burger
+Hamburger Recipe
+Synthesis Spell
+Lycanthrope
+Linkerbell
+Risebell the Summoner
+Risebell the Star Psycher
+Risebell the Star Adjuster
+Water Hazard
+Mecha Sea Dragon Plesion
+Tri-Edge Levia
+Half Shut
+V-Tiger Jet
+X-Head Cannon
+W-Wing Catapult
+Y-Dragon Head
+Z-Metal Tank
+VW-Tiger Catapult
+XZ-Tank Cannon
+XY-Dragon Cannon
+YZ-Tank Dragon
+XYZ-Dragon Cannon
+VWXYZ-Dragon Catapult Cannon
+Union Hangar
+Union Scramble
+Volcanic Blaster
+Volcanic Counter
+Volcanic Hammerer
+Volcanic Rocket
+Volcanic Shell
+Volcanic Slicer
+Volcanic Doomfire
+Blaze Accelerator
+Tri-Blaze Accelerator
+Volcanic Recharge
+Red Gadget
+Green Gadget
+Yellow Gadget
+Stronghold The Moving Fortress
+Powerhold The Moving Battery
+Constellar Aldebaran
+Constellar Leonis
+Constellar Kaus
+Constellar Algiedi
+Constellar Sombre
+Constellar Acubens
+Constellar Twinkle
+Constellar Star Cradle
+Constellar Praesepe
+Constellar Ptolemy M7
+Elemental HERO Bubbleman
+Elemental HERO Woodsman
+Elemental HERO Ocean
+Elemental HERO Flame Wingman
+Elemental HERO Phoenix Enforcer
+Elemental HERO Rampart Blaster
+Elemental HERO Steam Healer
+Elemental HERO Mudballman
+Elemental HERO Thunder Giant
+Elemental HERO Shining Flare Wingman
+Elemental HERO Shining Phoenix Enforcer
+Elemental HERO Tempest
+Elemental HERO Mariner
+Elemental HERO Nova Master
+Elemental HERO Terra Firma

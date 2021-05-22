@@ -13,13 +13,13 @@ const listOfNamesToArrayFormat = (str) => {
             map.set(key, { id: id, name: card.name });
         }
     }
-    console.log(map.get("Atlantean Attack Squad"));
+    // console.log(map.get("Atlantean Attack Squad"));
     let s = "[\n";
     for(let [key, { name, id }] of map) {
         if(id !== 0) {
             s += `    ${(id + ",").padEnd(10)} // ${name}\n`;
         }
-        else {
+        else if(name[0] !== '#') {
             console.log("No such card:", name, id);
         }
     }
@@ -286,6 +286,7 @@ const BFYF_CARD_IDS = [
     3920,      // Sonic Bird
     3767,      // Senju of the Thousand Hands
     4801,      // Woodland Archer
+    8064,      // Sentry Soldier of Stone
     581,       // Burning Spear
     2059,      // Gust Fan
     4047,      // Steel Shell
@@ -294,6 +295,10 @@ const BFYF_CARD_IDS = [
     1423,      // Elf's Light
     1661,      // Formula Synchron
     2255,      // Infinite Cards
+    5143,      // Number 12: Crimson Shadow Armor Ninja
+    5126,      // Number 19: Freezadon
+    5493,      // Number 33: Chronomaly Machu Mech
+    8588,      // Number 28: Titanic Moth
     741,       // Cold Enchanter
     7706,      // Aegaion the Sea Castrum
     282,       // Attack and Receive
@@ -302,4 +307,53 @@ const BFYF_CARD_IDS = [
     1596,      // Firewall
     5551,      // Lemuria, the Forgotten City
     4668,      // Vylon Ohm
-];
+    2184,      // Hungry Burger
+    2078,      // Hamburger Recipe
+    4183,      // Synthesis Spell
+    2638,      // Lycanthrope
+    8943,      // Linkerbell
+    7255,      // Risebell the Summoner
+    6117,      // Risebell the Star Psycher
+    5877,      // Risebell the Star Adjuster
+    4704,      // Water Hazard
+    5615,      // Mecha Sea Dragon Plesion
+    6338,      // Tri-Edge Levia
+    2075,      // Half Shut
+    4581,      // V-Tiger Jet
+    4840,      // X-Head Cannon
+    4682,      // W-Wing Catapult
+    4866,      // Y-Dragon Head
+    4888,      // Z-Metal Tank
+    4582,      // VW-Tiger Catapult
+    4863,      // XZ-Tank Cannon
+    4861,      // XY-Dragon Cannon
+    4867,      // YZ-Tank Dragon
+    4862,      // XYZ-Dragon Cannon
+    4583,      // VWXYZ-Dragon Catapult Cannon
+    8173,      // Union Hangar
+    8175,      // Union Scramble
+    4639,      // Volcanic Blaster
+    4640,      // Volcanic Counter
+    4643,      // Volcanic Hammerer
+    4647,      // Volcanic Rocket
+    4649,      // Volcanic Shell
+    4650,      // Volcanic Slicer
+    4641,      // Volcanic Doomfire
+    485,       // Blaze Accelerator
+    4460,      // Tri-Blaze Accelerator
+    4646,      // Volcanic Recharge
+    10333,     // Powerhold the Moving Battery
+    5158,      // Constellar Aldebaran
+    5294,      // Constellar Leonis
+    5286,      // Constellar Kaus
+    5159,      // Constellar Algiedi
+    5675,      // Constellar Sombre
+    5295,      // Constellar Acubens
+    7037,      // Constellar Twinkle
+    5343,      // Constellar Star Cradle
+    5285,      // Constellar Praesepe
+    5284,      // Constellar Ptolemy M7
+    1397,      // Elemental HERO Ocean
+    1396,      // Elemental HERO Nova Master
+    1410,      // Elemental HERO Terra Firma
+]
