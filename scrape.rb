@@ -48,7 +48,8 @@ database = [
     6590945, #Constellar Support
     6746888, #Performapal Sky Magician & Odd-Eyes Support
     6708539, #Trickstar Support
-    6787363, #Random TCG Archetypes Support
+    # 6787363, #Random TCG Archetypes Support
+    7546734, #Random TCG Archetypes Support
     6008240, #Summoned Skull Support
     6686412, #Paladin Ritual Support
     6628957, #Garzett Support
