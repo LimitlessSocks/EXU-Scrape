@@ -374,7 +374,8 @@ database = [
     6874481, #Dark Hole
     6895350, #Owlsh
     # 6777854, #Nebulline
-    6849044, #Nebulline
+    # 6849044, #Nebulline
+    8167114, #Nebulline
     6806175, #Chibright
     # 4330341, #D.N.M.Q.
     6906385, #Legendary Golems
