@@ -34,7 +34,8 @@ function copyTextToClipboard(text) {
     });
 }
 
-const MAX_CHUNK_SIZE = 1900;//2000 doesn't work for some reason
+// const MAX_CHUNK_SIZE = 1900;//2000 doesn't work for some reason
+const MAX_CHUNK_SIZE = 1000;//smaller messages are desirable anyhow
 const formatIntoChunks = function* (iter) {
     let currentChunk = "";
     for(let k of iter) {
