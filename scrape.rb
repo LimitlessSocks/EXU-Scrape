@@ -741,6 +741,7 @@ if note == "temp"
         changed: changed_ids,
         removed: removed_ids,
     }
+    Dir.mkdir "tmp" unless File.exists? "tmp"
     File.write "tmp/#{now_time_ident}.json", database.to_json
     File.write $SCRAPE_FILE, scrape_info.to_json
     puts "Complete scrape with:"
