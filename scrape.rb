@@ -224,7 +224,8 @@ database = [
     7995546, #NTG Support
     5700651, #Kyudo Support
     8055360, #Baba Support
-    
+    5979508, #Myutant Support
+    8105851, #Lightsworn Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -489,6 +490,7 @@ database = [
     7563615, #Metaverse Persona
     6979527, #Pikachu
     7745973, #Graal de Flamme
+    7814419, #Poppin
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
