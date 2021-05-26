@@ -74,13 +74,13 @@ def process_section(to_process, outfile)
     $processed.merge! processed
 end
 
+Entry = Struct.new(:name, :id, :prop, :from, :to)
 def generate_out_diff(path)
     base = File.basename path, ".*"
     out_html = File.join "log-out", base + ".html"
 
     File.write File.join("log-out", "diffy.css"), Diffy::CSS_COLORBLIND_1
 
-    Entry = Struct.new(:name, :id, :prop, :from, :to)
 
     lines = File.read(path).split(/\r?\n|\r/)
     changed_cards = {}
