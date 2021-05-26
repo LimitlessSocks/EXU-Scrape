@@ -1111,3 +1111,12 @@
 [5857285] STARTING TO SCRAPE DECK 5857285
 [5857285] Finished scraping.
 [main] Time elapsed: 493.51627s
+[final] Completing scrape at 05-26-2021.09.17.24
+[main] Reading tmp/db-05-26-2021.09.06.30.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["761094"]
+[interact] Keypress: "i"
+[interact] Saved old version of 761094 (LeSpookie Haunted Mansion)
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
