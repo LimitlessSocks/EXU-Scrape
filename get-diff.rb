@@ -74,114 +74,120 @@ def process_section(to_process, outfile)
     $processed.merge! processed
 end
 
-path = ARGV[0]
-base = File.basename path, ".*"
-out_html = File.join "log-out", base + ".html"
+def generate_out_diff(path)
+    base = File.basename path, ".*"
+    out_html = File.join "log-out", base + ".html"
 
-File.write File.join("log-out", "diffy.css"), Diffy::CSS_COLORBLIND_1
+    File.write File.join("log-out", "diffy.css"), Diffy::CSS_COLORBLIND_1
 
-Entry = Struct.new(:name, :id, :prop, :from, :to)
+    Entry = Struct.new(:name, :id, :prop, :from, :to)
 
-lines = File.read(ARGV[0]).split(/\r?\n|\r/)
-changed_cards = {}
-added_cards = {}
-removed_cards = []
-puts "Processing input file..."
-until lines.empty?
-    t = lines.shift
-    if /\[(\d+)\] note: property '(.+?)' of card id (\d+) \((.+)\).*?changed/ === t
-        deck_id, prop, id, name = $1, $2, $3, $4
-        from = get_body_segment!(lines)
-        to = get_body_segment!(lines)
-        changed_cards[deck_id] ||= []
-        changed_cards[deck_id].push Entry.new(name, id, prop, from, to)
-    elsif /\[main\] note: \[-\] removed old card (\d+) \((.+)\)/ === t
-        # p id, name
-        id, name = $1, $2
-        removed_cards.push Entry.new(name, id)
-    elsif /\[(\d+)\] note: \[\+\] added new card (\d+) \((.+)\)/ === t
-        deck_id, id, name = $1, $2, $3
-        added_cards[deck_id] ||= []
-        added_cards[deck_id].push Entry.new(name, id)
+    lines = File.read(path).split(/\r?\n|\r/)
+    changed_cards = {}
+    added_cards = {}
+    removed_cards = []
+    puts "Processing input file..."
+    until lines.empty?
+        t = lines.shift
+        if /\[(\d+)\] note: property '(.+?)' of card id (\d+) \((.+)\).*?changed/ === t
+            deck_id, prop, id, name = $1, $2, $3, $4
+            from = get_body_segment!(lines)
+            to = get_body_segment!(lines)
+            changed_cards[deck_id] ||= []
+            changed_cards[deck_id].push Entry.new(name, id, prop, from, to)
+        elsif /\[main\] note: \[-\] removed old card (\d+) \((.+)\)/ === t
+            # p id, name
+            id, name = $1, $2
+            removed_cards.push Entry.new(name, id)
+        elsif /\[(\d+)\] note: \[\+\] added new card (\d+) \((.+)\)/ === t
+            deck_id, id, name = $1, $2, $3
+            added_cards[deck_id] ||= []
+            added_cards[deck_id].push Entry.new(name, id)
+        end
     end
+
+    puts "Done processing."
+    puts "Writing to output file..."
+
+    outfile = File.open(out_html, "w")
+    outfile.puts "<!DOCTYPE html>"
+    outfile.puts "<html lang=\"en\">"
+    outfile.puts "<head>"
+    outfile.puts "  <meta charset=\"UTF-8\">"
+    outfile.puts "  <link rel=\"STYLESHEET\" href=\"../card-viewer.css\">"
+    outfile.puts "  <link rel=\"STYLESHEET\" href=\"style.css\">"
+    outfile.puts "  <title>EXU: Changes for #{path}</title>"
+    outfile.puts "  <script src=\"./main.js\"></script>"
+    outfile.puts "</head>"
+
+    outfile.puts "<body>"
+    outfile.puts "<h1>Database Update Log for <code>#{path}</code></h1>"
+
+    # toc
+    outfile.puts "<ol id=\"toc\">"
+    outfile.puts "  <li><a href=\"#newCards\">Newly Added Cards</a></li>"
+    outfile.puts "  <li><a href=\"#removedCards\">Removed Cards</a></li>"
+    outfile.puts "  <li><a href=\"#changedCards\">Changed Cards</a></li>"
+    outfile.puts "</ol>"
+
+    # new cards
+    outfile.puts "<h1 id=\"newCards\">Newly Added Cards</h1>"
+    outfile.puts "<div class=\"minimizable\">"
+    added_cards.each { |id, entries|
+        h2_id = "DeckAdd#{id}"
+        outfile.puts "  <h2 id=\"#{h2_id}\"><a class=\"toplink\" href=\"##{h2_id}\">#</a> Deck #{id}</h2>"
+        outfile.puts "    <ul>"
+        entries.sort_by(&:name).each { |entry|
+            outfile.puts "      <li class=simple-card>#{entry.name}</li>"
+        }
+        outfile.puts "    </ul>"
+    }
+    outfile.puts "</div>" #close minimizable
+    # removed cards
+    outfile.puts "<h1 id=\"removedCards\">Removed cards</h1>"
+    outfile.puts "<div class=\"minimizable\">"
+    outfile.puts "  <ul>"
+    removed_cards.sort_by(&:name).each { |entry|
+        outfile.puts "    <li class=simple-card>#{entry.name}</li>"
+    }
+    outfile.puts "  </ul>"
+    outfile.puts "</div>" #close minimizable
+    # changes
+    outfile.puts "<h1 id=\"changedCards\">Changed Cards</h1>"
+
+    outfile.puts "<div class=\"minimizable\">"
+
+    total = changed_cards.size
+    total_changes = changed_cards.sum { |key, arr| arr.size }
+    outfile.puts "<p>Number of changes: ~#{total_changes} #{pluralize "card", total_changes} in #{total} #{pluralize "decklist", total}</p>"
+    outfile.puts "<hr>"
+
+    changed_cards.each.with_index(1) { |(id, entries), i|
+        progress = "#{i}/#{total}"
+        print id.to_s.ljust(10) + progress + "\r"
+        
+        h2_id = "DeckChange#{id}"
+        outfile.puts "<h2 id=\"#{h2_id}\"><a class=\"toplink\" href=\"##{h2_id}\">#</a> Deck #{id}</h2>"
+        outfile.puts "<div id=\"deck-changes\">"
+        
+        process_section entries, outfile
+        
+        outfile.puts "</div>"
+    }
+
+    outfile.puts "</div>" #close minimizable
+
+    ## tidying up ##
+
+    outfile.puts "</body>"
+    outfile.puts "</html>"
+    outfile.close
+    puts 
+    puts "Wrote to #{out_html}"
+    puts "Done."
 end
 
-puts "Done processing."
-puts "Writing to output file..."
 
-outfile = File.open(out_html, "w")
-outfile.puts "<!DOCTYPE html>"
-outfile.puts "<html lang=\"en\">"
-outfile.puts "<head>"
-outfile.puts "  <meta charset=\"UTF-8\">"
-outfile.puts "  <link rel=\"STYLESHEET\" href=\"../card-viewer.css\">"
-outfile.puts "  <link rel=\"STYLESHEET\" href=\"style.css\">"
-outfile.puts "  <title>EXU: Changes for #{path}</title>"
-outfile.puts "  <script src=\"./main.js\"></script>"
-outfile.puts "</head>"
-
-outfile.puts "<body>"
-outfile.puts "<h1>Database Update Log for <code>#{path}</code></h1>"
-
-# toc
-outfile.puts "<ol id=\"toc\">"
-outfile.puts "  <li><a href=\"#newCards\">Newly Added Cards</a></li>"
-outfile.puts "  <li><a href=\"#removedCards\">Removed Cards</a></li>"
-outfile.puts "  <li><a href=\"#changedCards\">Changed Cards</a></li>"
-outfile.puts "</ol>"
-
-# new cards
-outfile.puts "<h1 id=\"newCards\">Newly Added Cards</h1>"
-outfile.puts "<div class=\"minimizable\">"
-added_cards.each { |id, entries|
-    h2_id = "DeckAdd#{id}"
-    outfile.puts "  <h2 id=\"#{h2_id}\"><a class=\"toplink\" href=\"##{h2_id}\">#</a> Deck #{id}</h2>"
-    outfile.puts "    <ul>"
-    entries.sort_by(&:name).each { |entry|
-        outfile.puts "      <li class=simple-card>#{entry.name}</li>"
-    }
-    outfile.puts "    </ul>"
+ARGV.each { |path|
+    generate_out_diff path
 }
-outfile.puts "</div>" #close minimizable
-# removed cards
-outfile.puts "<h1 id=\"removedCards\">Removed cards</h1>"
-outfile.puts "<div class=\"minimizable\">"
-outfile.puts "  <ul>"
-removed_cards.sort_by(&:name).each { |entry|
-    outfile.puts "    <li class=simple-card>#{entry.name}</li>"
-}
-outfile.puts "  </ul>"
-outfile.puts "</div>" #close minimizable
-# changes
-outfile.puts "<h1 id=\"changedCards\">Changed Cards</h1>"
-
-outfile.puts "<div class=\"minimizable\">"
-
-total = changed_cards.size
-total_changes = changed_cards.sum { |key, arr| arr.size }
-outfile.puts "<p>Number of changes: ~#{total_changes} #{pluralize "card", total_changes} in #{total} #{pluralize "decklist", total}</p>"
-outfile.puts "<hr>"
-
-changed_cards.each.with_index(1) { |(id, entries), i|
-    progress = "#{i}/#{total}"
-    print id.to_s.ljust(10) + progress + "\r"
-    
-    h2_id = "DeckChange#{id}"
-    outfile.puts "<h2 id=\"#{h2_id}\"><a class=\"toplink\" href=\"##{h2_id}\">#</a> Deck #{id}</h2>"
-    outfile.puts "<div id=\"deck-changes\">"
-    
-    process_section entries, outfile
-    
-    outfile.puts "</div>"
-}
-
-outfile.puts "</div>" #close minimizable
-
-## tidying up ##
-
-outfile.puts "</body>"
-outfile.puts "</html>"
-outfile.close
-puts 
-puts "Wrote to #{out_html}"
-puts "Done."

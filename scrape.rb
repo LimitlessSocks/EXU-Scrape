@@ -1,32 +1,22 @@
 VALID_OPERATIONS = ["main", "banlist", "test", "beta", "bfyf"]
+VALID_NOTES = [nil, "temp"]
 operation = ARGV[0]
-
+note = ARGV[1]
 
 unless VALID_OPERATIONS.include? operation
     STDERR.puts "Expected an operation [#{VALID_OPERATIONS * ", "}], got: #{operation.inspect}"
     exit 1
 end
+unless VALID_NOTES.include? note
+    STDERR.puts "Expected an note [#{VALID_NOTES * ", "}], got: #{note.inspect}"
+    exit 2
+end
 
 require 'capybara'
 require 'json'
+require_relative 'finalize-scrape.rb'
 start = Time.now
 
-# ids = [1231402, 1291692, 902755, 1318524, 1319058]
-# ids.each { |id|
-    # puts "Visiting page..."
-    # session.visit("https://www.duelingbook.com/card?id=#{id}")
-    # puts "Loaded!"
-
-    # src = nil
-    # loop do
-        # src = session.evaluate_script '$(my_card[0]).find("img.pic").attr("src")'
-        # break if src != "./images/black.jpg"
-    # end
-    # data = session.evaluate_script 'my_card.data()'
-    # data["src"] = src
-    # database[id] = data
-    # puts data["name"] + " loaded."
-# }
 puts "Loading capybara..."
 $session = Capybara::Session.new(:selenium)
 puts "Loaded!"
@@ -93,7 +83,7 @@ database = [
     6239411, #Prank-Kids Support
     5894044, #Shino Support
     5749949, #Ancient Warriors Support
-    4251928, #Traptrix Support
+    # 4251928, #Traptrix Support
     4936132, #F.A. Support
     # 5177132, #Darklord Support
     5219266, #Phantom Beast Support
@@ -233,6 +223,7 @@ database = [
     7973339, #Stage Girl Support
     7995546, #NTG Support
     5700651, #Kyudo Support
+    8055360, #Baba Support
     
     
     #--------------------------------------------------------------------#
@@ -310,7 +301,7 @@ database = [
     3689114, #LeSpookie
     6209092, #Acrimonic
     5884678, #Arsenal
-    6121762, #Hydromunculus
+    # 6121762, #Hydromunculus
     6233896, #Mirror Force Archetype
     4667428, #Xiuhqui
     6040042, #Kuuroma
@@ -348,7 +339,7 @@ database = [
     6563112, #NTG
     6582550, #Darkwater
     # 6560628, #Charismatic
-    7877196, #Glow Gods
+    # 7877196, #Glow Gods
     6604359, #Chronoruler
     6601142, #Serpent Night
     6649729, #Flamiller
@@ -359,7 +350,7 @@ database = [
     # 4456007, #Latria
     6674104, #Geschellschcaft
     6699578, #GG (Galatic Gods)
-    6707275, #Malevolessence
+    # 6707275, #Malevolessence
     4406016, #Onion Slice
     6719358, #Vengeful Tox
     6733479, #Ookazi
@@ -494,6 +485,10 @@ database = [
     7959099, #Intranger
     7499374, #O.F.F
     8034682, #Circersolar
+    8010982, #Draken
+    7563615, #Metaverse Persona
+    6979527, #Pikachu
+    7745973, #Graal de Flamme
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
@@ -538,7 +533,8 @@ banlist = [
 ]
 
 test = [
-    6254262
+    8152193,
+    # 8109227
 ]
 
 beta = [
@@ -631,27 +627,13 @@ def approximately_equal(a, b)
     a == b
 end
 
-now_time_name = Time.now.strftime("log/#{outname}-%m-%d-%Y.%H.%M.%S.txt")
-
+now_time_ident = Time.now.strftime("#{outname}-%m-%d-%Y.%H.%M.%S")
+now_time_name = "log/" + now_time_ident + ".txt"
 $log_file = File.open(now_time_name, "w:UTF-8")
-def log(src, info)
-    str = "[#{src}] #{info}"
-    puts str.gsub(/\r/, "\n")
-    $log_file.puts str if $log_file
-end
 
 log "main", "Created log file #{now_time_name}"
 
-old_database = if File.exist? "#{outname}.json"
-    file = File.open "#{outname}.json", "r:UTF-8"
-    text = file.read
-    file.close
-    log "main", "Reading #{outname}.json"
-    JSON.parse text
-else
-    log "main", "Creating new file #{outname}.json"
-    {}
-end
+old_database = get_database outname
 database = {}
 counts = Hash.new 0
 type_replace = /\(.*?This (?:card|monster)'s original Type is treated as (.+?) rather than (.+?)[,.].*?\)/
@@ -750,212 +732,23 @@ finish = Time.now
 
 log "main", "Time elapsed: #{finish - start}s"
 
-log "interact", "Beginning interaction phase."
-
-log "interact", "Changed ids: #{changed_ids}"
-
-def get_option(opts)
-    puts "=============================="
-    finish = opts.delete :finish
-    opts.each { |key, val|
-        puts " #{key}) #{val}"
+if note == "temp"
+    # puts "Press ENTER to finalize temporary staging."
+    # STDIN.gets
+    scrape_info = JSON::parse File.read $SCRAPE_FILE
+    scrape_info[now_time_ident] = {
+        outname: outname,
+        changed: changed_ids,
+        removed: removed_ids,
     }
-    if finish
-        puts "------------------------------"
-        puts " ENTER) finish"
-        opts[""] = true
-    end
-    puts "=============================="
-    option = nil
-    until opts.include? option
-        unless option.nil?
-            puts "Invalid option #{option.inspect}"
-        end
-        option = STDIN.gets.chomp
-    end
-    option
+    File.write "tmp/#{now_time_ident}.json", database.to_json
+    File.write $SCRAPE_FILE, scrape_info.to_json
+    puts "Complete scrape with:"
+    puts "  finalize-scrape.rb \"#{now_time_ident}\""
+else
+    interact_phase(old_database, database, changed_ids, removed_ids)
+    puts "Press ENTER to confirm database entry."
+    STDIN.gets
+    File.write "#{outname}.json", database.to_json
 end
-
-def display_key(obj)
-    if String === obj
-        puts obj.gsub(/^/m, "    ")
-    else
-        p obj
-    end
-end
-
-new_database = database.dup
-
-puts "=============================="
-puts "DATABASE INTERACTION"
-loop {
-begin
-    # puts "=============================="
-    # puts " 1) Select card by id"
-    # puts " X) Select card by deck source"
-    # puts " X) Select card by pattern search"
-    # puts "------------------------------"
-    # puts " ENTER) finish"
-    # puts "=============================="
-    option = get_option(
-        "i" => "Select card by [i]d",
-        # "s" => "Select card by deck [s]ource",
-        "p" => "Select card by [p]attern search",
-        finish: true
-    )
-    if option.empty?
-        log "interact", "Exiting interaction"
-        break
-    end
-    log "interact", "Keypress: #{option.inspect}"
-    case option
-    when "p"
-        puts "Target parameter (default: name):"
-        parameter = STDIN.gets.chomp
-        parameter = "name" if parameter.empty?
-        
-        puts "Input pattern (regular expression):"
-        pattern = Regexp.new STDIN.gets.chomp, Regexp::IGNORECASE
-        
-        matches = []
-        
-        new_database.each { |key, value|
-            if pattern === value[parameter]
-                matches << value
-            end
-        }
-        removed_ids.each { |rid|
-            value = old_database[rid]
-            if pattern === value[parameter]
-                matches << value
-            end
-        }
-        
-        count = matches.size
-        
-        matches.each.with_index(1) { |match, i|
-            puts "(#{i}/#{count}) #{match["id"]} #{match["name"]}"
-            display_key match["effect"]
-        }
-        ids = matches.map { |match| match["id"].to_s }
-        if count.zero?
-            log "interact", "No cards found matching #{pattern.inspect}."
-        else
-            log "interact", "Found cards with ids #{ids}."
-        
-            operation = nil
-            while operation.nil? or operation == "d"
-                if operation == "d"
-                    puts "Enter space-separated id(s):"
-                    ids = STDIN.gets.chomp.split
-                    matches.select! { |match| ids.include? match["id"] }
-                    log "interact", "Removed from selection: #{ids}"
-                end
-                operation = get_option(
-                    "r" => "[r]eject all changes (save old versions)",
-                    "a" => "[a]ccept all changes (save new versions)",
-                    "d" => "[d]elete id(s) from operation selection and re-prompt",
-                    finish: true,
-                )
-                if operation.empty?
-                    log "interact", "No action taken."
-                end
-            end
-            
-            case operation
-            when "r"
-                source_db = old_database
-                log "interact", "Replacing ids with old version: #{ids}"
-            when "a"
-                source_db = new_database
-                log "interact", "Replacing ids with new version: #{ids}"
-            end
-            
-            if source_db
-                ids.each { |id|
-                    database[id] = source_db[id] || database[id]
-                }
-            end
-        end
-        
-        
-    when "i"
-        puts "Input card id:"
-        card_id = nil
-        until old_database[card_id] or new_database[card_id]
-            unless card_id.nil?
-                puts "Invalid ID #{card_id.inspect}"
-            end
-            card_id = STDIN.gets.chomp
-        end
-        # puts card_id
-        
-        old_entry = old_database[card_id]
-        new_entry = new_database[card_id]
-        
-        old_name = old_entry && old_entry["name"]
-        new_name = new_entry && new_entry["name"]
-        
-        name = if old_name == new_name
-            old_name
-        else
-            "#{old_name} / #{new_name}"
-        end
-        
-        puts "== #{name} (#{card_id}) =="
-        
-        puts "Enter input parameter (or ENTER, to see entire hash):"
-        parameter = STDIN.gets.chomp
-        
-        
-        
-        if old_entry == new_entry
-            puts "No changes made to #{card_id} (#{name})"
-        else
-            puts ">> Old entry <<"
-            old_value = old_entry && !parameter.empty? ? old_entry[parameter] : old_entry
-            display_key old_value
-            puts 
-            
-            puts ">> New entry <<"
-            new_value = new_entry && !parameter.empty? ? new_entry[parameter] : new_entry
-            display_key new_value
-            puts
-            
-            old_or_new = get_option(
-                "o" => "Replace with [o]ld entry",
-                "n" => "Replace with [n]ew entry",
-                "x" => "No action [x]",
-            )
-            
-            if old_or_new == "o"
-                database[card_id] = old_entry
-                log "interact", "Saved old version of #{card_id} (#{name})"
-            elsif old_or_new == "n"
-                database[card_id] = new_entry
-                log "interact", "Saved new version of #{card_id} (#{name})"
-            else
-                #no action
-                log "interact", "No action taken"
-            end
-        
-        end
-        
-        
-    else
-        log "interact", "Unrecognized input command."
-    end
-rescue Interrupt => e
-    puts "Are you sure you want to exit interaction? ^C again to quit. ENTER to continue."
-    begin
-        STDIN.gets
-    rescue Interrupt => e
-        break
-    end
-end
-}
-
-puts "Press ENTER to confirm database entry."
-STDIN.gets
 $log_file.close
-File.write "#{outname}.json", database.to_json
