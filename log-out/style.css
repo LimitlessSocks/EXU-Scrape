@@ -18,6 +18,24 @@ p.skip {
     margin-bottom: 10px;
 }
 
+.chunks {
+    background: #36393f;
+    padding: 15px;
+}
+.display {
+    background: #2f3136;
+    color: #b9bbbe;
+    border: 1px solid #202225;
+    padding: 8px;
+    /* box-shadow: 0 0 15px #36393f, 0 0 15px #36393f, 0 0 15px #36393f; */
+    font-family: "Fira Mono", "Consolas", monospace;
+    border-radius: 6px;
+    white-space: pre-wrap;
+}
+.display + .display {
+    margin-top: 8px;
+}
+
 a.toplink, a.toplink:visited {
     color: #88c;
     text-decoration: none;

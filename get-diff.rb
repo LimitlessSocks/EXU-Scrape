@@ -168,7 +168,7 @@ def generate_out_diff(path)
         
         h2_id = "DeckChange#{id}"
         outfile.puts "<h2 id=\"#{h2_id}\"><a class=\"toplink\" href=\"##{h2_id}\">#</a> Deck #{id}</h2>"
-        outfile.puts "<div id=\"deck-changes\">"
+        outfile.puts "<div class=\"deck-changes\">"
         
         process_section entries, outfile
         
