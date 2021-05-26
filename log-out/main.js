@@ -118,5 +118,5 @@ window.addEventListener("load", function () {
     let toc = document.getElementById("toc");
     document.body.insertBefore(showChangeList, toc.nextSibling);
     
-    showChangeList.click();
+    // showChangeList.click();
 });
