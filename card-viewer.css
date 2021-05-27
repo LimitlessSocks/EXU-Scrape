@@ -459,17 +459,17 @@ input[type=number].inline {
 .result.small h3.result-name {
     font-size: 0.9em;
 }
-.result.small.new {
-    box-shadow: 0 0 20px 10px gold;
-    order: -5;
+.result.small.unimported {
+    box-shadow: 0 0 10px 5px #ff9966;
+    order: -3;
 }
 .result.small.different {
     box-shadow: 0 0 10px 5px #fe25f1;
     order: -3;
 }
-.result.small.unimported {
-    box-shadow: 0 0 10px 5px #ff9966;
-    order: -3;
+.result.small.new {
+    box-shadow: 0 0 20px 10px gold;
+    order: -5;
 }
 
 select.thin {

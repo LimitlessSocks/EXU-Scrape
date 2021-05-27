@@ -76,7 +76,7 @@ let onLoad = async function () {
     let tags = ["Forbidden", "Limited", "Semi-Limited", "Unlimited"];
     
     const NewCards = [
-        4108, 7671, 4939, 10654, 11553, 11555, 8521, 884, 8490, 10624, 8335, 10584, 8489, 8488, 11268, 3943, 3885, 7601, 605, 4412, 606, 6687, 109, 4217, 370, 11067, 11627, 310, 2232120, 3176, 8462, 11251, 11050, 11115, 11297, 11096, 11090, 11091, 4182, 181, 2685, 10725, 11057, 11055, 11056, 11080, 10705, 11087, 11099, 11100, 11116, 11316, 4599, 2930, 10695
+        4108, 7671, 4939, 10654, 11553, 11555, 8521, 884, 8490, 10624, 8335, 10584, 8489, 8488, 11268, 3943, 3885, 7601, 605, 4412, 606, 6687, 109, 4217, 370, 11067, 11627, 310, 2232120, 3176, 8462, 11251, 11050, 11115, 11297, 11096, 11090, 11091, 4182, 181, 2685, 10725, 11057, 11055, 11056, 11080, 10705, 11087, 11099, 11100, 11116, 11316, 4599, 2930, 10695, 9242, 1138
     ];
     
     const GradeFilters = [
@@ -174,7 +174,7 @@ let onLoad = async function () {
         
         let selection = CardViewer.Search.pages.flat();
         let header = $("<h2 class=main>")
-            .append($("<span>").text(tag + " Cards (" + selection.length + ")"))
+            .append($("<span>").text(tag + " Card" + (selection.length == 1 ? " 😔 " : "s ")+ "(" + selection.length + ")"))
             .attr("id", tag)
             .append($("<a class=top-arrow>").text("\u2b06").attr("href", "#top"));
         CardViewer.Elements.results.append(header);
