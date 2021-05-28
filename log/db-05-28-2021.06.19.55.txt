@@ -1241,3 +1241,12 @@ Yeah!
 [main] note: [-] removed old card 11084 (Raider's Knight)
 [main] note: [-] removed old card 8231 (Toadally Awesome)
 [main] Time elapsed: 542.167714s
+[final] Completing scrape at 05-28-2021.06.43.41
+[main] Reading tmp/db-05-28-2021.06.19.55.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1732215", "2135823", "332954", "761094", "1236817", "1863180", "1814994", "1970795", "1607455", "1607444", "1607481", "1845296", "1850447", "1850447", "1863180", "1793538", "2321207", "1951735", "1951735", "1793538"]
+[interact] Keypress: "i"
+[interact] Saved old version of 761094 (LeSpookie Haunted Mansion)
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
