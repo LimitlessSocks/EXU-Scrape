@@ -40,7 +40,7 @@ class PlayerCalculations {
         this.defaultElo = DEFAULT_ELO;
     }
     
-    addPlayer(name, elo=null) {
+    addPlayer(name, ping, elo=null) {
         if(elo === null) {
             elo = this.defaultElo;
         }
@@ -48,28 +48,37 @@ class PlayerCalculations {
         if(name in this.scores) {
             throw new Error("Player already exists: " + name);
         }
-        this.scores[name] = elo;
+        this.scores[name] = {
+            ping: ping,
+            elo: elo
+        };
     }
     
     parsePlayerList(input) {
-        for(let [ all, name, elo ] of input.matchAll(/(.+) (\d[\d.]*)$/gm)) {
-            this.addPlayer(name, parseFloat(elo));
+        for(let [ all, name, ping, elo ] of input.matchAll(/(?:\d+\.\s*)?(.+?)\s*\|\s*(.+?): (\d[\d.]*)$/gm)) {
+            this.addPlayer(name, ping, parseFloat(elo));
         }
     }
     
     playerEncounter(a, b, aScore, bScore) {
-        let aElo = this.scores[a];
-        let bElo = this.scores[b];
+        let aElo = this.scores[a].elo;
+        let bElo = this.scores[b].elo;
         
         [aElo, bElo] = Elo.twoWayCalculation(aElo, bElo, aScore, bScore);
         
-        this.scores[a] = aElo;
-        this.scores[b] = bElo;
+        this.scores[a].elo = aElo;
+        this.scores[b].elo = bElo;
     }
     
     battlePlayers(input) {
         let count = 0;
-        for(let [ all, a, aScore, bScore, b ] of input.matchAll(/^\s*(.+?)\s*(\d)\s*-\s*(\d)\s*(.+?)\s*$/gm)) {
+        for(let [ all, a, aScore, bScore, b ] of input.matchAll(/^\s*(.+?)\s*(\d)\s*-\s*(\d)\s*(.+?)\s*$|^-.+/gm)) {
+            if(all[0] == "-") {
+                let nick = all.slice(1);
+                console.log(all, nick);
+                delete this.scores[nick];
+                continue;
+            }
             this.playerEncounter(a, b, parseInt(aScore), parseInt(bScore));
             count++;
         }
@@ -78,8 +87,8 @@ class PlayerCalculations {
     
     toString() {
         return Object.entries(this.scores)
-            .sort((a, b) => b[1] - a[1])
-            .map(e => e.join(" "))
+            .sort((a, b) => b[1].elo - a[1].elo)
+            .map((e, i) => (i + 1) + ". " + e[0] + " | " + e[1].ping + ": " + e[1].elo)
             .join("\n");
     }
 };
