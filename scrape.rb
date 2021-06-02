@@ -228,6 +228,7 @@ database = [
     8055360, #Baba Support
     5979508, #Myutant Support
     8105851, #Lightsworn Support
+    7969621, #Magistus Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -494,6 +495,12 @@ database = [
     6979527, #Pikachu
     7745973, #Graal de Flamme
     7814419, #Poppin
+    4016329, #Boehstoic
+    7961879, #Mermaidol
+    8170513, #Jolsprit
+    8152211, #Bolt Arc
+    8105715, #Spacial Demon
+    8055913, #Flutterbleu
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
