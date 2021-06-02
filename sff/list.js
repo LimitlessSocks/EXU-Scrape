@@ -394,4 +394,36 @@ const SFF_CARD_IDS = [
     1431,      // Emergency Provisions
     5064,      // Shard of Greed
     6459,      // Electromagnetic Turtle
+    2231,      // Infernity Avenger
+    2234,      // Infernity Beetle
+    5545,      // Mermail Abysspike
+    5546,      // Mermail Abyssturge
+    5987,      // Mermail Abyssbalaen
+    4495,      // Turbo Synchron
+    1294,      // Drill Synchron
+    3610,      // Road Synchron
+    3153,      // Nitro Synchron
+    3436,      // Quickdraw Synchron
+    1295,      // Drill Warrior
+    3155,      // Nitro Warrior
+    4496,      // Turbo Warrior
+    3611,      // Road Warrior
+    6226,      // Gorgonic Gargoyle
+    6227,      // Gorgonic Ghoul
+    6228,      // Gorgonic Cerberus
+    888,       // Cyberdark Horn
+    887,       // Cyberdark Edge
+    890,       // Cyberdark Keel
+    886,       // Cyberdark Dragon
+    889,       // Cyberdark Impact!
+    3299,      // Phantom Magician
+    1381,      // Elemental HERO Heat
+    1385,      // Elemental HERO Lady Heat
+    1391,      // Elemental HERO Necroshade
+    1364,      // Elemental HERO Bladedge
+    1390,      // Elemental HERO Necroid Shaman
+    1414,      // Elemental HERO Wild Wingman
+    1371,      // Elemental HERO Darkbright
+    1383,      // Elemental HERO Inferno
+    1373,      // Elemental HERO Electrum
 ];
