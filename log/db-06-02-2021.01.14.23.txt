@@ -1420,3 +1420,12 @@ When this card destroys an opponent's monster by battle: You can attach that des
 [main] note: [-] removed old card 2268597 (Black Hat The Villainous)
 [main] note: [-] removed old card 2232128 (Firewall Dragon)
 [main] Time elapsed: 590.937441s
+[final] Completing scrape at 06-02-2021.01.35.37
+[main] Reading tmp/db-06-02-2021.01.14.23.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["2115735", "1521690", "1521632", "1523761", "761094", "1926497", "1926497", "1968848", "1968848", "1961926", "1968820", "1968876", "2056655", "2178756", "787295", "787295", "1965309", "1965309", "1965309", "1965324", "1965324", "1969765", "1969765", "1156564", "2208858", "2015194", "2015204", "2015198", "2015200", "2015206", "2184888", "1984624", "2122306", "1904195", "2106717"]
+[interact] Keypress: "i"
+[interact] Saved old version of 761094 (LeSpookie Haunted Mansion)
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
