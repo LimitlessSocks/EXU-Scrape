@@ -2,7 +2,7 @@
 const listOfNamesToArrayFormat = (str) => {
     let map = new Map();
     for(let line of str.split(/\r?\n/)) {
-        map.set(line.toLowerCase(), { id: 0, name: line });
+        map.set(line.toLowerCase().trim(), { id: 0, name: line });
     }
     for(let [id, card] of Object.entries(CardViewer.Database.cards)) {
         // if(card.name.indexOf("Atlantean") !== -1) {
@@ -26,6 +26,9 @@ const listOfNamesToArrayFormat = (str) => {
     s += "]";
     return s;
 };
+
+// (:card_\w+:\s*)+(.+?)\d+ :white_c
+// 
 
 const BFYF_CARD_BANLIST = {
     3461: 1,    // Raigeki Break
@@ -356,4 +359,39 @@ const BFYF_CARD_IDS = [
     1397,      // Elemental HERO Ocean
     1396,      // Elemental HERO Nova Master
     1410,      // Elemental HERO Terra Firma
-]
+    8760,      // The Legendary Fisherman II
+    1704,      // Fusion Gate
+    3138,      // Night's End Sorcerer
+    5484,      // Dust Knight
+    5614,      // Shore Knight
+    5720,      // Brushfire Knight
+    5791,      // Altitude Knight
+    6434,      // Dawn Knight
+    1200,      // Divine Sword - Phoenix Blade
+    5763,      // Noble Arms - Caliburn
+    3351,      // Power Breaker
+    1867,      // Gilford the Legend
+    2684,      // Magical Exemplar
+    5659,      // Starliege Paladynamo
+    1594,      // Fires of Doomsday
+    4084,      // Stygian Sergeants
+    4085,      // Stygian Street Patrol
+    2601,      // Limit Reverse
+    271,       // Astral Barrier
+    6812,      // Fusion Reserve
+    4655,      // Vortex Trooper
+    2817,      // Megarock Dragon
+    5678,      // Attack the Moon!
+    3621,      // Rock Bombardment
+    5507,      // Catapult Zone
+    5496,      // Soul of Silvermountain
+    6585,      // Flash Fusion
+    4578,      // Urgent Tuning
+    7928,      // Wonder Xyz
+    3062,      // Naturia Cosmobeet
+    4262,      // The Creator
+    7538,      // Urgent Ritual Art
+    1431,      // Emergency Provisions
+    5064,      // Shard of Greed
+    6459,      // Electromagnetic Turtle
+];
