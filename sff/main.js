@@ -2,13 +2,13 @@ let onLoad = async function () {
     // let response = await fetch(window.databaseToUse);
     // let db = await response.json();
     // CardViewer.Database.setInitial(db);
-    await CardViewer.Database.initialReadAll(ycgDatabase, bfyfDatabase);
+    await CardViewer.Database.initialReadAll(ycgDatabase, sffDatabase);
     CardViewer.firstTime = false;
     CardViewer.excludeTcg = false;
-    CardViewer.format = "bfyf";
+    CardViewer.format = "sff";
     
     // remove tcg non-imported
-    await CardViewer.loadBfyf();
+    await CardViewer.loadSff();
     
     CardViewer.composeStrategy = function composeWithTcg(card) {
         let k = CardViewer.composeResult(card);
@@ -76,7 +76,7 @@ let onLoad = async function () {
     CardViewer.Elements.saveSearch.click(() => {
         let strs = [];
         for(let [key, value] of Object.entries(CardViewer.query())) {
-            if(value !== "" && value !== "any" && key !== "imported" && key !== "notImported" && key !== "alsoImported" && key !== "bfyf") {
+            if(value !== "" && value !== "any" && key !== "imported" && key !== "notImported" && key !== "alsoImported" && key !== "sff") {
                 if(key === "notNormal" && !value) continue;
                 if(key.indexOf("Compare") !== -1 && value === "equal") continue;
                 strs.push(key + "=" + value);
@@ -165,7 +165,7 @@ let onLoad = async function () {
                     }
                     continue;
                 }
-                else if(key === "group" || key === "alsoImported" || key === "bfyf") {
+                else if(key === "group" || key === "alsoImported" || key === "sff") {
                     continue;
                 }
             }

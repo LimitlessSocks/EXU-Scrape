@@ -1,4 +1,4 @@
-VALID_OPERATIONS = ["main", "banlist", "test", "beta", "bfyf"]
+VALID_OPERATIONS = ["main", "banlist", "test", "beta", "sff"]
 VALID_NOTES = [nil, "temp"]
 operation = ARGV[0]
 note = ARGV[1]
@@ -49,7 +49,8 @@ database = [
     6746888, #Performapal Sky Magician & Odd-Eyes Support
     6708539, #Trickstar Support
     # 6787363, #Random TCG Archetypes Support
-    7546734, #Random TCG Archetypes Support
+    # 7546734, #Random TCG Archetypes Support
+    8202865, #Random TCG Archetypes Support
     6008240, #Summoned Skull Support
     6686412, #Paladin Ritual Support
     6628957, #Garzett Support
@@ -239,7 +240,7 @@ database = [
     4757288, #Pandas
     # 4861946, #Poppin
     # 4547335, #Titanus
-    4570517, #Harbinger
+    # 4570517, #Harbinger
     4910893, #Aria Fey
     5075635, #Starships
     # 5176216, #Antiqua
@@ -507,6 +508,7 @@ database = [
     7552348, #Generic Monsters VIII
     7753395, #Generic Monsters IX
     7934346, #Generic Monsters X
+    8202812, #Generic Monsters XI
     6353430, #Generic Spells
     6419184, #Generic Spells II
     6871664, #Generic Spells III
@@ -547,7 +549,7 @@ beta = [
 ]
 
 # baby's first yugioh format
-bfyf = [
+sff = [
     8055759
 ]
 
@@ -596,15 +598,15 @@ elsif operation == "banlist"
 elsif operation == "beta"
     decks = beta
     outname = "beta"
-elsif operation == "bfyf"
-    decks = bfyf
-    outname = "bfyf"
+elsif operation == "sff"
+    decks = sff
+    outname = "sff"
 else
     decks = test
     outname = "test"
 end
 
-ignore_banlist = ["test", "beta", "bfyf"]
+ignore_banlist = ["test", "beta", "sff"]
 
 decks += extra_info_order unless ignore_banlist.include? operation
 

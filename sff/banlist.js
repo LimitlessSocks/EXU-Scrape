@@ -49,7 +49,7 @@ let onLoad = async function () {
     CardViewer.Elements.popup = $("#popup");
     CardViewer.linkRetrain = true;
     
-    await CardViewer.loadBfyf();
+    await CardViewer.loadSff();
     
     CardViewer.Elements.results = $("#results");
     CardViewer.Elements.tableOfContents = $("#toc");
@@ -109,7 +109,7 @@ let onLoad = async function () {
                 if(NewCards.indexOf(card.id) !== -1) {
                     el.addClass("new");
                 }
-                else if(card.bfyf_limit != card.tcg_limit) {
+                else if(card.:_limit != card.tcg_limit) {
                     el.addClass("different");
                 }
                 else if(!card.custom) {

@@ -30,11 +30,11 @@ const listOfNamesToArrayFormat = (str) => {
 // (:card_\w+:\s*)+(.+?)\d+ :white_c
 // 
 
-const BFYF_CARD_BANLIST = {
+const SFF_CARD_BANLIST = {
     3461: 1,    // Raigeki Break
 };
 
-const BFYF_CARD_IDS = [
+const SFF_CARD_IDS = [
     1721,      // Gagaga Magician
     5186,      // Gagaga Girl
     5886,      // Gagaga Child

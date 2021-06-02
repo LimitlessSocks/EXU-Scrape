@@ -855,8 +855,8 @@ CardViewer.createFilter = function (query, exclude = null) {
     if(query.notNormal) {
         filters.push((card) => !CardViewer.Filters.isNormal(card));
     }
-    if(query.bfyf) {
-        filters.push((card) => card.bfyf_limit >= 0);
+    if(query.sff) {
+        filters.push((card) => card.sff_limit >= 0);
     }
     
     if(query.kind) {
