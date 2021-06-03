@@ -702,7 +702,7 @@ CardViewer.regexComparator = (needle, fn = _F.id) => {
     let reject = [];
     
     for(let regStr of extractInlineRegexes(needle)) {
-        let [whole, tag, regInner] = regStr.trim().match(/^\[(.\|)?(.+)\]$/);
+        let [whole, tag, regInner] = regStr.trim().match(/^\[(.+?\|)?(.+)\]$/);
         let flag = "i";
         // case sensitive
         if(/^[cs]/i.test(tag)) {
@@ -719,6 +719,8 @@ CardViewer.regexComparator = (needle, fn = _F.id) => {
     }
     
     needle = escapeRegExp(needle)
+        .replace(/\\\^/g, "^\\s*")
+        .replace(/\\\$/g, "\\s*$")
         .replace(/(?:\\\*){2}/g, "[^.]*?")
         .replace(/\\\*/g, ".*?");
     
