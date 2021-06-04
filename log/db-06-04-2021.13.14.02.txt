@@ -1149,3 +1149,10 @@
 [main] note: [-] removed old card 761091 (LeSpookie Skeleton)
 [main] note: [-] removed old card 761088 (LeSpookie Specter)
 [main] Time elapsed: 505.632347s
+[final] Completing scrape at 06-04-2021.14.59.39
+[main] Reading tmp/db-06-04-2021.13.14.02.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1764594"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 2 associated scrape(s).
