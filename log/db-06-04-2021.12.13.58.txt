@@ -1237,3 +1237,15 @@ If this card is Link Summoned: You can add 1 "Ignister A.I.Land" from your Deck 
 [5857285] STARTING TO SCRAPE DECK 5857285
 [5857285] Finished scraping.
 [main] Time elapsed: 573.20266s
+[final] Completing scrape at 06-04-2021.12.41.55
+[main] Reading tmp/db-06-04-2021.12.13.58.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1867913", "1867887", "1867899", "1806690", "2022233", "2022233", "2022225", "2022225", "2168440", "2220607", "1521632", "761094", "1968811", "1968811", "2107296", "665493", "733378", "733365", "733370", "733367", "733353", "2177008", "2178756", "2178764", "2178764", "1970500", "1970216", "1969765", "1148834", "2393260", "2141536", "2394619", "10654", "10654", "11553", "11553", "11555"]
+[interact] Keypress: "p"
+[interact] Found cards with ids ["761014", "761044", "761022", "761030", "761049", "761094", "761099", "761315", "761325", "761055", "761041", "761026", "761020", "761065", "761074", "1305059", "761070", "761080", "761101", "761317", "761322", "761060", "761083", "761093", "761091", "761088"].
+[interact] No action taken.
+[interact] Keypress: "i"
+[interact] Saved old version of 761094 (LeSpookie Haunted Mansion)
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
