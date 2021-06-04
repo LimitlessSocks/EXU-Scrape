@@ -236,7 +236,7 @@ database = [
     # 4367824, #Death Aspects
     # 4376011, #Combat Mechs
     4523067, #Voltron
-    4385932, #Starbaric Crystal Beasts
+    # 4385932, #Starbaric Crystal Beasts
     # 4540185, #Emeraheart
     4757288, #Pandas
     # 4861946, #Poppin
@@ -302,7 +302,7 @@ database = [
     6044732, #Armorizer
     7301908, #Vampop☆Star
     6135219, #The Parallel
-    3689114, #LeSpookie
+    # 3689114, #LeSpookie
     6209092, #Acrimonic
     5884678, #Arsenal
     # 6121762, #Hydromunculus
@@ -501,6 +501,7 @@ database = [
     8152211, #Bolt Arc
     8105715, #Spacial Demon
     8055913, #Flutterbleu
+    6086340, #Zeniphyr
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
