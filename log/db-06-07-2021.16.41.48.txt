@@ -1488,3 +1488,10 @@ When this card destroys an opponent's monster by battle: You can attach that mon
 [main] note: [-] removed old card 1745032 (Mysterious Monolith)
 [main] note: [-] removed old card 1537025 (Energy Corrupter)
 [main] Time elapsed: 519.900872s
+[final] Completing scrape at 06-07-2021.18.00.32
+[main] Reading tmp/db-06-07-2021.16.41.48.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1732250", "1732250", "2261218", "2261218", "2178914", "1519318", "1515101", "1521690", "1521632", "1526503", "1515277", "1521864", "1524680", "1519128", "1522095", "1526627", "1523761", "1522124", "1361317", "1495461", "1643881", "1225260", "916821", "1920586", "1920588", "2108476", "1926508", "1926508", "2269306", "934840", "934764", "934826", "1349617", "1491929", "2177202", "2177202", "1845429", "1845430", "1945268", "1696586", "1990797", "1614721", "1713100", "1713740", "1614721"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
