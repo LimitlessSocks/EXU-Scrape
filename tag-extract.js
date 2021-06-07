@@ -22,6 +22,9 @@ const TEST_CASES = [
     ["dark", {
         type: "monster",
         monsterAttribute: "DARK",
+    }],
+    ["Dragon \"Number\"", {
+        
     }]
 ];
 const objectEqual = (a, b) =>

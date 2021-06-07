@@ -119,8 +119,8 @@ database = [
     6807794, #Hydrovenal Support
     6804358, #Amorphage Support
     6804350, #Cipher Support
-    6804345, #Cyberdark Support
-    6804341, #Bujin Support
+    # 6804345, #Cyberdark Support
+    # 6804341, #Bujin Support
     6780728, #Hieratic Support
     4493192, #Meklord Support
     6801590, #Earthbound Support
@@ -142,7 +142,7 @@ database = [
     4805092, #Legendary Dragon Support
     6981414, #Magical Hat Support
     6952745, #Tindangle Support
-    6952371, #True King Retrains
+    # 6952371, #True King Retrains
     7003669, #Appliancer Support
     6993829, #Lair of Darkness Support
     7015993, #Sacred Beast Support
@@ -308,7 +308,7 @@ database = [
     # 6121762, #Hydromunculus
     6233896, #Mirror Force Archetype
     4667428, #Xiuhqui
-    6040042, #Kuuroma
+    # 6040042, #Kuuroma
     6247363, #Rowa - Elusive Power
     6163866, #Black Blood
     # 6227419, #Deep Burrower
@@ -502,6 +502,10 @@ database = [
     8105715, #Spacial Demon
     8055913, #Flutterbleu
     6086340, #Zeniphyr
+    3705612, #Azure Reaper
+    8013380, #Cykoton
+    8213421, #Forge Breaker
+    8221267, #Imperialis
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
@@ -517,6 +521,7 @@ database = [
     7753395, #Generic Monsters IX
     7934346, #Generic Monsters X
     8202812, #Generic Monsters XI
+    8253171, #Generic Monsters XII
     6353430, #Generic Spells
     6419184, #Generic Spells II
     6871664, #Generic Spells III
