@@ -229,6 +229,10 @@ database = [
     5979508, #Myutant Support
     8105851, #Lightsworn Support
     7969621, #Magistus Support
+    7743608, #Danger! Support
+    8184053, #Ancient Gear Support
+    8224351, #Ritual Beast Support
+    8208847, #Shark Support
     
     #--------------------------------------------------------------------#
     # Archetypes
