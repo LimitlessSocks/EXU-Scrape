@@ -1,0 +1,508 @@
+{
+    "data": [
+        {
+            "name": "Aesir",
+            "deckIds": [8029982]
+        },
+        {
+            "name": "Alien",
+            "deckIds": [8031469]
+        },
+        {
+            "name": "Amorphage",
+            "deckIds": [8031504]
+        },
+        {
+            "name": "Ancient Warrior",
+            "deckIds": [8030524]
+        },
+        {
+            "name": "Appliancer",
+            "deckIds": [8031637]
+        },
+        {
+            "name": "Aquaactress",
+            "deckIds": [8030431]
+        },
+        {
+            "name": "Artifact",
+            "deckIds": [8031643]
+        },
+        {
+            "name": "B.E.S.",
+            "deckIds": [8030556]
+        },
+        {
+            "name": "Battle Fader",
+            "deckIds": [8031647]
+        },
+        {
+            "name": "Battlin' Boxer",
+            "deckIds": [8029971]
+        },
+        {
+            "name": "Blue-Eyes",
+            "deckIds": [8030546]
+        },
+        {
+            "name": "Celtic Guardian & Mystical Elf",
+            "deckIds": [8031613]
+        },
+        {
+            "name": "Ceremonial Bell",
+            "deckIds": [8031649]
+        },
+        {
+            "name": "Chemicritter",
+            "deckIds": [8030281]
+        },
+        {
+            "name": "Cipher",
+            "deckIds": [8031513]
+        },
+        {
+            "name": "Clear World",
+            "deckIds": [8031650]
+        },
+        {
+            "name": "Codebreaker",
+            "deckIds": [8030151]
+        },
+        {
+            "name": "Constellar",
+            "deckIds": [8029849]
+        },
+        {
+            "name": "Crab King",
+            "deckIds": [8031653]
+        },
+        {
+            "name": "Crystron",
+            "deckIds": [8031657]
+        },
+        {
+            "name": "Cyber Dragon",
+            "deckIds": [8031418]
+        },
+        {
+            "name": "Cyberdark",
+            "deckIds": [8031526]
+        },
+        {
+            "name": "D.D.",
+            "deckIds": [8031489]
+        },
+        {
+            "name": "D/D",
+            "deckIds": [8030255]
+        },
+        {
+            "name": "Danger!",
+            "deckIds": [8030476]
+        },
+        {
+            "name": "Dark Magician",
+            "deckIds": [8031387]
+        },
+        {
+            "name": "Dark World",
+            "deckIds": [8031368]
+        },
+        {
+            "name": "Digital Bug",
+            "deckIds": [8030336]
+        },
+        {
+            "name": "Dinomist",
+            "deckIds": [8029833]
+        },
+        {
+            "name": "Draconia",
+            "deckIds": [8030582]
+        },
+        {
+            "name": "Dream Mirror",
+            "deckIds": [8031662]
+        },
+        {
+            "name": "Earthbound Immortal",
+            "deckIds": [8031570]
+        },
+        {
+            "name": "Elementsaber",
+            "deckIds": [8031623]
+        },
+        {
+            "name": "Empowered Warrior",
+            "deckIds": [8031664]
+        },
+        {
+            "name": "F.A.",
+            "deckIds": [8030526]
+        },
+        {
+            "name": "Fabled",
+            "deckIds": [8031668]
+        },
+        {
+            "name": "Fairy Tail",
+            "deckIds": [8031380]
+        },
+        {
+            "name": "Fire Fist",
+            "deckIds": [8031672]
+        },
+        {
+            "name": "From the Dark",
+            "deckIds": [8030158]
+        },
+        {
+            "name": "Fur Hire",
+            "deckIds": [8030567]
+        },
+        {
+            "name": "Fushioh Richie",
+            "deckIds": [8030222]
+        },
+        {
+            "name": "Fusion Parasite",
+            "deckIds": [8031675]
+        },
+        {
+            "name": "Gadget",
+            "deckIds": [8030174]
+        },
+        {
+            "name": "Galaxy/Photon",
+            "deckIds": [8031679]
+        },
+        {
+            "name": "Garzett",
+            "deckIds": [8030133]
+        },
+        {
+            "name": "Gimmick Puppet",
+            "deckIds": [8031693]
+        },
+        {
+            "name": "Golden Ladybug",
+            "deckIds": [8031696]
+        },
+        {
+            "name": "Graydle",
+            "deckIds": [8031699]
+        },
+        {
+            "name": "Harpie",
+            "deckIds": [8031703]
+        },
+        {
+            "name": "Hayabusa Knight",
+            "deckIds": [8031706]
+        },
+        {
+            "name": "Hazy Flame",
+            "deckIds": [8031622]
+        },
+        {
+            "name": "Hieratic",
+            "deckIds": [8031539]
+        },
+        {
+            "name": "Jurrac",
+            "deckIds": [8031413]
+        },
+        {
+            "name": "Kaiju",
+            "deckIds": [8030212]
+        },
+        {
+            "name": "Koa'Ki Meiru",
+            "deckIds": [8029769]
+        },
+        {
+            "name": "Krawler",
+            "deckIds": [8031144]
+        },
+        {
+            "name": "Lair of Darkness",
+            "deckIds": [8031712]
+        },
+        {
+            "name": "Laval",
+            "deckIds": [8030464]
+        },
+        {
+            "name": "Legendary Dragon",
+            "deckIds": [8031292]
+        },
+        {
+            "name": "Lightray",
+            "deckIds": [8030585]
+        },
+        {
+            "name": "Lion Heart (Number 54)",
+            "deckIds": [8031802]
+        },
+        {
+            "name": "Lswarm",
+            "deckIds": [8031715]
+        },
+        {
+            "name": "Madoor",
+            "deckIds": [8030165]
+        },
+        {
+            "name": "Magnet Warrior",
+            "deckIds": [8031719]
+        },
+        {
+            "name": "Malicevorous",
+            "deckIds": [8029963]
+        },
+        {
+            "name": "Marincess",
+            "deckIds": [8030355]
+        },
+        {
+            "name": "Masaki The Legendary Swordsman",
+            "deckIds": [8031723]
+        },
+        {
+            "name": "Mayakashi",
+            "deckIds": [8031587]
+        },
+        {
+            "name": "Meklord",
+            "deckIds": [8031562]
+        },
+        {
+            "name": "Metaphys",
+            "deckIds": [8030322]
+        },
+        {
+            "name": "Mystrick",
+            "deckIds": [8030506]
+        },
+        {
+            "name": "Mythical Beast",
+            "deckIds": [8031730]
+        },
+        {
+            "name": "Nephthys",
+            "deckIds": [8030303]
+        },
+        {
+            "name": "Ninja",
+            "deckIds": [8030341]
+        },
+        {
+            "name": "Nordic",
+            "deckIds": [8029975]
+        },
+        {
+            "name": "Odd-Eyes",
+            "deckIds": [8029914]
+        },
+        {
+            "name": "Onomat",
+            "deckIds": [8031733]
+        },
+        {
+            "name": "Paladin Ritual",
+            "deckIds": [8030114]
+        },
+        {
+            "name": "Performage",
+            "deckIds": [8031737]
+        },
+        {
+            "name": "Performapal",
+            "deckIds": [8029860, 8029884]
+        },
+        {
+            "name": "Performapal Sky",
+            "deckIds": [8029920]
+        },
+        {
+            "name": "Phantasm Spiral",
+            "deckIds": [8030588]
+        },
+        {
+            "name": "Phantom Beast",
+            "deckIds": [8030532]
+        },
+        {
+            "name": "Phantom Knights",
+            "deckIds": [8031740]
+        },
+        {
+            "name": "Prank-Kids",
+            "deckIds": [8030512]
+        },
+        {
+            "name": "Predaplant",
+            "deckIds": [8031742]
+        },
+        {
+            "name": "Prometeor",
+            "deckIds": [8031744]
+        },
+        {
+            "name": "Relinquished",
+            "deckIds": [8031746]
+        },
+        {
+            "name": "Rokket",
+            "deckIds": [8030185]
+        },
+        {
+            "name": "Sacred Beasts",
+            "deckIds": [8031751]
+        },
+        {
+            "name": "Shark",
+            "deckIds": [8029985]
+        },
+        {
+            "name": "Shinobird",
+            "deckIds": [8030520]
+        },
+        {
+            "name": "Shiranui",
+            "deckIds": [8031400]
+        },
+        {
+            "name": "Stromberg",
+            "deckIds": [8031755]
+        },
+        {
+            "name": "Subterror",
+            "deckIds": [8031426]
+        },
+        {
+            "name": "Summoned Skull",
+            "deckIds": [8030109]
+        },
+        {
+            "name": "Sunavalon",
+            "deckIds": [8031758]
+        },
+        {
+            "name": "Super Quant",
+            "deckIds": [8031765]
+        },
+        {
+            "name": "Superheavy Samurai",
+            "deckIds": [8031767]
+        },
+        {
+            "name": "Sylvan",
+            "deckIds": [8030541]
+        },
+        {
+            "name": "Tellarknight",
+            "deckIds": [8030226]
+        },
+        {
+            "name": "The Agent",
+            "deckIds": [8030492]
+        },
+        {
+            "name": "Thought Psychic",
+            "deckIds": [8031776]
+        },
+        {
+            "name": "Time Thief",
+            "deckIds": [8031461]
+        },
+        {
+            "name": "Timelord",
+            "deckIds": [8031778]
+        },
+        {
+            "name": "Tindangle",
+            "deckIds": [8031780]
+        },
+        {
+            "name": "Toon",
+            "deckIds": [8031783]
+        },
+        {
+            "name": "Triamid",
+            "deckIds": [8031173]
+        },
+        {
+            "name": "Trickstar",
+            "deckIds": [8029930]
+        },
+        {
+            "name": "Umbral Horror",
+            "deckIds": [8030246]
+        },
+        {
+            "name": "Vampire",
+            "deckIds": [8031785]
+        },
+        {
+            "name": "Vendread",
+            "deckIds": [8031185]
+        },
+        {
+            "name": "Virus",
+            "deckIds": [8031786]
+        },
+        {
+            "name": "Vision HERO",
+            "deckIds": [8031787]
+        },
+        {
+            "name": "Volcanic",
+            "deckIds": [8031071]
+        },
+        {
+            "name": "Vylon",
+            "deckIds": [8031626]
+        },
+        {
+            "name": "Wasteland",
+            "deckIds": [8031792]
+        },
+        {
+            "name": "Watt",
+            "deckIds": [8030574]
+        },
+        {
+            "name": "Weather Painter",
+            "deckIds": [8030560]
+        },
+        {
+            "name": "White Aura",
+            "deckIds": [8031796]
+        },
+        {
+            "name": "Wight",
+            "deckIds": [8031799]
+        },
+        {
+            "name": "Windwitch",
+            "deckIds": [8031800]
+        },
+        {
+            "name": "World Legacy / World Chalice",
+            "deckIds": [8030388]
+        },
+        {
+            "name": "X-Saber",
+            "deckIds": [8031135]
+        },
+        {
+            "name": "Yubel",
+            "deckIds": [8030135]
+        },
+        {
+            "name": "Z-Arc",
+            "deckIds": [8031801]
+        }
+    ]
+}
