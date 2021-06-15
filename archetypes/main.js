@@ -106,7 +106,7 @@ $(document).ready(function () {
                 }
                 
                 if(!res.field) {
-                    res.field = "name";
+                    // res.field = "name";
                 }
                 
                 res.value = res.value.replace(/["']/g, "");
@@ -146,7 +146,7 @@ $(document).ready(function () {
                     ].join(" ");
                     // range = entry.name + " " + entry.author;
                 }
-                // console.log(field, range, value);
+                console.log(field, range, value);
                 
                 range = range.toLowerCase();
                 // console.log(split);
