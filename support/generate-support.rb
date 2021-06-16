@@ -17,7 +17,7 @@ def parse_support!(obj)
     ds = Deck.new
     ds.name = obj["name"]
     ds.thumb = obj["thumb"] || ""
-    ds.thumb_custom = true
+    ds.thumb_custom = false
     ds.id = ds.name.gsub(/@/, "at").gsub(/[^a-zA-Z0-9]+/, "")
     # ds.author = obj["author"]
     # ds.description = obj["description"]
