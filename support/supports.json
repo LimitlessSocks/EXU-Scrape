@@ -440,232 +440,253 @@
         {
             "name": "Performapal Sky",
             "deckIds": [8029920],
-            "thumb": "0"
+            "thumb": "8469"
         },
         {
             "name": "Phantasm Spiral",
             "deckIds": [8030588],
-            "thumb": "0"
+            "thumb": "8524"
         },
         {
             "name": "Phantom Beast",
             "deckIds": [8030532],
-            "thumb": "0"
+            "thumb": "3289"
         },
         {
             "name": "Phantom Knights",
             "deckIds": [8031740],
-            "thumb": "0"
+            "thumb": "7768",
+            "deckWidth": 9
         },
         {
             "name": "Prank-Kids",
             "deckIds": [8030512],
-            "thumb": "0"
+            "thumb": "9579"
         },
         {
             "name": "Predaplant",
             "deckIds": [8031742],
-            "thumb": "0"
+            "thumb": "8413",
+            "deckWidth": 8
         },
         {
             "name": "Prometeor",
             "deckIds": [8031744],
-            "thumb": "0"
+            "thumb": "10219"
         },
         {
             "name": "Relinquished",
             "deckIds": [8031746],
-            "thumb": "0"
+            "thumb": "3540"
         },
         {
             "name": "Rokket",
             "deckIds": [8030185],
-            "thumb": "0"
+            "thumb": "10174",
+            "deckWidth": 9
         },
         {
             "name": "Sacred Beasts",
             "deckIds": [8031751],
-            "thumb": "0"
+            "thumb": "240"
         },
         {
             "name": "Shark",
             "deckIds": [8029985],
-            "thumb": "0"
+            "thumb": "5632",
+            "deckWidth": 9
         },
         {
             "name": "Shinobird",
             "deckIds": [8030520],
-            "thumb": "0"
+            "thumb": "8354"
         },
         {
             "name": "Shiranui",
             "deckIds": [8031400],
-            "thumb": "0"
+            "thumb": "9699"
         },
         {
             "name": "Stromberg",
             "deckIds": [8031755],
-            "thumb": "0"
+            "thumb": "9383"
         },
         {
             "name": "Subterror",
             "deckIds": [8031426],
-            "thumb": "0"
+            "thumb": "8270",
+            "deckWidth": 8
         },
         {
             "name": "Summoned Skull",
             "deckIds": [8030109],
-            "thumb": "0"
+            "thumb": "4094"
         },
         {
             "name": "Sunavalon",
             "deckIds": [8031758],
-            "thumb": "0"
+            "thumb": "11418"
         },
         {
             "name": "Super Quant",
             "deckIds": [8031765],
-            "thumb": "0"
+            "thumb": "7787",
+            "deckWidth": 8
         },
         {
             "name": "Superheavy Samurai",
             "deckIds": [8031767],
-            "thumb": "0"
+            "thumb": "9813",
+            "deckWidth": 10
         },
         {
             "name": "Sylvan",
             "deckIds": [8030541],
-            "thumb": "0"
+            "thumb": "7543",
+            "deckWidth": 9
         },
         {
             "name": "Tellarknight",
             "deckIds": [8030226],
-            "thumb": "0"
+            "thumb": "6787",
+            "deckWidth": 8
         },
         {
             "name": "The Agent",
             "deckIds": [8030492],
-            "thumb": "0"
+            "thumb": "2788",
+            "deckWidth": 8
         },
         {
             "name": "Thought Psychic",
             "deckIds": [8031776],
-            "thumb": "0"
+            "thumb": "4368"
         },
         {
             "name": "Time Thief",
             "deckIds": [8031461],
-            "thumb": "0"
+            "thumb": "9915"
         },
         {
             "name": "Timelord",
             "deckIds": [8031778],
-            "thumb": "0"
+            "thumb": "4547",
+            "deckWidth": 8
         },
         {
             "name": "Tindangle",
             "deckIds": [8031780],
-            "thumb": "0"
+            "thumb": "8988"
         },
         {
             "name": "Toon",
             "deckIds": [8031783],
-            "thumb": "0"
+            "thumb": "4420",
+            "deckWidth": 10
         },
         {
             "name": "Triamid",
             "deckIds": [8031173],
-            "thumb": "0"
+            "thumb": "8038"
         },
         {
             "name": "Trickstar",
             "deckIds": [8029930],
-            "thumb": "0"
+            "thumb": "8618",
+            "deckWidth": 8
         },
         {
             "name": "Umbral Horror",
             "deckIds": [8030246],
-            "thumb": "0"
+            "thumb": "5933"
         },
         {
             "name": "Vampire",
             "deckIds": [8031785],
-            "thumb": "0"
+            "thumb": "9174",
+            "deckWidth": 10
         },
         {
             "name": "Vendread",
             "deckIds": [8031185],
-            "thumb": "0"
+            "thumb": "8878",
+            "deckWidth": 8
         },
         {
             "name": "Virus",
             "deckIds": [8031786],
-            "thumb": "0"
+            "thumb": "1073"
         },
         {
             "name": "Vision HERO",
             "deckIds": [8031787],
-            "thumb": "0"
+            "thumb": "4637"
         },
         {
             "name": "Volcanic",
             "deckIds": [8031071],
-            "thumb": "0"
+            "thumb": "7059",
+            "deckWidth": 8
         },
         {
             "name": "Vylon",
             "deckIds": [8031626],
-            "thumb": "0"
+            "thumb": "4670",
+            "deckWidth": 9
         },
         {
             "name": "Wasteland",
             "deckIds": [8031792],
-            "thumb": "0"
+            "thumb": "4695"
         },
         {
             "name": "Watt",
             "deckIds": [8030574],
-            "thumb": "0"
+            "thumb": "5039",
+            "deckWidth": 10
         },
         {
             "name": "Weather Painter",
             "deckIds": [8030560],
-            "thumb": "0"
+            "thumb": "8914",
+            "deckWidth": 8
         },
         {
             "name": "White Aura",
             "deckIds": [8031796],
-            "thumb": "0"
+            "thumb": "8725"
         },
         {
             "name": "Wight",
             "deckIds": [8031799],
-            "thumb": "0"
+            "thumb": "3877"
         },
         {
             "name": "Windwitch",
             "deckIds": [8031800],
-            "thumb": "0"
+            "thumb": "8359"
         },
         {
             "name": "World Legacy / World Chalice",
             "deckIds": [8030388],
-            "thumb": "0"
+            "thumb": "8628",
+            "deckWidth": 10
         },
         {
             "name": "X-Saber",
             "deckIds": [8031135],
-            "thumb": "0"
+            "thumb": "4852",
+            "deckWidth": 9
         },
         {
             "name": "Yubel",
             "deckIds": [8030135],
-            "thumb": "0"
+            "thumb": "4885"
         },
         {
             "name": "Z-Arc",
             "deckIds": [8031801],
-            "thumb": "0"
+            "thumb": "8507"
         }
     ]
 }
