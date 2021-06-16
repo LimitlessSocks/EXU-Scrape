@@ -1,4 +1,4 @@
-VALID_OPERATIONS = ["main", "banlist", "test", "beta", "sff"]
+VALID_OPERATIONS = ["main", "banlist", "support", "test", "beta", "sff"]
 VALID_NOTES = [nil, "temp"]
 operation = ARGV[0]
 note = ARGV[1]
@@ -544,7 +544,9 @@ database = [
     6353465, #Staples
 ] + [
     6532506, #Alt Arts I
-] + [
+]
+
+support = [
     # assorted tcg support links
     8029982, 8031469, 8031504, 8030524, 8031637, 8030431,
     8031643, 8030556, 8031647, 8029971, 8030546, 8031613,
@@ -593,7 +595,7 @@ beta = [
     ###################
 ]
 
-# baby's first yugioh format
+# stungray flute format
 sff = [
     8055759
 ]
@@ -640,6 +642,9 @@ if operation == "main"
 elsif operation == "banlist"
     decks = banlist
     outname = "banlist"
+elsif operation == "support"
+    decks = support
+    outname = "support"
 elsif operation == "beta"
     decks = beta
     outname = "beta"

@@ -4461,3 +4461,10 @@ Once per turn, if another card(s) you control is destroyed by battle or an oppon
 [main] note: [-] removed old card 1946794 (Sanctuary of Eviction)
 [main] note: [-] removed old card 1946986 (Sphere of Light)
 [main] Time elapsed: 1248.682941s
+[final] Completing scrape at 06-15-2021.20.25.34
+[main] Reading tmp/db-06-15-2021.19.52.59.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["2096405", "2096410", "2096410", "1732265", "1732204", "1731536", "1732082", "1731890", "2264501", "2328855", "2404937", "2406634", "1182404", "1642005", "1189691", "1607444", "1607477", "1607477", "2211875", "2208858", "2208858", "2141401", "2141410", "2141419", "2141482", "2367218", "2359082", "2359082", "2359083", "2359083", "2359098", "2359098", "2359105", "2359105", "2359172", "2359172", "2359147", "2359147", "1710415", "1709213", "2405775", "2402071", "2405675", "2402044", "2419034", "2214183", "2096405", "2096410", "2096410"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
