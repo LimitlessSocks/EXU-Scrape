@@ -27,9 +27,15 @@ let onLoad = async function () {
     
     // load ids into deck
     
+    let testSource = (source, ids) =>
+        source.length
+            ? source.some(s => ids.indexOf(s) !== -1)
+            : ids.indexOf(source) !== -1;
+    
     let cards = CardViewer.filter(
         CardViewer.createFilter((card) =>
-            sourceIds.indexOf(card.submission_source) !== -1 &&
+            // sourceIds.indexOf(card.submission_source) !== -1 &&
+            testSource(card.submission_source, sourceIds) &&
             excludeIds.indexOf(card.id) === -1
         )
     );
