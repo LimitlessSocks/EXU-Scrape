@@ -176,242 +176,266 @@
         {
             "name": "Elementsaber",
             "deckIds": [8031623],
-            "thumb": "0"
+            "thumb": "9184"
         },
         {
             "name": "Empowered Warrior",
             "deckIds": [8031664],
-            "thumb": "0"
+            "thumb": "6464"
         },
         {
             "name": "F.A.",
             "deckIds": [8030526],
-            "thumb": "0"
+            "thumb": "9370",
+            "deckWidth": 8
         },
         {
             "name": "Fabled",
             "deckIds": [8031668],
-            "thumb": "0"
+            "thumb": "1510",
+            "deckWidth": 8
         },
         {
             "name": "Fairy Tail",
             "deckIds": [8031380],
-            "thumb": "0"
+            "thumb": "8506"
         },
         {
             "name": "Fire Fist",
             "deckIds": [8031672],
-            "thumb": "0"
+            "thumb": "9765",
+            "deckWidth": 10
         },
         {
             "name": "From the Dark",
             "deckIds": [8030158],
-            "thumb": "0"
+            "thumb": "1117"
         },
         {
             "name": "Fur Hire",
             "deckIds": [8030567],
-            "thumb": "0"
+            "thumb": "9238",
+            "deckWidth": 8
         },
         {
             "name": "Fushioh Richie",
             "deckIds": [8030222],
-            "thumb": "0"
+            "thumb": "1701"
         },
         {
             "name": "Fusion Parasite",
             "deckIds": [8031675],
-            "thumb": "0"
+            "thumb": "8325"
         },
         {
             "name": "Gadget",
             "deckIds": [8030174],
-            "thumb": "0"
+            "thumb": "4880",
+            "deckWidth": 9
         },
         {
             "name": "Galaxy/Photon",
             "deckIds": [8031679],
-            "thumb": "0"
+            "thumb": "5022",
+            "deckWidth": 12,
+            "extraRows": 2
         },
         {
             "name": "Garzett",
             "deckIds": [8030133],
-            "thumb": "0"
+            "thumb": "2013"
         },
         {
             "name": "Gimmick Puppet",
             "deckIds": [8031693],
-            "thumb": "0"
+            "thumb": "5643",
+            "deckWidth": 10,
+            "extraRows": 2
         },
         {
             "name": "Golden Ladybug",
             "deckIds": [8031696],
-            "thumb": "0"
+            "thumb": "1946"
         },
         {
             "name": "Graydle",
             "deckIds": [8031699],
-            "thumb": "0"
+            "thumb": "7508"
         },
         {
             "name": "Harpie",
             "deckIds": [8031703],
-            "thumb": "0"
+            "thumb": "2099",
+            "deckWidth": 10
         },
         {
             "name": "Hayabusa Knight",
             "deckIds": [8031706],
-            "thumb": "0"
+            "thumb": "2108"
         },
         {
             "name": "Hazy Flame",
             "deckIds": [8031622],
-            "thumb": "0"
+            "thumb": "5711"
         },
         {
             "name": "Hieratic",
             "deckIds": [8031539],
-            "thumb": "0"
+            "thumb": "5328",
+            "deckWidth": 9
         },
         {
             "name": "Jurrac",
             "deckIds": [8031413],
-            "thumb": "0"
+            "thumb": "2366",
+            "deckWidth": 8
         },
         {
             "name": "Kaiju",
             "deckIds": [8030212],
-            "thumb": "0"
+            "thumb": "7553"
         },
         {
             "name": "Koa'Ki Meiru",
             "deckIds": [8029769],
-            "thumb": "0"
+            "thumb": "2300",
+            "deckWidth": 10
         },
         {
             "name": "Krawler",
             "deckIds": [8031144],
-            "thumb": "0"
+            "thumb": "9847",
+            "deckWidth": 8
         },
         {
             "name": "Lair of Darkness",
             "deckIds": [8031712],
-            "thumb": "0"
+            "thumb": "9265"
         },
         {
             "name": "Laval",
             "deckIds": [8030464],
-            "thumb": "0"
+            "thumb": "2527",
+            "deckWidth": 9
         },
         {
             "name": "Legendary Dragon",
             "deckIds": [8031292],
-            "thumb": "0"
+            "thumb": "6610"
         },
         {
             "name": "Lightray",
             "deckIds": [8030585],
-            "thumb": "0"
+            "thumb": "5369"
         },
         {
             "name": "Lion Heart (Number 54)",
             "deckIds": [8031802],
-            "thumb": "0"
+            "thumb": "6038"
         },
         {
             "name": "Lswarm",
             "deckIds": [8031715],
-            "thumb": "0"
+            "thumb": "5248",
+            "deckWidth": 10
         },
         {
             "name": "Madoor",
             "deckIds": [8030165],
-            "thumb": "0"
+            "thumb": "3111"
         },
         {
             "name": "Magnet Warrior",
             "deckIds": [8031719],
-            "thumb": "0"
+            "thumb": "8166"
         },
         {
             "name": "Malicevorous",
             "deckIds": [8029963],
-            "thumb": "0"
+            "thumb": "6075"
         },
         {
             "name": "Marincess",
             "deckIds": [8030355],
-            "thumb": "0"
+            "thumb": "10052",
+            "deckWidth": 8
         },
         {
             "name": "Masaki The Legendary Swordsman",
             "deckIds": [8031723],
-            "thumb": "0"
+            "thumb": "2769"
         },
         {
             "name": "Mayakashi",
             "deckIds": [8031587],
-            "thumb": "0"
+            "thumb": "9584"
         },
         {
             "name": "Meklord",
             "deckIds": [8031562],
-            "thumb": "0"
+            "thumb": "2825",
+            "deckWidth": 10
         },
         {
             "name": "Metaphys",
             "deckIds": [8030322],
-            "thumb": "0"
+            "thumb": "8813"
         },
         {
             "name": "Mystrick",
             "deckIds": [8030506],
-            "thumb": "0"
+            "thumb": "9491"
         },
         {
             "name": "Mythical Beast",
             "deckIds": [8031730],
-            "thumb": "0"
+            "thumb": "9001"
         },
         {
             "name": "Nephthys",
             "deckIds": [8030303],
-            "thumb": "0"
+            "thumb": "3675",
+            "deckWidth": 8
         },
         {
             "name": "Ninja",
             "deckIds": [8030341],
-            "thumb": "0"
+            "thumb": "5185",
+            "deckWidth": 10
         },
         {
             "name": "Nordic",
             "deckIds": [8029975],
-            "thumb": "0"
+            "thumb": "4212",
+            "deckWidth": 8
         },
         {
             "name": "Odd-Eyes",
             "deckIds": [8029914],
-            "thumb": "0"
+            "thumb": "6476",
+            "deckWidth": 10
         },
         {
             "name": "Onomat",
             "deckIds": [8031733],
-            "thumb": "0"
+            "thumb": "9795",
+            "deckWidth": 10
         },
         {
             "name": "Paladin Ritual",
             "deckIds": [8030114],
-            "thumb": "0"
+            "thumb": "7379"
         },
         {
             "name": "Performage",
             "deckIds": [8031737],
-            "thumb": "0"
+            "thumb": "7271"
         },
         {
             "name": "Performapal",
             "deckIds": [8029860, 8029884],
-            "thumb": "0"
+            "thumb": "6494",
+            "deckWidth": 12
         },
         {
             "name": "Performapal Sky",
