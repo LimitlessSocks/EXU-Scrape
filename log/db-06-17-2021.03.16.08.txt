@@ -3279,3 +3279,10 @@ Yeah!
 [main] note: [-] removed old card 8680 (Supreme Rage)
 [main] note: [-] removed old card 8507 (Supreme King Z-ARC)
 [main] Time elapsed: 620.416753s
+[final] Completing scrape at 06-17-2021.16.33.12
+[main] Reading tmp/db-06-17-2021.03.16.08.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1458374", "2030895", "787295", "1845296", "2314290", "2045810", "2045810", "2045810", "2053471"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 2 associated scrape(s).
