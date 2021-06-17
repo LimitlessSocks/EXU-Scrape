@@ -530,6 +530,7 @@ database = [
     7934346, #Generic Monsters X
     8202812, #Generic Monsters XI
     8253171, #Generic Monsters XII
+    8318509, #Generic Monsters XIII
     6353430, #Generic Spells
     6419184, #Generic Spells II
     6871664, #Generic Spells III
@@ -768,7 +769,14 @@ decks.each.with_index(1) { |deck_id, i|
             if counts[id] > 1
                 log deck_id, "warning: card id #{display_text} was duplicated in <#{deck_id}> from <#{database[id]["submission_source"]}>"
             end
-            database[id]["submission_source"] ||= deck_id
+            if operation == "support"
+                unless database[id]["submission_source"].is_a? Array
+                    database[id]["submission_source"] = [database[id]["submission_source"]].compact
+                end
+                database[id]["submission_source"] << deck_id
+            else
+                database[id]["submission_source"] ||= deck_id
+            end
         end
     }
     progress i, deck_count
