@@ -510,7 +510,7 @@ database = [
     8055913, #Flutterbleu
     6086340, #Zeniphyr
     3705612, #Azure Reaper
-    8013380, #Cykoton
+    # 8013380, #Cykoton
     8213421, #Forge Breaker
     8221267, #Imperialis
     5830740, #New Order
