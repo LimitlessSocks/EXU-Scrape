@@ -514,6 +514,7 @@ database = [
     8213421, #Forge Breaker
     8221267, #Imperialis
     5830740, #New Order
+    8196897, #Anguish
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)

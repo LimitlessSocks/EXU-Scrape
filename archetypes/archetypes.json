@@ -1777,6 +1777,15 @@
             "author": "NoodleDoodle21",
             "description": "A Wyrm archetype with no Main Deck monsters, instead utilizing its own Spell and Trap Card lineup to Summon its Xyz Monsters.",
             "tags": []
+        },
+        {
+            "name": "Anguish",
+            "deckIds": [8196897],
+            "cardIds": [],
+            "thumb": "2069405",
+            "author": "FlavorFlov",
+            "description": "An archetype that expands upon the TCG cards 'Statue of Anguish Pattern' and 'Raging Earth' - utilizing Continuous Traps that become monsters and Extra Deck monsters that become Continuous Spells.",
+            "tags": []
         }
     ]
 }
