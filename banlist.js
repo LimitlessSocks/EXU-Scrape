@@ -50,8 +50,8 @@ let onLoad = async function () {
     CardViewer.linkRetrain = true;
     
     // local testing
-    // let response = await fetch("./banlist.json");
-    let response = await fetch("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/banlist.json");
+    let response = await fetch("./banlist.json");
+    // let response = await fetch("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/banlist.json");
     let db = await response.json();
     CardViewer.Database.setInitial(db);
     
