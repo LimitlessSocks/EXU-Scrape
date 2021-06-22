@@ -165,7 +165,7 @@ database = [
     7297777, #Star Seraph Support
     7252887, #Fabled Support
     7311950, #Darkwater Support
-    7428988, #Hellvil Support
+    # 7428988, #Hellvil Support
     7435843, #Tokyo Terror Support
     7086187, #Crystron Support
     2166281, #World Reaper Support
@@ -210,7 +210,7 @@ database = [
     7742679, #Fog+Beast
     7659844, #Relinquished
     7619657, #Panda Support
-    7737487, #Hellvil Support
+    # 7737487, #Hellvil Support
     7695428, #Timelord Support
     7758078, #Stromberg Support
     7763073, #Darkwater Support
@@ -509,7 +509,7 @@ database = [
     8105715, #Spacial Demon
     8055913, #Flutterbleu
     6086340, #Zeniphyr
-    3705612, #Azure Reaper
+    # 3705612, #Azure Reaper
     # 8013380, #Cykoton
     8213421, #Forge Breaker
     8221267, #Imperialis
@@ -544,6 +544,9 @@ database = [
     7759421, #Generic Traps IV
     6353457, #Assorted TCG Single Support
     6353465, #Staples
+    
+    
+    8362609, #Anon's solos
 ] + [
     6532506, #Alt Arts I
 ]

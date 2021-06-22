@@ -1298,3 +1298,10 @@ You cannot Link Summon while you control a monster Special Summoned by this effe
 [main] note: [-] removed old card 11099 (Virtual World City - Kauwloon)
 [main] note: [-] removed old card 11100 (Virtual World Gate - Qinglong)
 [main] Time elapsed: 670.858835s
+[final] Completing scrape at 06-21-2021.19.50.15
+[main] Reading tmp/db-06-21-2021.19.19.32.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1731536", "1732250", "1732250", "2373613", "1832340", "2113634", "2331695", "2359105", "2359156", "2359172", "1710381", "1710384", "769311", "769096", "1956880", "1807482", "1807482", "1807482", "1853111"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
