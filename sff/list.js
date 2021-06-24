@@ -35,28 +35,9 @@ const SFF_CARD_BANLIST = {
 };
 
 const SFF_CARD_IDS = [
-    1721,      // Gagaga Magician
-    5186,      // Gagaga Girl
-    5886,      // Gagaga Child
-    3508,      // Red Gadget
-    2024,      // Green Gadget
-    4880,      // Yellow Gadget
-    4079,      // Stronghold the Moving Fortress
     5687,      // Dododo Bot
     6182,      // Dododo Witch
     5179,      // Dododo Warrior
-    1365,      // Elemental HERO Bubbleman
-    1417,      // Elemental HERO Woodsman
-    1374,      // Elemental HERO Flame Wingman
-    1398,      // Elemental HERO Phoenix Enforcer
-    1402,      // Elemental HERO Rampart Blaster
-    1406,      // Elemental HERO Steam Healer
-    1389,      // Elemental HERO Mudballman
-    1412,      // Elemental HERO Thunder Giant
-    1403,      // Elemental HERO Shining Flare Wingman
-    1404,      // Elemental HERO Shining Phoenix Enforcer
-    1409,      // Elemental HERO Tempest
-    1388,      // Elemental HERO Mariner
     378,       // Beelze Frog
     1105,      // Des Frog
     3329,      // Poison Draw Frog
@@ -110,6 +91,170 @@ const SFF_CARD_IDS = [
     4418,      // Toon Mermaid
     2756,      // Manga Ryu-Ran
     4421,      // Toon World
+    4639,      // Volcanic Blaster
+    4640,      // Volcanic Counter
+    4643,      // Volcanic Hammerer
+    4647,      // Volcanic Rocket
+    4649,      // Volcanic Shell
+    4650,      // Volcanic Slicer
+    4641,      // Volcanic Doomfire
+    485,       // Blaze Accelerator
+    4460,      // Tri-Blaze Accelerator
+    4646,      // Volcanic Recharge
+    3508,      // Red Gadget
+    2024,      // Green Gadget
+    4880,      // Yellow Gadget
+    4079,      // Stronghold the Moving Fortress
+    10333,     // Powerhold the Moving Battery
+    5158,      // Constellar Aldebaran
+    5294,      // Constellar Leonis
+    5286,      // Constellar Kaus
+    5159,      // Constellar Algiedi
+    5675,      // Constellar Sombre
+    5295,      // Constellar Acubens
+    7037,      // Constellar Twinkle
+    5343,      // Constellar Star Cradle
+    5285,      // Constellar Praesepe
+    5284,      // Constellar Ptolemy M7
+    4581,      // V-Tiger Jet
+    4840,      // X-Head Cannon
+    4682,      // W-Wing Catapult
+    4866,      // Y-Dragon Head
+    4888,      // Z-Metal Tank
+    4582,      // VW-Tiger Catapult
+    4863,      // XZ-Tank Cannon
+    4861,      // XY-Dragon Cannon
+    4867,      // YZ-Tank Dragon
+    4862,      // XYZ-Dragon Cannon
+    4583,      // VWXYZ-Dragon Catapult Cannon
+    8173,      // Union Hangar
+    8175,      // Union Scramble
+    2231,      // Infernity Avenger
+    2234,      // Infernity Beetle
+    5545,      // Mermail Abysspike
+    5546,      // Mermail Abyssturge
+    5987,      // Mermail Abyssbalaen
+    1721,      // Gagaga Magician
+    5186,      // Gagaga Girl
+    5886,      // Gagaga Child
+    6816,      // Gagaga Samurai
+    2350,      // Junk Warrior
+    1295,      // Drill Warrior
+    3155,      // Nitro Warrior
+    4496,      // Turbo Warrior
+    3611,      // Road Warrior
+    6226,      // Gorgonic Gargoyle
+    6227,      // Gorgonic Ghoul
+    6228,      // Gorgonic Cerberus
+    3299,      // Phantom Magician
+    1365,      // Elemental HERO Bubbleman
+    1417,      // Elemental HERO Woodsman
+    1397,      // Elemental HERO Ocean
+    1381,      // Elemental HERO Heat
+    1385,      // Elemental HERO Lady Heat
+    1391,      // Elemental HERO Necroshade
+    1364,      // Elemental HERO Bladedge
+    1374,      // Elemental HERO Flame Wingman
+    1398,      // Elemental HERO Phoenix Enforcer
+    1402,      // Elemental HERO Rampart Blaster
+    1406,      // Elemental HERO Steam Healer
+    1389,      // Elemental HERO Mudballman
+    1412,      // Elemental HERO Thunder Giant
+    1403,      // Elemental HERO Shining Flare Wingman
+    1404,      // Elemental HERO Shining Phoenix Enforcer
+    1409,      // Elemental HERO Tempest
+    1388,      // Elemental HERO Mariner
+    1390,      // Elemental HERO Necroid Shaman
+    1414,      // Elemental HERO Wild Wingman
+    1371,      // Elemental HERO Darkbright
+    1383,      // Elemental HERO Inferno
+    1396,      // Elemental HERO Nova Master
+    1410,      // Elemental HERO Terra Firma
+    1373,      // Elemental HERO Electrum
+    56,        // Alchemist of Black Spells
+    243,       // Armor Exe
+    1084,      // Defender, the Magical Knight
+    1188,      // Disenchanter
+    1683,      // Frequency Magician
+    2088,      // Hannibal Necromancer
+    2692,      // Magical Plant Mandragola
+    8265,      // Magical Something
+    2710,      // Maiden of Macabre
+    10046,     // Megistric Maginician
+    9996,      // Rogue of Endymion
+    213,       // Arcane Barrier
+    5677,      // Spellbook Star Hall
+    3318,      // Pitch-Black Power Stone
+    9016,      // Mythical Bestiamorph
+    3861,      // Skilled Dark Magician
+    3862,      // Skilled White Magician
+    7014,      // Skilled Blue Magician
+    7496,      // Skilled Red Magician
+    2900,      // Miracle Restoring
+    3046,      // Mythical Beast Cerberus
+    8965,      // Mythical Beast Jackal
+    8968,      // Mythical Beast Bashilisk
+    741,       // Cold Enchanter
+    5609,      // Snowman Creator
+    5318,      // Snow Dragon
+    2207,      // Ice Master
+    5316,      // Snowdust Dragon
+    5627,      // Snowdust Giant
+    1209,      // Doctor Cranium
+    244,       // Armored Axon Kicker
+    1581,      // Final Psychic Ogre
+    3400,      // Psychic Lifetrancer
+    2200,      // Hyper Psychic Blaster
+    3396,      // Psychic Emperor
+    3242,      // Overmind Archfiend
+    3410,      // Serene Psychic Witch
+    4993,      // Silent Psychic Wizard
+    5038,      // D.D. Telepon
+    3394,      // Esper Girl
+    2836,      // Mental Seeker
+    6112,      // Genomix Fighter
+    1802,      // Genetic Woman
+    2647,      // Machina Force
+    751,       // Commander Covington
+    2646,      // Machina Defender
+    2651,      // Machina Sniper
+    2652,      // Machina Soldier
+    2650,      // Machina Peacekeeper
+    2349,      // Junk Synchron
+    4495,      // Turbo Synchron
+    1294,      // Drill Synchron
+    664,       // Changer Synchron
+    3610,      // Road Synchron
+    3153,      // Nitro Synchron
+    3436,      // Quickdraw Synchron
+    1661,      // Formula Synchron
+    7094,      // Accel Synchron
+    2346,      // Junk Forward
+    2344,      // Junk Defender
+    2338,      // Junk Archer
+    2340,      // Junk Berserker
+    888,       // Cyberdark Horn
+    887,       // Cyberdark Edge
+    890,       // Cyberdark Keel
+    8765,      // Cyberdark Claw
+    886,       // Cyberdark Dragon
+    889,       // Cyberdark Impact!
+    1729,      // Gaia The Fierce Knight
+    842,       // Curse of Dragon
+    4142,      // Swift Gaia the Fierce Knight
+    7479,      // Charging Gaia the Fierce Knight
+    10807,     // Soldier Gaia The Fierce Knight
+    10884,     // Gaia the Fierce Knight Origin
+    7812,      // Curse of Dragonfire
+    3992,      // Spiral Spear Strike
+    1728,      // Gaia the Dragon Champion
+    7815,      // Sky Galloping Gaia the Dragon Champion
+    385,       // Berfomet
+    3292,      // Phantom Beast Wild-Horn
+    3291,      // Phantom Beast Thunder-Pegasus
+    3289,      // Phantom Beast Cross-Wing
+    3290,      // Phantom Beast Rock-Lizard
+    686,       // Chimera the Flying Mythical Beast
     9023,      // Oops!
     2487,      // Kuriboh
     1946,      // Golden Ladybug
@@ -144,9 +289,7 @@ const SFF_CARD_IDS = [
     6882,      // Swamp Mirrorer
     5962,      // Shapesister
     1707,      // Fusion Sage
-    2349,      // Junk Synchron
     3959,      // Speed Warrior
-    2350,      // Junk Warrior
     1494,      // Exiled Force
     3903,      // Snipe Hunter
     5514,      // Compulsory Escape Device
@@ -197,7 +340,6 @@ const SFF_CARD_IDS = [
     3799,      // Shield Worm
     6525,      // Resonance Insect
     270,       // Assault on GHQ
-    664,       // Changer Synchron
     973,       // Dark Diviner
     545,       // Brain Crusher
     481,       // Blast Sphere
@@ -264,7 +406,6 @@ const SFF_CARD_IDS = [
     1754,      // Gather Your Mind
     6526,      // Breaker the Dark Magical Warrior
     6039,      // Number 44: Sky Pegasus
-    6816,      // Gagaga Samurai
     5020,      // Shark Stickers
     5096,      // Number 17: Leviathan Dragon
     5109,      // Kachi Kochi Dragon
@@ -296,13 +437,11 @@ const SFF_CARD_IDS = [
     2287,      // Invigoration
     4150,      // Sword of Dark Destruction
     1423,      // Elf's Light
-    1661,      // Formula Synchron
     2255,      // Infinite Cards
     5143,      // Number 12: Crimson Shadow Armor Ninja
     5126,      // Number 19: Freezadon
     5493,      // Number 33: Chronomaly Machu Mech
     8588,      // Number 28: Titanic Moth
-    741,       // Cold Enchanter
     7706,      // Aegaion the Sea Castrum
     282,       // Attack and Receive
     3175,      // Numinous Healer
@@ -322,43 +461,6 @@ const SFF_CARD_IDS = [
     5615,      // Mecha Sea Dragon Plesion
     6338,      // Tri-Edge Levia
     2075,      // Half Shut
-    4581,      // V-Tiger Jet
-    4840,      // X-Head Cannon
-    4682,      // W-Wing Catapult
-    4866,      // Y-Dragon Head
-    4888,      // Z-Metal Tank
-    4582,      // VW-Tiger Catapult
-    4863,      // XZ-Tank Cannon
-    4861,      // XY-Dragon Cannon
-    4867,      // YZ-Tank Dragon
-    4862,      // XYZ-Dragon Cannon
-    4583,      // VWXYZ-Dragon Catapult Cannon
-    8173,      // Union Hangar
-    8175,      // Union Scramble
-    4639,      // Volcanic Blaster
-    4640,      // Volcanic Counter
-    4643,      // Volcanic Hammerer
-    4647,      // Volcanic Rocket
-    4649,      // Volcanic Shell
-    4650,      // Volcanic Slicer
-    4641,      // Volcanic Doomfire
-    485,       // Blaze Accelerator
-    4460,      // Tri-Blaze Accelerator
-    4646,      // Volcanic Recharge
-    10333,     // Powerhold the Moving Battery
-    5158,      // Constellar Aldebaran
-    5294,      // Constellar Leonis
-    5286,      // Constellar Kaus
-    5159,      // Constellar Algiedi
-    5675,      // Constellar Sombre
-    5295,      // Constellar Acubens
-    7037,      // Constellar Twinkle
-    5343,      // Constellar Star Cradle
-    5285,      // Constellar Praesepe
-    5284,      // Constellar Ptolemy M7
-    1397,      // Elemental HERO Ocean
-    1396,      // Elemental HERO Nova Master
-    1410,      // Elemental HERO Terra Firma
     8760,      // The Legendary Fisherman II
     1704,      // Fusion Gate
     3138,      // Night's End Sorcerer
@@ -394,36 +496,69 @@ const SFF_CARD_IDS = [
     1431,      // Emergency Provisions
     5064,      // Shard of Greed
     6459,      // Electromagnetic Turtle
-    2231,      // Infernity Avenger
-    2234,      // Infernity Beetle
-    5545,      // Mermail Abysspike
-    5546,      // Mermail Abyssturge
-    5987,      // Mermail Abyssbalaen
-    4495,      // Turbo Synchron
-    1294,      // Drill Synchron
-    3610,      // Road Synchron
-    3153,      // Nitro Synchron
-    3436,      // Quickdraw Synchron
-    1295,      // Drill Warrior
-    3155,      // Nitro Warrior
-    4496,      // Turbo Warrior
-    3611,      // Road Warrior
-    6226,      // Gorgonic Gargoyle
-    6227,      // Gorgonic Ghoul
-    6228,      // Gorgonic Cerberus
-    888,       // Cyberdark Horn
-    887,       // Cyberdark Edge
-    890,       // Cyberdark Keel
-    886,       // Cyberdark Dragon
-    889,       // Cyberdark Impact!
-    3299,      // Phantom Magician
-    1381,      // Elemental HERO Heat
-    1385,      // Elemental HERO Lady Heat
-    1391,      // Elemental HERO Necroshade
-    1364,      // Elemental HERO Bladedge
-    1390,      // Elemental HERO Necroid Shaman
-    1414,      // Elemental HERO Wild Wingman
-    1371,      // Elemental HERO Darkbright
-    1383,      // Elemental HERO Inferno
-    1373,      // Elemental HERO Electrum
+    3333,      // Poki Draco
+    647,       // Chain Destruction
+    2687,      // Magical Hats
+    3630,      // Rod of the Mind's Eye
+    4146,      // Swing of Memories
+    614,       // Card Guard
+    2677,      // Magic Reflector
+    5358,      // Iron Call
+    3261,      // Paralyzing Potion
+    1165,      // Different Dimension Capsule
+    1115,      // Desert Twister
+    1689,      // Frost and Flame Dragon
+    3981,      // Sphere of Chaos
+    4392,      // Tiki Soul
+    8079,      // Metamorphortress
+    2658,      // Machine King - 3000 B.C.
+    1427,      // Embodiment of Apophis
+    8073,      // Dimension Reflector
+    1613,      // Flame Swordsman
+    8609,      // Link Spider
+    2211,      // Ignition Beast Volcannon
+    4999,      // Vampire Dragon
+    4490,      // Tuning
+    6192,      // Blue Flame Swordsman
+    5389,      // Photon Papilloperative
+    5099,      // Number 10: Illumiknight
+    5814,      // Fairy Cheer Girl
+    5386,      // Number 32: Shark Drake
+    6962,      // BOXer
+    4075,      // Strike Ninja
+    5152,      // Number C39: Utopia Ray
+    5775,      // Power Tool Mecha Dragon
+    6295,      // Alsei, the Sylvan High Protector
+    6052,      // Comics Hero King Arthur
+    1010,      // Dark Nephthys
+    1835,      // Germ Infection
+    5495,      // Alchemic Magician
+    8099,      // Nirvana High Paladin
+    3687,      // Samsara Kaiser
+    531,       // Boost Warrior
+    6131,      // Giganticastle
+    7546,      // Black Luster Soldier - Sacred Soldier
+    2339,      // Junk Barrage
+    5808,      // Infernal Flame Vixen
+    2345,      // Junk Destroyer
+    253,       // Armory Arm
+    2057,      // Gungnir, Dragon of the Ice Barrier
+    760,       // Conscription
+    8157,      // Tribute Burial
+    1002,      // Dark Magician Girl
+    3438,      // Quillbolt Hedgehog
+    78,        // Alligator's Sword Dragon
+    7556,      // Stardust Assault Warrior
+    5633,      // Mono Synchron
+    3997,      // Spirit Force
+    1288,      // Dread Dragon
+    9931,      // Dark Magic Twin Burst
+    618,       // Card Trooper
+    4491,      // Tuningware
+    4354,      // The Warrior Returning Alive
+    6480,      // Mathematician
+    1094,      // Delta Flyer
+    5111,      // Number 20: Giga-Brilliant
+    805,       // Blood Mefist
+    2602,      // Limiter Overload
 ];
