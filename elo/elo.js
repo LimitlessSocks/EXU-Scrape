@@ -61,6 +61,12 @@ class PlayerCalculations {
     }
     
     playerEncounter(a, b, aScore, bScore) {
+        if(!this.scores[a]) {
+            alert("Cannot find player: " + a);
+        }
+        if(!this.scores[b]) {
+            alert("Cannot find player: " + b);
+        }
         let aElo = this.scores[a].elo;
         let bElo = this.scores[b].elo;
         
