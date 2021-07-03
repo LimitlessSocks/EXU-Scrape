@@ -236,6 +236,10 @@ database = [
     8174923, #Crystalion Support
     8306788, #Duston Support
     8194294, #Jolsprit Support
+    8430979, #Xiuhqui Support
+    8344690, #Evol Support
+    6879409, #Genex Support
+    8310242, #Battlin' Boxer Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -267,7 +271,7 @@ database = [
     # 5576395, #Heaven-Knights
     # 5582929, #Seafolk
     # 4399429, #Hakaishin Archfiend
-    5592020, #Bound
+    # 5592020, #Bound
     # 4359326, #Eldertech
     # 4050998, #Mage & Spell Tomes
     5615949, #Alchemaster
@@ -515,6 +519,8 @@ database = [
     8221267, #Imperialis
     5830740, #New Order
     8196897, #Anguish
+    8269957, #Mind Macabre
+    8352501, #Chirurgeon
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
