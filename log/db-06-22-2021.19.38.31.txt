@@ -1291,3 +1291,10 @@ Your opponent cannot target this card for card effects, also this card cannot be
 [main] note: [-] removed old card 769096 (Azure Reaper V-zov)
 [main] note: [-] removed old card 2282959 (Enkindling)
 [main] Time elapsed: 655.284883s
+[final] Completing scrape at 07-06-2021.16.55.29
+[main] Reading tmp/db-06-22-2021.19.38.31.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1950514", "1950514", "1950582", "2039425", "1943999", "1944038", "1944038", "1944023", "1944031", "1944179", "1760739", "1944060", "1944080", "1944050", "1944118", "1944118", "1978669", "1978664", "1978664", "1978664", "1978664"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 2 associated scrape(s).

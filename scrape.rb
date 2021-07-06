@@ -188,7 +188,7 @@ database = [
     7516633, #Fire Fist
     7529948, #Highlander Support
     6979146, #T.G. Support
-    7545154, #Strannaut Support
+    # 7545154, #Strannaut Support
     7568710, #Windwitch Support
     7534403, #Magnet Warrior Support
     7452180, #Ceremonial Bell Support
@@ -206,7 +206,7 @@ database = [
     6226330, #Acrimonic Support
     7679392, #Toon, Fire King & Windwitch Support
     7647679, #Black Blood Support
-    6845360, #Starter Squad
+    # 6845360, #Starter Squad
     7742679, #Fog+Beast
     7659844, #Relinquished
     7619657, #Panda Support
@@ -357,7 +357,7 @@ database = [
     # 7877196, #Glow Gods
     6604359, #Chronoruler
     6601142, #Serpent Night
-    6649729, #Flamiller
+    # 6649729, #Flamiller
     # 6670355, #Railreich
     6611617, #Frostyre
     6677155, #Colossus
@@ -370,7 +370,7 @@ database = [
     6719358, #Vengeful Tox
     6733479, #Ookazi
     6188330, #Giga Havoc
-    6772951, #Starter Squad
+    # 6772951, #Starter Squad
     6760980, #Final Dream
     6785271, #Aria Fey: Part 2
     6116920, #Frozen Ritual
@@ -384,13 +384,13 @@ database = [
     # 5269100, #Orb Magician
     6616619, #Queltz
     6785434, #Moira
-    7753448, #Hellvil
+    # 7753448, #Hellvil
     6874481, #Dark Hole
     6895350, #Owlsh
     # 6777854, #Nebulline
     # 6849044, #Nebulline
     8167114, #Nebulline
-    6806175, #Chibright
+    # 6806175, #Chibright
     # 4330341, #D.N.M.Q.
     6906385, #Legendary Golems
     # 6848354, #The 9s
@@ -414,7 +414,7 @@ database = [
     7127621, #Dark Imp
     7124125, #Anglory
     7138655, #Witchwood
-    7200158, #Strannaut
+    # 7200158, #Strannaut
     7203610, #Andromeda
     7180332, #Dual Asset
     7184403, #Crystalion

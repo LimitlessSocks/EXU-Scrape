@@ -243,7 +243,11 @@ if __FILE__ == $0
         option = ARGV[0]
         if /^[0-9a-z]+$/ === option
             val = keys[option.to_i(36)]
-            option = val unless val.nil?
+            unless val.nil?
+                puts "Are you sure you want to use scrape #{val}? Press ^C to cancel."
+                gets
+                option = val
+            end
         end
     end
     
