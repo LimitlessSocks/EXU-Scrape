@@ -245,7 +245,7 @@ if __FILE__ == $0
             val = keys[option.to_i(36)]
             unless val.nil?
                 puts "Are you sure you want to use scrape #{val}? Press ^C to cancel."
-                gets
+                STDIN.gets
                 option = val
             end
         end

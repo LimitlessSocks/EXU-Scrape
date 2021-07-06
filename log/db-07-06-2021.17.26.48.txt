@@ -1232,3 +1232,10 @@ You can banish this card and 1 Level 4 or lower "Chaos Performer" monster from y
 [main] note: [-] removed old card 2191900 (Strannaut Vantage)
 [main] note: [-] removed old card 2191893 (Strannaut Fiddler)
 [main] Time elapsed: 660.452498s
+[final] Completing scrape at 07-06-2021.18.04.40
+[main] Reading tmp/db-07-06-2021.17.26.48.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["2461460", "1519318", "123829", "1998950", "2416249", "2387773", "2384514", "1335745"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
