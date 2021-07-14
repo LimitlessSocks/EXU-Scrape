@@ -476,7 +476,7 @@ database = [
     7763820, #Nekker
     7609855, #Kitsento
     7714198, #Attack on Titan
-    7225933, #Chima
+    # 7225933, #Chima
     7236701, #Erwormwood
     7730748, #Magistar
     7769900, #Thunderstrike Dragon
