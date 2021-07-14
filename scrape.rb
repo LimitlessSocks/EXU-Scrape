@@ -521,6 +521,16 @@ database = [
     8196897, #Anguish
     8269957, #Mind Macabre
     8352501, #Chirurgeon
+    6516859, #E^rabastel
+    8345249, #Fossilrai
+    8475666, #DragoThief
+    8312789, #Staysailor
+    8457383, #Dynamic Gnome
+    8376563, #LaVoix
+    6707275, #Malevolessence
+    6356932, #Cosmech
+    6156689, #Varagon
+    
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
@@ -538,6 +548,8 @@ database = [
     8202812, #Generic Monsters XI
     8253171, #Generic Monsters XII
     8318509, #Generic Monsters XIII
+    8487086, #Generic Monsters XIV
+    8540960, #Generic Monsters XV
     6353430, #Generic Spells
     6419184, #Generic Spells II
     6871664, #Generic Spells III
