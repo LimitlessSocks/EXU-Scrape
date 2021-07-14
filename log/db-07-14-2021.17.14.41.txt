@@ -1168,3 +1168,10 @@
 [main] note: [-] removed old card 1218064 (Flamiller Fangking)
 [main] note: [-] removed old card 1225251 (Flamiller Snakqueen)
 [main] Time elapsed: 686.312224s
+[final] Completing scrape at 07-14-2021.17.51.33
+[main] Reading tmp/db-07-14-2021.17.14.41.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: []
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
