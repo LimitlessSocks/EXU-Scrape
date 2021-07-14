@@ -240,6 +240,9 @@ database = [
     8344690, #Evol Support
     6879409, #Genex Support
     8310242, #Battlin' Boxer Support
+    8187355, #Reptilianne Support
+    7914836, #Cubic Support
+    8119660, #Darklord Marie Support
     
     #--------------------------------------------------------------------#
     # Archetypes
