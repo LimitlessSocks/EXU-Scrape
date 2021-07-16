@@ -13,9 +13,6 @@ Dark Mimic LV1
 Dark Mimic LV3
 Silent Magician LV4
 Silent Magician LV8
-Paleozoic Eldonia
-Paleozoic Hallucigenia
-Paleozoic Leanchoilia
 Maestroke the Symphony Djinn
 Humhumming the Key Djinn
 Melomelody the Brass Djinn
@@ -102,11 +99,6 @@ Gagaga Magician
 Gagaga Girl
 Gagaga Child
 Gagaga Samurai
-Junk Warrior
-Drill Warrior
-Nitro Warrior
-Turbo Warrior
-Road Warrior
 Gorgonic Gargoyle
 Gorgonic Ghoul
 Gorgonic Cerberus
@@ -223,6 +215,60 @@ Phantom Beast Thunder-Pegasus
 Phantom Beast Cross-Wing
 Phantom Beast Rock-Lizard
 Chimera The Flying Mythical Beast
+Paleozoic Eldonia
+Paleozoic Hallucigenia
+Paleozoic Leanchoilia
+Paleozoic Marrella
+Jurrac Aeolo
+Jurrac Stauriko
+Jurrac Brachis
+Jurrac Dino
+Jurrac Monoloph
+Jurrac Iguanon
+Jurrac Protops
+Jurrac Spinos
+Jurrac Velphito
+Junk Warrior
+Drill Warrior
+Nitro Warrior
+Turbo Warrior
+Mighty Warrior
+Gravity Warrior
+Scarred Warrior
+Road Warrior
+Stardust Charge Warrior
+Stardust Assault Warrior 
+Shark Stickers
+Hammer Shark
+Saber Shark
+Double Fin Shark
+Double Shark
+Spear Shark
+Metabo-Shark
+Cyber Shark
+Panther Shark
+Eagle Shark
+Depth Shark
+Submersible Carrier Aero Shark
+Number 47: Nightmare Shark
+Number 37: Hope Woven Dragon Spider Shark 
+Number 32: Shark Drake
+Number C32: Shark Drake Veiss
+Queen's Knight
+King's Knight
+Jack's Knight
+Valkyrie Zweite
+Valkyrie Erste
+Valkyrie Brunhilde
+Fortune Chariot
+Valkyrie Vierte
+Valkyrie Funfte
+Valkyrie Erda
+Valkyrie Chariot
+Pegasus Wing
+Goddess Verdande's Guidance
+Goddess Urd's Verdict
+Apple of Enlightenment
 #====================#
 Gagaga Magician
 Gagaga Girl
@@ -1205,3 +1251,60 @@ Delta Flyer
 Number 20: Giga-Brilliant
 Blood Mefist
 Limiter Overload
+Card Breaker
+Anteatereatingant
+Celestial Wolf Lord, Blue Sirius
+Dewloren, Tiger King of the Ice Barrier
+Gaia Knight, the Force of Earth
+Powered Inzektron
+Double Summon
+Roulette Spider
+Magician's Circle
+Fortress Warrior
+Lucky Iron Axe
+Insect Queen
+Ice Beast Zerofyne
+Fiend Comedian
+Number 66: Master Key Beetle
+Exploder Dragonwing
+Pumprincess the Princess of Ghosts
+Caninetaur
+Verdant Sanctuary
+Rigorous Reaver
+Slate Warrior
+Mischief of the Gnomes
+Cybernetic Magician
+Watch Cat
+Swarm of Locusts
+Heavy Armored Train Ironwolf
+Defender of the Labyrinth
+Shuffle Reborn
+Lightforce Sword
+Parasite Paracide
+Card Shuffle
+Ribbon of Rebirth
+Nitwit Outwit
+The Immortal Bushi
+Amarylease
+Herald of Creation
+Number 85: Crazy Box
+Wrecker Panda
+Orgoth the Relentless
+Cobra Jar
+Silent Angler
+Number 73: Abyss Splash
+Seraphim Papillion
+Pilgrim Reaper
+Descending Lost Star
+Dark World Dealings
+Peaceful Burial
+Dark Strike Fighter
+The Golden Apples
+Mystic Piper
+Skill Successor
+Magical Mallet
+Reload
+Tour Bus to Forbidden Realms
+Dimension Gate
+Black-Winged Dragon
+Light End Dragon

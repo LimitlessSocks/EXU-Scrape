@@ -50,9 +50,6 @@ const SFF_CARD_IDS = [
     1007,      // Dark Mimic LV3
     3834,      // Silent Magician LV4
     3835,      // Silent Magician LV8
-    7758,      // Paleozoic Eldonia
-    7559,      // Paleozoic Hallucigenia
-    7761,      // Paleozoic Leanchoilia
     5433,      // Maestroke the Symphony Djinn
     6574,      // Humhumming the Key Djinn
     5430,      // Melomelody the Brass Djinn
@@ -138,11 +135,6 @@ const SFF_CARD_IDS = [
     5186,      // Gagaga Girl
     5886,      // Gagaga Child
     6816,      // Gagaga Samurai
-    2350,      // Junk Warrior
-    1295,      // Drill Warrior
-    3155,      // Nitro Warrior
-    4496,      // Turbo Warrior
-    3611,      // Road Warrior
     6226,      // Gorgonic Gargoyle
     6227,      // Gorgonic Ghoul
     6228,      // Gorgonic Cerberus
@@ -233,6 +225,7 @@ const SFF_CARD_IDS = [
     2344,      // Junk Defender
     2338,      // Junk Archer
     2340,      // Junk Berserker
+    2350,      // Junk Warrior
     888,       // Cyberdark Horn
     887,       // Cyberdark Edge
     890,       // Cyberdark Keel
@@ -255,6 +248,59 @@ const SFF_CARD_IDS = [
     3289,      // Phantom Beast Cross-Wing
     3290,      // Phantom Beast Rock-Lizard
     686,       // Chimera the Flying Mythical Beast
+    7758,      // Paleozoic Eldonia
+    7559,      // Paleozoic Hallucigenia
+    7761,      // Paleozoic Leanchoilia
+    7760,      // Paleozoic Marrella
+    2352,      // Jurrac Aeolo
+    2365,      // Jurrac Stauriko
+    2353,      // Jurrac Brachis
+    2354,      // Jurrac Dino
+    2361,      // Jurrac Monoloph
+    2359,      // Jurrac Iguanon
+    2362,      // Jurrac Protops
+    2364,      // Jurrac Spinos
+    2369,      // Jurrac Velphito
+    1295,      // Drill Warrior
+    3155,      // Nitro Warrior
+    4496,      // Turbo Warrior
+    5537,      // Mighty Warrior
+    5307,      // Gravity Warrior
+    3708,      // Scarred Warrior
+    3611,      // Road Warrior
+    7825,      // Stardust Charge Warrior
+    7556,      // Stardust Assault Warrior
+    5020,      // Shark Stickers
+    5374,      // Hammer Shark
+    6202,      // Saber Shark
+    6196,      // Double Fin Shark
+    5697,      // Double Shark
+    5695,      // Spear Shark
+    2843,      // Metabo-Shark
+    876,       // Cyber Shark
+    5848,      // Panther Shark
+    5850,      // Eagle Shark
+    6194,      // Depth Shark
+    5100,      // Submersible Carrier Aero Shark
+    5811,      // Number 47: Nightmare Shark
+    7827,      // Number 37: Hope Woven Dragon Spider Shark
+    5386,      // Number 32: Shark Drake
+    5620,      // Number C32: Shark Drake Veiss
+    3431,      // Queen's Knight
+    2438,      // King's Knight
+    2305,      // Jack's Knight
+    9599,      // Valkyrie Zweite
+    9600,      // Valkyrie Erste
+    9601,      // Valkyrie Brunhilde
+    9602,      // Fortune Chariot
+    9919,      // Valkyrie Vierte
+    10100,     // Valkyrie Funfte
+    10101,     // Valkyrie Erda
+    10102,     // Valkyrie Chariot
+    10104,     // Pegasus Wing
+    9606,      // Goddess Verdande's Guidance
+    9607,      // Goddess Urd's Verdict
+    9921,      // Apple of Enlightenment
     9023,      // Oops!
     2487,      // Kuriboh
     1946,      // Golden Ladybug
@@ -406,7 +452,6 @@ const SFF_CARD_IDS = [
     1754,      // Gather Your Mind
     6526,      // Breaker the Dark Magical Warrior
     6039,      // Number 44: Sky Pegasus
-    5020,      // Shark Stickers
     5096,      // Number 17: Leviathan Dragon
     5109,      // Kachi Kochi Dragon
     5498,      // Sword Breaker
@@ -523,7 +568,6 @@ const SFF_CARD_IDS = [
     5389,      // Photon Papilloperative
     5099,      // Number 10: Illumiknight
     5814,      // Fairy Cheer Girl
-    5386,      // Number 32: Shark Drake
     6962,      // BOXer
     4075,      // Strike Ninja
     5152,      // Number C39: Utopia Ray
@@ -548,7 +592,6 @@ const SFF_CARD_IDS = [
     1002,      // Dark Magician Girl
     3438,      // Quillbolt Hedgehog
     78,        // Alligator's Sword Dragon
-    7556,      // Stardust Assault Warrior
     5633,      // Mono Synchron
     3997,      // Spirit Force
     1288,      // Dread Dragon
@@ -561,4 +604,61 @@ const SFF_CARD_IDS = [
     5111,      // Number 20: Giga-Brilliant
     805,       // Blood Mefist
     2602,      // Limiter Overload
+    611,       // Card Breaker
+    178,       // Anteatereatingant
+    4975,      // Celestial Wolf Lord, Blue Sirius
+    1155,      // Dewloren, Tiger King of the Ice Barrier
+    1724,      // Gaia Knight, the Force of Earth
+    6356,      // Powered Inzektron
+    1236,      // Double Summon
+    7375,      // Roulette Spider
+    2700,      // Magician's Circle
+    1663,      // Fortress Warrior
+    2629,      // Lucky Iron Axe
+    2269,      // Insect Queen
+    5820,      // Ice Beast Zerofyne
+    1562,      // Fiend Comedian
+    5909,      // Number 66: Master Key Beetle
+    1499,      // Exploder Dragonwing
+    6105,      // Pumprincess the Princess of Ghosts
+    7407,      // Caninetaur
+    4616,      // Verdant Sanctuary
+    3590,      // Rigorous Reaver
+    3888,      // Slate Warrior
+    7128,      // Mischief of the Gnomes
+    893,       // Cybernetic Magician
+    9152,      // Watch Cat
+    4138,      // Swarm of Locusts
+    8366,      // Heavy Armored Train Ironwolf
+    10059,     // Defender of the Labyrinth
+    7513,      // Shuffle Reborn
+    2590,      // Lightforce Sword
+    3262,      // Parasite Paracide
+    616,       // Card Shuffle
+    3587,      // Ribbon of Rebirth
+    5381,      // Nitwit Outwit
+    4302,      // The Immortal Bushi
+    5690,      // Amarylease
+    2124,      // Herald of Creation
+    6045,      // Number 85: Crazy Box
+    8006,      // Wrecker Panda
+    9374,      // Orgoth the Relentless
+    731,       // Cobra Jar
+    6203,      // Silent Angler
+    6200,      // Number 73: Abyss Splash
+    10244,     // Seraphim Papillion
+    6321,      // Pilgrim Reaper
+    1112,      // Descending Lost Star
+    1039,      // Dark World Dealings
+    10271,     // Peaceful Burial
+    1031,      // Dark Strike Fighter
+    4296,      // The Golden Apples
+    3025,      // Mystic Piper
+    3860,      // Skill Successor
+    2689,      // Magical Mallet
+    3542,      // Reload
+    6164,      // Tour Bus To Forbidden Realms
+    5762,      // Dimension Gate
+    437,       // Black-Winged Dragon
+    2580,      // Light End Dragon
 ];
