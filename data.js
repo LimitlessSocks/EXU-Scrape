@@ -630,6 +630,10 @@ const filterHTML = `
                     <option value=any></option>
                     <option value=1>Public</option>
                     <option value=2>Private</option>
+                    <option value=3>TCG only</option>
+                    <option value=4>OCG only</option>
+                    <option value=5>Custom only</option>
+                    <option value=6>TCG/OCG</option>
                 </select>
             </td>
             <td><label for="cardCategory">Card Category:</label></td>
@@ -897,17 +901,32 @@ window.addEventListener("load", async function () {
         sortIndexer: "sortIndex",
         limiter: "limit",
     };
+    const sortIndexMap = {
+        0: 0, // name
+        1: 1, // value
+        2: 1, // value ascending
+    };
     let inputElements = $("#otherOptions select, #otherOptions input");
     let onUpdate = function () {
         // console.log(this);
         if(this.value === "") return;
-        console.log(this.id, this, this.value);
-        let val = idToKey[this.id];
+        let property = idToKey[this.id];
         
-        if(val === "sortIndex") {
+        console.dir({
+            property: property,
+            id: this.id,
+            this: this,
+            thisValue: this.value
+        });
+        
+        Statistics.Options[property] = this.value;
+        
+        
+        if(property === "sortIndex") {
             Statistics.Options.sortOrder = this.value == "1" ? -1 : 1;
+            Statistics.Options[property] = sortIndexMap[Statistics.Options[property]];
         }
-        Statistics.Options[val] = this.value;
+        
         Statistics.focus.button.click();
     };
     
