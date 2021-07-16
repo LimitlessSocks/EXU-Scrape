@@ -5,20 +5,42 @@ let smallWorldFilter = (a, b) =>
 let smallWorldMatches = (a, b) =>
     smallWorldFilter(a, b).length === 1;
 
+let specialCards = [
+    8504, 1340, 1300, 10345, 6520, 9157, 914, 3875, 89, 10596,
+    9853, 10344
+];
+let semiSpecial = [
+    9490
+];
+
 let rankSmallWorldMatch = (first, prospect, target) => {
     let firstBridge = smallWorldFilter(first, prospect)[0];
     let secondBridge = smallWorldFilter(prospect, target)[0];
     // TODO: better grading
     let firstIndex = stats.indexOf(firstBridge);
     let secondIndex = stats.indexOf(secondBridge);
-    return firstIndex + secondIndex;
+    let rank = 0;//firstIndex + secondIndex;
+    
+    if(specialCards.indexOf(prospect.id) !== -1) {
+        rank += 200;
+    }
+    if(prospect.name.indexOf("Danger!") >= 0 || semiSpecial.indexOf(prospect.id) !== -1) {
+        rank += 100;
+    }
+    
+    return rank;
 };
 
 let bridgeSmallWorld = (first, target) => 
     getValidTargets()
+          // .filter(card => {
+              // let firstBridge = smallWorldFilter(first, card);
+              // let secondBridge = smallWorldFilter(card, target);
+              // return firstBridge.length === 1 && secondBridge.length === 1 && firstBridge[0] === secondBridge[0];
+          // })
           .filter(card => smallWorldMatches(first, card) && smallWorldMatches(card, target))
           .map(card => [card, rankSmallWorldMatch(first, card, target)])
-          .sort((a, b) => a[1] - b[1]);
+          .sort((a, b) => b[1] - a[1] || a[0].name.localeCompare(b[0].name));
 
 let findAllBridgesBelow = function (thresh) {
     return new Promise((resolve, reject) => {
@@ -70,7 +92,8 @@ const getRandomCard = (kind=null) => {
 const getValidTargets = (name="") =>
     CardViewer.filter({
         name: name,
-        type: "monster"
+        type: "monster",
+        alsoImported: true,
     }).filter(CardViewer.Filters.isMainDeck);
 
 const filterByMonsterName = (name="") => {
@@ -152,7 +175,7 @@ const NO_CARD_FOUND = {
 };
 let onLoad = async function () {
     CardViewer.excludeTcg = false;
-    CardViewer.showImported = true;
+    CardViewer.showImported = false;
     
     const handCard = $("#handCard");
     const deckCard = $("#deckCard");
@@ -221,7 +244,7 @@ let onLoad = async function () {
             moreButton.click(appendMore);
             allButton.click(() => {
                 allButton.prop("disabled", true);
-                showAll();
+                appendAll();
             });
         }
         else {
