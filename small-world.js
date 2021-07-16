@@ -221,7 +221,7 @@ let onLoad = async function () {
             moreButton.click(appendMore);
             allButton.click(() => {
                 allButton.prop("disabled", true);
-                showAlll();
+                showAll();
             });
         }
         else {
