@@ -180,7 +180,7 @@ database = [
     # 7463590, #Poppin
     7499352, #O.F.F
     7454784, #Entropy Beast Support
-    7503066, #Tidalive Support
+    # 7503066, #Tidalive Support
     6598851, #Madoor
     7448539, #Wight
     7499374, #OFF 2
@@ -296,7 +296,7 @@ database = [
     5766412, #Karmasattva
     5834507, #Nadiupant
     4806770, #Chronotiger
-    5145725, #Remnant
+    # 5145725, #Remnant
     # 5587605, #Hot Pink
     5917260, #Koala
     # 2788655, #Ravager
@@ -347,7 +347,7 @@ database = [
     6347993, #Headhunter
     # 5818764, #Firewild
     6460257, #Dark Arts
-    5145725, #Remnant
+    # 5145725, #Remnant
     6537631, #Bucket Squad
     # 6547017, #World Reaper Support
     7553027, #Cosmic Primal
@@ -436,7 +436,7 @@ database = [
     5822335, #Tokyo Terror
     7367392, #Bas-Yak
     5904696, #Contraption
-    7877183, #Tidalive
+    # 7877183, #Tidalive
     7443209, #Mokey Mokey OTK
     7455513, #Doom Instruments
     7163783, #Lemuria
