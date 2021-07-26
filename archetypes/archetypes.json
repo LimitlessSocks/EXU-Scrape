@@ -84,14 +84,6 @@
             "description": "A Tribute-based Synchro Deck that Special Summons and interrupts the opponent."
         },
         {
-            "name": "Bound",
-            "deckIds": [5592020],
-            "cardIds": [],
-            "thumb": "1510315",
-            "author": "Andraith",
-            "description": "An Xyz archetype inspired by the TCG archetype 'Zoodiac'."
-        },
-        {
             "name": "Alchemaster",
             "deckIds": [5615949],
             "cardIds": [],
@@ -211,15 +203,6 @@
             "thumb": "1281547",
             "author": "Gus",
             "description": "A DARK Machine Xyz archetype with an... interesting theme, to say the least."
-        },
-        {
-            "name": "Remnant",
-            "deckIds": [5145725],
-            "cardIds": [],
-            "thumb": "1380766",
-            "author": "OceanPhantom",
-            "description": "A Trap Fusion Deck that uses Normal Monsters and disruptions to close out games.",
-            "tags": ["control", "fusion", "grind", "stun", "float"]
         },
         {
             "name": "Koala",
@@ -450,14 +433,6 @@
             "description": "A DARK based Deck that does Fusion, Synchro and Link stuff as well as discarding/banishing shenanigans."
         },
         {
-            "name": "Eviction",
-            "deckIds": [4361777],
-            "cardIds": [],
-            "thumb": "1946986",
-            "author": "46",
-            "description": "A LIGHT and DARK Fairy combo-based Deck that can get away with playing a few hand-traps."
-        },
-        {
             "name": "Bucket Squad",
             "deckIds": [6537631],
             "cardIds": [],
@@ -546,15 +521,6 @@
             "description": "A Thunder Synchro Deck that focuses around monsters in the Spell/Trap Zones and destruction."
         },
         {
-            "name": "Starter Squad",
-            "deckIds": [6772951, 6845360],
-            "cardIds": [],
-            "thumb": "1944179",
-            "author": "Ava",
-            "description": "A mid range Deck that doesn't put up too much turn 1 but left alone really punches hard. The Deck's goal is to be able to conquer the board with their Braves, before ending in style by Summoning the Violet Sorceress herself, complete with the ability to bounce a card you control to pop a card during either player's turn.",
-            "tags": ["midrange", "beatdown", "rainbow", "engine"]
-        },
-        {
             "name": "Final Dream",
             "deckIds": [6760980],
             "cardIds": [],
@@ -624,21 +590,12 @@
         },
         {
             "name": "Nebulline",
-            "deckIds": [6849044],
+            "deckIds": [8167114],
             "cardIds": [],
             "thumb": "1943901",
             "author": "AkeDragon",
             "description": "A Beast Deck that focuses on Xyz Summoning and modifying Levels, also featuring a new monster: Shin Chimera, Power.",
             "tags": ["combo", "xyz", "support", "beatdown"]
-        },
-        {
-            "name": "Chibright",
-            "deckIds": [6806175],
-            "cardIds": [],
-            "thumb": "1970794",
-            "author": "Ava",
-            "description": "A Link Fairy Deck that uses Traps, monsters and a Spell to get plays done.",
-            "tags": ["combo", "float", "engine", "link"]
         },
         {
             "name": "Legendary Golems",
@@ -702,15 +659,6 @@
             "author": "Cryselle",
             "description": "A mid-range Xyz & Synchro deck that utilizes banishing to generate board presence which it then converts into a host of toolbox options including negation, protection, extension, and removal.",
             "tags": ["synchro", "xyz", "midrange", "banish", "engine"]
-        },
-        {
-            "name": "Strannaut",
-            "deckIds": [7200158, 7545154],
-            "cardIds": [],
-            "thumb": "2079343",
-            "author": "Himself17",
-            "description": "A control Deck based around controlling the Battle Phase and withering away your opponent's monsters until all that's left are the memories of what once was.",
-            "tags": ["control", "backrow", "first"]
         },
         {
             "name": "Andromeda",
@@ -881,23 +829,6 @@
             "author": "Ryck",
             "description": "A small Fusion engine revolving around Serpent Nightmare Dragon.",
             "tags": ["control", "engine", "fusion", "castle"]
-        },
-        {
-            "name": "Flamiller",
-            "deckIds": [6649729],
-            "cardIds": [],
-            "thumb": "1218064",
-            "author": "Styrofoam",
-            "description": "A FIRE-based mill archetype focused on a central Equip Spell."
-        },
-        {
-            "name": "Hellvil",
-            "deckIds": [7753448, 7428956, 7737487],
-            "cardIds": [],
-            "thumb": "1966229",
-            "author": "JDan",
-            "description": "A DARK Fiend going second beatdown Deck focusing on Link climbing and Fusion plays. Lots of battle oriented effects, and Continuous backrow that provide a burst of short term power but tend to starve you out with their long term cost of milling your Deck.",
-            "tags": ["aggro", "beatdown", "fusion", "link deck"]
         },
         {
             "name": "Wild Rose",
@@ -1084,15 +1015,6 @@
             "author": "Diego",
             "description": "A going second Machine Deck focused on outgrinding the opponent with Trap monsters, Fusion Monsters that can be Contact Fused and their Rank 5 toolbox - as well as decent turn 1 plays.",
             "tags": ["second", "fusion", "xyz", "trap", "control"]
-        },
-        {
-            "name": "Tidalive",
-            "deckIds": [7877183],
-            "cardIds": [],
-            "thumb": "2122458",
-            "author": "Gatr",
-            "description": "A tempo-based Pendulum Deck with an emphasis on having completely different effects on your turn and the opponent's turn.",
-            "tags": ["pendulum"]
         },
         {
             "name": "Mokey Mokey",
@@ -1410,15 +1332,6 @@
             "tags": []
         },
         {
-            "name": "Chima",
-            "deckIds": [7225933],
-            "cardIds": [],
-            "thumb": "2133312",
-            "author": "Gatr",
-            "description": "A fast paced, multi Attribute Beast-Warrior Fusion archetype based on the 'LEGO: Legends of Chima' franchise that revolves around its monsters utilizing the Deck's Equip Spells to grow stronger, as well as a unique Fusion Spell that fuses a monster with its respective Equip Spell to Fusion Summon different Fusion Monsters.",
-            "tags": []
-        },
-        {
             "name": "Erwormwood",
             "deckIds": [7236701],
             "cardIds": [],
@@ -1690,7 +1603,7 @@
         },
         {
             "name": "Jolsprit",
-            "deckIds": [8170513],
+            "deckIds": [8170513, 8194294],
             "cardIds": [],
             "thumb": "2393244",
             "author": "Sock",
@@ -1734,24 +1647,6 @@
             "tags": []
         },
         {
-            "name": "Azure Reaper",
-            "deckIds": [3705612],
-            "cardIds": [],
-            "thumb": "769353",
-            "author": "Lukeanator",
-            "description": "A combo and control archetype designed to be played with generic powerful cards, with basic removal effects to allow going second plays as well as handtrap accessibility.",
-            "tags": []
-        },
-        {
-            "name": "Cykoton",
-            "deckIds": [8013380],
-            "cardIds": [],
-            "thumb": "2346325",
-            "author": "Amaranthine",
-            "description": "A mid-range LIGHT Machine archetype that is Link-centered without actually having Link Monsters in it - instead being able to Summon any non-archetypal Link Monster.",
-            "tags": []
-        },
-        {
             "name": "Forge Breaker",
             "deckIds": [8213421],
             "cardIds": [],
@@ -1785,6 +1680,114 @@
             "thumb": "2069405",
             "author": "FlavorFlov",
             "description": "An archetype that expands upon the TCG cards 'Statue of Anguish Pattern' and 'Raging Earth' - utilizing Continuous Traps that become monsters and Extra Deck monsters that become Continuous Spells.",
+            "tags": []
+        },
+        {
+            "name": "Mind Macabre",
+            "deckIds": [8269957],
+            "cardIds": [],
+            "thumb": "2425597",
+            "author": "GodOfWhim",
+            "description": "An archetype with a unique playstyle: Stealing your opponent's cards, engines and win conditions from their GY so you can play their cards better than they can.",
+            "tags": []
+        },
+        {
+            "name": "Chirurgeon",
+            "deckIds": [8352501],
+            "cardIds": [],
+            "thumb": "2451780",
+            "author": "Khreygond",
+            "description": "A mill archetype inspired mainly by Frankenstein that is capable of going first or second while utilizing milling as a timer rather than a primary win condition - along with a diverse variety of Spells.",
+            "tags": []
+        },
+        {
+            "name": "E^rabastel",
+            "deckIds": [6516859],
+            "cardIds": [],
+            "thumb": "1853094",
+            "author": "Fallen",
+            "description": "A Ritual archetype that utlizes its Spells that are banished or in the GY in order to Ritual Summon from the GY while also relying on the value of the \"Chapter\" in the Spell's name, similar to how Galaxy Satellite Dragon uses the value of the \"Number\" in Number monsters' names - with a main gameplan being use the \"Chapter\" Continuous Spells in a manner akin to flipping through the pages of a book by sending \"Chapter\" Spells you control to the GY to swap them for a banished \"Chapter\" or to use their effects while also getting as many materials in the GY as possible to dig for going second cards to help break boards and get in for game.",
+            "tags": []
+        },
+        {
+            "name": "Fossilrai",
+            "deckIds": [8345249],
+            "cardIds": [],
+            "thumb": "2454974",
+            "author": "Xerex",
+            "description": "An EARTH and WIND Dinosaur archetype focused on getting in battle damage with the help of their Synchro Monsters and turning the opponent's monsters to Defense Position for extra piercing damage.",
+            "tags": []
+        },
+        {
+            "name": "DragoThief",
+            "deckIds": [8475666],
+            "cardIds": [],
+            "thumb": "2487846",
+            "author": "Justin",
+            "description": "An EARTH and WIND Dinosaur archetype focused on getting in battle damage with the help of their Synchro Monsters and turning the opponent's monsters to Defense Position for extra piercing damage.",
+            "tags": []
+        },
+        {
+            "name": "Staysailor",
+            "deckIds": [8312789],
+            "cardIds": [],
+            "thumb": "2445337",
+            "author": "Mevs",
+            "description": "A LIGHT Plant archetype focused on resource loops and different control effects.",
+            "tags": []
+        },
+        {
+            "name": "Dynamic Gnome",
+            "deckIds": [8457383],
+            "cardIds": [],
+            "thumb": "2480876",
+            "author": "46",
+            "description": "A Fairy Counter Trap archetype that relies on the opponent's monsters leaving the field in the same column as cards you control to Summon your boss monsters.",
+            "tags": []
+        },
+        {
+            "name": "LaVoix",
+            "deckIds": [8376563],
+            "cardIds": [],
+            "thumb": "2459192",
+            "author": "Sock",
+            "description": "A Dragon Pendulum archetype that ignores Master Rule 4+ at the cost of not having a face-down Extra Deck.",
+            "tags": []
+        },
+        {
+            "name": "Malevolessence",
+            "deckIds": [6707275],
+            "cardIds": [],
+            "thumb": "1228080",
+            "author": "Khreygond",
+            "description": "A DARK archetype that plays almost exclusively from the banished pile and GY, essentially hoping to open the cards that can put archetype cards in the GY and then grinding with Malevolessence Fusion.",
+            "tags": []
+        },
+        {
+            "name": "Cosmech",
+            "deckIds": [6356932],
+            "cardIds": [],
+            "thumb": "1805002",
+            "author": "TheConstruct",
+            "description": "A DARK archetype that plays almost exclusively from the banished pile and GY, essentially hoping to open the cards that can put archetype cards in the GY and then grinding with Malevolessence Fusion.",
+            "tags": []
+        },
+        {
+            "name": "Varagon",
+            "deckIds": [6156689],
+            "cardIds": [],
+            "thumb": "2481693",
+            "author": "Ajax",
+            "description": "A DARK archetype that plays almost exclusively from the banished pile and GY, essentially hoping to open the cards that can put archetype cards in the GY and then grinding with Malevolessence Fusion.",
+            "tags": []
+        },
+        {
+            "name": "Kuuroma",
+            "deckIds": [6040042],
+            "cardIds": [],
+            "thumb": "1831213",
+            "author": "Gatr",
+            "description": "A Trap-based archetype that mainly focuses on Attribute changing and having 6 generic Trap Cards that each interact with a monster of a specific Attribute.",
             "tags": []
         }
     ]

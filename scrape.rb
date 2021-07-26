@@ -533,6 +533,7 @@ database = [
     6707275, #Malevolessence
     6356932, #Cosmech
     6156689, #Varagon
+    6040042, #Kuuroma
     
     
     #order shenanigans
