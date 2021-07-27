@@ -1210,3 +1210,10 @@ If this card was Fusion Summoned using a non-"Malevolessence" card, you cannot S
 [main] note: [-] removed old card 2227542 (Remnant Navigation)
 [main] note: [-] removed old card 925337 (Princess Connect! Kokkoro - Re:Dive)
 [main] Time elapsed: 674.964967s
+[final] Completing scrape at 07-26-2021.22.12.17
+[main] Reading tmp/db-07-26-2021.21.43.55.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1646232", "1959531", "1228084", "1228097", "1228080", "1228241", "1228212", "1228153", "2309149", "1956889"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
