@@ -460,7 +460,7 @@
         {
             "name": "Charismatic",
             "deckIds": [6560628, 7389331],
-            "cardIds": [],
+            "cardIds": [2503110],
             "thumb": "1558753",
             "author": "Sock",
             "description": "A LIGHT Spellcaster based Link Deck.",
