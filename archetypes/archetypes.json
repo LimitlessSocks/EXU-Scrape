@@ -1789,6 +1789,24 @@
             "author": "Gatr",
             "description": "A Trap-based archetype that mainly focuses on Attribute changing and having 6 generic Trap Cards that each interact with a monster of a specific Attribute.",
             "tags": []
+        },
+        {
+            "name": "Tensura",
+            "deckIds": [8579730],
+            "cardIds": [],
+            "thumb": "2523171",
+            "author": "KozukiOden",
+            "description": "A Fusion and Synchro archetype focusing around the monster 'Tensura - Rimiru', using 2 Spells to bring out the counterparts of the Main Deck monsters.",
+            "tags": []
+        },
+        {
+            "name": "Crystal Tower",
+            "deckIds": [8596515],
+            "cardIds": [],
+            "thumb": "2527749",
+            "author": "46",
+            "description": "An EARTH Fairy archetype that can equip monsters the opponent controls to different archetypal monsters by attacking into them and then unequipping them for powerful effects.",
+            "tags": []
         }
     ]
 }
