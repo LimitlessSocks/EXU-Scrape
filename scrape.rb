@@ -179,7 +179,7 @@ database = [
     # 5813034, #Gimmick Puppet Support
     # 7463590, #Poppin
     7499352, #O.F.F
-    7454784, #Entropy Beast Support
+    # 7454784, #Entropy Beast Support
     # 7503066, #Tidalive Support
     6598851, #Madoor
     7448539, #Wight
