@@ -243,6 +243,9 @@ database = [
     8187355, #Reptilianne Support
     # 7914836, #Cubic Support
     8119660, #Darklord Marie Support
+    8560865, #E^rabastel Support
+    8451189, #Egyptian God/Divine Beast Support
+    8624721, #PSY-Frame Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -528,13 +531,14 @@ database = [
     8345249, #Fossilrai
     8475666, #DragoThief
     8312789, #Staysailor
-    8457383, #Dynamic Gnome
+    # 8457383, #Dynamic Gnome
     8376563, #LaVoix
     6707275, #Malevolessence
     6356932, #Cosmech
     6156689, #Varagon
     6040042, #Kuuroma
-    
+    8579730, #Tensura
+    8596515, #Crystal Tower
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
