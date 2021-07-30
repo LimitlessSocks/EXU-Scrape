@@ -71,13 +71,26 @@
                 let cardArray = [];
                 body = JSON.parse(body);
                 for(let prop of [ "main", "side", "extra" ]) {
-                    cardArray.push(...body[prop]);
+                    for(let card of body[prop]) {
+                        cardArray.push(this.ProcessCard(card));
+                    }
                 }
                 tempResults[id] = cardArray
             }
             for(let id of this.Order) {
                 this.Results[id] = tempResults[id];
             }
+        },
+        ProcessCard(card) {
+            let src = card.custom > 0 ? CUSTOM_PICS_START : CARD_IMAGES_START;
+            let id = card.id;
+            if(card.custom > 0) {
+                let idMod = id - id % 100000;
+                src += idMod + "/";
+            }
+            src += id + ".jpg" + (card.pic != "1" ? "?version=" + card.pic : "");
+            card.src = src;
+            return card;
         },
         GetResults() {
             this.CheckAllDone();
