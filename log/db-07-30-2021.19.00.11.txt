@@ -1343,3 +1343,12 @@ Banish 2 "Dual Asset" monsters you control or in your hand; Special Summon 1 "Du
 [8658932] Finished scraping.
 [main] note: [-] removed old card 2487668 (Simorgh, Bird of Miracles)
 [main] Time elapsed: 25.546231s
+[final] Completing scrape at 07-30-2021.19.06.21
+[main] Reading tmp/db-07-30-2021.19.00.11.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1516537", "1516537", "2013599", "2073142", "2236959", "1292713"]
+[interact] Keypress: "i"
+[interact] Saved old version of 1516537 (Dinomist Therizino / Dinomist Therizino!)
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 6 associated scrape(s).
