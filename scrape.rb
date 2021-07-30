@@ -558,7 +558,7 @@ database = [
     8318509, #Generic Monsters XIII
     8487086, #Generic Monsters XIV
     8540960, #Generic Monsters XV
-    8635701, #Generic Monsters XVI
+    8658932, #Generic Monsters XVI
     6353430, #Generic Spells
     6419184, #Generic Spells II
     6871664, #Generic Spells III
