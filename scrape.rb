@@ -739,8 +739,7 @@ $session.evaluate_script $comb_request_all
 log "main", "Making ID requests"
 
 $session.evaluate_script "DeckRequest.LoadAll(#{decks.to_json});"
-# decks.each { |id|
-# }
+
 log "main", "Finalizing ID requests"
 $session.evaluate_script "DeckRequest.Finish();"
 
@@ -753,8 +752,6 @@ results = loop do
         break []
     end
 end
-
-# results = results.map { |id, obj| [ id, obj["body"] ] }.to_h
 
 changed_ids = []
 results.each.with_index(1) { |(deck_id, cards), i|
@@ -773,9 +770,6 @@ results.each.with_index(1) { |(deck_id, cards), i|
         else
             card["also_archetype"] = nil
         end
-        # if id == "11110"
-            # p card
-        # end
         
         # log operations
         display_text = "#{id} (#{card["name"]})"
@@ -841,8 +835,6 @@ finish = Time.now
 log "main", "Time elapsed: #{finish - start}s"
 
 if note == "temp"
-    # puts "Press ENTER to finalize temporary staging."
-    # STDIN.gets
     scrape_info = JSON::parse File.read $SCRAPE_FILE
     scrape_info[now_time_ident] = {
         outname: outname,

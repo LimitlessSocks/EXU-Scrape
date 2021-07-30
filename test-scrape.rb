@@ -13,7 +13,6 @@ $session.visit("https://www.duelingbook.com")
 puts "Injecting API..."
 $session.evaluate_script $script
 
-
 database = [
     # Support
     6787178, #Super Quant Support
