@@ -21,24 +21,7 @@ puts "Loading capybara..."
 $session = Capybara::Session.new(:selenium)
 puts "Loaded!"
 
-$comb_deck_header = File.read("comb/deck_header.js")
-
-$comb_deck_fn = File.read("comb/deck_fn.js")
-
-def comb_deck(id)
-    $session.visit("https://www.duelingbook.com/deck?id=#{id}")
-    $session.evaluate_script $comb_deck_header
-    data = nil
-    results = loop do
-        data = $session.evaluate_script $comb_deck_fn
-        break data["results"] if data["success"]
-        if data["error"]
-            log id, "Deck with id #{id} not found, moving on"
-            break []
-        end
-    end
-    results
-end
+$comb_request_all = File.read("comb/request.js")
 
 database = [
     # Support
@@ -558,7 +541,8 @@ database = [
     8318509, #Generic Monsters XIII
     8487086, #Generic Monsters XIV
     8540960, #Generic Monsters XV
-    8658932, #Generic Monsters XVI
+    8635701, #Generic Monsters XVI
+    8658932, #Generic Monsters XVII
     6353430, #Generic Spells
     6419184, #Generic Spells II
     6871664, #Generic Spells III
@@ -619,8 +603,12 @@ banlist = [
 ]
 
 test = [
-    8152193,
-    # 8109227
+    6787178, #Super Quant Support
+    6774584, #Koa'ki Meiru Support
+    6514931, #Dinomist Support
+    6590945, #Constellar Support
+    6746888, #Performapal Sky Magician & Odd-Eyes Support
+    6708539, #Trickstar Support
 ]
 
 beta = [
@@ -744,11 +732,35 @@ attr_checks = [
     "type",
 ]
 log "main", "Started scraping"
+
+$session.visit("https://www.duelingbook.com")
+$session.evaluate_script $comb_request_all
+
+log "main", "Making ID requests"
+
+$session.evaluate_script "DeckRequest.LoadAll(#{decks.to_json});"
+# decks.each { |id|
+# }
+log "main", "Finalizing ID requests"
+$session.evaluate_script "DeckRequest.Finish();"
+
+log "main", "Waiting for results"
+results = loop do
+    data = $session.evaluate_script "DeckRequest.GetResults();"
+    break data["results"] if data["success"]
+    if data["error"]
+        puts ">>>> Deck with id #{id} not found, moving on"
+        break []
+    end
+end
+
+# results = results.map { |id, obj| [ id, obj["body"] ] }.to_h
+
 changed_ids = []
-decks.each.with_index(1) { |deck_id, i|
+results.each.with_index(1) { |(deck_id, cards), i|
     info = extra_info[deck_id]
-    log deck_id, "STARTING TO SCRAPE DECK #{deck_id}"
-    comb_deck(deck_id).each { |card|
+    log deck_id, "Starting to parse #{deck_id}"
+    cards.each { |card|
         id = card["id"].to_s
         unless info.nil?
             card.merge! info
