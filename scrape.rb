@@ -755,6 +755,7 @@ end
 
 changed_ids = []
 results.each.with_index(1) { |(deck_id, cards), i|
+    deck_id = deck_id.to_i
     info = extra_info[deck_id]
     log deck_id, "Starting to parse #{deck_id}"
     cards.each { |card|
