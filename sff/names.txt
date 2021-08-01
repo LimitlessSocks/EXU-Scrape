@@ -269,7 +269,49 @@ Pegasus Wing
 Goddess Verdande's Guidance
 Goddess Urd's Verdict
 Apple of Enlightenment
+Alien Hypno
+Ancient Gear Knight
+Aquarian Alessa
+Blazewing Butterfly
+Chemicritter Carbo Crab
+Chemicritter Hydron Hawk
+Chemicritter Oxy Ox
+Chthonian Emperor Dragon
+Crusader of Endymion
+Dark Valkyria
+Dawnbreak Gardna
+Doom Shaman
+Duck Dummy
+Elemental HERO Neos Alius
+Evocator Chevalier
+Evocator Eveque
+Future Samurai
+Gem-Knight Amber
+Gem-Knight Iolite
+Gem-Knight Sardonyx
+Gemini Lancer
+Gemini Soldier
+Goggle Golem
+Grasschopper
+Heavy Knight of the Flame
+Hieratic Seal of the Dragon King
+Il Blud
+Infinity Dark
+King Pyron
+Knight Day Grepher
+Lucky Pied Piper
+Magical Reflect Slime
+Meteor Dragon Red-Eyes Impact
+Phantom Dragonray Bronto
+Poly-Chemicritter Dioxogre
+Poly-Chemicritter Hydragon
+Red-Eyes Black Flare Dragon
+Shadow Delver
+Skelesaurus
+Tuned Magician
+
 #====================#
+
 Gagaga Magician
 Gagaga Girl
 Gagaga Child
@@ -1308,3 +1350,34 @@ Tour Bus to Forbidden Realms
 Dimension Gate
 Black-Winged Dragon
 Light End Dragon
+Buster Blader
+Shield Warrior
+Counter Gate
+Mathmech Subtraction
+Elemental HERO Wildheart
+Diskblade Rider
+Chaosrider Gustaph
+Bazoo the Soul-Eater
+D.D. Scout Plane
+Zoma the Spirit
+Anarchist Monk Ranshin
+Gachi Gachi Gantetsu
+Orca Mega-Fortress of Darkness
+Torpedo Fish
+Cannonball Spear Shellfish
+Yellow Baboon, Archer of the Forest
+A/D Changer
+Combo Master
+Deepsea Warrior
+Iris, the Earth Mother
+Jade Insect Whistle
+Mataza the Zapper
+Lavalval Ignis
+Decode Talker Extended
+Transmodify
+Downbeat
+Darkfire Dragon
+Fusionist
+Flame Ghost
+Two-Pronged Attack
+Relinkuriboh

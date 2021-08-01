@@ -301,6 +301,46 @@ const SFF_CARD_IDS = [
     9606,      // Goddess Verdande's Guidance
     9607,      // Goddess Urd's Verdict
     9921,      // Apple of Enlightenment
+    64,        // Alien Hypno
+    159,       // Ancient Gear Knight
+    197,       // Aquarian Alessa
+    487,       // Blazewing Butterfly
+    8203,      // Chemicritter Carbo Crab
+    8202,      // Chemicritter Hydron Hawk
+    8204,      // Chemicritter Oxy Ox
+    702,       // Chthonian Emperor Dragon
+    815,       // Crusader of Endymion
+    1035,      // Dark Valkyria
+    1065,      // Dawnbreak Gardna
+    1220,      // Doom Shaman
+    8822,      // Duck Dummy
+    1394,      // Elemental HERO Neos Alius
+    1485,      // Evocator Chevalier
+    10369,     // Evocator Eveque
+    1713,      // Future Samurai
+    1770,      // Gem-Knight Amber
+    1778,      // Gem-Knight Iolite
+    5153,      // Gem-Knight Sardonyx
+    1790,      // Gemini Lancer
+    1792,      // Gemini Soldier
+    1934,      // Goggle Golem
+    1975,      // Grasschopper
+    6961,      // Heavy Knight of the Flame
+    5461,      // Hieratic Seal of the Dragon King
+    2212,      // Il Blud
+    2257,      // Infinity Dark
+    2432,      // King Pyron
+    6111,      // Knight Day Grepher
+    2630,      // Lucky Pied Piper
+    2693,      // Magical Reflect Slime
+    8207,      // Meteor Dragon Red-Eyes Impact
+    3296,      // Phantom Dragonray Bronto
+    8205,      // Poly-Chemicritter Dioxogre
+    8206,      // Poly-Chemicritter Hydragon
+    7273,      // Red-Eyes Black Flare Dragon
+    3779,      // Shadow Delver
+    6110,      // Skelesaurus
+    4486,      // Tuned Magician
     9023,      // Oops!
     2487,      // Kuriboh
     1946,      // Golden Ladybug
@@ -661,4 +701,35 @@ const SFF_CARD_IDS = [
     5762,      // Dimension Gate
     437,       // Black-Winged Dragon
     2580,      // Light End Dragon
+    585,       // Buster Blader
+    3797,      // Shield Warrior
+    8062,      // Counter Gate
+    10292,     // Mathmech Subtraction
+    1416,      // Elemental HERO Wildheart
+    1190,      // Diskblade Rider
+    678,       // Chaosrider Gustaph
+    359,       // Bazoo the Soul-Eater
+    919,       // D.D. Scout Plane
+    4904,      // Zoma the Spirit
+    139,       // Anarchist Monk Ranshin
+    5098,      // Gachi Gachi Gantetsu
+    3224,      // Orca Mega-Fortress of Darkness
+    4428,      // Torpedo Fish
+    607,       // Cannonball Spear Shellfish
+    4879,      // Yellow Baboon, Archer of the Forest
+    23,        // A/D Changer
+    749,       // Combo Master
+    1082,      // Deepsea Warrior
+    2289,      // Iris, the Earth Mother
+    2306,      // Jade Insect Whistle
+    2792,      // Mataza the Zapper
+    5118,      // Lavalval Ignis
+    10003,     // Decode Talker Extended
+    5974,      // Transmodify
+    9006,      // Downbeat
+    1047,      // Darkfire Dragon
+    1710,      // Fusionist
+    1608,      // Flame Ghost
+    4522,      // Two-Pronged Attack
+    7550,      // Relinkuriboh
 ];
