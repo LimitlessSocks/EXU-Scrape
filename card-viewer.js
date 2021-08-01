@@ -248,45 +248,47 @@ for(let [key, value] of Object.entries(CardGroups)) {
 }
 
 const RetrainMap = {
-    1318550: 2694,      //Reynard Chemist -> Magical Scientist
-    1319024: 549,       //Occult Lab -> Brain Research Lab
-    1373133: 9074,      //Iseult -> Isolde
-    1169172: 9501,      //TD Rider -> Colossus
-    1326492: 9501,      //Twin Flash -> Colossus
-    1576121: 9082,      //System Synchronizer -> Halqifibrax
-    1318485: 3688,      //Ambush Lotus -> Samsara Lotus
-    1591766: 10500,     //Union Conductor -> Union Carrier
-    1377692: 9253,      //Armor Up! -> Multirole
-    1372758: 9245,      //Launch! -> Engage!
-    1319058: 589,       //Resurrected Blade of Elma -> Butterfly Dagger - Elma
-    1319017: 4217,      //Telekinetic Rehabilitation -> Telekinetic Charging Cell
-    1067872: 7308,      //Mirror Fusion -> Brilliant Fusion
-    1318849: 4396,      //Power Seal -> Time Seal
-    1318524: 3307,      //Hippeastrum -> Amaryllis
-    1319245: 5167,      //Lavalval Chain
-    1318580: 8509,      //Stellar Bunting -> Independent Nightingale
-    1638076: 5684,      //Horror of the Depths -> Abyss Dweller
-    1477949: 144,       //Ancient Sprite Dragon -> Ancient Fairy Dragon
-    1477964: 8827,      //Eros, the Dead Drake of Dread -> Destrudo the Lost Dragon's Frisson
-    1708820: 10958,     //Numeron Extraction -> Numeron Calling
-    1743438: 5844,      //Spellbook of Silence -> Spellbook of Judgment
-    1684963: 9501,      //The Thunder Dragon's Rider -> Thunder Dragon Colossus
-    1649898: 9863,      //Ib, World Chalice's Reincarnation -> Ib the World Chalice Justiciar
-    1653369: 3057,      //Naturia Baihu -> Naturia Beast
-    1768966: 9070,      //Hieratic Dragon of Khonsu -> Hieratic Seal of the Heavenly Spheres
-    1731744: 10510,     //Artifact Ame-No-Nuboku -> Artifact Dagda
-    1867327: 9082,      //Crystron Halqifibrax -> Crystron Glassfiber
-    1648511: 10606,     //Accesscode Talker -> Storm Accesscode Talker
-    1862633: 8514,      //True King of Dimension's End -> True King of All Calamities
-    1948923: 8653,      //Wallfire Dragon -> Firewall dragon
-    1951635: 4546,      //Penultimate Offering -> Ultimate Offering
-    1768996: 310,       //Curse of Overconfidence -> Bad Reaction to Simochi
-    1865422: 7489,      //Majespecter Dragon - Ryu -> Majespecter Unicorn - Kirin
-    1994622: 8335,      //True King Lepresocis, the Diseased -> True King Lithosagym, the Disaster
+    2014209: 5576,      //Cryotitan the Elemental Lord -> Moulinglacia the Elemental Lord
+    1920888: 3724,      //Scrap Turbo -> Scrap Recycler
+    1999194: 6534,      //El Shaddoll Winlao -> El Shaddoll Winda
+    2231144: 10606,     //Cryptocode Talker -> Accesscode Talker
+    2242028: 10606,     //Backcode Talker -> Accesscode Talker
+    2218012: 9074,      //Noble Knight Lefay -> Isolde, Two Tales of the Noble Knights
+    1976423: 9633,      //The Phantom Knights of Forgotten Brigade -> The Phantom Knights of Rusty Bardiche
+    1566623: 1566623,   //EX-Saber Gottoms -> EX-Saber Gottoms
+    1717113: 11170,     //Glimmering Drytronis -> Meteonis Drytron
+    2092739: 11170,     //Radiant Drytronis -> Meteonis Drytron
+    797597: 2382,       //Kaiser Arena -> Kaiser Colosseum
+    2511764: 10698,     //Eldlixir of Golden Convergence -> Eldlixir of Scarlet Sanguine
     1961738: 8521,      //True King's Diagram -> Dragonic Diagram
-    2021204: 8118,      //Cyber Angel Benzaiten -> Cyber Angel Benten
+    1985232: 2219,      //Blazing Aura -> Imperial Order
+    1966485: 7817,      //Ledger of Demise -> Card of Demise
+    2533677: 8825,      //Sengen Taisha -> Amano-Iwato
+    2050037: 5788,      //Majestic Ivory Chaoserpent -> White Dragon Wyverburster
+    1793538: 6697,      //Masked HERO Dusk Law -> Masked HERO Dark Law
+    1731744: 10510,     //Artifact Ame-No-Nuboku -> Artifact Dagda
+    1653369: 3057,      //Naturia Baihu -> Naturia Beast
+    1638076: 5684,      //Horror of the Depths -> Abyss Dweller
+    1319245: 5167,      //Lavalval Shadow -> Lavalval Chain
+    2350096: 5570,      //Madolche Queen Crownnoli -> Madolche Queen Tiaramisu
+    1708820: 10958,     //Numeron Extraction -> Numeron Calling
+    2529570: 9192,      //Never Surrender! -> Red Reboot
+    1318485: 3688,      //Ambush Lotus -> Samsara Lotus
     1619088: 1602,      //Fishborg Defender -> Fishborg Blaster
+    1743438: 5844,      //Spellbook of Silencing -> Spellbook of Judgment
+    1865422: 7489,      //Majespecter Dragon - Ryu -> Majespecter Unicorn - Kirin
+    1318550: 2694,      //Reynard Chemist -> Magical Scientist
+    1862633: 8514,      //True King of Dimension's End -> True King of All Calamities
+    1768966: 9070,      //Hieratic Dragon of Khonsu -> Hieratic Seal of the Heavenly Spheres
+    2021204: 8118,      //Cyber Angel Benzaiten -> Cyber Angel Benten
+    1951635: 1951635,   //Penultimate Offering -> Penultimate Offering
+    1319058: 589,       //Resurrected Blade of Elma -> Butterfly Dagger - Elma
+    1638270: 1752,      //Shien's Will -> Gateway of the Six
     2078157: 8865,      //Imposing Attraction -> Metaverse
+    2242234: 949,       //Aether Faisy -> Dandylion
+    1318524: 3307,      //Phoenixian Cluster Hippeastrum -> Phoenixian Cluster Amaryllis
+    2020789: 10500,     //Union Conductor -> Union Carrier
+    1933842: 11089,     //Dreadful Arsenal ZZ-ARES - Abyssal Flames
 };
 
 const LINK_ARROWS = {
