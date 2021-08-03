@@ -46,6 +46,8 @@ let onLoad = async function () {
     CardViewer.Elements.toTopButton = $("#totop");
     CardViewer.Elements.saveSearch = $("#saveSearch");
     CardViewer.Elements.clearSearch = $("#clearSearch");
+    CardViewer.Elements.searchSortBy = $("#searchSortBy");
+    CardViewer.Elements.searchSortOrder = $("#searchSortOrder");
     
     CardViewer.Elements.search.click(CardViewer.submit);
     CardViewer.Elements.previousPage.click(CardViewer.Search.previousPage);
@@ -78,6 +80,8 @@ let onLoad = async function () {
         name:               CardViewer.Elements.cardName,
         effect:             CardViewer.Elements.cardDescription,
         type:               CardViewer.Elements.cardType,
+        sortBy:             CardViewer.Elements.searchSortBy,
+        sortOrder:          CardViewer.Elements.searchSortOrder,
         limit:              CardViewer.Elements.cardLimit,
         id:                 CardViewer.Elements.cardId,
         author:             CardViewer.Elements.cardAuthor,

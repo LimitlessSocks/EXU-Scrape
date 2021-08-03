@@ -74,7 +74,7 @@
                     <option value=2>Private</option>
                 </select>
             </td>
-            <td><label for="cardCategory">Card Category:</label></td>
+            <td><label for="cardCategory">Card category:</label></td>
             <td>
                 <select id="cardCategory">
                     <option value=any></option>
@@ -86,6 +86,26 @@
             <!-- <td> -->
                 <!-- <input id="cardIsRetrain" type="checkbox"> -->
             <!-- </td> -->
+        </tr>
+        <tr>
+            <td><label for="searchSortBy">Sort by:</label></td>
+            <td>
+                <select id="searchSortBy">
+                    <option value="name">Name</option>
+                    <option value="text">Text Length</option>
+                    <option class="ifMonster" value="atk">ATK</option>
+                    <option class="ifMonster" value="def">DEF</option>
+                    <option class="ifMonster" value="level">Level/Rank</option>
+                    <option value="" disabled>TODO: Date Added</option>
+                </select>
+            </td>
+            <td><label for="searchSortOrder">Sort order:</label></td>
+            <td>
+                <select id="searchSortOrder">
+                    <option value="ascending">Ascending</option>
+                    <option value="descending">Descending</option>
+                </select>
+            </td>
         </tr>
     </table>
     <table id=conditionalStats>

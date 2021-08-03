@@ -344,6 +344,9 @@ const _F = {
                 }).find(x => x) || 0
             )
             .map(([e, ec]) => e),
+    compose: (...fns) =>
+        (...args) =>
+            fns.slice(0, -1).reduceRight((acc, f) => f(acc), fns[fns.length-1](...args)),
 };
 
 // CardViewer.Search
@@ -359,7 +362,10 @@ CardViewer.Search.processResults = function (val) {
     }
 };
 
-CardViewer.Search.config = {};
+CardViewer.Search.config = {
+    sortByProperty: "name",
+    reverseSearch: "ascending",
+};
 
 CardViewer.Search.showPage = function (id = CardViewer.Search.currentPage, config = CardViewer.Search.config) {
     let target = config.target || CardViewer.Elements.results;
@@ -610,6 +616,12 @@ CardViewer.query = function () {
     };
     if(CardViewer.format) {
         baseStats[CardViewer.format] = true;
+    }
+    if(CardViewer.Elements.searchSortBy) {
+        baseStats.sortBy = CardViewer.Elements.searchSortBy.val();
+    }
+    if(CardViewer.Elements.searchSortOrder) {
+        baseStats.sortOrder = CardViewer.Elements.searchSortOrder.val();
     }
     if(CardViewer.Elements.cardIsNotNormal) {
         baseStats.notNormal = CardViewer.Elements.cardIsNotNormal.is(":checked");
@@ -928,6 +940,10 @@ CardViewer.createFilter = function (query, exclude = null) {
         );
         // filters.push(CardViewer.exactComparator("?", _F.propda("def")));
     }
+    // query restrictions
+    if(query.sortBy === "def") {
+        filters.push((card) => card.def != "?" && !CardViewer.Filters.isLink(card));
+    }
     
     // console.log(filters);
     if(window.DEBUG) {
@@ -940,6 +956,14 @@ CardViewer.createFilter = function (query, exclude = null) {
     return filter;
 };
 
+const SortByPropertyMap = {
+    text: (card) => card.effect.length + card.pendulum_effect.length
+};
+const SortByIsNumber = {
+    atk: true,
+    def: true,
+    level: true,
+};
 CardViewer.filter = function (query, exclude = null) {
     let filter = CardViewer.createFilter(query, exclude);
     let cards = [];
@@ -958,7 +982,40 @@ CardViewer.filter = function (query, exclude = null) {
             cards.push(card);
         }
     }
-    cards = _F.sortBy(cards, (card) => card.name);
+    
+    let sortByProperty = query.sortBy;
+    if(typeof sortByProperty === "undefined")
+        sortByProperty = CardViewer.Search.config.sortByProperty;
+    
+    let sortOrder = query.sortOrder;
+    if(typeof sortOrder === "undefined")
+        sortOrder = CardViewer.Search.config.sortOrder;
+    
+    if(sortByProperty in SortByPropertyMap) {
+        sortByProperty = SortByPropertyMap[sortByProperty];
+    }
+    let sortFn;
+    if(typeof sortByProperty === "function") {
+        sortFn = sortByProperty;
+    }
+    else {
+        sortFn = _F.propda(sortByProperty);
+        if(SortByIsNumber[sortByProperty]) {
+            sortFn = _F.compose(parseInt, sortFn);
+        }
+    }
+    
+    cards = _F.sortBy(cards, sortFn);
+    
+    switch(sortOrder) {
+        case "ascending":
+            break;
+        case "descending":
+            cards.reverse();
+            break;
+    }
+    
+    
     return cards;
 };
 
