@@ -957,7 +957,7 @@ CardViewer.createFilter = function (query, exclude = null) {
 };
 
 const SortByPropertyMap = {
-    text: (card) => card.effect.length + card.pendulum_effect.length
+    text: (card) => card.effect.length + (card.pendulum_effect || "").length
 };
 const SortByIsNumber = {
     atk: true,

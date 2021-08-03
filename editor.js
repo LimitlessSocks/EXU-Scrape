@@ -52,6 +52,8 @@ let onLoad = async function () {
     CardViewer.Elements.toTopButton = $("#totop");
     CardViewer.Elements.saveSearch = $("#saveSearch");
     CardViewer.Elements.clearSearch = $("#clearSearch");
+    CardViewer.Elements.searchSortBy = $("#searchSortBy");
+    CardViewer.Elements.searchSortOrder = $("#searchSortOrder");
     
     CardViewer.Elements.deckEditor = $("#deckEditor");
     CardViewer.Elements.cardPreview = $("#cardPreview");
