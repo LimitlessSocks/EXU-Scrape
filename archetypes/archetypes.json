@@ -1798,6 +1798,33 @@
             "author": "46",
             "description": "An EARTH Fairy archetype that can equip monsters the opponent controls to different archetypal monsters by attacking into them and then unequipping them for powerful effects.",
             "tags": []
+        },
+        {
+            "name": "Chima",
+            "deckIds": [7225933],
+            "cardIds": [],
+            "thumb": "2133312",
+            "author": "Gatr",
+            "description": "An archetype based on 'LEGO: Legends of Chima' that features a fast-paced gameplan and focuses on Equip Spells and Fusion Monsters.",
+            "tags": []
+        },
+        {
+            "name": "Panera",
+            "deckIds": [7733925],
+            "cardIds": [],
+            "thumb": "2417774",
+            "author": "Gatr",
+            "description": "A FIRE and WIND archetype that focuses on using FIRE and WIND monsters in a style similar to Chaos Decks, Setting cards and banishing cards.",
+            "tags": []
+        },
+        {
+            "name": "DAWN and RUIN",
+            "deckIds": [8656533],
+            "cardIds": [],
+            "thumb": "2545215",
+            "author": "Fizzyizzy & Meowly",
+            "description": "A LIGHT and DARK Warrior Pendulum archetype that tags out with their Pendulum Scales, using the RUIN monsters as removal and DAWN monsters as utility.",
+            "tags": []
         }
     ]
 }
