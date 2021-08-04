@@ -1404,3 +1404,10 @@ You can only control 1 "Number 84: Innocent Marsonya". Other Level/Rank 4 monste
 [8658932] Finished scraping.
 [main] note: [-] removed old card 2464190 (Swords of Monochrome Light)
 [main] Time elapsed: 15.491227s
+[final] Completing scrape at 08-04-2021.01.30.53
+[main] Reading tmp/db-08-04-2021.01.24.05.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1597129", "1222885", "1743438", "2511764", "1742985", "1725218", "1743438", "1873911", "2511764", "2394598", "2321207", "2373000", "2373019", "2328530", "2269928", "2479172", "2283182", "2283182", "2523171", "1292713"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
