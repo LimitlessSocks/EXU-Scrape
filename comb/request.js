@@ -71,6 +71,7 @@
                 let cardArray = [];
                 body = JSON.parse(body);
                 for(let prop of [ "main", "side", "extra" ]) {
+                    if(!body[prop]) continue;
                     for(let card of body[prop]) {
                         cardArray.push(this.ProcessCard(card));
                     }

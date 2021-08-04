@@ -55,6 +55,8 @@ const IGNORE_ENTRY = Symbol("IGNORE_ENTRY");
 const NEGATE_NEXT = Symbol("NEGATE_NEXT");
 const OPERATOR_INLINE_OR = Symbol("OPERATOR_INLINE_OR");
 const OPERATOR_MAJOR_OR = Symbol("OPERATOR_MAJOR_OR");
+
+//TODO: parens, search by author, search by text
 const INDICATORS = [
     new TagIndicator(/\s+/, () => IGNORE_ENTRY),
     new TagIndicator(/\|\|/, () => OPERATOR_MAJOR_OR),

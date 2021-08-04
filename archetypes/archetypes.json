@@ -1289,7 +1289,7 @@
         {
             "name": "Vuluti",
             "deckIds": [7678716],
-            "cardIds": [],
+            "cardIds": [2393833],
             "thumb": "2240926",
             "author": "Sock",
             "description": "A toolbox-based Link-1 Deck that has semi-disruptive effects while in the Main Monster Zone as well as Main Deck monsters that have Quick Effects in the GY that trigger whenever they're targeted.",
@@ -1604,7 +1604,7 @@
         {
             "name": "Jolsprit",
             "deckIds": [8170513, 8194294],
-            "cardIds": [],
+            "cardIds": [2424482],
             "thumb": "2393244",
             "author": "Sock",
             "description": "A Fairy beatdown/protect the castle style archetype that revolves around equipping monsters from your hand while also having toolbox effects while equipped as well as being able to use the Level 1 toolbox.",

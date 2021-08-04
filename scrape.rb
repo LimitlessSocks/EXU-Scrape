@@ -522,6 +522,9 @@ database = [
     6040042, #Kuuroma
     8579730, #Tensura
     8596515, #Crystal Tower
+    7225933, #Chima
+    7733925, #Panera
+    8656533, #DAWN and RUIN
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
