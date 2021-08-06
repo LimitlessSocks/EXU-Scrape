@@ -857,6 +857,14 @@ window.addEventListener("load", async function () {
     // let db = await response.json();
     // CardViewer.Database.setInitial(db);
     await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
+    for(let [ id, card ] of Object.entries(CardViewer.Database.cards)) {
+        if(!card.username) {
+            card.username = "TCG/OCG";
+        }
+        if(!card.pendulum_effect) {
+            card.pendulum_effect = "";
+        }
+    }
     
     // load buttons
     let optionContainer = $("#optionContainer");
