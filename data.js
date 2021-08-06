@@ -1,4 +1,7 @@
-window.databaseToUse = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/db.json";
+let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
+// baseURL = "./";
+window.ycgDatabase = baseURL + "ycg.json";
+window.exuDatabase = baseURL + "db.json";
 
 const getStatsFilter = (query, exclude = null) => {
     let finalQuery = {};
@@ -8,7 +11,21 @@ const getStatsFilter = (query, exclude = null) => {
     }
     Object.assign(finalQuery, query);
     finalExclude = exclude;
-    return CardViewer.filter(finalQuery, finalExclude);
+    let cards = CardViewer.filter(finalQuery, finalExclude);
+
+    switch(Statistics.Options.metaFilter) {
+        case "useBoth":
+        default:
+            break;
+        case "useTcg":
+            cards = cards.filter(card => card.ocg || card.tcg);
+            break;
+        case "useCustom":
+            cards = cards.filter(card => card.custom);
+            break;
+    }
+    
+    return cards;
 };
 
 const cardsBy = (fn, query = {}, exclude = null) => {
@@ -630,10 +647,6 @@ const filterHTML = `
                     <option value=any></option>
                     <option value=1>Public</option>
                     <option value=2>Private</option>
-                    <option value=3>TCG only</option>
-                    <option value=4>OCG only</option>
-                    <option value=5>Custom only</option>
-                    <option value=6>TCG/OCG</option>
                 </select>
             </td>
             <td><label for="cardCategory">Card Category:</label></td>
@@ -837,9 +850,13 @@ const popupPrompt = new Prompt(
 popupPrompt.needsSetup = true;
 
 window.addEventListener("load", async function () {
-    let response = await fetch(window.databaseToUse);
-    let db = await response.json();
-    CardViewer.Database.setInitial(db);
+    CardViewer.excludeTcg = false;
+    CardViewer.showImported = true;
+    
+    // let response = await fetch(window.databaseToUse);
+    // let db = await response.json();
+    // CardViewer.Database.setInitial(db);
+    await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
     
     // load buttons
     let optionContainer = $("#optionContainer");
@@ -865,7 +882,7 @@ window.addEventListener("load", async function () {
             .replaceAll("%2C", ",")
             .slice(1)
             .split(",");
-        let [ name, sortIndex, limit ] = inputParams;
+        let [ name, sortIndex, limit, filter ] = inputParams;
         
         let dataParams = inputParams.slice(inputParams.lastIndexOf("") + 1);
         
@@ -891,6 +908,7 @@ window.addEventListener("load", async function () {
             Statistics.focus.id,
             sortIndexer.val(),
             limiter.val(),
+            filter,
             null,
         ];
         params.push(...Statistics.parameters.slice(0, Statistics.ParameterData.count));
@@ -900,17 +918,21 @@ window.addEventListener("load", async function () {
     let idToKey = {
         sortIndexer: "sortIndex",
         limiter: "limit",
+        useCustom: "metaFilter",
+        useTcg: "metaFilter",
+        useBoth: "metaFilter",
     };
     const sortIndexMap = {
         0: 0, // name
         1: 1, // value
         2: 1, // value ascending
     };
-    let inputElements = $("#otherOptions select, #otherOptions input");
+    let inputElements = $("#otherOptions select, #otherOptions input, input[name='card-category']");
     let onUpdate = function () {
         // console.log(this);
         if(this.value === "") return;
         let property = idToKey[this.id];
+        
         
         console.dir({
             property: property,
@@ -919,7 +941,13 @@ window.addEventListener("load", async function () {
             thisValue: this.value
         });
         
-        Statistics.Options[property] = this.value;
+        if(this.type === "radio") {
+            if(!this.checked) return;
+            Statistics.Options[property] = this.id;
+        }
+        else {
+            Statistics.Options[property] = this.value;
+        }
         
         
         if(property === "sortIndex") {

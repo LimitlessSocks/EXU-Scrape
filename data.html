@@ -51,14 +51,26 @@
         top: 0;
         left: -10000px;
     }
+    
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3RKXFLZRZ"></script>
     
 </head>
 <body>
-<h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1>
-<h2>EXU Statistics <button id="share">Save sharing URL</button> <button id="filter">Open Filter</button></h2>
+<header>
+    <h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1>
+    <div class="twoColumnHolder ">
+        <h2 class="float-header">EXU Statistics</h2>
+        <div>
+            <button id="share">Save sharing URL</button>
+            <button id="filter">Open Filter</button>
+            <label for="useCustom"><input type="radio" id="useCustom" name="card-category" checked> Custom only</label>
+            <label for="useTcg"><input type="radio" id="useTcg" name="card-category"> TCG/OCG only</label>
+            <label for="useBoth"><input type="radio" id="useBoth" name="card-category"> Custom &amp; TCG/OCG</label>
+        </div>
+    </div>
+</header>
 <div class="twoColumnHolder">
     <div class="column">
         <p>Click on one of these buttons to see the corresponding statistic!</p>

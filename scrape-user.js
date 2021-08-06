@@ -65,7 +65,7 @@ const AppState = {
     misc: {
         db_id: getDbId() || "yub4vzgoi51dwe1vvryou6tg1e1ar0xu",
         session_id: randomHex(),
-        VERSION: 485, //468
+        VERSION: 531, // 485, //468
     }
 };
 

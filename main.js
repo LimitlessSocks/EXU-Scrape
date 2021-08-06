@@ -1,5 +1,6 @@
 window.databaseToUse = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/db.json";
 // window.databaseToUse = "./db.json";
+// window.databaseToUse = "./users/LimitlessSocks.json";
 let onLoad = async function () {
     let response = await fetch(window.databaseToUse);
     let db = await response.json();
