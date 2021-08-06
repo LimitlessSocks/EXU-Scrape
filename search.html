@@ -25,7 +25,16 @@
 <h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1>
 <h1 id="top">EXU Card Search</h1>
 <h2>Please report all bugs to Sock#3222</h2>
-<button id="search">Search</button> <button id="saveSearch">Save Search URL</button> <button class="danger-button" id="clearSearch">Clear Search</button> <label for="autoSearch">Auto search?</label><input id="autoSearch" type=checkbox checked>
+<div id="extraButtons">
+    <button id="search">Search</button>
+    <button id="saveSearch">Save Search URL</button>
+    <button class="danger-button" id="clearSearch">Clear Search</button>
+    <label for="autoSearch">Auto search?</label><input id="autoSearch" type=checkbox checked>
+    <span class="extraParamaters">
+        <label for="includeCustoms">Include customs?</label><input id="includeCustoms" type=checkbox checked>
+        <label for="includeYcg">Include TCG/OCG?</label><input id="includeYcg" type=checkbox>
+    </span>
+</div>
 <div id=searchParameters>
 <div>
     <table id=mainStats>

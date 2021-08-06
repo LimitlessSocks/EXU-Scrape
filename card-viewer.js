@@ -614,6 +614,7 @@ CardViewer.query = function () {
         notImported:  false,
         alsoImported: CardViewer.showImported
     };
+    let extraVisibility = [];
     if(CardViewer.format) {
         baseStats[CardViewer.format] = true;
     }
@@ -622,6 +623,19 @@ CardViewer.query = function () {
     }
     if(CardViewer.Elements.searchSortOrder) {
         baseStats.sortOrder = CardViewer.Elements.searchSortOrder.val();
+    }
+    if(CardViewer.Elements.includeCustoms && CardViewer.Elements.includeYcg) {
+        let useCustoms = CardViewer.Elements.includeCustoms.prop("checked")
+        let useYcg = CardViewer.Elements.includeYcg.prop("checked")
+        if(!useCustoms || !useYcg) {
+            baseStats.visibility = [ baseStats.visibility ];
+        }
+        if(!useYcg) {
+            baseStats.visibility.push(-6);
+        }
+        if(!useCustoms) {
+            baseStats.visibility.push(-5);
+        }
     }
     if(CardViewer.Elements.cardIsNotNormal) {
         baseStats.notNormal = CardViewer.Elements.cardIsNotNormal.is(":checked");
@@ -797,6 +811,23 @@ CardViewer.or = (...fns) => (...args) => fns.some(fn => fn(...args));
 
 CardViewer.getLimitProperty = () => `${CardViewer.format}_limit`;
 
+const checkVisibility = (card, visibility) =>
+    Array.isArray(visibility)
+        ? visibility.every(vis => checkVisibility(card, vis))
+        : visibility === "any" || !visibility
+            ? true
+            : visibility < 0
+                ? !checkVisibility(card, -visibility)
+                : visibility == 1 || visibility == 2
+                    ? card.custom == visibility
+                    : visibility == 3
+                        ? card.tcg && !card.ocg
+                        : visibility == 4
+                            ? card.ocg && !card.tcg
+                            : visibility == 5
+                                ? card.custom
+                                : card.ocg || card.tcg;
+
 CardViewer.createFilter = function (query, exclude = null) {
     if(exclude) {
         exclude = CardViewer.createFilter(exclude);
@@ -844,18 +875,7 @@ CardViewer.createFilter = function (query, exclude = null) {
         // CardViewer.boolExclusiveComparator(query.retrain, _F.propda("exu_retrain")),
         // visibility filter
         // CardViewer.textAnyComparator(query.visibility, _F.propda("custom")),
-        (card) =>
-            query.visibility === "any" || !query.visibility
-                ? true
-                : query.visibility == 1 || query.visibility == 2
-                    ? card.custom == query.visibility
-                    : query.visibility == 3
-                        ? card.tcg && !card.ocg
-                        : query.visibility == 4
-                            ? card.ocg && !card.tcg
-                            : query.visibility == 5
-                                ? card.custom
-                                : card.ocg || card.tcg,
+        (card) => checkVisibility(card, query.visibility),
     ];
     // import filters
     // console.log(query, !query.alsoImported);
@@ -1222,6 +1242,9 @@ CardViewer.composeResultSmall = function (card) {
 };
 
 CardViewer.composeResult = function (card) {
+    card.src = card.src || (
+        "https://www.duelingbook.com/images/low-res/" + card.id + ".jpg"
+    );
     let img = $("<img class=img-result>").attr("src", card.src);
     let name = $("<h3 class=result-name>").text(card.name);
     
@@ -1475,7 +1498,7 @@ CardViewer.setUpAllInputs = function () {
                 el.val(el.children().first().val());
             }
             else if(el.is("input[type=checkbox]")) {
-                el.prop("checked", false);
+                el.prop("checked", !!el.attr("checked"));
             }
             else {
                 el.val("");

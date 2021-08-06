@@ -1,12 +1,15 @@
-window.databaseToUse = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/db.json";
-// window.databaseToUse = "./db.json";
-// window.databaseToUse = "./users/LimitlessSocks.json";
+let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
+// baseURL = "./";
+window.ycgDatabase = baseURL + "ycg.json";
+window.exuDatabase = baseURL + "db.json";
+
+// window.databaseToUse = baseURL + "/users/LimitlessSocks.json";
 let onLoad = async function () {
-    let response = await fetch(window.databaseToUse);
-    let db = await response.json();
-    CardViewer.Database.setInitial(db);
+    await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
+    CardViewer.excludeTcg = false;
+    CardViewer.showImported = true;
     
-    CardViewer.Elements.searchParameters = $("#searchParameters");
+    CardViewer.Elements.searchParameters = $("#searchParameters, .extraParamaters");
     
     CardViewer.Elements.cardType = $("#cardType");
     CardViewer.Elements.cardLimit = $("#cardLimit");
@@ -49,6 +52,8 @@ let onLoad = async function () {
     CardViewer.Elements.clearSearch = $("#clearSearch");
     CardViewer.Elements.searchSortBy = $("#searchSortBy");
     CardViewer.Elements.searchSortOrder = $("#searchSortOrder");
+    CardViewer.Elements.includeCustoms = $("#includeCustoms");
+    CardViewer.Elements.includeYcg = $("#includeYcg");
     
     CardViewer.Elements.search.click(CardViewer.submit);
     CardViewer.Elements.previousPage.click(CardViewer.Search.previousPage);
