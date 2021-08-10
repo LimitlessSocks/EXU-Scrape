@@ -229,6 +229,10 @@ database = [
     8560865, #E^rabastel Support
     8451189, #Egyptian God/Divine Beast Support
     8624721, #PSY-Frame Support
+    8568805, #Hotarugusa Support
+    8681245, #Chiron the Mage Support
+    8353364, #Gladiator Beast Support
+    8664482, #Zefra Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -525,6 +529,9 @@ database = [
     7225933, #Chima
     7733925, #Panera
     8656533, #DAWN and RUIN
+    5860293, #Earth Guard League/Goranger
+    8637210, #Mudafi
+    8533195, #The Gashercore Collection
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
