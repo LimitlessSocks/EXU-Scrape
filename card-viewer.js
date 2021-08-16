@@ -289,6 +289,7 @@ const RetrainMap = {
     1318524: 3307,      //Phoenixian Cluster Hippeastrum -> Phoenixian Cluster Amaryllis
     2020789: 10500,     //Union Conductor -> Union Carrier
     1933842: 11089,     //Dreadful Arsenal ZZ-ARES - Abyssal Flames
+    2543585: 9082,      //Crystron Vermeridhogg -> Crystron Halqifibrax
 };
 
 const LINK_ARROWS = {

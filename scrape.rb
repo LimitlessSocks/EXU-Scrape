@@ -233,6 +233,7 @@ database = [
     8681245, #Chiron the Mage Support
     8353364, #Gladiator Beast Support
     8664482, #Zefra Support
+    8109335, #Entity Support
     
     #--------------------------------------------------------------------#
     # Archetypes
