@@ -1346,3 +1346,10 @@
 [main] note: [-] removed old card 2338851 (Intranged, Shield of Light)
 [main] note: [-] removed old card 2325152 (Intranged, Swords Ablaze)
 [main] Time elapsed: 31.178045s
+[final] Completing scrape at 08-16-2021.22.41.15
+[main] Reading tmp/db-08-16-2021.22.36.02.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1935996", "1926497"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
