@@ -57,7 +57,7 @@ database = [
     6292623, #Ninja Support
     6245917, #Marincess Support
     5954949, #Yokai Support
-    5703615, #World Chalice/World Legacy Support
+    8766544, #World Chalice/World Legacy Support
     6169009, #Aquaactress Support
     6109070, #Normal Monster Support
     # 6000654, #Laval Support
@@ -188,7 +188,7 @@ database = [
     7664359, #of the Wasteland Support
     6226330, #Acrimonic Support
     7679392, #Toon, Fire King & Windwitch Support
-    7647679, #Black Blood Support
+    # 7647679, #Black Blood Support
     # 6845360, #Starter Squad
     7742679, #Fog+Beast
     7659844, #Relinquished
@@ -315,7 +315,7 @@ database = [
     4667428, #Xiuhqui
     # 6040042, #Kuuroma
     6247363, #Rowa - Elusive Power
-    6163866, #Black Blood
+    # 6163866, #Black Blood
     # 6227419, #Deep Burrower
     # 3080272, #Nightshade
     6267789, #Armamemento
@@ -413,7 +413,7 @@ database = [
     7180332, #Dual Asset
     7184403, #Crystalion
     7256172, #Wavering Winds
-    7123560, #Metal XO
+    # 7123560, #Metal XO
     6837403, #Malus
     7284131, #Iterators
     7294550, #Iterators: Part 2
@@ -492,7 +492,7 @@ database = [
     7922328, #Harokai
     7746134, #Superego
     4475780, #Ascending Fire
-    7959099, #Intranger
+    # 7959099, #Intranger
     7499374, #O.F.F
     8034682, #Circersolar
     8010982, #Draken
@@ -757,7 +757,10 @@ $session.evaluate_script "DeckRequest.Finish();"
 log "main", "Waiting for results"
 results = loop do
     data = $session.evaluate_script "DeckRequest.GetResults();"
-    break data["results"] if data["success"]
+    if data["success"]
+        puts "Could not read decklists: #{data["missed"]}"
+        break data["results"]
+    end
     if data["error"]
         puts ">>>> Deck with id #{id} not found, moving on"
         break []

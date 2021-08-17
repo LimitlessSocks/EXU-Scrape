@@ -7,6 +7,7 @@
         Responses: {},
         Results: null,
         Order: [], // the order in which to return the results
+        Missed: [],
         Complete: false, // we are still waiting for responses
         Reading: true, // user is still writing
         // methods
@@ -38,6 +39,7 @@
                     }
                     else {
                         console.log("Failed to receive decklist " + deck_id);
+                        this.AddMiss(deck_id);
                     }
                 }
             };
@@ -52,6 +54,9 @@
         AddResponse(id, text) {
             this.Responses[id].fulfilled = true;
             this.Responses[id].body = text;
+        },
+        AddMiss(id) {
+            this.Missed.push(id);
         },
         CheckAllDone() {
             if(this.Reading) return;
@@ -99,6 +104,7 @@
                 return {
                     success: false,
                     results: null,
+                    missed: null,
                 };
             }
             
@@ -107,6 +113,7 @@
             return {
                 success: true,
                 results: this.Results,
+                missed: this.Missed,
             };
         },
     };
