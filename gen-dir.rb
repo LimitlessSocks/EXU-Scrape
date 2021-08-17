@@ -12,7 +12,7 @@ html += "  <h1>List of update logs</h1>\n"
 html += "  <ul>"
 listing.each { |path|
     link = File.basename path, ".html"
-    html += "    <li><code><a href=\"./#{link}\">#{path}</a></code></li>"
+    html += "    <li><code><a href=\"./#{link}\">#{link}</a></code></li>"
 }
 html += "  </ul>"
 html += "</body>"
