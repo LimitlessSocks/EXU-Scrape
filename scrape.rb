@@ -614,12 +614,7 @@ banlist = [
 ]
 
 test = [
-    6787178, #Super Quant Support
-    6774584, #Koa'ki Meiru Support
-    6514931, #Dinomist Support
-    6590945, #Constellar Support
-    6746888, #Performapal Sky Magician & Odd-Eyes Support
-    6708539, #Trickstar Support
+    7443406, #Illusory Rend test
 ]
 
 beta = [
@@ -688,9 +683,9 @@ else
     outname = "test"
 end
 
-ignore_banlist = ["test", "beta", "sff"]
+ignore_extra_info = ["test", "beta", "sff"]
 
-decks += extra_info_order unless ignore_banlist.include? operation
+decks += extra_info_order unless ignore_extra_info.include? operation
 
 decks.uniq!
 
@@ -722,6 +717,7 @@ $log_file = File.open(now_time_name, "w:UTF-8")
 log "main", "Created log file #{now_time_name}"
 
 old_database = get_database outname
+date_added = get_database "db" + "-date-added"
 database = {}
 counts = Hash.new 0
 type_replace = /\(.*?This (?:card|monster)'s original Type is treated as (.+?) rather than (.+?)[,.].*?\)/
@@ -758,7 +754,11 @@ log "main", "Waiting for results"
 results = loop do
     data = $session.evaluate_script "DeckRequest.GetResults();"
     if data["success"]
-        puts "Could not read decklists: #{data["missed"]}"
+        if data["missed"] and not data["missed"].empty?
+            puts "Could not read decklists: #{data["missed"]}"
+        else
+            puts "Successfully read all decklists"
+        end
         break data["results"]
     end
     if data["error"]
@@ -773,6 +773,7 @@ results.each.with_index(1) { |(deck_id, cards), i|
     info = extra_info[deck_id]
     log deck_id, "Starting to parse #{deck_id}"
     cards.each { |card|
+        p date_added
         id = card["id"].to_s
         unless info.nil?
             card.merge! info
@@ -784,6 +785,12 @@ results.each.with_index(1) { |(deck_id, cards), i|
             card["also_archetype"] = $1
         else
             card["also_archetype"] = nil
+        end
+        # get first addition date
+        card["date"] = nil
+        da_info = date_added["added"][id]
+        unless da_info.nil?
+            card["date"] = da_info[0]
         end
         
         # log operations

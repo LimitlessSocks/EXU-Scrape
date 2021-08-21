@@ -8,15 +8,15 @@ def log(src, info)
     $log_file.puts str if $log_file
 end
 
-def get_database(outname)
+def get_database(outname, noisy: true)
     if File.exist? "#{outname}.json"
         file = File.open "#{outname}.json", "r:UTF-8"
         text = file.read
         file.close
-        log "main", "Reading #{outname}.json"
+        log "main", "Reading #{outname}.json" if noisy
         JSON.parse text
     else
-        log "main", "Creating new file #{outname}.json"
+        log "main", "Creating new file #{outname}.json" if noisy
         {}
     end
 end
