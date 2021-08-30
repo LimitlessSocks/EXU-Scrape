@@ -3,11 +3,18 @@ require 'json'
 require 'date'
 
 param = ARGV[0]
+action = ARGV[1] || "deduce"
 
 if param.nil?
     STDERR.puts "Expected command line argument, received none"
+    STDERR.puts "ruby populate-date-added.rb [db-name] [action]"
+    STDERR.puts "  [db-name]    e.g., `db` or `sff`"
+    STDERR.puts "  [action]     deduce => default; reads corresponding logs and populates"
+    STDERR.puts "               add => unimplemented"
     exit 1
 end
+
+exit unless action == "deduce"
 
 def str_to_date(str)
     DateTime.strptime str, "%m-%d-%Y.%H.%M.%S"
@@ -51,8 +58,7 @@ log "main", "Done parsing logs"
 
 base.each { |id, card|
     next unless card["custom"] && card["custom"] > 0
-    next if 
-    # p [id, card["name"]]
+    log "save", "Updating card #{id} (#{card["name"]})"
     [ "added", "removed" ].each { |method|
         next if in_progress[method][id].nil?
         in_progress[method][id].sort_by! { |t| str_to_date t }
