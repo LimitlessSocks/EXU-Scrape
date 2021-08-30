@@ -328,7 +328,7 @@ database = [
     4237940, #Taida
     4769548, #Empyreal
     5647256, #Meterao
-    6405675, #Dark Kingdom
+    # 6405675, #Dark Kingdom
     7318790, #Mythical Winged Beasts
     # 6309748, #Kuuroma Support
     6446977, #Tagteamer
@@ -482,7 +482,7 @@ database = [
     2795851, #Conqueror
     7920705, #Gaia's Chosen
     7816634, #Dusk Brigade
-    7985036, #Innsmouth
+    # 7985036, #Innsmouth
     7937711, #Hotarugusa
     3890554, #Fireworks Girl
     7961741, #Pluraid
@@ -717,7 +717,7 @@ $log_file = File.open(now_time_name, "w:UTF-8")
 log "main", "Created log file #{now_time_name}"
 
 old_database = get_database outname
-date_added = get_database "db" + "-date-added"
+date_added = get_database outname + "-date-added"
 database = {}
 counts = Hash.new 0
 type_replace = /\(.*?This (?:card|monster)'s original Type is treated as (.+?) rather than (.+?)[,.].*?\)/
@@ -773,7 +773,7 @@ results.each.with_index(1) { |(deck_id, cards), i|
     info = extra_info[deck_id]
     log deck_id, "Starting to parse #{deck_id}"
     cards.each { |card|
-        p date_added
+        # p date_added
         id = card["id"].to_s
         unless info.nil?
             card.merge! info

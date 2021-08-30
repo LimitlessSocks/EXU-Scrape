@@ -9,6 +9,7 @@ def log(src, info)
 end
 
 def get_database(outname, noisy: true)
+    require 'json'
     if File.exist? "#{outname}.json"
         file = File.open "#{outname}.json", "r:UTF-8"
         text = file.read

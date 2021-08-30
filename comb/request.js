@@ -39,8 +39,11 @@
                     }
                     else {
                         console.log("Failed to receive decklist " + deck_id);
-                        this.AddMiss(deck_id);
+                        this.AddMiss(deck_id, xhr.responseText);
                     }
+                }
+                else {
+                    console.log("[" + deck_id + "]: " + xhr.readyState + " " + xhr.status);
                 }
             };
             this.Responses[deck_id].sent = true;
@@ -56,7 +59,10 @@
             this.Responses[id].body = text;
         },
         AddMiss(id) {
-            this.Missed.push(id);
+            this.Missed.push({
+                id: id,
+                response: response
+            });
         },
         CheckAllDone() {
             if(this.Reading) return;
