@@ -1468,3 +1468,10 @@ Must first be Special Summoned (from your Extra Deck) by banishing the above car
 [8886348] note: [+] added new card 2567704 (Rehearsal of Rites)
 [8886348] Finished scraping.
 [main] Time elapsed: 31.352292s
+[final] Completing scrape at 08-30-2021.23.20.46
+[main] Reading tmp/db-08-30-2021.23.02.34.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1856780"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 3 associated scrape(s).
