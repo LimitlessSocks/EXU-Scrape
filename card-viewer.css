@@ -173,8 +173,22 @@ img.star {
     margin: auto 0;
 }
 
-.result h4.result-id {
+.effect-text {
+    white-space: pre-wrap;
+}
+
+.result .result-id, .result .result-date, .link-arrows {
     float: right;
+    clear: right;
+}
+.result .result-date {
+    font-size: 0.9em;
+    font-style: italic;
+    position: relative;
+    top: -0.2em;
+}
+.spell.tcg table, .trap.tcg table {
+    margin-top: 1.4em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -280,7 +294,6 @@ a, a:visited {
 .link-arrows {
     line-height: 1.2em;
     letter-spacing: -0.2em;
-    float: right;
     user-select: none;
 }
 

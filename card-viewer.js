@@ -65,6 +65,22 @@ const escapeXMLString = (str) =>
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&apos;");
 
+const DB_DATE_FORMAT = /(.{4})-(.{2})-(.{2})/; // year-month-day
+const EXU_DATE_FORMAT = /(.{2})-(.{2})-(.{4})\.(.{2})\.(.{2})\.(.{2})/; // month-day-year.hour.minute.second
+const formatDateAdded = (date) => {
+    let fmt, year, month, day, hour, minute, second;
+    let action;
+    if(fmt = DB_DATE_FORMAT.exec(date)) {
+        [, year, month, day] = fmt;
+        action = "Released";
+    }
+    else if(fmt = EXU_DATE_FORMAT.exec(date)) {
+        [, month, day, year, hour, minute, second] = fmt;
+        action = "Integrated";
+    }
+    return action + " " + month + "/" + day + "/" + year;
+};
+
 class Prompt {
     constructor(title, innerFn, buttons, type = null) {
         this.title = title;
@@ -1259,11 +1275,19 @@ CardViewer.composeResult = function (card) {
         })
         .text(idText);
     let author = $("<h4 class=result-author>").text(card.username);
+    let dateAdded;
+    if(card.date) {
+        dateAdded = $("<h4 class=result-date>").text(formatDateAdded(card.date));
+    }
     
     let res = $("<div class=result>");
     res.attr("id", "card" + card.id);
     res.addClass(card.card_type.toLowerCase());
     res.addClass(card.monster_color.toLowerCase());
+    
+    if(!card.custom) {
+        res.addClass("tcg");
+    }
     
     let isPrivate = card.custom && card.custom > 1;
     
@@ -1371,7 +1395,8 @@ CardViewer.composeResult = function (card) {
         marking.append($("<div>").append(banMarker));
     }
     
-    effect = effect.split(/\r|\r?\n/).map(para => $("<p>").text(para));
+    // effect = effect.split(/\r|\r?\n/).map(para => $("<p>").text(para));
+    effect = $("<p>").text(effect).addClass("effect-text");
     
     let retrain = RetrainMap[card.id];
     let retrainCard = CardViewer.Database.cards[retrain];
@@ -1387,7 +1412,7 @@ CardViewer.composeResult = function (card) {
         )));
     }
     
-    res.append($("<div class=result-inner>").append(id, name, linkArrows, author, stats,
+    res.append($("<div class=result-inner>").append(id, name, dateAdded, linkArrows, author, stats,
         $("<table>").append(
             $("<tr>").append(
                 $("<td class=result-img-holder>").append(img, attribute, marking),
