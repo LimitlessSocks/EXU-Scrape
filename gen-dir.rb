@@ -10,7 +10,7 @@ html = ""
 html += "<body>\n"
 html += "  <h1>List of update logs</h1>\n"
 html += "  <ul>"
-listing.each { |path|
+listing.reverse_each { |path|
     link = File.basename path, ".html"
     html += "    <li><code><a href=\"./#{link}\">#{link}</a></code></li>"
 }
