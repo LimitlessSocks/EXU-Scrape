@@ -38,7 +38,7 @@
                         this.AddResponse(deck_id, xhr.responseText);
                     }
                     else {
-                        console.log("Failed to receive decklist " + deck_id);
+                        console.log("Failed to receive decklist " + deck_id + " (status " + xhr.status + ")");
                         this.AddMiss(deck_id, xhr.responseText);
                     }
                 }

@@ -67,7 +67,8 @@ const escapeXMLString = (str) =>
 
 const DB_DATE_FORMAT = /(.{4})-(.{2})-(.{2})/; // year-month-day
 const EXU_DATE_FORMAT = /(.{2})-(.{2})-(.{4})\.(.{2})\.(.{2})\.(.{2})/; // month-day-year.hour.minute.second
-const formatDateAdded = (date) => {
+const DISPLAY_DATE_FORMAT = /(.{2})\/(.{2})\/(.{4})/; // month/day/year
+const formatDateAdded = (date, raw=false) => {
     let fmt, year, month, day, hour, minute, second;
     let action;
     if(fmt = DB_DATE_FORMAT.exec(date)) {
@@ -78,7 +79,22 @@ const formatDateAdded = (date) => {
         [, month, day, year, hour, minute, second] = fmt;
         action = "Integrated";
     }
-    return action + " " + month + "/" + day + "/" + year;
+    else if(fmt = DISPLAY_DATE_FORMAT.exec(date)) {
+        [, month, day, year] = fmt;
+        action = null;
+    }
+    
+    let str = month + "/" + day + "/" + year;
+    
+    if(!raw && action) {
+        str = action + " " + str;
+    }
+    
+    return str;
+};
+const getComparableDate = (date) => {
+    let dateString = formatDateAdded(date, true);
+    return new Date(dateString);
 };
 
 class Prompt {
@@ -996,10 +1012,12 @@ CardViewer.createFilter = function (query, exclude = null) {
 const SortByPropertyMap = {
     text: (card) => card.effect.length + (card.pendulum_effect || "").length
 };
-const SortByIsNumber = {
-    atk: true,
-    def: true,
-    level: true,
+//SortByIsNumber
+const SortByFunction = {
+    atk: parseInt,
+    def: parseInt,
+    level: parseInt,
+    date: getComparableDate,
 };
 CardViewer.filter = function (query, exclude = null) {
     let filter = CardViewer.createFilter(query, exclude);
@@ -1037,8 +1055,8 @@ CardViewer.filter = function (query, exclude = null) {
     }
     else {
         sortFn = _F.propda(sortByProperty);
-        if(SortByIsNumber[sortByProperty]) {
-            sortFn = _F.compose(parseInt, sortFn);
+        if(SortByFunction[sortByProperty]) {
+            sortFn = _F.compose(SortByFunction[sortByProperty], sortFn);
         }
     }
     
@@ -1275,9 +1293,9 @@ CardViewer.composeResult = function (card) {
         })
         .text(idText);
     let author = $("<h4 class=result-author>").text(card.username);
-    let dateAdded;
+    let dateAdded = $("<h4 class=result-date>");
     if(card.date) {
-        dateAdded = $("<h4 class=result-date>").text(formatDateAdded(card.date));
+        dateAdded.text(formatDateAdded(card.date));
     }
     
     let res = $("<div class=result>");
@@ -1396,7 +1414,7 @@ CardViewer.composeResult = function (card) {
     }
     
     // effect = effect.split(/\r|\r?\n/).map(para => $("<p>").text(para));
-    effect = $("<p>").text(effect).addClass("effect-text");
+    effect = [$("<p>").text(effect).addClass("effect-text")];
     
     let retrain = RetrainMap[card.id];
     let retrainCard = CardViewer.Database.cards[retrain];
