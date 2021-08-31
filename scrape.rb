@@ -806,7 +806,7 @@ results.each.with_index(1) { |(deck_id, cards), i|
         end
         # get first addition date
         card["date"] = nil
-        da_info = date_added["added"][id]
+        da_info = date_added["added"][id] rescue nil
         if da_info.nil?
             if old_database[id]
                 card["date"] = old_database[id]["date"]
