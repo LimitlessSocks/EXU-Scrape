@@ -236,7 +236,7 @@ database = [
     8109335, #Entity Support
     8759630, #Subject Fusion Spirit Xyz Support
     8686389, #Mask Support
-    2598148, #Gandora/Red-Eyes Support
+    # 2598148, #Gandora/Red-Eyes Support
     8735092, #Neo-Spacian/Neos Support
     
     #--------------------------------------------------------------------#
