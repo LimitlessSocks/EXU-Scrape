@@ -234,6 +234,10 @@ database = [
     8353364, #Gladiator Beast Support
     8664482, #Zefra Support
     8109335, #Entity Support
+    8759630, #Subject Fusion Spirit Xyz Support
+    8686389, #Mask Support
+    2598148, #Gandora/Red-Eyes Support
+    8735092, #Neo-Spacian/Neos Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -533,6 +537,14 @@ database = [
     5860293, #Earth Guard League/Goranger
     8637210, #Mudafi
     8533195, #The Gashercore Collection
+    8695927, #Inu
+    8283182, #Shadow Whisperer
+    8397719, #Wrasslin'
+    8308338, #Cheezbeast
+    8536599, #Steelbrand
+    8558559, #Azur Lane
+    8608821, #C.I.
+    8607327, #Flamiller
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
@@ -554,16 +566,19 @@ database = [
     8540960, #Generic Monsters XV
     8635701, #Generic Monsters XVI
     8658932, #Generic Monsters XVII
+    8886344, #Generic Monsters XVIII
     6353430, #Generic Spells
     6419184, #Generic Spells II
     6871664, #Generic Spells III
     7193014, #Generic Spells IV
     7552464, #Generic Spells V
     7934345, #Generic Spells VI
+    8886348, #Generic Spells VII
     6353449, #Generic Traps
     6598717, #Generic Traps II
     7193016, #Generic Traps III
     7759421, #Generic Traps IV
+    8886345, #Generic Traps V
     6353457, #Assorted TCG Single Support
     6353465, #Staples
     
@@ -773,6 +788,10 @@ results.each.with_index(1) { |(deck_id, cards), i|
     info = extra_info[deck_id]
     log deck_id, "Starting to parse #{deck_id}"
     cards.each { |card|
+        # reject proxy
+        if card["type"] == "Proxy"
+            next
+        end
         # p date_added
         id = card["id"].to_s
         unless info.nil?
@@ -789,7 +808,11 @@ results.each.with_index(1) { |(deck_id, cards), i|
         # get first addition date
         card["date"] = nil
         da_info = date_added["added"][id]
-        unless da_info.nil?
+        if da_info.nil?
+            if old_database[id]
+                card["date"] = old_database[id]["date"]
+            end
+        else
             card["date"] = da_info[0]
         end
         
