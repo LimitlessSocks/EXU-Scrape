@@ -1158,7 +1158,9 @@ CardViewer.composeResultSmall = function (card) {
         res.addClass("pendulum");
     }
     
-    effect = effect.split(/\r|\r?\n/).map(para => $("<p>").text(para));
+    // effect = effect.split(/\r|\r?\n/).map(para => $("<p>").text(para));
+    effect = effect.replace(/\r|\r?\n/g, "\n");
+    effect = [$("<p>").text(effect).addClass("effect-text")];
     
     let stats = $("<div>");
     
@@ -1414,6 +1416,7 @@ CardViewer.composeResult = function (card) {
     }
     
     // effect = effect.split(/\r|\r?\n/).map(para => $("<p>").text(para));
+    effect = effect.replace(/\r|\r?\n/g, "\n");
     effect = [$("<p>").text(effect).addClass("effect-text")];
     
     let retrain = RetrainMap[card.id];
