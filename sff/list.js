@@ -341,6 +341,55 @@ const SFF_CARD_IDS = [
     3779,      // Shadow Delver
     6110,      // Skelesaurus
     4486,      // Tuned Magician
+    7025,      // Marmiting Captain
+    5244,      // Evilswarm Thanatos
+    2343,      // Junk Collector
+    8131,      // Number 59: Crooked Cook
+    6294,      // Ghostrick Dullahan
+    4508,      // Twin Swords of Flashing Light - Tryce
+    8421,      // Aleister the Invoker
+    8430,      // Invocation
+    673,       // Chaos King Archfiend
+    486,       // Blaze Fenix, the Burning Bombardment Bird
+    1186,      // Disciple of the Forbidden Spell
+    988,       // Dark Grepher
+    4347,      // The Tricky
+    6138,      // Pot of Dichotomy
+    8129,      // Number 45: Crumble Logos the Prophet of Demolition
+    11071,     // Gluttonous Reptolphin Greethys
+    770,       // Convulsion of Nature
+    10291,     // Mathmech Addition
+    9804,      // Firebrand Hymnist
+    5317,      // Beetron
+    10424,     // Cross-Sheep
+    36,        // Acid Trap Hole
+    3685,      // Salvage Warrior
+    6538,      // Samsara, Dragon of Rebirth
+    6926,      // Primitive Butterfly
+    1939,      // Gokipon
+    951,       // Danipon
+    7754,      // Painful Escape
+    9421,      // Astra Ghouls
+    12008,     // Noble Knight's Spearholder
+    1760,      // Gearfried the Iron Knight
+    482,       // Blast with Chain
+    6777,      // Scrounging Goblin
+    5628,      // Gagagigo the Risen
+    4595,      // Vanguard of the Dragon
+    6470,      // Blue Dragon Summoner
+    156,       // Ancient Gear Gadjiltron Chimera
+    5724,      // Star Drawing
+    3496,      // Reaper of the Cards
+    4661,      // Vylon Delta
+    9175,      // Fire Fighting Daruma Doll
+    4181,      // Synchron Explorer
+    5497,      // Fairy King Albverdich
+    4911,      // Zone Eater
+    4170,      // Synchro Boost
+    10408,     // Squeaknight
+    2666,      // Mad Reloader
+    1823,      // Genex Neutron
+    4312,      // The Legendary Fisherman
     9023,      // Oops!
     2487,      // Kuriboh
     1946,      // Golden Ladybug
