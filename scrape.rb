@@ -237,6 +237,8 @@ database = [
     8759630, #Subject Fusion Spirit Xyz Support
     8686389, #Mask Support
     8735092, #Neo-Spacian/Neos Support
+    8924579, #Mudafi Support
+    8960883, #Pyramid of Light Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -544,6 +546,7 @@ database = [
     8558559, #Azur Lane
     8608821, #C.I.
     8607327, #Flamiller
+    8631072, #Penitent Wraith
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
