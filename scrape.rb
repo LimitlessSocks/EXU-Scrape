@@ -470,7 +470,7 @@ database = [
     4587548, #Stage Girl
     7723773, #Simulacra
     7678716, #Vuluti
-    7727566, #Supermega
+    # 7727566, #Supermega
     7728700, #Devivain
     7763820, #Nekker
     7609855, #Kitsento

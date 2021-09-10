@@ -1596,3 +1596,10 @@ Normal Monsters you control gain 500 ATK. When you activate a card or effect (Qu
 [main] note: [-] removed old card 2402876 (Infernity Doom Necromancer)
 [main] note: [-] removed old card 2458369 (Demiurge Incarnation of the World Legacy)
 [main] Time elapsed: 30.244921s
+[final] Completing scrape at 09-09-2021.21.02.15
+[main] Reading tmp/db-09-09-2021.20.49.47.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["2511764", "1807532", "1794790", "2404173", "1686388", "1738750", "1738750", "2040430", "2080344", "2174679", "2174607", "2179974", "2179980", "2179944", "2179993", "2174718", "2210413", "2229831", "2229831", "2228361", "2228361", "2228347", "2228347", "2227168", "2229811", "2511764", "1344433", "1344461", "1344436", "1344434", "2411076", "1225260", "2539145", "1641110", "1949672", "2555641", "2570649", "2575971"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
