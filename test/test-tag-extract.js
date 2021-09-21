@@ -150,6 +150,42 @@ const TEST_CASES = [
     ["[(This is treated as a Link Summon]", [
         { effect: "(This is treated as a Link Summon" },
     ]],
+    ["spell", [
+        { type: "spell" },
+    ]],
+    ["equip spell", [
+        { type: "spell", kind: "Equip" },
+    ]],
+    ["equip", [
+        { type: "any", kind: "Equip" },
+    ]],
+    ["continuous", [
+        { type: "any", kind: "Continuous" },
+    ]],
+    ["continuous trap", [
+        { type: "trap", kind: "Continuous" },
+    ]],
+    ["ritual monster", [
+        { type: "monster", monsterCategory: "ritual" },
+    ]],
+    ["ritual spell", [
+        { type: "spell", kind: "Ritual" },
+    ]],
+    ["ritual spell", [
+        { type: "spell", kind: "Ritual" },
+        OPERATOR_INLINE_OR,
+        { type: "monster", monsterCategory: "ritual" },
+    ]],
+    ["counter", [
+        { type: "any", kind: "Counter" },
+    ]],
+    ["counter trap", [
+        { type: "trap", kind: "Counter" },
+    ]],
+    ["[dark machine] [draw]", [
+        { effect: "dark machine" },
+        { effect: "draw" },
+    ]],
 ];
 const objectEqual = (a, b) => {
     if(a == b) return true;

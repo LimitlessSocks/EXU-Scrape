@@ -33,6 +33,16 @@ class TagIndicator {
     }
 }
 
+const stripToLoose = (str) =>
+    str.toLowerCase()
+       .replace(/\s|-/g, "");
+
+const getProper = (list) => {
+    let loose = list.map(stripToLoose);
+    return (text) =>
+        list[loose.indexOf(stripToLoose(text))];
+};
+
 const PROPER_MONSTER_TYPES = [
     "Aqua", "Beast", "Beast-Warrior", "Cyberse",
     "Dinosaur", "Dragon", "Fairy", "Fiend", "Fish",
@@ -41,15 +51,19 @@ const PROPER_MONSTER_TYPES = [
     "Thunder", "Warrior", "Winged Beast", "Wyrm",
     "Yokai", "Zombie", "Creator God", "Divine-Beast"
 ];
-const stripToLoose = (str) =>
-    str.toLowerCase()
-       .replace(/\s|-/g, "");
+const getProperMonsterType = getProper(PROPER_MONSTER_TYPES);
 
-const LOOSE_MATCH_MONSTER_TYPES = PROPER_MONSTER_TYPES.map(stripToLoose)
-const getProperMonsterType = (loose) => 
-    PROPER_MONSTER_TYPES[
-        LOOSE_MATCH_MONSTER_TYPES.indexOf(stripToLoose(loose))
-    ];
+const PROPER_SPELL_TRAP_TYPES = [
+    "Normal", "Equip", "Quick-Play", "Ritual", "Field", "Continuous",
+    "Counter"
+];
+const getProperSpellTrapType = getProper(PROPER_SPELL_TRAP_TYPES);
+
+// const LOOSE_MATCH_MONSTER_TYPES = PROPER_MONSTER_TYPES.map(stripToLoose)
+// const getProperMonsterType = (loose) => 
+    // PROPER_MONSTER_TYPES[
+        // LOOSE_MATCH_MONSTER_TYPES.indexOf(stripToLoose(loose))
+    // ];
 
 const IGNORE_ENTRY = Symbol("IGNORE_ENTRY");
 const NEGATE_NEXT = Symbol("NEGATE_NEXT");
@@ -83,9 +97,24 @@ const INDICATORS = [
         type: "monster",
         [(match[2] || match[3]).toLowerCase()]: match[1] || match[4],
     })),
-    new TagIndicator(/fusion|xyz|synchro|link|ritual|pendulum|normal|effect|leveled|extra|main|gemini|flip|spirit|tuner|toon|union/i, (match) => ({
+    new TagIndicator(/fusion|xyz|synchro|link|pendulum|normal|effect|leveled|extra|main|gemini|flip|spirit|tuner|toon|union/i, (match) => ({
         type: "monster",
         monsterCategory: match[0].toLowerCase(),
+    })),
+    new TagIndicator(/ritual\s*(monster|spell)?/, (match) => {
+        let res = {};
+        // TODO: "and"
+        res.type = (match[1] || "any").toLowerCase();
+        if(res.type === "spell") {
+            res.kind = "Ritual";
+        }
+        else {
+            res.monsterCategory = "ritual";
+        }
+        return res;
+    }),
+    new TagIndicator(/\[([^[\]]+)\]/, (match) => ({
+        effect: match[1],
     })),
     new TagIndicator(/beast[ -]?warrior|aqua|beast|cyberse|dinosaur|dragon|fairy|fiend|fish|insect|machine|plant|psychic|pyro|reptile|rock|sea[ -]?serpent|spellcaster|thunder|warrior|winged[ -]?beast|wyrm|yokai|zombie|creator[ -]?god|divine[ -]?beast/i, (match) => ({
         type: "monster",
@@ -97,6 +126,10 @@ const INDICATORS = [
     })),
     new TagIndicator(/spell|trap|monster/i, (match) => ({
         type: match[0].toLowerCase()
+    })),
+    new TagIndicator(/(continuous|quick-play|equip|normal|counter|field)\s*(spell|trap)?/i, (match) => ({
+        type: (match[2] || "any").toLowerCase(),
+        kind: getProperSpellTrapType(match[1]),
     })),
     new TagIndicator(/"([^"]+?)"/, (match) => ({
         name: match[1],
@@ -143,6 +176,8 @@ const naturalInputToQuery = (input) => {
     return te.parse();
 };
 
+// TODO: account for operators
+// TODO: generate our own function instead of relying on a hash
 const condenseQuery = (queryList) =>
     queryList.reduce((acc, cur) => Object.assign(acc, cur), {});
 
