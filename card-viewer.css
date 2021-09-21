@@ -567,3 +567,13 @@ select.thin {
 #extraButtons input[type=checkbox] {
     margin-right: 3ch;
 }
+
+input.large {
+    width: 80%;
+    font-size: 36px;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}

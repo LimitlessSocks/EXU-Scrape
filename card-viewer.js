@@ -963,7 +963,7 @@ CardViewer.createFilter = function (query, exclude = null) {
         if(!Number.isNaN(level)) {
             filters.push(CardViewer.comparingComparator(
                 level,
-                query.levelCompare,
+                query.levelCompare || "equal",
                 _F.propda("level")
             ));
         }
@@ -972,7 +972,7 @@ CardViewer.createFilter = function (query, exclude = null) {
     if(query.atk) {
         filters.push(CardViewer.comparingComparator(
             query.atk,
-            query.atkCompare,
+            query.atkCompare || "equal",
             _F.propda("atk")
         ));
     }
@@ -983,7 +983,7 @@ CardViewer.createFilter = function (query, exclude = null) {
     if(query.def) {
         filters.push(CardViewer.comparingComparator(
             query.def,
-            query.defCompare,
+            query.defCompare || "equal",
             _F.propda("def")
         ));
     }
