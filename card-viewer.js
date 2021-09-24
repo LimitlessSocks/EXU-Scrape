@@ -491,6 +491,7 @@ CardViewer.Filters.isMainDeck = (card) =>
 
 
 CardViewer.Filters.isNormal = CardViewer.Filters.monsterColorIs("Normal");
+// CardViewer.Filters.isEffect = (card) => !CardViewer.Filters.isNonEffect(card);
 CardViewer.Filters.isEffect = CardViewer.Filters.monsterColorIs("Effect");
 CardViewer.Filters.isRitual = CardViewer.Filters.monsterColorIs("Ritual");
 CardViewer.Filters.isFusion = CardViewer.Filters.monsterColorIs("Fusion");

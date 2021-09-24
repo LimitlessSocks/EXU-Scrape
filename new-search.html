@@ -25,13 +25,20 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3RKXFLZRZ"></script>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <style>
-        #output {
+        #container {
             width: 80%;
             margin: 0 auto;
         }
+        #container > div {
+            margin-top: 15px;
+        }
         #output .result {
-            margin: 20px 0;
+            margin: 0;
+            margin-bottom: 20px;
             width: 100%;
+        }
+        .hidden {
+            display: none;
         }
     </style>
 </head>
@@ -39,8 +46,13 @@
 <h1 class="title" style="margin-bottom: 12px"><a href="./">EXU Card Search</a></h1>
 
 <input id="search" class="large">
-<div id="output">
-
+<div id="container">
+    <div>
+        <span class="search-stats">Showing <span class="cards-showing">X</span> of <span class="cards-total">Y</span> result(s)</span>
+        <button id="expand" class="hidden">Expand all</button>
+    </div>
+    
+    <div id="output"></div>
 </div>
 </body>
 </html>

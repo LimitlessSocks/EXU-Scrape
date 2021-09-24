@@ -110,6 +110,11 @@ const wrapParens = (arr) => [LEFT_PARENTHESIS, ...arr, RIGHT_PARENTHESIS];
 
 
 //TODO: parens, search by author, search by text
+const TRANSLATE_TABLE = {
+    extra: "extradeck",
+    main: "maindeck",
+};
+
 const INDICATORS = [
     new TagIndicator(/\s+/, () => IGNORE_ENTRY),
     new TagIndicator(/\|\|/, () => OPERATOR_MAJOR_OR),
@@ -144,9 +149,13 @@ const INDICATORS = [
         type: "monster",
         [match[0].toLowerCase()]: memory.lastValue.atk || memory.lastValue.def
     })),
-    new TagIndicator(/fusion|xyz|synchro|link|pendulum|normal|effect|leveled|extra|main|gemini|flip|spirit|tuner|toon|union/i, (match) => ({
+    new TagIndicator(/fusion|xyz|synchro|link|pendulum|normal|effect|leveled|gemini|flip|spirit|tuner|toon|union/i, (match) => ({
         type: "monster",
         monsterCategory: match[0].toLowerCase(),
+    })),
+    new TagIndicator(/(extra|main)(\s*deck)?/i, (match) => ({
+        type: "monster",
+        monsterCategory: TRANSLATE_TABLE[match[1].toLowerCase()],
     })),
     new TagIndicator(/ritual\s*(monster|spell)?/, (match) => {
         let type = (match[1] || "any").toLowerCase();
@@ -260,8 +269,10 @@ const isOperator = (token) => {
 const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
     let operatorStack = [];
     let outputQueue = [];
-    let lastToken = null;
+    let lastToken = null;    
+    let lastWasData = false;
     for(let token of queryList) {
+        let thisIsData = false;
         if(isOperator(token)) {
             let precedence = OPERATOR_PRECEDENCE[token];
             let isUnary = false;
@@ -286,8 +297,7 @@ const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
         }
         else if(token === RIGHT_PARENTHESIS) {
             while(operatorStack.length) {
-                let top = operatorStack[operatorStack.length - 1];
-                operatorStack.pop();
+                let top = operatorStack.pop();
                 if(top !== LEFT_PARENTHESIS) {
                     outputQueue.push(top);
                 }
@@ -298,13 +308,21 @@ const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
             }
         }
         else {
+            if(lastWasData) {
+                // flush operators; implicit and
+                while(operatorStack.length) {
+                    outputQueue.push(operatorStack.pop());
+                }
+            }
             if(typeof token === "object") {
                 outputQueue.push(createFilter(token));
             }
             else {
                 outputQueue.push(token);
             }
+            thisIsData = true;
         }
+        lastWasData = thisIsData;
         lastToken = token;
     }
     while(operatorStack.length) {
