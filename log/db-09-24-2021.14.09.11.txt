@@ -1656,3 +1656,10 @@ You cannot Special Summon monsters with less ATK than this card. Cannot be Tribu
 [main] note: [-] removed old card 2178882 (Gimmick Puppet Menace Leo)
 [main] note: [-] removed old card 2178914 (Gimmick Puppet Chaos Princess)
 [main] Time elapsed: 60.434234s
+[final] Completing scrape at 09-24-2021.14.24.40
+[main] Reading tmp/db-09-24-2021.14.09.11.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1148838", "1148846", "1148835", "1148839", "1148841", "1148836", "1710426", "1719771", "2051239", "1750954", "818802", "1816927", "833799", "1894326", "1894322", "1894320", "1926043", "727951", "727951", "727951", "727940", "727940", "727940", "1986535", "2344585", "1894317", "2056059", "1435270", "2638777", "2261571", "2393744", "2418406", "2465453", "2465548", "2465460", "2582671", "2515991", "521831", "1292713", "2545207", "2545215", "2545246", "2545118", "2545118", "2545201", "2545192", "2604645", "2575971", "2576405", "2638480"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 2 associated scrape(s).
