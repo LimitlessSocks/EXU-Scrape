@@ -30,7 +30,7 @@ let onLoad = async function () {
         lastInput = text;
         let query = naturalInputToQuery(text);
         query = condenseQuery(query);
-        console.log("owo", query);
+        console.log("owo", text, ";", query);
         
         let results = CardViewer.filter(query);
         // $("#output").text(results.map(e => e.name).join("\n"))

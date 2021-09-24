@@ -5,9 +5,13 @@ class TagIndicator {
     constructor(reg, fn) {
         this.toMatch = reg;
         this.onParse = fn;
+        this.remember = {
+            value: false,
+            parameter: false,
+        };
     }
     
-    matches(string, index) {
+    matches(string, index, memory=null) {
         let match = string.slice(index).match(this.toMatch);
         
         //TODO: match by minimum
@@ -18,7 +22,17 @@ class TagIndicator {
             match.index += index;
             match.input = string;
             
-            let result = this.onParse(match);
+            let result = this.onParse(match, memory);
+            
+            if(result && memory) {
+                if(this.remember.parameter) {
+                    memory.lastParameter = result;
+                }
+                if(this.remember.value) {
+                    memory.lastValue = result;
+                }
+            }
+            
             return {
                 match: match,
                 result: result,
@@ -30,6 +44,20 @@ class TagIndicator {
             result: null,
         }
         
+    }
+    
+    rememberParameter() {
+        this.remember.parameter = true;
+        return this;
+    }
+    rememberValue() {
+        this.remember.value = true;
+        return this;
+    }
+    rememberAll() {
+        return this
+            .rememberParameter()
+            .rememberValue();
     }
 }
 
@@ -68,7 +96,15 @@ const getProperSpellTrapType = getProper(PROPER_SPELL_TRAP_TYPES);
 const IGNORE_ENTRY = Symbol("IGNORE_ENTRY");
 const NEGATE_NEXT = Symbol("NEGATE_NEXT");
 const OPERATOR_INLINE_OR = Symbol("OPERATOR_INLINE_OR");
+const OPERATOR_INLINE_AND = Symbol("OPERATOR_INLINE_AND");
+
 const OPERATOR_MAJOR_OR = Symbol("OPERATOR_MAJOR_OR");
+const OPERATOR_MAJOR_AND = Symbol("OPERATOR_MAJOR_AND");
+
+const LEFT_PARENTHESIS = Symbol("LEFT_PARENTHESIS");
+const RIGHT_PARENTHESIS = Symbol("RIGHT_PARENTHESIS");
+//TODO: export these
+
 
 //TODO: parens, search by author, search by text
 const INDICATORS = [
@@ -79,23 +115,29 @@ const INDICATORS = [
         type: "monster",
         monsterCategory: "link",
         level: match[1],
-    })),
-    new TagIndicator(/(level\/rank|rank\/level)\s*(\d+)/i, (match) => ({
-        type: "monster",
-        level: match[2],
-    })),
+    })).rememberParameter(),
+    new TagIndicator(/(level\/rank|rank\/level)\s*(\d+)/i, (match, memory) => (
+        memory.lastParameter = {
+            type: "monster",
+            level: match[2],
+        }
+    )).rememberParameter(),
     new TagIndicator(/rank\s*(\d+)/i, (match) => ({
         type: "monster",
         monsterCategory: "xyz",
         level: match[1],
-    })),
+    })).rememberParameter(),
     new TagIndicator(/level\s*(\d+)/i, (match) => ({
         type: "monster",
         level: match[1],
-    })),
+    })).rememberParameter(),
     new TagIndicator(/(\d+)[\s=]*(atk|def)|(atk|def)[\s=]*(\d+)/i, (match) => ({
         type: "monster",
         [(match[2] || match[3]).toLowerCase()]: match[1] || match[4],
+    })).rememberAll(),
+    new TagIndicator(/atk|def/i, (match, memory) => (memory.lastValue && {
+        type: "monster",
+        [match[0].toLowerCase()]: memory.lastValue.atk || memory.lastValue.def
     })),
     new TagIndicator(/fusion|xyz|synchro|link|pendulum|normal|effect|leveled|extra|main|gemini|flip|spirit|tuner|toon|union/i, (match) => ({
         type: "monster",
@@ -131,8 +173,17 @@ const INDICATORS = [
         type: (match[2] || "any").toLowerCase(),
         kind: getProperSpellTrapType(match[1]),
     })),
-    new TagIndicator(/"([^"]+?)"/, (match) => ({
+    new TagIndicator(/"((?:".*?")?(?: ".*?"|[^"])+)"/, (match) => ({
         name: match[1],
+    })),
+    new TagIndicator(/\|\|/, () => OPERATOR_MAJOR_OR),
+    new TagIndicator(/,\s*or|or|,/, () => OPERATOR_INLINE_OR),    
+    
+    new TagIndicator(/\(/, () => LEFT_PARENTHESIS),
+    new TagIndicator(/\)/, () => RIGHT_PARENTHESIS),
+    
+    new TagIndicator(/\d+/, (match, memory) => Object.assign({}, memory.lastParameter, {
+        level: match[0],
     })),
 ];
 
@@ -141,11 +192,15 @@ class TagExtractor {
         this.input = input;
         this.index = 0;
         this.output = [];
+        this.memory = {
+            lastParameter: null,
+            lastValue: null,
+        };
     }
     
     step() {
         for(let ind of INDICATORS) {
-            let { match, result } = ind.matches(this.input, this.index);
+            let { match, result } = ind.matches(this.input, this.index, this.memory);
             if(match) {
                 debug("MATCH: ", ind.toMatch, match[0]);
                 debug("Output so far:", this.output);
@@ -176,10 +231,57 @@ const naturalInputToQuery = (input) => {
     return te.parse();
 };
 
-// TODO: account for operators
-// TODO: generate our own function instead of relying on a hash
-const condenseQuery = (queryList) =>
-    queryList.reduce((acc, cur) => Object.assign(acc, cur), {});
+
+
+const OPERATOR_PRECEDENCE = {
+    [OPERATOR_INLINE_OR]:   10,
+    [OPERATOR_INLINE_AND]:  20,
+    
+    [OPERATOR_MAJOR_OR]:    40,
+    [OPERATOR_MAJOR_AND]:   50,
+};
+const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
+    let operatorStack = [];
+    let outputQueue = [];
+    // let 
+    for(let token of queryList) {
+        let precedence = OPERATOR_PRECEDENCE[token];
+        if(precedence) {
+            while(operatorStack.length) {
+                let top = operatorStack[operatorStack.length - 1];
+                if(top !== LEFT_PARENTHESIS && OPERATOR_PRECEDENCE[top] > precedence) {
+                    outputQueue.push(operatorStack.pop());
+                }
+                else {
+                    break;
+                }
+            }
+            
+            operatorStack.push(token);
+        }
+        else {
+            outputQueue.push(createFilter(token));
+        }
+    }
+    while(operatorStack.length) {
+        outputQueue.push(operatorStack.pop());
+    }
+    
+    // evaluate expression
+    let evalStack = [];
+    for(let token of outputQueue) {
+        if(token === OPERATOR_INLINE_OR) {
+            let [ a, b ] = evalStack.splice(-2);
+            console.log("or", a, b);
+            evalStack.push((card) => a(card) || b(card));
+        }
+        else {
+            evalStack.push(token);
+        }
+    }
+    
+    return (card) => evalStack.every(fn => fn(card));
+};
 
 if(typeof process !== "undefined") {
     module.exports = {

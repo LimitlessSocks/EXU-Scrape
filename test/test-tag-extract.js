@@ -100,13 +100,13 @@ const TEST_CASES = [
         { type: "monster", level: "3" },
         OPERATOR_INLINE_OR,
         { type: "monster", level: "6" },
-        { type: "monster", monsterType: "psychic" },
+        { type: "monster", monsterType: "Psychic" },
     ]],
     ["level 3 or 6 psychic", [
         { type: "monster", level: "3" },
         OPERATOR_INLINE_OR,
         { type: "monster", level: "6" },
-        { type: "monster", monsterType: "psychic" },
+        { type: "monster", monsterType: "Psychic" },
     ]],
     ["level 3, 6, or 9 psychic", [
         { type: "monster", level: "3" },
@@ -114,7 +114,7 @@ const TEST_CASES = [
         { type: "monster", level: "6" },
         OPERATOR_INLINE_OR,
         { type: "monster", level: "9" },
-        { type: "monster", monsterType: "psychic" },
+        { type: "monster", monsterType: "Psychic" },
     ]],
     ["level 3, 6 or 9 psychic", [
         { type: "monster", level: "3" },
@@ -122,7 +122,7 @@ const TEST_CASES = [
         { type: "monster", level: "6" },
         OPERATOR_INLINE_OR,
         { type: "monster", level: "9" },
-        { type: "monster", monsterType: "psychic" },
+        { type: "monster", monsterType: "Psychic" },
     ]],
     ["light or dark", [
         { type: "monster", monsterAttribute: "LIGHT" },
