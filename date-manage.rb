@@ -10,7 +10,8 @@ if param.nil? || action.nil?
     STDERR.puts "ruby populate-date-added.rb [action] [db-name]"
     STDERR.puts "  [action]     Available parameters:"
     STDERR.puts "    deduce             default; reads corresponding logs and populates"
-    STDERR.puts "    add [id] [pairs*]  sets add-removal pairs for card #id"
+    STDERR.puts "    add [ids] [pairs*]  sets add-removal pairs for ids"
+    STDERR.puts "      card <#id>  corresponds to the card whose id is #id"
     STDERR.puts "    integrate          updates the appropriate database with info"
     STDERR.puts "  [db-name]    e.g., `db` or `sff`"
     exit 1
@@ -113,10 +114,14 @@ elsif action == "add"
         puts "Identified card: #{card["id"]} #{card["name"].inspect}"
         in_progress["added"][id] = []
         in_progress["removed"][id] = []
+        last_added = last_removed = nil
         pairs.each_slice(2) { |added, removed|
             in_progress["added"][id] << added
-            in_progress["removed"][id] << removed if removed
+            if removed
+                in_progress["removed"][id] << removed
+            end
         }
+        p in_progress["added"][id], in_progress["removed"][id]
     }
     date_added = in_progress
     
