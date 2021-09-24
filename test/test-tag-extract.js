@@ -1,5 +1,7 @@
 const {
-    naturalInputToQuery, OPERATOR_INLINE_OR, OPERATOR_MAJOR_OR
+    naturalInputToQuery,
+    OPERATOR_INLINE_OR, OPERATOR_MAJOR_OR, OPERATOR_NOT,
+    LEFT_PARENTHESIS, RIGHT_PARENTHESIS
 } = require("./../tag-extract.js");
 
 // [input, output]
@@ -171,10 +173,12 @@ const TEST_CASES = [
     ["ritual spell", [
         { type: "spell", kind: "Ritual" },
     ]],
-    ["ritual spell", [
+    ["ritual", [
+        LEFT_PARENTHESIS,
         { type: "spell", kind: "Ritual" },
         OPERATOR_INLINE_OR,
         { type: "monster", monsterCategory: "ritual" },
+        RIGHT_PARENTHESIS,
     ]],
     ["counter", [
         { type: "any", kind: "Counter" },
@@ -185,6 +189,32 @@ const TEST_CASES = [
     ["[dark machine] [draw]", [
         { effect: "dark machine" },
         { effect: "draw" },
+    ]],
+    ["[dark machine] or [draw]", [
+        { effect: "dark machine" },
+        OPERATOR_INLINE_OR,
+        { effect: "draw" },
+    ]],
+    ["!spell", [
+        OPERATOR_NOT,
+        { type: "spell" },
+    ]],
+    ["(spell)", [
+        LEFT_PARENTHESIS,
+        { type: "spell" },
+        RIGHT_PARENTHESIS,
+    ]],
+    ["not spell", [
+        OPERATOR_NOT,
+        { type: "spell" },
+    ]],
+    ["not (spell or trap)", [
+        OPERATOR_NOT,
+        LEFT_PARENTHESIS,
+        { type: "spell" },
+        OPERATOR_INLINE_OR,
+        { type: "trap" },
+        RIGHT_PARENTHESIS
     ]],
 ];
 const objectEqual = (a, b) => {

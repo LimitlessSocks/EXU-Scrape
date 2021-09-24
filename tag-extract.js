@@ -94,7 +94,7 @@ const getProperSpellTrapType = getProper(PROPER_SPELL_TRAP_TYPES);
     // ];
 
 const IGNORE_ENTRY = Symbol("IGNORE_ENTRY");
-const NEGATE_NEXT = Symbol("NEGATE_NEXT");
+const OPERATOR_NOT = Symbol("OPERATOR_NOT");
 const OPERATOR_INLINE_OR = Symbol("OPERATOR_INLINE_OR");
 const OPERATOR_INLINE_AND = Symbol("OPERATOR_INLINE_AND");
 
@@ -103,6 +103,9 @@ const OPERATOR_MAJOR_AND = Symbol("OPERATOR_MAJOR_AND");
 
 const LEFT_PARENTHESIS = Symbol("LEFT_PARENTHESIS");
 const RIGHT_PARENTHESIS = Symbol("RIGHT_PARENTHESIS");
+
+const wrapParens = (arr) => [LEFT_PARENTHESIS, ...arr, RIGHT_PARENTHESIS];
+
 //TODO: export these
 
 
@@ -110,7 +113,9 @@ const RIGHT_PARENTHESIS = Symbol("RIGHT_PARENTHESIS");
 const INDICATORS = [
     new TagIndicator(/\s+/, () => IGNORE_ENTRY),
     new TagIndicator(/\|\|/, () => OPERATOR_MAJOR_OR),
-    new TagIndicator(/or/, () => OPERATOR_INLINE_OR),
+    new TagIndicator(/or/i, () => OPERATOR_INLINE_OR),
+    new TagIndicator(/and/i, () => OPERATOR_INLINE_AND),
+    new TagIndicator(/!|not/i, () => OPERATOR_NOT),
     new TagIndicator(/link[- ]?\s*(\d+)/i, (match) => ({
         type: "monster",
         monsterCategory: "link",
@@ -144,16 +149,19 @@ const INDICATORS = [
         monsterCategory: match[0].toLowerCase(),
     })),
     new TagIndicator(/ritual\s*(monster|spell)?/, (match) => {
-        let res = {};
-        // TODO: "and"
-        res.type = (match[1] || "any").toLowerCase();
-        if(res.type === "spell") {
-            res.kind = "Ritual";
+        let type = (match[1] || "any").toLowerCase();
+        switch(type) {
+            case "spell":
+                return { type: type, kind: "Ritual" };
+            case "monster":
+                return { type: type, monsterCategory: "ritual" };
+            default:
+                return wrapParens([
+                    { type: "spell", kind: "Ritual" },
+                    OPERATOR_INLINE_OR,
+                    { type: "monster", monsterCategory: "ritual" }
+                ]);
         }
-        else {
-            res.monsterCategory = "ritual";
-        }
-        return res;
     }),
     new TagIndicator(/\[([^[\]]+)\]/, (match) => ({
         effect: match[1],
@@ -173,11 +181,11 @@ const INDICATORS = [
         type: (match[2] || "any").toLowerCase(),
         kind: getProperSpellTrapType(match[1]),
     })),
-    new TagIndicator(/"((?:".*?")?(?: ".*?"|[^"])+)"/, (match) => ({
+    new TagIndicator(/"((?:".*?")?(?: ".*?"|[^"])+|"[^"]+")"/, (match) => ({
         name: match[1],
     })),
     new TagIndicator(/\|\|/, () => OPERATOR_MAJOR_OR),
-    new TagIndicator(/,\s*or|or|,/, () => OPERATOR_INLINE_OR),    
+    new TagIndicator(/,\s*or|or|,/i, () => OPERATOR_INLINE_OR),    
     
     new TagIndicator(/\(/, () => LEFT_PARENTHESIS),
     new TagIndicator(/\)/, () => RIGHT_PARENTHESIS),
@@ -206,7 +214,12 @@ class TagExtractor {
                 debug("Output so far:", this.output);
                 this.index += match[0].length;
                 if(result !== IGNORE_ENTRY) {
-                    this.output.push(result);
+                    if(Array.isArray(result)) {
+                        this.output.push(...result);
+                    }
+                    else {
+                        this.output.push(result);
+                    }
                 }
                 return;
             }
@@ -239,41 +252,80 @@ const OPERATOR_PRECEDENCE = {
     
     [OPERATOR_MAJOR_OR]:    40,
     [OPERATOR_MAJOR_AND]:   50,
+    [OPERATOR_NOT]:         1000,
+};
+const isOperator = (token) => {
+    return typeof OPERATOR_PRECEDENCE[token] !== "undefined";
 };
 const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
     let operatorStack = [];
     let outputQueue = [];
-    // let 
+    let lastToken = null;
     for(let token of queryList) {
-        let precedence = OPERATOR_PRECEDENCE[token];
-        if(precedence) {
-            while(operatorStack.length) {
-                let top = operatorStack[operatorStack.length - 1];
-                if(top !== LEFT_PARENTHESIS && OPERATOR_PRECEDENCE[top] > precedence) {
-                    outputQueue.push(operatorStack.pop());
-                }
-                else {
-                    break;
+        if(isOperator(token)) {
+            let precedence = OPERATOR_PRECEDENCE[token];
+            let isUnary = false;
+            isUnary = lastToken === null || lastToken === LEFT_PARENTHESIS || isOperator(lastToken);
+            
+            if(!isUnary) {
+                while(operatorStack.length) {
+                    let top = operatorStack[operatorStack.length - 1];
+                    if(top !== LEFT_PARENTHESIS && OPERATOR_PRECEDENCE[top] > precedence) {
+                        outputQueue.push(operatorStack.pop());
+                    }
+                    else {
+                        break;
+                    }
                 }
             }
             
             operatorStack.push(token);
         }
-        else {
-            outputQueue.push(createFilter(token));
+        else if(token === LEFT_PARENTHESIS) {
+            operatorStack.push(token);
         }
+        else if(token === RIGHT_PARENTHESIS) {
+            while(operatorStack.length) {
+                let top = operatorStack[operatorStack.length - 1];
+                operatorStack.pop();
+                if(top !== LEFT_PARENTHESIS) {
+                    outputQueue.push(top);
+                }
+                else {
+                    break;
+                }
+                //TODO:(optional) implement functions here
+            }
+        }
+        else {
+            if(typeof token === "object") {
+                outputQueue.push(createFilter(token));
+            }
+            else {
+                outputQueue.push(token);
+            }
+        }
+        lastToken = token;
     }
     while(operatorStack.length) {
         outputQueue.push(operatorStack.pop());
     }
+    console.log(window.outputQueue=outputQueue);
     
     // evaluate expression
     let evalStack = [];
     for(let token of outputQueue) {
         if(token === OPERATOR_INLINE_OR) {
             let [ a, b ] = evalStack.splice(-2);
-            console.log("or", a, b);
             evalStack.push((card) => a(card) || b(card));
+        }
+        else if(token === OPERATOR_INLINE_AND) {
+            let [ a, b ] = evalStack.splice(-2);
+            evalStack.push((card) => a(card) && b(card));
+        }
+        else if(token === OPERATOR_NOT) {
+            let a = evalStack.pop();
+            evalStack.push((card) => !a(card));
         }
         else {
             evalStack.push(token);
@@ -288,5 +340,8 @@ if(typeof process !== "undefined") {
         naturalInputToQuery: naturalInputToQuery,
         OPERATOR_MAJOR_OR: OPERATOR_MAJOR_OR,
         OPERATOR_INLINE_OR: OPERATOR_INLINE_OR,
+        OPERATOR_NOT: OPERATOR_NOT,
+        LEFT_PARENTHESIS: LEFT_PARENTHESIS,
+        RIGHT_PARENTHESIS: RIGHT_PARENTHESIS,
     };
 }
