@@ -63,7 +63,7 @@ database = [
     # 6000654, #Laval Support
     5844326, #Danger! Support
     5936560, #The Agent Support
-    4422086, #Mystrick Support
+    # 4422086, #Mystrick Support
     5839316, #Duo-Attribute Support
     6239411, #Prank-Kids Support
     5894044, #Shino Support
@@ -75,10 +75,10 @@ database = [
     5260210, #Sylvan Support
     4810529, #Blue-Eyes Support
     5496883, #Normal Pendulum Support
-    3256281, #B.E.S. Support
+    # 3256281, #B.E.S. Support
     5782891, #The Weather Support
     5194131, #Fur Hire Support
-    5720993, #Watt Support
+    # 5720993, #Watt Support
     4804758, #Draconia Support
     4177191, #Lightray Support
     5705030, #Phantasm Spiral Support
@@ -203,7 +203,7 @@ database = [
     7846987, #of the Wasteland Support
     7852899, #Abartech Support
     7885378, #Sunavalon Support
-    8079528, #Gimmick Puppet Support
+    # 8079528, #Gimmick Puppet Support
     7795290, #Superheavy Samurai Support
     7973339, #Stage Girl Support
     7995546, #NTG Support
@@ -239,6 +239,9 @@ database = [
     8735092, #Neo-Spacian/Neos Support
     8924579, #Mudafi Support
     8960883, #Pyramid of Light Support
+    8976659, #Fossil Support
+    9015610, #Starry Knight Support
+    8832576, #Stardust Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -305,7 +308,7 @@ database = [
     2952495, #Genjutsu
     5979832, #Raycor
     # 4501871, #Oni Assassins
-    6050332, #Nermusa
+    # 6050332, #Nermusa
     # 6078350, #Majecore
     5869257, #Yova
     # 5098946, #Guildimension
@@ -547,6 +550,10 @@ database = [
     8608821, #C.I.
     8607327, #Flamiller
     8631072, #Penitent Wraith
+    5887296, #Mechaneer's
+    8263489, #The Legendary Exodia Necross Incarnate
+    7727566, #Supermega
+    7874062, #Conflagrant
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
