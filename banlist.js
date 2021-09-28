@@ -76,7 +76,7 @@ let onLoad = async function () {
     let tags = ["Forbidden", "Limited", "Semi-Limited", "Unlimited"];
     
     const NewCards = [
-        10529, 8369, 5188, 8375, 3963, 988
+        10654, 9522, 10698, 9987, 8663, 8928, 3135, 1805, 2685, 2230, 9481, 9639, 11051, 11097, 9189, 9783, 9099, 7436, 5875, 1468, 4909, 9875, 9624
     ];
     
     const GradeFilters = [
