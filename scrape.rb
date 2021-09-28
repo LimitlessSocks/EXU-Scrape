@@ -242,6 +242,10 @@ database = [
     8976659, #Fossil Support
     9015610, #Starry Knight Support
     8832576, #Stardust Support
+    9044366, #Watt Support
+    7139390, #Cloudian Support
+    9094270, #Elemental HERO Support (non-Neos)
+    9104023, #Plaguespreader Zombie Support
     
     #--------------------------------------------------------------------#
     # Archetypes
