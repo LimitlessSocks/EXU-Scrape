@@ -1557,3 +1557,10 @@ Once per turn, you can also Xyz Summon “Reader of Prophecy” while you have 4
 [main] note: [-] removed old card 2326902 (Pluraid Phoebe)
 [main] note: [-] removed old card 2326846 (Pluraid Stellar Jay)
 [main] Time elapsed: 41.408438s
+[final] Completing scrape at 09-28-2021.15.56.58
+[main] Reading tmp/db-09-28-2021.15.50.49.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1621208", "1357705", "2116093", "2028948", "2028948", "2028792", "2028938", "2029154", "2029169", "2029169", "2029169", "2029162", "2029162", "2029151", "2029143", "2029132", "2271902", "2116093", "2306224", "2515991", "2555552", "2556549", "2601116"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
