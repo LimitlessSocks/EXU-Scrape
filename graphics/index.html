@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logo Generation</title>
+    <link rel="STYLESHEET" href="./../card-viewer.css">
+    <!-- <script -->
+			  <!-- src="https://code.jquery.com/jquery-3.4.1.min.js" -->
+			  <!-- integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" -->
+			  <!-- crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.2.2/jszip.min.js"></script>
+    <script src="./../card-viewer.js"></script>
+    <script src="./logo.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        #raw-output {
+            display: none;
+        }
+        #scaled-output {
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Logo Generation</h1>
+    <div>
+        <label for="tag">Tagline: <input id="tag"></label>
+        <label for="main-id">Main ID: <input type="number" id="main-id"></label>
+        <label for="side-id">Side ID: <input type="number" id="side-id"></label>
+        <button id="generate">Generate</button>
+    </div>
+    <div>
+        <label for="file-input">Upload .txt file: <input id="file-input" type="file" accept=".txt"></label>
+        <button id="generate-file">Generate</button>
+    </div>
+    <div id="status"></div>
+    <div>
+        <canvas id="scaled-output" width="1060" height="542">
+        <canvas id="raw-output" width="2120" height="1084">
+    </div>
+</body>
+</html>
