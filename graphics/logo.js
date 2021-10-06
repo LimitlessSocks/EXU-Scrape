@@ -20,18 +20,23 @@ const textCentered = (ctx, op, text, { font, x, y, width, height }) => {
     
     let words = text.split(/\s+/);
     let lines = [[]];
-    for(let word of words) {
+    let i = 0;
+    while(i < words.length) {
+        let word = words[i];
         let cur = lines[lines.length - 1];
         cur.push(word);
         let curWidth = ctx.measureText(cur.join(" ")).width;
+        // console.log(curWidth, maxWidth);
         if(curWidth > maxWidth) {
             if(cur.length === 1) {
                 // cannot do anything about 1-word overflow
                 // retry with smaller text
                 if(font.size < minSize) {
+                    // console.log("Font too small, unable to decrease");
                     lines.push([]);
                 }
                 else {
+                    // console.log("Attempting to decrease font size");
                     return textCentered(ctx, op, text, {
                         x: x, y: y,
                         width: width, height: height,
@@ -43,8 +48,13 @@ const textCentered = (ctx, op, text, { font, x, y, width, height }) => {
                 }
             }
             else {
-                lines.push(cur.splice(-1));
+                cur.pop();
+                lines.push([]);
+                // console.log("Re-running to make sure word can fit");
             }
+        }
+        else {
+            i++;
         }
     }
     
