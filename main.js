@@ -66,15 +66,28 @@ let onLoad = async function () {
         );
     });
     
+    const unsavedValues = [ "", "any" ];
+    const unsavedKeys = [ "imported", "notImported", "alsoImported" ];
+    const shouldIgnoreKeyValue = (key, value) =>
+        unsavedValues.indexOf(value) !== -1
+        || unsavedKeys.indexOf(key) !== -1
+        || key === CardViewer.format
+        || (key === "retrain" && !value)
+        || (key.indexOf("Compare") !== -1 && value === "equal");
+        
     CardViewer.Elements.saveSearch.click(() => {
         let strs = [];
         for(let [key, value] of Object.entries(CardViewer.query())) {
-            if(value !== "" && value !== "any" && key !== "imported" && key !== "notImported" && key !== "alsoImported" && key !== CardViewer.format) {
-                if(key === "retrain" && !value) continue;
-                if(key.indexOf("Compare") !== -1 && value === "equal") continue;
+            if(!shouldIgnoreKeyValue(key, value)) {
+                if(key === "visibility" && Array.isArray(value)) {
+                    // ignore excess values
+                    value = value[0];
+                }
+                console.log(key, "uwu", value);
                 strs.push(key + "=" + value);
             }
         }
+        alert("saving " + JSON.stringify(strs));
         if(strs.length || window.location.search) {
             window.location.search = encodeURI(strs.join(","))
                 .replaceAll(".", "%2E")
@@ -165,6 +178,10 @@ let onLoad = async function () {
                 }
             }
             value = parseStringValue(value);
+            if(!el) {
+                console.error("Undefined property " + key);
+                continue;
+            }
             if(el.is("[type='checkbox']")) {
                 el.prop("checked", value);
             }
