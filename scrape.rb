@@ -246,6 +246,9 @@ database = [
     7139390, #Cloudian Support
     9094270, #Elemental HERO Support (non-Neos)
     9104023, #Plaguespreader Zombie Support
+    9072263, #Mathmech Support
+    9105198, #Dark Scorpion Support
+    8405156, #LoD Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -552,12 +555,15 @@ database = [
     8536599, #Steelbrand
     8558559, #Azur Lane
     8608821, #C.I.
-    8607327, #Flamiller
+    # 8607327, #Flamiller
     8631072, #Penitent Wraith
     5887296, #Mechaneer's
     8263489, #The Legendary Exodia Necross Incarnate
     7727566, #Supermega
     7874062, #Conflagrant
+    7027111, #Medaka
+    8760406, #Nordic Champion
+    9020851, #Alarkite
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
