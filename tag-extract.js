@@ -149,6 +149,10 @@ const INDICATORS = [
         type: "monster",
         [match[0].toLowerCase()]: memory.lastValue.atk || memory.lastValue.def
     })),
+    //TODO: relative comparisons
+    new TagIndicator(/custom/, (match) => ({
+        visibility: "5",
+    })),
     new TagIndicator(/fusion|xyz|synchro|link|pendulum|normal|effect|leveled|gemini|flip|spirit|tuner|toon|union/i, (match) => ({
         type: "monster",
         monsterCategory: match[0].toLowerCase(),
@@ -267,6 +271,7 @@ const isOperator = (token) => {
     return typeof OPERATOR_PRECEDENCE[token] !== "undefined";
 };
 const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
+    console.log(queryList);
     let operatorStack = [];
     let outputQueue = [];
     let lastToken = null;    
