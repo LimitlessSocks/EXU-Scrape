@@ -475,7 +475,7 @@ database = [
     7499095, #Magistrophic
     7093024, #Khremysis
     7577360, #Tempo Warrior
-    7586564, #Straw Hat
+    # 7586564, #Straw Hat
     6123628, #Stormrider
     4587548, #Stage Girl
     7723773, #Simulacra
@@ -540,7 +540,7 @@ database = [
     6356932, #Cosmech
     6156689, #Varagon
     6040042, #Kuuroma
-    8579730, #Tensura
+    # 8579730, #Tensura
     8596515, #Crystal Tower
     7225933, #Chima
     7733925, #Panera
