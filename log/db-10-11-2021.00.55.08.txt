@@ -1585,3 +1585,10 @@ If this card is Synchro Summoned: You can target 1 Spell/Trap your opponent cont
 [main] note: [-] removed old card 2523184 (Tensura - Hobgoblin)
 [main] note: [-] removed old card 2521767 (Heavymetalfoes Palagonis)
 [main] Time elapsed: 39.801369s
+[final] Completing scrape at 10-11-2021.01.10.04
+[main] Reading tmp/db-10-11-2021.00.55.08.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["332851", "332851", "332842", "332842", "332816", "332816", "332807", "332807", "332828", "332828", "332837", "332837", "332948", "332948", "332945", "332945", "332872", "332872", "332861", "332861", "332954", "332954", "335239", "335239", "1551505", "1551505", "337966", "337966", "889997", "889997", "574158", "386233", "386233", "386224", "386224", "334529", "334529", "337907", "337907", "421080", "421080", "334551", "334551", "2505107", "1551505", "1551505"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
