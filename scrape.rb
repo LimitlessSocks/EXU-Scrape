@@ -564,6 +564,9 @@ database = [
     7027111, #Medaka
     8760406, #Nordic Champion
     9020851, #Alarkite
+    9079255, #Nemesin
+    8954457, #Vendedda
+    9016753, #Dance of Swords
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
