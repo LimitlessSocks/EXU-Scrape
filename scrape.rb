@@ -418,7 +418,7 @@ database = [
     6560628, #Charismatic
     7027802, #Deus Ex
     6869158, #Infrastructure
-    6770598, #Bleakstory
+    # 6770598, #Bleakstory
     7140843, #Pendant
     7127621, #Dark Imp
     7124125, #Anglory

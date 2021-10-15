@@ -1117,7 +1117,7 @@
         },
         {
             "name": "Abartech",
-            "deckIds": [7522856],
+            "deckIds": [7522856, 7852899],
             "cardIds": [],
             "thumb": "2189804",
             "author": "Sock",
@@ -1824,6 +1824,195 @@
             "thumb": "2545215",
             "author": "Fizzyizzy & Meowly",
             "description": "A LIGHT and DARK Warrior Pendulum archetype that tags out with their Pendulum Scales, using the RUIN monsters as removal and DAWN monsters as utility.",
+            "tags": []
+        },
+        {
+            "name": "Earth Guard League/Goranger",
+            "deckIds": [5860293],
+            "cardIds": [],
+            "thumb": "1621208",
+            "author": "KettouRyuujin",
+            "description": "An EARTH Warrior archetype that aims to swarm the field with all 5 of its archetypal monsters.",
+            "tags": []
+        },
+        {
+            "name": "Mudafi",
+            "deckIds": [8637210],
+            "cardIds": [],
+            "thumb": "2539799",
+            "author": "Sock",
+            "description": "A Battle Phase oriented archetype with effects that activate in the hand at the start of the Battle Phase.",
+            "tags": []
+        },
+        {
+            "name": "The Gashercore Collection",
+            "deckIds": [8533195],
+            "cardIds": [],
+            "thumb": "2539799",
+            "author": "FlavorFlov",
+            "description": "An archetype that works off the mechanics of the 'Metamorph' cards to create a control oriented play style, with Gasherfan monsters being able to transform into their Gashercore Fusion Monster counterparts in the process.",
+            "tags": []
+        },
+        {
+            "name": "Inu",
+            "deckIds": [8695927],
+            "cardIds": [],
+            "thumb": "2556549",
+            "author": "Sock",
+            "description": "A WIND Beast archetype focused on 'Rooftop Inu', featuring equips for ATK and protection as well as being inspired by 'Trickstar'.",
+            "tags": []
+        },
+        {
+            "name": "Shadow Whisperer",
+            "deckIds": [8283182],
+            "cardIds": [],
+            "thumb": "541558",
+            "author": "Fallen",
+            "description": "A FIRE Pyro archetype that revolves around revealing cards in your hand in order to pull off different effects as well as a battle mechanic floodgate.",
+            "tags": []
+        },
+        {
+            "name": "Wrasslin'",
+            "deckIds": [8397719],
+            "cardIds": [],
+            "thumb": "2465495",
+            "author": "Gatr",
+            "description": "A small archetype consisting of a pair of Fire/Ice Hand-esque Ritual and Fusion Monsters that cannot be destroyed by card effects and only float when they are destroyed by battle.",
+            "tags": []
+        },
+        {
+            "name": "Cheezbeast",
+            "deckIds": [8308338],
+            "cardIds": [],
+            "thumb": "2439162",
+            "author": "Gatr",
+            "description": "A FIRE Fairy archetype that revolves around Cheese Counters and Synchro Monsters, as well as banish-based recursion.",
+            "tags": []
+        },
+        {
+            "name": "Steelbrand",
+            "deckIds": [8536599],
+            "cardIds": [],
+            "thumb": "2509143",
+            "author": "Ajax",
+            "description": "An EARTH Machine Ritual archetype that Tributes and banishes Machine monsters.",
+            "tags": []
+        },
+        {
+            "name": "Azur Lane",
+            "deckIds": [8558559],
+            "cardIds": [],
+            "thumb": "2515502",
+            "author": "Knightmare",
+            "description": "A Rank 9 WATER Machine deck which is flexible in its play style and has the ability to control the field with powerful on-summon removal and negation effects.",
+            "tags": []
+        },
+        {
+            "name": "C.I.",
+            "deckIds": [8608821],
+            "cardIds": [],
+            "thumb": "2530342",
+            "author": "Ajax",
+            "description": "A reactive archetype that focuses on temporarily banishing its monsters as Quick Effects.",
+            "tags": []
+        },
+        {
+            "name": "Penitent Wraith",
+            "deckIds": [8631072],
+            "cardIds": [],
+            "thumb": "2537452",
+            "author": "Khreygond",
+            "description": "A Pendulum archetype comprised of Level 4 Zombie monsters that can remove cards the opponent controls or search/recur cards depending on where they are Summoned from.",
+            "tags": []
+        },
+        {
+            "name": "Mechaneer's",
+            "deckIds": [5887296],
+            "cardIds": [],
+            "thumb": "1630453",
+            "author": "Khreygond",
+            "description": "An EARTH Machine archetype that revolves around targeting its own monsters to trigger different effects, generate advantage and going into its boss monster to out-grind the opponent.",
+            "tags": []
+        },
+        {
+            "name": "Ruined One",
+            "deckIds": [8263489],
+            "cardIds": [],
+            "thumb": "2422350",
+            "author": "Gol Nazyn",
+            "description": "A DARK Spellcaster archetype that utilizes the popular 'Exodia', 'Forbidden One' and its own 'Ruined One' cards to overwhelm the opponent by using the archetype's Xyz Monsters to fuel into each other and create an ultimate boss monster that is immune to various types of destruction.",
+            "tags": []
+        },
+        {
+            "name": "Supermega",
+            "deckIds": [7727566],
+            "cardIds": [],
+            "thumb": "2227168",
+            "author": "Knightmare",
+            "description": "An EARTH Fish archetype in a similar vein to Superheavy Samurai, being able to discard themselves to get different effects and banish themselves from the GY as fodder for the Ritual Summon of the archetype's Ritual Monsters.",
+            "tags": []
+        },
+        {
+            "name": "Conflagrant",
+            "deckIds": [7874062],
+            "cardIds": [],
+            "thumb": "2308250",
+            "author": "Novaksis",
+            "description": "A FIRE archetype that utilizes Chain Links to their advantage by putting certain effects on certain Chain Links to gain advantage.",
+            "tags": []
+        },
+        {
+            "name": "Medaka",
+            "deckIds": [7027111],
+            "cardIds": [],
+            "thumb": "2029132",
+            "author": "Ryck",
+            "description": "An archetype focused around its Link Monsters, with the Main Deck monsters being able to Special Summon themselves from the hand.",
+            "tags": []
+        },
+        {
+            "name": "Nordic Champion",
+            "deckIds": [8760406],
+            "cardIds": [],
+            "thumb": "2496850",
+            "author": "BDSceptyr",
+            "description": "A Warrior archetype that uses the Main Deck monsters in the hand as material for the Summon of their Synchro Monsters, allowing them to circumvent effects that would hamper them on the field, as well as banishing cards from the GY to unleash threats upon the opponent.",
+            "tags": []
+        },
+        {
+            "name": "Alarkite",
+            "deckIds": [9020851],
+            "cardIds": [],
+            "thumb": "2659722",
+            "author": "Justin",
+            "description": "A FIRE Winged Beast archetype that uses Pendulum Monsters to grind and burn, with the ability to go off if the situation calls for it.",
+            "tags": []
+        },
+        {
+            "name": "Nemesin",
+            "deckIds": [9079255],
+            "cardIds": [],
+            "thumb": "2677683",
+            "author": "Khreygond",
+            "description": "A rainbow Fiend archetype inspired by D/D/D's Dark Contract cards that has a primarily Trap control playstyle, but is also able to pivot to midrange or ramp as well.",
+            "tags": []
+        },
+        {
+            "name": "Vendedda",
+            "deckIds": [8954457],
+            "cardIds": [],
+            "thumb": "2638391",
+            "author": "Saffron",
+            "description": "A diverse archetype that focuses on controlling the top card of your GY.",
+            "tags": []
+        },
+        {
+            "name": "Dance of Swords",
+            "deckIds": [9016753],
+            "cardIds": [],
+            "thumb": "2638391",
+            "author": "AkeDragon",
+            "description": "A WATER Zombie archetype that focuses on Special Summoning from the hand and Synchro Summoning.",
             "tags": []
         }
     ]

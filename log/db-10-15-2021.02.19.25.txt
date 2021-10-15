@@ -1517,3 +1517,10 @@ You can only activate 1 “Zefrancestory” per turn.
 [main] note: [-] removed old card 2335193 (Fairy Tail - Ice)
 [main] note: [-] removed old card 2521786 (Fromagerie de Paris)
 [main] Time elapsed: 40.337229s
+[final] Completing scrape at 10-15-2021.02.41.02
+[main] Reading tmp/db-10-15-2021.02.19.25.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["2006768", "2006768", "2006776", "2006776", "2006783", "2006783", "519417", "1936097", "2010204", "2056075", "2056075", "2115648", "2115648", "2187069", "2250820", "2248229", "2411076", "2411076", "2445505", "2542315", "2542813", "2542809"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
