@@ -249,6 +249,10 @@ database = [
     9072263, #Mathmech Support
     9105198, #Dark Scorpion Support
     8405156, #LoD Support
+    9123660, #Earth Guard League Support
+    9223893, #Nimble Support
+    9233282, #Blue-Eyes Support
+    8982767, #V-to-Z Unions Support
     
     #--------------------------------------------------------------------#
     # Archetypes
