@@ -833,15 +833,6 @@
             "tags": ["combo", "pendulum", "xyz"]
         },
         {
-            "name": "Medaka",
-            "deckIds": [7027111],
-            "cardIds": [],
-            "thumb": "2029132",
-            "author": "Ryck",
-            "description": "In a similar vein to Tenyi, but with different Types and Attributes and a more anime-influenced style to it.",
-            "tags": ["stun", "grind", "gy", "link"]
-        },
-        {
             "name": "Halvoran",
             "deckIds": [7022155, 7464737],
             "cardIds": [],
