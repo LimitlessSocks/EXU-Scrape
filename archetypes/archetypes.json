@@ -265,14 +265,6 @@
             "description": "A Fusion-based Deck in a similar vein as Invoked."
         },
         {
-            "name": "Nermusa",
-            "deckIds": [6050332],
-            "cardIds": [],
-            "thumb": "1696645",
-            "author": "Panda",
-            "description": "Nermusa is a Control Fusion Deck that works by using the Essence Spells to Summon their own respective Fusion Monsters, but what you do also depends on the opponent's board."
-        },
-        {
             "name": "Yova",
             "deckIds": [5869257],
             "cardIds": [],
@@ -333,14 +325,6 @@
             "description": "Mirror Force made into an archetype! Each Main Deck monsters interact with their corresponding Mirror Force's inspired \" Attribute\", besides Infiltrator who supports all the Mirror Force Normal Traps. They also have a Battle Trap that Fusion Summons a Mirror Force Fusion Monster when your opponent declares an attack!"
         },
         {
-            "name": "Black Blood",
-            "deckIds": [6163866, 7647679],
-            "cardIds": [],
-            "thumb": "1469629",
-            "author": "Discount Light Yagami",
-            "description": "A Synchro Deck that Summons out big beefy monsters to establish board presence and beat your opponent up."
-        },
-        {
             "name": "Armamemento",
             "deckIds": [6267789],
             "cardIds": [],
@@ -390,14 +374,6 @@
             "author": "Mevs",
             "description": "A Dinosaur-type Deck with effects based on Nibiru, the Primal Being, and Spells/Traps that are benefited by either player Special Summoning from the hand. It has a heavy reliance on the opponent.",
             "tags": ["control", "gimmick", "support"]
-        },
-        {
-            "name": "Dark Kingdom",
-            "deckIds": [6405675],
-            "cardIds": [],
-            "thumb": "1823493",
-            "author": "Midi",
-            "description": "A Fairy mid-range Deck that can go into a Link, an Xyz and a Synchro with some cool power plays."
         },
         {
             "name": "Tagteamer",
@@ -925,15 +901,6 @@
             "description": "With light inspiration taken from Gusto and Mist Valley, Wavering Winds is a WIND-based Synchro combo strategy that utilizes their unique abilities to change control of WIND monsters on the field."
         },
         {
-            "name": "Metal XO",
-            "deckIds": [7123560],
-            "cardIds": [],
-            "thumb": "2056667",
-            "author": "AkeDragon",
-            "description": "An Insect Fusion Deck capable of switching between offense and defense quickly and able to adjust to any tempo.",
-            "tags": ["fusion", "control", "castle", "grind"]
-        },
-        {
             "name": "Malus",
             "deckIds": [6837403],
             "cardIds": [],
@@ -1251,15 +1218,6 @@
             "tags": []
         },
         {
-            "name": "Straw Hat",
-            "deckIds": [7586564],
-            "cardIds": [],
-            "thumb": "2211276",
-            "author": "KozukiOden",
-            "description": "An OTK archetype revolving around characters from the 'One Piece' franchise.",
-            "tags": ["theme", "otk"]
-        },
-        {
             "name": "Stormrider",
             "deckIds": [6123628],
             "cardIds": [],
@@ -1422,15 +1380,6 @@
             "tags": []
         },
         {
-            "name": "Innsmouth",
-            "deckIds": [7985036],
-            "cardIds": [],
-            "thumb": "2338399",
-            "author": "Armin",
-            "description": "A WATER and DARK Aqua control archetype inspired by the Cthulhu mythos that focuses on banishing cards your opponent controls, having a late game boss monster in the form of Old God Cthulhu and ending on destruction rather than negation.",
-            "tags": []
-        },
-        {
             "name": "Hotarugusa",
             "deckIds": [7937711],
             "cardIds": [],
@@ -1446,15 +1395,6 @@
             "thumb": "870624",
             "author": "Gatr",
             "description": "A LIGHT Pyro combo archetype with a twist - each monster has a mandatory effect to search \"Sparks\" when they are Summoned.",
-            "tags": []
-        },
-        {
-            "name": "Pluraid",
-            "deckIds": [7961741],
-            "cardIds": [],
-            "thumb": "2326746",
-            "author": "AkeDragon",
-            "description": "A WIND Winged Beast combo archetype that features Synchro and Xyz Monsters, being able to multiply Levels together instead of adding Levels together for Summons and monsters in the Spell & Trap Zone.",
             "tags": []
         },
         {
@@ -1509,15 +1449,6 @@
             "thumb": "1148834",
             "author": "C.C.",
             "description": "A FIRE Thunder Pendulum OTK archetype that revolves around adding monsters to your face-up Extra Deck, swarming the field during the Battle Phase and getting in for game.",
-            "tags": []
-        },
-        {
-            "name": "Intranger",
-            "deckIds": [7959099],
-            "cardIds": [],
-            "thumb": "2324803",
-            "author": "Mevs",
-            "description": "A LIGHT and FIRE Fusion and Union archetype revolving around 2 sets of Fusion Monsters with different unique effects.",
             "tags": []
         },
         {
@@ -1779,15 +1710,6 @@
             "thumb": "1831213",
             "author": "Gatr",
             "description": "A Trap-based archetype that mainly focuses on Attribute changing and having 6 generic Trap Cards that each interact with a monster of a specific Attribute.",
-            "tags": []
-        },
-        {
-            "name": "Tensura",
-            "deckIds": [8579730],
-            "cardIds": [],
-            "thumb": "2523171",
-            "author": "KozukiOden",
-            "description": "A Fusion and Synchro archetype focusing around the monster 'Tensura - Rimiru', using 2 Spells to bring out the counterparts of the Main Deck monsters.",
             "tags": []
         },
         {
