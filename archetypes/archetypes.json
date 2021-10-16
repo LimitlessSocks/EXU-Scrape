@@ -699,15 +699,6 @@
             "tags": ["first", "second", "control", "midrange", "otk", "grind", "ramp", "beatdown", "link", "gimmick"]
         },
         {
-            "name": "Bleakstory",
-            "deckIds": [6770598],
-            "cardIds": [],
-            "thumb": "1934158",
-            "author": "Ava",
-            "description": "A Link-based Deck that relies on Special Summoning and banishing face-down to get plays done.",
-            "tags": ["combo", "control", "otk", "grind", "burn", "banish", "gy", "link"]
-        },
-        {
             "name": "Pendant",
             "deckIds": [7140843],
             "cardIds": [],
