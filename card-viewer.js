@@ -1404,6 +1404,11 @@ CardViewer.composeResult = function (card) {
         importMarker.attr("src", BANLIST_ICONS.altArt);
     }
     
+    if(!card.custom && !card.tcg && card.ocg) {
+        importMarker.addClass("wide");
+        importMarker.attr("src", BANLIST_ICONS.ocg);
+    }
+    
     let limit = CardViewer.getLimitProperty();
     if(card[limit] !== 3) {
         banMarker.attr("src", BANLIST_ICONS[card[limit]]);
