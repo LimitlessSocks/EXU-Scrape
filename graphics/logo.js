@@ -8,12 +8,15 @@ const fetchImage = (url) => new Promise((resolve, reject) => {
     result.onload = function () {
         resolve(result);
     };
+    result.onerror = function (e) {
+        reject(e);
+    }
     result.crossOrigin = "anonymous";
     result.src = url;
 });
 
 const minSize = 30;
-const textCentered = (ctx, op, text, { font, x, y, width, height }) => {
+const textCentered = (ctx, op, text, { blur=30, font, x, y, width, height }) => {
     ctx.font = font.size + "px \"" + font.name + "\"";
     
     let maxWidth = width - 60; // padding
@@ -75,7 +78,7 @@ const textCentered = (ctx, op, text, { font, x, y, width, height }) => {
     ctx.textBaseline = "top";
     
     ctx.fillStyle = oldStrokeStyle;
-    ctx.filter = "blur(30px)";
+    ctx.filter = `blur(${blur}px)`;
     let tmy = my;
     for(let line of lines) {
         ctx.fillText(line, mx, tmy);
@@ -95,10 +98,82 @@ const textCentered = (ctx, op, text, { font, x, y, width, height }) => {
     ctx.strokeStyle = oldStrokeStyle;
 };
 
-const renderPreview = async (ctx, tag, main, side) => {
-    showStatus("Loading images...");
-    let mainImage = await fetchImage(main);
-    let sideImage = await fetchImage(side);
+const drawScaledFrom = (target, base) => {
+    target.drawImage(base.canvas, 0, 0, target.canvas.width, target.canvas.height);
+};
+
+const showStatus = (msg) => {
+    document.getElementById("status").textContent = msg;
+};
+
+const readTextFile = (file) => new Promise((resolve, reject) => {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+        resolve(e.target.result);
+    }
+
+    reader.readAsText(file);
+});
+
+const readImageFile = (file) => new Promise((resolve, reject) => {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+        let result = new Image();
+        result.onload = function () {
+            resolve(result);
+        }
+        result.onerror = reject;
+        result.src = e.target.result;
+    }
+
+    reader.readAsDataURL(file);
+});
+
+const parseMultiInput = (raw) =>
+    raw.split(/\r?\n/)
+       .map(e => JSON.parse(`[${e}]`));
+
+const saveZip = (zip, filename) => new Promise((resolve, reject) => {
+    zip.generateAsync({ type: "blob" }).then(blob => {
+        if (window.navigator.msSaveOrOpenBlob) // IE10+
+            window.navigator.msSaveOrOpenBlob(blob, filename);
+        else { // Others
+            var a = document.createElement("a"),
+                    url = URL.createObjectURL(blob);
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(() => {
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+                resolve();
+            }, 0);
+        }
+    });
+});
+
+const urlSource = (id) => {
+    let card = CardViewer.Database.cards[id];
+    card.src = card.src || "https://images.duelingbook.com/card-pics/" + id + ".jpg";
+    return card.src;
+};
+
+const renderArchSplashPreview = async (ctx, tag, main, side) => {
+    let mainImage, sideImage;
+    try {
+        showStatus("Loading images... (0/2)");
+        mainImage = await fetchImage(main);
+        showStatus("Loading images... (1/2)");
+        sideImage = await fetchImage(side);
+        showStatus("Loading images... (2/2)");
+    }
+    catch(e) {
+        showStatus("Error loading image " + (1 + !!sideImage + !!mainImage));
+        return;
+    }
     
     let ox = 40;
     let oy = 40;
@@ -131,27 +206,156 @@ const renderPreview = async (ctx, tag, main, side) => {
     showStatus("Done");
 };
 
-const drawScaledFrom = (target, base) => {
-    target.drawImage(base.canvas, 0, 0, target.canvas.width, target.canvas.height);
+const setDimensions = (ctx, sctx, width, height, scale) => {
+    ctx.canvas.width = width;
+    ctx.canvas.height = height;
+    
+    sctx.canvas.width = width * scale;
+    sctx.canvas.height = height * scale;
 };
 
-const showStatus = (msg) => {
-    document.getElementById("status").textContent = msg;
+const initShowcaseDisplay = (ctx, sctx) => {
+    const DEST_WIDTH = 1920;
+    const DEST_HEIGHT = 1080;
+    const DEST_SCALE = 0.5;
+    
+    const background = document.getElementById("showcase-background");
+    const card = document.getElementById("showcase-card");
+    const header = document.getElementById("showcase-header");
+    const content = document.getElementById("showcase-content");
+    
+    const cardBorderRegion = new Path2D();
+    cardBorderRegion.moveTo(50, 50);
+    cardBorderRegion.lineTo(50, 1030);
+    cardBorderRegion.lineTo(670, 955);
+    cardBorderRegion.lineTo(670, 125);
+    cardBorderRegion.lineTo(50, 50);
+    
+    document.getElementById("showcase-generate").addEventListener("click", async function () {
+        setDimensions(ctx, sctx, DEST_WIDTH, DEST_HEIGHT, DEST_SCALE);
+        
+        showStatus("Reading background image...");
+        let bg = await readImageFile(background.files[0]);
+        ctx.drawImage(bg, 0, 0, ctx.canvas.width, ctx.canvas.height);
+        
+        showStatus("Reading card image...");
+        let c = await readImageFile(card.files[0]);
+        
+        let fxCanvas = fx.canvas();
+        let texture = fxCanvas.texture(c);
+        fxCanvas
+            .draw(texture)
+            .perspective(
+                //before
+                [
+                    0, 0,
+                    616, 0,
+                    0, 906,
+                    616, 906,
+                ],
+                [
+                    10, 10,
+                    606, 10+69,
+                    10, 896,
+                    606, 896-69,
+                ],
+            )
+            .update();
+        
+        ctx.fillStyle = "white";
+        ctx.shadowColor = "black";
+        ctx.shadowBlur = 50;
+        ctx.fill(cardBorderRegion);
+        ctx.fill(cardBorderRegion);
+        ctx.shadowBlur = 0;
+        
+        ctx.drawImage(fxCanvas, 50, 50, 620, 980);
+        
+        ctx.fillStyle = "white";
+        ctx.strokeStyle = "black";
+        textCentered(ctx, "fill", header.value, {
+            blur: 10,
+            x: 670, y: 0,
+            width: 1250, height: 200,
+            font: {
+                size: 80,
+                name: "Press Start 2P"
+            }
+        });
+        textCentered(ctx, "fill", content.value, {
+            blur: 10,
+            x: 670, y: 100,
+            width: 1250, height: 880,
+            font: {
+                size: 100,
+                name: "Press Start 2P"
+            }
+        });
+        
+        drawScaledFrom(sctx, ctx);
+    });
 };
 
-const readTextFile = (file) => new Promise((resolve, reject) => {
-    var reader = new FileReader();
+const initArchDisplay = (ctx, sctx) => {
+    const DEST_WIDTH = 2120;
+    const DEST_HEIGHT = 1084;
+    const DEST_SCALE = 0.5;
+    
+    const mainId = document.getElementById("arch-main-id");
+    const sideId = document.getElementById("arch-side-id");
+    const tag = document.getElementById("arch-tag");
+    
+    const generateSingle = async (main, side, tag) => {
+        let mainSrc = urlSource(main);
+        let sideSrc = urlSource(side);
+        await renderArchSplashPreview(ctx, tag, mainSrc, sideSrc);
+        drawScaledFrom(sctx, ctx);
+    };
+    
+    document.getElementById("arch-generate").addEventListener("click", async () => {
+        setDimensions(ctx, sctx, DEST_WIDTH, DEST_HEIGHT, DEST_SCALE);
+        generateSingle(mainId.value, sideId.value, tag.value);
+    });
+    
+    const fileInput = document.getElementById("arch-file-input");
+    document.getElementById("arch-generate-file").addEventListener("click", async () => {
+        setDimensions(ctx, sctx, DEST_WIDTH, DEST_HEIGHT, DEST_SCALE);
+        let z = new JSZip();
+        
+        let rawText = await readTextFile(fileInput.files[0]);
+        
+        let entries = parseMultiInput(rawText);
+        
+        console.log(entries);
+        
+        for(let [tag, mid, sid] of entries) {
+            generateSingle(mid, sid, tag);
+            
+            let uri = canvas.toDataURL();
+            let idx = uri.indexOf("base64,") + "base64,".length;
+            showStatus("Adding to ZIP...");
+            z.file(tag + ".png", uri.substring(idx), { base64: true });
+        }
+        showStatus("Generating ZIP file... (This may take some time!)");
+        await saveZip(z, "previews.zip");
+        showStatus("Done");
+    });
+};
 
-    reader.onload = function (e) {
-        resolve(e.target.result);
+const updateVisibileMethodOptions = function() {
+    let val = this.value;
+    let sel = "if-" + val;
+    for(let el of document.querySelectorAll("[class^=if-]")) {
+        // console.log(el, sel, this, this.value);
+        if(el.classList.contains(sel)) {
+            // console.log('show');
+            el.style.display = "block";
+        }
+        else {
+            el.style.display = "none";
+        }
     }
-
-    reader.readAsText(file);
-});
-
-const parseMultiInput = (raw) =>
-    raw.split(/\r?\n/)
-       .map(e => JSON.parse(`[${e}]`));
+};
 
 window.addEventListener("load", async function () {
     CardViewer.excludeTcg = false;
@@ -170,75 +374,14 @@ window.addEventListener("load", async function () {
     
     drawScaledFrom(sctx, ctx);
     
-    const mainId = document.getElementById("main-id");
-    const sideId = document.getElementById("side-id");
-    const tag = document.getElementById("tag");
-    document.getElementById("generate").addEventListener("click", async () => {
-        let mainCard = CardViewer.Database.cards[mainId.value];
-        let sideCard = CardViewer.Database.cards[sideId.value];
-        await renderPreview(ctx, tag.value, mainCard.src, sideCard.src);
-        drawScaledFrom(sctx, ctx);
-    });
+    // methods
+    initArchDisplay(ctx, sctx);
+    initShowcaseDisplay(ctx, sctx);
     
-    const fileInput = document.getElementById("file-input");
-    document.getElementById("generate-file").addEventListener("click", async () => {
-        
-        let z = new JSZip();
-        
-        let rawText = await readTextFile(fileInput.files[0]);
-        
-        let entries = parseMultiInput(rawText);
-        
-        console.log(entries);
-        
-        // let entries = [
-            // ["VOLTRON",1182404,1182561],
-            // ["PANDA",1260802,2203721],
-            // ["ARIA FEY",1310876,1948661],
-            // ["STARSHIP",1365504,1364202],
-            // ["OF THE NORTH",1292502,1292516],
-            // ["HOLIFEAR",2124844,1137591],
-            // ["DIGITALLIAS",1898633,1898256],
-            // ["AKATSUKI",1451728,1451689],
-            // ["RULERS OF NAME",1388880,1389031],
-            // ["KUROSHIRO",1495512,1495570],
-            // ["GOO-T",1119567,1021405],
-        // ];
-        
-        // let promises = [];
-        for(let [tag, mid, sid] of entries) {
-            let mainCard = CardViewer.Database.cards[mid];
-            let sideCard = CardViewer.Database.cards[sid];
-            await renderPreview(ctx, tag, mainCard.src, sideCard.src);
-            drawScaledFrom(sctx, ctx);
-            let uri = canvas.toDataURL();
-            let idx = uri.indexOf("base64,") + "base64,".length;
-            showStatus("Adding to ZIP...");
-            z.file(tag + ".png", uri.substring(idx), { base64: true });
-        }
-        // await Promise.all(promises);
-        showStatus("Generating ZIP file... (This may take some time!)");
-        await saveZip(z, "previews.zip");
-        showStatus("Done");
-    });
+    const method = document.getElementById("method");
+    method.addEventListener("change", updateVisibileMethodOptions);
+    updateVisibileMethodOptions.bind(method)();
     
-    const saveZip = (zip, filename) => new Promise((resolve, reject) => {
-        zip.generateAsync({ type: "blob" }).then(blob => {
-            if (window.navigator.msSaveOrOpenBlob) // IE10+
-                window.navigator.msSaveOrOpenBlob(blob, filename);
-            else { // Others
-                var a = document.createElement("a"),
-                        url = URL.createObjectURL(blob);
-                a.href = url;
-                a.download = filename;
-                document.body.appendChild(a);
-                a.click();
-                setTimeout(() => {
-                    document.body.removeChild(a);
-                    window.URL.revokeObjectURL(url);
-                    resolve();
-                }, 0);
-            }
-        });
-    });
+    showStatus("Done initializing all functions");
+    document.getElementById("method-options").style.display = "block";
 });

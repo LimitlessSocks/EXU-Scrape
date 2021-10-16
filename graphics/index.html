@@ -9,6 +9,7 @@
 			  <!-- integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" -->
 			  <!-- crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.2.2/jszip.min.js"></script>
+    <script src="http://evanw.github.io/glfx.js/glfx.js"></script>
     <script src="./../card-viewer.js"></script>
     <script src="./logo.js"></script>
     <style>
@@ -19,24 +20,56 @@
         #scaled-output {
             
         }
+        select { 
+            width: auto;
+        }
+        #method-options {
+            padding: 15px;
+        }
+        #method-options {
+            display: none;
+        }
+        h1 {
+            font-family: "Press Start 2P";
+        }
     </style>
 </head>
 <body>
     <h1>Logo Generation</h1>
-    <div>
-        <label for="tag">Tagline: <input id="tag"></label>
-        <label for="main-id">Main ID: <input type="number" id="main-id"></label>
-        <label for="side-id">Side ID: <input type="number" id="side-id"></label>
-        <button id="generate">Generate</button>
-    </div>
-    <div>
-        <label for="file-input">Upload .txt file: <input id="file-input" type="file" accept=".txt"></label>
-        <button id="generate-file">Generate</button>
-    </div>
+    <label for="method">Method: </label><select id="method">
+        <option value=""></option>
+        <option value="arch">Archetype Display</option>
+        <option value="showcase">Card/Archetype Showcase</option>
+    </select>
     <div id="status"></div>
+    <div id="method-options">
+        <div class="if-arch">
+            <div>
+                <label for="arch-tag"><strong>Generate one: </strong>Tagline: <input id="arch-tag"></label>
+                <label for="arch-main-id">Main ID: <input type="number" id="arch-main-id"></label>
+                <label for="arch-side-id">Side ID: <input type="number" id="arch-side-id"></label>
+                <button id="arch-generate">Generate Single</button>
+            </div>
+            <div>
+                <label for="arch-file-input"><strong>Generate Multiple: </strong>Upload .txt file: <input id="arch-file-input" type="file" accept=".txt"></label>
+                <button id="arch-generate-file">Generate Multiple</button>
+            </div>
+        </div>
+        <div class="if-showcase">
+            <div>
+                <label for="showcase-background">Background (1920x1080): <input id="showcase-background" type="file" accept="image/*"></label>
+                <label for="showcase-card">Card image: <input id="showcase-card" type="file" accept="image/*"></label>
+            </div>
+            <div>
+                <label for="showcase-header">Header: <input id="showcase-header"></label>
+                <label for="showcase-content">Content: <input id="showcase-content"></label>
+                <button id="showcase-generate">Generate</button>
+            </div>
+        </div>
+    </div>
     <div>
-        <canvas id="scaled-output" width="1060" height="542">
-        <canvas id="raw-output" width="2120" height="1084">
+        <canvas id="scaled-output" width="50" height="50"></canvas>
+        <canvas id="raw-output" width="50" height="50"></canvas>
     </div>
 </body>
 </html>
