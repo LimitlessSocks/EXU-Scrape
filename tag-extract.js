@@ -153,6 +153,21 @@ const INDICATORS = [
     new TagIndicator(/custom/, (match) => ({
         visibility: "5",
     })),
+    new TagIndicator(/tcg\/?ocg/, (match) => ({
+        visibility: "6",
+    })),
+    new TagIndicator(/tcg/, (match) => ({
+        visibility: "3",
+    })),
+    new TagIndicator(/ocg/, (match) => ({
+        visibility: "4",
+    })),
+    new TagIndicator(/private/, (match) => ({
+        visibility: "2",
+    })),
+    new TagIndicator(/public/, (match) => ({
+        visibility: "1",
+    })),
     new TagIndicator(/fusion|xyz|synchro|link|pendulum|normal|effect|leveled|gemini|flip|spirit|tuner|toon|union/i, (match) => ({
         type: "monster",
         monsterCategory: match[0].toLowerCase(),
