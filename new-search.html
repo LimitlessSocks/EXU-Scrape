@@ -40,6 +40,16 @@
         .hidden {
             display: none;
         }
+        .vr {
+            margin: 0 10px;
+            user-select: none;
+            border: 1px solid;
+            width: 0px;
+        }
+        #container .navigation {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 3px;
+        }
     </style>
 </head>
 <body>
@@ -47,9 +57,8 @@
 
 <input id="search" class="large">
 <div id="container">
-    <div>
-        <span class="search-stats">Showing <span class="cards-showing">X</span> of <span class="cards-total">Y</span> result(s)</span>
-        <button id="expand" class="hidden">Expand all</button>
+    <div class="navigation">
+        <button id="save-link">Share Search</button><span class="vr"></span><span class="search-stats">Showing <span class="cards-showing">X</span> of <span class="cards-total">Y</span> result(s)</span><span class="vr"></span><button id="expand" class="hidden">Expand all</button>
     </div>
     
     <div id="output"></div>

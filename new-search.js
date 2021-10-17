@@ -80,7 +80,23 @@ let onLoad = async function () {
             changeInput();
         }
     });
+    
+    if(window.location.search) {
+        $("#search").val(
+            decodeURI(
+                window.location.search.replaceAll("%2C", ",")
+                                      .replaceAll("%2E", ".")
+            ).slice(3)
+        );
+    }
+
     changeInput();
+    
+    $("#save-link").click(() => {
+        window.location.search = encodeURI("?q=" + $("#search").val())
+            .replaceAll(".", "%2E")
+            .replaceAll(",", "%2C");
+    });
 };
 
 window.addEventListener("load", onLoad);
