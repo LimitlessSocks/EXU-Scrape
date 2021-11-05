@@ -253,6 +253,8 @@ database = [
     9223893, #Nimble Support
     9233282, #Blue-Eyes Support
     8982767, #V-to-Z Unions Support
+    9131225, #Anti-Goo Support
+    4825931, #Fishin' Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -571,6 +573,11 @@ database = [
     9079255, #Nemesin
     8954457, #Vendedda
     9016753, #Dance of Swords
+    8819779, #Aequalis
+    7074117, #Scrylak
+    9051430, #Deadly Waters
+    9109731, #Endless Sands
+    9022784, #Gala-XY
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
@@ -593,6 +600,7 @@ database = [
     8635701, #Generic Monsters XVI
     8658932, #Generic Monsters XVII
     8886344, #Generic Monsters XVIII
+    9389807, #Generic Monsters XIX
     6353430, #Generic Spells
     6419184, #Generic Spells II
     6871664, #Generic Spells III
