@@ -269,7 +269,7 @@ database = [
     # 4547335, #Titanus
     # 4570517, #Harbinger
     4910893, #Aria Fey
-    5075635, #Starships
+    # 5075635, #Starships
     # 5176216, #Antiqua
     # 4624534, #Harokai
     # 4442461, #Titanic Dragon
@@ -313,7 +313,7 @@ database = [
     5917260, #Koala
     # 2788655, #Ravager
     # 5824862, #Titanic Moth
-    5925194, #Yurei
+    # 5925194, #Yurei
     5868144, #Tsurumashi
     5781120, #Stars
     # 5619459, #ANIMA
@@ -363,7 +363,7 @@ database = [
     6537631, #Bucket Squad
     # 6547017, #World Reaper Support
     7553027, #Cosmic Primal
-    6395566, #Submerzan
+    # 6395566, #Submerzan
     # 6578295, #Crypt
     # 6585445, #PPDC
     6563112, #NTG
@@ -571,7 +571,7 @@ database = [
     8760406, #Nordic Champion
     9020851, #Alarkite
     9079255, #Nemesin
-    8954457, #Vendedda
+    # 8954457, #Vendedda
     9016753, #Dance of Swords
     8819779, #Aequalis
     7074117, #Scrylak
