@@ -32,6 +32,9 @@
         h1 {
             font-family: "Press Start 2P";
         }
+        #save-gen {
+            <!-- font-family: ""; -->
+        }
     </style>
 </head>
 <body>
@@ -40,7 +43,8 @@
         <option value=""></option>
         <option value="arch">Archetype Display</option>
         <option value="showcase">Card/Archetype Showcase</option>
-    </select>
+        <option value="ladder">Ladder Champion</option>
+    </select> <button id="save-gen">Save generated</button>
     <div id="status"></div>
     <div id="method-options">
         <div class="if-arch">
@@ -64,6 +68,17 @@
                 <label for="showcase-header">Header: <input id="showcase-header"></label>
                 <label for="showcase-content">Content: <input id="showcase-content"></label>
                 <button id="showcase-generate">Generate</button>
+            </div>
+        </div>
+        <div class="if-ladder">
+            <div>
+                <label for="ladder-main-id">Primary ID: <input type="number" id="ladder-main-id"></label>
+                <label for="ladder-side-id">Background ID: <input type="number" id="ladder-side-id"></label>
+            </div>
+            <div>
+                <label for="ladder-header">Header: <input id="ladder-header"></label>
+                <label for="ladder-content">Name: <input id="ladder-content"></label>
+                <button id="ladder-generate">Generate</button>
             </div>
         </div>
     </div>

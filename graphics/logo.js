@@ -16,12 +16,15 @@ const fetchImage = (url) => new Promise((resolve, reject) => {
 });
 
 const minSize = 30;
-const textCentered = (ctx, op, text, { blur=30, font, x, y, width, height }) => {
+const textCentered = (ctx, op, text, { blur=30, font, x, y, width, height, split=true }) => {
     ctx.font = font.size + "px \"" + font.name + "\"";
+    if(font.weight) {
+        ctx.font = font.weight + " " + ctx.font;
+    }
     
     let maxWidth = width - 60; // padding
     
-    let words = text.split(/\s+/);
+    let words = split ? text.split(/\s+/) : [text];
     let lines = [[]];
     let i = 0;
     while(i < words.length) {
@@ -43,9 +46,11 @@ const textCentered = (ctx, op, text, { blur=30, font, x, y, width, height }) => 
                     return textCentered(ctx, op, text, {
                         x: x, y: y,
                         width: width, height: height,
+                        split: split,
                         font: {
                             size: font.size - 10,
                             name: font.name,
+                            weight: font.weight,
                         }
                     });
                 }
@@ -60,6 +65,8 @@ const textCentered = (ctx, op, text, { blur=30, font, x, y, width, height }) => 
             i++;
         }
     }
+    
+    console.log("FONT:", ctx.font);
     
     lines = lines.map(line => line.join(" "));
     
@@ -212,6 +219,81 @@ const setDimensions = (ctx, sctx, width, height, scale) => {
     
     sctx.canvas.width = width * scale;
     sctx.canvas.height = height * scale;
+};
+
+const initLadderDisplay = (ctx, sctx) => {
+    const DEST_WIDTH = 1920;
+    const DEST_HEIGHT = 1080;
+    const DEST_SCALE = 0.5;
+    
+    const mainId = document.getElementById("ladder-main-id");
+    const sideId = document.getElementById("ladder-side-id");
+    const header = document.getElementById("ladder-header");
+    const content = document.getElementById("ladder-content");
+    
+    document.getElementById("ladder-generate").addEventListener("click", async function () {
+        setDimensions(ctx, sctx, DEST_WIDTH, DEST_HEIGHT, DEST_SCALE);
+        
+        let mainSrc = urlSource(mainId.value);
+        let sideSrc = urlSource(sideId.value);
+        let mainImage, sideImage;
+        try {
+            showStatus("Loading images... (0/2)");
+            mainImage = await fetchImage(mainSrc);
+            showStatus("Loading images... (1/2)");
+            sideImage = await fetchImage(sideSrc);
+            showStatus("Loading images... (2/2)");
+        }
+        catch(e) {
+            showStatus("Error loading image " + (1 + !!sideImage + !!mainImage));
+            console.error(e);
+            return;
+        }
+        
+        showStatus("Drawing images...");
+        ctx.drawImage(sideImage, 0, -400, 1920, 1920);
+        ctx.filter = "blur(40px) contrast(200%)";
+        ctx.drawImage(sideImage, 0, -400, 1920, 1920);
+        ctx.filter = "blur(60px) contrast(200%)";
+        ctx.drawImage(sideImage, 0, -400, 1920, 1920);
+        
+        ctx.filter = "drop-shadow(0px 0px 55px black)";
+        ctx.strokeStyle = "white";
+        ctx.lineWidth = 5;
+        ctx.drawImage(mainImage, 50, 50, 980, 980);
+        ctx.filter = "none";
+        ctx.strokeRect(50, 50, 980, 980);
+        
+        showStatus("Drawing text...");
+        
+        ctx.fillStyle = "white";
+        ctx.strokeStyle = "black";
+        textCentered(ctx, "fill", header.value, {
+            blur: 5,
+            x: 1030, y: 50,
+            width: 900, height: 100,
+            split: false,
+            font: {
+                size: 78,
+                name: "Open Sans",
+                weight: "bold",
+            }
+        });
+        ctx.fillStyle = "yellow";
+        textCentered(ctx, "fill", content.value, {
+            blur: 10,
+            x: 1030, y: 160,
+            width: 900, height: 750,
+            font: {
+                size: 160,
+                name: "Open Sans",
+                weight: "bold",
+            }
+        });
+        
+        drawScaledFrom(sctx, ctx);
+        showStatus("Done.");
+    });
 };
 
 const initShowcaseDisplay = (ctx, sctx) => {
@@ -377,10 +459,15 @@ window.addEventListener("load", async function () {
     // methods
     initArchDisplay(ctx, sctx);
     initShowcaseDisplay(ctx, sctx);
+    initLadderDisplay(ctx, sctx);
     
     const method = document.getElementById("method");
     method.addEventListener("change", updateVisibileMethodOptions);
     updateVisibileMethodOptions.bind(method)();
+    
+    document.getElementById("save-gen").addEventListener("click", function () {
+        window.open(ctx.canvas.toDataURL(), "_blank");
+    });
     
     showStatus("Done initializing all functions");
     document.getElementById("method-options").style.display = "block";
