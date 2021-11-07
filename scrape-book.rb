@@ -14,7 +14,10 @@ end
 
 # make a proper database instead of an array
 
-data = data.map { |o| [o["id"], o] }.to_h
+data = data
+    .map { |o| [o["id"], o] }
+    .reject { |id, obj| obj["type"] == "Proxy" }
+    .to_h
 
 File.write("ycg.json", data.to_json)
 STDERR.puts "Done, wrote #{data.size} entries."

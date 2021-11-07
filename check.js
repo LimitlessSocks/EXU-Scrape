@@ -25,7 +25,12 @@ const verifyXMLList = (raw) => {
             if(banlist[idValue]) {
                 limit = banlist[idValue].exu_limit;
             }
-            else {
+            else if(pool[idValue]) {
+                limit = pool[idValue].exu_limit;
+            }
+            // assume at 3
+            if(typeof limit === "undefined") {
+                console.log(`Assuming ${card.textContent} is at 3`);
                 limit = 3;
             }
             let word = countToLimit(limit);

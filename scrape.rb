@@ -676,6 +676,7 @@ sff = [
     8055759
 ]
 
+format = "exu"
 
 EXU_BANNED      = { "exu_limit" => 0 }
 EXU_LIMITED     = { "exu_limit" => 1 }
@@ -727,6 +728,7 @@ elsif operation == "beta"
 elsif operation == "sff"
     decks = sff
     outname = "sff"
+    format = "sff"
 else
     decks = test
     outname = "test"
@@ -826,6 +828,10 @@ results.each.with_index(1) { |(deck_id, cards), i|
         if card["type"] == "Proxy"
             next
         end
+        
+        # cards are at 3 by default
+        card["#{format}_limit"] ||= 3
+        
         # p date_added
         id = card["id"].to_s
         unless info.nil?
