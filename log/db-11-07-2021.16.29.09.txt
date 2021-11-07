@@ -1488,3 +1488,10 @@ Must first be Special Summoned (from your Extra Deck) by sending the above mater
 [main] note: [-] removed old card 1614328 (Yokai? Ryokai!)
 [main] note: [-] removed old card 1473158 (Scattershot Sniper)
 [main] Time elapsed: 22.652812s
+[final] Completing scrape at 11-07-2021.16.35.11
+[main] Reading tmp/db-11-07-2021.16.29.09.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1852348", "2369193", "1640568", "2592578", "2659192", "2527501", "2527682", "2528392", "2527521", "2528339", "2657798", "2527657", "2529732", "2678818", "2678818", "2527501", "2527828"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
