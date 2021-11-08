@@ -21,6 +21,9 @@ const verifyXMLList = (raw) => {
         if(isCustom && !pool[idValue]) {
             reason = "Non-existent custom card";
         }
+        else if(pool[idValue] && pool[idValue].ocg && !pool[idValue].tcg) {
+            reason = "OCG card";
+        }
         else {
             if(banlist[idValue]) {
                 limit = banlist[idValue].exu_limit;
@@ -116,9 +119,15 @@ const getList = async (name) => {
     return db;
 };
 
+let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
+// baseURL = "./";
+window.ycgDatabase = baseURL + "ycg.json";
+window.exuDatabase = baseURL + "db.json";
 window.addEventListener("load", async function () {
     window.banlist = await getList("banlist");
-    window.pool = await getList("db");
+    // window.pool = await getList("db");
+    await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
+    window.pool = CardViewer.Database.cards;
     
     const messageHolder = $("#message-holder");
     const deckInput = $("#deck-input");
