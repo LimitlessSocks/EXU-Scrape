@@ -1,6 +1,22 @@
 let DEBUG = false;
 const debug = (...args) => DEBUG && console.log(...args);
 
+class Memory {
+    constructor() {
+        this.reset();
+    }
+    
+    reset() {
+        this.lastParameter = null;
+        this.lastValue = null;
+        this.used = false;
+    }
+    
+    use() {
+        return this.used = true;
+    }
+}
+
 class TagIndicator {
     constructor(reg, fn) {
         this.toMatch = reg;
@@ -9,6 +25,10 @@ class TagIndicator {
             value: false,
             parameter: false,
         };
+    }
+    
+    isRemembering() {
+        return this.remember.value || this.remember.parameter;
     }
     
     matches(string, index, memory=null) {
@@ -141,14 +161,20 @@ const INDICATORS = [
         type: "monster",
         level: match[1],
     })).rememberParameter(),
+    new TagIndicator(/(?:by|author)[ =]+(\w+|"([^"]+)")/i, (match) => ({
+        author: match[2] || match[1],
+    })).rememberParameter(),
     new TagIndicator(/(\d+)[\s=]*(atk|def)|(atk|def)[\s=]*(\d+)/i, (match) => ({
         type: "monster",
         [(match[2] || match[3]).toLowerCase()]: match[1] || match[4],
     })).rememberAll(),
-    new TagIndicator(/atk|def/i, (match, memory) => (memory.lastValue && {
+    new TagIndicator(/atk|def/i, (match, memory) => (memory.lastValue && memory.use() && {
         type: "monster",
         [match[0].toLowerCase()]: memory.lastValue.atk || memory.lastValue.def
     })),
+    new TagIndicator(/id[\s=]+(\d+)/, (match) => ({
+        id: match[1],
+    })).rememberParameter(),
     //TODO: relative comparisons
     new TagIndicator(/custom/, (match) => ({
         visibility: "5",
@@ -218,9 +244,21 @@ const INDICATORS = [
     new TagIndicator(/\(/, () => LEFT_PARENTHESIS),
     new TagIndicator(/\)/, () => RIGHT_PARENTHESIS),
     
-    new TagIndicator(/\d+/, (match, memory) => Object.assign({}, memory.lastParameter, {
-        level: match[0],
-    })),
+    new TagIndicator(/(\w+)|"([^"]+)"/, (match, memory) => {
+        if(!memory.lastParameter) {
+            return IGNORE_ENTRY;
+        }
+        let toSet = match[2] || match[1];
+        let param = Object.keys(memory.lastParameter).pop();
+        if((param === "atk" || param === "def") && !/^\d+/.test(toSet)) {
+            // console.log("IGNORING", toSet);
+            return IGNORE_ENTRY;
+        }
+        memory.use();
+        let res = Object.assign({}, memory.lastParameter);
+        res[param] = toSet;
+        return res;
+    }),
 ];
 
 class TagExtractor {
@@ -228,10 +266,25 @@ class TagExtractor {
         this.input = input;
         this.index = 0;
         this.output = [];
-        this.memory = {
-            lastParameter: null,
-            lastValue: null,
-        };
+        this.memory = new Memory();
+        
+        this.debugStatements = [];
+    }
+    
+    * getDebug() {
+        yield* this.debugStatements;
+    }
+    
+    debugInternal(...args) {
+        this.debugStatements.push(args);
+    }
+    
+    resetMemory() {
+        this.memory.reset();
+    }
+    
+    static isTerminator(entry) {
+        return typeof entry !== "symbol";
     }
     
     step() {
@@ -248,10 +301,27 @@ class TagExtractor {
                     else {
                         this.output.push(result);
                     }
+                    this.debugInternal(result);
+                    this.debugInternal(this.output.slice());
+                    
+                    // TODO: figure out if this really is working now
+                    let isRemembering = ind.isRemembering();
+                    isRemembering = isRemembering || this.memory.used;
+                    let isTerminator = TagExtractor.isTerminator(this.output.at(-1));
+                    if(!isRemembering && isTerminator) {
+                        this.debugInternal("RESETTING AT", this.output.at(-1), "and", Object.assign({}, this.memory));
+                        this.resetMemory();
+                    }
+                    else {
+                        // memory must be actively used
+                        this.memory.used = false;
+                    }
                 }
+                
                 return;
             }
         }
+        // no case
         this.index++;
     }
     
@@ -271,8 +341,6 @@ const naturalInputToQuery = (input) => {
     let te = new TagExtractor(input);
     return te.parse();
 };
-
-
 
 const OPERATOR_PRECEDENCE = {
     [OPERATOR_INLINE_OR]:   10,
@@ -375,6 +443,7 @@ const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
 
 if(typeof process !== "undefined") {
     module.exports = {
+        TagExtractor: TagExtractor,
         naturalInputToQuery: naturalInputToQuery,
         OPERATOR_MAJOR_OR: OPERATOR_MAJOR_OR,
         OPERATOR_INLINE_OR: OPERATOR_INLINE_OR,

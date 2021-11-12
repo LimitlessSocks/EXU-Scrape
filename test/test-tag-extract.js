@@ -1,5 +1,5 @@
 const {
-    naturalInputToQuery,
+    naturalInputToQuery, TagExtractor,
     OPERATOR_INLINE_OR, OPERATOR_MAJOR_OR, OPERATOR_NOT,
     LEFT_PARENTHESIS, RIGHT_PARENTHESIS
 } = require("./../tag-extract.js");
@@ -216,6 +216,75 @@ const TEST_CASES = [
         { type: "trap" },
         RIGHT_PARENTHESIS
     ]],
+    ["by sock", [
+        { author: "sock" },
+    ]],
+    ["author=sock", [
+        { author: "sock" },
+    ]],
+    ["by \"Yummy Socks\"", [
+        { author: "Yummy Socks" },
+    ]],
+    ["by \"Yummy Socks\" or Khreygond", [
+        { author: "Yummy Socks" },
+        OPERATOR_INLINE_OR,
+        { author: "Khreygond" },
+    ]],
+    ["atk 1300 or 1400", [
+        { type: "monster", atk: "1300" },
+        OPERATOR_INLINE_OR,
+        { type: "monster", atk: "1400" },
+    ]],
+    ["atk 1300 khreygond", [
+        { type: "monster", atk: "1300" },
+    ]],
+    ["id 2067145", [
+        { id: "2067145" },
+    ]],
+    ["id=1", [
+        { id: "1" },
+    ]],
+    ["atk=1300", [
+        { type: "monster", atk: "1300", atkCompare: "equal" },
+    ]],
+    ["atk>1300", [
+        { type: "monster", atk: "1300", atkCompare: "greater" },
+    ]],
+    ["atk >= 500", [
+        { type: "monster", atk: "500", atkCompare: "greaterequal" },
+    ]],
+    ["atk<= 4000", [
+        { type: "monster", atk: "4000", atkCompare: "lessequal" },
+    ]],
+    ["atk <2000", [
+        { type: "monster", atk: "2000", atkCompare: "less" },
+    ]],
+    ["atk=1400 or 1600", [
+        { type: "monster", atk: "1400", atkCompare: "equal" },
+        OPERATOR_INLINE_OR,
+        { type: "monster", atk: "1600", atkCompare: "equal" },
+    ]],
+    ["def != 0", [
+        { type: "monster", def: "0", defCompare: "unequal" },
+    ]],
+    ["def < 1000", [
+        { type: "monster", def: "1000", defCompare: "less" },
+    ]],
+    ["level<=4", [
+        { type: "monster", level: "4", levelCompare: "lessequal" },
+    ]],
+    ["lv > 6", [
+        { type: "monster", level: "6", levelCompare: "greater" },
+    ]],
+    ["lv /= 1", [
+        { type: "monster", level: "1", levelCompare: "unequal" },
+    ]],
+    ["by     Sock", [
+        { author: "Sock" },
+    ]],
+    ["level        12", [
+        { type: "monster", level: "12" },
+    ]],
 ];
 const objectEqual = (a, b) => {
     if(a == b) return true;
@@ -233,7 +302,9 @@ const objectEqual = (a, b) => {
 let total = TEST_CASES.length;
 let passed = 0;
 TEST_CASES.forEach(([input, output], i) => {
-    let result = naturalInputToQuery(input);
+    // let result = naturalInputToQuery(input);
+    let extract = new TagExtractor(input);
+    let result = extract.parse();
     if(objectEqual(result, output)) {
         passed++;
     }
@@ -248,6 +319,12 @@ TEST_CASES.forEach(([input, output], i) => {
         console.log("Received:");
         console.group();
         console.dir(result);
+        console.groupEnd();
+        console.log("Debug:");
+        console.group();
+        for(let msg of extract.getDebug()) {
+            console.log("OWO:",...msg);
+        }
         console.groupEnd();
         console.groupEnd();
         console.log();
