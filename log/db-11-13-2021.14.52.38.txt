@@ -1650,3 +1650,10 @@ Once per turn, before resolving the effect of an opponent's monster with 0 ATK w
 [9471210] Finished scraping.
 [main] note: [-] removed old card 2713169 (Ojamask Change)
 [main] Time elapsed: 51.153645s
+[final] Completing scrape at 11-13-2021.15.45.07
+[main] Reading tmp/db-11-13-2021.14.52.38.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["406392", "417900", "1102959", "870558", "870551", "2185865", "870624", "2185821", "2185821", "1596710", "1200960", "1845305", "1845305", "1623170", "1623151", "1731724", "2050916", "1037312", "2189486", "2189486", "2190966", "2190966", "2190966", "2190966", "2190966", "2190966", "2229823", "2397587", "2397821", "2399859", "2053471", "2451780", "2453156", "2603817", "2603925"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).

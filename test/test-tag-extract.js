@@ -1,6 +1,6 @@
 const {
     naturalInputToQuery, TagExtractor,
-    OPERATOR_INLINE_OR, OPERATOR_MAJOR_OR, OPERATOR_NOT,
+    OPERATOR_INLINE_OR, OPERATOR_INLINE_AND, OPERATOR_MAJOR_OR, OPERATOR_NOT,
     LEFT_PARENTHESIS, RIGHT_PARENTHESIS
 } = require("./../tag-extract.js");
 
@@ -278,6 +278,21 @@ const TEST_CASES = [
     ]],
     ["lv /= 1", [
         { type: "monster", level: "1", levelCompare: "unequal" },
+    ]],
+    ["level != 1 and 2", [
+        { type: "monster", level: "1", levelCompare: "unequal" },
+        OPERATOR_INLINE_AND,
+        { type: "monster", level: "2", levelCompare: "unequal" },
+    ]],
+    ["atk <= 2000 and >= 1000", [
+        { type: "monster", atk: "2000", levelCompare: "lessequal" },
+        OPERATOR_INLINE_AND,
+        { type: "monster", atk: "1000", levelCompare: "greaterequal" },
+    ]],
+    ["atk <= 2000 and def >= 1000", [
+        { type: "monster", atk: "2000", levelCompare: "lessequal" },
+        OPERATOR_INLINE_AND,
+        { type: "monster", def: "1000", levelCompare: "greaterequal" },
     ]],
     ["by     Sock", [
         { author: "Sock" },

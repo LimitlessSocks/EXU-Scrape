@@ -510,7 +510,7 @@ database = [
     7816634, #Dusk Brigade
     # 7985036, #Innsmouth
     7937711, #Hotarugusa
-    3890554, #Fireworks Girl
+    # 3890554, #Fireworks Girl
     # 7961741, #Pluraid
     7519530, #Armourizer Series: Fleurcrux
     7997640, #Unbeing
