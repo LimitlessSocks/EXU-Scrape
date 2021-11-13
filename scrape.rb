@@ -255,6 +255,11 @@ database = [
     8982767, #V-to-Z Unions Support
     9131225, #Anti-Goo Support
     4825931, #Fishin' Support
+    7585957, #Knights of Face Support
+    9471210, #Hermos Support
+    9386456, #Endless Sands Support
+    9286017, #Cheezbeast Support
+    9391180, #Dark Magician Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -578,6 +583,10 @@ database = [
     9051430, #Deadly Waters
     9109731, #Endless Sands
     9022784, #Gala-XY
+    8177538, #Tempestal Ascended
+    9108451, #Frorb
+    9163949, #Xöryne
+    2942421, #Antrap
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
