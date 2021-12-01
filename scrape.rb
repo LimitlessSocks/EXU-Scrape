@@ -260,6 +260,8 @@ database = [
     9386456, #Endless Sands Support
     9286017, #Cheezbeast Support
     9391180, #Dark Magician Support
+    9484452, #Gimmick Puppet Support
+    8345249, #Fossilrai Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -531,7 +533,7 @@ database = [
     8170513, #Jolsprit
     8152211, #Bolt Arc
     8105715, #Spacial Demon
-    8055913, #Flutterbleu
+    # 8055913, #Flutterbleu
     6086340, #Zeniphyr
     # 3705612, #Azure Reaper
     # 8013380, #Cykoton
@@ -587,6 +589,9 @@ database = [
     9108451, #Frorb
     9163949, #Xöryne
     2942421, #Antrap
+    7528627, #Red-White
+    5269100, #Orb Matchician
+    9433755, #Azathean
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
@@ -610,6 +615,7 @@ database = [
     8658932, #Generic Monsters XVII
     8886344, #Generic Monsters XVIII
     9389807, #Generic Monsters XIX
+    9607806, #Generic Monsters XX
     6353430, #Generic Spells
     6419184, #Generic Spells II
     6871664, #Generic Spells III
