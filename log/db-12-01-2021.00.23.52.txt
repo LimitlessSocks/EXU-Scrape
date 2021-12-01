@@ -1868,3 +1868,10 @@ Must first be Special Summoned (from your Extra Deck) by banishing the above car
 [main] note: [-] removed old card 2454974 (Fossilrai Shogun Yutyranobu)
 [main] note: [-] removed old card 2455341 (Fossilrai Daimyo Brachedo)
 [main] Time elapsed: 51.615274s
+[final] Completing scrape at 12-01-2021.17.14.03
+[main] Reading tmp/db-12-01-2021.00.23.52.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["79412", "865149", "1565479", "1138", "8575", "2384969", "1908852", "1884551", "2447086", "1889466", "1884551", "2029154", "2344585", "2074011", "2056080", "2096711", "2094554", "2196038", "2196038", "2195970", "1649669", "1649662", "1649630", "1649642", "2204099", "2705015", "2447086", "2417751", "1884551", "2262317", "2474471", "2279948", "2268280", "2268160", "2353291", "1943875", "1884551", "2451780", "2074011", "2477313", "2458394", "2581805", "2385442", "2553865", "2621539", "2621539", "2575665", "2597929", "2624749", "2268160", "734661", "734661"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).

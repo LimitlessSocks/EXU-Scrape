@@ -544,6 +544,7 @@ database = [
     8269957, #Mind Macabre
     8352501, #Chirurgeon
     6516859, #E^rabastel
+    9608031, #Fossilrai
     8345249, #Fossilrai
     8475666, #DragoThief
     8312789, #Staysailor
