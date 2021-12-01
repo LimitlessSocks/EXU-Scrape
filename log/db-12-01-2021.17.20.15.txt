@@ -1495,3 +1495,10 @@ Once per turn, you can activate 1 “Psycircuit” Trap the turn it is Set by ba
 [9608031] note: [+] added new card 2454974 (Fossilrai Shogun Yutyranobu)
 [9608031] Finished scraping.
 [main] Time elapsed: 25.700986s
+[final] Completing scrape at 12-01-2021.17.40.35
+[main] Reading tmp/db-12-01-2021.17.20.15.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["2195970", "2196034", "2196034", "2776198", "2776198"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
