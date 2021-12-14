@@ -1648,3 +1648,10 @@ You can only use this effect of "Savage Bullet Dragon" once per turn.
 [main] note: [-] removed old card 2796439 (Gimmick Puppet Dread Dead Blader)
 [main] note: [-] removed old card 2796441 (Gimmick Puppet Opera Marionette)
 [main] Time elapsed: 23.044022s
+[final] Completing scrape at 12-14-2021.12.26.47
+[main] Reading tmp/db-12-14-2021.12.12.06.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["7765", "7765", "7765", "1372872", "1372884", "1372900", "1667267", "2268182", "1358152", "1805829", "1807498", "2256056", "2256054", "2256053", "1873911", "4368", "2068461", "2186977", "2197535", "2211850", "2195970", "2776198", "2271330", "2307797", "1807498", "2685441", "2380500", "2704025", "2742232", "2789400", "2824275"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
