@@ -7,7 +7,7 @@ Resolutions to test:
 */
 
 html {
-    background-image: url("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/res/bg/background.jpg");
+    background-image: url("./res/bg/background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
