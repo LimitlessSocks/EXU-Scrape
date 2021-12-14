@@ -45,7 +45,7 @@ end
 
 index = File.read($INDEX_START_PATH, :encoding => "utf-8")
 
-archetype_data = JSON::parse File.read($CONFIG_PATH)
+archetype_data = JSON::parse File.read($CONFIG_PATH, :encoding => "utf-8")
 res = ""
 
 indent = " " * 8
