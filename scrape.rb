@@ -846,9 +846,6 @@ results.each.with_index(1) { |(deck_id, cards), i|
             next
         end
         
-        # cards are at 3 by default
-        card["#{format}_limit"] ||= 3
-        
         # p date_added
         id = card["id"].to_s
         unless info.nil?
@@ -923,6 +920,12 @@ results.each.with_index(1) { |(deck_id, cards), i|
     log deck_id, "Finished scraping."
 }
 
+log "main", "filling in missing #{format}_limit"
+database.keys.each { |id|
+    # cards are at 3 by default
+    database[id]["#{format}_limit"] ||= 3
+}
+
 removed_ids = []
 
 old_database.each { |id, card|
@@ -949,7 +952,7 @@ if note == "temp"
     puts "Complete scrape with:"
     puts "  finalize-scrape.rb \"#{now_time_ident}\""
 else
-    interact_phase(old_database, database, changed_ids, removed_ids)
+    exit 1 unless interact_phase(old_database, database, changed_ids, removed_ids)
     puts "Press ENTER to confirm database entry."
     STDIN.gets
     File.write "#{outname}.json", database.to_json

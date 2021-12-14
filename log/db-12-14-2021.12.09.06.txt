@@ -1,7 +1,0 @@
-[main] Created log file log/db-12-14-2021.12.09.06.txt
-[main] Reading db.json
-[main] Reading db-date-added.json
-[main] Started scraping
-[main] Making ID requests
-[main] Finalizing ID requests
-[main] Waiting for results

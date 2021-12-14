@@ -216,10 +216,11 @@ def interact_phase(old_database, database, changed_ids, removed_ids)
         begin
             STDIN.gets
         rescue Interrupt => e
-            break
+            return false
         end
     end
     }
+    true
 end
 
 if __FILE__ == $0
