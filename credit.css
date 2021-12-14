@@ -1,3 +1,5 @@
 table {
     border-spacing: 10px;
+    background: rgba(0,0,0,0.5);
+    padding: 15px;
 }
