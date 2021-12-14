@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q3RKXFLZRZ');
+    </script>
+    <title>EXU Card</title>
+    <meta charset="UTF-8">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script src="./card-viewer.js"></script>
+    <script>
+        let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
+        // baseURL = "./";
+        window.ycgDatabase = baseURL + "ycg.json";
+        window.exuDatabase = baseURL + "db.json";
+        let match = location.search.match(/\d+/);
+        let id;
+        if(match) {
+            id = match[0];
+            const title = document.getElementsByTagName("title")[0];
+            title.textContent += " - " + id;
+        }
+        window.addEventListener("load", async function () {
+            CardViewer.excludeTcg = false;
+            CardViewer.showImported = true;
+            await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
+            let card = CardViewer.Database.cards[id];
+            let res = CardViewer.composeResult(card);
+            console.log(res);
+            $("#output").append(res);
+        });
+    </script>
+    <link rel="STYLESHEET" href="./card-viewer.css">
+    <style>
+        #output {
+            display: flex;
+            width: 100%;
+            font-size: 26px;
+        }
+        p {
+            line-height: 40px;
+        }
+        .img-result {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+        }
+        .cardicon {
+            width: 50px;
+            height: 50px;
+        }
+        #output .result {
+            width: 100%;
+        }
+        h1.title {
+            font-size: 30px;
+            margin: 0;
+            padding: 0;
+        }
+        .effect-text {
+            max-height: 480px;
+            overflow-y: auto;
+        }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3RKXFLZRZ"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1>
+    <div id="output"></div>
+</body>
+</html>
