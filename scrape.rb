@@ -262,6 +262,7 @@ database = [
     9391180, #Dark Magician Support
     9484452, #Gimmick Puppet Support
     8345249, #Fossilrai Support
+    9573052, #Pyrabbit Support
     
     #--------------------------------------------------------------------#
     # Archetypes
