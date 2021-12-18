@@ -152,6 +152,13 @@ const INDICATORS = [
             level: match[2],
         }
     )).rememberParameter(),
+    new TagIndicator(/spell\s*\/\s*trap|trap\s*\/\s*spell/i, (match) => 
+        wrapParens([
+            { type: "spell" },
+            OPERATOR_INLINE_OR,
+            { type: "trap" }
+        ])
+    ),
     new TagIndicator(/rank\s*(\d+)/i, (match) => ({
         type: "monster",
         monsterCategory: "xyz",
@@ -172,27 +179,31 @@ const INDICATORS = [
         type: "monster",
         [match[0].toLowerCase()]: memory.lastValue.atk || memory.lastValue.def
     })),
-    new TagIndicator(/id[\s=]+(\d+)/, (match) => ({
+    new TagIndicator(/id[\s=]+(\d+)/i, (match) => ({
         id: match[1],
     })).rememberParameter(),
     //TODO: relative comparisons
-    new TagIndicator(/custom/, (match) => ({
+    new TagIndicator(/custom/i, (match) => ({
         visibility: "5",
     })),
-    new TagIndicator(/tcg\/?ocg/, (match) => ({
+    new TagIndicator(/tcg\/?ocg/i, (match) => ({
         visibility: "6",
     })),
-    new TagIndicator(/tcg/, (match) => ({
+    new TagIndicator(/tcg/i, (match) => ({
         visibility: "3",
     })),
-    new TagIndicator(/ocg/, (match) => ({
+    new TagIndicator(/ocg/i, (match) => ({
         visibility: "4",
     })),
-    new TagIndicator(/private/, (match) => ({
+    new TagIndicator(/private/i, (match) => ({
         visibility: "2",
     })),
-    new TagIndicator(/public/, (match) => ({
+    new TagIndicator(/public/i, (match) => ({
         visibility: "1",
+    })),
+    new TagIndicator(/normal\s*(spell|trap)/i, (match) => ({
+        type: (match[2] || "any").toLowerCase(),
+        kind: getProperSpellTrapType(match[1]),
     })),
     new TagIndicator(/fusion|xyz|synchro|link|pendulum|normal|effect|leveled|gemini|flip|spirit|tuner|toon|union/i, (match) => ({
         type: "monster",
@@ -353,10 +364,9 @@ const OPERATOR_PRECEDENCE = {
 const isOperator = (token) => {
     return typeof OPERATOR_PRECEDENCE[token] !== "undefined";
 };
-const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
-    console.log(queryList);
+
+const shunt = function* (queryList, createFilter=CardViewer.createFilter) {
     let operatorStack = [];
-    let outputQueue = [];
     let lastToken = null;    
     let lastWasData = false;
     for(let token of queryList) {
@@ -370,7 +380,7 @@ const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
                 while(operatorStack.length) {
                     let top = operatorStack[operatorStack.length - 1];
                     if(top !== LEFT_PARENTHESIS && OPERATOR_PRECEDENCE[top] > precedence) {
-                        outputQueue.push(operatorStack.pop());
+                        yield operatorStack.pop();
                     }
                     else {
                         break;
@@ -387,7 +397,7 @@ const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
             while(operatorStack.length) {
                 let top = operatorStack.pop();
                 if(top !== LEFT_PARENTHESIS) {
-                    outputQueue.push(top);
+                    yield top;
                 }
                 else {
                     break;
@@ -399,14 +409,14 @@ const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
             if(lastWasData) {
                 // flush operators; implicit and
                 while(operatorStack.length) {
-                    outputQueue.push(operatorStack.pop());
+                    yield operatorStack.pop();
                 }
             }
             if(typeof token === "object") {
-                outputQueue.push(createFilter(token));
+                yield createFilter(token);
             }
             else {
-                outputQueue.push(token);
+                yield token;
             }
             thisIsData = true;
         }
@@ -414,10 +424,12 @@ const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
         lastToken = token;
     }
     while(operatorStack.length) {
-        outputQueue.push(operatorStack.pop());
+        yield operatorStack.pop();
     }
-    console.log(window.outputQueue=outputQueue);
-    
+};
+
+const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
+    let outputQueue = shunt(queryList, createFilter);
     // evaluate expression
     let evalStack = [];
     for(let token of outputQueue) {
@@ -447,6 +459,7 @@ if(typeof process !== "undefined") {
         naturalInputToQuery: naturalInputToQuery,
         OPERATOR_MAJOR_OR: OPERATOR_MAJOR_OR,
         OPERATOR_INLINE_OR: OPERATOR_INLINE_OR,
+        OPERATOR_INLINE_AND: OPERATOR_INLINE_AND,
         OPERATOR_NOT: OPERATOR_NOT,
         LEFT_PARENTHESIS: LEFT_PARENTHESIS,
         RIGHT_PARENTHESIS: RIGHT_PARENTHESIS,

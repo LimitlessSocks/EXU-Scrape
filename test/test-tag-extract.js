@@ -4,6 +4,8 @@ const {
     LEFT_PARENTHESIS, RIGHT_PARENTHESIS
 } = require("./../tag-extract.js");
 
+let DEBUG = false;
+
 // [input, output]
 const TEST_CASES = [
     ["link 2", [{
@@ -300,6 +302,37 @@ const TEST_CASES = [
     ["level        12", [
         { type: "monster", level: "12" },
     ]],
+    ["[warrior] not monster not [beast-warrior]", [
+        { effect: "warrior" },
+        OPERATOR_NOT,
+        { type: "monster" },
+        OPERATOR_NOT,
+        { effect: "beast-warrior" },
+    ]],
+    ["(FIRE Beast) or (FIRE Pyro)", [
+        LEFT_PARENTHESIS,
+        { type: "monster", monsterAttribute: "FIRE" },
+        { type: "monster", monsterType: "Beast" },
+        RIGHT_PARENTHESIS,
+        OPERATOR_INLINE_OR,
+        LEFT_PARENTHESIS,
+        { type: "monster", monsterAttribute: "FIRE" },
+        { type: "monster", monsterType: "Pyro" },
+        RIGHT_PARENTHESIS,
+    ]],
+    ["spell/trap", [
+        LEFT_PARENTHESIS,
+        { type: "spell" },
+        OPERATOR_INLINE_OR,
+        { type: "trap" },
+        RIGHT_PARENTHESIS,
+    ]],
+    ["not custom not quick-play", [
+        OPERATOR_NOT,
+        { visibility: "5" },
+        OPERATOR_NOT,
+        { type: "any", kind: "Quick-Play" }
+    ]],
 ];
 const objectEqual = (a, b) => {
     if(a == b) return true;
@@ -313,41 +346,48 @@ const objectEqual = (a, b) => {
     return a == b;
 };
 
-
-let total = TEST_CASES.length;
-let passed = 0;
-TEST_CASES.forEach(([input, output], i) => {
-    // let result = naturalInputToQuery(input);
-    let extract = new TagExtractor(input);
-    let result = extract.parse();
-    if(objectEqual(result, output)) {
-        passed++;
+module.exports = function testTagExtract() {
+    let total = TEST_CASES.length;
+    let passed = 0;
+    TEST_CASES.forEach(([input, output], i) => {
+        // let result = naturalInputToQuery(input);
+        let extract = new TagExtractor(input);
+        let result = extract.parse();
+        if(objectEqual(result, output)) {
+            passed++;
+        }
+        else {
+            console.log(`(${i + 1}/${total}) Test case failed:`);
+            console.group();
+            console.dir(input);
+            console.log("Expected:");
+            console.group();
+            console.dir(output);
+            console.groupEnd();
+            console.log("Received:");
+            console.group();
+            console.dir(result);
+            console.groupEnd();
+            if(DEBUG) {
+                console.log("Debug:");
+                console.group();
+                for(let msg of extract.getDebug()) {
+                    console.log("OWO:",...msg);
+                }
+                console.groupEnd();
+            }
+            console.groupEnd();
+            console.log();
+        }
+    });
+    if(passed === total) {
+        console.log("All test cases passed!");
     }
     else {
-        console.log(`(${i + 1}/${total}) Test case failed:`);
-        console.group();
-        console.dir(input);
-        console.log("Expected:");
-        console.group();
-        console.dir(output);
-        console.groupEnd();
-        console.log("Received:");
-        console.group();
-        console.dir(result);
-        console.groupEnd();
-        console.log("Debug:");
-        console.group();
-        for(let msg of extract.getDebug()) {
-            console.log("OWO:",...msg);
-        }
-        console.groupEnd();
-        console.groupEnd();
-        console.log();
+        console.log(`Test case(s) failed: ${total - passed} of ${total} (${Math.floor(passed / total * 10000) / 100}% passed)`);
     }
-});
-if(passed === total) {
-    console.log("All test cases passed!");
-}
-else {
-    console.log(`Test case(s) failed: ${total - passed} of ${total} (${Math.floor(passed / total * 10000) / 100}% passed)`);
+    return {
+        passed: passed,
+        total: total,
+    };
 }
