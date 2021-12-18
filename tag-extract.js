@@ -202,8 +202,8 @@ const INDICATORS = [
         visibility: "1",
     })),
     new TagIndicator(/normal\s*(spell|trap)/i, (match) => ({
-        type: (match[2] || "any").toLowerCase(),
-        kind: getProperSpellTrapType(match[1]),
+        type: match[1].toLowerCase(),
+        kind: "Normal",
     })),
     new TagIndicator(/fusion|xyz|synchro|link|pendulum|normal|effect|leveled|gemini|flip|spirit|tuner|toon|union/i, (match) => ({
         type: "monster",
@@ -361,6 +361,7 @@ const OPERATOR_PRECEDENCE = {
     [OPERATOR_MAJOR_AND]:   50,
     [OPERATOR_NOT]:         1000,
 };
+const UNARY_OPERATORS = new Set([OPERATOR_NOT]);
 const isOperator = (token) => {
     return typeof OPERATOR_PRECEDENCE[token] !== "undefined";
 };
@@ -374,12 +375,21 @@ const shunt = function* (queryList, createFilter=CardViewer.createFilter) {
         if(isOperator(token)) {
             let precedence = OPERATOR_PRECEDENCE[token];
             let isUnary = false;
-            isUnary = lastToken === null || lastToken === LEFT_PARENTHESIS || isOperator(lastToken);
+            // isUnary = lastToken === null || lastToken === LEFT_PARENTHESIS || isOperator(lastToken);
+            isUnary = UNARY_OPERATORS.has(token);
             
-            if(!isUnary) {
+            if(isUnary) {
+                if(lastWasData) {
+                    // new expression; flush stack
+                    while(operatorStack.length) {
+                        yield operatorStack.shift();
+                    }
+                }
+            }
+            else {
                 while(operatorStack.length) {
                     let top = operatorStack[operatorStack.length - 1];
-                    if(top !== LEFT_PARENTHESIS && OPERATOR_PRECEDENCE[top] > precedence) {
+                    if(top !== LEFT_PARENTHESIS && OPERATOR_PRECEDENCE[top] >= precedence) {
                         yield operatorStack.pop();
                     }
                     else {
@@ -463,5 +473,6 @@ if(typeof process !== "undefined") {
         OPERATOR_NOT: OPERATOR_NOT,
         LEFT_PARENTHESIS: LEFT_PARENTHESIS,
         RIGHT_PARENTHESIS: RIGHT_PARENTHESIS,
+        shunt: shunt,
     };
 }

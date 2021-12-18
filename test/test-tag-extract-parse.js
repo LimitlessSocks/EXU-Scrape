@@ -3,8 +3,7 @@ const {
     OPERATOR_INLINE_OR, OPERATOR_INLINE_AND, OPERATOR_MAJOR_OR, OPERATOR_NOT,
     LEFT_PARENTHESIS, RIGHT_PARENTHESIS
 } = require("./../tag-extract.js");
-
-let DEBUG = false;
+const { objectEqual } = require("./lib.js");
 
 // [input, output]
 const TEST_CASES = [
@@ -327,6 +326,9 @@ const TEST_CASES = [
         { type: "trap" },
         RIGHT_PARENTHESIS,
     ]],
+    ["normal spell", [
+        { type: "spell", kind: "Normal" },
+    ]],
     ["not custom not quick-play", [
         OPERATOR_NOT,
         { visibility: "5" },
@@ -334,19 +336,8 @@ const TEST_CASES = [
         { type: "any", kind: "Quick-Play" }
     ]],
 ];
-const objectEqual = (a, b) => {
-    if(a == b) return true;
-    if(Array.isArray(a) && Array.isArray(b)) {
-        return a.length == b.length && a.every((e, i) => objectEqual(e, b[i]));
-    }
-    if(a == null || b == null) return a == b;
-    if(typeof a == "object" && typeof b == "object") {
-        return Object.entries(a).every(([k, v]) => objectEqual(v, b[k])) && Object.keys(b).every(k => k in a);
-    }
-    return a == b;
-};
 
-module.exports = function testTagExtract() {
+module.exports = function testTagExtractParse(debug = false) {
     let total = TEST_CASES.length;
     let passed = 0;
     TEST_CASES.forEach(([input, output], i) => {
@@ -368,7 +359,7 @@ module.exports = function testTagExtract() {
             console.group();
             console.dir(result);
             console.groupEnd();
-            if(DEBUG) {
+            if(debug) {
                 console.log("Debug:");
                 console.group();
                 for(let msg of extract.getDebug()) {
@@ -390,4 +381,8 @@ module.exports = function testTagExtract() {
         passed: passed,
         total: total,
     };
+};
+
+if(require.main === module) {
+    module.exports();
 }
