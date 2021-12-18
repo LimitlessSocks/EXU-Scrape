@@ -1,0 +1,22 @@
+{
+  "name": "exu-scrape",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LimitlessSocks/EXU-Scrape.git"
+  },
+  "author": "Sock",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LimitlessSocks/EXU-Scrape/issues"
+  },
+  "homepage": "https://github.com/LimitlessSocks/EXU-Scrape#readme"
+}
