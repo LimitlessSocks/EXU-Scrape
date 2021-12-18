@@ -168,7 +168,7 @@ const INDICATORS = [
         type: "monster",
         level: match[1],
     })).rememberParameter(),
-    new TagIndicator(/(?:by|author)[ =]+(\w+|"([^"]+)")/i, (match) => ({
+    new TagIndicator(/(?:by|author)[ =]+([\w.]+|"([^"]+)")/i, (match) => ({
         author: match[2] || match[1],
     })).rememberParameter(),
     new TagIndicator(/(\d+)[\s=]*(atk|def)|(atk|def)[\s=]*(\d+)/i, (match) => ({

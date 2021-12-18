@@ -26,6 +26,6 @@ fs.readdir(__dirname)
                  console.groupEnd();
              });
         console.log("-------------------------------------");
-        console.log(`Over failed: ${totalTotal - totalPassed} of ${totalTotal} (${Math.floor(totalPassed / totalTotal * 10000) / 100}% passed)`);
+        console.log(`Overall failed: ${totalTotal - totalPassed} of ${totalTotal} (${Math.floor(totalPassed / totalTotal * 10000) / 100}% passed)`);
     })
     .catch(console.error);

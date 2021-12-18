@@ -335,6 +335,14 @@ const TEST_CASES = [
         OPERATOR_NOT,
         { type: "any", kind: "Quick-Play" }
     ]],
+    ["normal spell (by T.A.P or by poketot)", [
+        { type: "spell", kind: "Normal" },
+        LEFT_PARENTHESIS,
+        { author: "T.A.P" },
+        OPERATOR_INLINE_OR,
+        { author: "poketot" },
+        RIGHT_PARENTHESIS,
+    ]],
 ];
 
 module.exports = function testTagExtractParse(debug = false) {
