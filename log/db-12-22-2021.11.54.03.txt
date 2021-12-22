@@ -1696,3 +1696,13 @@ If this card is Special Summoned: You can negate the effects of 1 face-up Monste
 [9608031] Finished scraping.
 [main] filling in missing exu_limit
 [main] Time elapsed: 26.003295s
+[final] Completing scrape at 12-22-2021.12.25.19
+[main] Reading tmp/db-12-22-2021.11.54.03.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1169453", "1168817", "2269263", "1862633", "1759280", "2177202", "1862633", "1739784", "1689043", "2091593", "2091388", "2091325", "2091409", "2091371", "2091519", "2094614", "2092003", "2092003", "2092003", "2092003", "2094554", "2144304", "1984092", "2190081", "2195286", "2366531", "2366531", "2285139", "2393814", "2516062", "2603826", "2687328", "2699243", "2699240", "2699240", "2789400", "2689955", "2824262", "2824265", "2700630"]
+[interact] Keypress: "p"
+[interact] Found cards with ids ["2824233", "2824237", "2824226", "2824228", "2824240", "2824242", "2824246", "2824255", "2824251", "2824258", "2824262", "2824259", "2824272", "2824265", "2824275"].
+[interact] Replacing ids with old version: ["2824233", "2824237", "2824226", "2824228", "2824240", "2824242", "2824246", "2824255", "2824251", "2824258", "2824262", "2824259", "2824272", "2824265", "2824275"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
