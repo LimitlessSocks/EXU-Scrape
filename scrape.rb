@@ -263,6 +263,7 @@ database = [
     9484452, #Gimmick Puppet Support
     8345249, #Fossilrai Support
     9573052, #Pyrabbit Support
+    9467404, #Naturia Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -594,10 +595,14 @@ database = [
     7528627, #Red-White
     5269100, #Orb Matchician
     9433755, #Azathean
+    9417588, #Empyrodraco
+    9347499, #Yurei
+    9469722, #Geídst
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
-] + [
+]
+generics = [
     6353294, #Generic Monsters I
     6353380, #Generic Monsters II
     6353400, #Generic Monsters III
@@ -638,6 +643,7 @@ database = [
 ] + [
     6532506, #Alt Arts I
 ]
+database += generics
 
 support = [
     # assorted tcg support links
@@ -912,6 +918,11 @@ results.each.with_index(1) { |(deck_id, cards), i|
                 end
                 database[id]["submission_source"] << deck_id
             else
+                src = database[id]["submission_source"]
+                if generics.include? src
+                    deck_id ||= src
+                    src = nil
+                end
                 database[id]["submission_source"] ||= deck_id
             end
         end
