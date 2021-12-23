@@ -8,6 +8,7 @@ const countToLimit = (n) => [
 const verifyXMLList = (raw) => {
     let parser = new DOMParser();
     let doc = parser.parseFromString(raw, "text/xml");
+    window.doc = doc;
     let cards = doc.getElementsByTagName("card");
     
     let invalidEntries = {};
@@ -104,7 +105,8 @@ const verifyXMLList = (raw) => {
         }
     }
     
-    let name = doc.getElementsByTagName("deck")[0].attributes.name.value;
+    // let name = doc.getElementsByTagName("deck")[0].attributes.name.value;
+    let name = doc.getElementsByTagName("deck")[0].attributes[0].value;
     messages.unshift({
         report: "Result for checking deck " + name,
         type: "header",
