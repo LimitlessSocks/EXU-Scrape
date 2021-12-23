@@ -382,7 +382,7 @@ const shunt = function* (queryList, createFilter=CardViewer.createFilter) {
                 if(lastWasData) {
                     // new expression; flush stack
                     while(operatorStack.length) {
-                        yield operatorStack.shift();
+                        yield operatorStack.pop();
                     }
                 }
             }
@@ -443,6 +443,7 @@ const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
     // evaluate expression
     let evalStack = [];
     for(let token of outputQueue) {
+        console.log("Token:", token);
         if(token === OPERATOR_INLINE_OR) {
             let [ a, b ] = evalStack.splice(-2);
             evalStack.push((card) => a(card) || b(card));
@@ -460,6 +461,7 @@ const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
         }
     }
     
+    console.log("Evalstack:", evalStack);
     return (card) => evalStack.every(fn => fn(card));
 };
 

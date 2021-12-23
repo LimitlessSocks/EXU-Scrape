@@ -343,6 +343,11 @@ const TEST_CASES = [
         { author: "poketot" },
         RIGHT_PARENTHESIS,
     ]],
+    ["link-3 or lower", []],
+    ["link-3 or higher", []],
+    ["level 4 or higher", []],
+    ["level 4 or lower", []],
+    ["rank 10 or higher", []],
 ];
 
 module.exports = function testTagExtractParse(debug = false) {
@@ -380,7 +385,7 @@ module.exports = function testTagExtractParse(debug = false) {
         }
     });
     if(passed === total) {
-        console.log("All test cases passed!");
+        console.log(`All ${total} test case(s) passed!`);
     }
     else {
         console.log(`Test case(s) failed: ${total - passed} of ${total} (${Math.floor(passed / total * 10000) / 100}% passed)`);

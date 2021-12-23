@@ -46,6 +46,56 @@ const TEST_CASES = [
         { type: "monster", level: "7" },
         OPERATOR_INLINE_OR,
     ]],
+    ["xyz [using 1] and not [transfer] and not custom", [
+        { type: "monster", monsterCategory: "xyz" },
+        { effect: "using 1" },
+        { effect: "transfer" },
+        OPERATOR_NOT,
+        OPERATOR_INLINE_AND,
+        { visibility: "5" },
+        OPERATOR_NOT,
+        OPERATOR_INLINE_AND,
+    ]],
+    ["xyz [using 1] not [transfer] not custom", [
+        { type: "monster", monsterCategory: "xyz" },
+        { effect: "using 1" },
+        { effect: "transfer" },
+        OPERATOR_NOT,
+        { visibility: "5" },
+        OPERATOR_NOT,
+    ]],
+    ["xyz [using 1] and not [transfer] not custom", [
+        { type: "monster", monsterCategory: "xyz" },
+        { effect: "using 1" },
+        { effect: "transfer" },
+        OPERATOR_NOT,
+        OPERATOR_INLINE_AND,
+        { visibility: "5" },
+        OPERATOR_NOT,
+    ]],
+    ["level 1 main deck and not 500 def", [
+        { type: "monster", level: "1" },
+        { type: "monster", monsterCategory: "maindeck" },
+        { type: "monster", def: "500" },
+        OPERATOR_NOT,
+        OPERATOR_INLINE_AND,
+    ]],
+    ["level 1 and not 500 def or 300 atk", [
+        { type: "monster", level: "1" },
+        { type: "monster", def: "500" },
+        OPERATOR_NOT,
+        OPERATOR_INLINE_AND,
+        { type: "monster", atk: "300" },
+        OPERATOR_INLINE_OR,
+    ]],
+    ["300 atk or level 1 and not 500 def", [
+        { type: "monster", atk: "300" },
+        { type: "monster", level: "1" },
+        { type: "monster", def: "500" },
+        OPERATOR_NOT,
+        OPERATOR_INLINE_AND,
+        OPERATOR_INLINE_OR,
+    ]],
 ];
 
 module.exports = function testTagExtractShunt(debug = false) {
@@ -75,7 +125,7 @@ module.exports = function testTagExtractShunt(debug = false) {
         }
     });
     if(passed === total) {
-        console.log("All test cases passed!");
+        console.log(`All ${total} test case(s) passed!`);
     }
     else {
         console.log(`Test case(s) failed: ${total - passed} of ${total} (${Math.floor(passed / total * 10000) / 100}% passed)`);
