@@ -49,6 +49,7 @@ const TEST_CASES = [
     ["xyz [using 1] and not [transfer] and not custom", [
         { type: "monster", monsterCategory: "xyz" },
         { effect: "using 1" },
+        OPERATOR_INLINE_AND,
         { effect: "transfer" },
         OPERATOR_NOT,
         OPERATOR_INLINE_AND,
@@ -59,6 +60,7 @@ const TEST_CASES = [
     ["xyz [using 1] not [transfer] not custom", [
         { type: "monster", monsterCategory: "xyz" },
         { effect: "using 1" },
+        OPERATOR_INLINE_AND,
         { effect: "transfer" },
         OPERATOR_NOT,
         { visibility: "5" },
@@ -67,6 +69,7 @@ const TEST_CASES = [
     ["xyz [using 1] and not [transfer] not custom", [
         { type: "monster", monsterCategory: "xyz" },
         { effect: "using 1" },
+        OPERATOR_INLINE_AND,
         { effect: "transfer" },
         OPERATOR_NOT,
         OPERATOR_INLINE_AND,
@@ -76,6 +79,7 @@ const TEST_CASES = [
     ["level 1 main deck and not 500 def", [
         { type: "monster", level: "1" },
         { type: "monster", monsterCategory: "maindeck" },
+        OPERATOR_INLINE_AND,
         { type: "monster", def: "500" },
         OPERATOR_NOT,
         OPERATOR_INLINE_AND,
@@ -96,12 +100,22 @@ const TEST_CASES = [
         OPERATOR_INLINE_AND,
         OPERATOR_INLINE_OR,
     ]],
+    ["(level 2 rock) or (level 3 pyro)", [
+        { type: "monster", level: "2" },
+        { type: "monster", monsterType: "Rock" },
+        OPERATOR_INLINE_AND,
+        { type: "monster", level: "3" },
+        { type: "monster", monsterType: "Pyro" },
+        OPERATOR_INLINE_AND,
+        OPERATOR_INLINE_OR,
+    ]],
 ];
 
 module.exports = function testTagExtractShunt(debug = false) {
     let total = TEST_CASES.length;
     let passed = 0;
     TEST_CASES.forEach(([input, output], i) => {
+        i++;
         // let result = naturalInputToQuery(input);
         let extract = new TagExtractor(input);
         let result = [...shunt(extract.parse(), x => x)];
@@ -109,7 +123,7 @@ module.exports = function testTagExtractShunt(debug = false) {
             passed++;
         }
         else {
-            console.log(`(${i + 1}/${total}) Test case failed:`);
+            console.log(`(${i}/${total}) Test case failed:`);
             console.group();
             console.dir(input);
             console.log("Expected:");

@@ -348,6 +348,26 @@ const TEST_CASES = [
     ["level 4 or higher", []],
     ["level 4 or lower", []],
     ["rank 10 or higher", []],
+    ["(level 2 rock) or (level 3 pyro)", [
+        LEFT_PARENTHESIS,
+        { type: "monster", level: "2" },
+        { type: "monster", monsterType: "Rock" },
+        RIGHT_PARENTHESIS,
+        OPERATOR_INLINE_OR,
+        LEFT_PARENTHESIS,
+        { type: "monster", level: "3" },
+        { type: "monster", monsterType: "Pyro" },
+        RIGHT_PARENTHESIS
+    ]],
+    ["@@x@@", [
+        { customExpression: "x" }
+    ]],
+    ["@x.def = x.atk@", [
+        { customExpression: "x.def = x.atk" }
+    ]],
+    ["@@@ @@ @@@", [
+        { customExpression: " @@ " }
+    ]],
 ];
 
 module.exports = function testTagExtractParse(debug = false) {

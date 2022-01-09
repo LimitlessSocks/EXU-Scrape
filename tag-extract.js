@@ -136,6 +136,9 @@ const TRANSLATE_TABLE = {
 };
 
 const INDICATORS = [
+    new TagIndicator(/(@+)(.+?)\1/, (match) => ({
+        customExpression: match[2],
+    })),
     new TagIndicator(/\s+/, () => IGNORE_ENTRY),
     new TagIndicator(/\|\|/, () => OPERATOR_MAJOR_OR),
     new TagIndicator(/or/i, () => OPERATOR_INLINE_OR),
@@ -370,7 +373,13 @@ const shunt = function* (queryList, createFilter=CardViewer.createFilter) {
     let operatorStack = [];
     let lastToken = null;    
     let lastWasData = false;
+    // let outputCounts = [];
     for(let token of queryList) {
+        // console.log({
+            // token: token,
+            // opstack: operatorStack,
+            // lastWasData: lastWasData,
+        // });
         let thisIsData = false;
         if(isOperator(token)) {
             let precedence = OPERATOR_PRECEDENCE[token];
@@ -382,13 +391,18 @@ const shunt = function* (queryList, createFilter=CardViewer.createFilter) {
                 if(lastWasData) {
                     // new expression; flush stack
                     while(operatorStack.length) {
-                        yield operatorStack.pop();
+                        if(operatorStack.at(-1) !== LEFT_PARENTHESIS) {
+                            yield operatorStack.pop();
+                        }
+                        else {
+                            break;
+                        }
                     }
                 }
             }
             else {
                 while(operatorStack.length) {
-                    let top = operatorStack[operatorStack.length - 1];
+                    let top = operatorStack.at(-1);
                     if(top !== LEFT_PARENTHESIS && OPERATOR_PRECEDENCE[top] >= precedence) {
                         yield operatorStack.pop();
                     }
@@ -399,9 +413,11 @@ const shunt = function* (queryList, createFilter=CardViewer.createFilter) {
             }
             
             operatorStack.push(token);
+            // outputCounts.push(outputCounts.pop() - 1);//TODO: check if this works
         }
         else if(token === LEFT_PARENTHESIS) {
             operatorStack.push(token);
+            // outputCounts.push(0);
         }
         else if(token === RIGHT_PARENTHESIS) {
             while(operatorStack.length) {
@@ -414,12 +430,25 @@ const shunt = function* (queryList, createFilter=CardViewer.createFilter) {
                 }
                 //TODO:(optional) implement functions here
             }
+            
+            /*
+            let counts = outputCounts.pop();
+            let andCount = counts - 1;
+            while(andCount --> 0) {
+                yield OPERATOR_INLINE_AND;
+            }
+            */
         }
         else {
             if(lastWasData) {
                 // flush operators; implicit and
                 while(operatorStack.length) {
-                    yield operatorStack.pop();
+                    if(operatorStack.at(-1) !== LEFT_PARENTHESIS) {
+                        yield operatorStack.pop();
+                    }
+                    else {
+                        break;
+                    }
                 }
             }
             if(typeof token === "object") {
@@ -429,6 +458,12 @@ const shunt = function* (queryList, createFilter=CardViewer.createFilter) {
                 yield token;
             }
             thisIsData = true;
+            
+            //TODO: this might fuck with `lastWasData` interactions
+            if(lastWasData) {
+                yield OPERATOR_INLINE_AND;
+            }
+            // outputCounts.push(outputCounts.pop() + 1);//TODO: check if this works
         }
         lastWasData = thisIsData;
         lastToken = token;
