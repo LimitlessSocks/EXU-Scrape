@@ -1005,11 +1005,12 @@ CardViewer.createFilter = function (query, exclude = null) {
             filters.push((card) => {
                 if(!card.flowoCache) {
                     card.flowoCache = {
-                        card_type: card.card_type
+                        card_type: card.card_type,
                     };
                     if(card.card_type === "Monster") {
                         card.flowoCache.atk = parseInt(card.atk);
                         card.flowoCache.def = parseInt(card.def);
+                        card.flowoCache.level = card.level;
                     }
                 }
                 let result = Flowo.exec(
