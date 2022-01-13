@@ -999,6 +999,31 @@ CardViewer.createFilter = function (query, exclude = null) {
         filters.push((card) => card.def != "?" && !CardViewer.Filters.isLink(card));
     }
     
+    if(query.customExpression) {
+        if(typeof Flowo !== "undefined" && Flowo) {
+            // let variables = Object.assign({}, card);
+            filters.push((card) => {
+                if(!card.flowoCache) {
+                    card.flowoCache = {
+                        card_type: card.card_type
+                    };
+                    if(card.card_type === "Monster") {
+                        card.flowoCache.atk = parseInt(card.atk);
+                        card.flowoCache.def = parseInt(card.def);
+                    }
+                }
+                let result = Flowo.exec(
+                    query.customExpression,
+                    { variables: card.flowoCache }
+                )
+                return result;
+            });
+        }
+        else {
+            console.error("Flowo is not enabled here");
+        }
+    }
+    
     // console.log(filters);
     if(window.DEBUG) {
         return (card) => filters.map(f => [f, f(card)]);

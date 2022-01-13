@@ -1,5 +1,6 @@
 let DEBUG = false;
 const debug = (...args) => DEBUG && console.log(...args);
+let isNode = typeof process !== "undefined";
 
 class Memory {
     constructor() {
@@ -245,7 +246,7 @@ const INDICATORS = [
     new TagIndicator(/spell|trap|monster/i, (match) => ({
         type: match[0].toLowerCase()
     })),
-    new TagIndicator(/(continuous|quick-play|equip|normal|counter|field)\s*(spell|trap)?/i, (match) => ({
+    new TagIndicator(/(continuous|quick[- ]*play|equip|normal|counter|field)\s*(spell|trap)?/i, (match) => ({
         type: (match[2] || "any").toLowerCase(),
         kind: getProperSpellTrapType(match[1]),
     })),
@@ -478,7 +479,7 @@ const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
     // evaluate expression
     let evalStack = [];
     for(let token of outputQueue) {
-        console.log("Token:", token);
+        // console.log("Token:", token);
         if(token === OPERATOR_INLINE_OR) {
             let [ a, b ] = evalStack.splice(-2);
             evalStack.push((card) => a(card) || b(card));
@@ -496,11 +497,11 @@ const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
         }
     }
     
-    console.log("Evalstack:", evalStack);
+    // console.log("Evalstack:", evalStack);
     return (card) => evalStack.every(fn => fn(card));
 };
 
-if(typeof process !== "undefined") {
+if(isNode) {
     module.exports = {
         TagExtractor: TagExtractor,
         naturalInputToQuery: naturalInputToQuery,
