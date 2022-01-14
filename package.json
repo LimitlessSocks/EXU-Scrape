@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/LimitlessSocks/EXU-Scrape/issues"
   },
-  "homepage": "https://github.com/LimitlessSocks/EXU-Scrape#readme"
+  "homepage": "https://github.com/LimitlessSocks/EXU-Scrape#readme",
+  "dependencies": {
+    "flowo": "^1.0.0"
+  }
 }
