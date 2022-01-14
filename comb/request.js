@@ -9,17 +9,23 @@
         Order: [], // the order in which to return the results
         Missed: [],
         Complete: false, // we are still waiting for responses
+        RatioComplete: 0, // debug response
+        LastImpulse: new Date().valueOf(),
+        DebugImpulseCount: 0,
+        TIME_BETWEEN_IMPULSES: 5000, // 5 seconds
         Reading: true, // user is still writing
         // methods
         Load(deck_id) {
-            // copied & modified from loadDeck
-            this.Order.push(deck_id);
-            
-            // initialize
-            this.Responses[deck_id] = {
-                sent: false,
-                fulfilled: false,
-            }; 
+            if(!this.Responses[deck_id]) {
+                // copied & modified from loadDeck
+                this.Order.push(deck_id);
+                
+                // initialize
+                this.Responses[deck_id] = {
+                    sent: false,
+                    fulfilled: false,
+                };
+            }
             
             var fd = new FormData();
             fd.append("id", deck_id);
@@ -58,7 +64,7 @@
             this.Responses[id].fulfilled = true;
             this.Responses[id].body = text;
         },
-        AddMiss(id) {
+        AddMiss(id, response) {
             this.Missed.push({
                 id: id,
                 response: response
@@ -66,8 +72,10 @@
         },
         CheckAllDone() {
             if(this.Reading) return;
-            this.Complete = Object.values(this.Responses)
-                .every(({ fulfilled }) => fulfilled);
+            let responseValues = Object.values(this.Responses);
+            this.FulfilledCount = responseValues.filter(response => response.fulfilled).length;
+            this.RatioComplete = this.FulfilledCount / responseValues.length;
+            this.Complete = this.RatioComplete == 1;
         },
         Finish() {
             this.Reading = false;
@@ -107,11 +115,31 @@
         GetResults() {
             this.CheckAllDone();
             if(!this.Complete) {
-                return {
+                let result = {
                     success: false,
                     results: null,
                     missed: null,
+                    debug: null,
                 };
+                
+                // on each impulse, we will release debug information and try our requests again
+                let now = new Date().valueOf();
+                if(now - this.LastImpulse >= this.TIME_BETWEEN_IMPULSES) {
+                    this.LastImpulse = now;
+                    result.debug = {
+                        id: this.DebugImpulseCount++,
+                        ratio: this.RatioComplete,
+                        missCount: this.Missed.length,
+                        hitCount: this.FulfilledCount,
+                    };
+                    console.log(result.debug);
+                    for(let { id } of DeckRequest.Missed) {
+                        this.Load(id);
+                    }
+                    DeckRequest.Missed = [];
+                }
+                
+                return result;
             }
             
             this.ProcessResponses();
