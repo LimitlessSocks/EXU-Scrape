@@ -403,7 +403,7 @@ database = [
     6674104, #Geschellschcaft
     6699578, #GG (Galatic Gods)
     # 6707275, #Malevolessence
-    4406016, #Onion Slice
+    # 4406016, #Onion Slice
     6719358, #Vengeful Tox
     6733479, #Ookazi
     6188330, #Giga Havoc
@@ -420,7 +420,7 @@ database = [
     5571430, #Plushmages
     # 5269100, #Orb Magician
     6616619, #Queltz
-    6785434, #Moira
+    # 6785434, #Moira
     # 7753448, #Hellvil
     6874481, #Dark Hole
     6895350, #Owlsh
@@ -433,7 +433,7 @@ database = [
     # 6848354, #The 9s
     6948850, #Mekkallegiate
     6933560, #Revived Beasts
-    4355718, #Wild Rose
+    # 4355718, #Wild Rose
     7003838, #Mechatech Dragons Eclipse and Nova + Overfunded Research
     5967432, #Masquerado
     # 7008268, #Fiendfyre
@@ -448,7 +448,7 @@ database = [
     6869158, #Infrastructure
     # 6770598, #Bleakstory
     7140843, #Pendant
-    7127621, #Dark Imp
+    # 7127621, #Dark Imp
     7124125, #Anglory
     7138655, #Witchwood
     # 7200158, #Strannaut
@@ -471,7 +471,7 @@ database = [
     7367392, #Bas-Yak
     5904696, #Contraption
     # 7877183, #Tidalive
-    7443209, #Mokey Mokey OTK
+    # 7443209, #Mokey Mokey OTK
     7455513, #Doom Instruments
     7163783, #Lemuria
     7877166, #Ugrovs
@@ -481,8 +481,8 @@ database = [
     # 7560045, #Anomantic
     6997240, #Stwyrmwind
     7410698, #Bright Planet
-    7495126, #Sylphe
-    7516077, #Moonlit
+    # 7495126, #Sylphe
+    # 7516077, #Moonlit
     7516896, #Darkest Power: Awor
     # 7503795, #Pitch Black
     7522856, #Abartech
@@ -498,7 +498,7 @@ database = [
     # 5841822, #Tomes
     7547609, #Nauticorpse
     7645365, #Solomons Studies
-    7671393, #Pyrabbit
+    # 7671393, #Pyrabbit
     # 7685326, #Justice Knight
     7499095, #Magistrophic
     7093024, #Khremysis
@@ -506,7 +506,7 @@ database = [
     # 7586564, #Straw Hat
     6123628, #Stormrider
     4587548, #Stage Girl
-    7723773, #Simulacra
+    # 7723773, #Simulacra
     7678716, #Vuluti
     # 7727566, #Supermega
     7728700, #Devivain
@@ -517,7 +517,7 @@ database = [
     7236701, #Erwormwood
     7730748, #Magistar
     7769900, #Thunderstrike Dragon
-    7842189, #The Aarp
+    # 7842189, #The Aarp
     7882788, #Des Aspect
     # 7783148, #Tamed Calamity / Armored Tamer
     7823128, #Sisage
@@ -559,9 +559,9 @@ database = [
     8269957, #Mind Macabre
     8352501, #Chirurgeon
     6516859, #E^rabastel
-    9608031, #Fossilrai
-    8345249, #Fossilrai
-    8475666, #DragoThief
+    # 9608031, #Fossilrai
+    # 8345249, #Fossilrai
+    # 8475666, #DragoThief
     8312789, #Staysailor
     # 8457383, #Dynamic Gnome
     8376563, #LaVoix
@@ -570,7 +570,7 @@ database = [
     6156689, #Varagon
     6040042, #Kuuroma
     # 8579730, #Tensura
-    8596515, #Crystal Tower
+    # 8596515, #Crystal Tower
     7225933, #Chima
     7733925, #Panera
     8656533, #DAWN and RUIN
@@ -592,7 +592,7 @@ database = [
     7874062, #Conflagrant
     7027111, #Medaka
     8760406, #Nordic Champion
-    9020851, #Alarkite
+    # 9020851, #Alarkite
     9079255, #Nemesin
     # 8954457, #Vendedda
     9016753, #Dance of Swords
