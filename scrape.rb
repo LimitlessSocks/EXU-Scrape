@@ -246,7 +246,7 @@ database = [
     7139390, #Cloudian Support
     9094270, #Elemental HERO Support (non-Neos)
     9104023, #Plaguespreader Zombie Support
-    9072263, #Mathmech Support
+    # 9072263, #Mathmech Support
     9105198, #Dark Scorpion Support
     8405156, #LoD Support
     9123660, #Earth Guard League Support
