@@ -264,6 +264,19 @@ database = [
     8345249, #Fossilrai Support
     9573052, #Pyrabbit Support
     9467404, #Naturia Support
+    9118048, #Pumpking Support
+    9389725, #Malefic Support
+    9523870, #Fairy Tail Support
+    9764030, #Dark Magician Support
+    9517068, #Starliege Support
+    9514627, #Travelsha Support
+    9420032, #Zoodiac Support
+    9091180, #Fur Hire Support
+    8016535, #roid Support
+    9602551, #Genex Support
+    9850383, #Elbeyonder Support
+    9747849, #Malicevorous Support
+    9843646, #Red-Eyes non-Effect Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -598,6 +611,12 @@ database = [
     9417588, #Empyrodraco
     9347499, #Yurei
     9469722, #Geídst
+    7731164, #Beastmaster's
+    9183380, #Dino Exorcist
+    8036906, #Dralchemic
+    9499776, #Black Tear
+    9436990, #E^rabastel
+    9593754, #Dark Crusher
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
@@ -829,16 +848,18 @@ results = loop do
     data = $session.evaluate_script "DeckRequest.GetResults();"
     if data["success"]
         if data["missed"] and not data["missed"].empty?
-            puts "Could not read decklists: #{data["missed"]}"
+            log "main", "Could not read decklists: #{data["missed"]}"
         else
-            puts "Successfully read all decklists"
+            log "main", "Successfully read all decklists"
         end
         break data["results"]
+    elsif data["debug"]
+        log "main", "Debug: #{data["debug"]}"
     end
-    if data["error"]
-        puts ">>>> Deck with id #{id} not found, moving on"
-        break []
-    end
+    # if data["error"]
+        # puts ">>>> Deck with id #{id} not found, moving on"
+        # break []
+    # end
 end
 
 changed_ids = []
