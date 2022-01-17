@@ -55,8 +55,20 @@
             flex-wrap: wrap;
             justify-content: center;
         }
-        #menu-start table {
+        #options-holder, #run-history {
             width: 100%;
+        }
+        #run-history {
+            font-size: 20px;
+        }
+        #run-history td:first-child, #run-history th:first-child {
+            text-align: right;
+        }
+        #run-history td:last-child, #run-history th:last-child {
+            text-align: left;
+        }
+        #run-history table td, #run-history table th {
+            padding: 15px;
         }
         .break {
             flex-basis: 100%;
@@ -118,12 +130,16 @@
 <h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1>
 <div id="menu-container">
     <div id="menu-start">
-        <table>
-            <tr>
-                <td><label for="number-questions">Number of questions: </label></td>
-                <td><input id="number-questions" type="number" value=10 min=1></td>
-            </tr>
-        </table>
+        <div id=options-holder>
+            <table>
+                <tr>
+                    <td><label for="number-questions">Number of questions: </label></td>
+                    <td><input id="number-questions" type="number" value=10 min=1></td>
+                </tr>
+            </table>
+        </div>
+        <div id="run-history">
+        </div>
         <button id="start">Start game</button>
     </div>
     <div id="menu-game">

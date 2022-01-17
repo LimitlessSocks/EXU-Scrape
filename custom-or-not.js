@@ -9,6 +9,44 @@ const focusMenu = (selector) => {
     $(selector).toggle(true);
 };
 
+const showStart = () => {
+    let j = JSON.parse(localStorage.EXU_CON_BESTS);
+    let table = $("<table>");
+    table.append($("<tr>").append(
+        $("<th>").text("Question count"),
+        $("<th>").text("Record"),
+    ));
+    let rows = [];
+    for(let [ key, time ] of Object.entries(j)) {
+        let [ count, correct ] = key.split(",");
+        rows.push([
+            `${count}`,
+            `${correct}/${count} in ${time}s`,
+            count,
+            correct,
+            time
+        ]);
+    }
+    rows.sort((a, b) => {
+        return (b[2] - a[2]) || (b[3] - a[3]) || (b[4] - a[4]);
+    });
+    let map = new Map();
+    for(let data of rows) {
+        let arr = map.get(data[2]) ?? [];
+        arr.push(data);
+        map.set(data[2], arr);
+    }
+    for(let [ key, entries ] of map) {
+        let display = entries.map(e => e[1]).join("; ");
+        table.append($("<tr>").append(
+            $("<td>").text(key),
+            $("<td>").text(display),
+        ));
+    }
+    $("#run-history").empty().append(table);
+    focusMenu("#menu-start");
+};
+
 const getLetterGrade = (ratio) => {
     if(ratio < 0.6) {
         return "d";
@@ -49,8 +87,15 @@ const showStats = (stats) => {
     
     focusMenu("#menu-stats");
     
+    let j = JSON.parse(localStorage.EXU_CON_BESTS);
+    let key = count + "," + correct;
+    j[key] = j[key] ?? Infinity;
+    j[key] = Math.min(+j[key], +time).toString();
+    localStorage.EXU_CON_BESTS = JSON.stringify(j);
+    
     $("#back").off().click(() => {
-        focusMenu("#menu-start");
+        // focusMenu("#menu-start");
+        showStart();
     });
 };
 
@@ -227,6 +272,9 @@ const startGame = async (options = {}) => {
 };
 
 window.addEventListener("load", async function () {
+    localStorage.EXU_CON_BESTS = localStorage.EXU_CON_BESTS || "{}";
+    showStart();
+    
     $("#start").attr("disabled", true);
     await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
     CardViewer.excludeTcg = false;
