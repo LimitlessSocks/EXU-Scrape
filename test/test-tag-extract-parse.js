@@ -382,6 +382,15 @@ const TEST_CASES = [
     ["@@@ @@ @@@", [
         { customExpression: " @@ " }
     ]],
+    ["dated 05/16/2007", [
+        { date: "05/16/2007", dateCompare: "equal" },
+    ]],
+    ["dated before 05/16/2007", [
+        { date: "05/16/2007", dateCompare: "greater" },
+    ]],
+    ["dated after 05/16/2007", [
+        { date: "05/16/2007", dateCompare: "after" },
+    ]],
 ];
 
 module.exports = function testTagExtractParse(debug = false) {

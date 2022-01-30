@@ -143,9 +143,9 @@ const getComparison = (text) => (
         ? "greaterequal"
         : text.includes("orlower") || text.includes("orless") || text.includes("<=")
             ? "lessequal"
-            : text.includes("<")
+            : text.includes("<") || text.includes("after")
                 ? "less"
-                : text.includes(">")
+                : text.includes(">") || text.includes("before")
                     ? "greater"
                     : text.includes("!=") || text.includes("/=") || text.includes("isnot")
                         ? "unequal"
@@ -161,6 +161,10 @@ const INDICATORS = [
     new TagIndicator(/or/i, () => OPERATOR_INLINE_OR),
     new TagIndicator(/and/i, () => OPERATOR_INLINE_AND),
     new TagIndicator(/!|not/i, () => OPERATOR_NOT),
+    new TagIndicator(/(?:dated?|added|created|made)\s*(>=?|<=?|[/!]?==?|before|after)?\s*(\d{4}|\d+\/\d+\/\d+)/, (match) => ({
+        dateCompare: getComparison(match[1]),
+        date: match[2],
+    })).rememberParameter(),
     new TagIndicator(/link(?:[- ]|\s*(>=?|<=?|[/!]?==?))?\s*(\d+)\s*(or\s*(higher|more|lower|less))?/i, (match) => ({
         type: "monster",
         monsterCategory: "link",

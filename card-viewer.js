@@ -1026,18 +1026,24 @@ CardViewer.createFilter = function (query, exclude = null) {
     }
     
     if(query.date) {
-        let dateValue = new Date(query.date);
-        // dateCompare
+        let isSimpleYear = /^\d{4}/.test(query.date);
+        let dateValue;
+        if(!isSimpleYear) {
+            let [ whole, month, day, year ] = query.date.match(/(\d+)\/(\d+)\/(\d+)/);
+            dateValue = new Date(year, month, day);
+        }
+        const longDateRegex = /^(\d+)-(\d+)-(\d+)\.(\d+)\.(\d+)\.(\d+)$/;
         filters.push((card) => {
             if(!card.dateValue) {
-                if(card.date) {
-                    card.dateValue = new Date(
-                        card.date.replace(/(\d+)-(\d+)-(\d+)\.(\d+)\.(\d+)\.(\d+)/, "$1/$2/$3")
-                        // card.date.replace(/(\d+)-(\d+)-(\d+)\.(\d+)\.(\d+)\.(\d+)/, "$1/$2/$3 $4:$5:$6")
-                    );
+                if(longDateRegex.test(card.date)) {
+                    // console.log(card.date);
+                    let [ whole, month, day, year, ...rest ] = card.date.match(longDateRegex);
+                    card.dateValue = new Date(year, month, day);
                 }
-                else if(card.updated) {
-                    card.dateValue = new Date(card.updated);
+                else if(card.date || card.updated) {
+                    let date = card.date || card.updated;
+                    let [ whole, year, month, day ] = date.match(/(\d+)-(\d+)-(\d+)/);
+                    card.dateValue = new Date(year, month, day);
                 }
                 else {
                     card.dateValue = null;
@@ -1047,7 +1053,7 @@ CardViewer.createFilter = function (query, exclude = null) {
                 return false;
             }
             let cmp = CardViewer.COMPARES[query.dateCompare || "equal"];
-            if(/^\d{4}/.test(query.date)) {
+            if(isSimpleYear) {
                 return cmp(query.date, card.dateValue.getFullYear());
             }
             else {
