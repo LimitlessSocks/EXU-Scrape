@@ -18,6 +18,7 @@ class Memory {
     }
 }
 
+// MEMORY CARES ONLY ABOUT THE LAST PARAMETER SPECIFIED.
 class TagIndicator {
     constructor(reg, fn) {
         this.toMatch = reg;
@@ -136,6 +137,21 @@ const TRANSLATE_TABLE = {
     main: "maindeck",
 };
 
+const getComparison = (text) => (
+    text = (text || "").toString().toLowerCase().replace(/\s/g, ""),
+    text.includes("orhigher") || text.includes("ormore") || text.includes(">=")
+        ? "greaterequal"
+        : text.includes("orlower") || text.includes("orless") || text.includes("<=")
+            ? "lessequal"
+            : text.includes("<")
+                ? "less"
+                : text.includes(">")
+                    ? "greater"
+                    : text.includes("!=") || text.includes("/=") || text.includes("isnot")
+                        ? "unequal"
+                        : "equal"
+);
+
 const INDICATORS = [
     new TagIndicator(/(@+)(.+?)\1/, (match) => ({
         customExpression: match[2],
@@ -145,10 +161,11 @@ const INDICATORS = [
     new TagIndicator(/or/i, () => OPERATOR_INLINE_OR),
     new TagIndicator(/and/i, () => OPERATOR_INLINE_AND),
     new TagIndicator(/!|not/i, () => OPERATOR_NOT),
-    new TagIndicator(/link[- ]?\s*(\d+)/i, (match) => ({
+    new TagIndicator(/link(?:[- ]|\s*(>=?|<=?|[/!]?==?))?\s*(\d+)\s*(or\s*(higher|more|lower|less))?/i, (match) => ({
         type: "monster",
         monsterCategory: "link",
-        level: match[1],
+        levelCompare: getComparison(match[3] || match[1]),
+        level: match[2],
     })).rememberParameter(),
     new TagIndicator(/(level\/rank|rank\/level)\s*(\d+)/i, (match, memory) => (
         memory.lastParameter = {
@@ -163,25 +180,32 @@ const INDICATORS = [
             { type: "trap" }
         ])
     ),
-    new TagIndicator(/rank\s*(\d+)/i, (match) => ({
+    new TagIndicator(/rank\s*(>=?|<=?|[/!]?==?)?\s*(\d+)\s*(or\s*(higher|more|lower|less))?/i, (match) => ({
         type: "monster",
         monsterCategory: "xyz",
-        level: match[1],
+        levelCompare: getComparison(match[3] || match[1]),
+        level: match[2],
     })).rememberParameter(),
-    new TagIndicator(/level\s*(\d+)/i, (match) => ({
+    new TagIndicator(/(?:level|lv)\s*(>=?|<=?|[/!]?==?)?\s*(\d+)\s*(or\s*(higher|more|lower|less))?/i, (match) => ({
         type: "monster",
-        level: match[1],
+        levelCompare: getComparison(match[3] || match[1]),
+        level: match[2],
     })).rememberParameter(),
     new TagIndicator(/(?:by|author)[ =]+([\w.]+|"([^"]+)")/i, (match) => ({
         author: match[2] || match[1],
     })).rememberParameter(),
-    new TagIndicator(/(\d+)[\s=]*(atk|def)|(atk|def)[\s=]*(\d+)/i, (match) => ({
-        type: "monster",
-        [(match[2] || match[3]).toLowerCase()]: match[1] || match[4],
-    })).rememberAll(),
+    new TagIndicator(/(\d+)\s*(atk|def)|(atk|def)\s*(>=?|<=?|[/!]?==?)?\s*(\d+)/i, (match) => {
+        let paramName = (match[2] || match[3]).toLowerCase();
+        return {
+            type: "monster",
+            [paramName + "Compare"]: getComparison(match[4]),
+            [paramName]: match[1] || match[5],
+        };
+    }).rememberAll(),
     new TagIndicator(/atk|def/i, (match, memory) => (memory.lastValue && memory.use() && {
         type: "monster",
-        [match[0].toLowerCase()]: memory.lastValue.atk || memory.lastValue.def
+        [match[0].toLowerCase() + "Compare"]: memory.lastValue.atkCompare || memory.lastValue.defCompare,
+        [match[0].toLowerCase()]: memory.lastValue.atk || memory.lastValue.def,
     })),
     new TagIndicator(/id[\s=]+(\d+)/i, (match) => ({
         id: match[1],
@@ -259,19 +283,26 @@ const INDICATORS = [
     new TagIndicator(/\(/, () => LEFT_PARENTHESIS),
     new TagIndicator(/\)/, () => RIGHT_PARENTHESIS),
     
-    new TagIndicator(/(\w+)|"([^"]+)"/, (match, memory) => {
+    new TagIndicator(/(>=?|<=?|[/!]?==?)?\s*(\w+)|"([^"]+)"/, (match, memory) => {
         if(!memory.lastParameter) {
             return IGNORE_ENTRY;
         }
-        let toSet = match[2] || match[1];
+        let toSet = match[3] || match[2];
         let param = Object.keys(memory.lastParameter).pop();
+        // console.log("IGNORING", param, "of", toSet);
+        // console.group();
+        // console.log("DEBUG MEMORY");
+        // console.log(memory);
+        // console.groupEnd();
         if((param === "atk" || param === "def") && !/^\d+/.test(toSet)) {
-            // console.log("IGNORING", toSet);
             return IGNORE_ENTRY;
         }
         memory.use();
         let res = Object.assign({}, memory.lastParameter);
         res[param] = toSet;
+        if(match[1]) {
+            res[param + "Compare"] = getComparison(match[1]);
+        }
         return res;
     }),
 ];

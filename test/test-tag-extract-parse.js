@@ -11,6 +11,7 @@ const TEST_CASES = [
         type: "monster",
         monsterCategory: "link",
         level: "2",
+        levelCompare: "equal",
     }]],
     ["dark", [{
         type: "monster",
@@ -32,7 +33,7 @@ const TEST_CASES = [
         name: "number"
     }]],
     ["link-2 dark warrior monster", [
-        { type: "monster", monsterCategory: "link", level: "2" },
+        { type: "monster", monsterCategory: "link", level: "2", levelCompare: "equal" },
         { type: "monster", monsterAttribute: "DARK" },
         { type: "monster", monsterType: "Warrior" },
         { type: "monster" },
@@ -41,7 +42,7 @@ const TEST_CASES = [
         { type: "monster" },
         { type: "monster", monsterType: "Warrior" },
         { type: "monster", monsterAttribute: "DARK" },
-        { type: "monster", monsterCategory: "link", level: "2" },
+        { type: "monster", monsterCategory: "link", level: "2", levelCompare: "equal" },
     ]],
     ["wind beast", [
         { type: "monster", monsterAttribute: "WIND" },
@@ -77,54 +78,54 @@ const TEST_CASES = [
         { type: "monster", monsterType: "Winged Beast" },
     ]],
     ["level 3", [
-        { type: "monster", level: "3" },
+        { type: "monster", level: "3", levelCompare: "equal" },
     ]],
     ["level 3 psychic", [
-        { type: "monster", level: "3" },
+        { type: "monster", level: "3", levelCompare: "equal" },
         { type: "monster", monsterType: "Psychic" },
     ]],
     ["2150 atk", [
-        { type: "monster", atk: "2150" },
+        { type: "monster", atk: "2150", atkCompare: "equal" },
     ]],
     ["ATK=2150", [
-        { type: "monster", atk: "2150" },
+        { type: "monster", atk: "2150", atkCompare: "equal" },
     ]],
     ["1600 ATK or DEF", [
-        { type: "monster", atk: "1600" },
+        { type: "monster", atk: "1600", atkCompare: "equal" },
         OPERATOR_INLINE_OR,
-        { type: "monster", def: "1600" },
+        { type: "monster", def: "1600", defCompare: "equal" },
     ]],
     ["1600 ATK or DEF", [
-        { type: "monster", atk: "1600" },
+        { type: "monster", atk: "1600", atkCompare: "equal" },
         OPERATOR_INLINE_OR,
-        { type: "monster", def: "1600" },
+        { type: "monster", def: "1600", defCompare: "equal" },
     ]],
     ["level 3 or level 6 psychic", [
-        { type: "monster", level: "3" },
+        { type: "monster", level: "3", levelCompare: "equal" },
         OPERATOR_INLINE_OR,
-        { type: "monster", level: "6" },
+        { type: "monster", level: "6", levelCompare: "equal" },
         { type: "monster", monsterType: "Psychic" },
     ]],
     ["level 3 or 6 psychic", [
-        { type: "monster", level: "3" },
+        { type: "monster", level: "3", levelCompare: "equal" },
         OPERATOR_INLINE_OR,
-        { type: "monster", level: "6" },
+        { type: "monster", level: "6", levelCompare: "equal" },
         { type: "monster", monsterType: "Psychic" },
     ]],
     ["level 3, 6, or 9 psychic", [
-        { type: "monster", level: "3" },
+        { type: "monster", level: "3", levelCompare: "equal" },
         OPERATOR_INLINE_OR,
-        { type: "monster", level: "6" },
+        { type: "monster", level: "6", levelCompare: "equal" },
         OPERATOR_INLINE_OR,
-        { type: "monster", level: "9" },
+        { type: "monster", level: "9", levelCompare: "equal" },
         { type: "monster", monsterType: "Psychic" },
     ]],
     ["level 3, 6 or 9 psychic", [
-        { type: "monster", level: "3" },
+        { type: "monster", level: "3", levelCompare: "equal" },
         OPERATOR_INLINE_OR,
-        { type: "monster", level: "6" },
+        { type: "monster", level: "6", levelCompare: "equal" },
         OPERATOR_INLINE_OR,
-        { type: "monster", level: "9" },
+        { type: "monster", level: "9", levelCompare: "equal" },
         { type: "monster", monsterType: "Psychic" },
     ]],
     ["light or dark", [
@@ -232,12 +233,12 @@ const TEST_CASES = [
         { author: "Khreygond" },
     ]],
     ["atk 1300 or 1400", [
-        { type: "monster", atk: "1300" },
+        { type: "monster", atk: "1300", atkCompare: "equal" },
         OPERATOR_INLINE_OR,
-        { type: "monster", atk: "1400" },
+        { type: "monster", atk: "1400", atkCompare: "equal" },
     ]],
     ["atk 1300 khreygond", [
-        { type: "monster", atk: "1300" },
+        { type: "monster", atk: "1300", atkCompare: "equal" },
     ]],
     ["id 2067145", [
         { id: "2067145" },
@@ -286,20 +287,20 @@ const TEST_CASES = [
         { type: "monster", level: "2", levelCompare: "unequal" },
     ]],
     ["atk <= 2000 and >= 1000", [
-        { type: "monster", atk: "2000", levelCompare: "lessequal" },
+        { type: "monster", atk: "2000", atkCompare: "lessequal" },
         OPERATOR_INLINE_AND,
-        { type: "monster", atk: "1000", levelCompare: "greaterequal" },
+        { type: "monster", atk: "1000", atkCompare: "greaterequal" },
     ]],
     ["atk <= 2000 and def >= 1000", [
-        { type: "monster", atk: "2000", levelCompare: "lessequal" },
+        { type: "monster", atk: "2000", atkCompare: "lessequal" },
         OPERATOR_INLINE_AND,
-        { type: "monster", def: "1000", levelCompare: "greaterequal" },
+        { type: "monster", def: "1000", defCompare: "greaterequal" },
     ]],
     ["by     Sock", [
         { author: "Sock" },
     ]],
     ["level        12", [
-        { type: "monster", level: "12" },
+        { type: "monster", level: "12", levelCompare: "equal" },
     ]],
     ["[warrior] not monster not [beast-warrior]", [
         { effect: "warrior" },
@@ -343,19 +344,32 @@ const TEST_CASES = [
         { author: "poketot" },
         RIGHT_PARENTHESIS,
     ]],
-    ["link-3 or lower", []],
-    ["link-3 or higher", []],
-    ["level 4 or higher", []],
-    ["level 4 or lower", []],
-    ["rank 10 or higher", []],
+    ["link-3 or lower", [
+        { type: "monster", monsterCategory: "link", level: "3", levelCompare: "lessequal" },
+    ]],
+    ["link-3 or higher", [
+        { type: "monster", monsterCategory: "link", level: "3", levelCompare: "greaterequal" },
+    ]],
+    ["level 4 or higher", [
+        { type: "monster", level: "4", levelCompare: "greaterequal" },
+    ]],
+    ["level 4 or lower", [
+        { type: "monster", level: "4", levelCompare: "lessequal" },
+    ]],
+    ["rank 10 or higher", [
+        { type: "monster", monsterCategory: "xyz", level: "10", levelCompare: "greaterequal" },
+    ]],
+    ["rank 2 or less", [
+        { type: "monster", monsterCategory: "xyz", level: "2", levelCompare: "lessequal" },
+    ]],
     ["(level 2 rock) or (level 3 pyro)", [
         LEFT_PARENTHESIS,
-        { type: "monster", level: "2" },
+        { type: "monster", level: "2", levelCompare: "equal" },
         { type: "monster", monsterType: "Rock" },
         RIGHT_PARENTHESIS,
         OPERATOR_INLINE_OR,
         LEFT_PARENTHESIS,
-        { type: "monster", level: "3" },
+        { type: "monster", level: "3", levelCompare: "equal" },
         { type: "monster", monsterType: "Pyro" },
         RIGHT_PARENTHESIS
     ]],
