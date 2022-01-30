@@ -828,7 +828,7 @@ CardViewer.comparingComparator = (needle, compareString, fn = _F.id) => {
         needle = needle.toString().split(/[,\s]\s*/)
             .map(e => parseInt(e, 10));
     }
-    else {
+    else if(typeof needle === "string") {
         needle = parseInt(needle, 10);
     }
     // let once = true;
@@ -1023,6 +1023,37 @@ CardViewer.createFilter = function (query, exclude = null) {
         else {
             console.error("Flowo is not enabled here");
         }
+    }
+    
+    if(query.date) {
+        let dateValue = new Date(query.date);
+        // dateCompare
+        filters.push((card) => {
+            if(!card.dateValue) {
+                if(card.date) {
+                    card.dateValue = new Date(
+                        card.date.replace(/(\d+)-(\d+)-(\d+)\.(\d+)\.(\d+)\.(\d+)/, "$1/$2/$3")
+                        // card.date.replace(/(\d+)-(\d+)-(\d+)\.(\d+)\.(\d+)\.(\d+)/, "$1/$2/$3 $4:$5:$6")
+                    );
+                }
+                else if(card.updated) {
+                    card.dateValue = new Date(card.updated);
+                }
+                else {
+                    card.dateValue = null;
+                }
+            }
+            if(!card.dateValue) {
+                return false;
+            }
+            let cmp = CardViewer.COMPARES[query.dateCompare || "equal"];
+            if(/^\d{4}/.test(query.date)) {
+                return cmp(query.date, card.dateValue.getFullYear());
+            }
+            else {
+                return cmp(dateValue.getTime(), card.dateValue.getTime());
+            }
+        });
     }
     
     // console.log(filters);
