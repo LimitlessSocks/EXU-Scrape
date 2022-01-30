@@ -386,10 +386,16 @@ const TEST_CASES = [
         { date: "05/16/2007", dateCompare: "equal" },
     ]],
     ["dated before 05/16/2007", [
-        { date: "05/16/2007", dateCompare: "greater" },
+        { date: "05/16/2007", dateCompare: "less" },
     ]],
     ["dated after 05/16/2007", [
-        { date: "05/16/2007", dateCompare: "after" },
+        { date: "05/16/2007", dateCompare: "greater" },
+    ]],
+    ["date >= 05/16/2007", [
+        { date: "05/16/2007", dateCompare: "greaterequal" },
+    ]],
+    ["date <= 05/16/2007", [
+        { date: "05/16/2007", dateCompare: "lesserequal" },
     ]],
 ];
 

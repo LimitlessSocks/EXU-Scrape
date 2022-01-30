@@ -143,9 +143,9 @@ const getComparison = (text) => (
         ? "greaterequal"
         : text.includes("orlower") || text.includes("orless") || text.includes("<=")
             ? "lessequal"
-            : text.includes("<") || text.includes("after")
+            : text.includes("<") || text.includes("before")
                 ? "less"
-                : text.includes(">") || text.includes("before")
+                : text.includes(">") || text.includes("after")
                     ? "greater"
                     : text.includes("!=") || text.includes("/=") || text.includes("isnot")
                         ? "unequal"

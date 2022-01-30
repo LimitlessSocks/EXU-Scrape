@@ -1054,10 +1054,10 @@ CardViewer.createFilter = function (query, exclude = null) {
             }
             let cmp = CardViewer.COMPARES[query.dateCompare || "equal"];
             if(isSimpleYear) {
-                return cmp(query.date, card.dateValue.getFullYear());
+                return cmp(card.dateValue.getFullYear(), query.date);
             }
             else {
-                return cmp(dateValue.getTime(), card.dateValue.getTime());
+                return cmp(card.dateValue.getTime(), dateValue.getTime());
             }
         });
     }
