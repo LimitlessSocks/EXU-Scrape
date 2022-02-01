@@ -43,7 +43,7 @@ let onLoad = async function () {
         lastInput = text;
         let query = naturalInputToQuery(text);
         query = condenseQuery(query);
-        console.log("owo", text, ";", query);
+        console.log("owo", text, ";", query, query.caseSensitive);
         
         state.results = CardViewer.filter(query);
         state.total = state.results.length

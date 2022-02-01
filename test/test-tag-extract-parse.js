@@ -1,7 +1,7 @@
 const {
     naturalInputToQuery, TagExtractor,
     OPERATOR_INLINE_OR, OPERATOR_INLINE_AND, OPERATOR_MAJOR_OR, OPERATOR_NOT,
-    LEFT_PARENTHESIS, RIGHT_PARENTHESIS
+    LEFT_PARENTHESIS, RIGHT_PARENTHESIS, CASE_SENSITIVE
 } = require("./../tag-extract.js");
 const { objectEqual } = require("./lib.js");
 
@@ -385,6 +385,7 @@ const TEST_CASES = [
     ["dated 05/16/2007", [
         { date: "05/16/2007", dateCompare: "equal" },
     ]],
+    
     ["dated before 05/16/2007", [
         { date: "05/16/2007", dateCompare: "less" },
     ]],
@@ -395,7 +396,10 @@ const TEST_CASES = [
         { date: "05/16/2007", dateCompare: "greaterequal" },
     ]],
     ["date <= 05/16/2007", [
-        { date: "05/16/2007", dateCompare: "lesserequal" },
+        { date: "05/16/2007", dateCompare: "lessequal" },
+    ]],
+    ["case", [
+        CASE_SENSITIVE,
     ]],
 ];
 

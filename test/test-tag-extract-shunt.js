@@ -4,6 +4,7 @@ const {
     OPERATOR_NOT,
     OPERATOR_INLINE_AND,
     OPERATOR_INLINE_OR,
+    CASE_SENSITIVE,
 } = require("./../tag-extract.js");
 const { objectEqual } = require("./lib.js");
 
@@ -109,6 +110,10 @@ const TEST_CASES = [
         OPERATOR_INLINE_AND,
         OPERATOR_INLINE_OR,
     ]],
+    ["case [lv]", [
+        CASE_SENSITIVE,
+        { effect: "lv" },
+    ]]
 ];
 
 module.exports = function testTagExtractShunt(debug = false) {

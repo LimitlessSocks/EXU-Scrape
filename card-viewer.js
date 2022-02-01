@@ -716,6 +716,7 @@ CardViewer.query = function () {
     return baseStats;
 };
 
+CardViewer.caseSensitive = false;
 CardViewer.simplifyText = (text) =>
     text.toLowerCase();
 
@@ -726,7 +727,12 @@ CardViewer.textComparator = (needle, fn = _F.id) => {
     let simplified = CardViewer.simplifyText(needle);
     return (card) => {
         let f = fn(card);
-        return f !== null && f !== undefined && f.toString().toLowerCase().indexOf(simplified) !== -1;
+        if(f === null || f === undefined) {
+            return false;
+        }
+        return CardViewer.caseSensitive
+            ? f.toString().includes(needle)
+            : CardViewer.simplifyText(f.toString()).includes(simplified);
     }
 };
 const escapeRegExp = function (string) {
@@ -762,6 +768,8 @@ CardViewer.regexComparator = (needle, fn = _F.id) => {
     
     let accept = [];
     let reject = [];
+    let caselessAccept = [];
+    let caselessReject = [];
     
     for(let regStr of extractInlineRegexes(needle)) {
         let [whole, tag, regInner] = regStr.trim().match(/^\[(.+?\|)?(.+)\]$/);
@@ -771,11 +779,14 @@ CardViewer.regexComparator = (needle, fn = _F.id) => {
             flag = "";
         }
         let reg = new RegExp(regInner, flag);
+        let caselessReg = new RegExp(regInner, flag.replace("i", ""));
         if(/^[ner]/i.test(tag)) {
             reject.push(reg);
+            caselessReject.push(caselessReg);
         }
         else {
             accept.push(reg);
+            caselessAccept.push(caselessReg);
         }
         needle = needle.replace(regStr, "");
     }
@@ -787,11 +798,17 @@ CardViewer.regexComparator = (needle, fn = _F.id) => {
         .replace(/\\\*/g, ".*?");
     
     let reg = new RegExp(needle, "i");
+    let caselessReg = new RegExp(needle, "");
     accept.push(reg);
+    caselessAccept.push(caselessReg);
     
     return (card) =>
-        accept.every(reg => reg.test(fn(card)))
-        && !reject.some(reg => reg.test(fn(card)));
+        CardViewer.caseSensitive
+            ? caselessAccept.every(reg => reg.test(fn(card)))
+              && !caselessReject.some(reg => reg.test(fn(card)))
+              
+            : accept.every(reg => reg.test(fn(card)))
+              && !reject.some(reg => reg.test(fn(card)));
 };
 CardViewer.textAnyComparator = (needle, fn = _F.id) =>
     needle === "any" ? () => true : CardViewer.textComparator(needle, fn);
@@ -1070,6 +1087,7 @@ CardViewer.createFilter = function (query, exclude = null) {
     if(exclude) {
         return (card) => filter(card) && !exclude(card);
     }
+    
     return filter;
 };
 
@@ -1084,7 +1102,10 @@ const SortByFunction = {
     date: getComparableDate,
 };
 CardViewer.filter = function (query, exclude = null) {
+    CardViewer.caseSensitive = query.caseSensitive;
+    // console.log(query, query.caseSensitive, CardViewer.caseSensitive);
     let filter = CardViewer.createFilter(query, exclude);
+    // console.log("query", CardViewer.caseSensitive, query.caseSensitive, filter.caseSensitive);
     let cards = [];
     for(let [id, card] of Object.entries(CardViewer.Database.cards)) {
         // if(id == 11086) {
@@ -1101,6 +1122,8 @@ CardViewer.filter = function (query, exclude = null) {
             cards.push(card);
         }
     }
+    
+    // console.log("AFTER:", CardViewer.caseSensitive);
     
     let sortByProperty = query.sortBy;
     if(typeof sortByProperty === "undefined")

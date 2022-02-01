@@ -126,6 +126,8 @@ const OPERATOR_MAJOR_AND = Symbol("OPERATOR_MAJOR_AND");
 const LEFT_PARENTHESIS = Symbol("LEFT_PARENTHESIS");
 const RIGHT_PARENTHESIS = Symbol("RIGHT_PARENTHESIS");
 
+const CASE_SENSITIVE = Symbol("CASE_SENSITIVE");
+
 const wrapParens = (arr) => [LEFT_PARENTHESIS, ...arr, RIGHT_PARENTHESIS];
 
 //TODO: export these
@@ -161,6 +163,7 @@ const INDICATORS = [
     new TagIndicator(/or/i, () => OPERATOR_INLINE_OR),
     new TagIndicator(/and/i, () => OPERATOR_INLINE_AND),
     new TagIndicator(/!|not/i, () => OPERATOR_NOT),
+    new TagIndicator(/case(d| sensitive)?/i, () => CASE_SENSITIVE),
     new TagIndicator(/(?:dated?|added|created|made)\s*(>=?|<=?|[/!]?==?|before|after)?\s*(\d{4}|\d+\/\d+\/\d+)/, (match) => ({
         dateCompare: getComparison(match[1]),
         date: match[2],
@@ -404,6 +407,7 @@ const UNARY_OPERATORS = new Set([OPERATOR_NOT]);
 const isOperator = (token) => {
     return typeof OPERATOR_PRECEDENCE[token] !== "undefined";
 };
+const isFlag = (token) => token === CASE_SENSITIVE;
 
 const shunt = function* (queryList, createFilter=CardViewer.createFilter) {
     let operatorStack = [];
@@ -475,6 +479,9 @@ const shunt = function* (queryList, createFilter=CardViewer.createFilter) {
             }
             */
         }
+        else if(isFlag(token)) {
+            yield token;
+        }
         else {
             if(lastWasData) {
                 // flush operators; implicit and
@@ -488,6 +495,7 @@ const shunt = function* (queryList, createFilter=CardViewer.createFilter) {
                 }
             }
             if(typeof token === "object") {
+                // console.log(token);
                 yield createFilter(token);
             }
             else {
@@ -513,6 +521,7 @@ const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
     let outputQueue = shunt(queryList, createFilter);
     // evaluate expression
     let evalStack = [];
+    let caseSensitive = false;
     for(let token of outputQueue) {
         // console.log("Token:", token);
         if(token === OPERATOR_INLINE_OR) {
@@ -527,13 +536,18 @@ const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
             let a = evalStack.pop();
             evalStack.push((card) => !a(card));
         }
+        else if(token === CASE_SENSITIVE) {
+            caseSensitive = true;
+        }
         else {
             evalStack.push(token);
         }
     }
     
     // console.log("Evalstack:", evalStack);
-    return (card) => evalStack.every(fn => fn(card));
+    let result = (card) => evalStack.every(fn => fn(card));
+    result.caseSensitive = caseSensitive;
+    return result;
 };
 
 if(isNode) {
@@ -546,6 +560,7 @@ if(isNode) {
         OPERATOR_NOT: OPERATOR_NOT,
         LEFT_PARENTHESIS: LEFT_PARENTHESIS,
         RIGHT_PARENTHESIS: RIGHT_PARENTHESIS,
+        CASE_SENSITIVE: CASE_SENSITIVE,
         shunt: shunt,
     };
 }
