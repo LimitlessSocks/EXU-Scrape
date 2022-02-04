@@ -277,6 +277,13 @@ database = [
     9850383, #Elbeyonder Support
     9747849, #Malicevorous Support
     9843646, #Red-Eyes non-Effect Support
+    9186912, #Ojama Supports
+    9944104, #Blackwing Support
+    3585517, #Harpie Support
+    9557295, #Anglory Support
+    9939604, #Azur Lane Support
+    9941444, #Tundran Support
+    9850403, #Xöryne Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -617,6 +624,12 @@ database = [
     9499776, #Black Tear
     9436990, #E^rabastel
     9593754, #Dark Crusher
+    3400704, #Knechtgeist
+    9870820, #The Fall
+    9105896, #World Hero
+    9954291, #Vivified
+    7586564, #Straw Hat
+    
     
     #order shenanigans
     5713627, #Yeet (Must be after Charismatic)
