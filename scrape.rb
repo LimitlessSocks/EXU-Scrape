@@ -173,7 +173,7 @@ database = [
     6979146, #T.G. Support
     # 7545154, #Strannaut Support
     7568710, #Windwitch Support
-    7534403, #Magnet Warrior Support
+    9913178, #Magnet Warrior Support
     7452180, #Ceremonial Bell Support
     7531842, #Psychic Support
     7556770, #Battle Fader Support
@@ -211,7 +211,7 @@ database = [
     8055360, #Baba Support
     5979508, #Myutant Support
     8105851, #Lightsworn Support
-    7969621, #Magistus Support
+    9913180, #Magistus Support
     7743608, #Danger! Support
     8184053, #Ancient Gear Support
     8224351, #Ritual Beast Support
@@ -705,8 +705,8 @@ banlist = [
 ]
 
 test = [
-    7443406, #Illusory Rend test
-]
+    # 7443406, #Illusory Rend test
+] + banlist
 
 beta = [
     7443406, #BETA SINGLES, NEVER DELETE!
