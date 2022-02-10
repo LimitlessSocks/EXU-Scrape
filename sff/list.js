@@ -781,4 +781,79 @@ const SFF_CARD_IDS = [
     1608,      // Flame Ghost
     4522,      // Two-Pronged Attack
     7550,      // Relinkuriboh
+    5998,      //Castle of Dragon Souls
+    757,       //Comrade Swordsman of Landstar
+    8972,      //Grappler Angler
+    2373,      //Jutte Fighter
+    3641,      //Rose, Warrior of Revenge
+    3690,      //Samurai of the Ice Barrier
+    12223,     //Night's End Administrator
+    309,       //Backup Warrior
+    737,       //Cocoon of Evolution
+    2507,      //Larvae Moth
+    11591,     //Amabie
+    9269,      //Shooting Riser Dragon
+    11616,     //Synchro Transmission
+    4566,      //Unknown Synchron
+    9117,      //Righty Driver
+    3141,      //Nightmare Penguin
+    3509,      //Red Medicine
+    11537,     //Dark Eye Nightmare
+    8045,      //Celtic Guard of Noble Arms
+    1261,      //Dragonic Guard
+    4175,      //Synchro Fusionist
+    10536,     //Crystal Girl
+    4696,      //Warrior of Atlantis
+    5379,      //Flame Tiger
+    2483,      //Kunai With Chain
+    3777,      //Seven Swords Warrior
+    2596,      //Lightning Warrior
+    9083,      //Aleister the Invoker of Madness
+    7953,      //Performapal Swincobra
+    4246,      //The A. Forces
+    1723,      //Gaia Drake, the Universal Force
+    1244,      //Dragon Knight Draco-Equiste
+    677,       //Chaos-End Master
+    10890,     //Necroquip Prism
+    10442,     //Disposable Learner Device
+    279,       //Attack Gainer
+    4149,      //Sword Master
+    7561,      //Paleozoic Pikaia
+    5913,      //Herald of Pure Light
+    6225,      //Gorgonic Golem
+    981,       //Dark Eruption
+    5274,      //Creeping Darkness
+    426,       //Black Pendant
+    4572,      //Unstable Evolution
+    5740,      //The Big Cattle Drive
+    381,       //Behemoth, the King of All Animals
+    2889,      //Minoan Centaur
+    7540,      //First Aid Squad
+    8973,      //Mahjong Munia Maidens
+    2996,      //Mosaic Manticore
+    5988,      //Trifortressops
+    5352,      //Gearspring Spirit
+    4900,      //Zero Gravity
+    3372,      //Prickle Fairy
+    1449,      //Energy Drain
+    5509,      //Impenetrable Attack
+    2110,      //Healing Wave Generator
+    6201,      //Number 94: Crystalzero
+    3973,      //Spell Striker
+    9064,      //Masterking Archfiend
+    7218,      //Fiend Griefing
+    2384,      //Kaiser Glider
+    5241,      //Divine Dragon Apocralyph
+    7427,      //Legion the Fiend Jester
+    11307,     //Tilted Try
+    4431,      //Totem Dragon
+    4128,      //Supreme Arcanite Magician
+    3606,      //Ritual Weapon
+    3524,      //Reflect Bounder
+    9951,      //Infinitrack River Stormer
+    1800,      //Generation Shift
+    3134,      //Next to Be Lost
+    9345,      //Cross Breed
+    10257,     //Bownty
+    1862,      //Gigaplant  
 ];
