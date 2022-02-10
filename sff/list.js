@@ -856,4 +856,52 @@ const SFF_CARD_IDS = [
     9345,      //Cross Breed
     10257,     //Bownty
     1862,      //Gigaplant  
+    6171,      // Ascension Sky Dragon
+    3076,      // Naturia Pineapple
+    6773,      // Watch Dog
+    6551,      // Magical Spring
+    8852,      // Overdone Burial
+    4435,      // Toy Magician
+    6528,      // Dogu
+    9356,      // Ballista Squad
+    1116,      // Desertapir
+    11217,     // Samsara Dragon
+    5021,      // Needle Sunfish
+    11782,     // Allvain the Essence of Vanity
+    3951,      // Sparks
+    2153,      // Hinotama
+    3545,      // Remove Trap
+    2415,      // Karbonala Warrior
+    1259,      // Dragoness the Wicked Knight
+    1929,      // Goblin's Secret Remedy
+    1580,      // Final Flame
+    2846,      // Metal Dragon
+    1636,      // Flower Wolf
+    1750,      // Gate Guardian
+    5463,      // Silver Sentinel
+    473,       // Blade Knight
+    3133,      // Newdoria
+    5482,      // Uniflora, Mystical Beast of the Forest
+    8746,      // Number 29: Mannequin Cat
+    8976,      // Desmanian Devil
+    186,       // Ape Fighter
+    11091,     // Tri-Brigade Rugal the Silver Sheller
+    9406,      // Hayate the Earth Star
+    6963,      // Kabuki Dragon
+    10659,     // Machina Metalcruncher
+    7091,      // Scrap-Iron Statue
+    13,        // A Feather of the Phoenix
+    1761,      // Gearfried the Swordmaster
+    10836,     // Lifeless Leaffish
+    5019,      // Friller Rabca
+    3248,      // Oyster Meister
+    5314,      // Fishborg Launcher
+    3863,      // Skreech
+    12439,     // Proscription
+    5832,      // Pinpoint Guard
+    6494,      // Performapal Whip Snake
+    5645,      // Imairuka
+    9094,      // Powercode Talker
+    2085,      // Hane-Hane
+    5698,      // Hyper-Ancient Shark Megalodon
 ];
