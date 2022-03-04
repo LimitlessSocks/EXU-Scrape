@@ -2038,3 +2038,10 @@ During your Standby Phase, banish 1 material attached to this card. If you canno
 [main] note: [-] removed old card 2822731 (Boom-Boom, the Pyrabbit Headquarters!)
 [main] note: [-] removed old card 498720 (Amazoness Sorcery)
 [main] Time elapsed: 23.52674s
+[final] Completing scrape at 03-04-2022.02.54.05
+[main] Reading tmp/db-03-04-2022.01.58.20.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1731744", "2034217", "1742760", "1742760", "1744486", "1744486", "1809726", "1951615", "1764858", "1764903", "1765081", "1935649", "1731744", "2014237", "2071171", "2284791", "2926841", "1764858", "1765081", "1764903", "2352051", "2352051", "2352054", "2352054", "2352060", "1951615", "2458352", "2509121", "2515548", "2532165", "2566443", "1996487", "2687144", "2598148", "2598148", "2786673", "2786673", "2317121", "2566443", "2624829", "2638480", "2645782", "2546535", "2546535", "2527828", "2527828", "2204625", "1996487", "2458352", "1333035", "1333035", "2824255", "2867435", "2916237"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 2 associated scrape(s).
