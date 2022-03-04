@@ -401,6 +401,45 @@ const TEST_CASES = [
     ["case", [
         CASE_SENSITIVE,
     ]],
+    ["at 0", [
+        { limit: "0" },
+    ]],
+    ["limit 1", [
+        { limit: "1" },
+    ]],
+    ["at 2", [
+        { limit: "2" },
+    ]],
+    ["limit 3", [
+        { limit: "3" },
+    ]],
+    ["at any", [
+        { limit: "any" },
+    ]],
+    ["ban", [
+        { limit: "0" },
+    ]],
+    ["banned", [
+        { limit: "0" },
+    ]],
+    ["limited", [
+        { limit: "1" },
+    ]],
+    ["limit", [
+        { limit: "1" },
+    ]],
+    ["semi-limited", [
+        { limit: "2" },
+    ]],
+    ["semi-limit", [
+        { limit: "2" },
+    ]],
+    ["unlimited", [
+        { limit: "3" },
+    ]],
+    ["unlimit", [
+        { limit: "3" },
+    ]],
 ];
 
 module.exports = function testTagExtractParse(debug = false) {

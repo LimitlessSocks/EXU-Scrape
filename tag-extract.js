@@ -164,6 +164,11 @@ const INDICATORS = [
     new TagIndicator(/and/i, () => OPERATOR_INLINE_AND),
     new TagIndicator(/!|not/i, () => OPERATOR_NOT),
     new TagIndicator(/case(d| sensitive)?/i, () => CASE_SENSITIVE),
+    new TagIndicator(/(?:limit|at)\s*(-?\d+|any)/, (match) => ({ limit: match[1] })),
+    new TagIndicator(/semi[- ]?limit(ed)?/, () => ({ limit: "2" })),
+    new TagIndicator(/limit(ed)?/, () => ({ limit: "1" })),
+    new TagIndicator(/unlimit(ed)?/, () => ({ limit: "3" })),
+    new TagIndicator(/ban(ed)?/, () => ({ limit: "0" })),
     new TagIndicator(/(?:dated?|added|created|made)\s*(>=?|<=?|[/!]?==?|before|after)?\s*(\d{4}|\d+\/\d+\/\d+)/, (match) => ({
         dateCompare: getComparison(match[1]),
         date: match[2],

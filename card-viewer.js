@@ -892,6 +892,7 @@ CardViewer.createFilter = function (query, exclude = null) {
         }
     }
     // console.log(query);
+    let limitProperty = CardViewer.getLimitProperty();
     let filters = [
         // type filter
         CardViewer.Filters.getFilter(query.type),
@@ -912,7 +913,8 @@ CardViewer.createFilter = function (query, exclude = null) {
         CardViewer.textComparator(query.author, _F.propda("username")),
         // limit filter
         // CardViewer.textAnyComparator(query.limit, _F.propda(CardViewer.getLimitProperty())),
-        CardViewer.equalAnyComparator(query.limit, _F.propda(CardViewer.getLimitProperty())),
+        // cards are at 3 unless otherwise specified
+        CardViewer.equalAnyComparator(query.limit, card => card[limitProperty] ?? 3),
         // category filter
         (card) =>
             query.category === "any" || !query.category
