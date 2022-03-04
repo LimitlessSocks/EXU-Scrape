@@ -1560,3 +1560,10 @@
 [9954291] Finished scraping.
 [main] filling in missing exu_limit
 [main] Time elapsed: 49.87989s
+[final] Completing scrape at 03-04-2022.17.13.11
+[main] Reading tmp/db-03-04-2022.17.09.08.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: []
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
