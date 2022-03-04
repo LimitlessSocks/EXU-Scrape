@@ -928,6 +928,7 @@ CardViewer.createFilter = function (query, exclude = null) {
         // CardViewer.textAnyComparator(query.visibility, _F.propda("custom")),
         (card) => checkVisibility(card, query.visibility),
     ];
+    /*
     // import filters
     // console.log(query, !query.alsoImported);
     if(!query.alsoImported) {
@@ -938,6 +939,7 @@ CardViewer.createFilter = function (query, exclude = null) {
             CardViewer.boolExactComparator(query.notImported, _F.propda("exu_ban_import")),
         );
     }
+    */
     
     if(query.notNormal) {
         filters.push((card) => !CardViewer.Filters.isNormal(card));
