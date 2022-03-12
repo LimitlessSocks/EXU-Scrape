@@ -943,6 +943,13 @@ CardViewer.createFilter = function (query, exclude = null) {
     }
     */
     
+    if(query.main_effect) {
+        filters.push(CardViewer.regexComparator(query.main_effect, _F.propda("effect")));
+    }
+    if(query.pend_effect) {
+        filters.push(CardViewer.regexComparator(query.pend_effect, _F.propda("pendulum_effect")));
+    }
+    
     if(query.notNormal) {
         filters.push((card) => !CardViewer.Filters.isNormal(card));
     }

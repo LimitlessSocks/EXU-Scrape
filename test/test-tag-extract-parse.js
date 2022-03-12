@@ -440,6 +440,12 @@ const TEST_CASES = [
     ["unlimit", [
         { limit: "3" },
     ]],
+    ["pend: [destroy this card]", [
+        { pend_effect: "destroy this card" },
+    ]],
+    ["text: [destroy this card]", [
+        { main_effect: "destroy this card" },
+    ]],
 ];
 
 module.exports = function testTagExtractParse(debug = false) {
