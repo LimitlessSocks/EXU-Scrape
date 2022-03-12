@@ -1,0 +1,4 @@
+[main] Created log file log/banlist-03-12-2022.01.52.30.txt
+[main] Reading banlist.json
+[main] Creating new file banlist-date-added.json
+[main] Started scraping
