@@ -1752,3 +1752,10 @@ If this card is Special Summoned or sent to the GY: Target 1 "Cyberdark" monster
 [main] note: [-] removed old card 2832492 (R-Genex Line and Lure)
 [main] note: [-] removed old card 2909848 (Σ-Genex Final Frontier)
 [main] Time elapsed: 68.4870161s
+[final] Completing scrape at 03-16-2022.16.45.17
+[main] Reading tmp/db-03-16-2022.15.35.27.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["2974113", "2720817", "2971282", "2971306", "3010599", "1353873", "1742760", "1744486", "2976597", "1938609", "1242013", "1242013", "1945196", "1995292", "1995292", "1995292", "1995292", "1993288", "1993288", "1993288", "3859", "2367433", "2538044", "2538049", "2789488", "2538044", "2538049", "456740"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
