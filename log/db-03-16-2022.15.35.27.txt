@@ -1,0 +1,1754 @@
+[main] Created log file log/db-03-16-2022.15.35.27.txt
+[main] Reading db.json
+[main] Reading db-date-added.json
+[main] Started scraping
+[main] Making ID requests
+[main] Finalizing ID requests
+[main] Waiting for results
+[main] Debug: {"hitCount"=>151, "id"=>0, "missCount"=>0, "ratio"=>0.3038229376257545}
+[main] Debug: {"hitCount"=>315, "id"=>1, "missCount"=>0, "ratio"=>0.6338028169014085}
+[main] Debug: {"hitCount"=>350, "id"=>2, "missCount"=>0, "ratio"=>0.704225352112676}
+[main] Debug: {"hitCount"=>436, "id"=>3, "missCount"=>0, "ratio"=>0.8772635814889336}
+[main] Debug: {"hitCount"=>465, "id"=>4, "missCount"=>0, "ratio"=>0.9356136820925554}
+[main] Debug: {"hitCount"=>469, "id"=>5, "missCount"=>0, "ratio"=>0.943661971830986}
+[main] Debug: {"hitCount"=>469, "id"=>6, "missCount"=>0, "ratio"=>0.943661971830986}
+[main] Debug: {"hitCount"=>472, "id"=>7, "missCount"=>0, "ratio"=>0.9496981891348087}
+[main] Debug: {"hitCount"=>472, "id"=>8, "missCount"=>0, "ratio"=>0.9496981891348087}
+[main] Debug: {"hitCount"=>472, "id"=>9, "missCount"=>0, "ratio"=>0.9496981891348087}
+[main] Debug: {"hitCount"=>495, "id"=>10, "missCount"=>0, "ratio"=>0.9959758551307848}
+[main] Successfully read all decklists
+[10040214] Starting to parse 10040214
+[10040214] Finished scraping.
+[10050401] Starting to parse 10050401
+[10050401] Finished scraping.
+[10050632] Starting to parse 10050632
+[10050632] note: property 'effect' of card id 2974113 (Victory Construction!) was changed
+[10050632] from: Special Summon 1 LIGHT Machine monster with 1200 original ATK and 1000 or less DEF from your Deck, and if you do, it cannot be destroyed by battle or card effects and it gains 1000 ATK until the end of the next turn. If all monsters you control are LIGHT Machine monsters with 1200 original ATK and 1000 or less original DEF (min. 1) and you have attacked this turn, you can activate this card from your hand. You can only activate 1 "Victory Construction!" per turn.
+[10050632] to: Special Summon 1 LIGHT Machine monster with 1200 original ATK and 1000 or less DEF from your Deck, and if you do, it cannot be destroyed by battle or card effects, it gains 1000 ATK until the end of the next turn and its name becomes "Gradius". If all Effect Monsters you control are LIGHT Machine monsters with 1200 or less original ATK and 1000 or less original DEF (min. 1) and you have attacked this turn, you can activate this card from your hand. You can only activate 1 "Victory Construction!" per turn.
+[10050632] Finished scraping.
+[10136453] Starting to parse 10136453
+[10136453] note: property 'effect' of card id 2720817 (Angel Fish) was changed
+[10136453] from: (This is also always treated as a Fish Type)
+Once per turn: You can banish 1 Fish monster from your Extra Deck or 1 Fairy monster from your GY; Draw 1 card.
+[10136453] to: (This is also always treated as a Fish Type)
+Once per turn: You can banish 1 Fish monster from your face-up Extra Deck or 1 Fairy monster from your GY; Draw 1 card.
+[10136453] note: [+] added new card 2983636 (Meta-Data Dependence)
+[10136453] note: [+] added new card 3024167 (Rebirth of Aramesir)
+[10136453] note: [+] added new card 3050044 (Retribution of Yata-Garasu)
+[10136453] note: [+] added new card 2956407 (Sparkles!!!)
+[10136453] note: [+] added new card 2950006 (Summoning of Thunder)
+[10136453] note: [+] added new card 3022252 (The Cursed Hat)
+[10136453] note: [+] added new card 3022252 (The Cursed Hat)
+[10136453] warning: card id 3022252 (The Cursed Hat) was duplicated in <10136453> from <10136453>
+[10136453] note: [+] added new card 3024336 (Unbreakable Heart)
+[10136453] note: [+] added new card 2976242 (Wail of the Seas)
+[10136453] note: [+] added new card 2976600 (Ambush of the Swarm)
+[10136453] note: [+] added new card 2976548 (Bolstering the Underdogs)
+[10136453] note: [+] added new card 2945630 (Destruction of the Risen Phoenix)
+[10136453] note: [+] added new card 3033681 (Fool's Folly)
+[10136453] note: [+] added new card 2956327 (Pinpoint Charge)
+[10136453] note: [+] added new card 3062022 (π)
+[10136453] note: [+] added new card 3044139 (Lord of the Red Dragon Axefiend)
+[10136453] note: [+] added new card 2896159 (Subject 160: Manly Mantis)
+[10136453] note: [+] added new card 2917572 (Abyssal God - Galvathot)
+[10136453] note: [+] added new card 2996689 (Carrion - Knight of All Evil)
+[10136453] note: [+] added new card 2997057 (Iterator A14: Penumbra Unleashed)
+[10136453] note: [+] added new card 2989610 (Number A39: Dystopia)
+[10136453] note: [+] added new card 2948494 (Ballroom Dragonmaid)
+[10136453] note: [+] added new card 3026693 (Bone Legionnaire)
+[10136453] note: [+] added new card 3042765 (Soul-Bearing Sisters, Soleil & Brandell)
+[10136453] note: property 'name' of card id 2971282 (AXyz Dweller of the Seas) was changed
+[10136453] from: Accursed Dweller
+[10136453] to: AXyz Dweller of the Seas
+[10136453] note: property 'name' of card id 2971306 (AXyz Tornado Drake) was changed
+[10136453] from: Accursed Tornado Drake
+[10136453] to: AXyz Tornado Drake
+[10136453] note: property 'effect' of card id 3010599 (Iterator 89: Gr-ant-ite) was changed
+[10136453] from: 2 Level 11 monsters
+(This card is also always treated as a Rock monster.)
+You can also Xyz Summon this card by using 1 Insect or Rock Xyz Monster you control as material (transfer its materials to this card.) If you Special Summon a non-Effect Insect or Rock monster(s) (Quick Effect): You can detach 1 material from this card; Special Summon 1 monster from your Deck or GY in Defense Position with the same original name as 1 of those monsters, or, f you have both Insect and Rock monsters on your field, other than this card and those Special Summoned monsters, you can Special Summon 1 Insect or Rock monster from your hand, Deck, or GY in Defense Position, instead. You can only use each effect of "Iterator 89: Gr-ant-ite" once per turn.
+[10136453] to: 2 Level 11 monsters
+(This card is also always treated as a Rock monster.)
+You can also Xyz Summon this card by using 1 Insect or Rock Xyz Monster you control as material (transfer its materials to this card.) If you Special Summon a non-Effect Insect or Rock monster(s) (Quick Effect): You can detach 1 material from this card; Special Summon 1 monster from your Deck or GY in Defense Position with the same original name as 1 of those monsters, or, if you have both Insect and Rock monsters on your field, other than this card and those Special Summoned monsters, you can Special Summon 1 Insect or Rock monster from your hand, Deck, or GY in Defense Position, instead. You can only use each effect of "Iterator 89: Gr-ant-ite" once per turn.
+[10136453] Finished scraping.
+[10136457] Starting to parse 10136457
+[10136457] note: [+] added new card 3040318 (Caltrops)
+[10136457] Finished scraping.
+[2166281] Starting to parse 2166281
+[2166281] warning: card id 8463 (Black Fang Magician) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 6634 (Odd-Eyes Pendulum Dragon) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 3283 (Peten the Dark Clown) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7766 (The Phantom Knights of Cloven Helm) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7766 (The Phantom Knights of Cloven Helm) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7767 (The Phantom Knights of Fragile Armor) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7767 (The Phantom Knights of Fragile Armor) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7765 (The Phantom Knights of Ragged Gloves) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7765 (The Phantom Knights of Ragged Gloves) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7764 (The Phantom Knights of Silent Boots) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7764 (The Phantom Knights of Silent Boots) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 82 (Allure of Darkness) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 1236 (Double Summon) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8381 (Foolish Burial Goods) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 2695 (Magical Stone Excavation) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 2954 (Monster Reincarnation) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 4158 (Swords of Revealing Light) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8233 (The Phantom Knights' Rank-Up-Magic Launch) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8233 (The Phantom Knights' Rank-Up-Magic Launch) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 2909 (Mirror Force) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7770 (Phantom Knights' Fog Blade) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7772 (Phantom Knights' Wing) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8534 (The Phantom Knights of Lost Vambrace) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7835 (The Phantom Knights of Shade Brigandine) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 6806 (The Phantom Knights of Shadow Veil) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8535 (The Phantom Knights of Wrong Magnetring) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7728 (Pendulum Reborn) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 6786 (Dark Rebellion Xyz Dragon) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 6786 (Dark Rebellion Xyz Dragon) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8228 (Dark Requiem Xyz Dragon) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8228 (Dark Requiem Xyz Dragon) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8651 (Supreme King Dragon Dark Rebellion) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8651 (Supreme King Dragon Dark Rebellion) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7768 (The Phantom Knights of Break Sword) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8510 (The Phantom Knights of Cursed Javelin) was duplicated in <2166281> from <2166281>
+[2166281] Finished scraping.
+[2775342] Starting to parse 2775342
+[2775342] Finished scraping.
+[2795851] Starting to parse 2795851
+[2795851] Finished scraping.
+[2942421] Starting to parse 2942421
+[2942421] Finished scraping.
+[2952495] Starting to parse 2952495
+[2952495] Finished scraping.
+[3068977] Starting to parse 3068977
+[3068977] Finished scraping.
+[3400704] Starting to parse 3400704
+[3400704] Finished scraping.
+[3585517] Starting to parse 3585517
+[3585517] Finished scraping.
+[3734721] Starting to parse 3734721
+[3734721] Finished scraping.
+[4016329] Starting to parse 4016329
+[4016329] Finished scraping.
+[4026672] Starting to parse 4026672
+[4026672] Finished scraping.
+[4177191] Starting to parse 4177191
+[4177191] Finished scraping.
+[4237940] Starting to parse 4237940
+[4237940] Finished scraping.
+[4294973] Starting to parse 4294973
+[4294973] Finished scraping.
+[4460492] Starting to parse 4460492
+[4460492] Finished scraping.
+[4475780] Starting to parse 4475780
+[4475780] Finished scraping.
+[4493192] Starting to parse 4493192
+[4493192] Finished scraping.
+[4523067] Starting to parse 4523067
+[4523067] Finished scraping.
+[4587548] Starting to parse 4587548
+[4587548] Finished scraping.
+[4604736] Starting to parse 4604736
+[4604736] Finished scraping.
+[4667428] Starting to parse 4667428
+[4667428] Finished scraping.
+[4757288] Starting to parse 4757288
+[4757288] Finished scraping.
+[4769548] Starting to parse 4769548
+[4769548] Finished scraping.
+[4804758] Starting to parse 4804758
+[4804758] Finished scraping.
+[4805092] Starting to parse 4805092
+[4805092] Finished scraping.
+[4806770] Starting to parse 4806770
+[4806770] Finished scraping.
+[4810529] Starting to parse 4810529
+[4810529] Finished scraping.
+[4825931] Starting to parse 4825931
+[4825931] Finished scraping.
+[4910893] Starting to parse 4910893
+[4910893] Finished scraping.
+[4936132] Starting to parse 4936132
+[4936132] Finished scraping.
+[4960158] Starting to parse 4960158
+[4960158] Finished scraping.
+[5109480] Starting to parse 5109480
+[5109480] Finished scraping.
+[5187975] Starting to parse 5187975
+[5187975] Finished scraping.
+[5194131] Starting to parse 5194131
+[5194131] Finished scraping.
+[5219266] Starting to parse 5219266
+[5219266] Finished scraping.
+[5260210] Starting to parse 5260210
+[5260210] Finished scraping.
+[5269100] Starting to parse 5269100
+[5269100] Finished scraping.
+[5297494] Starting to parse 5297494
+[5297494] Finished scraping.
+[5323883] Starting to parse 5323883
+[5323883] Finished scraping.
+[5496883] Starting to parse 5496883
+[5496883] Finished scraping.
+[5541683] Starting to parse 5541683
+[5541683] Finished scraping.
+[5541864] Starting to parse 5541864
+[5541864] Finished scraping.
+[5549562] Starting to parse 5549562
+[5549562] Finished scraping.
+[5571430] Starting to parse 5571430
+[5571430] Finished scraping.
+[5597068] Starting to parse 5597068
+[5597068] Finished scraping.
+[5601607] Starting to parse 5601607
+[5601607] Finished scraping.
+[5615821] Starting to parse 5615821
+[5615821] Finished scraping.
+[5615949] Starting to parse 5615949
+[5615949] Finished scraping.
+[5642481] Starting to parse 5642481
+[5642481] Finished scraping.
+[5647256] Starting to parse 5647256
+[5647256] Finished scraping.
+[5659403] Starting to parse 5659403
+[5659403] Finished scraping.
+[5668288] Starting to parse 5668288
+[5668288] Finished scraping.
+[5675322] Starting to parse 5675322
+[5675322] Finished scraping.
+[5700651] Starting to parse 5700651
+[5700651] Finished scraping.
+[5705030] Starting to parse 5705030
+[5705030] Finished scraping.
+[5713627] Starting to parse 5713627
+[5713627] Finished scraping.
+[5731990] Starting to parse 5731990
+[5731990] Finished scraping.
+[5736933] Starting to parse 5736933
+[5736933] Finished scraping.
+[5744520] Starting to parse 5744520
+[5744520] Finished scraping.
+[5749949] Starting to parse 5749949
+[5749949] Finished scraping.
+[5751277] Starting to parse 5751277
+[5751277] Finished scraping.
+[5766412] Starting to parse 5766412
+[5766412] Finished scraping.
+[5781120] Starting to parse 5781120
+[5781120] Finished scraping.
+[5782891] Starting to parse 5782891
+[5782891] Finished scraping.
+[5793524] Starting to parse 5793524
+[5793524] Finished scraping.
+[5822335] Starting to parse 5822335
+[5822335] Finished scraping.
+[5830740] Starting to parse 5830740
+[5830740] Finished scraping.
+[5833853] Starting to parse 5833853
+[5833853] Finished scraping.
+[5834507] Starting to parse 5834507
+[5834507] Finished scraping.
+[5839316] Starting to parse 5839316
+[5839316] Finished scraping.
+[5844326] Starting to parse 5844326
+[5844326] Finished scraping.
+[5855756] Starting to parse 5855756
+[5855756] Finished scraping.
+[5856014] Starting to parse 5856014
+[5856014] Finished scraping.
+[5857248] Starting to parse 5857248
+[5857248] Finished scraping.
+[5857281] Starting to parse 5857281
+[5857281] Finished scraping.
+[5857285] Starting to parse 5857285
+[5857285] note: [+] added new card 9882 (Fusion Destiny)
+[5857285] note: [+] added new card 2951 (Monster Gate)
+[5857285] note: [+] added new card 8030 (Pot of Desires)
+[5857285] Finished scraping.
+[5860293] Starting to parse 5860293
+[5860293] Finished scraping.
+[5868144] Starting to parse 5868144
+[5868144] Finished scraping.
+[5869257] Starting to parse 5869257
+[5869257] Finished scraping.
+[5884678] Starting to parse 5884678
+[5884678] Finished scraping.
+[5887296] Starting to parse 5887296
+[5887296] Finished scraping.
+[5894044] Starting to parse 5894044
+[5894044] Finished scraping.
+[5895579] Starting to parse 5895579
+[5895579] Finished scraping.
+[5895706] Starting to parse 5895706
+[5895706] Finished scraping.
+[5904696] Starting to parse 5904696
+[5904696] note: property 'effect' of card id 1353873 (Elemental Contraption: Robusto) was changed
+[5904696] from: Special Summon this card as an Effect Monster (Machine/EARTH/Level 5/ATK 1000/DEF 2000) with the following effect. (This card is also still a Trap). 
+- When your opponent Special Summons a monster(s): You can activate 1 of the following effects.
+● Target 1 non-Fusion "Contraption" monster in your GY; Special Summon it.
+● Set 1 "Elemental Contraption" card in your GY to your Spell/Trap Zone. It can be activated this turn.
+You can only use each effect of "Elemental Contraption: Robusto" once per turn. You cannot Special Summon monsters from your hand, Deck or GY, except "Contraption" monsters.
+[5904696] to: Special Summon this card as an Effect Monster (Machine/EARTH/Level 5/ATK 1000/DEF 2000) with the following effect. (This card is also still a Trap). 
+- If your opponent Special Summons a monster(s): You can activate 1 of these.
+● Target 1 non-Fusion "Contraption" monster in your GY; Special Summon it.
+● Set 1 "Elemental Contraption" card in your GY to your Spell/Trap Zone. It can be activated this turn.
+You can only use each effect of "Elemental Contraption: Robusto" once per turn. You cannot Special Summon monsters from your hand, Deck or GY, except "Contraption" monsters.
+[5904696] Finished scraping.
+[5917260] Starting to parse 5917260
+[5917260] Finished scraping.
+[5935151] Starting to parse 5935151
+[5935151] Finished scraping.
+[5936560] Starting to parse 5936560
+[5936560] Finished scraping.
+[5954949] Starting to parse 5954949
+[5954949] Finished scraping.
+[5967432] Starting to parse 5967432
+[5967432] Finished scraping.
+[5979508] Starting to parse 5979508
+[5979508] Finished scraping.
+[5979832] Starting to parse 5979832
+[5979832] Finished scraping.
+[6008240] Starting to parse 6008240
+[6008240] Finished scraping.
+[6011815] Starting to parse 6011815
+[6011815] Finished scraping.
+[6040042] Starting to parse 6040042
+[6040042] Finished scraping.
+[6044732] Starting to parse 6044732
+[6044732] Finished scraping.
+[6086340] Starting to parse 6086340
+[6086340] Finished scraping.
+[6109070] Starting to parse 6109070
+[6109070] Finished scraping.
+[6116920] Starting to parse 6116920
+[6116920] note: property 'effect' of card id 1742760 (Frozen Claw Ritual Dragon) was changed
+[6116920] from: (This card is always treated as a "Tundran" card). You can Ritual Summon this card with any "Tundran" Ritual Spell. If this card is Ritual Summoned using only WATER monsters: All monsters your opponent currently controls have their ATK and DEF halved. This card can attack all monsters your opponent controls, once each. If a monster effect is activated (Quick Effect): You can change the original ATK of 1 monster you control to 0; negate the activation, and if you do, this card gains ATK equal to half of that negated monster's original ATK. You can only use each effect of "Tundran Claw Ritual Dragon" once per turn.
+[6116920] to: (This card is always treated as a "Tundran" card). You can Ritual Summon this card with any "Tundran" Ritual Spell. If this card is Ritual Summoned using only WATER monsters: All monsters your opponent currently controls have their ATK and DEF halved. This card can attack all monsters your opponent controls, once each. If a monster effect is activated (Quick Effect): You can change the original ATK of 1 monster you control to 0; negate the activation, and if you do, this card gains ATK equal to half of that negated monster's original ATK. You can only use each effect of "Frozen Claw Ritual Dragon" once per turn.
+[6116920] note: property 'effect' of card id 1744486 (Frozen Claw Winterstorm Dragon) was changed
+[6116920] from: (This card is always treated as a "Tundran" card). You can Ritual Summon this card with any "Tundran" Ritual Spell. If this card was Ritual Summoned using 2 "Tundran" Monsters, your opponent cannot target this Ritual Summoned card with card effects until the next End Phase. This card can attack all monsters your opponent controls, once each. (Quick Effect) You can target 1 monster on the field; its effects are negated until the End Phase, also this card gains ATK equal to half of that negated monster's original ATK. Other monsters you control cannot attack the turn this effect is activated, also other monsters you control cannot attack while this card has 4500 or more ATK. You can only use each effect of "Tundran Claw Winterstorm Dragon" once per turn.
+[6116920] to: (This card is always treated as a "Tundran" card). You can Ritual Summon this card with any "Tundran" Ritual Spell. If this card was Ritual Summoned using 2 "Tundran" Monsters, your opponent cannot target this Ritual Summoned card with card effects until the next End Phase. This card can attack all monsters your opponent controls, once each. (Quick Effect) You can target 1 monster on the field; its effects are negated until the End Phase, also this card gains ATK equal to half of that negated monster's original ATK. Other monsters you control cannot attack the turn this effect is activated, also other monsters you control cannot attack while this card has 4500 or more ATK. You can only use each effect of "Frozen Claw Winterstorm Dragon" once per turn.
+[6116920] Finished scraping.
+[6123628] Starting to parse 6123628
+[6123628] Finished scraping.
+[6124612] Starting to parse 6124612
+[6124612] Finished scraping.
+[6135219] Starting to parse 6135219
+[6135219] Finished scraping.
+[6156689] Starting to parse 6156689
+[6156689] Finished scraping.
+[6169009] Starting to parse 6169009
+[6169009] Finished scraping.
+[6188330] Starting to parse 6188330
+[6188330] Finished scraping.
+[6209092] Starting to parse 6209092
+[6209092] Finished scraping.
+[6222166] Starting to parse 6222166
+[6222166] Finished scraping.
+[6226330] Starting to parse 6226330
+[6226330] Finished scraping.
+[6233896] Starting to parse 6233896
+[6233896] Finished scraping.
+[6236137] Starting to parse 6236137
+[6236137] Finished scraping.
+[6239411] Starting to parse 6239411
+[6239411] Finished scraping.
+[6245917] Starting to parse 6245917
+[6245917] Finished scraping.
+[6247363] Starting to parse 6247363
+[6247363] Finished scraping.
+[6256752] Starting to parse 6256752
+[6256752] Finished scraping.
+[6262300] Starting to parse 6262300
+[6262300] Finished scraping.
+[6267789] Starting to parse 6267789
+[6267789] Finished scraping.
+[6291306] Starting to parse 6291306
+[6291306] Finished scraping.
+[6292623] Starting to parse 6292623
+[6292623] Finished scraping.
+[6294677] Starting to parse 6294677
+[6294677] Finished scraping.
+[6318313] Starting to parse 6318313
+[6318313] Finished scraping.
+[6334551] Starting to parse 6334551
+[6334551] Finished scraping.
+[6347993] Starting to parse 6347993
+[6347993] Finished scraping.
+[6353294] Starting to parse 6353294
+[6353294] warning: card id 1318485 (Ambush Lotus) was duplicated in <6353294> from <>
+[6353294] warning: card id 1619088 (Fishborg Defender) was duplicated in <6353294> from <>
+[6353294] warning: card id 1318524 (Phoenixian Cluster Hippeastrum) was duplicated in <6353294> from <>
+[6353294] warning: card id 1318550 (Reynard Chemist) was duplicated in <6353294> from <>
+[6353294] warning: card id 1102188 (Yova the Wind Silencer) was duplicated in <6353294> from <5869257>
+[6353294] Finished scraping.
+[6353380] Starting to parse 6353380
+[6353380] warning: card id 1765725 (Number 108: Divine Wind Dragon) was duplicated in <6353380> from <6353294>
+[6353380] Finished scraping.
+[6353400] Starting to parse 6353400
+[6353400] warning: card id 1638076 (Horror of the Depths) was duplicated in <6353400> from <>
+[6353400] warning: card id 1524802 (Halter of the Winds' Messages, Yova) was duplicated in <6353400> from <5869257>
+[6353400] Finished scraping.
+[6353414] Starting to parse 6353414
+[6353414] warning: card id 1755179 (Transient Herald of the Inferno) was duplicated in <6353414> from <6353380>
+[6353414] note: property 'name' of card id 2976597 (Cosmic Dragon - Cinder) was changed
+[6353414] from: Dragon of the Void - Cinder
+[6353414] to: Cosmic Dragon - Cinder
+[6353414] warning: card id 1653369 (Naturia Baihu) was duplicated in <6353414> from <>
+[6353414] warning: card id 2020789 (Union Conductor) was duplicated in <6353414> from <>
+[6353414] Finished scraping.
+[6353430] Starting to parse 6353430
+[6353430] warning: card id 2031615 (Draconian Spirit) was duplicated in <6353430> from <4804758>
+[6353430] warning: card id 797597 (Kaiser Arena) was duplicated in <6353430> from <>
+[6353430] warning: card id 1708820 (Numeron Extraction) was duplicated in <6353430> from <>
+[6353430] warning: card id 1319058 (Resurrected Blade of Elma) was duplicated in <6353430> from <>
+[6353430] warning: card id 1523787 (The Winds Will Never Respond) was duplicated in <6353430> from <5869257>
+[6353430] Finished scraping.
+[6353449] Starting to parse 6353449
+[6353449] warning: card id 1958597 (Jillian, False Royalty) was duplicated in <6353449> from <6353414>
+[6353449] note: property 'effect' of card id 1938609 (Crimson Vampire of Darkness, Scharhrot) was changed
+[6353449] from: 3+ Level 7 monsters
+Once per turn, you can also Xyz Summon "Crimson Vampire of Darkness, Scharhrot" by using a "Vampire" Xyz monster you control as material. (Transfer its materials to this card.) You can detach 1 material from this card, then target 1 monster in your opponent's GY; Special Summon that target to your field, and that monster is treated as a "Vampire" monster for the rest of this turn. You can only use this effect of "Crimson Vampire of Darkness, Scharhrot" once per turn. Once per turn: When a monster that is owned by your opponent is Summoned to your field, you can choose a Level between 1 and 8, all "Vampire" monsters become the Level that you chose until the End Phase.
+[6353449] to: 3+ Level 7 monsters
+Once per turn, you can also Xyz Summon "Crimson Vampire of Darkness, Scharhrot" by using 1 "Vampire" Xyz Monster you control as material (transfer its materials to this card.) During your Main Phase: You can detach 1 material from this card, then target 1 monster in your opponent's GY; Special Summon it to your field, and if you do, it is treated as a "Vampire" monster for the rest of this turn. You can only use this effect of "Crimson Vampire of Darkness, Scharhrot" once per turn. Once per turn, when a monster(s) that is owned by your opponent is Summoned to your field: You can declare 1 Level between 1 and 8; all "Vampire" monsters become that declared Level until the End Phase.
+[6353449] Finished scraping.
+[6353457] Starting to parse 6353457
+[6353457] warning: card id 1865422 (Majespecter Dragon - Ryu) was duplicated in <6353457> from <>
+[6353457] warning: card id 1239281 (Volcanic Scavenger) was duplicated in <6353457> from <5668288>
+[6353457] warning: card id 1638270 (Shien's Will) was duplicated in <6353457> from <>
+[6353457] warning: card id 1743438 (Spellbook of Silencing) was duplicated in <6353457> from <>
+[6353457] warning: card id 1862633 (True King of Dimension's End) was duplicated in <6353457> from <>
+[6353457] warning: card id 1768966 (Hieratic Dragon of Khonsu) was duplicated in <6353457> from <>
+[6353457] warning: card id 1319245 (Lavalval Shadow) was duplicated in <6353457> from <>
+[6353457] note: property 'name' of card id 1242013 (Gusto Parro) was changed
+[6353457] from: Gusto Parrot
+[6353457] to: Gusto Parro
+[6353457] note: property 'effect' of card id 1242013 (Gusto Parro) was changed
+[6353457] from: 2 WIND monsters, including a "Gusto" monsterOther "Gusto" monsters you control are unaffected by your opponent's card effects. You can target 2 "Gusto" monsters in your GY; Special Summon them in face-down Defense Position, then send 1 WIND monster from your hand or field to the GY. You can only use this effect of "Gusto Parrot" once per turn.
+[6353457] to: 2 WIND monsters, including a "Gusto" monster
+Other "Gusto" monsters you control are unaffected by your opponent's card effects. You can target 2 "Gusto" monsters in your GY; Special Summon them in face-down Defense Position, then send 1 WIND monster from your hand or field to the GY. You can only use this effect of "Gusto Parro" once per turn.
+[6353457] Finished scraping.
+[6353465] Starting to parse 6353465
+[6353465] warning: card id 1048356 (Anne, Lightsworn Incensor) was duplicated in <6353465> from <6353457>
+[6353465] warning: card id 1374705 (Bone Chimera) was duplicated in <6353465> from <6353294>
+[6353465] warning: card id 1097563 (Danger! Kirin!) was duplicated in <6353465> from <5844326>
+[6353465] warning: card id 907798 (Danger!? Buru?) was duplicated in <6353465> from <5844326>
+[6353465] warning: card id 1205167 (Danger!? Kikiyaon?) was duplicated in <6353465> from <5844326>
+[6353465] warning: card id 1307739 (Danger!? Wolpertinger?) was duplicated in <6353465> from <5844326>
+[6353465] warning: card id 1537498 (Ghost Wind & Bright Mist) was duplicated in <6353465> from <6353294>
+[6353465] warning: card id 1194334 (Inspector Enforcer) was duplicated in <6353465> from <6353294>
+[6353465] warning: card id 1281323 (Muto, the Toxic Duo Kaiju) was duplicated in <6353465> from <6353457>
+[6353465] warning: card id 1318550 (Reynard Chemist) was duplicated in <6353465> from <6353294>
+[6353465] warning: card id 1544585 (Soul Eater Azande) was duplicated in <6353465> from <6353294>
+[6353465] warning: card id 1222148 (Called by the Spell Book) was duplicated in <6353465> from <6353430>
+[6353465] warning: card id 1393301 (Cosmic Vacuum) was duplicated in <6353465> from <6353430>
+[6353465] warning: card id 913982 (Digital Hallway) was duplicated in <6353465> from <6353430>
+[6353465] warning: card id 1537032 (Ember Cards) was duplicated in <6353465> from <6353430>
+[6353465] warning: card id 930975 (Equip Equality) was duplicated in <6353465> from <6353430>
+[6353465] warning: card id 1717113 (Glimmering Drytronis) was duplicated in <6353465> from <>
+[6353465] warning: card id 610240 (Growthblade) was duplicated in <6353465> from <6353430>
+[6353465] warning: card id 1409651 (Underwhelming Observations) was duplicated in <6353465> from <6353430>
+[6353465] warning: card id 1333641 (Chained Down) was duplicated in <6353465> from <6353449>
+[6353465] warning: card id 1577575 (Darkest Desires) was duplicated in <6353465> from <6353449>
+[6353465] warning: card id 1395956 (Faster than a Speeding Bullet!) was duplicated in <6353465> from <6353449>
+[6353465] warning: card id 1144500 (Free to be Together) was duplicated in <6353465> from <6353449>
+[6353465] warning: card id 1409993 (Localized Typhoon) was duplicated in <6353465> from <6353449>
+[6353465] warning: card id 1318849 (Power Seal) was duplicated in <6353465> from <6353449>
+[6353465] warning: card id 1450950 (You Are Not the Father!) was duplicated in <6353465> from <6353449>
+[6353465] warning: card id 1450929 (You Are the Father!) was duplicated in <6353465> from <6353449>
+[6353465] warning: card id 928560 (Doom Emperor Dragon) was duplicated in <6353465> from <6353380>
+[6353465] warning: card id 1239767 (Hylablazing Champion) was duplicated in <6353465> from <6353380>
+[6353465] warning: card id 1638076 (Horror of the Depths) was duplicated in <6353465> from <6353400>
+[6353465] warning: card id 1479932 (Painted Soulseaker) was duplicated in <6353465> from <6353380>
+[6353465] warning: card id 1526251 (Sorcerer of the Void) was duplicated in <6353465> from <6353380>
+[6353465] warning: card id 1479910 (Swift Archer Lumis) was duplicated in <6353465> from <6353380>
+[6353465] warning: card id 1289117 (Battalion Buster) was duplicated in <6353465> from <6353294>
+[6353465] Finished scraping.
+[6356932] Starting to parse 6356932
+[6356932] Finished scraping.
+[6358715] Starting to parse 6358715
+[6358715] Finished scraping.
+[6360689] Starting to parse 6360689
+[6360689] Finished scraping.
+[6365184] Starting to parse 6365184
+[6365184] Finished scraping.
+[6402157] Starting to parse 6402157
+[6402157] warning: card id 1658836 (D/D/D Abyssal Doom King Soulomon) was duplicated in <6402157> from <10136453>
+[6402157] Finished scraping.
+[6407622] Starting to parse 6407622
+[6407622] Finished scraping.
+[6412660] Starting to parse 6412660
+[6412660] Finished scraping.
+[6419184] Starting to parse 6419184
+[6419184] warning: card id 1580397 (Ancient Warriors - Terracotta Army) was duplicated in <6419184> from <5749949>
+[6419184] warning: card id 1933842 (Dreadful Arsenal ZZ-ARES - Abyssal Flames) was duplicated in <6419184> from <>
+[6419184] Finished scraping.
+[6438706] Starting to parse 6438706
+[6438706] Finished scraping.
+[6446977] Starting to parse 6446977
+[6446977] Finished scraping.
+[6460257] Starting to parse 6460257
+[6460257] Finished scraping.
+[6511321] Starting to parse 6511321
+[6511321] warning: card id 1920888 (Scrap Turbo) was duplicated in <6511321> from <>
+[6511321] note: property 'name' of card id 1945196 (Zangeki, Hero of Our Time and Savior of Our Universe) was changed
+[6511321] from: Zangeki, Hero of Our Time and Savior of Our Galaxy
+[6511321] to: Zangeki, Hero of Our Time and Savior of Our Universe
+[6511321] warning: card id 1842914 (Kuuroma - Monotonous Maiden) was duplicated in <6511321> from <6040042>
+[6511321] warning: card id 1842888 (Zeniphyr Lanatae) was duplicated in <6511321> from <6086340>
+[6511321] Finished scraping.
+[6514931] Starting to parse 6514931
+[6514931] warning: card id 1516537 (Dinomist Therizino) was duplicated in <6514931> from <6353457>
+[6514931] warning: card id 1245901 (Dinomist Cooldown) was duplicated in <6514931> from <6353457>
+[6514931] Finished scraping.
+[6516859] Starting to parse 6516859
+[6516859] Finished scraping.
+[6524605] Starting to parse 6524605
+[6524605] Finished scraping.
+[6532506] Starting to parse 6532506
+[6532506] Finished scraping.
+[6537631] Starting to parse 6537631
+[6537631] Finished scraping.
+[6556030] Starting to parse 6556030
+[6556030] Finished scraping.
+[6560628] Starting to parse 6560628
+[6560628] warning: card id 1565558 (Charismatic Holy Conversion) was duplicated in <6560628> from <5713627>
+[6560628] warning: card id 1558753 (Charismatic Priestess) was duplicated in <6560628> from <5713627>
+[6560628] Finished scraping.
+[6563112] Starting to parse 6563112
+[6563112] Finished scraping.
+[6582550] Starting to parse 6582550
+[6582550] warning: card id 2609533 (Watery Grave) was duplicated in <6582550> from <>
+[6582550] Finished scraping.
+[6590945] Starting to parse 6590945
+[6590945] Finished scraping.
+[6598717] Starting to parse 6598717
+[6598717] warning: card id 1985232 (Blazing Aura) was duplicated in <6598717> from <>
+[6598717] warning: card id 1966485 (Ledger of Demise) was duplicated in <6598717> from <>
+[6598717] warning: card id 1951635 (Penultimate Offering) was duplicated in <6598717> from <>
+[6598717] warning: card id 1715267 (Cornelius, with Technology of Elder Years) was duplicated in <6598717> from <6353400>
+[6598717] Finished scraping.
+[6598851] Starting to parse 6598851
+[6598851] Finished scraping.
+[6598859] Starting to parse 6598859
+[6598859] Finished scraping.
+[6601142] Starting to parse 6601142
+[6601142] Finished scraping.
+[6604359] Starting to parse 6604359
+[6604359] Finished scraping.
+[6611617] Starting to parse 6611617
+[6611617] Finished scraping.
+[6616619] Starting to parse 6616619
+[6616619] Finished scraping.
+[6622494] Starting to parse 6622494
+[6622494] Finished scraping.
+[6628957] Starting to parse 6628957
+[6628957] Finished scraping.
+[6635173] Starting to parse 6635173
+[6635173] Finished scraping.
+[6645825] Starting to parse 6645825
+[6645825] Finished scraping.
+[6670355] Starting to parse 6670355
+[6670355] Finished scraping.
+[6674104] Starting to parse 6674104
+[6674104] Finished scraping.
+[6677155] Starting to parse 6677155
+[6677155] Finished scraping.
+[6686412] Starting to parse 6686412
+[6686412] Finished scraping.
+[6699578] Starting to parse 6699578
+[6699578] Finished scraping.
+[6707275] Starting to parse 6707275
+[6707275] Finished scraping.
+[6708539] Starting to parse 6708539
+[6708539] Finished scraping.
+[6719358] Starting to parse 6719358
+[6719358] Finished scraping.
+[6733479] Starting to parse 6733479
+[6733479] Finished scraping.
+[6746888] Starting to parse 6746888
+[6746888] Finished scraping.
+[6760980] Starting to parse 6760980
+[6760980] Finished scraping.
+[6771198] Starting to parse 6771198
+[6771198] Finished scraping.
+[6771472] Starting to parse 6771472
+[6771472] warning: card id 1943564 (Avendread Ruby) was duplicated in <6771472> from <6771198>
+[6771472] warning: card id 1943574 (Avendreads, Assemble!) was duplicated in <6771472> from <6771198>
+[6771472] warning: card id 1941018 (Avendread Tale) was duplicated in <6771472> from <6771198>
+[6771472] warning: card id 1941026 (Vendread Commander) was duplicated in <6771472> from <6771198>
+[6771472] Finished scraping.
+[6774584] Starting to parse 6774584
+[6774584] Finished scraping.
+[6780728] Starting to parse 6780728
+[6780728] Finished scraping.
+[6785116] Starting to parse 6785116
+[6785116] Finished scraping.
+[6785271] Starting to parse 6785271
+[6785271] warning: card id 1310876 (Aria Fey of Day) was duplicated in <6785271> from <4910893>
+[6785271] warning: card id 1310877 (Aria Fey of Lune) was duplicated in <6785271> from <4910893>
+[6785271] warning: card id 1310880 (Aria Fey, Mistress of Personality) was duplicated in <6785271> from <4910893>
+[6785271] warning: card id 1499072 (Temperament of Aria Fey) was duplicated in <6785271> from <6353430>
+[6785271] warning: card id 1310884 (Winds of Aria Fey) was duplicated in <6785271> from <4910893>
+[6785271] Finished scraping.
+[6787178] Starting to parse 6787178
+[6787178] Finished scraping.
+[6791911] Starting to parse 6791911
+[6791911] warning: card id 1281323 (Muto, the Toxic Duo Kaiju) was duplicated in <6791911> from <6353457>
+[6791911] Finished scraping.
+[6792668] Starting to parse 6792668
+[6792668] Finished scraping.
+[6792679] Starting to parse 6792679
+[6792679] warning: card id 1945626 (Cyber Dragon Fuhren) was duplicated in <6792679> from <6353457>
+[6792679] warning: card id 1942628 (Cyber Tear Dragon) was duplicated in <6792679> from <6353449>
+[6792679] Finished scraping.
+[6793309] Starting to parse 6793309
+[6793309] warning: card id 1649387 (Subterror Behemoth Rodrake) was duplicated in <6793309> from <6353457>
+[6793309] warning: card id 1798351 (Subterror Ice Cave) was duplicated in <6793309> from <6353457>
+[6793309] warning: card id 1798355 (Subterror Behemoth Darkdealles) was duplicated in <6793309> from <6353430>
+[6793309] Finished scraping.
+[6793361] Starting to parse 6793361
+[6793361] Finished scraping.
+[6793424] Starting to parse 6793424
+[6793424] warning: card id 1942080 (The Time Thieves) was duplicated in <6793424> from <6419184>
+[6793424] Finished scraping.
+[6793437] Starting to parse 6793437
+[6793437] warning: card id 1731744 (Artifact Ame-No-Nuboku) was duplicated in <6793437> from <10040214>
+[6793437] Finished scraping.
+[6793451] Starting to parse 6793451
+[6793451] Finished scraping.
+[6794841] Starting to parse 6794841
+[6794841] Finished scraping.
+[6798989] Starting to parse 6798989
+[6798989] Finished scraping.
+[6801590] Starting to parse 6801590
+[6801590] Finished scraping.
+[6804350] Starting to parse 6804350
+[6804350] warning: card id 1745866 (Exponential Cipher) was duplicated in <6804350> from <6353457>
+[6804350] Finished scraping.
+[6804358] Starting to parse 6804358
+[6804358] Finished scraping.
+[6807125] Starting to parse 6807125
+[6807125] Finished scraping.
+[6807794] Starting to parse 6807794
+[6807794] Finished scraping.
+[6819600] Starting to parse 6819600
+[6819600] Finished scraping.
+[6834530] Starting to parse 6834530
+[6834530] Finished scraping.
+[6837403] Starting to parse 6837403
+[6837403] Finished scraping.
+[6845097] Starting to parse 6845097
+[6845097] Finished scraping.
+[6845786] Starting to parse 6845786
+[6845786] Finished scraping.
+[6848354] Starting to parse 6848354
+[6848354] Finished scraping.
+[6858396] Starting to parse 6858396
+[6858396] Finished scraping.
+[6858407] Starting to parse 6858407
+[6858407] Finished scraping.
+[6858740] Starting to parse 6858740
+[6858740] Finished scraping.
+[6862415] Starting to parse 6862415
+[6862415] warning: card id 1976423 (The Phantom Knights of Forgotten Brigade) was duplicated in <6862415> from <>
+[6862415] Finished scraping.
+[6869158] Starting to parse 6869158
+[6869158] Finished scraping.
+[6871664] Starting to parse 6871664
+[6871664] warning: card id 1547701 (1,000 Sun Sword) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1586040 (A New Page) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1429959 (Aqua Treasure) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1622476 (Called by the Different Dimension) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1222148 (Called by the Spell Book) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1293436 (Canary Cry) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1807491 (Celestia Alphas) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1615372 (Chalice of Pain) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1393301 (Cosmic Vacuum) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1951631 (Deflect) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 913982 (Digital Hallway) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 631317 (Dogra's Wind) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 2031615 (Draconian Spirit) was duplicated in <6871664> from <4804758>
+[6871664] warning: card id 1537032 (Ember Cards) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 930975 (Equip Equality) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1409912 (Friends Being Friends) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1701618 (Fusion of the Normal) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1761344 (Golden Chance Encounter) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1395445 (Gravity Beam Attack!) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 610240 (Growthblade) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1975263 (Head in the Clouds) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1522513 (Hellenic Heart) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1102075 (Hope Shines Above All Else) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 797597 (Kaiser Arena) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 2196974 (Kozmonslaught) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1853067 (Mobius Zone Q7z) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1649255 (Mokey Mokey Induction) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1649233 (Mokey Mokey Resonation) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1304949 (Molten Sparks) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1795233 (Night of the Witches) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1681602 (No One Expects the Inquisition!) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1708820 (Numeron Extraction) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1319024 (Occult Lab) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1175945 (ON SALE!!!) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1551956 (One Thousand and One Nights) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1701943 (One with Nothing) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1277656 (Pot of Pixels) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1704626 (Raging River) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1319058 (Resurrected Blade of Elma) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1565156 (Sacramental Bell) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1410026 (Sacred Violin of Brigid) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1951735 (Santa's Sleigh) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1409778 (Space Station) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1423723 (Stirring The Cauldron) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1395971 (Suit of Armor Around the World) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1319017 (Telekinetic Rehabilitation) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1499072 (Temperament of Aria Fey) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1406205 (Tethered in the Void) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1951629 (The Holy Abacus) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1565325 (The Sanctuary in the Afterlife) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1523787 (The Winds Will Never Respond) was duplicated in <6871664> from <5869257>
+[6871664] warning: card id 1951622 (Tonic of the Old Man) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1409651 (Underwhelming Observations) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1951626 (United Front) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1995487 (Barrier Warrior in the Wasteland) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1794778 (Blowback) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1713262 (Book of Midnight) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1619852 (Creationist's Erasure) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1650756 (Cupid Shoots for Love) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1360883 (Debts Eternally Frozen) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1670381 (Deep Lorffen Mountains) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1762076 (Draconic Eradication) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1812699 (Enmaddening Call) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1773035 (Give It Up for All the Benjamins!) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1592293 (Offerings) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 747487 (Reset!) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1656347 (The Moon and The Sun) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1797690 (The World Lives) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 696166 (Gravekeeper's Sorcerer) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1994794 (Deity of the Sanctuary in the Sky) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1951640 (Fiery Hole) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1951644 (Flying Freeze) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1994361 (Hi-Speedroid Race Raptor) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1994816 (Mechanized Dino Doomsday Device) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1994814 (Rogue Warrior from Another Planet) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1995498 (Storm Serpent) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1712856 (Alala, Martian Spirit) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1712793 (Enyo, Martian Idol) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1934288 (Number 189: Delicious Dragon) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1934304 (Number 190: The 19th Sabre) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1798355 (Subterror Behemoth Darkdealles) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1853089 (Voltcircut) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1853088 (Voltconduit) was duplicated in <6871664> from <6353430>
+[6871664] Finished scraping.
+[6871713] Starting to parse 6871713
+[6871713] warning: card id 2014209 (Cryotitan the Elemental Lord) was duplicated in <6871713> from <>
+[6871713] warning: card id 2021204 (Cyber Angel Benzaiten) was duplicated in <6871713> from <>
+[6871713] warning: card id 2001559 (Armorizer Cereza) was duplicated in <6871713> from <6044732>
+[6871713] warning: card id 1999194 (El Shaddoll Winlao) was duplicated in <6871713> from <>
+[6871713] warning: card id 1884551 (Panera the Dazzling Ringmaster) was duplicated in <6871713> from <6419184>
+[6871713] warning: card id 1644412 (Pacifis Squid) was duplicated in <6871713> from <6353414>
+[6871713] Finished scraping.
+[6874481] Starting to parse 6874481
+[6874481] warning: card id 1785670 (Dark Hole Emissary) was duplicated in <6874481> from <6871713>
+[6874481] Finished scraping.
+[6879409] Starting to parse 6879409
+[6879409] Finished scraping.
+[6881030] Starting to parse 6881030
+[6881030] Finished scraping.
+[6891534] Starting to parse 6891534
+[6891534] warning: card id 1986140 (Channeler and Harpie's Pet) was duplicated in <6891534> from <3585517>
+[6891534] warning: card id 1985923 (Harpie's Lady) was duplicated in <6891534> from <3585517>
+[6891534] warning: card id 1986639 (Harpie Gryphon) was duplicated in <6891534> from <3585517>
+[6891534] warning: card id 1985821 (Harpie Lady's Sisters) was duplicated in <6891534> from <3585517>
+[6891534] warning: card id 1986688 (Harpie Harmony) was duplicated in <6891534> from <3585517>
+[6891534] warning: card id 1986071 (Harpie's Pet Ecstatic Dragon) was duplicated in <6891534> from <3585517>
+[6891534] warning: card id 1986484 (A Cast of Harpie Ladies) was duplicated in <6891534> from <3585517>
+[6891534] warning: card id 1986505 (Harpie's Pet Prize Dragon) was duplicated in <6891534> from <3585517>
+[6891534] Finished scraping.
+[6895350] Starting to parse 6895350
+[6895350] warning: card id 1708833 (Prescient Owlsh) was duplicated in <6895350> from <6353414>
+[6895350] Finished scraping.
+[6906385] Starting to parse 6906385
+[6906385] Finished scraping.
+[6913421] Starting to parse 6913421
+[6913421] Finished scraping.
+[6918022] Starting to parse 6918022
+[6918022] note: property 'effect' of card id 1995292 (Cyberdark Scales) was changed
+[6918022] from: You can send 1 non-Equip Card from your hand or field to the GY; equip this card from your hand or GY to a monster you control. You can only use this effect of "Cyberdark Scales" once per turn. A monster equipped with this card gains the following effects.
+● Once per turn: You can reveal 1 "Cyberdark" monster from your Deck, until the end of this turn, you can treat this card's name as that monster's name for a Fusion Summon, and shuffle it back into the Deck.
+● Once per turn: You can send 1 "Cyberdark" Normal or Quickplay Spell Card that meets its activation conditions from your Deck to the GY; this effect becomes that Spell's effect when that Spell is activated.
+[6918022] to: If this card is sent to the GY: You can discard 1 card You can only use this effect of "Cyberdark Scales" once per turn.
+[6918022] note: property 'level' of card id 1995292 (Cyberdark Scales) was changed
+[6918022] from: 4
+[6918022] to: 3
+[6918022] note: property 'ability' of card id 1995292 (Cyberdark Scales) was changed
+[6918022] from: Tuner
+[6918022] to: 
+[6918022] note: property 'type' of card id 1995292 (Cyberdark Scales) was changed
+[6918022] from: Machine
+[6918022] to: Dragon
+[6918022] note: property 'effect' of card id 1993288 (Cyberdark Drake) was changed
+[6918022] from: 2 non-Fusion "Cyberdark" monsters
+Must either be Fusion Summoned, or Special Summoned by Tributing the above cards from your hand or field (in which case you do not use "Polymerization"). You cannot Special Summon monsters the turn you Special Summon this card, except "Cyberdark" monsters. If this card is Special Summoned: You can equip it with 1 "Cyberdark" monster from your GY and increase this card's Level by 1. (Quick Effect): You can send 1 card equipped to this card to the GY, and if you do, equip 1 monster you control with 1 "Cyberdark" monster with a different name than the sent card from your Deck or GY. You can only use 1 effect of "Cyberdark Drake" per turn and only once that turn.
+[6918022] to: 2 non-Fusion "Cyberdark" monsters
+If this card is Special Summoned or sent to the GY: Target 1 "Cyberdark" monster in your GY, except this card; equip it to a monster on the field, then shuffle 1 "Cyberdark" monster from your GY into the Deck, and if you do, you can return 1 Equip Card on the field to the hand. You can only use this effect of "Cyberdark Drake" once per turn.
+[6918022] note: property 'level' of card id 1993288 (Cyberdark Drake) was changed
+[6918022] from: 3
+[6918022] to: 4
+[6918022] note: property 'type' of card id 1993288 (Cyberdark Drake) was changed
+[6918022] from: Dragon
+[6918022] to: Machine
+[6918022] Finished scraping.
+[6922630] Starting to parse 6922630
+[6922630] Finished scraping.
+[6933325] Starting to parse 6933325
+[6933325] Finished scraping.
+[6933560] Starting to parse 6933560
+[6933560] Finished scraping.
+[6936982] Starting to parse 6936982
+[6936982] Finished scraping.
+[6942144] Starting to parse 6942144
+[6942144] Finished scraping.
+[6948850] Starting to parse 6948850
+[6948850] Finished scraping.
+[6952745] Starting to parse 6952745
+[6952745] Finished scraping.
+[6979146] Starting to parse 6979146
+[6979146] Finished scraping.
+[6979527] Starting to parse 6979527
+[6979527] Finished scraping.
+[6981414] Starting to parse 6981414
+[6981414] Finished scraping.
+[6993829] Starting to parse 6993829
+[6993829] Finished scraping.
+[6997240] Starting to parse 6997240
+[6997240] Finished scraping.
+[7000259] Starting to parse 7000259
+[7000259] Finished scraping.
+[7002660] Starting to parse 7002660
+[7002660] Finished scraping.
+[7003669] Starting to parse 7003669
+[7003669] Finished scraping.
+[7003838] Starting to parse 7003838
+[7003838] Finished scraping.
+[7015993] Starting to parse 7015993
+[7015993] Finished scraping.
+[7020690] Starting to parse 7020690
+[7020690] Finished scraping.
+[7022063] Starting to parse 7022063
+[7022063] Finished scraping.
+[7022155] Starting to parse 7022155
+[7022155] Finished scraping.
+[7022231] Starting to parse 7022231
+[7022231] Finished scraping.
+[7025794] Starting to parse 7025794
+[7025794] Finished scraping.
+[7027111] Starting to parse 7027111
+[7027111] Finished scraping.
+[7027802] Starting to parse 7027802
+[7027802] Finished scraping.
+[7027863] Starting to parse 7027863
+[7027863] Finished scraping.
+[7074117] Starting to parse 7074117
+[7074117] Finished scraping.
+[7085230] Starting to parse 7085230
+[7085230] warning: card id 2050037 (Majestic Ivory Chaoserpent) was duplicated in <7085230> from <>
+[7085230] Finished scraping.
+[7086187] Starting to parse 7086187
+[7086187] Finished scraping.
+[7093024] Starting to parse 7093024
+[7093024] Finished scraping.
+[7094214] Starting to parse 7094214
+[7094214] Finished scraping.
+[7124125] Starting to parse 7124125
+[7124125] warning: card id 9189 (Called by the Grave) was duplicated in <7124125> from <>
+[7124125] warning: card id 2807248 (How The Angloryus Defeated The Eels!) was duplicated in <7124125> from <>
+[7124125] Finished scraping.
+[7138655] Starting to parse 7138655
+[7138655] Finished scraping.
+[7139390] Starting to parse 7139390
+[7139390] warning: card id 1177845 (Bubble Dragon) was duplicated in <7139390> from <6353294>
+[7139390] warning: card id 5632 (Bahamut Shark) was duplicated in <7139390> from <>
+[7139390] Finished scraping.
+[7140843] Starting to parse 7140843
+[7140843] Finished scraping.
+[7163783] Starting to parse 7163783
+[7163783] Finished scraping.
+[7166789] Starting to parse 7166789
+[7166789] Finished scraping.
+[7180332] Starting to parse 7180332
+[7180332] Finished scraping.
+[7184403] Starting to parse 7184403
+[7184403] Finished scraping.
+[7193014] Starting to parse 7193014
+[7193014] warning: card id 1565532 (Auctioneering) was duplicated in <7193014> from <5713627>
+[7193014] warning: card id 1565558 (Charismatic Holy Conversion) was duplicated in <7193014> from <5713627>
+[7193014] warning: card id 1681750 (Far Reaches of Infestation) was duplicated in <7193014> from <6011815>
+[7193014] warning: card id 1565578 (Mortal Hourglass) was duplicated in <7193014> from <5713627>
+[7193014] warning: card id 993447 (A Phoenix Rising) was duplicated in <7193014> from <6353465>
+[7193014] warning: card id 2108640 (Number 160: Scorching Slayer) was duplicated in <7193014> from <6598717>
+[7193014] warning: card id 2109243 (Number 164: Midnight Phantom) was duplicated in <7193014> from <6871713>
+[7193014] warning: card id 2109271 (Number 165: Deviant Lucien) was duplicated in <7193014> from <6353380>
+[7193014] Finished scraping.
+[7193016] Starting to parse 7193016
+[7193016] warning: card id 2078157 (Imposing Attraction) was duplicated in <7193016> from <>
+[7193016] warning: card id 2142705 (Level King Ugly Toadfish) was duplicated in <7193016> from <6598717>
+[7193016] Finished scraping.
+[7193018] Starting to parse 7193018
+[7193018] warning: card id 1565554 (Two Tuners' Lampoon) was duplicated in <7193018> from <5713627>
+[7193018] Finished scraping.
+[7203610] Starting to parse 7203610
+[7203610] Finished scraping.
+[7225933] Starting to parse 7225933
+[7225933] Finished scraping.
+[7236701] Starting to parse 7236701
+[7236701] Finished scraping.
+[7247437] Starting to parse 7247437
+[7247437] Finished scraping.
+[7251527] Starting to parse 7251527
+[7251527] Finished scraping.
+[7252887] Starting to parse 7252887
+[7252887] Finished scraping.
+[7256172] Starting to parse 7256172
+[7256172] Finished scraping.
+[7263281] Starting to parse 7263281
+[7263281] Finished scraping.
+[7284131] Starting to parse 7284131
+[7284131] Finished scraping.
+[7294550] Starting to parse 7294550
+[7294550] Finished scraping.
+[7297777] Starting to parse 7297777
+[7297777] Finished scraping.
+[7301908] Starting to parse 7301908
+[7301908] Finished scraping.
+[7306486] Starting to parse 7306486
+[7306486] Finished scraping.
+[7310491] Starting to parse 7310491
+[7310491] Finished scraping.
+[7311070] Starting to parse 7311070
+[7311070] Finished scraping.
+[7311950] Starting to parse 7311950
+[7311950] warning: card id 2115959 (Darkwater Hadras) was duplicated in <7311950> from <6582550>
+[7311950] warning: card id 2116000 (Abyssal Rift) was duplicated in <7311950> from <6582550>
+[7311950] Finished scraping.
+[7318790] Starting to parse 7318790
+[7318790] Finished scraping.
+[7367392] Starting to parse 7367392
+[7367392] Finished scraping.
+[7389331] Starting to parse 7389331
+[7389331] Finished scraping.
+[7410698] Starting to parse 7410698
+[7410698] Finished scraping.
+[7432421] Starting to parse 7432421
+[7432421] Finished scraping.
+[7435843] Starting to parse 7435843
+[7435843] Finished scraping.
+[7439337] Starting to parse 7439337
+[7439337] Finished scraping.
+[7446763] Starting to parse 7446763
+[7446763] Finished scraping.
+[7448539] Starting to parse 7448539
+[7448539] Finished scraping.
+[7452180] Starting to parse 7452180
+[7452180] warning: card id 1565156 (Sacramental Bell) was duplicated in <7452180> from <6353430>
+[7452180] Finished scraping.
+[7455513] Starting to parse 7455513
+[7455513] warning: card id 1948792 (Doom Instrument of Maddening Devastation) was duplicated in <7455513> from <6871713>
+[7455513] warning: card id 1948996 (Doom Instrument of Entrancing Chaos) was duplicated in <7455513> from <6871713>
+[7455513] Finished scraping.
+[7458028] Starting to parse 7458028
+[7458028] Finished scraping.
+[7464737] Starting to parse 7464737
+[7464737] Finished scraping.
+[7478308] Starting to parse 7478308
+[7478308] Finished scraping.
+[7484447] Starting to parse 7484447
+[7484447] Finished scraping.
+[7496225] Starting to parse 7496225
+[7496225] Finished scraping.
+[7499095] Starting to parse 7499095
+[7499095] Finished scraping.
+[7499352] Starting to parse 7499352
+[7499352] Finished scraping.
+[7499374] Starting to parse 7499374
+[7499374] Finished scraping.
+[7516633] Starting to parse 7516633
+[7516633] Finished scraping.
+[7516896] Starting to parse 7516896
+[7516896] Finished scraping.
+[7519530] Starting to parse 7519530
+[7519530] Finished scraping.
+[7522856] Starting to parse 7522856
+[7522856] Finished scraping.
+[7528627] Starting to parse 7528627
+[7528627] Finished scraping.
+[7529948] Starting to parse 7529948
+[7529948] warning: card id 2206067 (Vicious Syndicate) was duplicated in <7529948> from <7193016>
+[7529948] Finished scraping.
+[7531842] Starting to parse 7531842
+[7531842] Finished scraping.
+[7544944] Starting to parse 7544944
+[7544944] warning: card id 2190984 (Prismatic Colorless Burst) was duplicated in <7544944> from <7193014>
+[7544944] warning: card id 2190075 (Lure of the Clear Prism) was duplicated in <7544944> from <7193016>
+[7544944] Finished scraping.
+[7547609] Starting to parse 7547609
+[7547609] Finished scraping.
+[7548170] Starting to parse 7548170
+[7548170] Finished scraping.
+[7552348] Starting to parse 7552348
+[7552348] warning: card id 1565180 (Celebratory Bell) was duplicated in <7552348> from <7452180>
+[7552348] warning: card id 2218012 (Noble Knight Lefay) was duplicated in <7552348> from <>
+[7552348] Finished scraping.
+[7552464] Starting to parse 7552464
+[7552464] warning: card id 2250290 (Tragic Defeat of the Carcharracks) was duplicated in <7552464> from <3734721>
+[7552464] Finished scraping.
+[7553027] Starting to parse 7553027
+[7553027] Finished scraping.
+[7556770] Starting to parse 7556770
+[7556770] Finished scraping.
+[7557629] Starting to parse 7557629
+[7557629] Finished scraping.
+[7563615] Starting to parse 7563615
+[7563615] Finished scraping.
+[7565819] Starting to parse 7565819
+[7565819] Finished scraping.
+[7566464] Starting to parse 7566464
+[7566464] Finished scraping.
+[7568710] Starting to parse 7568710
+[7568710] Finished scraping.
+[7585957] Starting to parse 7585957
+[7585957] Finished scraping.
+[7586564] Starting to parse 7586564
+[7586564] Finished scraping.
+[7594853] Starting to parse 7594853
+[7594853] Finished scraping.
+[7608828] Starting to parse 7608828
+[7608828] Finished scraping.
+[7609855] Starting to parse 7609855
+[7609855] Finished scraping.
+[7619657] Starting to parse 7619657
+[7619657] Finished scraping.
+[7637725] Starting to parse 7637725
+[7637725] Finished scraping.
+[7645365] Starting to parse 7645365
+[7645365] Finished scraping.
+[7659844] Starting to parse 7659844
+[7659844] warning: card id 1807507 (Singular-Eyes Restrict) was duplicated in <7659844> from <6353457>
+[7659844] warning: card id 2214269 (Restricted) was duplicated in <7659844> from <7552348>
+[7659844] Finished scraping.
+[7664359] Starting to parse 7664359
+[7664359] Finished scraping.
+[7678716] Starting to parse 7678716
+[7678716] Finished scraping.
+[7679392] Starting to parse 7679392
+[7679392] Finished scraping.
+[7687348] Starting to parse 7687348
+[7687348] Finished scraping.
+[7695428] Starting to parse 7695428
+[7695428] Finished scraping.
+[7714198] Starting to parse 7714198
+[7714198] Finished scraping.
+[7727566] Starting to parse 7727566
+[7727566] Finished scraping.
+[7728700] Starting to parse 7728700
+[7728700] Finished scraping.
+[7730748] Starting to parse 7730748
+[7730748] Finished scraping.
+[7731164] Starting to parse 7731164
+[7731164] warning: card id 2254425 (Beastmaster's Bear) is not public
+[7731164] Finished scraping.
+[7733925] Starting to parse 7733925
+[7733925] warning: card id 2447086 (Panera The Dazzling Ringmaster) was duplicated in <7733925> from <>
+[7733925] warning: card id 1884551 (Panera the Dazzling Ringmaster) was duplicated in <7733925> from <6419184>
+[7733925] Finished scraping.
+[7742679] Starting to parse 7742679
+[7742679] Finished scraping.
+[7743608] Starting to parse 7743608
+[7743608] Finished scraping.
+[7745973] Starting to parse 7745973
+[7745973] Finished scraping.
+[7746134] Starting to parse 7746134
+[7746134] Finished scraping.
+[7753395] Starting to parse 7753395
+[7753395] warning: card id 2242234 (Aether Faisy) was duplicated in <7753395> from <>
+[7753395] warning: card id 2269297 (Sir Fangar, Enemy of Chima) was duplicated in <7753395> from <7225933>
+[7753395] warning: card id 2109227 (Number 162: Sizzling Serenade) was duplicated in <7753395> from <7193014>
+[7753395] warning: card id 2235450 (Infrastructure Frenzy Hardware Dragon) was duplicated in <7753395> from <6869158>
+[7753395] warning: card id 2242028 (Backcode Talker) was duplicated in <7753395> from <>
+[7753395] Finished scraping.
+[7758078] Starting to parse 7758078
+[7758078] Finished scraping.
+[7759421] Starting to parse 7759421
+[7759421] warning: card id 2393744 (Soul Chronicler) is not public
+[7759421] Finished scraping.
+[7763073] Starting to parse 7763073
+[7763073] warning: card id 2116147 (Darkwater Dirge) was duplicated in <7763073> from <6582550>
+[7763073] warning: card id 2116093 (Darkwater Deckhand) was duplicated in <7763073> from <6582550>
+[7763073] warning: card id 2116083 (Darkwater Hullbream) was duplicated in <7763073> from <6582550>
+[7763073] Finished scraping.
+[7763820] Starting to parse 7763820
+[7763820] warning: card id 2258888 (Nekker Chieftain) was duplicated in <7763820> from <7753395>
+[7763820] Finished scraping.
+[7769900] Starting to parse 7769900
+[7769900] Finished scraping.
+[7771474] Starting to parse 7771474
+[7771474] Finished scraping.
+[7795290] Starting to parse 7795290
+[7795290] Finished scraping.
+[7814419] Starting to parse 7814419
+[7814419] warning: card id 2168022 (Poppin Polarize) is not public
+[7814419] Finished scraping.
+[7816634] Starting to parse 7816634
+[7816634] Finished scraping.
+[7823128] Starting to parse 7823128
+[7823128] Finished scraping.
+[7834508] Starting to parse 7834508
+[7834508] Finished scraping.
+[7846987] Starting to parse 7846987
+[7846987] Finished scraping.
+[7852899] Starting to parse 7852899
+[7852899] Finished scraping.
+[7874062] Starting to parse 7874062
+[7874062] Finished scraping.
+[7877166] Starting to parse 7877166
+[7877166] Finished scraping.
+[7881252] Starting to parse 7881252
+[7881252] Finished scraping.
+[7882788] Starting to parse 7882788
+[7882788] Finished scraping.
+[7885271] Starting to parse 7885271
+[7885271] note: property 'effect' of card id 3859 (Skill Drain) was changed
+[7885271] from: Activate by paying 1000 LP. Negate the effects of all face-up monsters while they are face-up on the field (but their effects can still be activated).
+[7885271] to: Activate this card by paying 1000 LP. Negate the effects of all face-up monsters while they are face-up on the field (but their effects can still be activated).
+[7885271] Finished scraping.
+[7885378] Starting to parse 7885378
+[7885378] Finished scraping.
+[7920705] Starting to parse 7920705
+[7920705] Finished scraping.
+[7922328] Starting to parse 7922328
+[7922328] Finished scraping.
+[7934345] Starting to parse 7934345
+[7934345] warning: card id 1953330 (Cyberdark Fusion) was duplicated in <7934345> from <6353457>
+[7934345] warning: card id 1961738 (True King's Diagram) was duplicated in <7934345> from <>
+[7934345] warning: card id 2350096 (Madolche Queen Crownnoli) was duplicated in <7934345> from <>
+[7934345] Finished scraping.
+[7934346] Starting to parse 7934346
+[7934346] warning: card id 2283949 (Supporting Contraption: Gendarme) was duplicated in <7934346> from <5904696>
+[7934346] warning: card id 2321201 (Tenechorus Lady) was duplicated in <7934346> from <7759421>
+[7934346] warning: card id 2321198 (Tenechorus Lord) was duplicated in <7934346> from <7759421>
+[7934346] warning: card id 2308044 (Whispess - Eldest of the Crones) was duplicated in <7934346> from <7759421>
+[7934346] Finished scraping.
+[7937711] Starting to parse 7937711
+[7937711] Finished scraping.
+[7961879] Starting to parse 7961879
+[7961879] Finished scraping.
+[7973339] Starting to parse 7973339
+[7973339] Finished scraping.
+[7995546] Starting to parse 7995546
+[7995546] warning: card id 1764858 (Net Terminal Genes - Replica) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1765081 (Net Terminal Gate) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1764999 (Net Terminal Genes - Vanish) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1765072 (Net Terminal Genes - Reboot) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1764903 (Net Terminal Genes - Memory) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1764924 (Net Terminal Genes - Immunity) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1765044 (Net Terminal Genes - Safeguard Mode) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1765054 (Net Terminal Genes - Shell) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1764979 (Net Terminal Genesis) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1764957 (NTG Safeguard Cibo) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1764824 (NTG Safeguard Sana) was duplicated in <7995546> from <6563112>
+[7995546] Finished scraping.
+[7997640] Starting to parse 7997640
+[7997640] Finished scraping.
+[8010982] Starting to parse 8010982
+[8010982] Finished scraping.
+[8016535] Starting to parse 8016535
+[8016535] Finished scraping.
+[8034682] Starting to parse 8034682
+[8034682] Finished scraping.
+[8036906] Starting to parse 8036906
+[8036906] Finished scraping.
+[8055360] Starting to parse 8055360
+[8055360] Finished scraping.
+[8105715] Starting to parse 8105715
+[8105715] Finished scraping.
+[8105851] Starting to parse 8105851
+[8105851] Finished scraping.
+[8109335] Starting to parse 8109335
+[8109335] note: property 'effect' of card id 2367433 (Servant to the Entity) was changed
+[8109335] from: When this card is used as Synchro Material, you can treat it and all other Synchro Materials (that have a Level) as Level 2 monsters. You can send this card from your hand or field to the GY; add 1 "Dreamland" from your Deck to your hand. If this card is on the field or in your hand (Quick Effect): You can Tribute this card, and if you do, Fusion Summon 1 "Entity" Fusion Monster from your Extra Deck, using monsters from your hand, Monster Zones, and/or Spell & Trap Zones as Fusion Material, also for each "Dreamland" and/or each face-up monster of a different type (Xyz, Fusion, or Synchro) on the field, you can use 1 "Entity" monster from your Extra Deck as Fusion Material. You can only use each effect of "Servant to the Entity" once per turn.
+[8109335] to: When this card is used as Synchro Material, you can treat it and all other Synchro Materials (that have a Level) as Level 2 monsters. You can send this card from your hand or field to the GY; add 1 "Dreamland" from your Deck to your hand. If this card is on the field or in your hand (Quick Effect): You can Tribute this card, and if you do, Fusion Summon 1 "Entity" Fusion Monster from your Extra Deck, using monsters from your hand, Monster Zones, and/or Spell & Trap Zones as Fusion Material, ignoring its Summoning conditions, also for each "Dreamland" and/or each face-up monster of a different type (Xyz, Fusion, or Synchro) on the field, you can use 1 "Entity" monster from your Extra Deck as Fusion Material. You can only use each effect of "Servant to the Entity" once per turn.
+[8109335] Finished scraping.
+[8119660] Starting to parse 8119660
+[8119660] Finished scraping.
+[8167114] Starting to parse 8167114
+[8167114] Finished scraping.
+[8170513] Starting to parse 8170513
+[8170513] Finished scraping.
+[8174923] Starting to parse 8174923
+[8174923] Finished scraping.
+[8177538] Starting to parse 8177538
+[8177538] warning: card id 5876 (Tempest, Dragon Ruler of Storms) was duplicated in <8177538> from <>
+[8177538] Finished scraping.
+[8184053] Starting to parse 8184053
+[8184053] Finished scraping.
+[8187355] Starting to parse 8187355
+[8187355] Finished scraping.
+[8194294] Starting to parse 8194294
+[8194294] Finished scraping.
+[8196897] Starting to parse 8196897
+[8196897] Finished scraping.
+[8202812] Starting to parse 8202812
+[8202812] warning: card id 1953265 (Bujingi Moo Moo) was duplicated in <8202812> from <7934346>
+[8202812] warning: card id 2269311 (Pikachu, the Mouse Pokémon) was duplicated in <8202812> from <6979527>
+[8202812] warning: card id 2415413 (Sir Troutopus) was duplicated in <8202812> from <>
+[8202812] Finished scraping.
+[8202865] Starting to parse 8202865
+[8202865] Finished scraping.
+[8208847] Starting to parse 8208847
+[8208847] Finished scraping.
+[8213421] Starting to parse 8213421
+[8213421] Finished scraping.
+[8221267] Starting to parse 8221267
+[8221267] Finished scraping.
+[8224351] Starting to parse 8224351
+[8224351] Finished scraping.
+[8253171] Starting to parse 8253171
+[8253171] warning: card id 2277819 (Archfiend Zoa) was duplicated in <8253171> from <8202812>
+[8253171] warning: card id 1551505 (Genshutsu Knight) was duplicated in <8253171> from <2952495>
+[8253171] Finished scraping.
+[8263489] Starting to parse 8263489
+[8263489] Finished scraping.
+[8269957] Starting to parse 8269957
+[8269957] Finished scraping.
+[8283182] Starting to parse 8283182
+[8283182] Finished scraping.
+[8306788] Starting to parse 8306788
+[8306788] Finished scraping.
+[8308338] Starting to parse 8308338
+[8308338] Finished scraping.
+[8310242] Starting to parse 8310242
+[8310242] Finished scraping.
+[8312789] Starting to parse 8312789
+[8312789] Finished scraping.
+[8318509] Starting to parse 8318509
+[8318509] warning: card id 1743544 (Absolutely Dazzling!) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1940490 (Arcane Ritual) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1830258 (Better Universal Adapter) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1918441 (Call to Ambiguity) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 2420903 (Coronation of the Auspicious Omen) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1949684 (Cost Down - Holiday Sale) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1741129 (Creation Manifesto) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1819618 (Cynet Systems Hack) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1918378 (D.D.D. - Different Dimension Dice) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1956880 (Destructive Desire) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1519816 (Diabound Scatter Nucleues) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1918313 (Dice Dungeon) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1891833 (Doubled Down) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1741062 (Dream Mirror Parasomnia) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1867878 (Drop of Restoration) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1738691 (Dual Diamond, Azul) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1738688 (Dual Diamond, Rojo) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 2396467 (Electromagnetic Anode Stimulation) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1892572 (Expeditioning) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1951615 (Fidget Device) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1949673 (Fierce Night under the Moonlight) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 2421930 (Fire of Armageddon) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1884314 (Fusion Fire Field) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1891872 (Giga-Jiga) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 696189 (Gravekeeper's Slab) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1885708 (Happy Holidays, EXU!) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1951974 (Herpocalypse) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1893988 (Jerry's Time to Shine) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 2184852 (Joyous Moon) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1894003 (Level Limit - Area C) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1926130 (Mass Polymerization) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1884188 (Muddy Swamp) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1891838 (Normal Rush) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1864562 (Ojamalgamation) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1984591 (Parallel World Paradigm) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1833964 (Pink Horizon) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1880841 (Pot of Exquisiteness) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1847964 (Pot of Rapacity) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1811816 (Pyromaniac Tendencies) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1818742 (Rank-Down-Magic Accursed Force) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1827495 (Rank-Up-Magic Puppet Force) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1780265 (Rank-Up-Magic Transient Heraldrie) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1949686 (Relentless Rampage) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1951738 (Santa's Sack) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 2011467 (Sealing Spell of the Sorcerors) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1807498 (Seer's Ledger) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1742112 (Show No Fear) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1949683 (Silence!) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1949662 (Splash Damage) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1891836 (Stalemate Scepter) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1738031 (Ta-Daaa!) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1928530 (Tarragon Prison of Correction) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1889745 (The Repetitive Redundancy that happens to Repeat Itself) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1891825 (Token Terror) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1891828 (Token Town) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1898341 (Tomb Murmurs) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1949658 (Unproductive Boost) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1738022 (Watching Life Go By) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1884192 (Wave Fusion) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1591061 (Zibelthiurdos) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1920451 (Enid, Dimensional Hunter) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1920395 (Ibika, The Cunning Dragon Master) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1920537 (Kaminari, Ultimate Taiko Shinobi) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1748447 (Terminaia, Sanctified Authority) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1942080 (The Time Thieves) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1916983 (Blazera, A Danger To All) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1933842 (Dreadful Arsenal ZZ-ARES - Abyssal Flames) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1921795 (Enraged Yokasha) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1934462 (Number 181: Razer, the Sky Slashing Dragon) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1933786 (Number 182: Spiritous, the Divine Soul) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1933820 (Number 183: Eternas, Ghoul King of Death) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1884247 (Ancestral Mudragon of the Hex-Sealed Swamp) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1884266 (King Mudragon of the Swamp) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1737992 (Spritzy Spring Fox) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1884254 (The Hex-Sealed Mudragon) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1884551 (Panera the Dazzling Ringmaster) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1834020 (Etherea, Valedictorian of Maple High) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1890154 (Melene, Awakened Psycho Hunter) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1798503 (Number 176: Dark Anubis) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1844606 (Number 177: Mythical Mage) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1851942 (Number 178: Laval Thunder Strix) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1853601 (Number 179: Dark Statue of Unforgiveness) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1733091 (Number C39: Utopia Rayv) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1890045 (Tele-Ranger - Mind Jumper) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1820196 (Displacement Eradicator) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1834121 (Tin Soldier) was duplicated in <8318509> from <6419184>
+[8318509] Finished scraping.
+[8344690] Starting to parse 8344690
+[8344690] Finished scraping.
+[8352501] Starting to parse 8352501
+[8352501] Finished scraping.
+[8353364] Starting to parse 8353364
+[8353364] Finished scraping.
+[8362609] Starting to parse 8362609
+[8362609] warning: card id 2095415 (Unshackled Amaterasu) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2095424 (Unshackled Dark Dust Spirit) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2095423 (Unshackled Fenghuang) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2095419 (Unshackled Great Long Nose) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2095431 (Unshackled Yamato-no-Kami) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 1978664 (Plant Sprite Gaia) was duplicated in <8362609> from <6871713>
+[8362609] warning: card id 2074007 (A Capella) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2072265 (Be Careful of the Flying Iron Maiden, Chad!) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2102115 (Genetically Modified Organism) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2150793 (HERO Fusion Spark) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2151495 (Jester's Panic) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2059335 (Occult Sermon) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2147722 (Photon Fusion) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2103338 (Pot of Cursed Greetings) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2056078 (Prayer to the Sanctuary in the Sky) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2151398 (Runner-Up) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2074011 (Song Sheet Space) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2029430 (Strike Assault) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2190018 (Theatrical Dice) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 1990826 (The Wretched Darklord) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2151496 (Jester King) was duplicated in <8362609> from <7193014>
+[8362609] Finished scraping.
+[8376563] Starting to parse 8376563
+[8376563] Finished scraping.
+[8397719] Starting to parse 8397719
+[8397719] warning: card id 2933163 (Wrasslin' Cage Match) was duplicated in <8397719> from <7934346>
+[8397719] warning: card id 2808499 (Wrasslin' Pibble) was duplicated in <8397719> from <8202812>
+[8397719] Finished scraping.
+[8405156] Starting to parse 8405156
+[8405156] Finished scraping.
+[8430979] Starting to parse 8430979
+[8430979] warning: card id 1993556 (Cuezal, the Cursed Xiuhqui) was duplicated in <8430979> from <4667428>
+[8430979] warning: card id 1253117 (Ixcoz, the Blessed Xiuhqui) was duplicated in <8430979> from <4667428>
+[8430979] Finished scraping.
+[8451189] Starting to parse 8451189
+[8451189] warning: card id 2268098 (Slifer the Sky Dragon - Final Ember) was duplicated in <8451189> from <6353380>
+[8451189] warning: card id 2059347 (Egyptian Dragon Slime) was duplicated in <8451189> from <6353465>
+[8451189] warning: card id 2059350 (Egyptian Pheonix Slime) was duplicated in <8451189> from <6353465>
+[8451189] Finished scraping.
+[8487086] Starting to parse 8487086
+[8487086] warning: card id 1990045 (Cyber Hybrid) was duplicated in <8487086> from <8362609>
+[8487086] Finished scraping.
+[8533195] Starting to parse 8533195
+[8533195] Finished scraping.
+[8536599] Starting to parse 8536599
+[8536599] Finished scraping.
+[8540960] Starting to parse 8540960
+[8540960] warning: card id 2387841 (Mathmech Vector) was duplicated in <8540960> from <8202812>
+[8540960] warning: card id 2444343 (Arcana Princess Ace) was duplicated in <8540960> from <7585957>
+[8540960] Finished scraping.
+[8558559] Starting to parse 8558559
+[8558559] Finished scraping.
+[8560865] Starting to parse 8560865
+[8560865] Finished scraping.
+[8568805] Starting to parse 8568805
+[8568805] Finished scraping.
+[8624721] Starting to parse 8624721
+[8624721] Finished scraping.
+[8631072] Starting to parse 8631072
+[8631072] Finished scraping.
+[8635701] Starting to parse 8635701
+[8635701] note: property 'effect' of card id 2538044 (D-Defense Lion) was changed
+[8635701] from: Once per turn, you can either: Target 1 LIGHT Machine monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. If the equipped monster would be destroyed by battle or card effect, you can destroy this card instead. If this card is banished and was face-up on the field this turn: You can add 1 LIGHT Machine Normal Monster or 1 “Union Scramble” from your Deck to your hand. You can only use this effect of “D-Defense Lion” once per turn.
+[8635701] to: Once per turn, you can either: Target 1 LIGHT Machine monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. If the equipped monster would be destroyed by battle or card effect, you can destroy this card instead. If this card is banished and was face-up on the field this turn: You can add 1 LIGHT Machine Normal Monster, 1 “Union Scramble”, or 1 “Union Portal” from your Deck to your hand. You can only use this effect of “D-Defense Lion” once per turn.
+[8635701] note: property 'effect' of card id 2538049 (E-Energy Raider) was changed
+[8635701] from: Once per turn, you can either: Target 1 LIGHT Machine monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. If the equipped monster would be destroyed by battle or card effect, you can destroy this card instead. If this card is banished and was face-up on the field this turn: You can add 1 LIGHT Machine Normal Monster or 1 “XYZ Hyper Cannon” from your Deck to your hand. You can only use this effect of “E-Energy Raider” once per turn.
+[8635701] to: Once per turn, you can either: Target 1 LIGHT Machine monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. If the equipped monster would be destroyed by battle or card effect, you can destroy this card instead. If this card is banished and was face-up on the field this turn: You can add 1 LIGHT Machine Normal Monster, 1 “XYZ Hyper Cannon”, or 1 “XYZ Combine” from your Deck to your hand. You can only use this effect of “E-Energy Raider” once per turn.
+[8635701] warning: card id 2533677 (Sengen Taisha) was duplicated in <8635701> from <>
+[8635701] warning: card id 2534916 (Prévoyance DeLaVoix) was duplicated in <8635701> from <8376563>
+[8635701] warning: card id 2543585 (Crystron Vermeridhogg) was duplicated in <8635701> from <>
+[8635701] Finished scraping.
+[8637210] Starting to parse 8637210
+[8637210] Finished scraping.
+[8656533] Starting to parse 8656533
+[8656533] Finished scraping.
+[8658932] Starting to parse 8658932
+[8658932] warning: card id 2424983 (Aromage Hyssop) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 2457989 (Annie Bannie) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 2484219 (Edge of Life, Simulacrum) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 2477513 (Kujira, the Coastal Orca) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 1956727 (Gathering Magic) was duplicated in <8658932> from <8362609>
+[8658932] warning: card id 2422238 (Gladiator Beast Tiberius) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 823738 (Hellerus Hunting Hood Hounds) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 2421830 (Eldlich the Sage Golden Lord) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 2394597 (A Force of Nature) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 1952290 (Chaos Supreme Lightning Dragon) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 1867972 (Green Gadgetron) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 1867968 (Red Gadgetron) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 1867969 (Yellow Gadgetron) was duplicated in <8658932> from <8635701>
+[8658932] Finished scraping.
+[8664482] Starting to parse 8664482
+[8664482] Finished scraping.
+[8681245] Starting to parse 8681245
+[8681245] Finished scraping.
+[8686389] Starting to parse 8686389
+[8686389] warning: card id 2420916 (Des Gardius, the Four-Face Masked Beast) was duplicated in <8686389> from <8253171>
+[8686389] Finished scraping.
+[8695927] Starting to parse 8695927
+[8695927] warning: card id 1642313 (Rooftop Inu) was duplicated in <8695927> from <6353414>
+[8695927] warning: card id 2273799 (Elusive Dashing Techniques) was duplicated in <8695927> from <7552464>
+[8695927] Finished scraping.
+[8735092] Starting to parse 8735092
+[8735092] warning: card id 2458363 (Connected Contact) was duplicated in <8735092> from <8487086>
+[8735092] Finished scraping.
+[8759630] Starting to parse 8759630
+[8759630] Finished scraping.
+[8760406] Starting to parse 8760406
+[8760406] Finished scraping.
+[8766544] Starting to parse 8766544
+[8766544] Finished scraping.
+[8832576] Starting to parse 8832576
+[8832576] Finished scraping.
+[8886344] Starting to parse 8886344
+[8886344] warning: card id 2622725 (Arcana Royal Joker) was duplicated in <8886344> from <7585957>
+[8886344] warning: card id 850480 (Arcana Flush Joker) was duplicated in <8886344> from <7585957>
+[8886344] warning: card id 2598928 (Arcana Straight Joker) was duplicated in <8886344> from <7585957>
+[8886344] Finished scraping.
+[8886345] Starting to parse 8886345
+[8886345] note: property 'effect' of card id 2789488 (A Glimmer of Hope) was changed
+[8886345] from: If your opponent controls 6 or more more cards than you do: Draw 2 cards.
+[8886345] to: If your opponent controls 6 or more cards than you do: Draw 2 cards.
+[8886345] warning: card id 2566208 (Bekker's Dark Mirror) was duplicated in <8886345> from <7759421>
+[8886345] warning: card id 2561158 (Demonic Mirage) was duplicated in <8886345> from <7759421>
+[8886345] Finished scraping.
+[8886348] Starting to parse 8886348
+[8886348] warning: card id 2566443 (Dead Man's Treasure) was duplicated in <8886348> from <8658932>
+[8886348] warning: card id 2596965 (Joker's Double) was duplicated in <8886348> from <7585957>
+[8886348] warning: card id 2566264 (Spoils of War) was duplicated in <8886348> from <8658932>
+[8886348] warning: card id 2566634 (Submerged Loot) was duplicated in <8886348> from <8658932>
+[8886348] Finished scraping.
+[8924579] Starting to parse 8924579
+[8924579] warning: card id 2629056 (Mudafi Mustira - Oualid) was duplicated in <8924579> from <8637210>
+[8924579] warning: card id 2628977 (Mudafi Malady - Nizar) was duplicated in <8924579> from <8637210>
+[8924579] Finished scraping.
+[8960883] Starting to parse 8960883
+[8960883] Finished scraping.
+[8976659] Starting to parse 8976659
+[8976659] warning: card id 2357408 (Fossil Dragon Skullglia) was duplicated in <8976659> from <7934345>
+[8976659] warning: card id 2681334 (Excavation Site) was duplicated in <8976659> from <8886348>
+[8976659] warning: card id 2574951 (Fossil Transformation) was duplicated in <8976659> from <8886348>
+[8976659] Finished scraping.
+[8982767] Starting to parse 8982767
+[8982767] note: property 'effect' of card id 2538044 (D-Defense Lion) was changed
+[8982767] from: Once per turn, you can either: Target 1 LIGHT Machine monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. If the equipped monster would be destroyed by battle or card effect, you can destroy this card instead. If this card is banished and was face-up on the field this turn: You can add 1 LIGHT Machine Normal Monster or 1 “Union Scramble” from your Deck to your hand. You can only use this effect of “D-Defense Lion” once per turn.
+[8982767] to: Once per turn, you can either: Target 1 LIGHT Machine monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. If the equipped monster would be destroyed by battle or card effect, you can destroy this card instead. If this card is banished and was face-up on the field this turn: You can add 1 LIGHT Machine Normal Monster, 1 “Union Scramble”, or 1 “Union Portal” from your Deck to your hand. You can only use this effect of “D-Defense Lion” once per turn.
+[8982767] warning: card id 2538044 (D-Defense Lion) was duplicated in <8982767> from <8635701>
+[8982767] note: property 'effect' of card id 2538049 (E-Energy Raider) was changed
+[8982767] from: Once per turn, you can either: Target 1 LIGHT Machine monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. If the equipped monster would be destroyed by battle or card effect, you can destroy this card instead. If this card is banished and was face-up on the field this turn: You can add 1 LIGHT Machine Normal Monster or 1 “XYZ Hyper Cannon” from your Deck to your hand. You can only use this effect of “E-Energy Raider” once per turn.
+[8982767] to: Once per turn, you can either: Target 1 LIGHT Machine monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. If the equipped monster would be destroyed by battle or card effect, you can destroy this card instead. If this card is banished and was face-up on the field this turn: You can add 1 LIGHT Machine Normal Monster, 1 “XYZ Hyper Cannon”, or 1 “XYZ Combine” from your Deck to your hand. You can only use this effect of “E-Energy Raider” once per turn.
+[8982767] warning: card id 2538049 (E-Energy Raider) was duplicated in <8982767> from <8635701>
+[8982767] warning: card id 2538054 (DE-Lion Raider) was duplicated in <8982767> from <8635701>
+[8982767] Finished scraping.
+[9015610] Starting to parse 9015610
+[9015610] warning: card id 2287280 (Oracle’s Dragon) was duplicated in <9015610> from <7934346>
+[9015610] warning: card id 2271948 (Starry Knight Galacael) was duplicated in <9015610> from <7753395>
+[9015610] warning: card id 2382859 (Silent Night, Starry Dragon) was duplicated in <9015610> from <7934345>
+[9015610] warning: card id 2699330 (Darkest Night, Starry Dragon) was duplicated in <9015610> from <8886345>
+[9015610] Finished scraping.
+[9016753] Starting to parse 9016753
+[9016753] Finished scraping.
+[9022784] Starting to parse 9022784
+[9022784] warning: card id 2678818 (Etta, the Bird of Prey) was duplicated in <9022784> from <9022784>
+[9022784] warning: card id 2527501 (Gala-XY Observer) was duplicated in <9022784> from <9022784>
+[9022784] Finished scraping.
+[9044366] Starting to parse 9044366
+[9044366] Finished scraping.
+[9051430] Starting to parse 9051430
+[9051430] Finished scraping.
+[9079255] Starting to parse 9079255
+[9079255] Finished scraping.
+[9091180] Starting to parse 9091180
+[9091180] Finished scraping.
+[9094270] Starting to parse 9094270
+[9094270] warning: card id 2190047 (Elemental HERO Neos Bubbleman) was duplicated in <9094270> from <6353400>
+[9094270] warning: card id 2240629 (Elemental HERO Toon Wingman) was duplicated in <9094270> from <7679392>
+[9094270] warning: card id 2102115 (Genetically Modified Organism) was duplicated in <9094270> from <7193014>
+[9094270] warning: card id 2150793 (HERO Fusion Spark) was duplicated in <9094270> from <7193014>
+[9094270] warning: card id 2620647 (Jaden’s Polymerization) was duplicated in <9094270> from <8735092>
+[9094270] warning: card id 2711197 (Ojamask Change) was duplicated in <9094270> from <8362609>
+[9094270] warning: card id 2674638 (Elemental HERO Ancient Gear Wingman) was duplicated in <9094270> from <8886348>
+[9094270] warning: card id 2268160 (Elemental HERO Shining Darkness) was duplicated in <9094270> from <7759421>
+[9094270] warning: card id 2241170 (Elemental HERO Shining Electrum) was duplicated in <9094270> from <7552464>
+[9094270] warning: card id 2241160 (Elemental HERO Shining Mariner) was duplicated in <9094270> from <7552464>
+[9094270] warning: card id 2190031 (Elemental HERO Shining Shaman) was duplicated in <9094270> from <7552348>
+[9094270] warning: card id 2234055 (Elemental HERO Shining Storm) was duplicated in <9094270> from <7552464>
+[9094270] warning: card id 2241167 (Elemental HERO Shining Wild Wingman) was duplicated in <9094270> from <7552464>
+[9094270] warning: card id 2173866 (Elemental HERO Shiningedge) was duplicated in <9094270> from <6353465>
+[9094270] warning: card id 2786438 (Elemental HERO Union Wingman) was duplicated in <9094270> from <8982767>
+[9094270] Finished scraping.
+[9104023] Starting to parse 9104023
+[9104023] warning: card id 2458796 (Plaguespreader Corpse) was duplicated in <9104023> from <8487086>
+[9104023] warning: card id 1996487 (Plagueoriginator Zombie) was duplicated in <9104023> from <8658932>
+[9104023] warning: card id 2458352 (Plagueruler Zombie) was duplicated in <9104023> from <8487086>
+[9104023] warning: card id 2186772 (Plaguespreader Warwolf) was duplicated in <9104023> from <7552348>
+[9104023] warning: card id 2639169 (Red-Eyes Plaguespreader Zombie Dragon) was duplicated in <9104023> from <8886348>
+[9104023] Finished scraping.
+[9105198] Starting to parse 9105198
+[9105198] warning: card id 2553364 (Retreat of the Dark Scorpions) was duplicated in <9105198> from <7759421>
+[9105198] warning: card id 2233962 (Dark Scorpion - Kachka the Slash) was duplicated in <9105198> from <7552464>
+[9105198] Finished scraping.
+[9105896] Starting to parse 9105896
+[9105896] Finished scraping.
+[9108451] Starting to parse 9108451
+[9108451] Finished scraping.
+[9109731] Starting to parse 9109731
+[9109731] Finished scraping.
+[9118048] Starting to parse 9118048
+[9118048] warning: card id 1807528 (Pumprince the Prince of Ghosts) was duplicated in <9118048> from <6353380>
+[9118048] warning: card id 1990821 (Pumpking the King of Scarecrows) was duplicated in <9118048> from <6871713>
+[9118048] warning: card id 2047352 (Castle of True Illusions) was duplicated in <9118048> from <7193018>
+[9118048] Finished scraping.
+[9123660] Starting to parse 9123660
+[9123660] Finished scraping.
+[9131225] Starting to parse 9131225
+[9131225] warning: card id 2175564 (Marty the Anti-Goo-T Prisoner) was duplicated in <9131225> from <7439337>
+[9131225] warning: card id 2159656 (Anti-Goo Carrier Deltia) was duplicated in <9131225> from <7439337>
+[9131225] Finished scraping.
+[9163949] Starting to parse 9163949
+[9163949] Finished scraping.
+[9183380] Starting to parse 9183380
+[9183380] Finished scraping.
+[9186912] Starting to parse 9186912
+[9186912] warning: card id 1864562 (Ojamalgamation) was duplicated in <9186912> from <6419184>
+[9186912] warning: card id 2711197 (Ojamask Change) was duplicated in <9186912> from <8362609>
+[9186912] warning: card id 2711206 (Ojamasked HERO Black Law) was duplicated in <9186912> from <8886345>
+[9186912] warning: card id 2711386 (Ojamasked HERO Contrast King) was duplicated in <9186912> from <8886345>
+[9186912] warning: card id 2711204 (Ojamasked HERO Green Blast) was duplicated in <9186912> from <8886345>
+[9186912] warning: card id 2711201 (Ojamasked HERO Yellow Koga) was duplicated in <9186912> from <7934345>
+[9186912] Finished scraping.
+[9223893] Starting to parse 9223893
+[9223893] Finished scraping.
+[9233282] Starting to parse 9233282
+[9233282] warning: card id 370159 (Blue-Eyes Advance Dragon) was duplicated in <9233282> from <4810529>
+[9233282] warning: card id 1294122 (Blue-Eyes Savage Dragon) was duplicated in <9233282> from <4810529>
+[9233282] warning: card id 2510383 (Goo-Eyes Slime Dragon) was duplicated in <9233282> from <8451189>
+[9233282] warning: card id 46012 (Sorceress with Eyes of Blue) was duplicated in <9233282> from <4810529>
+[9233282] warning: card id 926502 (Blue-Eyes Spirit) was duplicated in <9233282> from <4810529>
+[9233282] warning: card id 413075 (Resonance of the White Dragon) was duplicated in <9233282> from <4810529>
+[9233282] warning: card id 1106180 (White Dragon's Chaos) was duplicated in <9233282> from <4810529>
+[9233282] warning: card id 2242735 (Balmung, Alternative Dragoon of the Underworld) was duplicated in <9233282> from <7753395>
+[9233282] warning: card id 370253 (Blue-Eyes Advance Ultimate Dragon) was duplicated in <9233282> from <4810529>
+[9233282] warning: card id 2640080 (Dark Purgatory Magician) was duplicated in <9233282> from <8886348>
+[9233282] warning: card id 2542703 (Divine Incarnate of Dragon) was duplicated in <9233282> from <8451189>
+[9233282] warning: card id 2236760 (Flame-Eyes MAX Frost Dragon) was duplicated in <9233282> from <8658932>
+[9233282] warning: card id 2640077 (Violet-Eyes Chaos Dragon) was duplicated in <9233282> from <8886348>
+[9233282] warning: card id 2640066 (Violet-Eyes Purgatory Dragon) was duplicated in <9233282> from <8886348>
+[9233282] warning: card id 676834 (Blue-Eyes Ascended Dragon) was duplicated in <9233282> from <4810529>
+[9233282] warning: card id 40322 (Blue-Eyes Burning Dragon) was duplicated in <9233282> from <4810529>
+[9233282] warning: card id 928062 (Chosen with Eyes of Blue) was duplicated in <9233282> from <4810529>
+[9233282] Finished scraping.
+[9286017] Starting to parse 9286017
+[9286017] Finished scraping.
+[9347499] Starting to parse 9347499
+[9347499] warning: card id 1761265 (Elusive Powerstone of the Yurei) was duplicated in <9347499> from <6247363>
+[9347499] Finished scraping.
+[9386456] Starting to parse 9386456
+[9386456] Finished scraping.
+[9389725] Starting to parse 9389725
+[9389725] warning: card id 2685127 (Paradox) was duplicated in <9389725> from <8886348>
+[9389725] Finished scraping.
+[9389807] Starting to parse 9389807
+[9389807] warning: card id 1603600 (Blue-Eyes Alternative Toon Dragon) was duplicated in <9389807> from <9233282>
+[9389807] warning: card id 2847241 (Elemental HERO Firestorm) was duplicated in <9389807> from <9094270>
+[9389807] warning: card id 2720499 (Elemental HERO Ojamagnum Neos) was duplicated in <9389807> from <9186912>
+[9389807] warning: card id 734661 (Ojamachine King) was duplicated in <9389807> from <9186912>
+[9389807] warning: card id 2721901 (Elemental HERO Toadally Flawless) was duplicated in <9389807> from <9094270>
+[9389807] Finished scraping.
+[9391180] Starting to parse 9391180
+[9391180] Finished scraping.
+[9417588] Starting to parse 9417588
+[9417588] Finished scraping.
+[9420032] Starting to parse 9420032
+[9420032] Finished scraping.
+[9433755] Starting to parse 9433755
+[9433755] Finished scraping.
+[9467404] Starting to parse 9467404
+[9467404] Finished scraping.
+[9469722] Starting to parse 9469722
+[9469722] Finished scraping.
+[9471210] Starting to parse 9471210
+[9471210] Finished scraping.
+[9484452] Starting to parse 9484452
+[9484452] Finished scraping.
+[9499776] Starting to parse 9499776
+[9499776] Finished scraping.
+[9514627] Starting to parse 9514627
+[9514627] Finished scraping.
+[9517068] Starting to parse 9517068
+[9517068] Finished scraping.
+[9523870] Starting to parse 9523870
+[9523870] warning: card id 2926928 (Fairy Tail - Alice) was duplicated in <9523870> from <8540960>
+[9523870] warning: card id 2711063 (Fairy Tail - Fiona) was duplicated in <9523870> from <8886344>
+[9523870] warning: card id 2268280 (Fairy Tail - Sakuya) was duplicated in <9523870> from <7759421>
+[9523870] warning: card id 2458804 (Fairy Tail Retold) was duplicated in <9523870> from <8487086>
+[9523870] warning: card id 8007 (Fairy Tail - Snow) was duplicated in <9523870> from <>
+[9523870] warning: card id 1948381 (Fairy Tail - Ice) was duplicated in <9523870> from <6785116>
+[9523870] Finished scraping.
+[9557295] Starting to parse 9557295
+[9557295] warning: card id 2808768 (The Spirit Of The Angloryus Lives On!) was duplicated in <9557295> from <7124125>
+[9557295] warning: card id 2817834 (Kryptonya - For Her Majesty, For Anglory!) was duplicated in <9557295> from <7124125>
+[9557295] warning: card id 9096 (LANphorhynchus) was duplicated in <9557295> from <7124125>
+[9557295] warning: card id 9095 (Traffic Ghost) was duplicated in <9557295> from <7124125>
+[9557295] warning: card id 2817729 (Vacuusus - For Beginnings, For Anglory!) was duplicated in <9557295> from <7124125>
+[9557295] Finished scraping.
+[9593754] Starting to parse 9593754
+[9593754] note: property 'effect' of card id 456740 (Dark Crusher's Rage) was changed
+[9593754] from: Target 1 "Dark Crusher" monster you control; it gains 1000 ATK until the end of this turn. If a "Dark Crusher" monster you control destroys an opponent's monster by battle, while this card is in your GY: You can add this card to your hand. You can only use each effect of "Dark Crusher's Rage" once per turn.
+[9593754] to: Target 1 "Dark Crusher" monster you control; it gains 1300 ATK until the end of this turn. If a "Dark Crusher" monster you control destroys an opponent's monster by battle, while this card is in your GY: You can add this card to your hand. You can only use each effect of "Dark Crusher's Rage" once per turn.
+[9593754] Finished scraping.
+[9602551] Starting to parse 9602551
+[9602551] note: [+] added new card 51 (Airknight Parshath)
+[9602551] note: [+] added new card 11591 (Amabie)
+[9602551] note: [+] added new card 541 (Bountiful Artemis)
+[9602551] note: [+] added new card 9856 (Cupid Dunk)
+[9602551] note: [+] added new card 1524 (Fairy Archer)
+[9602551] note: [+] added new card 7687 (Guiding Ariadne)
+[9602551] note: [+] added new card 2106 (Harvest Angel of Wisdom)
+[9602551] note: [+] added new card 2117 (Hecatrice)
+[9602551] note: [+] added new card 2160 (Honest)
+[9602551] note: [+] added new card 2535 (Layard the Liberator)
+[9602551] note: [+] added new card 2579 (Light Effigy)
+[9602551] note: [+] added new card 2579 (Light Effigy)
+[9602551] warning: card id 2579 (Light Effigy) was duplicated in <9602551> from <9602551>
+[9602551] note: [+] added new card 2766 (Marshmallon)
+[9602551] note: [+] added new card 2833 (Meltiel, Sage of the Sky)
+[9602551] note: [+] added new card 8930 (Minerva, Scholar of the Sky)
+[9602551] note: [+] added new card 3121 (Neo-Parshath, the Sky Paladin)
+[9602551] note: [+] added new card 3170 (Nova Summoner)
+[9602551] note: [+] added new card 3170 (Nova Summoner)
+[9602551] warning: card id 3170 (Nova Summoner) was duplicated in <9602551> from <9602551>
+[9602551] note: [+] added new card 8931 (Power Angel Valkyria)
+[9602551] note: [+] added new card 8929 (Sacred Arch-Airknight Parshath)
+[9602551] note: [+] added new card 4242 (Tethys, Goddess of Light)
+[9602551] note: [+] added new card 4622 (Victoria)
+[9602551] note: [+] added new card 4651 (Voltanis the Adjudicator)
+[9602551] note: [+] added new card 4677 (Vylon Stella)
+[9602551] note: [+] added new card 1306 (Dunames Dark Witch)
+[9602551] note: [+] added new card 1306 (Dunames Dark Witch)
+[9602551] warning: card id 1306 (Dunames Dark Witch) was duplicated in <9602551> from <9602551>
+[9602551] note: [+] added new card 4007 (Spirit of the Harp)
+[9602551] note: [+] added new card 4007 (Spirit of the Harp)
+[9602551] warning: card id 4007 (Spirit of the Harp) was duplicated in <9602551> from <9602551>
+[9602551] note: [+] added new card 8932 (The Sanctum of Parshath)
+[9602551] note: [+] added new card 8932 (The Sanctum of Parshath)
+[9602551] warning: card id 8932 (The Sanctum of Parshath) was duplicated in <9602551> from <9602551>
+[9602551] note: [+] added new card 4584 (Valhalla, Hall of the Fallen)
+[9602551] note: [+] added new card 4584 (Valhalla, Hall of the Fallen)
+[9602551] warning: card id 4584 (Valhalla, Hall of the Fallen) was duplicated in <9602551> from <9602551>
+[9602551] note: [+] added new card 420 (Black Horn of Heaven)
+[9602551] note: [+] added new card 1655 (Forced Back)
+[9602551] note: [+] added new card 7539 (Grand Horn of Heaven)
+[9602551] note: [+] added new card 2163 (Horn of Heaven)
+[9602551] note: [+] added new card 8933 (Rebirth of Parshath)
+[9602551] note: [+] added new card 4184 (Synthetic Seraphim)
+[9602551] note: [+] added new card 4184 (Synthetic Seraphim)
+[9602551] warning: card id 4184 (Synthetic Seraphim) was duplicated in <9602551> from <9602551>
+[9602551] note: [+] added new card 4328 (The Selection)
+[9602551] note: [+] added new card 169 (Ancient Sacred Wyvern)
+[9602551] note: [+] added new card 6167 (Angel of Zera)
+[9602551] note: [+] added new card 291 (Avenging Knight Parshath)
+[9602551] note: [+] added new card 6443 (Number 103: Ragnazero)
+[9602551] note: [+] added new card 9329 (Hip Hoshiningen)
+[9602551] Finished scraping.
+[9607806] Starting to parse 9607806
+[9607806] warning: card id 2853810 (Supermega Turtle - Starbuster) was duplicated in <9607806> from <7727566>
+[9607806] warning: card id 1235357 (Roar of the Xiuhqui) was duplicated in <9607806> from <4667428>
+[9607806] Finished scraping.
+[9747849] Starting to parse 9747849
+[9747849] Finished scraping.
+[9764030] Starting to parse 9764030
+[9764030] warning: card id 2503666 (Dark Slime Magician) was duplicated in <9764030> from <8451189>
+[9764030] warning: card id 2803676 (Elevated Dark Magician) was duplicated in <9764030> from <9389807>
+[9764030] warning: card id 1948367 (Ironheart) was duplicated in <9764030> from <6785116>
+[9764030] warning: card id 2689774 (Magician Girl of Black Chaos) was duplicated in <9764030> from <8886344>
+[9764030] warning: card id 2689773 (Magician Girl of Chaos) was duplicated in <9764030> from <8886344>
+[9764030] warning: card id 1807482 (Signature Evolution) was duplicated in <9764030> from <6353449>
+[9764030] warning: card id 2726354 (Black Chaos) was duplicated in <9764030> from <9391180>
+[9764030] warning: card id 639181 (Legendary Knight's Servant) was duplicated in <9764030> from <4805092>
+[9764030] warning: card id 2601083 (Dark Destruction Dragoon) was duplicated in <9764030> from <8886344>
+[9764030] warning: card id 2728720 (Dark Magician of Black Chaos) was duplicated in <9764030> from <9391180>
+[9764030] warning: card id 2052032 (Dark Magician of Perfect Chaos) was duplicated in <9764030> from <7085230>
+[9764030] warning: card id 2640080 (Dark Purgatory Magician) was duplicated in <9764030> from <8886348>
+[9764030] warning: card id 2542705 (Divine Incarnate of Magic) was duplicated in <9764030> from <8451189>
+[9764030] warning: card id 2728709 (Dragon Master of Black Chaos) was duplicated in <9764030> from <9391180>
+[9764030] warning: card id 2639159 (The Palladium Oracles) was duplicated in <9764030> from <8886348>
+[9764030] warning: card id 1948396 (The Ultimate Warlock of Darkness) was duplicated in <9764030> from <6785116>
+[9764030] Finished scraping.
+[9843646] Starting to parse 9843646
+[9843646] Finished scraping.
+[9850383] Starting to parse 9850383
+[9850383] Finished scraping.
+[9850403] Starting to parse 9850403
+[9850403] Finished scraping.
+[9870029] Starting to parse 9870029
+[9870029] Finished scraping.
+[9870820] Starting to parse 9870820
+[9870820] Finished scraping.
+[9907108] Starting to parse 9907108
+[9907108] warning: card id 2474980 (Panera & Friends' Starbreeze Show!) is not public
+[9907108] Finished scraping.
+[9907517] Starting to parse 9907517
+[9907517] Finished scraping.
+[9913178] Starting to parse 9913178
+[9913178] Finished scraping.
+[9913180] Starting to parse 9913180
+[9913180] Finished scraping.
+[9939604] Starting to parse 9939604
+[9939604] Finished scraping.
+[9941444] Starting to parse 9941444
+[9941444] warning: card id 2939526 (Tundran Husk of the Cold Wasteland) was duplicated in <9941444> from <6116920>
+[9941444] warning: card id 1951080 (Tundran Eagle of The Frozen Peaks) was duplicated in <9941444> from <6116920>
+[9941444] warning: card id 2939512 (Treacherous Tundran Traversal) was duplicated in <9941444> from <6116920>
+[9941444] Finished scraping.
+[9944104] Starting to parse 9944104
+[9944104] warning: card id 2279948 (Assault Blackwing - Katana the Cold Front) was duplicated in <9944104> from <7759421>
+[9944104] warning: card id 2341138 (Shadow Squall Blast) was duplicated in <9944104> from <7934345>
+[9944104] warning: card id 2279975 (Continuous Downpour) was duplicated in <9944104> from <7759421>
+[9944104] warning: card id 1908852 (Assault Blackwing - Sabimeru the Falling Torrent) was duplicated in <9944104> from <6353457>
+[9944104] warning: card id 2282156 (Assault Blackwing True Armor Master) was duplicated in <9944104> from <7759421>
+[9944104] warning: card id 2542802 (Signer Dragon - Blackwing) was duplicated in <9944104> from <8886345>
+[9944104] Finished scraping.
+[9954291] Starting to parse 9954291
+[9954291] Finished scraping.
+[main] filling in missing exu_limit
+[main] note: [-] removed old card 2379681 (Shield Recovery)
+[main] note: [-] removed old card 2831884 (Genex Enginesaw)
+[main] note: [-] removed old card 2832492 (R-Genex Line and Lure)
+[main] note: [-] removed old card 2909848 (Σ-Genex Final Frontier)
+[main] Time elapsed: 68.4870161s
