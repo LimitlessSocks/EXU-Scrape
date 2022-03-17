@@ -635,7 +635,12 @@ database = [
     9105896,  #World Hero
     9954291,  #Vivified
     7586564,  #Straw Hat
-    
+    7404351,  #Hollow Depths
+    9929020,  #Elixir Born
+    8145980,  #DMG
+    9771722,  #Iffrean
+    6395566,  #Submerzan
+    8669733,  #Bolt Arc
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
