@@ -48,7 +48,7 @@ database = [
     # 6450641,  #Gimmick Puppet Support
     6438706,  #Constellar/Tellarknight Support
     6412660,  #Umbral Horror/Numbers 43, 65, 80, and 96 Support
-    6402157,  #D/D/D Support
+    # 6402157,  #D/D/D Support
     # 6412740,  #Megalith Support
     6407622,  #Chemicritter Support
     6365184,  #Nephthys Support
