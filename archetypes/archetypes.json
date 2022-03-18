@@ -436,15 +436,6 @@
             "tags": ["second", "aggro", "link", "synchro", "beatdown"]
         },
         {
-            "name": "Onion Slice",
-            "deckIds": [4406016],
-            "cardIds": [],
-            "thumb": "1918117",
-            "author": "46",
-            "description": "A going 2nd Warrior combo Deck that aims to get some specific monsters in the GY so they can banish themselves to Summon their Fusion counterparts.",
-            "tags": ["fusion", "aggro", "control", "gy", "grind"]
-        },
-        {
             "name": "Vengeful Tox",
             "deckIds": [6719358],
             "cardIds": [],
@@ -519,15 +510,6 @@
             "author": "Sock",
             "description": "A Ritual Deck that revolves around banishing cards, primarily from the top of the Deck face-down and controlling the board with Traps and a myriad of on-field effects which are fueled by the otherwise mandatory maintenance costs throughout the archetype, strongly encouraging a 60 card playstyle.",
             "tags": ["first", "ritual", "banish", "control"]
-        },
-        {
-            "name": "Moira",
-            "deckIds": [6785434],
-            "cardIds": [],
-            "thumb": "1974339",
-            "author": "46",
-            "description": "A Deck that revolves around a monster that Summons himself and 2 Tokens during your opponent's End Phase. The archetype has a Wobaku and a hand-trap to keep you alive, since the only monster you're going to ever be Summoning is Necrophobe who Summons himself at the end of your opponent's turn.",
-            "tags": ["stun", "beatdown", "gy"]
         },
         {
             "name": "Dark Hole Archetype",
@@ -708,15 +690,6 @@
             "tags": ["midrange", "grind", "ramp", "gy", "link", "xyz"]
         },
         {
-            "name": "Dark Imp",
-            "deckIds": [7127621],
-            "cardIds": [],
-            "thumb": "2049693",
-            "author": "46",
-            "description": "A Level 3 burn Deck where all the Main Deck monsters are identical. The win condition is Achacha Warlord - he does the most burning. You don't usually end on any strong monsters apart from Warlord, but the Traps provide interruption and the Continuous Spells make the Deck have a grind.",
-            "tags": ["stun", "burn", "grind", "gy"]
-        },
-        {
             "name": "Xiuhqui",
             "deckIds": [4667428],
             "cardIds": [],
@@ -770,14 +743,6 @@
             "author": "Ryck",
             "description": "A small Fusion engine revolving around Serpent Nightmare Dragon.",
             "tags": ["control", "engine", "fusion", "castle"]
-        },
-        {
-            "name": "Wild Rose",
-            "deckIds": [4355718],
-            "cardIds": [],
-            "thumb": "2006851",
-            "author": "46",
-            "description": "A going second Warrior Equip Deck that buffs up a single monster, gives it a modicum of protection and tries to swing in for the kill."
         },
         {
             "name": "Powerpuff",
@@ -940,15 +905,6 @@
             "tags": ["second", "fusion", "xyz", "trap", "control"]
         },
         {
-            "name": "Mokey Mokey",
-            "deckIds": [7443209],
-            "cardIds": [1649242],
-            "thumb": "2161412",
-            "author": "Deus Vult",
-            "description": "A relatively simple OTK Deck based on punching the opponent for huge damage that is also focused on the original Mokey Mokey gimmick of making 3000 ATK monsters to crush your opponent's monsters into the ground.",
-            "tags": ["normal", "otk"]
-        },
-        {
             "name": "Doom Instruments",
             "deckIds": [7455513],
             "cardIds": [],
@@ -1010,24 +966,6 @@
             "author": "Masha",
             "description": "A dice-based Xyz combo archetype where monsters are easily able to be Summoned and you roll the dice to determine what Level they become that's also versatile going first and second, with a Synchro in the mix to boot.",
             "tags": ["gamble", "xyz"]
-        },
-        {
-            "name": "Sylphe",
-            "deckIds": [7495126],
-            "cardIds": [],
-            "thumb": "2179178",
-            "author": "46",
-            "description": "An unorthodox Fairy Pendulum flip archetype where the Pendulum Monsters add themselves to the Extra Deck face-up upon activation, providing setup for the boss monster.",
-            "tags": ["pendulum", "flip"]
-        },
-        {
-            "name": "Moonlit",
-            "deckIds": [7516077],
-            "cardIds": [],
-            "thumb": "2187412",
-            "author": "Deus Vult",
-            "description": "A heavy stun/control archetype based on shapeshifting - the titular \"Moonlit\" monsters \"transform\" into \"Cursebound Lycanthrope\" when a \"Moonlight\" Trap is activated in their column. In addition, the \"Moonlight\" Traps gain powerful second effects while you control \"Cursed Lycanthrope\", making them powerful blowout cards.",
-            "tags": ["stun", "control", "theme"]
         },
         {
             "name": "Darkest Power: Awor",
@@ -1138,15 +1076,6 @@
             "tags": ["spell", "field"]
         },
         {
-            "name": "Pyrabbit",
-            "deckIds": [7671393],
-            "cardIds": [],
-            "thumb": "2234966",
-            "author": "JustYourAverageJustin",
-            "description": "A compact archetype based on tagging out during the opponent's turn to proc various minor interruptions.",
-            "tags": []
-        },
-        {
             "name": "Magistrophic",
             "deckIds": [7499095],
             "cardIds": [],
@@ -1162,15 +1091,6 @@
             "thumb": "2048316",
             "author": "Diego",
             "description": "A Spellcaster archetype that Xyz Summons Xyz Monsters and uses them to contact fuse into Fusion Monsters. Each card deals with returning cards from the field to the hand while also aiming to Set 2-3 backrow cards and end on at least 1 Fusion Monster who gets certain effects based on the Xyz Monster(s) used for its Summon.",
-            "tags": []
-        },
-        {
-            "name": "Tempo Warrior",
-            "deckIds": [7577360],
-            "cardIds": [],
-            "thumb": "2206478",
-            "author": "Knightmare",
-            "description": "A musical of a Synchro and Xyz archetype meant to mimic the idea of tempo. The pace increases during your turn as plays are made and damage is dealt, making the BPM go up, whereas on your opponent's turn, it slows down as you attempt to stop your opponent from playing and getting in for damage, making the BPM go down, with its supporting cards being based on other musical terms.",
             "tags": []
         },
         {
@@ -1190,15 +1110,6 @@
             "author": "TalosMistake",
             "description": "A Fusion-based multi-Attribute Warrior archetype that conducts Fusion Summons by returning listed Fusion Materials to the hand.",
             "tags": ["fusion"]
-        },
-        {
-            "name": "Simulacra",
-            "deckIds": [7723773],
-            "cardIds": [],
-            "thumb": "1205136",
-            "author": "The Awkward One",
-            "description": "A horror-themed archetype that relies on the eldritch creature known as the Simulacrum Core, a fiend that pulls the strings behind the curtain for its own malignant gain. Essentially, it's a control Deck that revolves around the Core and sets up interruptions through its various adaptations to slowly and gradually snowball for supremacy.",
-            "tags": []
         },
         {
             "name": "Vuluti",
@@ -1273,15 +1184,6 @@
             "tags": []
         },
         {
-            "name": "The Aarp",
-            "deckIds": [7842189],
-            "cardIds": [],
-            "thumb": "2294424",
-            "author": "Justin",
-            "description": "A Rank 4 Spellcaster deck, that focuses on giving effects to the Xyz monsters that use it as material. Pretty simple engine that really shines if you manage to open multiples",
-            "tags": []
-        },
-        {
             "name": "Des Aspect",
             "deckIds": [7882788],
             "cardIds": [],
@@ -1312,7 +1214,7 @@
             "name": "Conqueror",
             "deckIds": [2795851],
             "cardIds": [],
-            "thumb": "123991",
+            "thumb": "124130",
             "author": "Amaranthine",
             "description": "A Warrior and Spellcaster Fusion & Link archetype that focuses on Fusion and Link Summoning to build a board and deal damage.",
             "tags": []
@@ -1489,15 +1391,6 @@
             "tags": []
         },
         {
-            "name": "Bolt Arc",
-            "deckIds": [8152211],
-            "cardIds": [],
-            "thumb": "2141390",
-            "author": "Eureka",
-            "description": "A Pendulum archetype comprised of the LIGHT Spellcaster \"Bolt Arcanist\" Tuners and the EARTH Thunder \"Bolt Arcana\" non-Tuner monsters, both of which have effects that activate only when Summoned to the Extra Monster Zone.",
-            "tags": []
-        },
-        {
             "name": "Spacial Demon",
             "deckIds": [8105715],
             "cardIds": [],
@@ -1570,24 +1463,6 @@
             "tags": []
         },
         {
-            "name": "Fossilrai",
-            "deckIds": [8345249],
-            "cardIds": [],
-            "thumb": "2454974",
-            "author": "Xerex",
-            "description": "An EARTH and WIND Dinosaur archetype focused on getting in battle damage with the help of their Synchro Monsters and turning the opponent's monsters to Defense Position for extra piercing damage.",
-            "tags": []
-        },
-        {
-            "name": "DragoThief",
-            "deckIds": [8475666],
-            "cardIds": [],
-            "thumb": "2487846",
-            "author": "Justin",
-            "description": "An EARTH and WIND Dinosaur archetype focused on getting in battle damage with the help of their Synchro Monsters and turning the opponent's monsters to Defense Position for extra piercing damage.",
-            "tags": []
-        },
-        {
             "name": "Staysailor",
             "deckIds": [8312789],
             "cardIds": [],
@@ -1639,15 +1514,6 @@
             "thumb": "1831213",
             "author": "Gatr",
             "description": "A Trap-based archetype that mainly focuses on Attribute changing and having 6 generic Trap Cards that each interact with a monster of a specific Attribute.",
-            "tags": []
-        },
-        {
-            "name": "Crystal Tower",
-            "deckIds": [8596515],
-            "cardIds": [],
-            "thumb": "2527749",
-            "author": "46",
-            "description": "An EARTH Fairy archetype that can equip monsters the opponent controls to different archetypal monsters by attacking into them and then unequipping them for powerful effects.",
             "tags": []
         },
         {
@@ -1759,15 +1625,6 @@
             "tags": []
         },
         {
-            "name": "C.I.",
-            "deckIds": [8608821],
-            "cardIds": [],
-            "thumb": "2530342",
-            "author": "Ajax",
-            "description": "A reactive archetype that focuses on temporarily banishing its monsters as Quick Effects.",
-            "tags": []
-        },
-        {
             "name": "Penitent Wraith",
             "deckIds": [8631072],
             "cardIds": [],
@@ -1831,15 +1688,6 @@
             "tags": []
         },
         {
-            "name": "Alarkite",
-            "deckIds": [9020851],
-            "cardIds": [],
-            "thumb": "2659722",
-            "author": "Justin",
-            "description": "A FIRE Winged Beast archetype that uses Pendulum Monsters to grind and burn, with the ability to go off if the situation calls for it.",
-            "tags": []
-        },
-        {
             "name": "Nemesin",
             "deckIds": [9079255],
             "cardIds": [],
@@ -1855,15 +1703,6 @@
             "thumb": "2658389",
             "author": "AkeDragon",
             "description": "A WATER Zombie archetype that focuses on Special Summoning from the hand and Synchro Summoning.",
-            "tags": []
-        },
-        {
-            "name": "Aequalis",
-            "deckIds": [8819779],
-            "cardIds": [],
-            "thumb": "2596402",
-            "author": "Ajax",
-            "description": "An archetype comprised of mainly Level 2 monsters with the main goal being to throw down 1 or both of their Level 4 Ritual Monsters onto the field temporarily.",
             "tags": []
         },
         {
@@ -1963,6 +1802,177 @@
             "thumb": "2824255",
             "author": "Ravenclaw",
             "description": "A WATER and DARK archetype that utilizes Ritual Monsters and is very unique in the fact that it can be ran in several different ways.",
+            "tags": []
+        },
+        {
+            "name": "Empyrodraco",
+            "deckIds": [9417588],
+            "cardIds": [],
+            "thumb": "2767441",
+            "author": "AkeDragon",
+            "description": "A Dragon archetype that primarily focuses on Synchro Summoning and being in the Spell & Trap Zone.",
+            "tags": []
+        },
+        {
+            "name": "Yurei",
+            "deckIds": [9347499],
+            "cardIds": [],
+            "thumb": "2760434",
+            "author": "Sock",
+            "description": "A Yokai archetype centered around the Normal Monster 'The Mighty Yurei' that utilizes various monsters that can equip themselves to non-Effect Yokai monsters, providing said monster different benefits as a result.",
+            "tags": []
+        },
+        {
+            "name": "Geídst",
+            "deckIds": [9469722],
+            "cardIds": [],
+            "thumb": "1252007",
+            "author": "Fatmanreviews",
+            "description": "A ramp archetype inspired by Crystal Beast that revolves around placing your monsters in the Spell & Trap Zones where they are treated as Continuous Spells/Traps with different effects.",
+            "tags": []
+        },
+        {
+            "name": "Beastmaster's",
+            "deckIds": [7731164],
+            "cardIds": [],
+            "thumb": "2253900",
+            "author": "StRode",
+            "description": "A Beast, Beast-Warrior and Winged Beast archetype that utilizes Union monsters for an Inzektor-style advantage gain and Level modulation effects to make the Deck's Xyz Monsters, which gain useful effects when specific Union monsters are equipped to them.",
+            "tags": []
+        },
+        {
+            "name": "Dino Exorcist",
+            "deckIds": [9183380],
+            "cardIds": [],
+            "thumb": "2684244",
+            "author": "FlavorFlov",
+            "description": "A DARK Dinosaur archetype that aims to equip Tokens to monsters on the field to either increase their offensive capabilities or turn your opponent's monsters against themselves.",
+            "tags": []
+        },
+        {
+            "name": "Dralchemic",
+            "deckIds": [8036906],
+            "cardIds": [],
+            "thumb": "2353188",
+            "author": "Ajax",
+            "description": "An archetype that takes heavy inspiration from the 'Invoked' archetype, utilizing Ritual Monsters instead of Fusion Monsters and Types instead of Attributes.",
+            "tags": []
+        },
+        {
+            "name": "Black Tear",
+            "deckIds": [9499776],
+            "cardIds": [],
+            "thumb": "2795535",
+            "author": "Faux",
+            "description": "A DARK Fairy archetype centered around the card 'Graceful Tear', utilizing different effects when you have little to no cards in your hand.",
+            "tags": []
+        },
+        {
+            "name": "Dark Crusher",
+            "deckIds": [9593754],
+            "cardIds": [],
+            "thumb": "1966347",
+            "author": "Nitrogames",
+            "description": "A DARK Beast-Warrior, Sea Serpent and Rock archetype that is battle focused, aiming to gain a large amount of advantage from destroying the opponent's monsters while still achieving plays on the side.",
+            "tags": []
+        },
+        {
+            "name": "Knechtgeist",
+            "deckIds": [3400704],
+            "cardIds": [],
+            "thumb": "606637",
+            "author": "Gatr",
+            "description": "A DARK Warrior archetype that revolves around each monster having the ability to place themselves in the Spell & Trap Zone to then Summon a Token OR Tribute a Token to Summon themselves.",
+            "tags": []
+        },
+        {
+            "name": "The Fall",
+            "deckIds": [9870820],
+            "cardIds": [],
+            "thumb": "2916237",
+            "author": "Fallen",
+            "description": "An archetype that supports EARTH Spellcaster monsters and can Summon any EARTH Spellcaster from the Deck in face-down Defense Position.",
+            "tags": []
+        },
+        {
+            "name": "World Hero",
+            "deckIds": [9105896],
+            "cardIds": [],
+            "thumb": "2609194",
+            "author": "BD'Sceptre",
+            "description": "An archetype revolving around having links to their predecessors - the World Legacy archetype, as well as benefitting from said archetype in turn, being able to swarm and give different effects to the World Hero himself as well as go into LIGHT Fairy Synchro and Link Monsters to evade destruction.",
+            "tags": []
+        },
+        {
+            "name": "Vivified",
+            "deckIds": [9954291],
+            "cardIds": [],
+            "thumb": "2931941",
+            "author": "Sock",
+            "description": "An archetype centered around \"Envivification\", being able to transform specific random monsters into \"Vivified\" versions of themselves.",
+            "tags": []
+        },
+        {
+            "name": "Straw Hat",
+            "deckIds": [7586564],
+            "cardIds": [],
+            "thumb": "2211276",
+            "author": "KozukiOden",
+            "description": "A diverse archetype based on the \"One Piece\" anime and manga, utilizing different Extra Deck monsters and effects to deal damage, break boards and win the Duel.",
+            "tags": []
+        },
+        {
+            "name": "Hollow Depths",
+            "deckIds": [7404351],
+            "cardIds": [],
+            "thumb": "2138596",
+            "author": "KelTheSkeleton",
+            "description": "A WATER Fish archetype centered around changing the battle position of face-down monsters and the material of face-down Xyz Monsters.",
+            "tags": []
+        },
+        {
+            "name": "Elixir Born",
+            "deckIds": [9929020],
+            "cardIds": [],
+            "thumb": "2932976",
+            "author": "Dusty Balls",
+            "description": "A multi-Attribute/Type archetype that focuses on Synchro climbing, banishing to gain advantage and swarming the field to go into Synchro Monsters that become more powerful as their Levels get higher.",
+            "tags": []
+        },
+        {
+            "name": "DMG",
+            "deckIds": [8145980],
+            "cardIds": [],
+            "thumb": "1612090",
+            "author": "Railreich",
+            "description": "A DARK Machine archetype that revolves around a set of Level 4 and below monsters and Link Monsters that each have battle restrictions, requiring you to discard their archetypal Normal Spells to battle, with each said discarded Normal Spell granting the monster that discarded it a battle-related effect to give them a sharper edge.",
+            "tags": []
+        },
+        {
+            "name": "Iffrean",
+            "deckIds": [9771722],
+            "cardIds": [],
+            "thumb": "2878018",
+            "author": "Khreygond",
+            "description": "A FIRE Dragon archetype based on 'Blaster, Dragon Ruler of Infernos', having synergy with it, with the main objective of the archetype being to go second, force out all disruptions, blow out the opponent's remaining board and swing for game.",
+            "tags": []
+        },
+        {
+            "name": "Submerzan",
+            "deckIds": [6395566],
+            "cardIds": [],
+            "thumb": "1807122",
+            "author": "Gatr",
+            "description": "A WATER Sea Serpent archetype that utilizes Flip monsters and rearranges face-down Defense Position monsters.",
+            "tags": []
+        },
+        {
+            "name": "Bolt Arc",
+            "deckIds": [8669733],
+            "cardIds": [],
+            "thumb": "2141390",
+            "author": "Eureka",
+            "description": "A Spellcaster and Thunder archetype that utlizes Pendulum Monsters and Synchro Monsters with a unique gimmick of effects triggering when the archetypal monsters are Summoned to the Extra Monster Zone.",
             "tags": []
         }
     ]
