@@ -1800,3 +1800,10 @@ Must first be Special Summoned (from your Extra Deck) by banishing the above car
 [main] note: [-] removed old card 9329 (Hip Hoshiningen)
 [main] note: [-] removed old card 2373978 (Twilight Charge)
 [main] Time elapsed: 48.5846358s
+[final] Completing scrape at 03-24-2022.14.05.23
+[main] Reading tmp/db-03-24-2022.13.56.14.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["4641", "4647", "1106", "1751935", "2976597", "1884551", "1884551", "4695", "1884551", "2330219", "2330219", "1884551", "689", "2496813", "4682", "4582", "4583", "2330207"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).

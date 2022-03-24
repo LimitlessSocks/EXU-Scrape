@@ -562,7 +562,7 @@ database = [
     7961879,  #Mermaidol
     8170513,  #Jolsprit
     # 8152211,  #Bolt Arc
-    8105715,  #Spacial Demon
+    # 8105715,  #Spacial Demon
     # 8055913,  #Flutterbleu
     6086340,  #Zeniphyr
     # 3705612,  #Azure Reaper
