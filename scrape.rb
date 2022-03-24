@@ -290,6 +290,8 @@ database = [
     9907108,  #Panera Support
     10050632, #Gradius Support
     10050401, #B.E.S. Support
+    9175751,  #Crystron Support
+    9864486,  #Ninja Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -641,6 +643,9 @@ database = [
     9771722,  #Iffrean
     6395566,  #Submerzan
     8669733,  #Bolt Arc
+    8172329,  #Harbringer
+    5145725,  #Remnant
+    9739014,  #Cryptr
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
@@ -667,6 +672,7 @@ generics = [
     9389807,  #Generic Monsters XIX
     9607806,  #Generic Monsters XX
     10136453, #Generic Monsters XXI
+    10333761, #Generic Monsters XXII
     6353430,  #Generic Spells
     6419184,  #Generic Spells II
     6871664,  #Generic Spells III
