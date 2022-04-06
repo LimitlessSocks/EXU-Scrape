@@ -1845,3 +1845,10 @@ Loses 1000 ATK for each material attached to it. If you would target an "Endless
 [main] note: [-] removed old card 2285463 (Valenica, Almighty Lord of Anodemia)
 [main] note: [-] removed old card 2284868 (Aliana, Sisage Protector of Magic)
 [main] Time elapsed: 53.7673893s
+[final] Completing scrape at 04-06-2022.16.33.25
+[main] Reading tmp/db-04-06-2022.15.15.29.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["2872647", "1927861", "1137597", "1137388", "1137394", "1506615", "1558338", "1535963", "1552397", "1742767", "1649242", "1708807", "2266598", "1853111", "1864562", "1360598", "1961814", "2010204", "2331326", "2138786", "2144604", "2238033", "1037319", "2464022", "2853810", "2238320", "2168022", "2256037", "1984970", "2393208", "2373444", "1120594", "1864562", "2290674", "3064718", "2685902", "1333035", "2293318", "2293318", "1864562", "2853810", "2667784", "2474980"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
