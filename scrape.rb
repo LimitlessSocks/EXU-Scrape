@@ -535,7 +535,7 @@ database = [
     # 7842189,  #The Aarp
     7882788,  #Des Aspect
     # 7783148,  #Tamed Calamity / Armored Tamer
-    7823128,  #Sisage
+    # 7823128,  #Sisage
     6222166,  #Ananta
     2795851,  #Conqueror
     7920705,  #Gaia's Chosen
@@ -646,6 +646,8 @@ database = [
     8172329,  #Harbringer
     5145725,  #Remnant
     9739014,  #Cryptr
+    10219078, #Mortal Engine
+    10168519, #Childream
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)

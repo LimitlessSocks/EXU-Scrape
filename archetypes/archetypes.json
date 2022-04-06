@@ -1391,15 +1391,6 @@
             "tags": []
         },
         {
-            "name": "Spacial Demon",
-            "deckIds": [8105715],
-            "cardIds": [],
-            "thumb": "1763991",
-            "author": "NoodleDoodle21",
-            "description": "A Wyrm OTK archetype that combos by banishing its own cards.",
-            "tags": []
-        },
-        {
             "name": "Zeniphyr",
             "deckIds": [6086340],
             "cardIds": [],
@@ -1565,7 +1556,7 @@
             "name": "The Gashercore Collection",
             "deckIds": [8533195],
             "cardIds": [],
-            "thumb": "2539799",
+            "thumb": "2507493",
             "author": "FlavorFlov",
             "description": "An archetype that works off the mechanics of the 'Metamorph' cards to create a control oriented play style, with Gasherfan monsters being able to transform into their Gashercore Fusion Monster counterparts in the process.",
             "tags": []
@@ -1973,6 +1964,51 @@
             "thumb": "2141390",
             "author": "Eureka",
             "description": "A Spellcaster and Thunder archetype that utlizes Pendulum Monsters and Synchro Monsters with a unique gimmick of effects triggering when the archetypal monsters are Summoned to the Extra Monster Zone.",
+            "tags": []
+        },
+        {
+            "name": "Harbringer",
+            "deckIds": [8172329],
+            "cardIds": [],
+            "thumb": "2394666",
+            "author": "Foo",
+            "description": "An Insect and Warrior archetype that's focused on dominating the board, obliterating Insects and utilizing their toolbox in the form of Equip Spells which provide utility if they're removed.",
+            "tags": []
+        },
+        {
+            "name": "Harbringer",
+            "deckIds": [5145725],
+            "cardIds": [],
+            "thumb": "1383523",
+            "author": "OceanPhantom",
+            "description": "A WATER Psychic and Machine archetype that utilizes Synchro and Fusion Monsters, has easy access to removal and negates as well as a strong grind to finish off the opponent.",
+            "tags": []
+        },
+        {
+            "name": "Cryptr",
+            "deckIds": [9739014],
+            "cardIds": [],
+            "thumb": "2102806",
+            "author": "AkeDragon",
+            "description": "A Wyrm archetype in a similar vein to 'Drytron', with the non-Ritual monsters having a clause to Special Summon themselves from the hand or GY by banishing another archetypal monster from the hand or GY.",
+            "tags": []
+        },
+        {
+            "name": "Mortal Engine",
+            "deckIds": [10219078],
+            "cardIds": [],
+            "thumb": "3018952",
+            "author": "Khreygond",
+            "description": "An aggro Rank 8 Xyz Deck with no Main Deck monsters. It summons its Field Spells as Level 8 Machine Monsters when they are sent from the Field Spell Zone to the GY, and focuses on board breaking, beatdown, and cycling cards, while relying on the innate synergy with Generaiders for disruption options.",
+            "tags": []
+        },
+        {
+            "name": "Childream",
+            "deckIds": [10168519],
+            "cardIds": [],
+            "thumb": "1224685",
+            "author": "The_Criator",
+            "description": "A Pendulum archetype that can Ritual, Fusion and Synchro Summon different monsters and fend off DARK Fiend strategies.",
             "tags": []
         }
     ]
