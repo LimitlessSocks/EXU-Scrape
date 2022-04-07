@@ -446,6 +446,12 @@ const TEST_CASES = [
     ["text: [destroy this card]", [
         { main_effect: "destroy this card" },
     ]],
+    ["? atk", [
+       { type: "monster", atkCompare: "question", atk: "" },
+    ]],
+    ["def = ?", [
+       { type: "monster", defCompare: "question", def: "" },
+    ]],
 ];
 
 module.exports = function testTagExtractParse(debug = false) {

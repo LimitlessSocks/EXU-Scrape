@@ -21,6 +21,7 @@ let onLoad = async function () {
     const state = {
         stepSize: 25,
     };
+    window.NewSearchState = state;
     
     const updateTexts = () => {
         $(".cards-showing").text(state.showing);

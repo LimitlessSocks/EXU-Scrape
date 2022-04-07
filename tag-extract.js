@@ -214,6 +214,14 @@ const INDICATORS = [
             [paramName]: match[1] || match[5],
         };
     }).rememberAll(),
+    new TagIndicator(/\?\s*(atk|def)|(atk|def)\s*=?\s*\?/i, (match) => {
+        let paramName = (match[1] || match[2]).toLowerCase();
+        return {
+            type: "monster",
+            [paramName + "Compare"]: "question",
+            [paramName]: "",
+        };
+    }).rememberAll(),
     new TagIndicator(/atk|def/i, (match, memory) => (memory.lastValue && memory.use() && {
         type: "monster",
         [match[0].toLowerCase() + "Compare"]: memory.lastValue.atkCompare || memory.lastValue.defCompare,
