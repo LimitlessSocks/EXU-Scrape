@@ -292,6 +292,9 @@ database = [
     10050401, #B.E.S. Support
     9175751,  #Crystron Support
     9864486,  #Ninja Support
+    9850838,  #Venom Support
+    9630458,  #Numeron Support
+    9847517,  #Materiactor Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -508,7 +511,7 @@ database = [
     # 4377085,  #The Horde
     7548170,  #Psycircuit
     6848354,  #The 9s
-    7594853,  #Abyssal Enforcer
+    10421344, #Abyssal Enforcer
     7439337,  #Anti-Goo
     # 5841822,  #Tomes
     7547609,  #Nauticorpse
@@ -675,6 +678,7 @@ generics = [
     9607806,  #Generic Monsters XX
     10136453, #Generic Monsters XXI
     10333761, #Generic Monsters XXII
+    10436336, #Generic Monsters XXIII
     6353430,  #Generic Spells
     6419184,  #Generic Spells II
     6871664,  #Generic Spells III
@@ -682,11 +686,13 @@ generics = [
     7552464,  #Generic Spells V
     7934345,  #Generic Spells VI
     8886348,  #Generic Spells VII
+    10436309, #Generic Spells VIII
     6353449,  #Generic Traps
     6598717,  #Generic Traps II
     7193016,  #Generic Traps III
     7759421,  #Generic Traps IV
     8886345,  #Generic Traps V
+    10436312, #Generic Traps VI
     6353457,  #Assorted TCG Single Support
     6353465,  #Staples
     
