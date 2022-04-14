@@ -1743,3 +1743,10 @@ You can banish this card from your GY, then target up to 2 of your banished "Nor
 [main] note: [-] removed old card 2933138 (Elixir Born - Dusk Wizard)
 [main] note: [-] removed old card 2933142 (Elixir Born - Dawn Wizard)
 [main] Time elapsed: 30.2447001s
+[final] Completing scrape at 04-14-2022.13.17.10
+[main] Reading tmp/db-04-14-2022.12.59.51.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1211976", "787290", "1524129", "1536652", "1544585", "2533699", "1917807", "1544585", "2115959", "2117054", "2107023", "2115959", "2525171", "2525171", "2555622", "2496967"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
