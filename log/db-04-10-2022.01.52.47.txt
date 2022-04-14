@@ -1859,3 +1859,10 @@ If this card is Link Summoned: You can add 1 monster from your Deck to your hand
 [9954291] Finished scraping.
 [main] filling in missing exu_limit
 [main] Time elapsed: 54.6537927s
+[final] Completing scrape at 04-14-2022.12.59.45
+[main] Reading tmp/db-04-10-2022.01.52.47.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1236873", "1137534", "2124844", "1159421", "1137539", "1137903", "1104477", "1137591", "1397756", "1137467", "1137597", "1137388", "1137398", "1137394", "1260753", "1585827", "1585827", "1585827", "1853111", "2162789", "1113722", "2923191", "2933455"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 2 associated scrape(s).
