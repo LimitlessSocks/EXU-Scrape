@@ -231,12 +231,12 @@
             "tags": ["synchro", "link", "control", "gy", "banish", "float"]
         },
         {
-            "name": "Genjutsu",
+            "name": "Genshutsu",
             "deckIds": [2952495],
             "cardIds": [],
             "thumb": "332816",
             "author": "Gatr",
-            "description": "Genjutsu is a monster-only Ritual Deck that uses Ritual monsters to Ritual Summon. They are a tempo-focused deck that excels at going 2nd and breaking boards, then out resourcing the opponent. Each Ritual has a removal effect on Summon, and the deck is capable of Summoning them as a Quick Effect.",
+            "description": "Genshutsu is a monster-only Ritual Deck that uses Ritual monsters to Ritual Summon. They are a tempo-focused deck that excels at going 2nd and breaking boards, then out resourcing the opponent. Each Ritual has a removal effect on Summon, and the deck is capable of Summoning them as a Quick Effect.",
             "tags": ["second", "aggro", "ritual", "link", "grind", "beatdown"]
         },
         {
@@ -1041,7 +1041,7 @@
         },
         {
             "name": "Abyssal Enforcer",
-            "deckIds": [7594853],
+            "deckIds": [10421344],
             "cardIds": [],
             "thumb": "2084640",
             "author": "AkeDragon",
@@ -1204,7 +1204,7 @@
         {
             "name": "Ananta",
             "deckIds": [6222166],
-            "cardIds": [],
+            "cardIds": [2367941],
             "thumb": "1472",
             "author": "Andraith",
             "description": "A DARK Reptile Fusion archetype that specializes in banishing, Fusion Summoning and being built around the TCG card 'Evil Dragon Ananta'.",
@@ -1976,7 +1976,7 @@
             "tags": []
         },
         {
-            "name": "Harbringer",
+            "name": "Remnant",
             "deckIds": [5145725],
             "cardIds": [],
             "thumb": "1383523",

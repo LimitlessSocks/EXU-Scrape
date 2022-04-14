@@ -272,7 +272,7 @@ database = [
     9514627,  #Travelsha Support
     9420032,  #Zoodiac Support
     9091180,  #Fur Hire Support
-    8016535,  #roid Support
+    # 8016535,  #roid Support
     9602551,  #Genex Support
     9850383,  #Elbeyonder Support
     9747849,  #Malicevorous Support
@@ -518,7 +518,7 @@ database = [
     7645365,  #Solomons Studies
     # 7671393,  #Pyrabbit
     # 7685326,  #Justice Knight
-    7499095,  #Magistrophic
+    # 7499095,  #Magistrophic
     7093024,  #Khremysis
     # 7577360,  #Tempo Warrior
     # 7586564,  #Straw Hat
