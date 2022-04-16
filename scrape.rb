@@ -650,7 +650,7 @@ database = [
     5145725,  #Remnant
     9739014,  #Cryptr
     10219078, #Mortal Engine
-    10168519, #Childream
+    # 10168519, #Childream
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)

@@ -2001,15 +2001,6 @@
             "author": "Khreygond",
             "description": "An aggro Rank 8 Xyz Deck with no Main Deck monsters. It summons its Field Spells as Level 8 Machine Monsters when they are sent from the Field Spell Zone to the GY, and focuses on board breaking, beatdown, and cycling cards, while relying on the innate synergy with Generaiders for disruption options.",
             "tags": []
-        },
-        {
-            "name": "Childream",
-            "deckIds": [10168519],
-            "cardIds": [],
-            "thumb": "1224685",
-            "author": "The_Criator",
-            "description": "A Pendulum archetype that can Ritual, Fusion and Synchro Summon different monsters and fend off DARK Fiend strategies.",
-            "tags": []
         }
     ]
 }
