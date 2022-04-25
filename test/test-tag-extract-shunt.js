@@ -5,6 +5,8 @@ const {
     OPERATOR_INLINE_AND,
     OPERATOR_INLINE_OR,
     CASE_SENSITIVE,
+    LEFT_PARENTHESIS,
+    RIGHT_PARENTHESIS,
 } = require("./../tag-extract.js");
 const { objectEqual } = require("./lib.js");
 
@@ -113,7 +115,30 @@ const TEST_CASES = [
     ["case [lv]", [
         CASE_SENSITIVE,
         { effect: "lv" },
-    ]]
+    ]],
+    ["not custom ritual monster [discard this]", [
+        { visibility: "5" },
+        OPERATOR_NOT,
+        { type: "monster", monsterCategory: "ritual" },
+        OPERATOR_INLINE_AND,
+        { effect: "discard this" },
+        OPERATOR_INLINE_AND,
+    ]],
+    ["not custom ritual [discard this]", [
+        { visibility: "5" },
+        OPERATOR_NOT,
+        { type: "spell", kind: "Ritual" },
+        { type: "monster", monsterCategory: "ritual" },
+        OPERATOR_INLINE_OR,
+        { effect: "discard this" },
+        OPERATOR_INLINE_AND,
+    ]],
+    ["not custom [discard this]", [
+        { visibility: "5" },
+        OPERATOR_NOT,
+        { effect: "discard this" },
+        OPERATOR_INLINE_AND,
+    ]],
 ];
 
 module.exports = function testTagExtractShunt(debug = false) {

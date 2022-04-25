@@ -469,6 +469,18 @@ const shunt = function* (queryList, createFilter=CardViewer.createFilter) {
             // outputCounts.push(outputCounts.pop() - 1);//TODO: check if this works
         }
         else if(token === LEFT_PARENTHESIS) {
+            if(lastWasData) {
+                // flush operators; explicit and
+                while(operatorStack.length) {
+                    if(operatorStack.at(-1) !== LEFT_PARENTHESIS) {
+                        yield operatorStack.pop();
+                    }
+                    else {
+                        break;
+                    }
+                }
+                operatorStack.push(OPERATOR_INLINE_AND);
+            }
             operatorStack.push(token);
             // outputCounts.push(0);
         }
