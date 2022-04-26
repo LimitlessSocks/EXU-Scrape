@@ -3,6 +3,30 @@ let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/maste
 window.ycgDatabase = baseURL + "ycg.json";
 window.exuDatabase = baseURL + "db.json";
 
+// add background plugin
+// https://stackoverflow.com/a/71395413/4119004
+const custom_canvas_background_color = bgColor => ({
+    id: 'custom_canvas_background_color_' + bgColor,
+    beforeDraw: (chart, args, options) => {
+        const {
+            ctx,
+            chartArea: { top, right, bottom, left, width, height },
+            scales: { x, y },
+        } = chart;
+        ctx.save();
+        ctx.globalCompositeOperation = 'destination-over';
+        ctx.fillStyle = bgColor;
+        let clip = chart?.options?.clip ?? 0;
+        ctx.fillRect(
+            left - clip,
+            top - clip,
+            width + 2 * clip,
+            height + 2 * clip
+        );
+        ctx.restore();
+    },
+});
+
 const getStatsFilter = (query, exclude = null) => {
     let finalQuery = {};
     let finalExclude = null;
@@ -27,6 +51,36 @@ const getStatsFilter = (query, exclude = null) => {
     
     return cards;
 };
+
+const getFunctionFrom = fn =>
+    typeof fn === "function"
+        ? fn
+        : (type => card => card[type])(fn);
+
+const bubbleBy = (fn1, fn2, query, exclude = null) => {
+    let hash = {};
+    fn1 = getFunctionFrom(fn1);
+    fn2 = getFunctionFrom(fn2);
+    let swath = getStatsFilter(query, exclude);
+    // let max = 0;
+    for(let card of Object.values(swath)) {
+        let key = fn1(card) + "," + fn2(card);
+        hash[key] ??= 0;
+        hash[key]++;
+        // if(hash[key] > max) max = hash[key];
+    }
+    let bubbles = [];
+    // bubbles.max = max;
+    for(let [key, value] of Object.entries(hash)) {
+        let [x, y] = key.split(",").map(e => parseFloat(e));
+        bubbles.push({
+            x: x,
+            y: y,
+            size: value,
+        });
+    }
+    return bubbles;
+}
 
 const cardsBy = (fn, query = {}, exclude = null) => {
     let hash = {};
@@ -161,6 +215,9 @@ class Feature {
     }
     
     render(ctx) {
+        // console.log("== RENDER ==");
+        console.group(" == RENDER == ");
+        console.trace();
         if(Statistics.focus && Statistics.focus.chart) {
             Statistics.focus.chart.destroy();
         }
@@ -178,10 +235,12 @@ class Feature {
         let sortByGrader = this.options.sortBy || Statistics.Options.sortBy;
         let limit = this.options.limit || Statistics.Options.limit || this.options.defaultLimit;
         let reverse = this.options.reverse;
+        let kind = this.options.kind || "bar";
         // console.log("Limit:", limit);
         
         let dat = Object.entries(this.fn(...Statistics.parameters));
         let sortedDat;
+        console.log("Data post retrieve:", dat);
         
         if(sortIndex == 0) {
             if(this.options.sort) {
@@ -198,16 +257,24 @@ class Feature {
         }
         
         dat = sortedDat;
+        console.log("Data post sort:", dat);
         
         if(reverse) {
             dat = dat.reverse();
-            console.log(dat);
+            console.log("Reversed:", dat);
         }
         
         if(limit) {
-            dat = dat.slice(0, limit);
+            console.log("Limit:", limit);
+            if(kind === "bubble") {
+                dat = dat.filter(c => c[1].size >= limit);
+            }
+            else {
+                dat = dat.slice(0, limit);
+            }
         }
         
+        console.log("Data post limit:", dat);
         console.log(dat.map(a => a.join(" - ")).join("\n"));
         
         let [
@@ -215,54 +282,132 @@ class Feature {
             hoverBackground, hoverBorder,
         ] = Feature.hueArrays(dat.length);
         
-        this.chart = new Chart(ctx, {
-            type: "bar",
-            data: {
-                labels: dat.map(e => e[0]),
-                datasets: [{
-                    label: "Occurrences",
-                    data: dat.map(e => e[1]),
-                    backgroundColor: background,
-                    borderColor: border,
-                    hoverBackgroundColor: hoverBackground,
-                    hoverBorderColor: hoverBorder,
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                title: {
-                    text: this.disp,
-                    display: true,
-                    fontColor: "#cccccc",
-                    fontSize: 16,
-                },
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                            
-                            // fontColor: "green",
-                            // fontSize: 18,
-                        },
-                    }],
-                    xAxes: [{
-                        ticks: {
-                            fontColor: "#dddddd",
-                            fontSize: 16,
-                        }
+        if(kind === "bar") {
+            console.log("bar data", dat.map(e => e[1]));
+            this.chart = new Chart(ctx, {
+                type: "bar",
+                data: {
+                    labels: dat.map(e => e[0]),
+                    datasets: [{
+                        label: "Occurrences",
+                        data: dat.map(e => e[1]),
+                        backgroundColor: background,
+                        borderColor: border,
+                        hoverBackgroundColor: hoverBackground,
+                        hoverBorderColor: hoverBorder,
+                        borderWidth: 1
                     }]
                 },
-                legend: {
-                    display: false
-                    // labels: {
-                        // fontColor: "blue",
-                        // fontSize: 18
-                    // }
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            text: this.disp,
+                            display: true,
+                            color: "#dddddd",
+                            font: {
+                                size: 20,
+                            },
+                        },
+                    },
+                    scales: {
+                        y: {
+                            display: true,
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        },
+                        x: {
+                            display: true,
+                            ticks: {
+                                fontColor: "#dddddd",
+                                fontSize: 16,
+                            }
+                        },
+                        /*
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                                
+                                // fontColor: "green",
+                                // fontSize: 18,
+                            },
+                        }],
+                        xAxes: [{
+                            ticks: {
+                                fontColor: "#dddddd",
+                                fontSize: 16,
+                            }
+                        }]*/
+                    },
+                    legend: {
+                        display: false
+                        // labels: {
+                            // fontColor: "blue",
+                            // fontSize: 18
+                        // }
+                    },
+                }
+            });
+        }
+        else if(kind === "bubble") {
+            dat = dat.map(e => e[1]);
+            // console.log(dat);
+            let max = Math.max(...dat.map(c => c.size));
+            // console.log(max);
+            let f = true;
+            let displayMin = this.options.displayMin ?? 2;
+            let displayMax = this.options.displayMax ?? 50;
+            let displayDiff = displayMax - displayMin;
+            // console.log(displayMin, displayMax, displayDiff);
+            let myData = {
+                datasets: [{
+                    label: "",
+                    data: dat,
+                    radius(context) {
+                        let point = context.dataset.data[context.dataIndex];
+                        return displayMin + point.size / max * displayDiff;
+                    },
+                    backgroundColor(context) {
+                        let point = context.dataset.data[context.dataIndex];
+                        if(point.x == point.y) {
+                            return 'rgba(181, 130, 81, 0.8)';
+                        }
+                        else {
+                            return 'rgba(94, 181, 51, 0.8)';
+                        }
+                    },
+                    // borderColor: "rgba(200, 200, 200, 0.8)",
+                    // borderWidth: 1,
+                }]
+            };
+            this.chart = new Chart(ctx, {
+                type: "bubble",
+                data: myData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    clip: 10,
+                    plugins: {
+                        title: {
+                            text: this.disp,
+                            display: true,
+                            color: "#dddddd",
+                            font: {
+                                size: 20,
+                            },
+                        },
+                    },
                 },
-            }
-        });
+                plugins: [custom_canvas_background_color("rgba(0, 0, 0, 0.7)")],
+            });
+        }
+        else {
+            console.error("Unrecognized chart type:", kind);
+        }
+        
+        console.groupEnd();
     }
 }
 
@@ -474,6 +619,15 @@ Statistics.addFeature(
     {
         numericName: true,
         defaultLimit: 35,
+    }
+);
+
+Statistics.addFeature(
+    "atkDefMostBubble",
+    "Commonest ATK/DEF (Bubble)",
+    () => bubbleBy("atk", "def", { type: "monster" }, { monsterCategory: "link" }),
+    {
+        kind: "bubble",
     }
 );
 
@@ -866,6 +1020,13 @@ window.addEventListener("load", async function () {
         }
     }
     
+    // fix stupid chart.js bubble chart
+    Chart.overrides.bubble.plugins.tooltip.callbacks.label = (item) => {
+        // console.log(item);
+        const { x, y, size: r } = item.raw;
+        return `${item.label}: (${x}/${y}, ${r})`;
+    };
+
     // load buttons
     let optionContainer = $("#optionContainer");
     let firstFeature;
@@ -916,9 +1077,10 @@ window.addEventListener("load", async function () {
             Statistics.focus.id,
             sortIndexer.val(),
             limiter.val(),
-            filter,
+            null, // filter??
             null,
         ];
+        console.log(params);
         params.push(...Statistics.parameters.slice(0, Statistics.ParameterData.count));
         window.location.search = "?" + params.join(",").replaceAll(",", "%2C");
     });
@@ -941,13 +1103,13 @@ window.addEventListener("load", async function () {
         if(this.value === "") return;
         let property = idToKey[this.id];
         
-        
+        /*
         console.dir({
             property: property,
             id: this.id,
-            this: this,
+            // this: this,
             thisValue: this.value
-        });
+        });*/
         
         if(this.type === "radio") {
             if(!this.checked) return;
@@ -957,6 +1119,9 @@ window.addEventListener("load", async function () {
             Statistics.Options[property] = this.value;
         }
         
+        if(this.type == "number") {
+            Statistics.Options[property] = parseFloat(Statistics.Options[property]);
+        }
         
         if(property === "sortIndex") {
             Statistics.Options.sortOrder = this.value == "1" ? -1 : 1;
@@ -1016,7 +1181,7 @@ window.addEventListener("load", async function () {
     
     for(let el of inputElements) {
         $(el).change(onUpdate);
-        onUpdate.bind(el)();
+        // onUpdate.bind(el)();
     }
     
     let canvasHolder = $("#canvasHolder");
