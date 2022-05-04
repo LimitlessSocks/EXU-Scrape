@@ -758,7 +758,7 @@ banlist = [
     6358715,                      #Unimported
     
     5895579,                      #Retrains
-    10525773, 10525774, 7000259,  #7000259
+    10525773, 10525774, 7000259,  #Banned
     5857248, 10525728,            #Limited
     5857281,                      #Semi-Limited
     5857285,                      #Unlimited
@@ -789,18 +789,18 @@ EXU_IMPORT      = { "exu_limit" => 3, "exu_import" => true }
 EXU_NO_IMPORT   = { "exu_limit" => 0, "exu_ban_import" => true }
 EXU_ALT_ART     = { "alt_art" => true }
 extra_info = {
-    5895579 => EXU_RETRAIN,
+    5895579  => EXU_RETRAIN,
     
-    5855756 => EXU_BANNED,
-    5856014 => EXU_BANNED,
-    7000259 => EXU_BANNED,
+    10525773 => EXU_BANNED,
+    10525774 => EXU_BANNED,
+    7000259  => EXU_BANNED,
     
-    5857248 => EXU_LIMITED,
-    7885271 => EXU_LIMITED,
+    5857248  => EXU_LIMITED,
+    7885271  => EXU_LIMITED,
     
-    5857281 => EXU_SEMILIMITED,
+    5857281  => EXU_SEMILIMITED,
     
-    5857285 => EXU_UNLIMITED,
+    5857285  => EXU_UNLIMITED,
     
     # 6358712 => EXU_IMPORT,
     # 7260456 => EXU_IMPORT,
@@ -816,7 +816,7 @@ decks = nil
 outname = nil
 
 if operation == "main"
-    decks = database + banlist
+    decks = database
     outname = "db"
 elsif operation == "banlist"
     decks = banlist
