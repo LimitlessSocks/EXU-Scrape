@@ -295,6 +295,19 @@ database = [
     9850838,  #Venom Support
     9630458,  #Numeron Support
     9847517,  #Materiactor Support
+    10324587, #Witchwood Support
+    9997560,  #Harokai Support
+    10190817, #Underworld Support
+    8254883,  #LV Support
+    10416948, #Adventurer Support
+    10481429, #Suship Support
+    10485110, #Chronoruler Support
+    10539415, #Collapse Support
+    10486958, #Libromancer Support
+    10481340, #Abartech Support
+    9992148,  #Mist Valley Support
+    10349615, #Demise/Ruin Support
+
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -651,6 +664,13 @@ database = [
     9739014,  #Cryptr
     10219078, #Mortal Engine
     # 10168519, #Childream
+    7635829,  #Skyraptor
+    10269461, #Incindery
+    10219776, #Zircon
+    10447396, #Magma Force
+    10489381, #Nebulence
+    8083127,  #Mechanima
+    9535496,  #Sweeper
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
@@ -735,13 +755,13 @@ banlist = [
     # 6358712,                    #Imported 1
     # 7260456,                    #Imported 2
     # 6751103,                    #Imported 3
-    6358715,                    #Unimported
+    6358715,                      #Unimported
     
-    5895579,                    #Retrains
-    5855756, 5856014, 7000259,  #Forbidden
-    5857248, 7885271,           #Limited
-    5857281,                    #Semi-Limited
-    5857285,                    #Unlimited
+    5895579,                      #Retrains
+    10525773, 10525774, 7000259,  #7000259
+    5857248, 10525728,            #Limited
+    5857281,                      #Semi-Limited
+    5857285,                      #Unlimited
 ]
 
 test = [
@@ -796,7 +816,7 @@ decks = nil
 outname = nil
 
 if operation == "main"
-    decks = database
+    decks = database + banlist
     outname = "db"
 elsif operation == "banlist"
     decks = banlist
@@ -927,14 +947,16 @@ results.each.with_index(1) { |(deck_id, cards), i|
             card["also_archetype"] = nil
         end
         # get first addition date
-        card["date"] = nil
-        da_info = date_added["added"][id] rescue nil
-        if da_info.nil?
-            if old_database[id]
-                card["date"] = old_database[id]["date"]
+        if card["tcg"] != 0 || card["ocg"] != 0
+            card["date"] = nil
+            da_info = date_added["added"][id] rescue nil
+            if da_info.nil?
+                if old_database[id]
+                    card["date"] = old_database[id]["date"]
+                end
+            else
+                card["date"] = da_info[0]
             end
-        else
-            card["date"] = da_info[0]
         end
         
         # log operations
