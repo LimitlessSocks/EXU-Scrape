@@ -115,7 +115,7 @@ database = [
     # 6888197,  #ABC-Dragon/Gradius Support
     6913421,  #Vylon Support
     5793524,  #Number 54: Lion Heart Support
-    6918022,  #Cyberdark Supports
+    # 6918022,  #Cyberdark Supports
     6936982,  #Thought Legacy Support
     6933325,  #Super Quant Support 2
     6942144,  #Mythical Beast Support
@@ -225,7 +225,7 @@ database = [
     8310242,  #Battlin' Boxer Support
     8187355,  #Reptilianne Support
     # 7914836,  #Cubic Support
-    8119660,  #Darklord Marie Support
+    # 8119660,  #Darklord Marie Support
     8560865,  #E^rabastel Support
     8451189,  #Egyptian God/Divine Beast Support
     8624721,  #PSY-Frame Support
@@ -671,6 +671,7 @@ database = [
     10489381, #Nebulence
     8083127,  #Mechanima
     9535496,  #Sweeper
+    10234077, #Popping Prowess
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
