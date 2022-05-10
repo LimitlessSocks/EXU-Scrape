@@ -672,6 +672,7 @@ database = [
     8083127,  #Mechanima
     9535496,  #Sweeper
     10234077, #Popping Prowess
+    10514511, #Finflame
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
@@ -797,7 +798,7 @@ extra_info = {
     7000259  => EXU_BANNED,
     
     5857248  => EXU_LIMITED,
-    7885271  => EXU_LIMITED,
+    10525728  => EXU_LIMITED,
     
     5857281  => EXU_SEMILIMITED,
     
