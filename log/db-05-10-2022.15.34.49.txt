@@ -1989,3 +1989,10 @@ Gains 700 ATK/DEF for each Wedge Counter on the field. You can only use 1 of the
 [main] note: [-] removed old card 2531831 (Space Bridage Mam-B0)
 [main] note: [-] removed old card 930171 (Totem Troll Toll)
 [main] Time elapsed: 48.1711936s
+[final] Completing scrape at 05-10-2022.15.47.36
+[main] Reading tmp/db-05-10-2022.15.34.49.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["3018952", "3040679", "3040842", "3038140", "3081538", "3076327", "6478", "1471787", "1802374", "1664119", "1664185", "1583661", "1621069", "1583562", "1807531", "1807511", "1761332", "1656347", "1507767", "1507762", "1507779", "1507781", "1946719", "1944824", "1656347", "2012218", "2211850", "2282156", "3139693", "2366234", "2370206", "2415398", "2387841", "2387841", "2515535", "2516435", "2516408", "2516458", "2515502", "823738", "823738", "823738", "823738", "823738", "823738", "823738", "823738", "823738", "823738", "823738", "823738", "823738", "823738", "615004", "615004", "615004", "615004", "615004", "615004", "2575146", "2575146", "2592578", "728365", "2602208", "1966347", "2282156"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
