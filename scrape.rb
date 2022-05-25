@@ -307,6 +307,9 @@ database = [
     10481340, #Abartech Support
     9992148,  #Mist Valley Support
     10349615, #Demise/Ruin Support
+    10601725, #Freed Support
+    10512247, #Utopi/Onomat Support
+    10684531, #Popping Prowess Support
 
     
     #--------------------------------------------------------------------#
@@ -673,6 +676,10 @@ database = [
     9535496,  #Sweeper
     10234077, #Popping Prowess
     10514511, #Finflame
+    8629407,  #Riftchaser
+    9966961,  #Soul Sorceress
+    10294169, #Alchemage
+    
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
