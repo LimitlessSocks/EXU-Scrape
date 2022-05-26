@@ -579,6 +579,7 @@ if(isNode) {
     module.exports = {
         TagExtractor: TagExtractor,
         naturalInputToQuery: naturalInputToQuery,
+        condenseQuery: condenseQuery,
         OPERATOR_MAJOR_OR: OPERATOR_MAJOR_OR,
         OPERATOR_INLINE_OR: OPERATOR_INLINE_OR,
         OPERATOR_INLINE_AND: OPERATOR_INLINE_AND,

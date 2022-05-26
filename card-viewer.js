@@ -25,6 +25,11 @@ const CardViewer = {
     format: "exu"
 };
 
+const isNode = typeof window === "undefined";
+if(isNode) {
+    window = { DEBUG: false };
+}
+
 // some constants
 const CATEGORY_RETRAIN = 1;
 const CATEGORY_ALT_ART = 2;
@@ -46,7 +51,9 @@ CardViewer.SaveData.set = (key, value) => {
     CardViewer.SaveData.sync();
 };
 
-CardViewer.SaveData.init();
+if(typeof localStorage !== "undefined") {
+    CardViewer.SaveData.init();
+}
 
 const downloadFile = (content, type = "application/octet-stream", filename = null) => {
     let uri = "data:" + type + "," + encodeURIComponent(content);
@@ -280,6 +287,7 @@ for(let [key, value] of Object.entries(CardGroups)) {
 }
 
 const RetrainMap = {
+    2487668: 10503,     //Simorgh, Bird of Miracles -> Simorgh, Bird of Sovereignty
     2014209: 5576,      //Cryotitan the Elemental Lord -> Moulinglacia the Elemental Lord
     1920888: 3724,      //Scrap Turbo -> Scrap Recycler
     1999194: 6534,      //El Shaddoll Winlao -> El Shaddoll Winda
@@ -1674,3 +1682,7 @@ CardViewer.submit = function () {
     CardViewer.Elements.resultNote.text(CardViewer.firstTime ? "Note: You are currently viewing a curated selection of our cards. Please search again to see all available cards." : "");
     CardViewer.firstTime = false;
 };
+
+if(typeof module !== "undefined") {
+    module.exports = CardViewer;
+}

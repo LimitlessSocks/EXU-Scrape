@@ -647,7 +647,7 @@ database = [
     9469722,  #Geídst
     7731164,  #Beastmaster's
     9183380,  #Dino Exorcist
-    8036906,  #Dralchemic
+    # 8036906,  #Dralchemic
     9499776,  #Black Tear
     # 9436990,  #E^rabastel
     9593754,  #Dark Crusher
@@ -669,7 +669,7 @@ database = [
     # 10168519, #Childream
     7635829,  #Skyraptor
     10269461, #Incindery
-    10219776, #Zircon
+    # 10219776, #Zircon
     10447396, #Magma Force
     10489381, #Nebulence
     8083127,  #Mechanima
@@ -708,6 +708,7 @@ generics = [
     10136453, #Generic Monsters XXI
     10333761, #Generic Monsters XXII
     10436336, #Generic Monsters XXIII
+    10758460, #Generic Monsters XXIV
     6353430,  #Generic Spells
     6419184,  #Generic Spells II
     6871664,  #Generic Spells III
