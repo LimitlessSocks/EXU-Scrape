@@ -1,6 +1,5 @@
 let DEBUG = false;
 const debug = (...args) => DEBUG && console.log(...args);
-let isNode = typeof process !== "undefined";
 
 class Memory {
     constructor() {
@@ -575,7 +574,7 @@ const condenseQuery = (queryList, createFilter=CardViewer.createFilter) => {
     return result;
 };
 
-if(isNode) {
+if(typeof process !== "undefined") {
     module.exports = {
         TagExtractor: TagExtractor,
         naturalInputToQuery: naturalInputToQuery,
