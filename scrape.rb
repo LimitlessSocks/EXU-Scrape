@@ -289,7 +289,7 @@ database = [
     10040214, #Artifact Support
     9907108,  #Panera Support
     10050632, #Gradius Support
-    10050401, #B.E.S. Support
+    # 10050401, #B.E.S. Support
     9175751,  #Crystron Support
     9864486,  #Ninja Support
     9850838,  #Venom Support
@@ -310,6 +310,11 @@ database = [
     10601725, #Freed Support
     10512247, #Utopi/Onomat Support
     10684531, #Popping Prowess Support
+    9700034,  #Malicevorous Support
+    10491757, #Charismatic Support
+    10010547, #Wattkinetic Puppeteer Support
+    10667179, #Red-Eyes Support
+    10732280, #Mechatech Support
 
     
     #--------------------------------------------------------------------#
@@ -414,7 +419,7 @@ database = [
     # 4361777,  #Eviction
     6347993,  #Headhunter
     # 5818764,  #Firewild
-    6460257,  #Dark Arts
+    # 6460257,  #Dark Arts
     # 5145725,  #Remnant
     6537631,  #Bucket Squad
     # 6547017,  #World Reaper Support
@@ -469,7 +474,7 @@ database = [
     6933560,  #Revived Beasts
     # 4355718,  #Wild Rose
     7003838,  #Mechatech Dragons Eclipse and Nova + Overfunded Research
-    5967432,  #Masquerado
+    # 5967432,  #Masquerado
     # 7008268,  #Fiendfyre
     7020690,  #Primal Forest
     6845786,  #Powerpuff
@@ -679,7 +684,14 @@ database = [
     8629407,  #Riftchaser
     9966961,  #Soul Sorceress
     10294169, #Alchemage
-    
+    3890554,  #Fireworks Girl
+    10241137, #Inazuma Fighter
+    9445676,  #Astromini
+    10168519, #Childream
+    10478670, #Und
+    10659799, #Myriche
+    9909767,  #Rev/Strider
+    10219776, #Zircon
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
@@ -709,6 +721,7 @@ generics = [
     10333761, #Generic Monsters XXII
     10436336, #Generic Monsters XXIII
     10758460, #Generic Monsters XXIV
+    10857434, #Generic Monsters XV
     6353430,  #Generic Spells
     6419184,  #Generic Spells II
     6871664,  #Generic Spells III
