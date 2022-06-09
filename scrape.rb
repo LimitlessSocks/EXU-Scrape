@@ -55,7 +55,7 @@ database = [
     6124612,  #Metaphys Support
     6360689,  #Digital Bug Support
     6292623,  #Ninja Support
-    6245917,  #Marincess Support
+    # 6245917,  #Marincess Support
     5954949,  #Yokai Support
     8766544,  #World Chalice/World Legacy Support
     6169009,  #Aquaactress Support
@@ -682,7 +682,7 @@ database = [
     10234077, #Popping Prowess
     10514511, #Finflame
     8629407,  #Riftchaser
-    9966961,  #Soul Sorceress
+    # 9966961,  #Soul Sorceress
     10294169, #Alchemage
     3890554,  #Fireworks Girl
     10241137, #Inazuma Fighter
