@@ -306,7 +306,7 @@ const RetrainMap = {
     2533677: 8825,      //Sengen Taisha -> Amano-Iwato
     2050037: 5788,      //Majestic Ivory Chaoserpent -> White Dragon Wyverburster
     1793538: 6697,      //Masked HERO Dusk Law -> Masked HERO Dark Law
-    1731744: 10510,     //Artifact Ame-No-Nuboku -> Artifact Dagda
+    // 1731744: 10510,     //Artifact Ame-No-Nuboku -> Artifact Dagda
     1653369: 3057,      //Naturia Baihu -> Naturia Beast
     1638076: 5684,      //Horror of the Depths -> Abyss Dweller
     1319245: 5167,      //Lavalval Shadow -> Lavalval Chain
