@@ -315,7 +315,10 @@ database = [
     10010547, #Wattkinetic Puppeteer Support
     10667179, #Red-Eyes Support
     10732280, #Mechatech Support
-
+    10830988, #NEX-Spacians
+    10892302, #Scrylak Support
+    10885995, #Blood Quartz Support
+    10839624, #Prediction Princess Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -525,7 +528,7 @@ database = [
     7516896,  #Darkest Power: Awor
     # 7503795,  #Pitch Black
     7522856,  #Abartech
-    7432421,  #Fiendfyre
+    # 7432421,  #Fiendfyre
     7565819,  #Mind Layer
     3734721,  #Carcharrack
     5736933,  #Armatos Legio
@@ -653,7 +656,7 @@ database = [
     7731164,  #Beastmaster's
     9183380,  #Dino Exorcist
     # 8036906,  #Dralchemic
-    9499776,  #Black Tear
+    # 9499776,  #Black Tear
     # 9436990,  #E^rabastel
     9593754,  #Dark Crusher
     3400704,  #Knechtgeist
@@ -662,7 +665,7 @@ database = [
     9954291,  #Vivified
     7586564,  #Straw Hat
     7404351,  #Hollow Depths
-    9929020,  #Elixir Born
+    10831617, #Elixir Born
     8145980,  #DMG
     9771722,  #Iffrean
     6395566,  #Submerzan
@@ -692,6 +695,14 @@ database = [
     10659799, #Myriche
     9909767,  #Rev/Strider
     10219776, #Zircon
+    9406958,  #Shikai
+    8963869,  #Battle Cats
+    10754814, #Gloomglow
+    10794525, #Learned Wings
+    10530739, #Sacrifall
+    10885540, #Follow Wind
+    8486364,  #Chibright
+    9449834,  #Leechen
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
