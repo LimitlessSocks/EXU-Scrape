@@ -222,7 +222,8 @@ database = [
     8430979,  #Xiuhqui Support
     8344690,  #Evol Support
     6879409,  #Genex Support
-    8310242,  #Battlin' Boxer Support
+    # 8310242,  #Battlin' Boxer Support
+    11001848, #Battlin' Boxer Support
     8187355,  #Reptilianne Support
     # 7914836,  #Cubic Support
     # 8119660,  #Darklord Marie Support
@@ -497,7 +498,8 @@ database = [
     7203610,  #Andromeda
     7180332,  #Dual Asset
     7184403,  #Crystalion
-    7256172,  #Wavering Winds
+    # 7256172,  #Wavering Winds
+    11001854, #Wavering Winds
     # 7123560,  #Metal XO
     6837403,  #Malus
     7284131,  #Iterators
