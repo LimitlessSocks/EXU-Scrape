@@ -4,10 +4,15 @@ window.ycgDatabase = baseURL + "ycg.json";
 window.exuDatabase = baseURL + "db.json";
 
 // window.databaseToUse = baseURL + "/users/LimitlessSocks.json";
-let onLoad = async function () {
+
+let loadDatabase = async function () {
     await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
     CardViewer.excludeTcg = false;
     CardViewer.showImported = true;
+};
+
+let onLoad = async function () {
+    await loadDatabase();
     
     CardViewer.Elements.searchParameters = $("#searchParameters, .extraParamaters");
     

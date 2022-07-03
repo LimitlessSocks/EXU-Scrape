@@ -349,7 +349,9 @@ CardViewer.Database.setInitial = function (db) {
     CardViewer.Database.cards = db;
 };
 CardViewer.Database.initialReadAll = async function (...names) {
-    let promises = names.map(name => fetch(name).then(response => response.json()));
+    let promises = names
+        .filter(name => name !== null)
+        .map(name => fetch(name).then(response => response.json()));
     
     let dbs = await Promise.all(promises);
     
