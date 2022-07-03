@@ -805,8 +805,47 @@ test = [
 ] + banlist
 
 beta = [
-    7443406, #BETA SINGLES, NEVER DELETE!
+    7443406,  #BETA SINGLES, NEVER DELETE!
     ###################
+    11019890, #Twin Polymerization
+    10957934, #Pretzel's Link Pack
+    10879519, #Anon's 8 Alt Arts
+    10782154, #Pretzel's mini pack 7
+    10370099, #Sentai Pt. 2
+    ###################
+    11032208, #Minion Hunter
+    7432421,  #Fiendfyre
+    10892283, #Canyon
+    5150448,  #Sepulchre
+    9439877,  #Ransomwear
+    10974636, #Leviabyss
+    10830386, #DJ Girl
+    10155707, #Drowned Locker
+    10756626, #Necristocrat
+    10609802, #Animathos
+    10794326, #Astral Legacy
+    10485188, #Oniyaru
+    6591476,  #Heart Pirate
+    10674934, #Evernight
+    10414701, #Divergence
+    10254790, #Mervitralitta
+    9779554,  #Dragonaire
+    ###################
+    11034871, #Paleo Support
+    11026619, #FiM Support
+    11006625, #RDA
+    10998117, #Roid Support
+    10971774, #Finflame Support
+    9673459,  #Knightmare Retrains
+    5192096,  #Phantasm Spiral Support
+    10925034, #Ally of Justice Support
+    10917540, #Sword Sanctuary support
+    10863998, #Libromancer Support
+    10875332, #Elixir Born Support
+    10859018, #SPYRAL Support
+    10846956, #Symphonic Warrior Support
+    5619459,  #Contraption Support
+    10572032, #Khremysis Support
 ]
 
 # stungray flute format
