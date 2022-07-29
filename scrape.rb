@@ -757,6 +757,7 @@ generics = [
     10436336, #Generic Monsters XXIII
     10758460, #Generic Monsters XXIV
     10857434, #Generic Monsters XV
+    11183751, #Generic Monsters XVI
     6353430,  #Generic Spells
     6419184,  #Generic Spells II
     6871664,  #Generic Spells III
