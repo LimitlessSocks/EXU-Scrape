@@ -320,7 +320,19 @@ database = [
     10892302, #Scrylak Support
     10885995, #Blood Quartz Support
     10839624, #Prediction Princess Support
-    
+    11205495, #Borrelfire (Borrel Support)
+    11003660, #Evol- Support
+    10978580, #Inazuma Fighter Support
+    11034871, #Paleozoic Support
+    10572032, #Khremysis Support
+    10859018, #SPYRAL Support
+    11067450, #Gravekeeper Support
+    10998117, #Roid Support
+    10863998, #Libromancer Support
+    11153545, #Spellbook Support
+    11099905, #Lyrilusc Support
+    11062951, #Battlin' Boxer Support
+
     #--------------------------------------------------------------------#
     # Archetypes
     # 4327693,  #Lacrimosa
@@ -340,7 +352,7 @@ database = [
     # 4442461,  #Titanic Dragon
     4604736,  #of the North
     4460492,  #Holifear
-    5323883,  #Digitallias
+    # 5323883,  #Digitallias
     # 5416935,  #Akatsuki
     # 5304027,  #Pyre
     # 5396113,  #Terra Basilisk
@@ -575,7 +587,7 @@ database = [
     # 7961741,  #Pluraid
     7519530,  #Armourizer Series: Fleurcrux
     7997640,  #Unbeing
-    6635173,  #Xana
+    # 6635173,  #Xana
     7922328,  #Harokai
     7746134,  #Superego
     4475780,  #Ascending Fire
@@ -705,6 +717,16 @@ database = [
     10885540, #Follow Wind
     8486364,  #Chibright
     9449834,  #Leechen
+    10205936, #IMG
+    10497431, #FiM
+    10676907, #Dreamers' Path
+    11041950, #Soul String
+    5150448,  #Sepulchre
+    10794326, #Astral Legacy
+    10609802, #Animathos
+    10674934, #Evernight
+    10485188, #Oniyaru
+    10756626, #Necristocrat
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
