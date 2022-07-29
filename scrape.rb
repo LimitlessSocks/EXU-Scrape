@@ -685,7 +685,7 @@ database = [
     6395566,  #Submerzan
     8669733,  #Bolt Arc
     8172329,  #Harbringer
-    5145725,  #Remnant
+    # 5145725,  #Remnant
     9739014,  #Cryptr
     10219078, #Mortal Engine
     # 10168519, #Childream
