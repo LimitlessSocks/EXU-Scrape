@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q3RKXFLZRZ');
+    </script>
+    <title>EXU Uncard Glossary: Azuroth</title>
+    <meta charset="UTF-8">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script src="./../card-viewer.js"></script>
+    <script src="./../deck.js"></script>
+    <script>
+        CardViewer.Editor.DeckInstance = new Deck(
+            ["3374440", "3374440", "3374447", "3374447", "3374458", "3374458", "3374423", "3374423", "3374431", "3374431", "3346", "2116", "3367", "2382", "2952", "3856", "4443", "4597", "2219", "4396"],
+            ["3374387"],
+            [],
+            false
+        );
+        let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
+        window.ycgDatabase = baseURL + "ycg.json";
+        window.exuDatabase = baseURL + "db.json";
+        window.addEventListener("load", async function () {
+            // card/deck display
+            CardViewer.Editor.MajorContainer = $("#majorContainer");
+            CardViewer.Editor.MajorContainer.children().css("height", "320px");
+            
+            CardViewer.Elements.deckEditor = $("#deckEditor");
+            CardViewer.Elements.cardPreview = $("#cardPreview");
+            
+            CardViewer.Elements.deckEditor.css("overflow-y", "hidden");
+            
+            CardViewer.Elements.deckEditor.text("Loading deck...");
+            await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
+            // load deck
+            CardViewer.Editor.updateDeck();
+            CardViewer.Editor.setPreview("3374387");
+        });
+    </script>
+    <link rel="STYLESHEET" href="./../card-viewer.css">
+    <link rel="STYLESHEET" href="./../deck.css">
+    <link rel="STYLESHEET" href="./uncard.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3RKXFLZRZ"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <h1 class="title"><a href="./">EXU: Uncard Glossary</a></h1>
+    <div class="content">
+    <h1>Azuroth the Unholy Light/Azuroth the Demon King</h1>
+    <h2>How to Play!</h2>
+    <ol>
+        <li>"Azuroth the Demon King" enters the Duel with 4000 LP, and uses its own Deck as shown.
+            <ol><li>It is recommended that if a player has or can become "Azuroth the Demon King" that they use the "Azuroth the Demon King" card to represent as such, if available.</li></ol>
+        </li>
+        <li>
+            When a player becomes "Azuroth the Demon King", they banish all cards that "Azuroth the Demon King" does not own, face-down.
+            <ol>
+                <li>If necessary, a player can instead use cards they own to represent cards that "Azuroth the Demon King" owns by denoting as such.
+                    <ol><li>A player cannot have at least 2 copies of any 1 card represent 2 different cards.</li></ol>
+                </li>
+            </ol>
+        </li>
+        <li>
+            "Azuroth the Demon King" enters the Duel by shuffling the Deck it owns and drawing 4 cards. It then immediately starts its turn.
+        </li>
+    </ol>
+    
+    <h2>Azuroth's Deck</h2>
+    <p><a href="https://www.duelingbook.com/deck?id=11217441">DuelingBook Link</a></p>
+    <div class="centerDeck">
+        <div id="majorContainer">
+            <div id="deckEditor"></div>
+            <div id="cardPreview"></div>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+    
+    <h2>Clarifying Rules for Competitive(?) Play</h2>
+    <ol>
+        <li>A player can start the Duel as "Azuroth the Demon King" outside of a competitive setting if all players agree.
+            <ol>
+                <li>
+                    More than 1 player can become "Azuroth the Demon King".
+                    <ol><li>Players do not share Decks if multiple players agree or become "Azuroth the Demon King".</li></ol>
+                </li>
+                <li>A player cannot become "Azuroth the Demon King" unless a card or effect allows them to do so.</li>
+                <li>If all players agree to the following at the start of the Match, it may apply: "If a player that has become "Azuroth the Demon King" is attacked by a player equipped with "Benevolence of the Demonsbane" and their LP becomes 0, they lose the Match."</li>
+            </ol>
+        </li>
+        <li>If a Chain is resolving and a player loses the Duel before the effect of "Azuroth the Unholy Light" would apply to them, they do not become "Azuroth the Demon King".</li>
+        <li>A player that has become "Azuroth the Demon King" is still a player.
+            <ol>
+                <li>A player that has become "Azuroth the Demon King" cannot lose the Duel by drawing with no cards in their Deck.</li>
+                <li>A player that has become "Azuroth the Demon King" still loses the Duel by their opponent's effects that win the Duel.</li>
+            </ol>
+        </li>
+    </ol>
+    </div>
+</body>
+</html>
