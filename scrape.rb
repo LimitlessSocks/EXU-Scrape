@@ -332,7 +332,15 @@ database = [
     11153545, #Spellbook Support
     11099905, #Lyrilusc Support
     11062951, #Battlin' Boxer Support
-
+    10917540, #Sword Sanctuary Support
+    5619459,  #Contraption Support
+    11007734, #U.A./F.A. Support
+    11039899, #Ursarctic/Drytron Support
+    10728204, #Code Talker Support
+    11086113, #Orcust Support
+    11155582, #Cipher Support
+    11041314, #Karikuri Ninja Support
+    
     #--------------------------------------------------------------------#
     # Archetypes
     # 4327693,  #Lacrimosa
@@ -727,6 +735,12 @@ database = [
     10674934, #Evernight
     10485188, #Oniyaru
     10756626, #Necristocrat
+    11239513, #Fiendfyre
+    11109026, #Wicked Booster
+    10785454, #Icybr
+    10414701, #Divergence
+    11080097, #Champurai
+    
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
