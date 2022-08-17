@@ -101,7 +101,7 @@ database = [
     6798989,  #D.D. Support
     6807794,  #Hydrovenal Support
     6804358,  #Amorphage Support
-    6804350,  #Cipher Support
+    11341179, #Cipher Support
     # 6804345,  #Cyberdark Support
     # 6804341,  #Bujin Support
     6780728,  #Hieratic Support
