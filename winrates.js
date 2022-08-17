@@ -1,6 +1,16 @@
 const Winrates = {
     DataFiles: [
+        "ladder_season_1.json",
         "ladder_season_3.json",
+        "battleground_1.json",
+        "battleground_2.json",
+        "battleground_3.json",
+        "battleground_4.json",
+        "battleground_5.json",
+        "battleground_6.json",
+        "battleground_7.json",
+        "battleground_8.json",
+        "battleground_9.json",
     ],
     ArchetypeMatch: {
         "Yurei": {
@@ -237,7 +247,14 @@ const showResultsForDataFile = async name => {
         return;
     }
     $("#datafile-title").text(name);
+    
     let data = await fetch("./data/" + name);
+    
+    if(!data.ok) {
+        $("#matched").text("Could not load file: ./data/" + name);
+        return;
+    }
+    
     let json = await data.json();
     let ids = Object.keys(json);
     
@@ -313,14 +330,26 @@ const showResultsForDataFile = async name => {
             }
         }
         
+        let list = $("<ul>");
+        for(let id of matches) {
+            list.append($("<li>").text(
+                [
+                    CardViewer.Database.cards[id].name,
+                    json[id][PERCENT_COLUMN]
+                ].join(" ")
+            ));
+        }
+        inner.append(list);
+        
+        /*
         inner.append(
             $("<p>").text(
                 [...matches].map(id => [
                     CardViewer.Database.cards[id].name,
                     json[id][PERCENT_COLUMN]
-                ].join(" ")).join(";; ")
+                ].join(" ")).join("\n")
             )
-        );
+        );*/
         
         div.append($("<img class=thumb>").attr("src", src));
         div.append($("<div>").append(
@@ -329,6 +358,7 @@ const showResultsForDataFile = async name => {
         ));
         div.click(() => {
             inner.toggle();
+            div.parent().toggleClass("expanded");
         });
         
         $("#matched").append(outer);
