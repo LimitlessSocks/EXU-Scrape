@@ -340,6 +340,7 @@ database = [
     11086113, #Orcust Support
     11155582, #Cipher Support
     11041314, #Karikuri Ninja Support
+    10875332, #Elixir Born Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -772,6 +773,7 @@ generics = [
     10758460, #Generic Monsters XXIV
     10857434, #Generic Monsters XV
     11183751, #Generic Monsters XVI
+    11341134, #Generic Monsters XVII
     6353430,  #Generic Spells
     6419184,  #Generic Spells II
     6871664,  #Generic Spells III
@@ -780,6 +782,7 @@ generics = [
     7934345,  #Generic Spells VI
     8886348,  #Generic Spells VII
     10436309, #Generic Spells VIII
+    10370099, #Generic Spells IX
     6353449,  #Generic Traps
     6598717,  #Generic Traps II
     7193016,  #Generic Traps III
