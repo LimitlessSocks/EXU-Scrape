@@ -341,6 +341,11 @@ database = [
     11155582, #Cipher Support
     11041314, #Karikuri Ninja Support
     10875332, #Elixir Born Support
+    11359867, #Zoodiac Support
+    8228836,  #Tiki Support
+    11237308, #Voltester Support
+    11299188, #Battle Cats Support
+    11249200, #Achacha Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -631,7 +636,7 @@ database = [
     # 8457383,  #Dynamic Gnome
     8376563,  #LaVoix
     6707275,  #Malevolessence
-    6356932,  #Cosmech
+    # 6356932,  #Cosmech
     6156689,  #Varagon
     6040042,  #Kuuroma
     # 8579730,  #Tensura
@@ -651,7 +656,7 @@ database = [
     # 8608821,  #C.I.
     # 8607327,  #Flamiller
     8631072,  #Penitent Wraith
-    5887296,  #Mechaneer's
+    # 5887296,  #Mechaneer's
     8263489,  #The Legendary Exodia Necross Incarnate
     7727566,  #Supermega
     7874062,  #Conflagrant
@@ -741,6 +746,9 @@ database = [
     10785454, #Icybr
     10414701, #Divergence
     11080097, #Champurai
+    11346881, #Horsemen of the Apocalypse
+    10167233, #Luminarye!
+    10155707, #Drowned Locker
     
     
     #order shenanigans
