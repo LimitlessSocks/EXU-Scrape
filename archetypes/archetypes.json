@@ -4,28 +4,10 @@
 			"name": "Arsenal",
 			"deckIds": [5884678],
 			"cardIds": [],
-			"thumb": "",
+			"thumb": "1621953",
 			"author": "Gus",
 			"description": "A simple control WATER Cyberse Ritual Deck with good aggressive options that focus on popping stuff and profiting from it.",
 			"tags": ["control", "beatdown", "ritual", "link"]
-		},
-		{
-			"name": "Cosmech",
-			"deckIds": [6356932],
-			"cardIds": [],
-			"thumb": "",
-			"author": "TheConstruct",
-			"description": "A LIGHT Warrior archetype that focuses on grinding and recovering advantage over time.",
-			"tags": []
-		},
-		{
-			"name": "Mechaneer's",
-			"deckIds": [5887296],
-			"cardIds": [],
-			"thumb": "",
-			"author": "TheConstruct",
-			"description": "An EARTH Machine archetype that revolves around targeting its own monsters to trigger different effects, generate advantage and going into its boss monster to out-grind the opponent.",
-			"tags": []
 		},
 		{
 			"name": "Voltron",
@@ -1460,7 +1442,7 @@
 			"deckIds": [7733925],
 			"cardIds": [],
 			"thumb": "2417774",
-			"author": "Gatr",
+			"author": "Ava",
 			"description": "A FIRE and WIND archetype that focuses on using FIRE and WIND monsters in a style similar to Chaos Decks, Setting cards and banishing cards.",
 			"tags": []
 		},
