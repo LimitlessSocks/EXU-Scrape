@@ -44,7 +44,7 @@ def parse_archetype!(obj)
 end
 
 index = File.read($INDEX_START_PATH, :encoding => "utf-8")
-
+Dir.children($BASE).each { |obj| File.delete(obj) if (obj.end_with? '.html') & (!["archetypes.json", "index-pre.html", "index.html", "boilerplate.html"].include?(obj)) }
 archetype_data = JSON::parse File.read($CONFIG_PATH, :encoding => "utf-8")
 res = ""
 
