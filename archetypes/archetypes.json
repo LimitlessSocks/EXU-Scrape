@@ -2282,6 +2282,15 @@
 			"author": "Estreon",
 			"description": "A WATER Zombie archetype that utilizes Ritual Monsters and its various GY effects to survive and out-grind the opponent by recurring monsters.",
 			"tags": []
+		},
+		{
+			"name": "Minion Hunter",
+			"deckIds": [11032208],
+			"cardIds": [],
+			"thumb": "3314446",
+			"author": "Code 81423",
+			"description": "An archetype comprised of a control-based strategy and a plethora of Field Spells that can be Special Summoned as Effect Monsters, along with being able to steal other Field Spells to boot.",
+			"tags": []
 		}
 	]
 }
