@@ -59,6 +59,10 @@ HOST_MAP = {
     "reddit.com/r/btd6" => "Artist's Reddit Post",
     "yugipedia.com" => "Yu-Gi-Oh!",
     "xn--cckp5c6czi2302avwxa.gamematome.jp" => "Othellonia",
+    "pixiv.net" => "Artist's Pixiv",
+    "luckandlogic.fandom.com" => "Luck and Logic",
+    "pad.fandom.com" => "Puzzles and Dragons",
+    "rageofbahamut.fandom.com" => "Rage of Bahamut",
 }
 
 VALID_TWITTER_ARTISTS = %w(MarkWitton nurikabenuri)
@@ -92,7 +96,7 @@ end
 
 VALID_PARSES = %w(
     Instagram Twitter Skeb Weasyl
-    DeviantArt Tumblr ArtStation
+    DeviantArt Tumblr ArtStation Pixiv
     Buddyfight\ Fandom
     Reddit
     Angelarium
