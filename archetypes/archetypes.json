@@ -1793,7 +1793,7 @@
 			"deckIds": [9105896],
 			"cardIds": [],
 			"thumb": "2609194",
-			"author": "BD'Sceptre",
+			"author": "BDSceptyr",
 			"description": "An archetype revolving around having links to their predecessors - the World Legacy archetype, as well as benefitting from said archetype in turn, being able to swarm and give different effects to the World Hero himself as well as go into LIGHT Fairy Synchro and Link Monsters to evade destruction.",
 			"tags": []
 		},
@@ -2290,6 +2290,15 @@
 			"thumb": "3314446",
 			"author": "Code 81423",
 			"description": "An archetype comprised of a control-based strategy and a plethora of Field Spells that can be Special Summoned as Effect Monsters, along with being able to steal other Field Spells to boot.",
+			"tags": []
+		},
+		{
+			"name": "Ransomwear",
+			"deckIds": [9439877],
+			"cardIds": [],
+			"thumb": "2685145",
+			"author": "BDSceptyr",
+			"description": "A WATER Pyro archetype that specializes in Special Summoning stealing the opponent's resources, burn damage and Synchro Summoning their plethora of boss monsters onto the field.",
 			"tags": []
 		}
 	]
