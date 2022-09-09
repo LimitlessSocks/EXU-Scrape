@@ -79,7 +79,8 @@ database = [
     5782891,  #The Weather Support
     5194131,  #Fur Hire Support
     # 5720993,  #Watt Support
-    4804758,  #Draconia Support
+    # 4804758,  #Draconia Support
+    11496060,  #Draconia Support
     4177191,  #Lightray Support
     5705030,  #Phantasm Spiral Support
     5668288,  #Volcanic Support
@@ -636,7 +637,7 @@ database = [
     # 8457383,  #Dynamic Gnome
     8376563,  #LaVoix
     6707275,  #Malevolessence
-    # 6356932,  #Cosmech
+    6356932,  #Cosmech
     6156689,  #Varagon
     6040042,  #Kuuroma
     # 8579730,  #Tensura
@@ -656,7 +657,7 @@ database = [
     # 8608821,  #C.I.
     # 8607327,  #Flamiller
     8631072,  #Penitent Wraith
-    # 5887296,  #Mechaneer's
+    5887296,  #Mechaneer's
     8263489,  #The Legendary Exodia Necross Incarnate
     7727566,  #Supermega
     7874062,  #Conflagrant
@@ -702,7 +703,7 @@ database = [
     # 5145725,  #Remnant
     9739014,  #Cryptr
     10219078, #Mortal Engine
-    # 10168519, #Childream
+    11221103, #Childream
     7635829,  #Skyraptor
     10269461, #Incindery
     # 10219776, #Zircon
@@ -782,6 +783,7 @@ generics = [
     10857434, #Generic Monsters XV
     11183751, #Generic Monsters XVI
     11341134, #Generic Monsters XVII
+    11490066, #Generic Monsters XVIII
     6353430,  #Generic Spells
     6419184,  #Generic Spells II
     6871664,  #Generic Spells III
