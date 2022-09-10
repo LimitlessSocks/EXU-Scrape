@@ -203,7 +203,7 @@ database = [
     7881252,  #Vision HERO Support
     7846987,  #of the Wasteland Support
     7852899,  #Abartech Support
-    7885378,  #Sunavalon Support
+    # 7885378,  #Sunavalon Support
     # 8079528,  #Gimmick Puppet Support
     7795290,  #Superheavy Samurai Support
     7973339,  #Stage Girl Support
@@ -283,7 +283,7 @@ database = [
     9944104,  #Blackwing Support
     3585517,  #Harpie Support
     9557295,  #Anglory Support
-    9939604,  #Azur Lane Support
+    # 9939604,  #Azur Lane Support
     9941444,  #Tundran Support
     9850403,  #Xöryne Support
     9870029,  #Bone Support
@@ -681,7 +681,7 @@ database = [
     9433755,  #Azathean
     9417588,  #Empyrodraco
     9347499,  #Yurei
-    9469722,  #Geídst
+    # 9469722,  #Geídst
     7731164,  #Beastmaster's
     9183380,  #Dino Exorcist
     # 8036906,  #Dralchemic
@@ -734,7 +734,7 @@ database = [
     9449834,  #Leechen
     10205936, #IMG
     10497431, #FiM
-    10676907, #Dreamers' Path
+    # 10676907, #Dreamers' Path
     11041950, #Soul String
     5150448,  #Sepulchre
     10794326, #Astral Legacy
