@@ -63,6 +63,7 @@ HOST_MAP = {
     "luckandlogic.fandom.com" => "Luck and Logic",
     "pad.fandom.com" => "Puzzles and Dragons",
     "rageofbahamut.fandom.com" => "Rage of Bahamut",
+	"scabard.com" => "Scabard Dungeons and Dragons (?)"
 }
 
 VALID_TWITTER_ARTISTS = %w(MarkWitton nurikabenuri)
@@ -103,7 +104,7 @@ VALID_PARSES = %w(
     SciencePhoto
 )
 PERSONAL_WEBSITES = %w(
-    emilywilloughby ryanpancoast jnelsonstudio
+    emilywilloughby ryanpancoast jnelsonstudio ldra
 )
 def simplify_strip(str)
     str.downcase.gsub(/[^a-z]/, "")

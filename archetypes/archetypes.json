@@ -2300,6 +2300,15 @@
 			"author": "BDSceptyr",
 			"description": "A WATER Pyro archetype that specializes in Special Summoning stealing the opponent's resources, burn damage and Synchro Summoning their plethora of boss monsters onto the field.",
 			"tags": []
+		},
+		{
+			"name": "Carved Eyes",
+			"deckIds": [10892283],
+			"cardIds": [],
+			"thumb": "3266944",
+			"author": "Aurora",
+			"description": "An EARTH Rock archetype that utilizes the card \"Canyon\" to double the battle damage the opponent takes if they battle a Rock monster you control — and then some.",
+			"tags": []
 		}
 	]
 }
