@@ -1921,3 +1921,10 @@ Must be either Special Summoned with a "Metamorph" Spell using or targeting a Di
 [main] note: [-] removed old card 2307497 (Sunvine Flytrap)
 [main] note: [-] removed old card 2307501 (Sunvine Panther)
 [main] Time elapsed: 71.8697364s
+[final] Completing scrape at 09-10-2022.16.53.35
+[main] Reading tmp/db-09-09-2022.23.56.03.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["1767269", "1770809", "2054890", "2415612", "2416293", "2416249", "2399078", "2480719", "2480608", "2480688", "2489238", "2437949", "2437889", "2587401", "2684436", "2696375"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 2 associated scrape(s).
