@@ -347,6 +347,7 @@ database = [
     11237308, #Voltester Support
     11299188, #Battle Cats Support
     11249200, #Achacha Support
+    11141587, #Icejade Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -750,6 +751,9 @@ database = [
     11346881, #Horsemen of the Apocalypse
     10167233, #Luminarye!
     10155707, #Drowned Locker
+    11032208, #Minion Hunter
+    9439877,  #Ransomwear
+    10892283, #Carved Eyes
     
     
     #order shenanigans
