@@ -497,15 +497,6 @@
 			"tags": ["second", "first", "support", "ramp"]
 		},
 		{
-			"name": "Nebulline",
-			"deckIds": [8167114],
-			"cardIds": [],
-			"thumb": "1943901",
-			"author": "AkeDragon",
-			"description": "A Beast Deck that focuses on Xyz Summoning and modifying Levels, also featuring a new monster: Shin Chimera, Power.",
-			"tags": ["combo", "xyz", "support", "beatdown"]
-		},
-		{
 			"name": "Legendary Golems",
 			"deckIds": [6906385],
 			"cardIds": [],
@@ -835,15 +826,6 @@
 			"tags": ["synchro"]
 		},
 		{
-			"name": "Ak*ris",
-			"deckIds": [7310491],
-			"cardIds": [],
-			"thumb": "2113390",
-			"author": "AkeDragon",
-			"description": "A Pendulum archetype that uses many Extra Deck monster types, such as Fusion, Xyz, Synchro and Link to make disruptions.",
-			"tags": ["pendulum", "combo", "rainbow"]
-		},
-		{
 			"name": "Tokyo Terror",
 			"deckIds": [5822335, 7435843],
 			"cardIds": [],
@@ -952,15 +934,6 @@
 			"tags": ["control", "link"]
 		},
 		{
-			"name": "Mind Layer",
-			"deckIds": [7565819, 7687348],
-			"cardIds": [],
-			"thumb": "2204099",
-			"author": "AkeDragon",
-			"description": "A Psychic Xyz archetype that revolves around banishing themselves for different effects, as well as utilizing Rank 3 Psychic Xyz Monsters and their arsenal of Level 3 monsters.",
-			"tags": []
-		},
-		{
 			"name": "Carcharrack",
 			"deckIds": [3734721],
 			"cardIds": [],
@@ -995,15 +968,6 @@
 			"author": "9thV9CT0R",
 			"description": "A combo-based Pendulum archetype featuring DARK Psychic monsters, banish plays and a solid Xyz Monster lineup.",
 			"tags": []
-		},
-		{
-			"name": "Abyssal Enforcer",
-			"deckIds": [10421344],
-			"cardIds": [],
-			"thumb": "2084640",
-			"author": "AkeDragon",
-			"description": "A mainly FIRE-based Rock Synchro archetype that loves to battle.",
-			"tags": ["fire", "rock", "synchro", "battle"]
 		},
 		{
 			"name": "Anti-Goo",
@@ -1237,15 +1201,6 @@
 			"thumb": "2135823",
 			"author": "Draco",
 			"description": "A Link and Xyz archetype revolving around placing Specter Counters and equipping.",
-			"tags": []
-		},
-		{
-			"name": "Circersolar",
-			"deckIds": [8034682],
-			"cardIds": [],
-			"thumb": "2344405",
-			"author": "AkeDragon",
-			"description": "A multi-Attribute Aqua and Pyro Fusion combo/control archetype that focuses on Fusion Summoning boss monsters and utilizing backrow cards.",
 			"tags": []
 		},
 		{
@@ -1528,15 +1483,6 @@
 			"tags": []
 		},
 		{
-			"name": "Azur Lane",
-			"deckIds": [8558559],
-			"cardIds": [],
-			"thumb": "2515502",
-			"author": "Knightmare",
-			"description": "A Rank 9 WATER Machine deck which is flexible in its play style and has the ability to control the field with powerful on-summon removal and negation effects.",
-			"tags": []
-		},
-		{
 			"name": "Penitent Wraith",
 			"deckIds": [8631072],
 			"cardIds": [],
@@ -1606,15 +1552,6 @@
 			"thumb": "2677683",
 			"author": "Khreygond",
 			"description": "A rainbow Fiend archetype inspired by D/D/D's Dark Contract cards that has a primarily Trap control playstyle, but is also able to pivot to midrange or ramp as well.",
-			"tags": []
-		},
-		{
-			"name": "Dance of Swords",
-			"deckIds": [9016753],
-			"cardIds": [],
-			"thumb": "2658389",
-			"author": "AkeDragon",
-			"description": "A WATER Zombie archetype that focuses on Special Summoning from the hand and Synchro Summoning.",
 			"tags": []
 		},
 		{
@@ -1714,15 +1651,6 @@
 			"thumb": "2824255",
 			"author": "Ravenclaw",
 			"description": "A WATER and DARK archetype that utilizes Ritual Monsters and is very unique in the fact that it can be ran in several different ways.",
-			"tags": []
-		},
-		{
-			"name": "Empyrodraco",
-			"deckIds": [9417588],
-			"cardIds": [],
-			"thumb": "2767441",
-			"author": "AkeDragon",
-			"description": "A Dragon archetype that primarily focuses on Synchro Summoning and being in the Spell & Trap Zone.",
 			"tags": []
 		},
 		{
@@ -1879,15 +1807,6 @@
 			"tags": []
 		},
 		{
-			"name": "Cryptr",
-			"deckIds": [9739014],
-			"cardIds": [],
-			"thumb": "2102806",
-			"author": "AkeDragon",
-			"description": "A Wyrm archetype in a similar vein to 'Drytron', with the non-Ritual monsters having a clause to Special Summon themselves from the hand or GY by banishing another archetypal monster from the hand or GY.",
-			"tags": []
-		},
-		{
 			"name": "Mortal Engine",
 			"deckIds": [10219078],
 			"cardIds": [],
@@ -2023,15 +1942,6 @@
 			"tags": []
 		},
 		{
-			"name": "Myriche",
-			"deckIds": [10659799],
-			"cardIds": [],
-			"thumb": "3188875",
-			"author": "AkeDragon",
-			"description": "A DARK archetype that focuses on utilizing banished resources to aid in Link Summoning and grind.",
-			"tags": []
-		},
-		{
 			"name": "Rev/Strider",
 			"deckIds": [9909767],
 			"cardIds": [],
@@ -2140,15 +2050,6 @@
 			"tags": []
 		},
 		{
-			"name": "Dreamers' Path",
-			"deckIds": [10676907],
-			"cardIds": [],
-			"thumb": "3206474",
-			"author": "Snake",
-			"description": "A Pendulum archetype that aims to balance using the effects of the archetypal monsters as extension and as additional value to make use of a powerful Link boss monster to survive long enough to OTK the opponent.",
-			"tags": []
-		},
-		{
 			"name": "Soul String",
 			"deckIds": [11041950],
 			"cardIds": [],
@@ -2227,15 +2128,6 @@
 			"thumb": "3327739",
 			"author": "Garland",
 			"description": "A DARK Machine archetype which uses Fusion Monsters and on-banish effects to keep their opponent on the back foot, along with a powerful Link 1 to get their motors going.",
-			"tags": []
-		},
-		{
-			"name": "Icybr",
-			"deckIds": [10785454],
-			"cardIds": [],
-			"thumb": "2787613",
-			"author": "Lyris",
-			"description": "A WATER archetype that uses a 'Frozen' gimmick, referring to monsters that have not changed battle positions and/or attacked that turn. With a unique lock, this deck grinds and plays by revealing cards in your hand for the turn and controlling your opponent based on how many cards are currently revealed.",
 			"tags": []
 		},
 		{
