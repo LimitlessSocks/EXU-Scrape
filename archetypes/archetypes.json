@@ -2201,6 +2201,15 @@
 			"author": "Aurora",
 			"description": "An EARTH Rock archetype that utilizes the card \"Canyon\" to double the battle damage the opponent takes if they battle a Rock monster you control — and then some.",
 			"tags": []
+		},
+		{
+			"name": "Icybr",
+			"deckIds": [],
+			"cardIds": [2787544,2787624,2787629],
+			"thumb": "2787629",
+			"author": "Lyris",
+			"description": "A WATER archetype that uses a 'Frozen' gimmick, referring to monsters that have not changed battle positions and/or attacked that turn. With a unique lock, this deck plays by revealing cards in your hand for the turn cycle and controlling your opponent based on how many cards are currently revealed, and then attacking big out of nowhere.",
+			"tags": []
 		}
 	]
 }
