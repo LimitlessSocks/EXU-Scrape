@@ -2210,6 +2210,24 @@
 			"author": "Lyris",
 			"description": "A WATER archetype that uses a 'Frozen' gimmick, referring to monsters that have not changed battle positions and/or attacked that turn. With a unique lock, this deck plays by revealing cards in your hand for the turn cycle and controlling your opponent based on how many cards are currently revealed, and then attacking big out of nowhere.",
 			"tags": []
+		},
+		{
+			"name": "DJ Girl",
+			"deckIds": [10830386],
+			"cardIds": [],
+			"thumb": "3249053",
+			"author": "Hyung",
+			"description": "A WATER Aqua archetype that utilizes Special Summoning from the hand/GY to Summon their array of Synchro, Fusion, Xyz and Link Monsters in order to gain advantage and disrupt the opponent.",
+			"tags": []
+		},
+		{
+			"name": "Essences",
+			"deckIds": [10459881],
+			"cardIds": [],
+			"thumb": "3129280",
+			"author": "Keranendy",
+			"description": "An archetype that utilizes almost every Summon mechanic and heavily focuses on hand resources, being able to cycle through monsters and slowly out resource the opponent.",
+			"tags": []
 		}
 	]
 }
