@@ -77,7 +77,7 @@ database = [
     5496883,  #Normal Pendulum Support
     # 3256281,  #B.E.S. Support
     5782891,  #The Weather Support
-    5194131,  #Fur Hire Support
+    # 5194131,  #Fur Hire Support
     # 5720993,  #Watt Support
     # 4804758,  #Draconia Support
     11496060,  #Draconia Support
@@ -173,7 +173,7 @@ database = [
     7529948,  #Highlander Support
     6979146,  #T.G. Support
     # 7545154,  #Strannaut Support
-    7568710,  #Windwitch Support
+    # 7568710,  #Windwitch Support
     9913178,  #Magnet Warrior Support
     7452180,  #Ceremonial Bell Support
     7531842,  #Psychic Support
