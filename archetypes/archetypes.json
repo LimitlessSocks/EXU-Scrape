@@ -2228,6 +2228,24 @@
 			"author": "Keranendy",
 			"description": "An archetype that utilizes almost every Summon mechanic and heavily focuses on hand resources, being able to cycle through monsters and slowly out resource the opponent.",
 			"tags": []
+		},
+		{
+			"name": "Godfiend",
+			"deckIds": [11111068],
+			"cardIds": [],
+			"thumb": "3329872",
+			"author": "Anon",
+			"description": "A series of 4 Mandata who have powerful duplication effects, designed in a similar way to the 3 LV8 Myutant Monsters",
+			"tags": []
+		},
+		{
+			"name": "Devilfiend",
+			"deckIds": [11598386],
+			"cardIds": [],
+			"thumb": "2826301",
+			"author": "",
+			"description": "A series of DARK Level 11 Mandata with destruction protection and Omnis, based around sending a Fiend and a different type of monster to the GY to Summon or Proc their effects",
+			"tags": []
 		}
 	]
 }
