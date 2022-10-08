@@ -157,7 +157,7 @@ database = [
     7478308,  #Predap Support
     6922630,  #Empowered Warrior Support
     7464737,  #Halvoran Support
-    7458028,  #Masaki Support
+    # 7458028,  #Masaki Support
     7484447,  #Artifact Support
     # 7462775,  #Armored Hunter / Raging Calamity Support
     # 5813034,  #Gimmick Puppet Support
@@ -183,12 +183,12 @@ database = [
     7557629,  #Thunderclap Support
     7637725,  #Non-Existent Gimmick Support
     7608828,  #Princess Connect! Support
-    7687348,  #Mind Layer Support
+    # 7687348,  #Mind Layer Support
     6862415,  #PK Support
     7566464,  #Z-ARC Support
     7664359,  #of the Wasteland Support
     6226330,  #Acrimonic Support
-    7679392,  #Toon, Fire King & Windwitch Support
+    # 7679392,  #Toon, Fire King & Windwitch Support
     # 7647679,  #Black Blood Support
     # 6845360,  #Starter Squad
     7742679,  #Fog+Beast
@@ -298,7 +298,7 @@ database = [
     9630458,  #Numeron Support
     9847517,  #Materiactor Support
     10324587, #Witchwood Support
-    9997560,  #Harokai Support
+    # 9997560,  #Harokai Support
     10190817, #Underworld Support
     8254883,  #LV Support
     10416948, #Adventurer Support
@@ -325,13 +325,13 @@ database = [
     11003660, #Evol- Support
     10978580, #Inazuma Fighter Support
     11034871, #Paleozoic Support
-    10572032, #Khremysis Support
+    # 10572032, #Khremysis Support
     10859018, #SPYRAL Support
     11067450, #Gravekeeper Support
     10998117, #Roid Support
     10863998, #Libromancer Support
     11153545, #Spellbook Support
-    11099905, #Lyrilusc Support
+    # 11099905, #Lyrilusc Support
     11062951, #Battlin' Boxer Support
     10917540, #Sword Sanctuary Support
     5619459,  #Contraption Support
@@ -339,7 +339,7 @@ database = [
     11039899, #Ursarctic/Drytron Support
     10728204, #Code Talker Support
     11086113, #Orcust Support
-    11155582, #Cipher Support
+    # 11155582, #Cipher Support
     11041314, #Karikuri Ninja Support
     10875332, #Elixir Born Support
     11359867, #Zoodiac Support
@@ -348,6 +348,11 @@ database = [
     11299188, #Battle Cats Support
     11249200, #Achacha Support
     11141587, #Icejade Support
+    11574129, #Dinowrestler Support
+    11222026, #S-Force Support
+    11435667, #Elementsaber Support
+    10657368, #Blood Quartz Support
+    11498418, #Gusto Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -497,7 +502,7 @@ database = [
     6895350,  #Owlsh
     # 6777854,  #Nebulline
     # 6849044,  #Nebulline
-    8167114,  #Nebulline
+    # 8167114,  #Nebulline
     # 6806175,  #Chibright
     # 4330341,  #D.N.M.Q.
     6906385,  #Legendary Golems
@@ -536,7 +541,7 @@ database = [
     5731990,  #Entropy Beast
     7022063,  #Fishin'
     # 3617894,  #O.F.F
-    7310491,  #Ak*ris
+    # 7310491,  #Ak*ris
     # 7464943,  #Armored Hunter / Raging Calamity
     # 6526373,  #Phylabeast
     5822335,  #Tokyo Terror
@@ -559,13 +564,13 @@ database = [
     # 7503795,  #Pitch Black
     7522856,  #Abartech
     # 7432421,  #Fiendfyre
-    7565819,  #Mind Layer
+    # 7565819,  #Mind Layer
     3734721,  #Carcharrack
     5736933,  #Armatos Legio
     # 4377085,  #The Horde
     7548170,  #Psycircuit
     6848354,  #The 9s
-    10421344, #Abyssal Enforcer
+    # 10421344, #Abyssal Enforcer
     7439337,  #Anti-Goo
     # 5841822,  #Tomes
     7547609,  #Nauticorpse
@@ -609,7 +614,7 @@ database = [
     4475780,  #Ascending Fire
     # 7959099,  #Intranger
     7499374,  #O.F.F
-    8034682,  #Circersolar
+    # 8034682,  #Circersolar
     8010982,  #Draken
     7563615,  #Metaverse Persona
     6979527,  #Pikachu
@@ -667,7 +672,7 @@ database = [
     # 9020851,  #Alarkite
     9079255,  #Nemesin
     # 8954457,  #Vendedda
-    9016753,  #Dance of Swords
+    # 9016753,  #Dance of Swords
     # 8819779,  #Aequalis
     7074117,  #Scrylak
     9051430,  #Deadly Waters
@@ -676,11 +681,11 @@ database = [
     8177538,  #Tempestal Ascended
     9108451,  #Frorb
     9163949,  #Xöryne
-    2942421,  #Antrap
+    # 2942421,  #Antrap
     7528627,  #Red-White
     5269100,  #Orb Matchician
     9433755,  #Azathean
-    9417588,  #Empyrodraco
+    # 9417588,  #Empyrodraco
     9347499,  #Yurei
     # 9469722,  #Geídst
     7731164,  #Beastmaster's
@@ -702,7 +707,7 @@ database = [
     8669733,  #Bolt Arc
     8172329,  #Harbringer
     # 5145725,  #Remnant
-    9739014,  #Cryptr
+    # 9739014,  #Cryptr
     10219078, #Mortal Engine
     11221103, #Childream
     7635829,  #Skyraptor
@@ -722,7 +727,7 @@ database = [
     9445676,  #Astromini
     10168519, #Childream
     10478670, #Und
-    10659799, #Myriche
+    # 10659799, #Myriche
     9909767,  #Rev/Strider
     10219776, #Zircon
     9406958,  #Shikai
@@ -736,7 +741,7 @@ database = [
     10205936, #IMG
     10497431, #FiM
     # 10676907, #Dreamers' Path
-    11041950, #Soul String
+    # 11041950, #Soul String
     5150448,  #Sepulchre
     10794326, #Astral Legacy
     10609802, #Animathos
@@ -747,13 +752,17 @@ database = [
     11109026, #Wicked Booster
     10785454, #Icybr
     10414701, #Divergence
-    11080097, #Champurai
+    # 11080097, #Champurai
     11346881, #Horsemen of the Apocalypse
     10167233, #Luminarye!
     10155707, #Drowned Locker
     11032208, #Minion Hunter
     9439877,  #Ransomwear
     10892283, #Carved Eyes
+    10830386, #DJ Girl
+    10459881, #Essences
+    11111068, #Godfiends
+    11598386, #Devilfiends
     
     
     #order shenanigans
@@ -788,6 +797,7 @@ generics = [
     11183751, #Generic Monsters XVI
     11341134, #Generic Monsters XVII
     11490066, #Generic Monsters XVIII
+    11651002, #Generic Monsters XIX
     6353430,  #Generic Spells
     6419184,  #Generic Spells II
     6871664,  #Generic Spells III
