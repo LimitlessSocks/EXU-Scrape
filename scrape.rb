@@ -353,6 +353,10 @@ database = [
     11435667, #Elementsaber Support
     10657368, #Blood Quartz Support
     11498418, #Gusto Support
+    10971774, #Finflame Support
+    11725235, #Runick Support
+    11732257, #Tiger Court/King Tiger Support
+    11244328, #Icejade Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -659,7 +663,7 @@ database = [
     8397719,  #Wrasslin'
     8308338,  #Cheezbeast
     8536599,  #Steelbrand
-    8558559,  #Azur Lane
+    # 8558559,  #Azur Lane
     # 8608821,  #C.I.
     # 8607327,  #Flamiller
     8631072,  #Penitent Wraith
@@ -763,7 +767,7 @@ database = [
     10459881, #Essences
     11111068, #Godfiends
     11598386, #Devilfiends
-    
+    11122418, #BIZARRE
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
