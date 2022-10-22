@@ -2234,3 +2234,10 @@ This card's name becomes "Eldlich the Golden Lord" while on the field. Cannot be
 [main] note: [-] removed old card 2737560 (Dagashibox)
 [main] note: [-] removed old card 8697 (Pendulum Switch)
 [main] Time elapsed: 31.4886708s
+[final] Completing scrape at 10-22-2022.15.53.56
+[main] Reading tmp/db-10-22-2022.15.40.29.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["3112371", "3112371", "3110486", "3112374", "3110526", "3192201", "3296184", "2771925", "3466989", "2860353", "3481545", "1626240", "1626240", "1626240", "797894", "1516281", "3202265", "2358769", "3202265", "2358769", "3290490", "1626240", "1626240", "1626240", "1945626", "1869524", "1870561", "1893606", "1945626", "3451050", "1358065", "2320405", "2344336", "2320503", "2320503", "2358769", "2320335", "2320335", "2320335", "2320335", "2318385", "2318385", "2318385", "2318385", "1821412", "2317991", "2317991", "2317991", "2317991", "2268592", "87883", "1612042", "1612044", "1612045", "1612062", "2909666", "2479172", "2421830", "2421830", "2660150"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).

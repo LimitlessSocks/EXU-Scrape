@@ -357,6 +357,7 @@ database = [
     11725235, #Runick Support
     11732257, #Tiger Court/King Tiger Support
     11244328, #Icejade Support
+    11523049, #Aurora's Singles
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -613,7 +614,7 @@ database = [
     7519530,  #Armourizer Series: Fleurcrux
     7997640,  #Unbeing
     # 6635173,  #Xana
-    7922328,  #Harokai
+    # 7922328,  #Harokai
     7746134,  #Superego
     4475780,  #Ascending Fire
     # 7959099,  #Intranger
@@ -755,7 +756,7 @@ database = [
     11239513, #Fiendfyre
     11109026, #Wicked Booster
     10785454, #Icybr
-    10414701, #Divergence
+    # 10414701, #Divergence
     # 11080097, #Champurai
     11346881, #Horsemen of the Apocalypse
     10167233, #Luminarye!
