@@ -769,6 +769,9 @@ database = [
     11111068, #Godfiends
     11598386, #Devilfiends
     11122418, #BIZARRE
+    6772951,  #Starter Squad
+    10112260, #Agonymph
+    11424868, #Cyrompress
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
@@ -803,6 +806,7 @@ generics = [
     11341134, #Generic Monsters XVII
     11490066, #Generic Monsters XVIII
     11651002, #Generic Monsters XIX
+    11787982, #Generic Monsters XXX
     6353430,  #Generic Spells
     6419184,  #Generic Spells II
     6871664,  #Generic Spells III

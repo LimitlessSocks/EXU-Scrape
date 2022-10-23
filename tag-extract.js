@@ -168,6 +168,7 @@ const INDICATORS = [
     new TagIndicator(/limit(ed)?/, () => ({ limit: "1" })),
     new TagIndicator(/unlimit(ed)?/, () => ({ limit: "3" })),
     new TagIndicator(/ban(ed)?/, () => ({ limit: "0" })),
+    new TagIndicator(/non[- ]?effect|effectless/, () => ({ type: "noneffect" })),
     new TagIndicator(/(?:dated?|added|created|made)\s*(>=?|<=?|[/!]?==?|before|after)?\s*(\d{4}|\d+\/\d+\/\d+)/, (match) => ({
         dateCompare: getComparison(match[1]),
         date: match[2],
