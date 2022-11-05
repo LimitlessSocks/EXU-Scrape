@@ -776,7 +776,7 @@ database = [
     11032208, #Minion Hunter
     9439877,  #Ransomwear
     10892283, #Carved Eyes
-    # 10830386, #DJ Girl
+    10830386, #DJ Girl
     10459881, #Essences
     11111068, #Godfiends
     11598386, #Devilfiends
