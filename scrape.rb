@@ -358,6 +358,18 @@ database = [
     11732257, #Tiger Court/King Tiger Support
     11244328, #Icejade Support
     11523049, #Aurora's Singles
+    11364344, #Fake Ignis Code Talker Support
+    11358817, #Altitude Knight Support
+    11075788, #Gouki Support
+    11588945, #Entity Support
+    11236149, #Kozmo Support
+    11327479, #Ready Fusion Support
+    11791508, #Cyber Dragon Support
+    11099621, #Childream Support
+    10592918, #Heraldic Support
+    10181635, #Alien/Cosmic Support
+    11304854, #Fossil Support
+    11304535, #Dogmatika Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -772,6 +784,17 @@ database = [
     6772951,  #Starter Squad
     10112260, #Agonymph
     11424868, #Cyrompress
+    11130418, #Draclash
+    11049278, #Battlin' Twista
+    11144943, #Bakudan
+    11038491, #Etherealm
+    10399839, #Cloud-
+    11649340, #Firesoul
+    11311164, #Werewarrior
+    11217328, #Prismatiqueen
+    11534386, #Icybr
+    11666327, #Kirby
+    11056217, #Giant Knight/Blade
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)

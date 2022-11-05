@@ -1,0 +1,4 @@
+[main] Created log file log/db-11-05-2022.15.43.46.txt
+[main] Reading db.json
+[main] Reading db-date-added.json
+[main] Started scraping
