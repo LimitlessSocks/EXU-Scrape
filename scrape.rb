@@ -461,7 +461,7 @@ database = [
     6334551,  #Wild Hunt
     6291306,  #Galaxieve
     # 5830740,  #New Order
-    4237940,  #Taida
+    # 4237940,  #Taida
     4769548,  #Empyreal
     5647256,  #Meterao
     # 6405675,  #Dark Kingdom
@@ -721,7 +721,7 @@ database = [
     8145980,  #DMG
     9771722,  #Iffrean
     6395566,  #Submerzan
-    8669733,  #Bolt Arc
+    # 8669733,  #Bolt Arc
     8172329,  #Harbringer
     # 5145725,  #Remnant
     # 9739014,  #Cryptr
@@ -776,7 +776,7 @@ database = [
     11032208, #Minion Hunter
     9439877,  #Ransomwear
     10892283, #Carved Eyes
-    10830386, #DJ Girl
+    # 10830386, #DJ Girl
     10459881, #Essences
     11111068, #Godfiends
     11598386, #Devilfiends
@@ -903,45 +903,11 @@ test = [
 beta = [
     7443406,  #BETA SINGLES, NEVER DELETE!
     ###################
-    11019890, #Twin Polymerization
-    10957934, #Pretzel's Link Pack
-    10879519, #Anon's 8 Alt Arts
-    10782154, #Pretzel's mini pack 7
-    10370099, #Sentai Pt. 2
+    
     ###################
-    11032208, #Minion Hunter
-    7432421,  #Fiendfyre
-    10892283, #Canyon
-    5150448,  #Sepulchre
-    9439877,  #Ransomwear
-    10974636, #Leviabyss
-    10830386, #DJ Girl
-    10155707, #Drowned Locker
-    10756626, #Necristocrat
-    10609802, #Animathos
-    10794326, #Astral Legacy
-    10485188, #Oniyaru
-    6591476,  #Heart Pirate
-    10674934, #Evernight
-    10414701, #Divergence
-    10254790, #Mervitralitta
-    9779554,  #Dragonaire
+    
     ###################
-    11034871, #Paleo Support
-    11026619, #FiM Support
-    11006625, #RDA
-    10998117, #Roid Support
-    10971774, #Finflame Support
-    9673459,  #Knightmare Retrains
-    5192096,  #Phantasm Spiral Support
-    10925034, #Ally of Justice Support
-    10917540, #Sword Sanctuary support
-    10863998, #Libromancer Support
-    10875332, #Elixir Born Support
-    10859018, #SPYRAL Support
-    10846956, #Symphonic Warrior Support
-    5619459,  #Contraption Support
-    10572032, #Khremysis Support
+    
 ]
 
 # stungray flute format
