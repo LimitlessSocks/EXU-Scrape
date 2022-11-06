@@ -179,7 +179,7 @@ const INDICATORS = [
         levelCompare: getComparison(match[3] || match[1]),
         level: match[2],
     })).rememberParameter(),
-    new TagIndicator(/(level\/rank|rank\/level)\s*(\d+)/i, (match, memory) => (
+    new TagIndicator(/(level\s*\/\s*rank|rank\s*\/\s*level)\s*(\d+)/i, (match, memory) => (
         memory.lastParameter = {
             type: "monster",
             level: match[2],
@@ -249,6 +249,13 @@ const INDICATORS = [
     new TagIndicator(/public/i, (match) => ({
         visibility: "1",
     })),
+    new TagIndicator(/normal\s*spell\s*\/\s*trap/i, (match) => [{
+        kind: "Normal",
+    }].concat(wrapParens([
+        { type: "spell" },
+        OPERATOR_INLINE_OR,
+        { type: "trap" }
+    ]))),
     new TagIndicator(/normal\s*(spell|trap)/i, (match) => ({
         type: match[1].toLowerCase(),
         kind: "Normal",
@@ -296,6 +303,13 @@ const INDICATORS = [
     new TagIndicator(/spell|trap|monster/i, (match) => ({
         type: match[0].toLowerCase()
     })),
+    new TagIndicator(/(continuous|quick[- ]*play|equip|normal|counter|field)\s*spell\s*\/\s*trap/i, (match) => [{
+        kind: getProperSpellTrapType(match[1]),
+    }].concat(wrapParens([
+        { type: "spell" },
+        OPERATOR_INLINE_OR,
+        { type: "trap" }
+    ]))),
     new TagIndicator(/(continuous|quick[- ]*play|equip|normal|counter|field)\s*(spell|trap)?/i, (match) => ({
         type: (match[2] || "any").toLowerCase(),
         kind: getProperSpellTrapType(match[1]),

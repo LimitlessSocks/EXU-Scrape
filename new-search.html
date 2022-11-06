@@ -8,7 +8,7 @@
 
     gtag('config', 'G-Q3RKXFLZRZ');
     </script>
-    <title>EXU Card Viewer</title>
+    <title>EXU Custom Query</title>
     <meta charset="UTF-8">
     <script
 			  src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -50,16 +50,38 @@
         #container .navigation {
             background: rgba(0, 0, 0, 0.4);
             padding: 3px;
+            font-size: 26px;
+        }
+        .red-button {
+            background: #226600;
+            border: 3px dashed #cceeaa;
+        }
+        .red-button:hover {
+            background: #448822;
+        }
+        /*
+        #reference {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 70px;
+            height: 70px;
+        }
+        */
+        #reference {
+            float: right;
+            color: white;
         }
     </style>
 </head>
 <body>
-<h1 class="title" style="margin-bottom: 12px"><a href="./">EXU Card Search</a></h1>
+<h1 class="title" style="margin-bottom: 12px"><a href="./">EXU Custom Query</a></h1>
 
-<input id="search" class="large">
+<input id="search" class="large" placeholder="Try clicking [Reference] (right)!">
 <div id="container">
     <div class="navigation">
         <button id="save-link">Share Search</button><span class="vr"></span><span class="search-stats">Showing <span class="cards-showing">X</span> of <span class="cards-total">Y</span> result(s)</span><span class="vr"></span><button id="expand" class="hidden">Expand all</button>
+        <a id="reference" target="_blank" href="./new-search-reference" class="fake-button red-button large">Reference</a>
     </div>
     
     <div id="output">Loading, please wait&hellip;</div>

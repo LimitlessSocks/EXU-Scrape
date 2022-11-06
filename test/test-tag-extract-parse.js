@@ -469,6 +469,22 @@ const TEST_CASES = [
         { type: "monster", atkCompare: "equal", atk: "0" },
         { type: "monster", defCompare: "equal", def: "100" },
     ]],
+    ["normal spell/trap", [
+        { kind: "Normal" },
+        LEFT_PARENTHESIS,
+        { type: "spell" },
+        OPERATOR_INLINE_OR,
+        { type: "trap" },
+        RIGHT_PARENTHESIS,
+    ]],
+    ["continuous spell/trap", [
+        { kind: "Continuous" },
+        LEFT_PARENTHESIS,
+        { type: "spell" },
+        OPERATOR_INLINE_OR,
+        { type: "trap" },
+        RIGHT_PARENTHESIS,
+    ]],
 ];
 
 module.exports = function testTagExtractParse(debug = false) {

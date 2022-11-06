@@ -92,6 +92,7 @@ button, .fake-button {
     cursor: pointer;
     font-family: "Gadugi", sans-serif;
     font-size: 0.85em;
+    text-decoration: none;
 }
 button:hover, .fake-button:hover {
     background: #552255;
