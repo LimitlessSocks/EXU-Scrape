@@ -276,6 +276,12 @@ const INDICATORS = [
                 ]);
         }
     }),
+    new TagIndicator(/(?:pend:)\s*\[([^[\]]+)\]/, (match) => ({
+        pend_effect: match[1],
+    })),
+    new TagIndicator(/(?:text:)\s*\[([^[\]]+)\]/, (match) => ({
+        main_effect: match[1],
+    })),
     new TagIndicator(/\[([^[\]]+)\]/, (match) => ({
         effect: match[1],
     })),
