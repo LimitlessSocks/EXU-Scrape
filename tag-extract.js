@@ -327,9 +327,18 @@ const INDICATORS = [
     }),
 ];
 
+const MATCH_FLOATING_ATKDEF = /(^|[a-zA-Z][^\w;]*)(\d+)\s*(atk|def)([^\d]*)(?![a-zA-Z])/;
+const MAX_ITER = 20;
+const autoSeparate = (str) => {
+    for(let i = 0; i < MAX_ITER; i++) {
+        str = str.replace(MATCH_FLOATING_ATKDEF, "$1; $2 $3$4");
+    }
+    return str;
+};
+
 class TagExtractor {
     constructor(input) {
-        this.input = input;
+        this.input = autoSeparate(input);
         this.index = 0;
         this.output = [];
         this.memory = new Memory();

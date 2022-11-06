@@ -447,10 +447,27 @@ const TEST_CASES = [
         { main_effect: "destroy this card" },
     ]],
     ["? atk", [
-       { type: "monster", atkCompare: "question", atk: "" },
+        { type: "monster", atkCompare: "question", atk: "" },
     ]],
     ["def = ?", [
-       { type: "monster", defCompare: "question", def: "" },
+        { type: "monster", defCompare: "question", def: "" },
+    ]],
+    ["dark link 800 atk", [
+        { type: "monster", monsterAttribute: "DARK" },
+        { type: "monster", monsterCategory: "link" },
+        { type: "monster", atkCompare: "equal", atk: "800" },
+    ]],
+    ["dark link 0 atk def 50", [
+        { type: "monster", monsterAttribute: "DARK" },
+        { type: "monster", monsterCategory: "link" },
+        { type: "monster", atkCompare: "equal", atk: "0" },
+        { type: "monster", defCompare: "equal", def: "50" },
+    ]],
+    ["dark link 0 atk 100 def", [
+        { type: "monster", monsterAttribute: "DARK" },
+        { type: "monster", monsterCategory: "link" },
+        { type: "monster", atkCompare: "equal", atk: "0" },
+        { type: "monster", defCompare: "equal", def: "100" },
     ]],
 ];
 
