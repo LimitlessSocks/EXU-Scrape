@@ -144,7 +144,7 @@ database = [
     7251527,  #Dream Mirror Support
     7263281,  #Hayabusa Support
     7306486,  #Galaxy Photon Support
-    7311070,  #Virus Support
+    # 7311070,  #Virus Support
     6011815,  #lswarm Support
     7297777,  #Star Seraph Support
     7252887,  #Fabled Support
@@ -330,7 +330,7 @@ database = [
     11067450, #Gravekeeper Support
     10998117, #Roid Support
     10863998, #Libromancer Support
-    11153545, #Spellbook Support
+    # 11153545, #Spellbook Support
     # 11099905, #Lyrilusc Support
     11062951, #Battlin' Boxer Support
     10917540, #Sword Sanctuary Support
@@ -370,6 +370,10 @@ database = [
     10181635, #Alien/Cosmic Support
     11304854, #Fossil Support
     11304535, #Dogmatika Support
+    11865753, #Hazy Flame Support
+    11859753, #Starry Knight Support
+    11846656, #Vendread Support
+    11367413, #Gloomglow Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -794,7 +798,10 @@ database = [
     11217328, #Prismatiqueen
     11534386, #Icybr
     11666327, #Kirby
-    11056217, #Giant Knight/Blade
+    # 11056217, #Giant Knight/Blade
+    11575397, #Fruitimal
+    11151150, #Rival Intelligence
+    9511944,  #Sacred Crane
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
