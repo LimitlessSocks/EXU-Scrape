@@ -2241,3 +2241,10 @@ You cannot draw cards by Spell effects the turn you activate this card, except b
 [main] note: [-] removed old card 2115648 (Despair, Agent of Malevolence)
 [main] note: [-] removed old card 2282156 (Assault Blackwing True Armor Master)
 [main] Time elapsed: 30.9691468s
+[final] Completing scrape at 11-10-2022.22.44.03
+[main] Reading tmp/db-11-10-2022.22.17.59.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["3042051", "3042293", "3042293", "3199019", "3199019", "3257312", "3404651", "3280425", "1691740", "1831213", "2189460", "2519966", "2698505"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
