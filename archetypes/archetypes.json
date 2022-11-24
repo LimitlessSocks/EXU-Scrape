@@ -1002,7 +1002,7 @@
 			"cardIds": [],
 			"thumb": "2048316",
 			"author": "Diego",
-			"description": "A Spellcaster archetype that Xyz Summons Xyz Monsters and uses them to contact fuse into Fusion Monsters. Each card deals with returning cards from the field to the hand while also aiming to Set 2-3 backrow cards and end on at least 1 Fusion Monster who gets certain effects based on the Xyz Monster(s) used for its Summon.",
+			"description": "A midrange FIRE Cyberse archetype that utilizes self discarding and banishing as well as Normal Summons to get out their Fusion Monsters, set up the field and GY and outgrind the opponent.",
 			"tags": []
 		},
 		{
@@ -1165,15 +1165,6 @@
 			"thumb": "2342097",
 			"author": "Sun",
 			"description": "A multi-Attribute Dinosaur strategy focused around Tributing their Normal Monsters to Summon the Effect Monsters as well as banishing cards from the hand to destroy your opponent's resources.",
-			"tags": []
-		},
-		{
-			"name": "Harokai",
-			"deckIds": [7922328],
-			"cardIds": [],
-			"thumb": "1821412",
-			"author": "Diego",
-			"description": "A versatile combo strategy that mainly revolves around stacking and matching Attributes to make their Rank 11 Xyz Monsters.",
 			"tags": []
 		},
 		{
@@ -2204,8 +2195,8 @@
 		},
 		{
 			"name": "Icybr",
-			"deckIds": [],
-			"cardIds": [2787544,2787624,2787629],
+			"deckIds": [11534386],
+			"cardIds": [],
 			"thumb": "2787629",
 			"author": "Lyris",
 			"description": "A WATER archetype that uses a 'Frozen' gimmick, referring to monsters that have not changed battle positions and/or attacked that turn. With a unique lock, this deck plays by revealing cards in your hand for the turn cycle and controlling your opponent based on how many cards are currently revealed, and then attacking big out of nowhere.",
