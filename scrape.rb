@@ -374,6 +374,7 @@ database = [
     11859753, #Starry Knight Support
     11846656, #Vendread Support
     11367413, #Gloomglow Support
+    11888421, #Dyson Sphere Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -755,7 +756,7 @@ database = [
     8963869,  #Battle Cats
     10754814, #Gloomglow
     10794525, #Learned Wings
-    10530739, #Sacrifall
+    # 10530739, #Sacrifall
     10885540, #Follow Wind
     8486364,  #Chibright
     9449834,  #Leechen
@@ -802,6 +803,10 @@ database = [
     11575397, #Fruitimal
     11151150, #Rival Intelligence
     9511944,  #Sacred Crane
+    10974636, #Leviabyss
+    10670578, #Alternauts
+    11777545, #Recycle Beasts
+    
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
@@ -837,6 +842,7 @@ generics = [
     11490066, #Generic Monsters XVIII
     11651002, #Generic Monsters XIX
     11787982, #Generic Monsters XXX
+    11993635, #Generic Monsters XXXI
     6353430,  #Generic Spells
     6419184,  #Generic Spells II
     6871664,  #Generic Spells III
