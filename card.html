@@ -16,6 +16,7 @@
 			  crossorigin="anonymous"></script>
     <script src="./card-viewer.js"></script>
     <script>
+        const title = document.getElementsByTagName("title")[0];
         let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
         // baseURL = "./";
         window.ycgDatabase = baseURL + "ycg.json";
@@ -24,7 +25,6 @@
         let id;
         if(match) {
             id = match[0];
-            const title = document.getElementsByTagName("title")[0];
             title.textContent += " - " + id;
         }
         window.addEventListener("load", async function () {
@@ -34,6 +34,7 @@
             let card = CardViewer.Database.cards[id];
             let res = CardViewer.composeResult(card);
             console.log(res);
+            title.textContent = title.textContent.replace(/\d+/, card.name);
             $("#output").append(res);
         });
     </script>
