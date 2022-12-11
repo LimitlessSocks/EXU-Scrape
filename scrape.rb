@@ -333,7 +333,7 @@ database = [
     # 11153545, #Spellbook Support
     # 11099905, #Lyrilusc Support
     11062951, #Battlin' Boxer Support
-    10917540, #Sword Sanctuary Support
+    # 10917540, #Sword Sanctuary Support
     5619459,  #Contraption Support
     11007734, #U.A./F.A. Support
     11039899, #Ursarctic/Drytron Support
@@ -365,7 +365,7 @@ database = [
     11236149, #Kozmo Support
     11327479, #Ready Fusion Support
     11791508, #Cyber Dragon Support
-    11099621, #Childream Support
+    # 11099621, #Childream Support
     10592918, #Heraldic Support
     10181635, #Alien/Cosmic Support
     11304854, #Fossil Support
@@ -375,6 +375,18 @@ database = [
     11846656, #Vendread Support
     11367413, #Gloomglow Support
     11888421, #Dyson Sphere Support
+    12028123, #Graydle Support
+    11026619, #FiM Support
+    11916431, #Aria Fey Support
+    11922047, #Bujin Support
+    11962811, #Egyptian God Support
+    11865675, #Steelswarm Support
+    8841583,  #Signer Dragon Support
+    12069539, #Atem/Unity Support
+    11782113, #DJ Girl Support
+    10170984, #Entity Support
+    11928461, #Red Dragon Archfiend Support
+    12080446, #Ghoti Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -680,7 +692,7 @@ database = [
     8283182,  #Shadow Whisperer
     8397719,  #Wrasslin'
     8308338,  #Cheezbeast
-    8536599,  #Steelbrand
+    # 8536599,  #Steelbrand
     # 8558559,  #Azur Lane
     # 8608821,  #C.I.
     # 8607327,  #Flamiller
@@ -704,13 +716,13 @@ database = [
     9108451,  #Frorb
     9163949,  #Xöryne
     # 2942421,  #Antrap
-    7528627,  #Red-White
+    # 7528627,  #Red-White
     5269100,  #Orb Matchician
     9433755,  #Azathean
     # 9417588,  #Empyrodraco
     9347499,  #Yurei
     # 9469722,  #Geídst
-    7731164,  #Beastmaster's
+    # 7731164,  #Beastmaster's
     9183380,  #Dino Exorcist
     # 8036906,  #Dralchemic
     # 9499776,  #Black Tear
@@ -795,7 +807,7 @@ database = [
     11038491, #Etherealm
     10399839, #Cloud-
     11649340, #Firesoul
-    11311164, #Werewarrior
+    # 11311164, #Werewarrior
     11217328, #Prismatiqueen
     11534386, #Icybr
     11666327, #Kirby
@@ -806,6 +818,13 @@ database = [
     10974636, #Leviabyss
     10670578, #Alternauts
     11777545, #Recycle Beasts
+    11358860, #Geídst
+    11057181, #Simulacra
+    9418787,  #Zdewas
+    10839072, #Anrea
+    9268895,  #Pumpkinhead
+    11166487, #Comet Combatant
+    10436936, #Shin Origin
     
     
     #order shenanigans
