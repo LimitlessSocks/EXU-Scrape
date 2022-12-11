@@ -387,6 +387,7 @@ database = [
     10170984, #Entity Support
     11928461, #Red Dragon Archfiend Support
     12080446, #Ghoti Support
+    11928236, #Aroma Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -743,7 +744,7 @@ database = [
     # 5145725,  #Remnant
     # 9739014,  #Cryptr
     10219078, #Mortal Engine
-    11221103, #Childream
+    # 11221103, #Childream
     7635829,  #Skyraptor
     10269461, #Incindery
     # 10219776, #Zircon
@@ -759,7 +760,7 @@ database = [
     3890554,  #Fireworks Girl
     10241137, #Inazuma Fighter
     9445676,  #Astromini
-    10168519, #Childream
+    # 10168519, #Childream
     10478670, #Und
     # 10659799, #Myriche
     9909767,  #Rev/Strider
