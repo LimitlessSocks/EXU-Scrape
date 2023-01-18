@@ -216,7 +216,7 @@ database = [
     7743608,  #Danger! Support
     8184053,  #Ancient Gear Support
     8224351,  #Ritual Beast Support
-    8208847,  #Shark Support
+    # 8208847,  #Shark Support
     8174923,  #Crystalion Support
     8306788,  #Duston Support
     8194294,  #Jolsprit Support
@@ -388,6 +388,24 @@ database = [
     11928461, #Red Dragon Archfiend Support
     12080446, #Ghoti Support
     11928236, #Aroma Support
+    12099586, #Gradius Support
+    12129116, #Destiny HERO Support
+    12093778, #Evil Eye Support
+    11001151, #Gandora Support
+    11990547, #Tundran Support
+    11884985, #Worm Support
+    12154110, #Evil Eye Support
+    12005556, #Mekkallegiate Drakin Support
+    8198550,  #Metaphys Support
+    12187607, #Guardian Support
+    11929606, #Shiranui Support
+    12181477, #Ice Counter Support
+    12211778, #Cipher Support
+    12195592, #Laval Support
+    11989056, #Temple of the Kings Support
+    12200128, #Crystalion Support
+    12157651, #NTG Support
+    11432643, #Honest Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -826,6 +844,23 @@ database = [
     9268895,  #Pumpkinhead
     11166487, #Comet Combatant
     10436936, #Shin Origin
+    6707275,  #Malevolessence
+    11348110, #Seasquib
+    10922625, #Angeluttia
+    11675163, #Grace of the Watchers
+    11268969, #Maid-to-Last
+    12044342, #Flamiller
+    8558559,  #Azur Lane
+    8608821,  #C.I.
+    11034977, #Blight Burn
+    12261209, #Magia
+    11080097, #Champurai
+    10754507, #Blades of Usurpation
+    11045908, #Nycterror
+    2942421,  #Antrap
+    7093540,  #Adventurer's Guild
+    5145725,  #Remnant
+    11636685, #Gridiator
     
     
     #order shenanigans
@@ -863,6 +898,8 @@ generics = [
     11651002, #Generic Monsters XIX
     11787982, #Generic Monsters XXX
     11993635, #Generic Monsters XXXI
+    12243361, #Generic Monsters XXXII
+    12243282, #Generic Monsters XXXIII
     6353430,  #Generic Spells
     6419184,  #Generic Spells II
     6871664,  #Generic Spells III
@@ -894,7 +931,7 @@ support = [
     8029982, 8031469, 8031504, 8030524, 8031637, 8030431,
     8031643, 8030556, 8031647, 8029971, 8030546, 8031613,
     8031649, 8030281, 8031513, 8031650, 8030151, 8029849,
-    8031653, 8031657, 8031418, 8031526, 8031489, 8030255,
+    8031653, 8031657, 8031418, 8031489, 8030255,
     8030476, 8031387, 8031368, 8030336, 8029833, 8030582,
     8031662, 8031570, 8031623, 8031664, 8030526, 8031668,
     8031380, 8031672, 8030158, 8030567, 8030222, 8031675,
@@ -913,7 +950,8 @@ support = [
     8031787, 8031071, 8031626, 8031792, 8030574, 8030560,
     8031796, 8031799, 8031800, 8030388, 8031135, 8030135,
     8031801, 8360633, 8361155, 8361317, 8361353, 8361385,
-    8361563
+    8361563,
+    # 8031526,
 ]
 
 banlist = [
