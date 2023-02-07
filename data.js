@@ -163,7 +163,7 @@ const cardsByAverage = (fn, holder, min = 0, query = {}, exclude = null, cmp = c
     return hash;
 };
 
-const wordLength = (str) => str.split(/\s/).length;
+const wordLength = str => str.match(/\S+/g)?.length || 0;
 
 // const compare = (x, y) => (x > y) - (x < y);
 const compare = (x, y) => x.toString().localeCompare(y, undefined, { numeric: true });

@@ -524,7 +524,7 @@ CardViewer.Filters.isNonEffect = (card) => {
     
     if(CardViewer.Filters.isRitual(card)) {
         let sentences = card.effect
-            .replace(/".+?"/g, "")
+            .replace(/[“"”].+?[“"”]/g, "")
             .replace(/\.$/g, "")
             .split(".");
         
@@ -534,7 +534,7 @@ CardViewer.Filters.isNonEffect = (card) => {
     if(CardViewer.Filters.isExtraDeck(card)) {
         let parsed = card.effect
             .replace(/\(.+?\)/g, "")
-            .replace(/".+?"/g, "")
+            .replace(/[“"”].+?[“"”]/g, "")
         let paras = parsed.trim().split(/\r?\n|\r/g);
         let sentences = parsed.split(".");
         let isNonEffect = paras.length === 1 && sentences.length === 1;

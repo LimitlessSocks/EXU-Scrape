@@ -67,7 +67,7 @@ database = [
     5839316,  #Duo-Attribute Support
     6239411,  #Prank-Kids Support
     5894044,  #Shino Support
-    5749949,  #Ancient Warriors Support
+    # 5749949,  #Ancient Warriors Support
     # 4251928,  #Traptrix Support
     4936132,  #F.A. Support
     # 5177132,  #Darklord Support
@@ -90,7 +90,7 @@ database = [
     5744520,  #Dream Mirror Support
     6771198,  #Vendread Support
     2775342,  #Triamid Support
-    6785116,  #Legendary Dragon, Fairy Tail, Dark World & Shiranui Support
+    12427452, #Legendary Dragon, Fairy Tail, Dark World & Shiranui Support
     # 6787972,  #Orb Magician Support
     6792668,  #Jurrac Support
     6792679,  #Cyber Dragon Support
@@ -142,7 +142,7 @@ database = [
     7251527,  #Dream Mirror Support
     5615821,  #Onomat Support
     7251527,  #Dream Mirror Support
-    7263281,  #Hayabusa Support
+    # 7263281,  #Hayabusa Support
     7306486,  #Galaxy Photon Support
     # 7311070,  #Virus Support
     6011815,  #lswarm Support
@@ -170,7 +170,7 @@ database = [
     7499374,  #OFF 2
     7544944,  #Clear World
     7516633,  #Fire Fist
-    7529948,  #Highlander Support
+    # 7529948,  #Highlander Support
     6979146,  #T.G. Support
     # 7545154,  #Strannaut Support
     # 7568710,  #Windwitch Support
@@ -297,7 +297,7 @@ database = [
     9850838,  #Venom Support
     9630458,  #Numeron Support
     9847517,  #Materiactor Support
-    10324587, #Witchwood Support
+    12392696, #Witchwood Support
     # 9997560,  #Harokai Support
     10190817, #Underworld Support
     8254883,  #LV Support
@@ -406,6 +406,14 @@ database = [
     12200128, #Crystalion Support
     12157651, #NTG Support
     11432643, #Honest Support
+    12231223, #P.U.N.K. Support
+    12237754, #"Ancient Gear" Support
+    11296730, #Windwitch Support
+    11571549, #Cyberdark Support
+    12237581, #Djinn of Rituals Support
+    12270644, #Albaz Support
+    12371512, #Fusion Parasite Support
+    11670717, #Khremysis Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -579,7 +587,8 @@ database = [
     7140843,  #Pendant
     # 7127621,  #Dark Imp
     7124125,  #Anglory
-    7138655,  #Witchwood
+    # 7138655,  #Witchwood
+    12392696, #Witchwood
     # 7200158,  #Strannaut
     7203610,  #Andromeda
     7180332,  #Dual Asset
@@ -803,7 +812,7 @@ database = [
     10756626, #Necristocrat
     11239513, #Fiendfyre
     11109026, #Wicked Booster
-    10785454, #Icybr
+    11534386, #Icybr
     # 10414701, #Divergence
     # 11080097, #Champurai
     11346881, #Horsemen of the Apocalypse
@@ -853,14 +862,20 @@ database = [
     8558559,  #Azur Lane
     8608821,  #C.I.
     11034977, #Blight Burn
-    12261209, #Magia
+    # 12261209, #Magia
+    12397638, #Magia
     11080097, #Champurai
     10754507, #Blades of Usurpation
     11045908, #Nycterror
     2942421,  #Antrap
     7093540,  #Adventurer's Guild
     5145725,  #Remnant
-    11636685, #Gridiator
+    # 11636685, #Gridiator
+    7823128,  #Diraye
+    11787768, #Nihanya
+    10703372, #Neytirix
+    11993376, #Dust Drifter
+    12273205, #Continuum
     
     
     #order shenanigans
@@ -900,6 +915,7 @@ generics = [
     11993635, #Generic Monsters XXXI
     12243361, #Generic Monsters XXXII
     12243282, #Generic Monsters XXXIII
+    12397962, #Generic Monsters XXXIV
     6353430,  #Generic Spells
     6419184,  #Generic Spells II
     6871664,  #Generic Spells III
@@ -1082,7 +1098,7 @@ date_added = get_database outname + "-date-added"
 database = {}
 counts = Hash.new 0
 type_replace = /\(.*?This (?:card|monster)'s original Type is treated as (.+?) rather than (.+?)[,.].*?\)/
-archetype_treatment = /\(.*This card is always treated as an? "(.+?)" card.*\)/
+archetype_treatment = /\(.*This card is always treated as an? [“"”](.+?)[“"”] card.*\)/
 attr_checks = [
     "name",
     "effect",
