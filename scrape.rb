@@ -206,7 +206,7 @@ database = [
     # 7885378,  #Sunavalon Support
     # 8079528,  #Gimmick Puppet Support
     7795290,  #Superheavy Samurai Support
-    7973339,  #Stage Girl Support
+    # 7973339,  #Stage Girl Support
     7995546,  #NTG Support
     5700651,  #Kyudo Support
     8055360,  #Baba Support
@@ -414,6 +414,8 @@ database = [
     12270644, #Albaz Support
     12371512, #Fusion Parasite Support
     11670717, #Khremysis Support
+    12395457, #Comet Combatant Support
+    12348285, #Burning Abyss Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -644,7 +646,7 @@ database = [
     # 7577360,  #Tempo Warrior
     # 7586564,  #Straw Hat
     6123628,  #Stormrider
-    4587548,  #Stage Girl
+    # 4587548,  #Stage Girl
     # 7723773,  #Simulacra
     7678716,  #Vuluti
     # 7727566,  #Supermega
@@ -799,7 +801,7 @@ database = [
     # 10530739, #Sacrifall
     10885540, #Follow Wind
     8486364,  #Chibright
-    9449834,  #Leechen
+    # 9449834,  #Leechen
     10205936, #IMG
     10497431, #FiM
     # 10676907, #Dreamers' Path
@@ -876,6 +878,7 @@ database = [
     10703372, #Neytirix
     11993376, #Dust Drifter
     12273205, #Continuum
+    12283876, #Drachenritter
     
     
     #order shenanigans
@@ -916,6 +919,7 @@ generics = [
     12243361, #Generic Monsters XXXII
     12243282, #Generic Monsters XXXIII
     12397962, #Generic Monsters XXXIV
+    12459978, #Generic Monsters XXXV
     6353430,  #Generic Spells
     6419184,  #Generic Spells II
     6871664,  #Generic Spells III
