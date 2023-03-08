@@ -54,7 +54,7 @@ database = [
     6365184,  #Nephthys Support
     6124612,  #Metaphys Support
     6360689,  #Digital Bug Support
-    6292623,  #Ninja Support
+    # 6292623,  #Ninja Support
     # 6245917,  #Marincess Support
     5954949,  #Yokai Support
     8766544,  #World Chalice/World Legacy Support
@@ -293,7 +293,7 @@ database = [
     10050632, #Gradius Support
     # 10050401, #B.E.S. Support
     9175751,  #Crystron Support
-    9864486,  #Ninja Support
+    # 9864486,  #Ninja Support
     9850838,  #Venom Support
     9630458,  #Numeron Support
     9847517,  #Materiactor Support
@@ -328,7 +328,7 @@ database = [
     # 10572032, #Khremysis Support
     10859018, #SPYRAL Support
     11067450, #Gravekeeper Support
-    10998117, #Roid Support
+    # 10998117, #Roid Support
     10863998, #Libromancer Support
     # 11153545, #Spellbook Support
     # 11099905, #Lyrilusc Support
@@ -378,7 +378,7 @@ database = [
     12028123, #Graydle Support
     11026619, #FiM Support
     11916431, #Aria Fey Support
-    11922047, #Bujin Support
+    # 11922047, #Bujin Support
     11962811, #Egyptian God Support
     11865675, #Steelswarm Support
     8841583,  #Signer Dragon Support
@@ -509,7 +509,7 @@ database = [
     # 5830740,  #New Order
     # 4237940,  #Taida
     4769548,  #Empyreal
-    5647256,  #Meterao
+    # 5647256,  #Meterao
     # 6405675,  #Dark Kingdom
     7318790,  #Mythical Winged Beasts
     # 6309748,  #Kuuroma Support
@@ -879,7 +879,13 @@ database = [
     11993376, #Dust Drifter
     12273205, #Continuum
     12283876, #Drachenritter
-    
+    10707236, #Love♡Letter
+    9658346,  #Thaumatonic
+    11835652, #Daeviner
+    11369677, #Oh, a Snake!
+    7174943,  #Orikamaze
+    12015108, #Loyal Hero
+    12467366, #Erspatz
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
@@ -920,6 +926,7 @@ generics = [
     12243282, #Generic Monsters XXXIII
     12397962, #Generic Monsters XXXIV
     12459978, #Generic Monsters XXXV
+    12644735, #Generic Monsters XXXVI
     6353430,  #Generic Spells
     6419184,  #Generic Spells II
     6871664,  #Generic Spells III
