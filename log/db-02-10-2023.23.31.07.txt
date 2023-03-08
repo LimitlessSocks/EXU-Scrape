@@ -2366,3 +2366,10 @@ You can only activate 1 "Gathering of Pumpkins Underneath the Full Moon" per tur
 [main] note: [-] removed old card 2785751 (Leechen Orrilascivus: Gran Sovra)
 [main] note: [-] removed old card 2788759 (Leechen Orrilascivus: Sovra Mino)
 [main] Time elapsed: 31.9119935s
+[final] Completing scrape at 03-08-2023.00.38.43
+[main] Reading tmp/db-02-10-2023.23.31.07.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["3751271", "3308239", "1970352", "1970348", "2075678", "1969310", "3707091", "1970345", "2075684", "3545920", "3546185", "3582448", "3582442", "3582409", "3582387", "3582424", "3582437", "3582465", "3582456", "3586413", "3586462", "3608865", "3582478", "3582483", "3582488", "3582518", "3586247", "3586268", "3586348", "3586307", "3283484", "3283484", "3696434", "3720730", "3741732", "124203", "3446785", "2516408", "2515502", "2516458", "2976575", "2515991", "2736787"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 2 associated scrape(s).
