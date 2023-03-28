@@ -866,7 +866,7 @@ database = [
     11575397, #Fruitimal
     11151150, #Rival Intelligence
     9511944,  #Sacred Crane
-    10974636, #Leviabyss
+    # 10974636, #Leviabyss
     10670578, #Alternauts
     11777545, #Recycle Beasts
     11358860, #Geídst

@@ -2761,3 +2761,18 @@ If this card is Link Summoned: You can add 1 "Sacred Crane" card from your Deck 
 [main] note: [-] removed old card 2934049 (Thunder Synchron)
 [main] note: [-] removed old card 2934121 (Thunder Warrior)
 [main] Time elapsed: 33.5529939s
+[final] Completing scrape at 03-27-2023.23.17.51
+[main] Reading tmp/db-03-27-2023.23.03.02.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["3270129", "3270129", "3270129", "3111603", "2662", "144", "3284771", "3181996", "3181996", "3181996", "2602837", "2602837", "3267762", "3386743", "3816494", "3534805", "3534805", "3582478", "3582483", "3582488", "3582518", "3586247", "3586268", "3586348", "3656209", "3665812", "3665812", "3698601", "3779637", "3728594", "3774209", "3784529", "3784529", "1068376", "1068362", "1220411", "1220419", "1222890", "1222879", "1261407", "1389031", "1999194", "1801896", "1680055", "2313927", "1999194", "1981837", "1987866", "1987819", "1987819", "4091", "3463", "725", "726", "716", "717", "718", "1159", "2240120", "2240501", "2242280", "2240926", "2317070", "1020", "710", "2779101", "2977584", "2801569", "2802885", "2822201", "3571212"]
+[interact] Keypress: "p"
+[interact] Found cards with ids ["3665812"].
+[interact] Replacing ids with old version: ["3665812"]
+[interact] Keypress: "p"
+[interact] No cards found matching //i.
+[interact] Keypress: "p"
+[interact] Found cards with ids ["3270129", "3545921", "3181996"].
+[interact] Replacing ids with old version: ["3270129", "3545921", "3181996"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).
