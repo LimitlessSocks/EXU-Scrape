@@ -2464,6 +2464,141 @@
 			"author": "Ava",
 			"description": "An archetype with a snowball playstyle, focusing on RNG and a variety of mechanics with unpredictable moves and search/draw power to boot.",
 			"tags": []
+		},
+		{
+			"name": "Remnant",
+			"deckIds": [5145725],
+			"cardIds": [],
+			"thumb": "1477661",
+			"author": "OceanPhantom",
+			"description": "A flexible WATER Psychic and Machine archetype that utilizes various Fusion/Synchro Monsters for interruption and powerful Traps at its disposal to go into said Fusion Monsters, with an emphasis on banishing cards and manipulating ATK as well as different effects when banished.",
+			"tags": []
+		},
+		{
+			"name": "Diraye",
+			"deckIds": [7823128],
+			"cardIds": [],
+			"thumb": "2283311",
+			"author": "sizzler",
+			"description": "A multi-level, Spellcaster combo archetype focused on utilizing banished cards to extend plays. Has powerful summoning effects and gains bonus effects if coordinating between “Hex” and “Charm” spells.",
+			"tags": []
+		},
+		{
+			"name": "Nihanya",
+			"deckIds": [11787768],
+			"cardIds": [],
+			"thumb": "3545920",
+			"author": "Saffron",
+			"description": "FIRE Monsters who focus on the intricacies of destruction, mixing concepts from cards like Beat Cop & Time Pendulumgraph into a cohesive whole.  The archetype operates on a simple divide between Destruction Prevention, and effects which pop multiple cards, with many resolutions depending on whether cards were destroyed, or not.",
+			"tags": []
+		},
+		{
+			"name": "Neytirix",
+			"deckIds": [10703372],
+			"cardIds": [],
+			"thumb": "3211525",
+			"author": "Anni",
+			"description": "A Fusion Archetype that attemts to Fusion Summon by banishing monsters from primarily the GY and field. It is very versatile in how you accomplish your endboard, however it is quite fragile in actually starting its plays.",
+			"tags": []
+		},
+		{
+			"name": "Dust Drifter",
+			"deckIds": [11993376],
+			"cardIds": [],
+			"thumb": "3586348",
+			"author": "Nyx",
+			"description": "A LIGHT Machine archetype that specializes in Synchro Summoning, with multiple methods to do so at a quick speed and to get Synchro Monsters on the field for various combo plays; it boasts flexible combo lines, good resource management and can easily swing Duels in your favor when you're on the ropes.",
+			"tags": []
+		},
+		{
+			"name": "Continuum",
+			"deckIds": [12273205],
+			"cardIds": [],
+			"thumb": "3708716",
+			"author": "Anon",
+			"description": "An engine of Continuous Spells that can become Traps while your opponent controls more than you do. To back up the Spells, are a few generic Links that tie the engine together",
+			"tags": []
+		},
+		{
+			"name": "Drachenritter",
+			"deckIds": [12283876],
+			"cardIds": [],
+			"thumb": "3712478",
+			"author": "Garland",
+			"description": "A Level 5 Warrior archetype with different Attributes that aims to 'protect the castle' so to speak, with many of their effects requiring you to control exactly 1 \"Drachenritter\" monster and no other monsters.",
+			"tags": []
+		},
+		{
+			"name": "Love♡Letter",
+			"deckIds": [10707236],
+			"cardIds": [],
+			"thumb": "3214332",
+			"author": "Sock",
+			"description": "A FIRE archetype in a similar vein to 'Majespecter' with monsters that range from not being able to be destroyed by card effects in Attack Position, not being able to be destroyed by battle in Defense Position and Quick Effect soft-once per turn effects to change their battle positions as cost, and, if it's the first attempted time to resolve, apply a powerful effect.",
+			"tags": []
+		},
+		{
+			"name": "Thaumatonic",
+			"deckIds": [9658346],
+			"cardIds": [],
+			"thumb": "2848492",
+			"author": "C.C.",
+			"description": "A Spellcaster, Aqua and Warrior archetype that essentially aims to out-resource the opponent in the long run whilst dealing chip damage over time, using various effects to destroy cards and equip other cards to themselves, even sometimes at the cost of being able to Summon non-archetypal monsters to your Main Monster Zone, turn-wide.",
+			"tags": []
+		},
+		{
+			"name": "Daeviner",
+			"deckIds": [11835652],
+			"cardIds": [],
+			"thumb": "3553076",
+			"author": "Aurora",
+			"description": "A DARK archetype that is based on the Zoroastrian religion from Persia, the oldest and still practiced religion in the world, being a linear combo Deck that stems from 'The Daeviner, Zoroastra', being able to end on a variety of archetypal monsters that are supported by their Book Spell and Trap line-up, which are also named after some of the holy texts in Zoroastrianism.",
+			"tags": []
+		},
+		{
+			"name": "Oh, a Snake!",
+			"deckIds": [11369677],
+			"cardIds": [],
+			"thumb": "3589313",
+			"author": "Kaishi",
+			"description": "A Reptile and Dragon archetype that revolves around sending Reptiles from the Deck to the GY and them Summoning them with their own effects to be Tributed for powerful removal options, disruption and knowledge gathering effects.",
+			"tags": []
+		},
+		{
+			"name": "Orikamaze",
+			"deckIds": [7174943],
+			"cardIds": [],
+			"thumb": "2071264",
+			"author": "Jeff",
+			"description": "A WIND archetype revolving around die rolls, with minimizing \"misses\" kept in mind.",
+			"tags": []
+		},
+		{
+			"name": "Loyal Hero",
+			"deckIds": [12015108],
+			"cardIds": [],
+			"thumb": "3615620",
+			"author": "Aurora",
+			"description": "A multi-Attribute archetype that centers around its Quick-Play Spell 'Loyal Hero Combination', aiming to loop it as many times and as often as possible, enabling you to Summon 2 monsters with different Attributes from the Deck at the cost of Summoning Normal Monsters.",
+			"tags": []
+		},
+		{
+			"name": "Erspatz",
+			"deckIds": [12467366],
+			"cardIds": [],
+			"thumb": "3774209",
+			"author": "Sock",
+			"description": "Part generic support, part archetype, this Deck aims to Special Summon their monsters from the hand by revealing and banishing face-down a monster of the same Type or an archetypal name, as well as having different effects during the End Phase.",
+			"tags": []
+		},
+		{
+			"name": "Aeon",
+			"deckIds": [12624422],
+			"cardIds": [],
+			"thumb": "3812725",
+			"author": "Anon",
+			"description": "Ӕon: An archetype focused on effects that get more powerful the more often you use them throughout the Duel, with a strong grind game and a powerful late game to boot.",
+			"tags": []
 		}
 	]
 }
