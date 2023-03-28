@@ -416,6 +416,27 @@ database = [
     11670717, #Khremysis Support
     12395457, #Comet Combatant Support
     12348285, #Burning Abyss Support
+    12192350, #Bas-Yak Support
+    11212617, #Chad Support
+    12502966, #Galaxy Support
+    11041314, #Karikuri Ninja Support
+    3256281,  #B.E.S. Support
+    12571245, #Chronoruler Support
+    12529098, #Tsurumashi Support
+    12519571, #The Winged Dragon of Ra Support
+    12371912, #LaVoix Support
+    12069909, #Magikey Support
+    10689691, #Mecha Phantom Beast Support
+    12552531, #Paleozoic Support
+    12567287, #Raidraptor Support
+    12609040, #Sea Lancer Support
+    12619783, #Gate Guardian/Labyrinth Wall Support
+    12460843, #Scrap Support
+    12633514, #Battle Cats Support
+    12644709, #Antrap Support
+    12351006, #Entity Support
+    12688748, #Battle Cats Support
+    12670852, #Northwemko & Garlandolf + Ruin & Demise Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -886,6 +907,7 @@ database = [
     7174943,  #Orikamaze
     12015108, #Loyal Hero
     12467366, #Erspatz
+    12624422, #Ӕon
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
@@ -927,6 +949,7 @@ generics = [
     12397962, #Generic Monsters XXXIV
     12459978, #Generic Monsters XXXV
     12644735, #Generic Monsters XXXVI
+    12771978, #Generic Monsters XXXVII
     6353430,  #Generic Spells
     6419184,  #Generic Spells II
     6871664,  #Generic Spells III
