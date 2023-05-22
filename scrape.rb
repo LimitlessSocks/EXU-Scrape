@@ -342,7 +342,7 @@ database = [
     # 11155582, #Cipher Support
     11041314, #Karikuri Ninja Support
     10875332, #Elixir Born Support
-    11359867, #Zoodiac Support
+    # 11359867, #Zoodiac Support
     8228836,  #Tiki Support
     11237308, #Voltester Support
     11299188, #Battle Cats Support
@@ -437,6 +437,31 @@ database = [
     12351006, #Entity Support
     12688748, #Battle Cats Support
     12670852, #Northwemko & Garlandolf + Ruin & Demise Support
+    12806602, #Clear World Support
+    12776129, #VILLAIN Support
+    12692368, #Sword Sanctuary Support
+    11923211, #Tri-Brigade Support
+    12734121, #Dark World Support
+    3489325,  #Vampire Support
+    12836246, #Clear World Support
+    12868255, #Trapezohedronite Support
+    12674428, #VILLAIN Support
+    12878132, #Gravity-Eyes Support
+    12890273, #Ritual Raven/of Rites Support
+    12894715, #Origination Support
+    12898744, #Neytirix Support
+    11934206, #FIRE Machine/Pyro Support
+    12967691, #Dai/Grapher/Dark Lucius Support
+    12966090, #Swordsoul Support
+    12936342, #Gravity-Eyes Support
+    12961393, #Wicked Overlord Support
+    12954387, #Valkyrie Support
+    5386010,  #Metallizing Parasite Support
+    12861324, #Tenyi Support
+    12929579, #Mermail Support
+    12645785, #Hollow Depths Support
+    13020258, #Invoked Support
+    5768976,  #Fire King Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -895,7 +920,7 @@ database = [
     5145725,  #Remnant
     # 11636685, #Gridiator
     7823128,  #Diraye
-    11787768, #Nihanya
+    # 11787768, #Nihanya
     10703372, #Neytirix
     11993376, #Dust Drifter
     12273205, #Continuum
@@ -908,6 +933,33 @@ database = [
     12015108, #Loyal Hero
     12467366, #Erspatz
     12624422, #Ӕon
+    11528541, #Phamiliar
+    12174472, #Aethery
+    11724699, #Bolt Arc
+    9802230,  #Beetle Scout
+    9566267,  #Armamegiddo
+    10061939, #Protogen
+    11022336, #Secret Enclave
+    11994126, #Magmaraud
+    8036906,  #Dralchemic
+    12567621, #Magabond
+    11360314, #Goo-F
+    12450879, #Swordsmaster
+    12905114, #Null-Eyes
+    7922328,  #Harokai
+    12853769, #Wings of Roc
+    11775774, #Night Memories
+    12495339, #Little Witch
+    12762041, #Wicked Overlord
+    9956052,  #Fortekhne
+    12794921, #Kotodama
+    11412151, #Sorrowheart/Mournful Avatar
+    11357002, #Neinsect
+    6910448,  #Grandtusk
+    11508098, #Popping Prowess
+    12902403, #Ventuoso
+    3639246,  #Tidalive
+    6592036,  #Cyverbyte
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
