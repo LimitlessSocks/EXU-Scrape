@@ -299,7 +299,8 @@ database = [
     9847517,  #Materiactor Support
     12392696, #Witchwood Support
     # 9997560,  #Harokai Support
-    10190817, #Underworld Support
+    # 10190817, #Underworld Support
+    13131670, #Underworld Support
     8254883,  #LV Support
     10416948, #Adventurer Support
     10481429, #Suship Support
@@ -345,7 +346,8 @@ database = [
     # 11359867, #Zoodiac Support
     8228836,  #Tiki Support
     11237308, #Voltester Support
-    11299188, #Battle Cats Support
+    # 11299188, #Battle Cats Support
+    13131686, #Battle Cats Support
     11249200, #Achacha Support
     11141587, #Icejade Support
     11574129, #Dinowrestler Support
@@ -449,7 +451,7 @@ database = [
     12878132, #Gravity-Eyes Support
     12890273, #Ritual Raven/of Rites Support
     12894715, #Origination Support
-    12898744, #Neytirix Support
+    # 12898744, #Neytirix Support
     11934206, #FIRE Machine/Pyro Support
     12967691, #Dai/Grapher/Dark Lucius Support
     12966090, #Swordsoul Support
@@ -458,7 +460,7 @@ database = [
     12954387, #Valkyrie Support
     5386010,  #Metallizing Parasite Support
     12861324, #Tenyi Support
-    12929579, #Mermail Support
+    # 12929579, #Mermail Support
     12645785, #Hollow Depths Support
     13020258, #Invoked Support
     5768976,  #Fire King Support
@@ -911,7 +913,8 @@ database = [
     8608821,  #C.I.
     11034977, #Blight Burn
     # 12261209, #Magia
-    12397638, #Magia
+    # 12397638, #Magia
+    13131699, #Magia
     11080097, #Champurai
     10754507, #Blades of Usurpation
     11045908, #Nycterror
@@ -921,7 +924,7 @@ database = [
     # 11636685, #Gridiator
     7823128,  #Diraye
     # 11787768, #Nihanya
-    10703372, #Neytirix
+    # 10703372, #Neytirix
     11993376, #Dust Drifter
     12273205, #Continuum
     12283876, #Drachenritter
@@ -1002,6 +1005,11 @@ generics = [
     12459978, #Generic Monsters XXXV
     12644735, #Generic Monsters XXXVI
     12771978, #Generic Monsters XXXVII
+    13131317, #Generic Monsters XXXVIII
+    13131449, #Generic Monsters XXXIX
+    13131523, #Generic Monsters XL
+    13131587, #Generic Monsters XLI
+    13131654, #Generic Monsters XLII
     6353430,  #Generic Spells
     6419184,  #Generic Spells II
     6871664,  #Generic Spells III
