@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q3RKXFLZRZ');
+    </script>
+    <title>EXU Image Checker</title>
+    <meta charset="UTF-8">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script src="./card-viewer.js"></script>
+    <!-- <script type="module" src="https://unpkg.com/browser-image-hash@0.0.5/dist/index.js"> -->
+    <script type="module" src="./phash.mjs"></script>
+    <script type="module" src="./image-compare.mjs"></script>
+    <link rel="STYLESHEET" href="./card-viewer.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3RKXFLZRZ"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/phash-js/dist/phash.js"></script> -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <style>
+    .matches {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-content: center;
+        max-height: 300px;
+        overflow-y: auto;
+        border: 3px solid white;
+        margin: 10px 64px;
+        background-color: rgba(0,0,0,0.5);
+    }
+    .match-item {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        margin: 7px;
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.5);
+        border: 3px solid #aaaaaa;
+    }
+    #output {
+    }
+    </style>
+</head>
+<body>
+
+<h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1>
+<h1 id="top">EXU Reverse Image Assist</h1>
+<h2>Please report all bugs to Sock#3222</h2>
+<p>This works best for exact image/shades of imge search, but it might work in more cases. <strong>THIS IS NOT DEFINITIVE PROOF THAT YOUR ART IS NOT IN USE!</strong> It is just a helpful tool.</p>
+<label for="image-input">Please upload 1 or more images:</label>
+<input id="image-input" type="file" name="image" accept="image/jpeg, image/png" multiple>
+<button id="submit-image">Submit</button>
+<div id="output"></div>
+<!--<script>window.addEventListener("load", function () {
+    setTimeout(() => {
+        console.log("click!");
+        document.getElementById("submit-image").click();
+    }, 500);
+});</script>-->
+</body>
+</html>

@@ -20,6 +20,11 @@
   },
   "homepage": "https://github.com/LimitlessSocks/EXU-Scrape#readme",
   "dependencies": {
-    "flowo": "^1.0.0"
+    "axios": "^1.4.0",
+    "canvas": "^2.11.2",
+    "flowo": "^1.0.0",
+    "jpeg-js": "^0.4.4",
+    "sharp": "^0.32.1",
+    "sharp-phash": "^2.1.0"
   }
 }
