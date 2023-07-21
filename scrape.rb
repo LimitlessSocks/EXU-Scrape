@@ -465,6 +465,22 @@ database = [
     13020258, #Invoked Support
     5768976,  #Fire King Support
     11796741, #Pretz's pack 17
+    12936017, #Ally of Justice Support
+    12369844, #Raidraptor Supports
+    13046011, #Windwitch Support
+    13027195, #Rose Dragon Pendulums/Support
+    13028150, #Gravity-Eyes Supports
+    13038344, #Chaos Synchro Support
+    12278740, #Cupid Support
+    13177250, #Entropy Beast Support
+    13206593, #Dragunity Support
+    13266523, #Battlin' Boxer Support
+    13501666, #Owlsh Support
+    13052878, #Seventh/Barian/Number 101-107 Support
+    13309699, #C.I. Support
+    12819536, #Dyna Mondo/Ritual Support
+    13400899, #Comet Combatant Support
+    12312243, #Soldier Dragon Support
     
     #--------------------------------------------------------------------#
     # Archetypes
