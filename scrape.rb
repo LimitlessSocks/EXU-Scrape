@@ -187,7 +187,7 @@ database = [
     6862415,  #PK Support
     7566464,  #Z-ARC Support
     7664359,  #of the Wasteland Support
-    6226330,  #Acrimonic Support
+    # 6226330,  #Acrimonic Support
     # 7679392,  #Toon, Fire King & Windwitch Support
     # 7647679,  #Black Blood Support
     # 6845360,  #Starter Squad
@@ -456,7 +456,7 @@ database = [
     12967691, #Dai/Grapher/Dark Lucius Support
     12966090, #Swordsoul Support
     12936342, #Gravity-Eyes Support
-    12961393, #Wicked Overlord Support
+    # 12961393, #Wicked Overlord Support
     12954387, #Valkyrie Support
     5386010,  #Metallizing Parasite Support
     12861324, #Tenyi Support
@@ -464,6 +464,7 @@ database = [
     12645785, #Hollow Depths Support
     13020258, #Invoked Support
     5768976,  #Fire King Support
+    11796741, #Pretz's pack 17
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -538,7 +539,7 @@ database = [
     7301908,  #Vampop☆Star
     6135219,  #The Parallel
     # 3689114,  #LeSpookie
-    6209092,  #Acrimonic
+    # 6209092,  #Acrimonic
     5884678,  #Arsenal
     # 6121762,  #Hydromunculus
     6233896,  #Mirror Force Archetype
@@ -796,7 +797,7 @@ database = [
     # 2942421,  #Antrap
     # 7528627,  #Red-White
     5269100,  #Orb Matchician
-    9433755,  #Azathean
+    # 9433755,  #Azathean
     # 9417588,  #Empyrodraco
     9347499,  #Yurei
     # 9469722,  #Geídst
@@ -905,7 +906,7 @@ database = [
     10436936, #Shin Origin
     6707275,  #Malevolessence
     11348110, #Seasquib
-    10922625, #Angeluttia
+    # 10922625, #Angeluttia
     11675163, #Grace of the Watchers
     11268969, #Maid-to-Last
     12044342, #Flamiller
@@ -953,7 +954,7 @@ database = [
     12853769, #Wings of Roc
     11775774, #Night Memories
     12495339, #Little Witch
-    12762041, #Wicked Overlord
+    # 12762041, #Wicked Overlord
     9956052,  #Fortekhne
     12794921, #Kotodama
     11412151, #Sorrowheart/Mournful Avatar
@@ -963,6 +964,30 @@ database = [
     12902403, #Ventuoso
     3639246,  #Tidalive
     6592036,  #Cyverbyte
+    11708284, #Ninaazar
+    12659517, #Nanoswarm
+    12895892, #Cindaria
+    12896711, #Bubblebeaut
+    12928473, #Nine-Tailed
+    12973627, #Nihilos
+    6415583,  #Soulscale
+    12092296, #Incurseion
+    5404122,  #Wondertale
+    11491061, #Unsung Soul
+    12936263, #Merciless Soul
+    11303534, #Okiba
+    13100046, #Veridian
+    11107510, #Phright
+    4361777,  #Eviction
+    12075790, #Ka-aeon
+    12114768, #of the Bosque
+    12928546, #des Piliers d'Ivoire
+    8372026,  #Pendulumstatues
+    12906318, #Celestial Sign
+    12311621, #Immolatal
+    10978035, #Artisans
+    12819337, #Anrea
+    13393074, #Deep Op
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
@@ -1010,6 +1035,8 @@ generics = [
     13131523, #Generic Monsters XL
     13131587, #Generic Monsters XLI
     13131654, #Generic Monsters XLII
+    13510793, #Generic Monsters XLIII
+    13511065, #Generic Monsters XLIV
     6353430,  #Generic Spells
     6419184,  #Generic Spells II
     6871664,  #Generic Spells III
