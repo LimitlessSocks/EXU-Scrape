@@ -1,4 +1,4 @@
-VALID_OPERATIONS = ["main", "banlist", "support", "test", "beta", "sff"]
+VALID_OPERATIONS = ["main", "banlist", "support", "test", "beta", "sff", "battlepack"]
 VALID_NOTES = [nil, "temp"]
 operation = ARGV[0]
 note = ARGV[1]
@@ -480,7 +480,12 @@ database = [
     13309699, #C.I. Support
     12819536, #Dyna Mondo/Ritual Support
     13400899, #Comet Combatant Support
-    12312243, #Soldier Dragon Support
+    # 12312243, #Soldier Dragon Support
+    9029856,  #Khrey's singles
+    13511006, #Abartech Support
+    13665806, #Fortune Fairy Support
+    13661674, #Draken Support
+    13562287, #Mikazukinoyaiba Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -996,7 +1001,7 @@ database = [
     11107510, #Phright
     4361777,  #Eviction
     12075790, #Ka-aeon
-    12114768, #of the Bosque
+    13528906, #of the Bosque
     12928546, #des Piliers d'Ivoire
     8372026,  #Pendulumstatues
     12906318, #Celestial Sign
@@ -1004,6 +1009,10 @@ database = [
     10978035, #Artisans
     12819337, #Anrea
     13393074, #Deep Op
+    8694790,  #Ogrise
+    12779201, #Niematter
+    7597921,  #Trapod
+    12459511, #Fragenerator
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
@@ -1139,6 +1148,16 @@ sff = [
     8055759
 ]
 
+battlepack = [
+    13672492,
+    13673099,
+    13673195,
+    13673298,
+    13675778,
+    13675868,
+    13675994
+]
+
 format = "exu"
 
 EXU_BANNED      = { "exu_limit" => 0 }
@@ -1192,12 +1211,15 @@ elsif operation == "sff"
     decks = sff
     outname = "sff"
     format = "sff"
+elsif operation == "battlepack"
+    decks = battlepack
+    outname = format = "battlepack"
 else
     decks = test
     outname = "test"
 end
 
-ignore_extra_info = ["test", "beta", "sff"]
+ignore_extra_info = ["test", "beta", "sff", "battlepack"]
 
 decks += extra_info_order unless ignore_extra_info.include? operation
 
