@@ -686,6 +686,7 @@ database = [
     # 7877183,  #Tidalive
     # 7443209,  #Mokey Mokey OTK
     # 7455513,  #Doom Instruments
+    13779622, #Doom Instruments
     7163783,  #Lemuria
     7877166,  #Ugrovs
     7496225,  #Primordial Driver
@@ -964,6 +965,7 @@ database = [
     12174472, #Aethery
     11724699, #Bolt Arc
     # 9802230,  #Beetle Scout
+    13699530, #Beetle Scout
     9566267,  #Armamegiddo
     10061939, #Protogen
     11022336, #Secret Enclave
@@ -1015,6 +1017,7 @@ database = [
     12779201, #Niematter
     7597921,  #Trapod
     12459511, #Fragenerator
+    7127621,  #Dark Imp
     
     #order shenanigans
     5713627,  #Yeet (Must be after Charismatic)
@@ -1064,6 +1067,7 @@ generics = [
     13131654, #Generic Monsters XLII
     13510793, #Generic Monsters XLIII
     13511065, #Generic Monsters XLIV
+    13699460, #Generic Monsters XLV
     6353430,  #Generic Spells
     6419184,  #Generic Spells II
     6871664,  #Generic Spells III
