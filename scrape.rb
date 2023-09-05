@@ -224,7 +224,7 @@ database = [
     8344690,  #Evol Support
     6879409,  #Genex Support
     # 8310242,  #Battlin' Boxer Support
-    11001848, #Battlin' Boxer Support
+    # 11001848, #Battlin' Boxer Support
     8187355,  #Reptilianne Support
     # 7914836,  #Cubic Support
     # 8119660,  #Darklord Marie Support
@@ -333,7 +333,7 @@ database = [
     10863998, #Libromancer Support
     # 11153545, #Spellbook Support
     # 11099905, #Lyrilusc Support
-    11062951, #Battlin' Boxer Support
+    # 11062951, #Battlin' Boxer Support
     # 10917540, #Sword Sanctuary Support
     5619459,  #Contraption Support
     11007734, #U.A./F.A. Support
@@ -370,7 +370,7 @@ database = [
     # 11099621, #Childream Support
     10592918, #Heraldic Support
     10181635, #Alien/Cosmic Support
-    11304854, #Fossil Support
+    # 11304854, #Fossil Support
     11304535, #Dogmatika Support
     11865753, #Hazy Flame Support
     11859753, #Starry Knight Support
@@ -389,7 +389,7 @@ database = [
     10170984, #Entity Support
     11928461, #Red Dragon Archfiend Support
     12080446, #Ghoti Support
-    11928236, #Aroma Support
+    # 11928236, #Aroma Support
     12099586, #Gradius Support
     12129116, #Destiny HERO Support
     12093778, #Evil Eye Support
@@ -400,8 +400,8 @@ database = [
     12005556, #Mekkallegiate Drakin Support
     8198550,  #Metaphys Support
     12187607, #Guardian Support
-    11929606, #Shiranui Support
-    12181477, #Ice Counter Support
+    # 11929606, #Shiranui Support
+    # 12181477, #Ice Counter Support
     12211778, #Cipher Support
     12195592, #Laval Support
     11989056, #Temple of the Kings Support
@@ -474,7 +474,7 @@ database = [
     12278740, #Cupid Support
     13177250, #Entropy Beast Support
     13206593, #Dragunity Support
-    13266523, #Battlin' Boxer Support
+    # 13266523, #Battlin' Boxer Support
     13501666, #Owlsh Support
     13052878, #Seventh/Barian/Number 101-107 Support
     13309699, #C.I. Support
@@ -486,6 +486,8 @@ database = [
     13665806, #Fortune Fairy Support
     13661674, #Draken Support
     13562287, #Mikazukinoyaiba Support
+    13702586, #Recycle Beast Support
+    13699120, #Scab Scar-Knight/Scab Counter Support
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -574,7 +576,7 @@ database = [
     6262300,  #Muntu
     5297494,  #Thunderclap
     6294677,  #Diabolition
-    6334551,  #Wild Hunt
+    # 6334551,  #Wild Hunt
     6291306,  #Galaxieve
     # 5830740,  #New Order
     # 4237940,  #Taida
@@ -683,7 +685,7 @@ database = [
     5904696,  #Contraption
     # 7877183,  #Tidalive
     # 7443209,  #Mokey Mokey OTK
-    7455513,  #Doom Instruments
+    # 7455513,  #Doom Instruments
     7163783,  #Lemuria
     7877166,  #Ugrovs
     7496225,  #Primordial Driver
@@ -729,7 +731,7 @@ database = [
     7730748,  #Magistar
     7769900,  #Thunderstrike Dragon
     # 7842189,  #The Aarp
-    7882788,  #Des Aspect
+    # 7882788,  #Des Aspect
     # 7783148,  #Tamed Calamity / Armored Tamer
     # 7823128,  #Sisage
     6222166,  #Ananta
@@ -764,7 +766,7 @@ database = [
     # 3705612,  #Azure Reaper
     # 8013380,  #Cykoton
     8213421,  #Forge Breaker
-    8221267,  #Imperialis
+    # 8221267,  #Imperialis
     5830740,  #New Order
     8196897,  #Anguish
     8269957,  #Mind Macabre
@@ -900,7 +902,7 @@ database = [
     11122418, #BIZARRE
     6772951,  #Starter Squad
     10112260, #Agonymph
-    11424868, #Cyrompress
+    # 11424868, #Cyrompress
     11130418, #Draclash
     11049278, #Battlin' Twista
     11144943, #Bakudan
@@ -936,7 +938,7 @@ database = [
     11034977, #Blight Burn
     # 12261209, #Magia
     # 12397638, #Magia
-    13131699, #Magia
+    # 13131699, #Magia
     11080097, #Champurai
     10754507, #Blades of Usurpation
     11045908, #Nycterror
@@ -961,7 +963,7 @@ database = [
     11528541, #Phamiliar
     12174472, #Aethery
     11724699, #Bolt Arc
-    9802230,  #Beetle Scout
+    # 9802230,  #Beetle Scout
     9566267,  #Armamegiddo
     10061939, #Protogen
     11022336, #Secret Enclave
@@ -974,7 +976,7 @@ database = [
     7922328,  #Harokai
     12853769, #Wings of Roc
     11775774, #Night Memories
-    12495339, #Little Witch
+    # 12495339, #Little Witch
     # 12762041, #Wicked Overlord
     9956052,  #Fortekhne
     12794921, #Kotodama
@@ -1001,7 +1003,7 @@ database = [
     11107510, #Phright
     4361777,  #Eviction
     12075790, #Ka-aeon
-    13528906, #of the Bosque
+    # 13528906, #of the Bosque
     12928546, #des Piliers d'Ivoire
     8372026,  #Pendulumstatues
     12906318, #Celestial Sign
