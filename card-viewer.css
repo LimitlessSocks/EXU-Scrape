@@ -503,7 +503,7 @@ select.thin {
     z-index: 15;
 }
 
-#filterBy {
+#filterBy, #creditArt {
     bottom: 20px;
     left: 20px;
     /* width: 70%; */
@@ -577,4 +577,8 @@ input.large {
     text-align: center;
     display: block;
     margin: 0 auto;
+}
+
+.hidden {
+    display: none;
 }

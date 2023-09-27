@@ -14,7 +14,7 @@ window.addEventListener("load", async function () {
     let creditContent = await unread.json();
     let creditsElement = document.querySelector("#credits tbody");
     for(let [ id, data ] of Object.entries(creditContent)) {
-        console.log(data);
+        // console.log(data);
         let tr = document.createElement("tr");
         let cardName = document.createElement("td");
         let cardId = document.createElement("td");

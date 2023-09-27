@@ -16,6 +16,14 @@ const EMPTY_QUERY = {
 };
 
 let onLoad = async function () {
+    const creditButton = document.getElementById("creditArt");
+    if(CardViewer.SaveData.get("credit").isArtFinder) {
+        creditButton.classList.toggle("hidden", false);
+    }
+    creditButton.addEventListener("click", function () {
+        // TODO: actually implement
+    });
+    
     await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
     
     const state = {
@@ -62,11 +70,12 @@ let onLoad = async function () {
     $("#expand").click(() => {
         let step = () => {
             for(let i = 0; i < state.stepSize; i++) {
-                let card = state.results[state.showing++];
-                appendCard(card);
                 if(state.showing >= state.results.length) {
+                    state.showing = state.results.length;
                     break;
                 }
+                let card = state.results[state.showing++];
+                appendCard(card);
             }
             updateTexts();
             if(state.showing < state.results.length) {
