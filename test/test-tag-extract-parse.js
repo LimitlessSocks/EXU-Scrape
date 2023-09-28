@@ -485,6 +485,19 @@ const TEST_CASES = [
         { type: "trap" },
         RIGHT_PARENTHESIS,
     ]],
+    ["500 atk level 2", [
+        { type: "monster", atk: "500", atkCompare: "equal" },
+        { type: "monster", level: "2", levelCompare: "equal" },
+    ]],
+    ["level 2 500 atk", [
+        { type: "monster", level: "2", levelCompare: "equal" },
+        { type: "monster", atk: "500", atkCompare: "equal" },
+    ]],
+    // this the problem the above two don't feature
+    ["level 2 atk 500", [
+        { type: "monster", level: "2", levelCompare: "equal" },
+        { type: "monster", atk: "500", atkCompare: "equal" },
+    ]],
 ];
 
 module.exports = function testTagExtractParse(debug = false) {

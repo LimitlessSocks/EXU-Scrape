@@ -283,6 +283,11 @@ const INDICATORS = [
                 ]);
         }
     }),
+    new TagIndicator(/\[\[((?:\][^\]]|.)+?)\]\]/, (match) => wrapParens([
+        { effect: match[1] },
+        OPERATOR_INLINE_OR,
+        { name: match[1] },
+    ])),
     new TagIndicator(/(?:pend:)\s*\[([^[\]]+)\]/, (match) => ({
         pend_effect: match[1],
     })),

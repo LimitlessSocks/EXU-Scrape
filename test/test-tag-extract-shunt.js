@@ -139,6 +139,34 @@ const TEST_CASES = [
         { effect: "discard this" },
         OPERATOR_INLINE_AND,
     ]],
+    ["not ritual and not warrior", [
+        { type: "spell", kind: "Ritual" },
+        { type: "monster", monsterCategory: "ritual" },
+        OPERATOR_INLINE_OR,
+        OPERATOR_NOT,
+        { type: "monster", monsterType: "Warrior" },
+        OPERATOR_NOT,
+        OPERATOR_INLINE_AND,
+    ]],
+    ["not ritual not warrior", [
+        { type: "spell", kind: "Ritual" },
+        { type: "monster", monsterCategory: "ritual" },
+        OPERATOR_INLINE_OR,
+        OPERATOR_NOT,
+        { type: "monster", monsterType: "Warrior" },
+        OPERATOR_NOT,
+        OPERATOR_INLINE_AND,
+    ]],
+    ["[ojama] or \"ojama\"", [
+        { effect: "ojama" },
+        { name: "ojama" },
+        OPERATOR_INLINE_OR,
+    ]],
+    ["[[ojama]]", [
+        { effect: "ojama" },
+        { name: "ojama" },
+        OPERATOR_INLINE_OR,
+    ]],
 ];
 
 module.exports = function testTagExtractShunt(debug = false) {
