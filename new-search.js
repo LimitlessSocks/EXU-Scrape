@@ -16,6 +16,13 @@ const EMPTY_QUERY = {
 };
 
 let onLoad = async function () {
+    CardViewer.SaveData.init();
+    if(!CardViewer.SaveData.get("credit")) {
+        CardViewer.SaveData.set("credit", {
+            isArtFinder: false,
+        });
+    }
+    
     const creditButton = document.getElementById("creditArt");
     if(CardViewer.SaveData.get("credit").isArtFinder) {
         creditButton.classList.toggle("hidden", false);
