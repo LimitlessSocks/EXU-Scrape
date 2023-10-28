@@ -10,10 +10,10 @@ data.each { |deck_id, deck_data|
         # tcg cards show as just an id under this approach
         next if obj.size <= 1
         unless results[obj["id"]].nil?
-            puts "[#{deck_id}] Duplicate card #{obj["id"]} #{obj["name"]} (home #{results[obj["id"]]["home"]})"
+            puts "[#{deck_id}] Duplicate card #{obj["id"]} #{obj["name"]} (submission_source #{results[obj["id"]]["submission_source"]})"
         end
         obj = obj.dup
-        obj["home"] = deck_id
+        obj["submission_source"] = deck_id
         results[obj["id"]] ||= obj
     }
 }
@@ -21,7 +21,6 @@ data.each { |deck_id, deck_data|
 puts "Custom count: #{results.size}"
 
 # unify with tcg cards
-
 puts "Unifying with ycg.json..."
 ycg = JSON::parse File.read "ycg.json"
 results.merge! ycg

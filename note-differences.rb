@@ -42,9 +42,10 @@ log "main", "Created log file #{now_time_name}"
 old_database = JSON::parse File.read "#{output_name}.json"
 new_database = JSON::parse File.read "#{output_name}-tmp.json"
 
+# TODO: log decks by name not just submission_source id
 changed_ids = []
 new_database.each { |card_id, card|
-    deck_id = card["home"]
+    deck_id = card["submission_source"]
     display_text = "#{card_id} (#{card["name"]})" 
     
     # # dummy output information

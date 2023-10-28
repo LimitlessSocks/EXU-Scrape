@@ -69,7 +69,17 @@ def normalize_card!(card)
     end
     
     # ensure src
-    card["src"] ||= "https://www.duelingbook.com/images/low-res/#{card["id"]}.jpg"
+    if card["custom"] and card["custom"] > 0
+        idMod = card["id"].to_i
+        idMod = idMod - idMod % 100000
+        src = "https://www.duelingbook.com/images/custom-pics/#{idMod}/#{card["id"]}.jpg"
+        if card["pic"] and card["pic"] != "1"
+            src += "?version=" + card["pic"]
+        end
+        card["src"] ||= src
+    else
+        card["src"] ||= "https://www.duelingbook.com/images/low-res/#{card["id"]}.jpg"
+    end
     
     # update accordingly
     card["attribute"] = ([card["attribute"]] + extra_attributes).join " "
