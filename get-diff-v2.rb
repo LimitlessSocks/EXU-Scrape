@@ -86,6 +86,7 @@ def generate_out_diff(path)
         
         if line =~ /\[(\d+)\] note: property '(.+?)' of card id (\d+) \((.+)\).*?changed/
             deck_id, prop, id, name = $1, $2, $3, $4
+            # TODO: multi line properties
             from = lines[idx + 1]
             to = lines[idx + 2]
             changed_cards[deck_id] ||= []
