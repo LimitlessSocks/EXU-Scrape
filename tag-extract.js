@@ -98,7 +98,9 @@ const PROPER_MONSTER_TYPES = [
     "Insect", "Machine", "Plant", "Psychic", "Pyro",
     "Reptile", "Rock", "Sea Serpent", "Spellcaster",
     "Thunder", "Warrior", "Winged Beast", "Wyrm",
-    "Yokai", "Zombie", "Creator God", "Divine-Beast"
+    "Yokai", "Zombie", "Creator God", "Divine-Beast",
+    "Omega Psychic", "High Dragon", "Celestial Warrior",
+    "Magical Knight", "Cyborg", "Galaxy",
 ];
 const getProperMonsterType = getProper(PROPER_MONSTER_TYPES);
 
@@ -297,7 +299,7 @@ const INDICATORS = [
     new TagIndicator(/\[([^[\]]+)\]/, (match) => ({
         effect: match[1],
     })),
-    new TagIndicator(/beast[ -]?warrior|aqua|beast|cyberse|dinosaur|dragon|fairy|fiend|fish|insect|machine|plant|psychic|pyro|reptile|rock|sea[ -]?serpent|spellcaster|thunder|warrior|winged[ -]?beast|wyrm|yokai|zombie|creator[ -]?god|divine[ -]?beast/i, (match) => ({
+    new TagIndicator(/beast[ -]?warrior|aqua|beast|cyberse|dinosaur|dragon|fairy|fiend|fish|insect|machine|plant|psychic|pyro|reptile|rock|sea[ -]?serpent|spellcaster|thunder|warrior|winged[ -]?beast|wyrm|yokai|zombie|creator[ -]?god|divine[ -]?beast|omega psychic|high dragon|cyborg|celestial warrior|magical knight|galaxy/i, (match) => ({
         type: "monster",
         monsterType: getProperMonsterType(match[0]),
     })),

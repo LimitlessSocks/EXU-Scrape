@@ -488,6 +488,7 @@ database = [
     13562287, #Mikazukinoyaiba Support
     13702586, #Recycle Beast Support
     13699120, #Scab Scar-Knight/Scab Counter Support
+    12003132, #Glitchy's singles
     
     #--------------------------------------------------------------------#
     # Archetypes
@@ -1136,8 +1137,9 @@ banlist = [
 ]
 
 test = [
-    # 7443406, #Illusory Rend test
-] + banlist
+    7443406, #Illusory Rend test
+    11304854,
+] #+ banlist
 
 beta = [
     7443406,  #BETA SINGLES, NEVER DELETE!

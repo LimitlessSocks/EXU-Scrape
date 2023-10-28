@@ -1,0 +1,1091 @@
+[main] Created log file log/db-10-28-2023.17.04.06.txt
+[14128241] note: property 'effect' of card id 2273799 (Elusive Dashing Techniques) was changed
+[14128241] from: Equip only to a WIND Beast monster. It gains 800 ATK, and it cannot be targeted by your opponent's card effects. If the only monster(s) you control are in the Extra Monster Zone: You can banish this card from your GY, then target up to 3 cards in your opponent's GY; banish them.
+[14128241] to: Equip only to a WIND Beast monster. It gains 800 ATK, and it cannot be targeted by your opponent's card effects. If the only monster(s) you control are in the Extra Monster Zone (min. 1): You can banish this card from your GY, then target up to 3 cards in your opponent's GY; banish them.
+[14128241] note: property 'effect' of card id 2555808 (Art of Persistence) was changed
+[14128241] from: Equip only to a WIND Beast monster. It gains 400 ATK, also, it cannot be destroyed battle, and if it attacks a Defense Position monster, inflict piercing battle damage to your opponent. If the only monster(s) you control are in the Extra Monster Zone: You can banish this card from your GY, then target 1 monster your opponent controls; banish it.
+[14128241] to: Equip only to a WIND Beast monster. It gains 400 ATK, also, it cannot be destroyed battle, and if it attacks a Defense Position monster, inflict piercing battle damage to your opponent. If the only monster(s) you control are in the Extra Monster Zone (min. 1): You can banish this card from your GY, then target 1 monster your opponent controls; banish it.
+[14128241] note: property 'effect' of card id 2555626 (Inumerization) was changed
+[14128241] from: Fusion Summon 1 WIND Beast Fusion Monster from your Extra Deck, by using monsters from your hand or field as Fusion Material, and/or banishing Fusion Materials listed on it from your GY. If the only monster(s) you control are in the Extra Monster Zone: You can banish this card from your GY, then target 1 Spell/Trap your opponent controls; banish it.
+[14128241] to: Fusion Summon 1 WIND Beast Fusion Monster from your Extra Deck, by using monsters from your hand or field as Fusion Material, and/or banishing Fusion Materials listed on it from your GY. If the only monster(s) you control are in the Extra Monster Zone (min. 1): You can banish this card from your GY, then target 1 Spell/Trap your opponent controls; banish it.
+[14128241] note: property 'effect' of card id 2555641 (Astute Inu) was changed
+[14128241] from: "Invoking Inu" or "Rooftop Inu" + 1 WIND Beast monsterIf this card was Fusion Summoned using a Tuner or Link Monster as material, it cannot be destroyed by battle or card effects, and any battle damage you take from battles involving this monster is halved. If your opponent controls a monster with more ATK than this card, this card can attack directly. Once per turn, during your opponent's End Phase: You can target 3 cards in your GY; your opponent chooses all but 1 for you to shuffle into your Deck, then place the last card on the top of your Deck. If this card is sent from a Monster Zone to the GY: You can banish this card from your GY; Special Summon 1 "Rooftop Inu" from your Extra Deck. (This is treated as a Link Summon.) You can only use this effect of "Astute Inu" once per turn.
+[14128241] to: "Invoking Inu" or "Rooftop Inu" + 1 WIND Beast monsterIf this card was Fusion Summoned using a Tuner or Link Monster as material, it cannot be destroyed by battle or card effects, and any battle damage you take from battles involving this monster is halved. If your opponent controls a monster with more ATK than this card, this card can attack directly. Once per turn, during your opponent's End Phase: You can target 3 cards in your GY; your opponent chooses 1, you shuffle the rest (if any) into the Deck, then place the chosen card on the top of your Deck. If this card is sent from a Monster Zone to the GY: You can banish this card from your GY; Special Summon 1 "Rooftop Inu" from your Extra Deck. (This is treated as a Link Summon.) You can only use this effect of "Astute Inu" once per turn.
+[14128245] note: property 'effect' of card id 2539837 (Mudafi Minister - Zahir) was changed
+[14128245] from: If this card is Normal Summoned: You can add 1 "Mudafi" monster from your Deck to your hand during the End Phase. At the start of the Battle Phase, if you control a "Mudafi" monster: You can discard this card; discard 1 "Mudafi" card, then draw 1 card, and if you do, draw 1 more card during the End Phase. You can only use this effect of "Mudafi Merchant - Yusra" once per turn.
+[14128245] to: If this card is Normal Summoned: You can add 1 "Mudafi" monster from your Deck to your hand during the End Phase. At the start of the Battle Phase, if you control a "Mudafi" monster: You can discard this card; discard 1 "Mudafi" card, then draw 2 cards, and if you do, draw 1 more card during the End Phase. You can only use this effect of "Mudafi Merchant - Zahir" once per turn.
+[14128245] note: property 'effect' of card id 2539876 (Mudafi Miscreant - Hadil) was changed
+[14128245] from: If this card is Normal Summoned: You can add 1 "Mudafi" monster from your Deck to your hand during the End Phase. At the start of the Battle Phase, if you control a "Mudafi" monster: You can discard this card, pay LP in multiples of 500 (max. 1500), then target 1 Set Spell/Trap your opponent controls for every 500 LP paid; they cannot be activated for the rest of this turn. Your opponent cannot activate the targeted cards in response to this effect's activation. You can only use this effect of "Mudafi Miscreant - Hadil" once per turn.
+[14128245] to: If this card is Normal Summoned: You can add 1 "Mudafi" monster from your Deck to your hand during the End Phase. At the start of the Battle Phase, if you control a "Mudafi" monster: You can discard this card, target any number of Set Spells/Traps your opponent controls, and pay 500 LP for each target, they cannot be activated until the end of the next turn. Your opponent cannot activate the targeted cards in response to this effect's activation. You can only use this effect of "Mudafi Miscreant - Hadil" once per turn.
+[14128252] note: property 'effect' of card id 2133312 (Unleash the Power!) was changed
+[14128252] from: (This card is always treated as a "Chima" card.)Activate 1 of these effects.● Reveal 1 "Chima" Equip Spell in your hand; Special Summon from your Deck, 1 "Chima" monster who specifically lists that revealed Spell's name in its text.● Special Summon 1 "Chima" monster from your hand or GY, and if you do, equip 1 from your Deck, 1 "Chima" Equip Spell whose name is specifically listed in that monster's text.You can only activate 1 "Unleash the Power!" per turn.
+[14128252] to: (This card is always treated as a "Chima" card.)Activate 1 of these effects.● Reveal 1 "Chima" Equip Spell in your hand; Special Summon from your Deck, 1 "Chima" monster who specifically lists that revealed Spell's name in its text.● Special Summon 1 "Chima" monster from your hand or GY, and if you do, you can equip from your Deck to that monster, 1 "Chima" Equip Spell whose name is specifically listed in that monster's text.You can only activate 1 "Unleash the Power!" per turn.
+[14128351] note: property 'attribute' of card id 3438310 (Replicant Contraption: Vuoto) was changed
+[14128351] from: 
+[14128351] to:  DARK
+[14128356] note: property 'type' of card id 2047762 (Fishin' Octopus) was changed
+[14128356] from: Aqua
+[14128356] to: Aqua Insect
+[14128362] note: property 'type' of card id 2107065 (Iterator 13: Dracat) was changed
+[14128362] from: Beast
+[14128362] to: Beast Dragon
+[14128368] note: property 'type' of card id 1920581 (GG☆Baxis) was changed
+[14128368] from: Psychic
+[14128368] to: Galaxy
+[14128368] note: property 'type' of card id 1920579 (GG☆Centis) was changed
+[14128368] from: Psychic
+[14128368] to: Galaxy
+[14128368] note: property 'type' of card id 1920583 (GG☆Extis) was changed
+[14128368] from: Psychic
+[14128368] to: Galaxy
+[14128368] note: property 'type' of card id 1920585 (GG☆Finas) was changed
+[14128368] from: Psychic
+[14128368] to: Galaxy
+[14128368] note: property 'type' of card id 1920574 (GG☆Primis) was changed
+[14128368] from: Psychic
+[14128368] to: Galaxy
+[14128368] note: property 'type' of card id 1920576 (GG☆Vastis) was changed
+[14128368] from: Psychic
+[14128368] to: Galaxy
+[14128368] note: property 'type' of card id 1920586 (GGG☆Lordis) was changed
+[14128368] from: Psychic
+[14128368] to: Galaxy
+[14128368] note: property 'type' of card id 1920588 (GGG☆Rulis) was changed
+[14128368] from: Psychic
+[14128368] to: Galaxy
+[14128368] note: property 'type' of card id 3821799 (Origination 12: GGGG☆Chaosis) was changed
+[14128368] from: Psychic
+[14128368] to: Galaxy
+[14128390] note: property 'attribute' of card id 2061090 (Pendant Druid) was changed
+[14128390] from: LIGHT
+[14128390] to: LIGHT DARK
+[14128395] note: property 'attribute' of card id 3267514 (Mechatech Dragon Slayer - Dimension Extinction) was changed
+[14128395] from: LIGHT
+[14128395] to: LIGHT DARK
+[14128395] note: property 'type' of card id 3267514 (Mechatech Dragon Slayer - Dimension Extinction) was changed
+[14128395] from: Machine
+[14128395] to: Machine Dragon
+[14128866] note: property 'effect' of card id 2396254 (Tempestal Ascended Territory) was changed
+[14128866] from: All "Tempestal Ascended" monsters you control gain 500 ATK/DEF. Once per turn, during your Main Phase, you can Normal Summon 1 "Tempestal Ascended" monster in addition to your Normal Summon/Set (you can only gain this effect once per turn.) Once per turn: You can activate this effect; skip the Battle Phase of your next turn, also you can conduct an additional Battle Phase this turn (even if this card leaves the field), but if you do, non-WIND Dragon monsters you control cannot declare an attack during that Battle Phase. This effect cannot be activated if the Battle Phase of this turn would be skipped.
+[14128866] to: All "Tempestal Ascended" monsters you control gain 500 ATK/DEF. Once per turn, during your Main Phase, you can Normal Summon 1 "Tempestal Ascended" monster in addition to your Normal Summon/Set (you can only gain this effect once per turn.) Once per turn: You can activate this effect; skip the Battle Phase of your next turn, also you can conduct an additional Battle Phase this turn (even if this card leaves the field). This effect cannot be activated if the Battle Phase of this turn would be skipped.
+[14128866] note: property 'effect' of card id 2396364 (Tempestal Rage) was changed
+[14128866] from: (This card is always treated as a "Tempestal Ascended" card.)Skip the Battle Phase of your next turn, also you can conduct an additional Battle Phase this turn, but if you do, non-WIND Dragon monsters you control cannot declare an attack during that Battle Phase. You cannot activate this card if the Battle Phase of this turn would be skipped. You can only activate 1 "Tempestal Rage" per turn.
+[14128866] to: (This card is always treated as a "Tempestal Ascended" card.)Skip the Battle Phase of your next turn, also you can conduct an additional Battle Phase this turn. You cannot activate this card if the Battle Phase of this turn would be skipped. You can only activate 1 "Tempestal Rage" per turn.
+[14128885] note: property 'effect' of card id 2978657 (Protogen.Subject.Omega.Final) was changed
+[14128885] from: Cannot be Fusion Summoned. Must first be Special Summoned (from your Extra Deck) by banishing 5 "Protogen" monsters from your hand, field, or GY. If banishing a Link Monster(s) this way, you can treat it as an equal number of monsters as its Link Rating. You can activate this effect; immediately after this effect resolves, you can banish a number of cards from your opponent's field or GY equal to the number of "Protogen" cards or effects that activated before this card in this Chain. (Quick Effect): You can resolve this effect. You can only use each effect of "Protogen.Subject.Omega.Final" once per turn.
+[14128885] to: Cannot be Fusion Summoned. Must first be Special Summoned (from your Extra Deck) by banishing 5 "Protogen" monsters from your hand, field, or GY. If banishing a Link Monster(s) this way, you can treat it as an equal number of monsters as its Link Rating. You can activate this effect; immediately after this effect resolves, you can banish a number of cards from your opponent's field or GY equal to the number of "Protogen" cards or effects that resolved before this card in this Chain. (Quick Effect): You can resolve this effect. You can only use each effect of "Protogen.Subject.Omega.Final" once per turn.
+[14128891] note: property 'type' of card id 3542377 (Recycle Beast Buzz Blaster) was changed
+[14128891] from: Machine
+[14128891] to: Machine Thunder
+[14128891] note: property 'type' of card id 3542212 (Recycle Beast Edge Tail) was changed
+[14128891] from: Machine
+[14128891] to: Machine Fish
+[14128891] note: property 'type' of card id 3542182 (Recycle Beast Ribbon Tongue) was changed
+[14128891] from: Machine
+[14128891] to: Machine Reptile
+[14128891] note: property 'type' of card id 3542321 (Recycle Beast Gun Tooth) was changed
+[14128891] from: Machine
+[14128891] to: Machine Beast
+[14128891] note: property 'type' of card id 3542253 (Recycle Beast Mirror Spine) was changed
+[14128891] from: Machine
+[14128891] to: Machine Dinosaur
+[14128891] note: property 'type' of card id 3542465 (Recycle Beast Tempest Dynamo) was changed
+[14128891] from: Machine
+[14128891] to: Machine Fiend
+[14128892] note: property 'effect' of card id 2513603 (Lost Remnant) was changed
+[14128892] from: During your Main Phase: You can Fusion Summon 1 "Remnant" Fusion Monster from your Extra Deck by banishing monsters from your field and/or GY as Fusion Materials, including this card. If this card is in your hand or GY: You can reveal the top card of your Deck, and if you do, if it is a "Remnant" Spell/Trap or a monster with 1200 ATK, place it on the top of the Deck, then Special Summon this card, but banish it when it leaves the field, otherwise send that card to the GY. You cannot Summon EARTH monsters. You can only use each effect of "Lost Remnant" once per turn.
+[14128892] to: During your Main Phase: You can Fusion Summon 1 Psychic/Machine Fusion Monster from your Extra Deck by banishing monsters from your hand, field, and/or GY as Fusion Materials, including this card. If this card is in your hand or GY: You can reveal the top card of your Deck, and if you do, if it is a "Remnant" card, place it on the top of the Deck, then Special Summon this card, but banish it when it leaves the field, otherwise send that card to the GY. You can only use each effect of "Lost Remnant" once per turn.
+[14128892] note: property 'effect' of card id 3106669 (Remnant Grunt) was changed
+[14128892] from: Once per turn, if a "Remnant" monster(s) you control would be used as Synchro Material for the Synchro Summon of a "Remnant" Synchro Monster, this card in your GY can also be used as material by banishing it. If a Level 6 or higher Psychic Synchro Monster is Synchro Summoned while this card is banished: You can Special Summon this card, and if you do, you can increase this card's Level by 1, also shuffle it into the Deck when it leaves the field. You cannot Summon EARTH monsters. You can only use this effect of "Remnant Grunt" once per turn.
+[14128892] to: Once per turn, if a "Remnant" monster(s) you control would be used as Synchro Material for the Synchro Summon of a "Remnant" Synchro Monster, this card in your GY can also be used as material by banishing it. If a Level 6 or higher Psychic Synchro Monster is Synchro Summoned while this card is banished: You can Special Summon this card, and if you do, you can increase this card's Level by 1, also shuffle it into the Deck when it leaves the field. You can only use this effect of "Remnant Grunt" once per turn.
+[14128892] note: property 'effect' of card id 1390843 (Remnant Scouts) was changed
+[14128892] from: If this card is Normal or Special Summoned: You can add 1 "Remnant" monster from your Deck to your hand, except "Remnant Scouts". You cannot Summon monsters the turn this effect is activated, except Psychic monsters and Machine monsters. If this card is banished by a "Remnant" card: You can target 1 card your opponent controls; destroy it, then you can make 1 face-up monster your opponent controls lose 300 ATK/DEF. You cannot Summon EARTH monsters. You can only use 1 "Remnant Scouts" effect per turn, and only once that turn.
+[14128892] to: If this card is Normal or Special Summoned: You can add 1 "Remnant" monster from your Deck to your hand, except "Remnant Scouts". You cannot Special Summon monsters from the hand or GY the turn this effect is activated, except WATER Psychic/ Machine monsters. If this card is banished by a "Remnant" card: You can target 1 card your opponent controls; destroy it. You can only use 1 "Remnant Scouts" effect per turn, and only once that turn.
+[14128892] note: property 'effect' of card id 1487232 (Remnant Escort) was changed
+[14128892] from: This card can be treated as a Level 2 or 3 Tuner for the Synchro Summon of a Psychic Synchro Monster. If you control a WATER "Remnant" monster, you can Special Summon this card (from your hand). You can only Special Summon "Remnant Escort" once per turn this way. If this card is Normal Summoned: You can send 1 "Remnant" monster from your Deck to the GY. If this card is banished by a "Remnant" card: You can place 1 banished "Remnant" card or 1 "Remnant" card from your GY on the top of the Deck. You cannot Summon EARTH monsters. You can only use 1 "Remnant Escort" effect per turn and only once that turn.
+[14128892] to: This card can be treated as a Tuner for the Synchro Summon of a Psychic Synchro Monster. If you control a WATER "Remnant" monster, you can Special Summon this card (from your hand). You can only Special Summon "Remnant Escort" once per turn this way. If this card is banished by a "Remnant" card: You can send 1 "Remnant" card from your Deck to the GY. You can only use this effect of "Remnant Escort" once per turn.
+[14128892] note: property 'effect' of card id 1471787 (Chosen Remnant) was changed
+[14128892] from: If the top card of your Deck was revealed this turn: You can Special Summon this card from your hand, then you can Special Summon 1 Level 3 or lower Psychic "Remnant" monster from your hand or GY. If this card is banished by a "Remnant" card: You can inflict 600 damage to your opponent, and if you do, you can make 1 face-up monster you control gain 300 ATK/DEF. You cannot Summon EARTH monsters. You can only use 1 "Chosen Remnant" effect per turn, and only once that turn.
+[14128892] to: While there is a banished "Remnant" card: You can reveal the top card of your Deck; If the revealed card was a "Remnant" card place it on the top of the Deck, then Special Summon this card, and if you do, you can make this card a Tuner until the end of this turn, otherwise send that revealed card to the GY. If this card is banished by a "Remnant" card: You can inflict 600 damage to your opponent You can only use 1 "Chosen Remnant" effect per turn, and only once that turn.
+[14128892] note: property 'effect' of card id 1477661 (Frightening Obstacle) was changed
+[14128892] from: (This card is always treated as a "Remnant" card.)Activate 1 of these effects.● Target 1 card on the field; banish 1 Psychic "Remnant" monster from your Deck, and if you do, destroy that target.● Send 1 Psychic "Remnant" monster with a different name than all monsters you currently control from your Deck to the GY.If you would reveal the top card of your Deck while this card is in your GY, you can banish this card and treat it as the revealed card instead. You can only activate 1 "Frightening Obstacle" per turn.
+[14128892] to: (This card is always treated as a "Remnant" card.)Activate 1 of these effects.● banish 1 Psychic "Remnant" monster from your Deck, and if you do, you can draw 1 card. ● Send 1 WATER "Remnant" monster you control to the GY, and if you do, negate the effects of 1 card on the field.If you would reveal the top card of your Deck while this card is in your GY, you can banish this card and treat it as the revealed card instead. You can only activate 1 "Frightening Obstacle" per turn.
+[14128892] note: property 'effect' of card id 3627894 (Infested Remnant Battleground) was changed
+[14128892] from: When this card is activated: You can reveal the top card of your Deck, and if you do, if it is a "Remnant" card, add 1 "Remnant" monster from your Deck to your hand, also shuffle 1 card from your hand into the Deck and place the revealed card on the top of the Deck, otherwise send it to the GY. Once per turn: You can pay 1200 LP; reveal the top card of your Deck, and if you do, if it is a "Remnant" card, send 1 Spell/Trap that has "Remnant" in its text from your hand, field or Deck to the GY, then place that revealed card on top of the Deck, otherwise send it to the GY. You can only activate 1 "Infested Remnant Battleground" per turn.
+[14128892] to: During the Main Phase: You can pay 1200 LP; reveal the top card of your Deck, and if you do, if it is a "Remnant" card, send 1 Spell/Trap that has "Remnant" in its text from your hand, field or Deck to the GY, then place that revealed card on top of the Deck, otherwise send it to the GY. Once per turn, if another "Remnant" card is activated that has an effect that would reveal the top of your Deck, you can pay 1200 LP and treat this card as the Revealed card instead. You can only activate 1 "Infested Remnant Battleground" per turn.
+[14128892] note: property 'effect' of card id 1381019 (Remnant Arrival) was changed
+[14128892] from: During the Main Phase: Fusion Summon 1 Fusion Monster from your Extra Deck by banishing Psychic and/or Machine "Remnant" monsters from your hand, field and/or GY as Fusion Materials, but send it to the GY during the End Phase of the next turn. You can banish this card from your GY; reveal the top card of your Deck, and if you do, if it is a "Remnant" card, place it on the top of the Deck and Fusion Summon 1 "Remnant" Fusion Monster from your Extra Deck by banishing monsters from your field, GY, and/or placing your banished "Remnant" monsters on the top of the Deck, as Fusion Materials, otherwise send it to the GY, also skip your next Draw Phase. You can only use 1 "Remnant Arrival" effect per turn, and only once that turn.
+[14128892] to: During the Main Phase: Fusion Summon 1 Psychic/Machine Fusion Monster from your Extra Deck by banishing Psychic/Machine monsters from your hand, field and/or GY as Fusion Materials, but it cannot activate it's effects or attack this turn unless there are 10 or more banished cards. You can reveal the top card of your Deck, and if you do, if it is a "Remnant" card, banish 1 card from your hand, field, then Set this card to the field but banish it when it leaves the field. You can only use 1 "Remnant Arrival" effect per turn, and only once that turn.
+[14128892] note: property 'effect' of card id 1380990 (Remnant Departure) was changed
+[14128892] from: Machine Fusion Monsters you control gain 300 ATK/DEF and cannot be destroyed by battle the turn they are Fusion Summoned. If a "Remnant" card(s) you control is destroyed by an opponent's card effect: You can banish 1 card on the field or in either GY, and if you do, send this card you control to the GY. If you control no monsters or all monsters you control are "Remnant" monsters (min. 1): You can banish this card from your GY; Special Summon 1 WATER "Remnant" monster from your Deck, but its effects are negated. You can only use 1 "Remnant Departure" effect per turn, and only once that turn.
+[14128892] to: Banish 1 Psychic or Machine monster from your hand or field, then you can Special Summon 1 banished WATER "Remnant" monster with a different name to the field, also, if the monster banished for this card's effect was banished from the field, it returns to the field at the end of this turn. If all monsters you control are Psychic/Machine monsters (min. 1): You can banish this card from your GY; Special Summon 1 WATER "Remnant" monster from your Deck, but its effects are negated. You can only use 1 "Remnant Departure" effect per turn, and only once that turn.
+[14128892] note: property 'card_type' of card id 1380990 (Remnant Departure) was changed
+[14128892] from: Trap
+[14128892] to: Spell
+[14128892] note: property 'type' of card id 1380990 (Remnant Departure) was changed
+[14128892] from: Continuous
+[14128892] to: Quick-Play
+[14128892] note: property 'effect' of card id 3204150 (Remnant Hero) was changed
+[14128892] from: 1 Psychic Tuner + 1+ non-Tuner “Remnant” monstersWhen your opponent activates a monster effect while this card is banished and was banished by a "Remnant" card (Quick Effect): You can inflict damage to your opponent equal to that monster's ATK, then Special Summon this card. During the Main Phase (Quick Effect): You can banish this card and reveal the top card of your Deck, and if you do, if it is a "Remnant" card, place it on the top of the Deck and destroy 1 card on the field, otherwise send it to the GY. You can only use 1 "Remnant Hero” effect per turn, and only once that turn.
+[14128892] to: 1 Psychic Tuner + 1+ non-Tuner Water monstersWhen your opponent activates a monster effect while this card is banished and was banished by a "Remnant" card (Quick Effect): You can inflict damage to your opponent equal to that monster's ATK, then Special Summon this card. During the Main Phase (Quick Effect): You can banish this card and reveal the top card of your Deck, and if you do, if it is a "Remnant" card, place it on the top of the Deck and destroy 1 card on the field, otherwise send it to the GY. You can only use 1 "Remnant Hero” effect per turn, and only once that turn.
+[14128892] note: property 'effect' of card id 2800245 (Remnant Investigator) was changed
+[14128892] from: 1 Psychic "Remnant" Tuner + 1+ non-Tuner Fusion and/or Synchro MonstersWhen your opponent activates a card or effect (Quick Effect): You can banish this card you control and declare 1 card type (Monster, Spell, or Trap); negate the activation, then reveal the top card of your Deck, and if you do, if the revealed card is that declared card type, place it on the top of the Deck and banish that negated card, otherwise send both cards to the GY. If this card is banished by a "Remnant" card: You can either banish 1 card you control or in your GY OR Special Summon this card during the next Standby Phase. You can only use each effect of "Remnant Investigator" once per turn.
+[14128892] to: 1 Psychic "Remnant" Tuner + 1+ non-Tuner Fusion and/or Synchro MonstersWhen your opponent activates a card or effect (Quick Effect): You can banish this card you control; reveal the top card of your Deck, and if you do, if the revealed card is a "Remnant" card, negate the activation, then place the revealed card on the top of the Deck and banish that negated card, otherwise send both cards to the GY. If this card is banished by a "Remnant" card: You can either banish 1 card you control or in your GY OR Special Summon this card during the next Standby Phase. You can only use each effect of "Remnant Investigator" once per turn.
+[14128892] note: property 'type' of card id 3360699 (Remnant Defender Hercules) was changed
+[14128892] from: Psychic
+[14128892] to: Psychic Machine
+[14128892] note: property 'effect' of card id 3234667 (Remnant Vessel USCSS Manta) was changed
+[14128892] from: 2 "Remnant" monstersThis Fusion Summoned card cannot be targeted or destroyed by card effects. While you have 3 or more banished "Remnant" cards, monsters your opponent controls lose 300 ATK/DEF and monsters you control gain 300 ATK/DEF. Once per turn: You can target 1 of your banished "Remnant" monsters; add it to your hand.
+[14128892] to: 2 Psychic or Machine monstersThis card cannot be targeted by card effects. While there are 10 or more banished cards, monsters your opponent controls lose 300 ATK/DEF and monsters you control gain 300 ATK/DEF. You can target 1 of your banished "Remnant" monsters; add it to your hand. You can only use this effect of "Remnant Vessel USCSS Manta" once per turn.
+[14128903] note: property 'effect' of card id 4018569 (Phrightful Springsuit - Foxtrap) was changed
+[14128903] from: 2+ Level 4 "Phright" monsters(This card's name is always treated as "Phrightful Springsuit - Fredtrap".)You can only control 1 "Phrightful Springsuit - Fredtrap". Once per Phase, during your turn (Quick Effect): You can detach 1 material from this card and target 1 other card on the field; destroy it, also this card gains 500 ATK. Once per turn, during your End Phase: You can target up to 2 Level 4 "Phright" monsters in your GY with different names from each other and the material(s) attached to this card (if any); attach them to this card as material.
+[14128903] to: 2+ Level 4 "Phright" monsters(This card's name is always treated as "Phrightful Springsuit - Beartrap".)You can only control 1 "Phrightful Springsuit - Beartrap". Once per Phase, during your turn (Quick Effect): You can detach 1 material from this card and target 1 other card on the field; destroy it, also this card gains 500 ATK. Once per turn, during your End Phase: You can target up to 2 Level 4 "Phright" monsters in your GY with different names from each other and the material(s) attached to this card (if any); attach them to this card as material.
+[14128903] note: property 'effect' of card id 4018556 (Phrightful Springsuit - Birdtrap) was changed
+[14128903] from: 2+ Level 4 "Phright" monsters(This card's name is always treated as "Phrightful Springsuit - Fredtrap".)You can only control 1 "Phrightful Springsuit - Fredtrap". Once per Phase, during your turn (Quick Effect): You can detach 1 material from this card and target 1 other card on the field; destroy it, also this card gains 500 ATK. Once per turn, during your End Phase: You can target up to 2 Level 4 "Phright" monsters in your GY with different names from each other and the material(s) attached to this card (if any); attach them to this card as material.
+[14128903] to: 2+ Level 4 "Phright" monsters(This card's name is always treated as "Phrightful Springsuit - Beartrap".)You can only control 1 "Phrightful Springsuit - Beartrap". Once per Phase, during your turn (Quick Effect): You can detach 1 material from this card and target 1 other card on the field; destroy it, also this card gains 500 ATK. Once per turn, during your End Phase: You can target up to 2 Level 4 "Phright" monsters in your GY with different names from each other and the material(s) attached to this card (if any); attach them to this card as material.
+[14128903] note: property 'name' of card id 3335764 (Phrightful Springsuit - Beartrap) was changed
+[14128903] from: Phrightful Springsuit - Fredtrap
+[14128903] to: Phrightful Springsuit - Beartrap
+[14128903] note: property 'effect' of card id 3335764 (Phrightful Springsuit - Beartrap) was changed
+[14128903] from: 2+ Level 4 "Phright" monstersYou can only control 1 "Phrightful Springsuit - Fredtrap". Once per Phase, during your turn (Quick Effect): You can detach 1 material from this card and target 1 other card on the field; destroy it, also this card gains 500 ATK. Once per turn, during your End Phase: You can target up to 2 Level 4 "Phright" monsters in your GY with different names from each other and the material(s) attached to this card (if any); attach them to this card as material.
+[14128903] to: 2+ Level 4 "Phright" monstersYou can only control 1 "Phrightful Springsuit - Beartrap". Once per Phase, during your turn (Quick Effect): You can detach 1 material from this card and target 1 other card on the field; destroy it, also this card gains 500 ATK. Once per turn, during your End Phase: You can target up to 2 Level 4 "Phright" monsters in your GY with different names from each other and the material(s) attached to this card (if any); attach them to this card as material.
+[14128980] note: property 'atk' of card id 3018952 (Mortal Engine Acronos) was changed
+[14128980] from: 2600
+[14128980] to: 2800
+[14128980] note: property 'def' of card id 3018952 (Mortal Engine Acronos) was changed
+[14128980] from: 2700
+[14128980] to: 2900
+[14128983] note: property 'effect' of card id 2672611 (Nemesin Azure Demise) was changed
+[14128983] from: You can Ritual Summon this card with "Dark Antithesis of the Nemesin - Onslaught Heralding". If this card is Ritual Summoned: You can destroy 1 face-up card on each field. If this card inflicts battle damage to your opponent: You can discard 1 "Nemesin" card; Special Summon 1 "Nemesin" monster from your Extra Deck, but it cannot attack this turn. (Quick Effect): You can banish 1 "Nemesin" monster from your GY, then target 1 face-up monster your opponent controls; banish it. You can only use each of the preceding effects of "Nemesin Azure Demise" once per turn. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone.
+[14128983] to: You can Ritual Summon this card with "Dark Antithesis of the Nemesin - Onslaught Heralding". If this card is Ritual Summoned: You can destroy 1 face-up card on each field. If this card battles, at the end of the Damage Step: You can discard 1 "Nemesin" card; Special Summon 1 "Nemesin" monster from your Extra Deck, but it cannot attack this turn. (Quick Effect): You can banish 1 "Nemesin" monster from your GY, then target 1 face-up monster your opponent controls; banish it. You can only use each of the preceding effects of "Nemesin Azure Demise" once per turn. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone.
+[14128983] note: property 'effect' of card id 2672521 (Nemesin Violet Oblivion) was changed
+[14128983] from: 1 Level/Rank 8 monster + 1 Fiend monsterIf this card is Fusion Summoned: You can destroy 1 face-up card on each field. If this card inflicts battle damage to your opponent: You can target 1 "Nemesin" card in your GY; add it to your hand. (Quick Effect): You can banish 1 "Nemesin" monster from your GY, then target 1 card your opponent controls; destroy it. You can only use each of the preceding effects of "Nemesin Violet Oblivion" once per turn. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone.
+[14128983] to: 1 Level/Rank 8 monster + 1 Fiend monsterIf this card is Fusion Summoned: You can destroy 1 face-up card on each field. If this card battles, at the end of the Damage Step: You can target 1 "Nemesin" card in your GY; add it to your hand. (Quick Effect): You can banish 1 "Nemesin" monster from your GY, then target 1 card your opponent controls; destroy it. You can only use each of the preceding effects of "Nemesin Violet Oblivion" once per turn. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone.
+[14128983] note: property 'effect' of card id 2672527 (Nemesin Ivory Carnage) was changed
+[14128983] from: 1 Fiend Tuner + 1+ non-Tuner monstersIf this card is Synchro Summoned: You can destroy 1 face-up card on each field. If this card inflicts battle damage to your opponent: You can target 1 of your banished "Nemesin" cards; add it to your hand. When your opponent activates a card or effect (Quick Effect): You can banish 1 "Nemesin" monster from your GY; negate the activation. You can only use each of the preceding effects of "Nemesin Ivory Carnage" once per turn. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone.
+[14128983] to: 1 Fiend Tuner + 1+ non-Tuner monstersIf this card is Synchro Summoned: You can destroy 1 face-up card on each field. If this card battles, at the end of the Damage Step: You can target 1 of your banished "Nemesin" cards; add it to your hand. When your opponent activates a card or effect (Quick Effect): You can banish 1 "Nemesin" monster from your GY; negate the activation. You can only use each of the preceding effects of "Nemesin Ivory Carnage" once per turn. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone.
+[14128983] note: property 'effect' of card id 2672547 (Nemesin Black Armageddon) was changed
+[14128983] from: 2+ Level 8 Fiend monstersDuring your Main Phase: You can detach 1 material from this card; destroy 1 face-up card on each field. If this card inflicts battle damage to your opponent: You can add 1 "Nemesin" card from your Deck to your hand. When a monster(s) would be Normal or Special Summoned (Quick Effect): You can banish 1 "Nemesin" monster from your GY; negate the Summon, and if you do, destroy that monster(s). You can only use each of the preceding effects of "Nemesin Black Armageddon" once per turn. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone.
+[14128983] to: 2+ Level 8 Fiend monstersDuring your Main Phase: You can detach 1 material from this card; destroy 1 face-up card on each field. If this card battles, at the end of the Damage Step: You can add 1 "Nemesin" card from your Deck to your hand. When a monster(s) would be Normal or Special Summoned (Quick Effect): You can banish 1 "Nemesin" monster from your GY; negate the Summon, and if you do, destroy that monster(s). You can only use each of the preceding effects of "Nemesin Black Armageddon" once per turn. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone.
+[14128984] warning: card id 3742875 (Shadow of Amoralis) is not public
+[14129004] warning: card id 1252007 (Adal the Geídst Lookout.) is not public
+[14129004] warning: card id 395602 (Badulf the Geídst Vest.) is not public
+[14129004] warning: card id 396645 (Eadcyne the Geídst Poise.) is not public
+[14129004] warning: card id 395675 (Eadwald the Geídst Pelf.) is not public
+[14129004] warning: card id 395734 (Stanhelm the Geídst Warden.) is not public
+[14129004] warning: card id 2737379 (Stone Golem of Häsir) is not public
+[14129004] warning: card id 396894 (Invocation Circle of the Secret Beasts.) is not public
+[14129004] warning: card id 396793 (Mt. Häsir, Home of the Secret Beasts.) is not public
+[14129004] warning: card id 396970 (Secret Pathway to Häsir.) is not public
+[14129004] warning: card id 397037 (Stone Sentinel of Häsir) is not public
+[14129004] warning: card id 397186 (Vlad, the Swift Geídst Guardian.) is not public
+[14129004] warning: card id 397270 (Gir, the Brute Geídst Guardian.) is not public
+[14129004] warning: card id 397446 (Graphorn, the Skyborn Geídst Guardian.) is not public
+[14129012] warning: card id 4192237 (Goldenic High King) is not public
+[14129012] warning: card id 4192153 (Goldenic Bishop) is not public
+[14129013] note: property 'effect' of card id 3510802 (Grace of the Watchers - Axton) was changed
+[14129013] from: Special Summon this card as an Effect Monster (Cyberse/LIGHT/Level 3/ATK 1500/DEF 0) (This card is also still a Trap.) Neither player can activate cards or effects if this card is Summoned. You can only use each of the following effects of "Grace of the Watchers - Axton" once per turn. While this card is in the Monster Zone (Quick Effect): You can send 1 "Grace of the Watchers" card you control to the GY; add 1 Continuous Trap from your GY to your hand. If this card is sent to the GY: You can Set 1 "Grace of the Watchers" Trap from your hand, and if you do, it can be activated this turn. If the only monsters you control are also Traps (min. 1), you can Set 1 "Grace of the Watchers" Trap from your GY instead, except "Grace of the Watchers - Axton".
+[14129013] to: Special Summon this card as an Effect Monster (Cyberse/LIGHT/Level 3/ATK 1500/DEF 0) (This card is also still a Trap.) You cannot activate cards or effects if this card is Summoned, except "Grace of the Watchers" cards or effects. You can only use each of the following effects of "Grace of the Watchers - Axton" once per turn. While this card is in the Monster Zone (Quick Effect): You can send 1 "Grace of the Watchers" card you control to the GY; add 1 Continuous Trap from your GY to your hand. If this card is sent to the GY: You can Set 1 "Grace of the Watchers" Trap from your hand, and if you do, it can be activated this turn. If the only monsters you control are also Traps (min. 1), you can Set 1 "Grace of the Watchers" Trap from your GY instead, except "Grace of the Watchers - Axton".
+[14129013] note: property 'effect' of card id 3510808 (Grace of the Watchers - Dubhlainn) was changed
+[14129013] from: Special Summon this card as an Effect Monster (Cyberse/LIGHT/Level 3/ATK 1400/DEF 0) (This card is also still a Trap.) Neither player can activate cards or effects if this card is Summoned. You can only use each of the following effects of "Grace of the Watchers - Dubhlainn" once per turn. While this card is in the Monster Zone (Quick Effect): You can send 1 "Grace of the Watchers" card you control to the GY; destroy 1 face-up card your opponent controls. If this card is sent to the GY: You can Set 1 "Grace of the Watchers" Trap from your hand, and if you do, it can be activated this turn. If the only monsters you control are also Traps (min. 1), you can Set 1 "Grace of the Watchers" Trap from your GY instead, except "Grace of the Watchers Dubhlainn".
+[14129013] to: Special Summon this card as an Effect Monster (Cyberse/LIGHT/Level 3/ATK 1400/DEF 0) (This card is also still a Trap.) You cannot activate cards or effects if this card is Summoned, except "Grace of the Watchers" cards or effects. You can only use each of the following effects of "Grace of the Watchers - Dubhlainn" once per turn. While this card is in the Monster Zone (Quick Effect): You can send 1 "Grace of the Watchers" card you control to the GY; destroy 1 face-up card your opponent controls. If this card is sent to the GY: You can Set 1 "Grace of the Watchers" Trap from your hand, and if you do, it can be activated this turn. If the only monsters you control are also Traps (min. 1), you can Set 1 "Grace of the Watchers" Trap from your GY instead, except "Grace of the Watchers Dubhlainn".
+[14129013] note: property 'effect' of card id 3510806 (Grace of the Watchers - Gilmat) was changed
+[14129013] from: Special Summon this card as an Effect Monster (Cyberse/LIGHT/Level 3/ATK 1600/DEF 0) (This card is also still a Trap.) Neither player can activate cards or effects if this card is Summoned. You can only use each of the following effects of "Grace of the Watchers - Gilmat" once per turn. While this card is in the Monster Zone (Quick Effect): You can send 1 "Grace of the Watchers" card you control to the GY; add 1 "Grace of the Watchers" Trap from your Deck to your hand. If this card is sent to the GY: You can Set 1 "Grace of the Watchers" Trap from your hand, and if you do, it can be activated this turn. If the only monsters you control are also Traps (min. 1), you can Set 1 "Grace of the Watchers" Trap from your GY instead, except "Grace of the Watchers - Gilmat".
+[14129013] to: Special Summon this card as an Effect Monster (Cyberse/LIGHT/Level 3/ATK 1600/DEF 0) (This card is also still a Trap.) You cannot activate cards or effects if this card is Summoned, except "Grace of the Watchers" cards or effects. You can only use each of the following effects of "Grace of the Watchers - Gilmat" once per turn. While this card is in the Monster Zone (Quick Effect): You can send 1 "Grace of the Watchers" card you control to the GY; add 1 "Grace of the Watchers" Trap from your Deck to your hand. If this card is sent to the GY: You can Set 1 "Grace of the Watchers" Trap from your hand, and if you do, it can be activated this turn. If the only monsters you control are also Traps (min. 1), you can Set 1 "Grace of the Watchers" Trap from your GY instead, except "Grace of the Watchers - Gilmat".
+[14129013] note: property 'effect' of card id 3510818 (Grace of the Watchers - Hildbrand) was changed
+[14129013] from: Special Summon this card as an Effect Monster (Cyberse/LIGHT/Level 3/ATK 1800/DEF 0) (This card is also still a Trap.) Neither player can activate cards or effects if this card is Summoned. You can only use each of the following effects of "Grace of the Watchers - Hildbrand" once per turn. While this card is in the Monster Zone (Quick Effect): You can send 1 "Grace of the Watchers" card you control to the GY and discard 1 card; draw 2 cards. If this card is sent to the GY: You can Set 1 "Grace of the Watchers" Trap from your hand, and if you do, it can be activated this turn. If the only monsters you control are also Traps (min. 1), you can Set 1 "Grace of the Watchers" Trap from your GY instead, except "Grace of the Watchers - Hildbrand".
+[14129013] to: Special Summon this card as an Effect Monster (Cyberse/LIGHT/Level 3/ATK 1800/DEF 0) (This card is also still a Trap.) You cannot activate cards or effects if this card is Summoned, except "Grace of the Watchers" cards or effects. You can only use each of the following effects of "Grace of the Watchers - Hildbrand" once per turn. While this card is in the Monster Zone (Quick Effect): You can send 1 "Grace of the Watchers" card you control to the GY and discard 1 card; draw 2 cards. If this card is sent to the GY: You can Set 1 "Grace of the Watchers" Trap from your hand, and if you do, it can be activated this turn. If the only monsters you control are also Traps (min. 1), you can Set 1 "Grace of the Watchers" Trap from your GY instead, except "Grace of the Watchers - Hildbrand".
+[14129013] note: property 'effect' of card id 3510814 (Grace of the Watchers - Saxan) was changed
+[14129013] from: Special Summon this card as an Effect Monster (Cyberse/LIGHT/Level 3/ATK 1700/DEF 0) (This card is also still a Trap.) Neither player can activate cards or effects if this card is Summoned. You can only use each of the following effects of "Grace of the Watchers - Saxan" once per turn. While this card is in the Monster Zone (Quick Effect): You can send 1 "Grace of the Watchers" card you control to the GY; excavate the top 3 cards of your Deck, add 1 excavated Trap to your hand, then place the rest on the bottom of your Deck in any order. If this card is sent to the GY: You can Set 1 "Grace of the Watchers" Trap from your hand, and if you do, it can be activated this turn. If the only monsters you control are also Traps (min. 1), you can Set 1 "Grace of the Watchers" Trap from your GY instead, except "Grace of the Watchers - Saxan".
+[14129013] to: Special Summon this card as an Effect Monster (Cyberse/LIGHT/Level 3/ATK 1700/DEF 0) (This card is also still a Trap.) You cannot activate cards or effects if this card is Summoned, except "Grace of the Watchers" cards or effects. You can only use each of the following effects of "Grace of the Watchers - Saxan" once per turn. While this card is in the Monster Zone (Quick Effect): You can send 1 "Grace of the Watchers" card you control to the GY; excavate the top 3 cards of your Deck, add 1 excavated Trap to your hand, then place the rest on the bottom of your Deck in any order. If this card is sent to the GY: You can Set 1 "Grace of the Watchers" Trap from your hand, and if you do, it can be activated this turn. If the only monsters you control are also Traps (min. 1), you can Set 1 "Grace of the Watchers" Trap from your GY instead, except "Grace of the Watchers - Saxan".
+[14129017] note: property 'attribute' of card id 3277068 (Hephe - the Harokai Alliance) was changed
+[14129017] from: FIRE
+[14129017] to: FIRE EARTH
+[14129017] note: property 'attribute' of card id 3277064 (Hiela - the Harokai Union) was changed
+[14129017] from: WATER
+[14129017] to: WATER WIND
+[14129052] note: property 'effect' of card id 3461334 (Bombadier of Popping Prowess - Blooncineration) was changed
+[14129052] from: (This card is also always treated as a Warrior monster.)You cannot Summon monsters, except FIRE non-Synchro monsters. You can discard this card: Special Summon 1 FIRE "Popping Prowess" monster from your hand or GY. A FIRE "Popping Prowess" Xyz Monster that used this card as material gains this effect.●When this card is Xyz Summoned: Inflict 1000 damage to your opponent.A monster can only gain this effect of "Bombadier of Popping Prowess - Blooncineration" once per turn.
+[14129052] to: (This card is also always treated as a Warrior monster.)You cannot Summon monsters, except FIRE non-Synchro monsters. You can discard this card: Special Summon 1 FIRE "Popping Prowess" monster from your hand or GY. A FIRE "Popping Prowess" Xyz Monster that used this card as material gains this effect.●When this card is Xyz Summoned: Inflict 1000 damage to your opponent.The same monster can only gain this effect of "Bombadier of Popping Prowess - Blooncineration" once per turn.
+[14129052] note: property 'type' of card id 3461334 (Bombadier of Popping Prowess - Blooncineration) was changed
+[14129052] from: Beast-Warrior
+[14129052] to: Beast-Warrior Warrior
+[14129052] note: property 'effect' of card id 3461519 (Factory of Popping Prowess - Super Mines) was changed
+[14129052] from: (This card is also always treated as a Machine monster.)You cannot Summon monsters, except FIRE non-Synchro monsters. You can discard this card: Special Summon 1 FIRE "Popping Prowess" monster from your hand or GY. A FIRE "Popping Prowess" Xyz Monster that used this card as material gains this effect.●When this card is Xyz Summoned: Draw 1 card.A monster can only gain this effect of "Factory of Popping Prowess - Super Mines" once per turn.
+[14129052] to: (This card is also always treated as a Machine monster.)You cannot Summon monsters, except FIRE non-Synchro monsters. You can discard this card: Special Summon 1 FIRE "Popping Prowess" monster from your hand or GY. A FIRE "Popping Prowess" Xyz Monster that used this card as material gains this effect.●When this card is Xyz Summoned: Draw 1 card.The same monster can only gain this effect of "Factory of Popping Prowess - Super Mines" once per turn.
+[14129052] note: property 'type' of card id 3461519 (Factory of Popping Prowess - Super Mines) was changed
+[14129052] from: Beast-Warrior
+[14129052] to: Beast-Warrior Machine
+[14129052] note: property 'effect' of card id 3461237 (Incinerator of Popping Prowess - Inferno Ring) was changed
+[14129052] from: (This card is also always treated as a Fiend monster.)You cannot Summon monsters, except FIRE non-Synchro monsters. You can discard this card: Special Summon 1 FIRE "Popping Prowess" monster from your hand or GY. A FIRE "Popping Prowess" Xyz Monster that used this card as material gains this effect.●When this card is Xyz Summoned: Add 1 FIRE "Popping Prowess" monster from your Deck to your hand.A monster can only gain this effect of "Incinerator of Popping Prowess - Inferno Ring" once per turn.
+[14129052] to: (This card is also always treated as a Fiend monster.)You cannot Summon monsters, except FIRE non-Synchro monsters. You can discard this card: Special Summon 1 FIRE "Popping Prowess" monster from your hand or GY. A FIRE "Popping Prowess" Xyz Monster that used this card as material gains this effect.●When this card is Xyz Summoned: Add 1 FIRE "Popping Prowess" monster from your Deck to your hand.The same monster can only gain this effect of "Incinerator of Popping Prowess - Inferno Ring" once per turn.
+[14129052] note: property 'type' of card id 3461237 (Incinerator of Popping Prowess - Inferno Ring) was changed
+[14129052] from: Beast-Warrior
+[14129052] to: Beast-Warrior Fiend
+[14129052] note: property 'effect' of card id 3461201 (Mage of Popping Prowess - Wizard Lord Phoenix) was changed
+[14129052] from: (This card is also always treated as a Spellcaster monster.)You cannot Summon monsters, except FIRE non-Synchro monsters. You can discard this card: Special Summon 1 FIRE "Popping Prowess" monster from your hand or GY. A FIRE "Popping Prowess" Xyz Monster that used this card as material gains this effect.●When this card is Xyz Summoned: Add 1 "Popping Prowess" card from your GY to your hand.A monster can only gain this effect of "Mage of Popping Prowess - Wizard Lord Phoenix" once per turn.
+[14129052] to: (This card is also always treated as a Spellcaster monster.)You cannot Summon monsters, except FIRE non-Synchro monsters. You can discard this card: Special Summon 1 FIRE "Popping Prowess" monster from your hand or GY. A FIRE "Popping Prowess" Xyz Monster that used this card as material gains this effect.●When this card is Xyz Summoned: Add 1 "Popping Prowess" card from your GY to your hand.The same monster can only gain this effect of "Mage of Popping Prowess - Wizard Lord Phoenix" once per turn.
+[14129052] note: property 'type' of card id 3461201 (Mage of Popping Prowess - Wizard Lord Phoenix) was changed
+[14129052] from: Beast-Warrior
+[14129052] to: Beast-Warrior Spellcaster
+[14129052] note: property 'effect' of card id 3464482 (Jester of Popping Prowess - Harlegwen) was changed
+[14129052] from: 2 Level 3 monsters, including a FIRE "Popping Prowess" monster(This card is also always treated as a Fairy monster.)Loses ATK equal to your opponent's LP. You cannot Summon monsters, except FIRE non-Synchro monsters. When this card is Xyz Summoned: Inflict 500 damage to your opponent. Once per turn, during the End Phase: Add 1 "Popping Prowess" monster from your GY to your hand, or, if this card has 1000 or less ATK, you can add 1 such card from your Deck to your hand instead. You can only control 1 "Jester of Popping Prowess - Harlegwen".
+[14129052] to: 2 Level 3 monsters, including a FIRE "Popping Prowess" monster(This card is also always treated as a Fairy monster.)Loses ATK equal to your opponent's LP. You cannot Summon monsters, except FIRE non-Synchro monsters. When this card is Xyz Summoned: Inflict 500 damage to your opponent. Once per turn, during the End Phase: Add 1 "Popping Prowess" monster from your GY to your hand, or, if this card has 1000 or less ATK, you can add 1 such card from your Deck to your hand instead. You can only control 1 "Jester of Popping Prowess - Harlegwen". You can only Special Summon "Jester of Popping Prowess - Harlegwen(s)" once per turn.
+[14129052] note: property 'type' of card id 3464482 (Jester of Popping Prowess - Harlegwen) was changed
+[14129052] from: Beast-Warrior
+[14129052] to: Beast-Warrior Fairy
+[14129052] note: property 'effect' of card id 3461184 (Pyro of Popping Prowess - Gwendolin) was changed
+[14129052] from: 2 Level 3 monsters, including a FIRE "Popping Prowess" monster(This card is also always treated as a Pyro monster.)Loses ATK equal to your opponent's LP. You cannot Summon monsters, except FIRE non-Synchro monsters. When this card is Xyz Summoned: Inflict 500 damage to your opponent. Once per turn (Quick Effect): You can detach 1 material from this card, then target 1 monster your opponent controls; this turn, it cannot be used as Fusion, Synchro, Xyz, or Link Material, nor can it be Tributed, also, during your next End Phase, banish it, then inflict damage to your opponent equal to half the ATK it had on the field. You can only control 1 "Pyro of Popping Prowess - Gwendolin".
+[14129052] to: 2 Level 3 monsters, including a FIRE "Popping Prowess" monster(This card is also always treated as a Pyro monster.)Loses ATK equal to your opponent's LP. You cannot Summon monsters, except FIRE non-Synchro monsters. When this card is Xyz Summoned: Inflict 500 damage to your opponent. Once per turn (Quick Effect): You can detach 1 material from this card, then target 1 monster your opponent controls; this turn, it cannot be used as Fusion, Synchro, Xyz, or Link Material, nor can it be Tributed, also, during your next End Phase, banish it, then inflict damage to your opponent equal to half the ATK it had on the field. You can only control 1 "Pyro of Popping Prowess - Gwendolin". You can only Special Summon "Pyro of Popping Prowess - Gwendolin(s)" once per turn.
+[14129052] note: property 'type' of card id 3461184 (Pyro of Popping Prowess - Gwendolin) was changed
+[14129052] from: Beast-Warrior
+[14129052] to: Beast-Warrior Pyro
+[14129052] note: property 'effect' of card id 3461359 (Scientist of Popping Prowess - Gwen) was changed
+[14129052] from: 2 Level 3 monsters, including a FIRE "Popping Prowess" monster(This card is also always treated as a Psychic monster.)Loses ATK equal to your opponent's LP. You cannot Summon monsters, except FIRE non-Synchro monsters. When this card is Xyz Summoned: Inflict 500 damage to your opponent. Once per turn (Quick Effect): You can detach 1 material from this card; destroy 1 card your opponent controls. You can only control 1 "Scientist of Popping Prowess - Gwen".
+[14129052] to: 2 Level 3 monsters, including a FIRE "Popping Prowess" monster(This card is also always treated as a Psychic monster.)Loses ATK equal to your opponent's LP. You cannot Summon monsters, except FIRE non-Synchro monsters. When this card is Xyz Summoned: Inflict 500 damage to your opponent. Once per turn (Quick Effect): You can detach 1 material from this card; destroy 1 card your opponent controls. You can only control 1 "Scientist of Popping Prowess - Gwen". You can only Special Summon "Scientist of Popping Prowess - Gwen(s)" once per turn.
+[14129052] note: property 'type' of card id 3461359 (Scientist of Popping Prowess - Gwen) was changed
+[14129052] from: Beast-Warrior
+[14129052] to: Beast-Warrior Psychic
+[14129085] warning: card id 4177555 (Foo's Dark Impversion) is not public
+[14129085] note: property 'effect' of card id 4177555 (Foo's Dark Impversion) was changed
+[14129085] from: You can only use each of the following effects of "Foo's Dark Impversion" once per turn.● If this card is Summoned: Pay 500LP; add 1 "Thick Swamp" Spell from your Deck to your hand.● If an opponent's monster declares an attack: You can send this card from your hand to the GY; return 1 banished card to the GY, then, Special Summon 1 "Dark Imp" monster from your GY, except "Foo's Dark Impervesion".Once per turn, during the Standby Phase, return this card to the hand.
+[14129085] to: You can only use each of the following effects of "Foo's Dark Impversion" once per turn.● If this card is Summoned: Pay 500LP; add 1 "Thick Swamp" Spell from your Deck to your hand.● If an opponent's monster declares an attack: You can send this card from your hand to the GY; return 1 banished card to the GY, then, you can Special Summon 1 "Dark Imp" monster from your GY, except "Foo's Dark Impervesion".Once per turn, during the Standby Phase, return this card to the hand.
+[14129085] note: property 'effect' of card id 2115621 (Dark Imps) was changed
+[14129085] from: 2 Level 3 Fairy monstersIf this card is Xyz Summoned: Target 1 other "Dark Imp" monster you control; gain LP equal to its ATK, then, add 1 "Confuse XVII" or "Frog XVII" from your Deck to your hand. You can detach 1 material from this card; until the end of your opponent's next turn, each player must pay 500 LP to activate a monster effect. You can only use each effect of "Dark Imps" once per turn.
+[14129085] to: 2 Level 3 Fairy monstersIf this card is Xyz Summoned: You can Detach 1 material from this card; add 1 "Confuse XVII" or "Frog XVII" from your Deck to your hand. During your Main Phase, if another "Dark Imp" monster(s) is Summoned: You can gain LP equal to its ATK, and if you do, until the end of your opponent's next turn, each player must pay 500 LP to activate a monster effect. You can only use each effect of "Dark Imps" once per turn.
+[14129094] note: property 'type' of card id 3786953 (Mandatum 24: Tribal Devilfiend) was changed
+[14129094] from: Beast
+[14129094] to: Cyborg
+[14129094] note: property 'type' of card id 3786959 (Mandatum 25: Cretaceous Devilfiend) was changed
+[14129094] from: Dinosaur
+[14129094] to: Cyborg
+[14129094] note: property 'type' of card id 3786961 (Mandatum 26: Moist Devilfiend) was changed
+[14129094] from: Aqua
+[14129094] to: Cyborg
+[14129094] note: property 'type' of card id 3786962 (Mandatum 27: Blooming Devilfiend) was changed
+[14129094] from: Plant
+[14129094] to: Cyborg
+[14129094] note: property 'type' of card id 3786963 (Mandatum 28: Electrifying Devilfiend) was changed
+[14129094] from: Thunder
+[14129094] to: Cyborg
+[14129094] note: property 'type' of card id 3786964 (Mandatum 29: Eroded Devilfiend) was changed
+[14129094] from: Rock
+[14129094] to: Cyborg
+[14129094] note: property 'type' of card id 3547192 (Mandatum 30: Damned Devilfiend) was changed
+[14129094] from: Fiend
+[14129094] to: Cyborg
+[14129094] note: property 'type' of card id 3490624 (Mandatum 31: Blazing Devilfiend) was changed
+[14129094] from: Pyro
+[14129094] to: Cyborg
+[14129094] note: property 'effect' of card id 3490622 (Mandatum 32: Magical Devilfiend) was changed
+[14129094] from: Cannot be Normal Summoned/Set. Must first be Special Summoned (from your Deck) by sending 1 face-up Fiend monster and 1 face-up Spellcaster or Illusion monster you control to the GY. You can only Special Summon "Mandatum 32: Magical Devilfiend" once per turn this way. Cannot be destroyed by card effects. Once per turn, when your opponent activates a card or effect (Quick Effect): You can send monsters from your hand or field to the GY depending on what was activated, and if you do, negate the activation, and if you do that, shuffle it into the Deck.● Monster effect: 1 Fiend monster and 1 Spellcaster or Illusion monster.● Spell Card or effect: 1 Fiend monster.● Trap Card or effect: 1 Spellcaster or Illusion monster.
+[14129094] to: Cannot be Normal Summoned/Set. Must first be Special Summoned (from your Deck) by sending 1 face-up Fiend monster and 1 face-up Spellcaster, Magical Warrior, or Illusion monster you control to the GY. You can only Special Summon "Mandatum 32: Magical Devilfiend" once per turn this way. Cannot be destroyed by card effects. Once per turn, when your opponent activates a card or effect (Quick Effect): You can send monsters from your hand or field to the GY depending on what was activated, and if you do, negate the activation, and if you do that, shuffle it into the Deck.● Monster effect: 1 Fiend monster and 1 Spellcaster, Magical Warrior, or Illusion monster.● Spell Card or effect: 1 Fiend monster.● Trap Card or effect: 1 Spellcaster, Magical Warrior, or Illusion monster.
+[14129094] note: property 'type' of card id 3490622 (Mandatum 32: Magical Devilfiend) was changed
+[14129094] from: Spellcaster
+[14129094] to: Cyborg
+[14129094] note: property 'effect' of card id 3400244 (Mandatum 33: Serpent Devilfiend) was changed
+[14129094] from: Cannot be Normal Summoned/Set. Must first be Special Summoned (from your Deck) by sending 1 face-up Fiend monster and 1 face-up Reptile, Sea Serpent, Dragon, or Wyrm monster you control to the GY. You can only Special Summon "Mandatum 33: Serpent Devilfiend" once per turn this way. Cannot be destroyed by card effects. Once per turn, when your opponent activates a card or effect (Quick Effect): You can send monsters from your hand or field to the GY depending on what was activated, and if you do, negate the activation, and if you do that, shuffle it into the Deck.● Monster effect: 1 Fiend monster and 1 Reptile, Sea Serpent, Dragon, or Wyrm monster.● Spell Card or effect: 1 Fiend monster.● Trap Card or effect: 1 Reptile, Sea Serpent, Dragon, or Wyrm monster.
+[14129094] to: Cannot be Normal Summoned/Set. Must first be Special Summoned (from your Deck) by sending 1 face-up Fiend monster and 1 face-up Reptile, Sea Serpent, Dragon, High Dragon, or Wyrm monster you control to the GY. You can only Special Summon "Mandatum 33: Serpent Devilfiend" once per turn this way. Cannot be destroyed by card effects. Once per turn, when your opponent activates a card or effect (Quick Effect): You can send monsters from your hand or field to the GY depending on what was activated, and if you do, negate the activation, and if you do that, shuffle it into the Deck.● Monster effect: 1 Fiend monster and 1 Reptile, Sea Serpent, Dragon, High Dragon, or Wyrm monster.● Spell Card or effect: 1 Fiend monster.● Trap Card or effect: 1 Reptile, Sea Serpent, Dragon, High Dragon, or Wyrm monster.
+[14129094] note: property 'type' of card id 3400244 (Mandatum 33: Serpent Devilfiend) was changed
+[14129094] from: Dragon
+[14129094] to: Cyborg
+[14129094] note: property 'effect' of card id 2826301 (Mandatum 34: Mecha Devilfiend) was changed
+[14129094] from: Cannot be Normal Summoned/Set. Must first be Special Summoned (from your Deck) by sending 1 face-up Fiend monster and 1 face-up Machine monster you control to the GY. You can only Special Summon "Mandatum 34: Mecha Devilfiend" once per turn this way. Cannot be destroyed by card effects. Once per turn, when your opponent activates a card or effect (Quick Effect): You can send monsters from your hand or field to the GY depending on what was activated, and if you do, negate the activation, and if you do that, shuffle it into the Deck.● Monster effect: 1 Fiend monster and 1 Machine monster.● Spell Card or effect: 1 Fiend monster.● Trap Card or effect: 1 Machine monster.
+[14129094] to: Cannot be Normal Summoned/Set. Must first be Special Summoned (from your Deck) by sending 1 face-up Fiend monster and 1 face-up Machine or Cyborg monster you control to the GY. You can only Special Summon "Mandatum 34: Mecha Devilfiend" once per turn this way. Cannot be destroyed by card effects. Once per turn, when your opponent activates a card or effect (Quick Effect): You can send monsters from your hand or field to the GY depending on what was activated, and if you do, negate the activation, and if you do that, shuffle it into the Deck.● Monster effect: 1 Fiend monster and 1 Machine or Cybrog monster.● Spell Card or effect: 1 Fiend monster.● Trap Card or effect: 1 Machine or Cyborg monster.
+[14129094] note: property 'type' of card id 2826301 (Mandatum 34: Mecha Devilfiend) was changed
+[14129094] from: Machine
+[14129094] to: Cyborg
+[14129094] note: property 'effect' of card id 3547187 (Mandatum 35: Holy Devilfiend) was changed
+[14129094] from: Cannot be Normal Summoned/Set. Must first be Special Summoned (from your Deck) by sending 1 face-up Fiend monster and 1 face-up Fairy monster you control to the GY. You can only Special Summon "Mandatum 35: Holy Devilfiend" once per turn this way. Cannot be destroyed by card effects. Once per turn, when your opponent activates a card or effect (Quick Effect): You can send monsters from your hand or field to the GY depending on what was activated, and if you do, negate the activation, and if you do that, shuffle it into the Deck.● Monster effect: 1 Fiend monster and 1 Fairy monster.● Spell Card or effect: 1 Fiend monster.● Trap Card or effect: 1 Fairy monster.
+[14129094] to: Cannot be Normal Summoned/Set. Must first be Special Summoned (from your Deck) by sending 1 face-up Fiend monster and 1 face-up Fairy or Celestial Warrior monster you control to the GY. You can only Special Summon "Mandatum 35: Holy Devilfiend" once per turn this way. Cannot be destroyed by card effects. Once per turn, when your opponent activates a card or effect (Quick Effect): You can send monsters from your hand or field to the GY depending on what was activated, and if you do, negate the activation, and if you do that, shuffle it into the Deck.● Monster effect: 1 Fiend monster and 1 Fairy or Celestial Warrior monster.● Spell Card or effect: 1 Fiend monster.● Trap Card or effect: 1 Fairy or Celestial Warrior monster.
+[14129094] note: property 'type' of card id 3546495 (Mandatum 36: Ravenous Devilfiend) was changed
+[14129094] from: Fish
+[14129094] to: Cyborg
+[14129094] note: property 'type' of card id 3679562 (Mandatum 37: Crawling Devilfiend) was changed
+[14129094] from: Insect
+[14129094] to: Cyborg
+[14129094] note: property 'effect' of card id 3786938 (Mandatum 38: Cypunk Devilfiend) was changed
+[14129094] from: Cannot be Normal Summoned/Set. Must first be Special Summoned (from your Deck) by sending 1 face-up Fiend monster and 1 face-up Cyberse or Psychic monster you control to the GY. You can only Special Summon "Mandatum 38: Cypunk Devilfiend" once per turn this way. Cannot be destroyed by card effects. Once per turn, when your opponent activates a card or effect (Quick Effect): You can send monsters from your hand or field to the GY depending on what was activated, and if you do, negate the activation, and if you do that, shuffle it into the Deck.● Monster effect: 1 Fiend monster and 1 Cyberse or Psychic monster.● Spell Card or effect: 1 Fiend monster.● Trap Card or effect: 1 Cyberse or Psychic monster.
+[14129094] to: Cannot be Normal Summoned/Set. Must first be Special Summoned (from your Deck) by sending 1 face-up Fiend monster and 1 face-up Cyberse, Psychic, Omega Psychic, or Galaxy monster you control to the GY. You can only Special Summon "Mandatum 38: Cypunk Devilfiend" once per turn this way. Cannot be destroyed by card effects. Once per turn, when your opponent activates a card or effect (Quick Effect): You can send monsters from your hand or field to the GY depending on what was activated, and if you do, negate the activation, and if you do that, shuffle it into the Deck.● Monster effect: 1 Fiend monster and 1 Cyberse, Psychic, Omega Psychic, or Galaxy monster.● Spell Card or effect: 1 Fiend monster.● Trap Card or effect: 1 Cyberse, Psychic, Omega Psychic, or Galaxy monster.
+[14129094] note: property 'type' of card id 3786940 (Mandatum 39: Rotten Devilfiend) was changed
+[14129094] from: Zombie
+[14129094] to: Cyborg
+[14129094] note: property 'type' of card id 3786942 (Mandatum 40: Valiant Devilfiend) was changed
+[14129094] from: Warrior
+[14129094] to: Cyborg
+[14129130] note: property 'type' of card id 3899749 (Bubblebeaut Dewo) was changed
+[14129130] from: Aqua
+[14129130] to: Aqua Yokai
+[14129130] note: property 'type' of card id 3899762 (Bubblebeaut Stawwet) was changed
+[14129130] from: Aqua
+[14129130] to: Aqua Yokai
+[14129130] note: property 'type' of card id 3899796 (Bubblebeaut Jellectricia) was changed
+[14129130] from: Aqua
+[14129130] to: Aqua Yokai
+[14129130] note: property 'type' of card id 3899825 (Bubblebeaut Maredonna) was changed
+[14129130] from: Aqua
+[14129130] to: Aqua Yokai
+[14129130] note: property 'type' of card id 3899834 (Bubblebeaut Agemone) was changed
+[14129130] from: Aqua
+[14129130] to: Aqua Yokai
+[14129130] note: property 'type' of card id 3899806 (Bubblebeaut Heelektra) was changed
+[14129130] from: Aqua
+[14129130] to: Aqua Yokai
+[14129130] note: property 'type' of card id 3899702 (Bubblebeaut Nautiress) was changed
+[14129130] from: Aqua
+[14129130] to: Aqua Yokai
+[14129130] note: property 'type' of card id 3899690 (Bubblebeaut Deeprincess) was changed
+[14129130] from: Aqua
+[14129130] to: Aqua Yokai
+[14129130] note: property 'type' of card id 3899658 (Binomial 7: Bubblebeaut Divempress) was changed
+[14129130] from: Aqua
+[14129130] to: Aqua Yokai
+[14129137] note: property 'type' of card id 2678818 (Etta, the Bird of Prey) was changed
+[14129137] from: Winged Beast
+[14129137] to: Beast-Warrior
+[14129143] note: property 'effect' of card id 3315790 (Celestial Sign of Conservation) was changed
+[14129143] from: 1 "Celestial Sign" monster, except a Dragon monsterWhen this card is Link Summoned: You can add 1 "Moonmagic Lake of the Celestial Sign" from your Deck to your hand. If you control "Celestial Sign Relic Dragon", this card can attack directly. When your opponent activates a card or effect in response to the activation of your "Celestial Sign" monster's effect while you control "Celestial Sign Relic Dragon": You can send this card from the field to the GY; For the rest of the turn "Celestial Sign Relic Dragon(s)" you control are unaffected by the activated effects of cards with the same card type as that effect (Monster, Spell or Trap). You can only use each effect of "Celestial Sign of Conservation" once per turn.
+[14129143] to: 1 "Celestial Sign" monster, except a Dragon monsterWhen this card is Link Summoned: You can add 1 "Moonmagic Lake of the Celestial Sign" from your Deck to your hand. If you control "Celestial Sign Relic Dragon", this card can attack directly. When your opponent activates a card or effect while you control "Celestial Sign Relic Dragon": You can send this card from the field to the GY; for the rest of this turn, "Celestial Sign Relic Dragon(s)" you control are unaffected by the activated effects of cards with the same card type as that effect (Monster, Spell or Trap). You can only use each effect of "Celestial Sign of Conservation" once per turn.
+[14129149] note: property 'effect' of card id 3672409 (Fortitude of the Aethery) was changed
+[14129149] from: When a monster declares an attack, while you control no face-up Spell Cards: Negate the attack, and if you do, inflict damage to your opponent equal to that monster's ATK, and if you do that, immediately after this effect resolves, Ritual Summon 1 "Aethery" Ritual Monster from your hand or GY, by Tributing 1 monster from your hand or field whose Level equals or exceeds the Level of the Ritual Monster you Ritual Summon. Until the end of your next turn after this effect resolves, you cannot Normal or Special Summon monsters, except "Aethery" Ritual Monsters. You can only activate 1 "Fortitude of the Aethery" per turn.
+[14129149] to: When a monster declares an attack, while you control no face-up Spell Cards: Target the attacking monster; banish it, and if you do, inflict damage to your opponent equal to the ATK that monster had on the field, and if you do that, immediately after this effect resolves, Ritual Summon 1 "Aethery" Ritual Monster from your hand or GY, by Tributing 1 monster from your hand or field whose Level equals or exceeds the Level of the Ritual Monster you Ritual Summon. Until the end of your next turn after this effect resolves, you cannot Normal or Special Summon monsters, except "Aethery" Ritual Monsters. You can only activate 1 "Fortitude of the Aethery" per turn.
+[14129160] note: property 'name' of card id 3836915 (Elder's Call of Verún) was changed
+[14129160] from: Elder's Call of Averùn
+[14129160] to: Elder's Call of Verún
+[14129160] note: property 'effect' of card id 3836915 (Elder's Call of Verún) was changed
+[14129160] from: When this card is activated: You can add 1 "Anrea" card from your Deck to your hand, then send 1 card from your hand or field to the GY. All monsters on the field without a Level lose 500 ATK/DEF. If a card(s) is Tributed, or is sent to the GY by card effect: You can destroy 1 card your opponent controls in the same column as an "Anrea" card you control. You cannot Special Summon monsters from the Extra Deck the turn you activate this card, except monsters with a Level. You can only activate 1 "Elder's Call of Averún" per turn.
+[14129160] to: When this card is activated: You can add 1 "Anrea" card from your Deck to your hand, then send 1 card from your hand or field to the GY. All monsters on the field without a Level lose 500 ATK/DEF. If a card(s) is Tributed: You can destroy 1 card your opponent controls in the same column as a Fusion or Synchro Monster or "Anrea" card you control. You can only use this effect of "Elder's Call of Verùn" once per turn. You cannot Special Summon monsters from the Extra Deck the turn you activate this card, except monsters with a Level. You can only activate 1 "Elder's Call of Verún" per turn.
+[14129160] note: property 'effect' of card id 3846207 (Anrea - Praétoan Planning) was changed
+[14129160] from: When this card is activated: You can Special Summon 1 "Anrea" monster from your hand or GY, or, if your opponent controls more monsters than you do, you can Special Summon it from your Deck instead. All Fusion and Synchro Monsters you control gain 500 ATK/DEF. If this card is Tributed, or is sent to the GY by card effect: You can target 1 face-up card on the field; Set it face-down. You can only use this effect of "Anrea - Praètoan Planning" once per turn. You can only activate 1 "Anrea - Plagueric Power" per turn.
+[14129160] to: When this card is activated: You can Special Summon 1 "Anrea" monster from your hand or GY, or, if your opponent controls more monsters than you do, you can Special Summon it from your Deck instead. All Fusion and Synchro Monsters you control gain 500 ATK/DEF. If this card is Tributed, or is sent to the GY by card effect: You can target 1 face-up card on the field; Set it face-down. You can only use this effect of "Anrea - Praètoan Planning" once per turn. You can only activate 1 "Anrea - Praétoan Planning" per turn.
+[14129160] note: property 'effect' of card id 3836939 (Deysha, the Destined of Plaguerica) was changed
+[14129160] from: 1 "Destined of Anrea" + 1 LIGHT or DARK monsterThis card's name becomes "Destined of Anrea" while on the field or in the GY. If this card is Fusion Summoned, or another monster(s) is Special Summoned (except during the Damage Step): You can Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from your hand or field as material, inlcuding this card. If your opponent controls more monsters than you do, you can also use 1 monster they controls as material. If this card is Tributed, or is sent to the GY by card effect: You can target 1 face-up monster on the field; this turn, it cannot be destroyed by battle, also your opponent takes all damage you would have received from battles involving it. You can only use each effect of "Deysha, the Destined of Plaguerica" once per turn.
+[14129160] to: 1 "Destined of Anrea" + 1 LIGHT or DARK monsterThis card's name becomes "Destined of Anrea" while on the field or in the GY. If this card is Fusion Summoned, or another monster(s) is Special Summoned (except during the Damage Step): You can Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from your hand or field as material, inlcuding this card. If your opponent controls more monsters than you do, you can also use 1 monster they control as material. If this card is Tributed, or is sent to the GY by card effect: You can target 1 face-up monster on the field; this turn, it cannot be destroyed by battle, also your opponent takes all damage you would have received from battles involving it. You can only use each effect of "Deysha, the Destined of Plaguerica" once per turn.
+[14129173] note: property 'name' of card id 2004331 (Arianna, Grandtusk Tamer) was changed
+[14129173] from: Arianna, Grandtusk Breeder
+[14129173] to: Arianna, Grandtusk Tamer
+[14129173] note: property 'effect' of card id 2004331 (Arianna, Grandtusk Tamer) was changed
+[14129173] from: If this card is Normal or Special Summoned: You can add 1 "Grandtusk" card from your Deck to your hand. During the Main Phase (Quick Effect): You can Tribute 1 Level 4 or lower "Grandtusk" Dragon monster from your hand or field; Special Summon 1 Level 7 or 8 "Grandtusk" Dragon monster from your hand. You can only use each effect of "Arianna, Grandtusk Breeder" once per turn.
+[14129173] to: If this card is Normal or Special Summoned: You can add 1 "Grandtusk" card from your Deck to your hand. During the Main Phase (Quick Effect): You can Tribute 1 Level 4 or lower "Grandtusk" Dragon monster from your hand or field; Special Summon 1 Level 7 or 8 "Grandtusk" Dragon monster from your hand. You can only use each effect of "Arianna, Grandtusk Tamer" once per turn.
+[14129180] warning: card id 3824260 (Nanoswarm Injector) is not public
+[14129180] note: property 'effect' of card id 3824260 (Nanoswarm Injector) was changed
+[14129180] from: (This card is also always treated as Machine monster.)If this card is Normal or Special Summoned: You can place 1 "Nanoswarm" Pendulum Monster from your Deck in your Pendulum Scale. If your opponent targets a "Nanoswarm" monster for an attack: You can Special Summon this card from your face-up Extra Deck. You can only use each monster effect of "Nanoswarm Injector" once per turn.
+[14129180] to: (This card is also always treated as Machine monster.)If this card is Normal or Special Summoned: You can place 1 "Nanoswarm" Pendulum Monster from your Deck in your Pendulum Zone. If your opponent targets a "Nanoswarm" monster for an attack: You can Special Summon this card from your face-up Extra Deck. You can only use each monster effect of "Nanoswarm Injector" once per turn.
+[14129180] warning: card id 3823268 (Nanoswarm Mender) is not public
+[14129180] note: property 'type' of card id 3823268 (Nanoswarm Mender) was changed
+[14129180] from: Insect
+[14129180] to: Insect Machine
+[14129180] note: property 'type' of card id 1170315 (Nanoswarm Mite) was changed
+[14129180] from: Insect
+[14129180] to: Insect Machine
+[14129180] warning: card id 3823271 (Nanoswarm Shell) is not public
+[14129180] note: property 'type' of card id 3823271 (Nanoswarm Shell) was changed
+[14129180] from: Insect
+[14129180] to: Insect Machine
+[14129180] warning: card id 3823254 (Nanoswarm Stinger) is not public
+[14129180] note: property 'type' of card id 3823254 (Nanoswarm Stinger) was changed
+[14129180] from: Insect
+[14129180] to: Insect Machine
+[14129180] warning: card id 3823284 (Nanoswarm Proliferation) is not public
+[14129180] note: property 'effect' of card id 3823181 (Nanoswarm Legion) was changed
+[14129180] from: 2+ Level 1 Pendulum Monsters(This card is also always treated as a Machine monster.)If you can Pendulum Summon Level 1, you can Pendulum Summon this face-up card in your Extra Deck. During your Main Phase: You can attach any number of cards in your Pendulum Scales and/or "Nanoswarm" Pendulum Monsters you control to this card as material. Gains 1000 ATK/DEF for each material it has. (Quick Effect): You can place up to 2 of this card's materials that are Pendulum Monsters in your Pendulum Zones. If this card has no material (Quick Effect): You can place this card in your Pendulum Zone. You can only control 1 "Nanoswarm Legion" in your Monster Zone.
+[14129180] to: 2+ Level 1 Pendulum Monsters(This card is also always treated as a Machine monster.)If you can Pendulum Summon Level 1, you can Pendulum Summon this face-up card in your Extra Deck. Up to 4 times per turn, during your Main Phase: You can attach any number of cards in your Pendulum Scales and/or "Nanoswarm" Pendulum Monsters you control to this card as material. Gains 1000 ATK/DEF for each material it has. (Quick Effect): You can place up to 2 of this card's materials that are Pendulum Monsters in your Pendulum Zones. If this card has no material (Quick Effect): You can place this card in your Pendulum Zone. You can only control 1 "Nanoswarm Legion" in your Monster Zone.
+[14129180] note: property 'pendulum_effect' of card id 3823181 (Nanoswarm Legion) was changed
+[14129180] from: If this card is placed in your Pendulum Zone: You can add up to 2 "Nanoswarm" Pendulum Monsters that are face-up in your Extra Deck to your hand, then destroy this card. You cannot Special Summon monsters from your Extra Deck the turn you activate this effect, except "Nanoswarm" monsters. You can Pendulum Summon "Nanostream" Pendulum Monsters from your face-up Extra Deck to any Main Monster Zone(s) you control, even if they are not linked.
+[14129180] to: If this card is placed in your Pendulum Zone: You can add up to 2 "Nanoswarm" Pendulum Monsters that are face-up in your Extra Deck to your hand, then destroy this card. You cannot Special Summon monsters from your Extra Deck the turn you activate this effect, except "Nanoswarm" monsters. You can Pendulum Summon "Nanoswarm" Pendulum Monsters from your face-up Extra Deck to any Main Monster Zone(s) you control, even if they are not linked.
+[14129180] note: property 'type' of card id 3823181 (Nanoswarm Legion) was changed
+[14129180] from: Insect
+[14129180] to: Insect Machine
+[14129182] note: property 'type' of card id 3181677 (Animathos Haste) was changed
+[14129182] from: Fairy
+[14129182] to: Fairy Fiend
+[14129182] note: property 'type' of card id 3181721 (Animathos Responsibility) was changed
+[14129182] from: Fairy
+[14129182] to: Fairy Beast-Warrior
+[14129182] note: property 'type' of card id 3181642 (Animathos Wisdom) was changed
+[14129182] from: Fairy
+[14129182] to: Fairy Spellcaster
+[14129182] note: property 'type' of card id 3181706 (Animathos Anger) was changed
+[14129182] from: Fairy
+[14129182] to: Fairy Fiend
+[14129182] note: property 'type' of card id 3181745 (Animathos Courage) was changed
+[14129182] from: Fairy
+[14129182] to: Fairy Beast-Warrior
+[14129182] note: property 'type' of card id 3181665 (Animathos Justice) was changed
+[14129182] from: Fairy
+[14129182] to: Fairy Spellcaster
+[14129182] note: property 'effect' of card id 3181765 (Animathos Strength) was changed
+[14129182] from: 1 "Animathos" monster + 1 Fusion Monster(This card is also always treated as a Warrior monster.)Cannot be Special Summoned from the Extra Deck. Must first be Special Summoned (from your GY) by Tributing the above cards you control, but banish it when it leaves the field. Monsters you control gain 200 ATK for each Fusion Monster that is banished and/or in the GYs. You can only use each of the following effects of "Animathos Strength" once per turn. When a card or effect is activated (Quick Effect): You can banish 2 Fusion Monsters from either GY; negate the activation, and if you do, destroy it. If this card is banished: You can target any number of your banished Fusion Monsters, except "Animathos Strength"; return them to the Extra Deck.
+[14129182] to: 1 "Animathos" monster + 1 Fusion Monster(This card is also always treated as a Celestial Warrior monster.)Cannot be Special Summoned from the Extra Deck. Must first be Special Summoned (from your GY) by Tributing the above cards you control, but banish it when it leaves the field. Monsters you control gain 200 ATK for each Fusion Monster that is banished and/or in the GYs. You can only use each of the following effects of "Animathos Strength" once per turn. When a card or effect is activated (Quick Effect): You can banish 2 Fusion Monsters from either GY; negate the activation, and if you do, destroy it. If this card is banished: You can target any number of your banished Fusion Monsters, except "Animathos Strength"; return them to the Extra Deck.
+[14129182] note: property 'type' of card id 3181765 (Animathos Strength) was changed
+[14129182] from: Fairy
+[14129182] to: Fairy Celestial Warrior
+[14129183] note: property 'effect' of card id 2785778 (Astromini Aquarius) was changed
+[14129183] from: If this card is Normal Summoned: You can target 1 non-Tuner Psychic monster you control; increase it's Level by its original Level until the end of this turn. If this card is Special Summoned from the Pendulum Zone: Target 1 card in your opponent's GY; banish it.
+[14129183] to: If this card is Normal Summoned: You can target 1 non-Tuner Galaxy monster you control; increase it's Level by its original Level until the end of this turn. If this card is Special Summoned from the Pendulum Zone: Target 1 card in your opponent's GY; banish it.
+[14129183] note: property 'type' of card id 2785778 (Astromini Aquarius) was changed
+[14129183] from: Psychic
+[14129183] to: Galaxy
+[14129183] note: property 'effect' of card id 2785808 (Astromini Cancer) was changed
+[14129183] from: If this card is Normal Summoned: You can target 1 Psychic Tuner you control; increase it's Level by its original Level until the end of this turn. If this card is Special Summoned from the Pendulum Zone: Target 1 face-up monster your opponent controls; increase or decrease its Level by 2.
+[14129183] to: If this card is Normal Summoned: You can target 1 GalaxyTuner you control; increase it's Level by its original Level until the end of this turn. If this card is Special Summoned from the Pendulum Zone: Target 1 face-up monster your opponent controls; increase or decrease its Level by 2.
+[14129183] note: property 'type' of card id 2785808 (Astromini Cancer) was changed
+[14129183] from: Psychic
+[14129183] to: Galaxy
+[14129183] note: property 'effect' of card id 2785830 (Astromini Gemini) was changed
+[14129183] from: If this card is Normal Summoned: You can target 1 non-Tuner Psychic monster you control; increase its Level by its original Level until the end of this turn. If this card is Special Summoned from the Pendulum Zone: Target 2 monsters on the field; this turn, while both of those targets are face-up on the field, they cannot be destroyed by battle.
+[14129183] to: If this card is Normal Summoned: You can target 1 non-Tuner Galaxy monster you control; increase its Level by its original Level until the end of this turn. If this card is Special Summoned from the Pendulum Zone: Target 2 monsters on the field; this turn, while both of those targets are face-up on the field, they cannot be destroyed by battle.
+[14129183] note: property 'type' of card id 2785830 (Astromini Gemini) was changed
+[14129183] from: Psychic
+[14129183] to: Galaxy
+[14129183] note: property 'effect' of card id 2785783 (Astromini Leo) was changed
+[14129183] from: If this card is Normal Summoned: You can target 1 Psychic Tuner you control; increase it's Level by its original Level until the end of this turn. If this card is Special Summoned from the Pendulum Zone: Target 1 monster your opponent controls; change its battle position.
+[14129183] to: If this card is Normal Summoned: You can target 1 Galaxy Tuner you control; increase it's Level by its original Level until the end of this turn. If this card is Special Summoned from the Pendulum Zone: Target 1 monster your opponent controls; change its battle position.
+[14129183] note: property 'type' of card id 2785783 (Astromini Leo) was changed
+[14129183] from: Psychic
+[14129183] to: Galaxy
+[14129183] note: property 'effect' of card id 2785821 (Astromini Sagittarius) was changed
+[14129183] from: If this card is Normal Summoned: You can target 1 Psychic Tuner you control; increase its Level by its original Level until the end of this turn. If this card is Special Summoned from the Pendulum Zone: Target 1 face-up monster your opponent controls; this card's ATK/DEF becomes equal to that target's current ATK/DEF until your next End Phase, then that target's ATK/DEF become 1000 until your next End Phase.
+[14129183] to: If this card is Normal Summoned: You can target 1 Galaxy Tuner you control; increase its Level by its original Level until the end of this turn. If this card is Special Summoned from the Pendulum Zone: Target 1 face-up monster your opponent controls; this card's ATK/DEF becomes equal to that target's current ATK/DEF until your next End Phase, then that target's ATK/DEF become 1000 until your next End Phase.
+[14129183] note: property 'type' of card id 2785821 (Astromini Sagittarius) was changed
+[14129183] from: Psychic
+[14129183] to: Galaxy
+[14129183] note: property 'effect' of card id 2785798 (Astromini Scorpio) was changed
+[14129183] from: If this card is Normal Summoned: You can target 1 non-Tuner Psychic monster you control; increase its Level by its original Level until the end of this turn. If this card is Special Summoned from the Pendulum Zone: Target 1 Set card your opponent controls; destroy it.
+[14129183] to: If this card is Normal Summoned: You can target 1 non-Tuner Galaxy monster you control; increase its Level by its original Level until the end of this turn. If this card is Special Summoned from the Pendulum Zone: Target 1 Set card your opponent controls; destroy it.
+[14129183] note: property 'type' of card id 2785798 (Astromini Scorpio) was changed
+[14129183] from: Psychic
+[14129183] to: Galaxy
+[14129183] note: property 'effect' of card id 2785730 (Astromini Research) was changed
+[14129183] from: If you have a Psychic Monster Card in your Pendulum Zone: Add 1 "Astromini" Pendulum Monster from your Deck to your hand, then, if you have a Synchro or Xyz Monster Card in your Pendulum Zone, you can, immediately after this effect resolves, Normal Summon that added monster. You can only activate 1 "Astromini Research" per turn.
+[14129183] to: If you have a Galaxy Monster Card in your Pendulum Zone: Add 1 "Astromini" Pendulum Monster from your Deck to your hand, then, if you have a Synchro or Xyz Monster Card in your Pendulum Zone, you can, immediately after this effect resolves, Normal Summon that added monster. You can only activate 1 "Astromini Research" per turn.
+[14129183] note: property 'effect' of card id 2785742 (Astromini Nibbling) was changed
+[14129183] from: Target 1 Psychic Pendulum Monster Card you control or in your Pendulum Zone and 1 card your opponent controls, or, if you have a Synchro or Xyz Monster Card in your Pendulum Zone, you can target 2 cards your opponent controls; destroy them.
+[14129183] to: Target 1 Galaxy Pendulum Monster Card you control or in your Pendulum Zone and 1 card your opponent controls, or, if you have a Synchro or Xyz Monster Card in your Pendulum Zone, you can target 2 cards your opponent controls; destroy them.
+[14129183] note: property 'effect' of card id 2785755 (Astromini Constellation) was changed
+[14129183] from: 1 Psychic Tuner + 1+ non-Tuner monstersWhen this card is Synchro Summoned: Add 1 "Astromini" Spell from your Deck to your hand. (Quick Effect): You can target 1 Pendulum Monster Card in your Pendulum Zone and 1 other monster on the field; Special Summon the first target, and if you do, place this card face-up in your Pendulum Zone, then banish the second target until the End Phase. You can only use this effect of "Astromini Constellation" once per turn.
+[14129183] to: 1 Galaxy Tuner + 1+ non-Tuner monstersWhen this card is Synchro Summoned: Add 1 "Astromini" Spell from your Deck to your hand. (Quick Effect): You can target 1 Pendulum Monster Card in your Pendulum Zone and 1 other monster on the field; Special Summon the first target, and if you do, place this card face-up in your Pendulum Zone, then banish the second target until the End Phase. You can only use this effect of "Astromini Constellation" once per turn.
+[14129183] note: property 'type' of card id 2785755 (Astromini Constellation) was changed
+[14129183] from: Psychic
+[14129183] to: Galaxy
+[14129183] note: property 'effect' of card id 2785703 (Astromini Star System) was changed
+[14129183] from: 1 Psychic Tuner + 1+ non-Tuner monstersWhen this card is Synchro Summoned: Add 1 "Astromini" Trap from your Deck to your hand. (Quick Effect): You can target 1 Pendulum Monster Card in your Pendulum Zone and 1 other card on the field; Special Summon the first target, and if you do, place this card face-up in your Pendulum Zone, then negate the effects of the second target until the End Phase. You can only use this effect of "Astromini Star System" once per turn.
+[14129183] to: 1 Galaxy Tuner + 1+ non-Tuner monstersWhen this card is Synchro Summoned: Add 1 "Astromini" Trap from your Deck to your hand. (Quick Effect): You can target 1 Pendulum Monster Card in your Pendulum Zone and 1 other card on the field; Special Summon the first target, and if you do, place this card face-up in your Pendulum Zone, then negate the effects of the second target until the End Phase. You can only use this effect of "Astromini Star System" once per turn.
+[14129183] note: property 'type' of card id 2785703 (Astromini Star System) was changed
+[14129183] from: Psychic
+[14129183] to: Galaxy
+[14129183] note: property 'effect' of card id 2977584 (Astromini Moon) was changed
+[14129183] from: 2 Level 3 Psychic monstersIf you can Pendulum Summon Level 3, you can Pendulum Summon this face-up card in your Extra Deck. When this card is Xyz Summoned: Add 1 "Astromini" card that is banished or in your GY to your hand. (Quick Effect): You can target 1 Pendulum Monster Card in your Pendulum Zone and 1 other face-up monster on the field; Special Summon the first target, and if you do, place this card face-up in your Pendulum Zone, then change the second target to face-down Defense Position. You can only use this effect of "Astromini Moon" once per turn.
+[14129183] to: 2 Level 3 Galaxy monstersIf you can Pendulum Summon Level 3, you can Pendulum Summon this face-up card in your Extra Deck. When this card is Xyz Summoned: Add 1 "Astromini" card that is banished or in your GY to your hand. (Quick Effect): You can target 1 Pendulum Monster Card in your Pendulum Zone and 1 other face-up monster on the field; Special Summon the first target, and if you do, place this card face-up in your Pendulum Zone, then change the second target to face-down Defense Position. You can only use this effect of "Astromini Moon" once per turn.
+[14129183] note: property 'type' of card id 2977584 (Astromini Moon) was changed
+[14129183] from: Psychic
+[14129183] to: Galaxy
+[14129185] note: property 'effect' of card id 2043561 (Scrylak Lancer) was changed
+[14129185] from: 3 Level 3 monstersIf you have excavated a "Scrylak" Spell by your card effect this turn, you can also Xyz Summon this card by using 2 Level 2 and/or 3 monsters you control as material, including a "Scrylak" monster. Once per turn: You can detach 1 material from this card; excavate the top card of your Deck and add it to your hand. If this card is sent to the GY: You can excavate cards from the top of your Deck until you excavate a "Scrylak" Spell, and if you do, gain 200 LP for each excavated card, also shuffle the rest into the Deck.
+[14129185] to: 3 Level 3 monstersIf you have excavated a "Scrylak" Spell by your card effect this turn, you can also Xyz Summon this card by using 2 Level 2 and/or 3 monsters you control as material, including a "Scrylak" monster. Once per turn: You can detach 1 material from this card; excavate the top card of your Deck and add it to your hand. If this card is sent to the GY: You can excavate cards from the top of your Deck until you excavate a "Scrylak" Spell, and if you do, gain 200 LP for each excavated card, also shuffle the excavated cards into the Deck.
+[14133716] warning: card id 2393744 (Soul Chronicler) is not public
+[14133720] note: property 'type' of card id 3262485 (Kasula Ocean Phantom of the Deep) was changed
+[14133720] from: Fish
+[14133720] to: Fish Psychic
+[14133725] note: property 'type' of card id 3426970 (Projective 13: Dragon's Tune & Wyrm's Song) was changed
+[14133725] from: Dragon
+[14133725] to: Dragon Wyrm
+[14133725] note: property 'type' of card id 3449952 (Tulip Dragonfly) was changed
+[14133725] from: Insect
+[14133725] to: Insect Dragon
+[14133727] note: property 'type' of card id 3593098 (Galahad, Traveler of the Hunting Grounds) was changed
+[14133727] from: Machine
+[14133727] to: Machine Warrior
+[14133727] note: property 'attribute' of card id 3597918 (The Fox & The Devil - Love's First Embrace) was changed
+[14133727] from: DARK
+[14133727] to: DARK LIGHT
+[14133727] note: property 'type' of card id 3597918 (The Fox & The Devil - Love's First Embrace) was changed
+[14133727] from: Beast
+[14133727] to: Beast Fiend
+[14133727] note: property 'type' of card id 3586727 (Winged Werewolf) was changed
+[14133727] from: Beast-Warrior
+[14133727] to: Beast-Warrior Beast
+[14133727] note: property 'attribute' of card id 2378247 (⛧High Priest of Terrors of the Beyond Lands Immoral & Progenitor of the Horrors from Below⛤) was changed
+[14133727] from: LIGHT
+[14133727] to: LIGHT DARK WATER
+[14133728] note: property 'effect' of card id 3563232 (A Wandering Witch's Encounter) was changed
+[14133728] from: You can only control 1 "A Wandering Witch's Encounter". While you control this card activated from the Deck, "Elaina the Ashen Wandering Witch" you control gain these effects.● Cannot be destroyed by battle.● Once per your opponent's turn (Quick Effect): You can target 1 face-up card in this card's column; return it to the hand.If you control "Elaina, the Ashen Wandering Witch", or during the End Phase: You can shuffle this card into the Deck; gain 500 LP.
+[14133728] to: You can only control 1 "A Wandering Witch's Encounter". While you control this card activated from the Deck, "Elaina the Ashen Wandering Witch" you control gain these effects.● Cannot be destroyed by battle.● Once per your opponent's turn (Quick Effect): You can target 1 face-up card in this card's column; return it to the hand.If you control "Elaina, the Ashen Wandering Witch", or during the End Phase: You can shuffle this card from your GY into the Deck; gain 500 LP.
+[14133728] note: property 'effect' of card id 3563234 (A Wandering Witch's Memories) was changed
+[14133728] from: You can only control 1 "A Wandering Witch's Memories". While you control this card activated from the Deck, "Elaina the Ashen Wandering Witch" you control gain these effects.● Your opponent cannot target this card with card effects.● Once per your opponent's turn, when your opponent activates a card or effect in this card's column (Quick Effect): You can draw 1 card.If you control "Elaina, the Ashen Wandering Witch", or during the End Phase: You can shuffle this card into the Deck; gain 500 LP.
+[14133728] to: You can only control 1 "A Wandering Witch's Memories". While you control this card activated from the Deck, "Elaina the Ashen Wandering Witch" you control gain these effects.● Your opponent cannot target this card with card effects.● Once per your opponent's turn, when your opponent activates a card or effect in this card's column (Quick Effect): You can draw 1 card.If you control "Elaina, the Ashen Wandering Witch", or during the End Phase: You can shuffle this card from your GY into the Deck; gain 500 LP.
+[14133728] note: property 'effect' of card id 3563230 (A Wandering Witch's Vagrance) was changed
+[14133728] from: You can only control 1 "A Wandering Witch's Vagrance". While you control this card activated from the Deck, "Elaina the Ashen Wandering Witch" you control gains these effects.● Cannot be destroyed by card effects.● Once per your opponent's turn, you can negate an opponent's card or effect that is activated in this card's column.If you control "Elaina, the Ashen Wandering Witch", or during the End Phase: You can shuffle this card into the Deck; gain 500 LP.
+[14133728] to: You can only control 1 "A Wandering Witch's Vagrance". While you control this card activated from the Deck, "Elaina the Ashen Wandering Witch" you control gains these effects.● Cannot be destroyed by card effects.● Once per your opponent's turn, you can negate an opponent's card or effect that is activated in this card's column.If you control "Elaina, the Ashen Wandering Witch", or during the End Phase: You can shuffle this card from your GY into the Deck; gain 500 LP.
+[14133728] note: property 'attribute' of card id 3651057 (Ki-sikil & Lil-la, Double Trouble) was changed
+[14133728] from: LIGHT
+[14133728] to: LIGHT DARK
+[14133731] note: property 'type' of card id 3047023 (Chaos Dragon with Scales of Jade) was changed
+[14133731] from: Dragon
+[14133731] to: High Dragon
+[14133733] note: property 'type' of card id 3718120 (Union Eater) was changed
+[14133733] from: Fiend
+[14133733] to: Fiend Machine
+[14133733] note: property 'type' of card id 3729557 (Genshuku, Gravest Guardian) was changed
+[14133733] from: Warrior
+[14133733] to: Cyborg Machine
+[14133733] note: property 'effect' of card id 3741763 (Variation 84: Gravity-Eyes Astrologic Whelp) was changed
+[14133733] from: 1 “Gravity-Eyes Fractal Dragon” or 1 non-Link Monster that mentions itCannot be targeted for attacks by monsters that started the Duel in the Main Deck. Unaffected by your opponent’s card effects while it points to “Gravity-Eyes Fractal Dragon”. “Gravity-Eyes Fractal Dragon” this card points to can choose up to 2 of your opponent’s Main Monster or Spell & Trap Zones to activate it’s effect. (Quick Effect): You can Special Summon 1 of your banished “Gravity-Eyes Fractal Dragon”. You can only use this effect of “Variation 84: Gravity-Eyes Astrologic Whelp“ once per turn.
+[14133733] to: 1 “Gravity-Eyes Fractal Dragon”Cannot be targeted for attacks by monsters that started the Duel in the Main Deck. Unaffected by your opponent’s monster effects while it points to “Gravity-Eyes Fractal Dragon”. If you do not control “Gravity-Eyes Fractal Dragon” (Quick Effect): You can Special Summon 1 of your banished “Gravity-Eyes Fractal Dragon”. You can only use this effect of “Variation 84: Gravity-Eyes Astrologic Whelp“ once per turn.
+[14133733] note: property 'type' of card id 3741763 (Variation 84: Gravity-Eyes Astrologic Whelp) was changed
+[14133733] from: Dragon
+[14133733] to: Galaxy
+[14133734] note: property 'attribute' of card id 3569127 (Krystal Kyrin) was changed
+[14133734] from: WIND
+[14133734] to: WIND EARTH
+[14133734] note: property 'effect' of card id 3710862 (Particle Beast Elunia) was changed
+[14133734] from: This card is treated as a Normal Monster while face-up on the field or in the GY. While this card is a Normal Monster on the field, you can Normal Summon it to have it become an Effect Monster with these effects.● Cannot be destroyed or banished by Spell/Trap Cards and effects.● Gains 500 ATK/DEF for each Spell/Trap on the field.● During your Main Phase: You can Set 1 "Gemini Spark" or "Sparks" from your Deck or GY to your Spell & Trap Zone. You cannot Special Summon monsters from the Extra Deck the turn you activate this effect, except Synchro Monsters. You can only use this effect of "Particle Beast" once per turn.
+[14133734] to: This card is treated as a Normal Monster while face-up on the field or in the GY. While this card is a Normal Monster on the field, you can Normal Summon it to have it become an Effect Monster with these effects.● Cannot be destroyed or banished by Spell/Trap Cards and effects.● Gains 500 ATK/DEF for each Spell/Trap on the field.● During your Main Phase: You can Set 1 "Gemini Spark" or "Sparks" from your Deck or GY to your Spell & Trap Zone. You cannot Special Summon monsters from the Extra Deck the turn you activate this effect, except Synchro Monsters. You can only use this effect of "Particle Beast Elunia" once per turn.
+[14133734] note: property 'type' of card id 3757693 (Viktor, Gazer of Calamity) was changed
+[14133734] from: Beast-Warrior
+[14133734] to: Beast-Warrior Machine
+[14133734] note: property 'type' of card id 3757742 (Zæren, Overseer of Loss) was changed
+[14133734] from: Machine
+[14133734] to: Machine Psychic
+[14133736] note: property 'type' of card id 3792942 (An Altar of Twisted Study) was changed
+[14133736] from: Fiend
+[14133736] to: Fiend Machine
+[14133736] note: property 'effect' of card id 3479969 (Embodiment of Tribe) was changed
+[14133736] from: 3 EARTH monstersAll other monsters you control gain 300 ATK and DEF. Once per phase (Quick Effect): You can make this card lose exactly 300 DEF, then target 4 cards on the field; they are unaffected by other card effects until the end of the next Chain, but you cannot use this effect of "Embodiment of Tribe" again next phase. If this card is sent to the GY: You can Special Summon 1 EARTH monster from your hand. You can only use this effect of "Embodiment of Tribe" once per turn.
+[14133736] to: 3 EARTH monstersAll other monsters you control gain 300 ATK/DEF. Once per phase (Quick Effect): You can make this card lose exactly 300 DEF, then target 4 cards on the field; they are unaffected by other card effects until the end of the next Chain, but you cannot use this effect of "Embodiment of Tribe" again next phase. If this card is sent to the GY: You can Special Summon 1 EARTH monster from your hand. You can only use this effect of "Embodiment of Tribe" once per turn.
+[14133736] note: property 'type' of card id 3784529 (Number 150: Constellation Astroglypher) was changed
+[14133736] from: Psychic
+[14133736] to: Galaxy
+[14133739] note: property 'type' of card id 2684754 (Iterator 37: Canyon Creeper) was changed
+[14133739] from: Rock
+[14133739] to: Rock Fiend
+[14133739] note: property 'type' of card id 3818182 (Number 162: Prosthetic Lepetron) was changed
+[14133739] from: Machine
+[14133739] to: Cyborg
+[14133739] note: property 'attribute' of card id 3822685 (Salamangreat Pyro Phoenix - Gouki Fanatic) was changed
+[14133739] from: FIRE
+[14133739] to: FIRE EARTH
+[14133739] note: property 'type' of card id 3822685 (Salamangreat Pyro Phoenix - Gouki Fanatic) was changed
+[14133739] from: Cyberse
+[14133739] to: Cyberse Warrior
+[14133741] note: property 'type' of card id 3851621 (Red Pandafly) was changed
+[14133741] from: Beast
+[14133741] to: Beast Insect
+[14133741] note: property 'type' of card id 3863181 (Sylvan Frog) was changed
+[14133741] from: Aqua
+[14133741] to: Aqua Plant
+[14133741] note: property 'type' of card id 3589698 (Vengeful Flock) was changed
+[14133741] from: Winged Beast
+[14133741] to: Winged Beast Zombie
+[14133741] note: property 'effect' of card id 3619791 (The Slurring Vessel) was changed
+[14133741] from: 2 Effect MonstersDuring your opponent's turn (Quick Effect): You can banish this card, and all monsters it points to, until the End Phase. If this card is banished: You can look at the top 2 cards of your Deck, add 1 of them to your hand, and place the other on the bottom of your Deck, then place 1 card from your hand on top of your Deck. You can only use each effect of "The Slurring Vessel" once per turn.
+[14133741] to: 2 Effect MonstersDuring your opponent's turn (Quick Effect): You can banish this card, and all monsters it points to, until the End Phase. If this card is banished, except by its own effect: You can look at the top 2 cards of your Deck, add 1 of them to your hand, and place both the other, and 1 card from your hand, on the bottom of your Deck. You can only use each effect of "The Slurring Vessel" once per turn.
+[14133745] note: property 'attribute' of card id 3610144 (Earth's Shadow) was changed
+[14133745] from: EARTH
+[14133745] to: EARTH DARK
+[14133745] note: property 'type' of card id 3896985 (Kanako Yasaka, Advancing Heavenliness) was changed
+[14133745] from: Aqua
+[14133745] to: Aqua Rock
+[14133745] note: property 'type' of card id 3819149 (Last Breaths in a Cruel World) was changed
+[14133745] from: Machine
+[14133745] to: Machine Beast
+[14133745] note: property 'type' of card id 3897333 (Suwako Moriya, Cursing Earthliness) was changed
+[14133745] from: Reptile
+[14133745] to: Reptile Fairy
+[14133745] note: property 'effect' of card id 3875738 (Leave Gravity Behind) was changed
+[14133745] from: Return 1 monster you control to the hand. During the End Phase, except the turn this card was sent to the GY: Add this card to your hand.
+[14133745] to: Return 1 monster on the field you own to the hand. During the End Phase, except the turn this card was sent to the GY: Add this card to your hand.
+[14133745] note: property 'effect' of card id 3886668 (Reigning Red Dragon Archfiend) was changed
+[14133745] from: 1+ Tuners + 1 non-Tuner DARK Dragon Synchro MonsterIf this card is Synchro Summoned or your opponent Special Summons a non-Tuner monster(s): You can add to your hand or Set to your field, 1 "Crimson Pound" or 1 card that has "DARK Dragon Synchro Monster" or "Red Dragon Archfiend" in its text, except a "Void" card. (Quick Effect): You can banish 1 Defense Position monster your opponent controls, and if you do, and if this card was Synchro Summoned using "Red Dragon Archfiend", banish all Spell/Traps on the field. You can only use each effect of "Reigning Red Dragon Archfiend" once per turn. You cannot Special Summon monsters from the Extra Deck, except DARK Dragon Synchro Monsters, the turn you activate either of this card's effects.
+[14133745] to: 1+ Tuners + 1 non-Tuner DARK Dragon Synchro MonsterIf this card is Synchro Summoned or your opponent Special Summons a non-Tuner monster(s): You can add to your hand or Set to your field from your Deck, 1 "Crimson Pound" or 1 card that has "DARK Dragon Synchro Monster" or "Red Dragon Archfiend" in its text , except a "Void" card. (Quick Effect): You can banish 1 Defense Position monster your opponent controls, and if you do, and if this card was Synchro Summoned using "Red Dragon Archfiend", banish all Spell/Traps on the field. You can only use each effect of "Reigning Red Dragon Archfiend" once per turn. You cannot Special Summon monsters from the Extra Deck, except DARK Dragon Synchro Monsters, the turn you activate either of this card's effects.
+[14133745] note: property 'type' of card id 3847338 (Number 209: Arkh Alkhora Amarkas) was changed
+[14133745] from: Thunder
+[14133745] to: High Dragon
+[14133752] note: property 'type' of card id 3929303 (Sogen Beastmaster) was changed
+[14133752] from: Warrior
+[14133752] to: Warrior Beast
+[14133752] note: property 'attribute' of card id 3900605 (Blue-Eyes Toadally MAXed Dragon) was changed
+[14133752] from: LIGHT
+[14133752] to: LIGHT WATER
+[14133752] note: property 'type' of card id 3900605 (Blue-Eyes Toadally MAXed Dragon) was changed
+[14133752] from: Dragon
+[14133752] to: Dragon Aqua
+[14133753] note: property 'def' of card id 1790560 (The Slayer) was changed
+[14133753] from: 2000
+[14133753] to: 1000
+[14133755] note: property 'type' of card id 4014353 (Aquarcher) was changed
+[14133755] from: Fairy
+[14133755] to: Fairy Sea Serpent Warrior
+[14133755] note: property 'type' of card id 4014345 (Strigiformecha) was changed
+[14133755] from: Winged Beast
+[14133755] to: Winged Beast Machine Rock
+[14133755] note: property 'name' of card id 2389233 (Flaremored Crimson Dracombuster of Braveness) was changed
+[14133755] from: Flaremored Crimson Dracoverlord of Braveness
+[14133755] to: Flaremored Crimson Dracombuster of Braveness
+[14133755] note: property 'effect' of card id 2389233 (Flaremored Crimson Dracombuster of Braveness) was changed
+[14133755] from: 1 FIRE Dragon monster with 2500 or more ATK + 1 FIRE monsterMust be either Fusion Summoned, or Special Summoned by Tributing the above materials while your opponent's LP are at least 4000 higher than yours. If this card is Special Summoned: You can equip this card with 1 FIRE monster from your hand or GY, then this card gains ATK/DEF equal to that monster's original ATK. If a card or effect is activated while you took damage this turn (Quick Effect): Negate the activation, and if you do, banish 1 card on the field or from either GY. You can only use this effect of "Flaremored Crimson Dracoverlord of Braveness" once per turn.
+[14133755] to: 1 FIRE Dragon monster with 2500 or more ATK + 1 Level 6 or higher FIRE monsterMust be either Fusion Summoned, or Special Summoned by Tributing the above materials while your opponent's LP are at least 3000 higher than yours. If this card is Special Summoned: You can equip this card with 1 FIRE monster from your hand or GY, then this card gains ATK/DEF equal to double that monster's original ATK. If a card or effect is activated while you took damage this turn (Quick Effect): You can negate the activation, and if you do, you can banish 1 card on the field. You can only use this effect of "Flaremored Crimson Dracombuster of Braveness" once per turn.
+[14133756] note: property 'effect' of card id 4044227 (Sevens Road Magician) was changed
+[14133756] from: If you have 2 or more different Attributes in your GY you can Special Summon this card (from your hand). You can only Special Summon "Sevens Road Magician" once per turn this way. Once per turn: You can send the top card of your Deck to the GY; gains ATK equal to the number of different Attributes in your GY x 300, until the end of this turn.
+[14133756] to: If you have 2 or more different Attributes in your GY you can Special Summon this card (from your hand). You can only Special Summon "Sevens Road Magician" once per turn this way. Once per turn: You can send the top card of your Deck to the GY; this card gains ATK equal to the number of different Attributes in your GY x 300, until the end of this turn.
+[14133756] note: property 'effect' of card id 3990422 (Lunactus of the Ascended Moon) was changed
+[14133756] from: (This card is always treated as a Tuner.)If this card is in your hand: You can target 1 face-up monster on the field that has not activated its effects this turn; negate its effects until the end of this turn, and if you do, Special Summon this card. If your opponent activates a card by banishing a card with a different name as the monster whose effects were negated by this card's effect, or, when a card or effect is activated that would banish a card(s) (Quick Effect): You can discard this card; shuffle 1 banished card into the Deck. You can only use each effect of "Lunactus of the Ascended Moon" once per turn.
+[14133756] to: If this card is in your hand: You can target 1 face-up monster on the field that has not activated its effects this turn; negate its effects until the end of this turn, and if you do, Special Summon this card. If your opponent activates a card by banishing a card with a different name as the monster whose effects were negated by this card's effect, or, when a card or effect is activated that would banish a card(s) (Quick Effect): You can discard this card; shuffle 1 banished card into the Deck. You can only use each effect of "Lunactus of the Ascended Moon" once per turn.
+[14133756] note: property 'ability' of card id 3990422 (Lunactus of the Ascended Moon) was changed
+[14133756] from: 
+[14133756] to: Tuner
+[14133756] note: property 'type' of card id 3887844 (Recycle Beast Lead Axel) was changed
+[14133756] from: Machine
+[14133756] to: Machine Rock
+[14133756] note: property 'atk' of card id 4029759 (Akai Fudo) was changed
+[14133756] from: 2000
+[14133756] to: 1800
+[14133758] note: property 'type' of card id 4151264 (In Bitter Despair, Kiyohime) was changed
+[14133758] from: Reptile
+[14133758] to: Reptile Yokai
+[14133758] note: property 'attribute' of card id 4138655 (Binomial 22: Twin-Headed Galveloci) was changed
+[14133758] from: EARTH
+[14133758] to: EARTH LIGHT
+[14133758] note: property 'type' of card id 4138655 (Binomial 22: Twin-Headed Galveloci) was changed
+[14133758] from: Thunder
+[14133758] to: Thunder Dinosaur
+[14133758] note: property 'attribute' of card id 4148730 (A New Year's Reprieve) was changed
+[14133758] from: DARK
+[14133758] to: DARK FIRE
+[14133758] note: property 'level' of card id 3278022 (Lee & Imduk, World Chalice's Aides) was changed
+[14133758] from: 4
+[14133758] to: 3
+[14133758] note: property 'ability' of card id 3278022 (Lee & Imduk, World Chalice's Aides) was changed
+[14133758] from: 
+[14133758] to: Tuner
+[14133760] note: property 'effect' of card id 4117975 (Contagion "C") was changed
+[14133760] from: If your opponent Special Summons a monster(s) (Quick Effect): You can Special Summon this card from your hand to your opponent's field. You can only Special Summon "Contagion "C"" once per turn this way. Cannot be used as Link Material, except for the Link Summon of an Insect monster. Each time you Special Summon a monster(s), your opponent can draw 1 card, and if they do, they must banish 1 card from their hand, face-down.
+[14133760] to: If your opponent Special Summons a monster(s) (Quick Effect): You can Special Summon this card from your hand to your opponent's field. You can only Special Summon "Contagion "C"" once per turn this way. Cannot be used as Link Material, except for the Link Summon of an Insect monster. Each time you Special Summon a monster(s), your opponent can draw 1 card, and if they do, they must place 1 card from their hand on the bottom of their Deck.
+[14133760] note: property 'type' of card id 4101264 (Miss Gentile, Lady with Satin Gloves) was changed
+[14133760] from: Fiend
+[14133760] to: Omega Psychic
+[14133766] note: property 'effect' of card id 2373959 (Realm of the Light) was changed
+[14133766] from: When a card(s) is sent from your Deck to the GY by the effect of a LIGHT or DARK monster OR by the effect of a card that specifically lists "Lightsworn" in its text: Place 1 Shine Counter on this card. All face-up "Lightsworn" monsters on the field and all face-up monsters on the field that specifically list "Lightsworn" in their text gain 100 ATK for each Shine Counter on the field. During your Draw Phase, instead of conducting your normal draw, you can add 1 "Lightsworn" monster from your GY to your hand instead. While this card has 100 or more Shine Counters on it, all face-up "Lightsworn" monsters you control are unaffected by your opponent's card effects.
+[14133766] to: When a card(s) is sent from your Deck to the GY by the effect of a LIGHT or DARK monster OR by the effect of a card that has "Lightsworn" in its text: Place 1 Shine Counter on this card for each card sent. All face-up "Lightsworn" monsters on the field and all face-up monsters on the field that specifically list "Lightsworn" in their text gain 100 ATK for each Shine Counter on the field. During your Draw Phase, instead of conducting your normal draw, you can add 1 "Lightsworn" monster from your GY to your hand instead. While this card has 100 or more Shine Counters on it, all face-up "Lightsworn" monsters you control are unaffected by your opponent's card effects.
+[14133768] note: property 'effect' of card id 2233962 (Dark Scorpion - Kachka the Slash) was changed
+[14133768] from: 1 non-Link "Dark Scorpion" monster or "Don Zaloog"If this card is Link Summoned: You can Special Summon up to 2 "Dark Scorpion" monsters or "Don Zaloog" from your hand or GY, but for the rest of the turn you cannot Special Summon monsters from the Extra Deck. You can target 1 "Dark Scorpion" monster or "Don Zaloog" you control; inflict damage to your opponent equal to its original ATK, and if you do, apply its effect that activates when it inflicts battle damage to your opponent. You can only use each effect of "Dark Scorpion - Kachka the Slash" once per turn.
+[14133768] to: 1 non-Link "Dark Scorpion" monster or "Don Zaloog"If this card is Link Summoned: You can Special Summon up to 2 "Dark Scorpion" monsters and/or "Don Zaloog" from your hand or GY, but for the rest of the turn you cannot Special Summon monsters from the Extra Deck. You can target 1 "Dark Scorpion" monster or "Don Zaloog" you control; inflict damage to your opponent equal to its original ATK, and if you do, apply its effect that activates when it inflicts battle damage to your opponent. You can only use each effect of "Dark Scorpion - Kachka the Slash" once per turn.
+[14133773] note: property 'effect' of card id 1616910 (Des Frogbat) was changed
+[14133773] from: This card's name becomes "Des Frog" while it is on the field. You can target 1 monster in your GY mentions "Des Frog"; Special Summon it, then add 1 "Polymerization" from your Deck to your hand. If this card is currently banished, and you control "D.3.S. Frog": You can send 1 "Treeborn Frog" from your Deck to the GY; Special Summon this card. You can only use each effect of "Des Frogbat" once per turn. WATER Fusion Monsters you control are unaffected by your opponent's card effects.
+[14133773] to: This card's name becomes "Des Frog" while it is on the field. You can target 1 monster in your GY that mentions "Des Frog"; Special Summon it, then add 1 "Polymerization" from your Deck to your hand. If this card is currently banished, and you control "D.3.S. Frog": You can send 1 "Treeborn Frog" from your Deck to the GY; Special Summon this card. You can only use each effect of "Des Frogbat" once per turn. WATER Fusion Monsters you control are unaffected by your opponent's card effects.
+[14133773] note: property 'type' of card id 2315782 (Minute Feathered Serpent) was changed
+[14133773] from: Winged Beast
+[14133773] to: Winged Beast Reptile
+[14133775] note: property 'attribute' of card id 2689849 (Alpha and Omega Dragon) was changed
+[14133775] from: LIGHT
+[14133775] to: LIGHT DARK
+[14133775] note: property 'effect' of card id 2627415 (Fractured Universe) was changed
+[14133775] from: If another Field Spell is activated: Banish both it and this card.
+[14133775] to: If another Field Spell is activated: You can banish both it and this card.
+[14133777] note: property 'type' of card id 3132771 (Arwan, King of the Hunt) was changed
+[14133777] from: Dragon
+[14133777] to: Dragon Beast
+[14133777] note: property 'type' of card id 3132733 (Storm Dragon Hatchling) was changed
+[14133777] from: Thunder
+[14133777] to: Thunder Dragon
+[14133777] note: property 'effect' of card id 2330219 (Abyss Digidragon) was changed
+[14133777] from: Cannot be Xyz Summoned. Must first be Special Summoned (from your Extra Deck) by sending 2 "Digidragon" monsters on either field to the GY. Cannot be Tributed or used as Fusion, Synchro, Xyz or Link Material. Any battle damage this card inflicts to your opponent is doubled, also banish any monster this card battles after damage calculation. During your opponent's End Phase: Return this card to the Extra Deck.
+[14133777] to: Cannot be Xyz Summoned. Must first be Special Summoned (from your Extra Deck) by sending 2 "Digidragon" monsters on either field to the GY. Cannot be Tributed or used as Fusion, Synchro, Xyz or Link Material. Any battle damage this card inflicts to your opponent is doubled, also banish any monster this card battles after damage calculation.
+[14133777] note: property 'type' of card id 3126442 (Titan Construct - War Bearer) was changed
+[14133777] from: Machine
+[14133777] to: Machine Rock
+[14133777] note: property 'type' of card id 3101179 (Thunderstroke, Dragon of Storms) was changed
+[14133777] from: Thunder
+[14133777] to: Thunder Dragon
+[14133780] note: property 'effect' of card id 1865338 (Majespecter Dog - Inukami) was changed
+[14133780] from: 1 non-Link "Majespecter" monsterYou can only Special Summon "Majespecter Dog - Inukami" once per turn. If this card is Link Summoned: You can reveal up to 2 "Majespecter" cards in your hand; excavate the top 7 cards of your Deck, and if you do, you can add any number of excavated "Majespecter" cards to your hand, up to the number of cards revealed to activate this effect, also place the rest on the bottom of your Deck in any order. Cannot be targeted or destroyed by your opponent's card effects.
+[14133780] to: 1 non-Link "Majespecter" monsterYou can only Special Summon "Majespecter Dog - Inukami" once per turn. If this card is Link Summoned: You can activate this effect; once until the end of the next turn, if you would Tribute a WIND monster to activate a Spell/Trap Card or effect, you can banish 1 "Majespecter" Link Monster from your GY instead of Tributing 1 of those monsters. Cannot be targeted or destroyed by your opponent's card effects.
+[14133780] note: property 'effect' of card id 1928438 (Nemeses Nemesis) was changed
+[14133780] from: Target any number of your banished "Nemeses" monsters, then you can target up to that many of your banished non-"Nemeses" monsters, all with different Types and Attributes from each other; halve your LP, then, add all those targets to your hand. During the End Phase of your next turn, if you have not Summoned at least 1 monster with the same Attribute as each monster(s) added to the hand by this effect, you take 2000 damage for each Attribute of monsters you have not Summoned. You can only activate 1 "Nemeses Nemesis" per turn.
+[14133780] to: Target any number of your banished "Nemeses" monsters, then you can target up to that many of your banished non-"Nemeses" monsters, all with different Types and Attributes from each other; add all those targets to your hand. You can banish from your hand and/or GY, this card and 1 other "Nemeses" monster; Set 1 "Nemeses" card directly from your Deck, except "Nemeses Nemesis". You can only use each effect of "Nemeses Nemesis" once per turn.
+[14133780] note: property 'name' of card id 1629671 (Aromalevolent Jasmine) was changed
+[14133780] from: Aromonicthorn Jasmine
+[14133780] to: Aromalevolent Jasmine
+[14133780] note: property 'effect' of card id 1629671 (Aromalevolent Jasmine) was changed
+[14133780] from: 1 Link-2 or lower Link Monster + 1 or more Plant and/or Fiend monsters(This card is always treated as an "Aroma" monster.)Once per turn, at the start of the Battle Phase: You can Special Summon 1 "Aroma" monster from your hand, and if you do, gain 1000 LP. If a monster this card points to is destroyed by battle or card effect, while you have more LP than your opponent: You can pay 1000 LP; draw 1 card. Up to thrice per turn, if you gain LP: You can target 1 monster you control; that target gains ATK equal to the amount of LP gained.
+[14133780] to: 1 Plant Link Monster + 1+ Plant and/or Fiend monstersOnce per turn: You can Special Summon 1 of your "Aroma" monsters that is banished or in your hand or GY, and if you do, gain 1000 LP. If a monster your opponent controls or a Link Monster points leaves the field because of your card (by battle or card effect), while you have more LP than your opponent: You can pay 1000 LP; draw 1 card. Up to thrice per turn, if you gain LP: You can have 1 Plant monster you control gain that much ATK/DEF, then you can have all monsters your opponent controls lose that much ATK/DEF.
+[14133780] note: property 'arrows' of card id 1629671 (Aromalevolent Jasmine) was changed
+[14133780] from: 11110000
+[14133780] to: 10101010
+[14133781] note: property 'type' of card id 2283573 (Warlord Warlock) was changed
+[14133781] from: Warrior
+[14133781] to: Warrior Spellcaster
+[14133782] note: property 'type' of card id 2167190 (Gravity-Eyes Fractal Dragon) was changed
+[14133782] from: Dragon
+[14133782] to: Galaxy
+[14133790] note: property 'type' of card id 1696586 (Ultimate Metallic-Eyes Plasmite Dragon) was changed
+[14133790] from: Dragon
+[14133790] to: Dragon Machine
+[14133795] note: property 'type' of card id 3563975 (Dahlia) was changed
+[14133795] from: Warrior
+[14133795] to: Warrior Fiend Fairy Machine
+[14133796] note: property 'type' of card id 2067345 (Divine Dragon Lord Knight Felgrand) was changed
+[14133796] from: Warrior
+[14133796] to: Warrior Dragon
+[14133796] note: property 'type' of card id 2071136 (Swordburst Dragon Emperor) was changed
+[14133796] from: Wyrm
+[14133796] to: Wyrm Warrior
+[14133796] note: property 'type' of card id 2114791 (Ancienne Wolbeast) was changed
+[14133796] from: Beast
+[14133796] to: Beast Plant
+[14133796] note: property 'type' of card id 2056902 (Carissime Cirsium) was changed
+[14133796] from: Fiend
+[14133796] to: Fiend Warrior
+[14133800] note: property 'type' of card id 2209167 (Number 169: Caiman the Wise) was changed
+[14133800] from: Reptile
+[14133800] to: Reptile Spellcaster
+[14133804] note: property 'attribute' of card id 2934553 (Double Kirin) was changed
+[14133804] from: DARK
+[14133804] to: DARK LIGHT
+[14133814] note: property 'type' of card id 930149 (Penguino wit a Needlebab) was changed
+[14133814] from: Beast
+[14133814] to: Beast Pyro
+[14133815] note: property 'attribute' of card id 2236760 (Flame-Eyes MAX Frost Dragon) was changed
+[14133815] from: FIRE
+[14133815] to: FIRE WATER
+[14133815] note: property 'type' of card id 2453620 (Sakuraider) was changed
+[14133815] from: Plant
+[14133815] to: Plant Machine
+[14133815] note: property 'type' of card id 2564868 (World Wide Wonder Magician) was changed
+[14133815] from: Spellcaster
+[14133815] to: Spellcaster Cyberse
+[14133819] note: property 'type' of card id 2367691 (Bella, Ringing for the Future) was changed
+[14133819] from: Fairy
+[14133819] to: Fairy Machine Warrior
+[14133819] note: property 'type' of card id 2560487 (Spirit of Auroral Wings) was changed
+[14133819] from: Wyrm
+[14133819] to: Wyrm Insect
+[14133823] note: property 'atk' of card id 2917572 (Abyssal God - Galvathot) was changed
+[14133823] from: 2000
+[14133823] to: 3000
+[14133823] note: property 'def' of card id 2917572 (Abyssal God - Galvathot) was changed
+[14133823] from: 1500
+[14133823] to: 2500
+[14133823] note: property 'type' of card id 3010599 (Iterator 89: Gr-ant-ite) was changed
+[14133823] from: Insect
+[14133823] to: Insect Rock
+[14133827] note: property 'type' of card id 3115437 (Cybermerging Weaponmaster) was changed
+[14133827] from: Machine
+[14133827] to: Machine Warrior
+[14133835] note: property 'attribute' of card id 3032898 (Edge of Reality Colosus) was changed
+[14133835] from: DARK
+[14133835] to: DARK EARTH
+[14133835] note: property 'type' of card id 3032898 (Edge of Reality Colosus) was changed
+[14133835] from: Fiend
+[14133835] to: Fiend Rock Plant
+[14133835] note: property 'type' of card id 3228485 (Mandatum 8: Weight) was changed
+[14133835] from: Machine
+[14133835] to: Machine Beast-Warrior
+[14133838] note: property 'attribute' of card id 3249237 (A Loved One, Passed on) was changed
+[14133838] from: DARK
+[14133838] to: DARK LIGHT
+[14133838] note: property 'attribute' of card id 3255026 (Small Whale) was changed
+[14133838] from: WIND
+[14133838] to: WIND WATER
+[14133838] note: property 'type' of card id 3236637 (Floral Priestess of the Night) was changed
+[14133838] from: Zombie
+[14133838] to: Zombie Plant Psychic
+[14133840] note: property 'type' of card id 2966216 (Obsidian Scorpion) was changed
+[14133840] from: Machine
+[14133840] to: Machine Rock
+[14133840] note: property 'effect' of card id 3377237 (Grandma) was changed
+[14133840] from: During the Main Phase (Quick Effect): You can equip this card to a player. During their Standby Phase: The equipped player must shout "Grandma, I am hungry!" (even if they are not hungry.) During the End Phase, if this card is equipped to a player and a player has shouted "Grandma, I am hungry!" this turn: Special Summon as many "Freshly Baked Cookie Tokens" (Rock/LIGHT/Level 2/ATK 0/DEF 1000) as possible to both fields. If this card is destroyed by an opponent's card effect: You go into mourning. (If a player goes into mourning, they lose the Duel.) You can only use each effect of "Grandma" once per turn. (Cannot be used in an official tournament or ranked match.)
+[14133840] to: During the Main Phase (Quick Effect): You can equip this card to a player. During their Standby Phase: The equipped player must shout "Grandma, I am hungry!" (even if they are not hungry). During the End Phase, if this card is equipped to a player and a player has shouted "Grandma, I am hungry!" this turn: Special Summon as many "Freshly Baked Cookie Tokens" (Rock/LIGHT/Level 2/ATK 0/DEF 1000) as possible to both fields. If this card is destroyed by an opponent's card effect: You go into mourning. (If a player goes into mourning, they lose the Duel.) You can only use each effect of "Grandma" once per turn. (Cannot be used in an official tournament or ranked match.)
+[14133840] note: property 'type' of card id 3423971 (Yurlunggur, Dreamtime Serpent) was changed
+[14133840] from: Reptile
+[14133840] to: Reptile Yokai
+[14133842] note: property 'attribute' of card id 3388692 (Atelie Aquarelle, Watercolor Wonder) was changed
+[14133842] from: WIND
+[14133842] to: WIND WATER
+[14133842] note: property 'type' of card id 3388692 (Atelie Aquarelle, Watercolor Wonder) was changed
+[14133842] from: Fairy
+[14133842] to: Fairy Aqua
+[14133844] note: property 'type' of card id 3390552 (Packet Pixie) was changed
+[14133844] from: Fairy
+[14133844] to: Fairy Cyberse
+[14133846] note: property 'effect' of card id 3369145 (Tread the Quiet Path) was changed
+[14133846] from: 2 monsters with the same Level as the number of cards your Extra Deck started the Duel with -1(This monster's original Rank is always treated as 1. This card's original Type is treated as Yokai rather than Spellcaster.)When this card is used as Synchro Material, you can treat it and all other Synchro Materials (that have a Rank) as monsters with a Level equal to their Rank. If this card is Xyz Summoned: Neither player takes any battle damage until the end of the next turn. Once per turn: You can detach 1 Monster Card material with a Level from this card; this card's Rank becomes equal to the Level of that detached monster.
+[14133846] to: 2 monsters with the same Level as the number of cards your Extra Deck started the Duel with -1(This monster's original Rank is always treated as 1. This monster's original Type is treated as Yokai rather than Spellcaster.)When this card is used as Synchro Material, you can treat it and all other Synchro Materials (that have a Rank) as monsters with a Level equal to their Rank. If this card is Xyz Summoned: Neither player takes any battle damage until the end of the next turn. Once per turn: You can detach 1 Monster Card material with a Level from this card; this card's Rank becomes equal to the Level of that detached monster.
+[14133846] note: property 'effect' of card id 3447777 (Myutant Unification) was changed
+[14133846] from: Shuffle 1 of your banished "Myutant" cards into the Deck; add 1 "Myutant" Continuous Spell/Trap from your Deck to your hand, and if you do, activate it immediately after this effect resolves. If you control a Level 8 or higher "Myutant" monster, you can add any "Myutant" Spell/Trap instead. If this card is banished by a "Myutant" card or effect: You can target 1 "Myutant" card in your GY; add it to your hand, and if you do, you can banish 1 Level 4 or lower "Myutant" monster from your Deck. You can only use 1 "Myutant Unification" effect per turn, and only once that turn.
+[14133846] to: Shuffle 1 of your banished "Myutant" cards into the Deck; add 1 "Myutant" Continuous Spell/Trap from your Deck to your hand, and if you do, activate it immediately after this Chain resolves. If you control a Level 8 or higher "Myutant" monster, you can add any "Myutant" Spell/Trap instead. If this card is banished by a "Myutant" card or effect: You can target 1 "Myutant" card in your GY; add it to your hand, and if you do, you can banish 1 Level 4 or lower "Myutant" monster from your Deck. You can only use 1 "Myutant Unification" effect per turn, and only once that turn.
+[14133859] note: property 'effect' of card id 3575144 (Worm &) was changed
+[14133859] from: If you control a "Worm" monster, you can Special Summon this card (from your hand.) if this card is destroyed by battle or card effect and sent to the GY: Add 1 "Worm" monster from your GY to your hand, except "Worm &". You can only use this effect of "Worm &" once per turn.
+[14133859] to: If you control a "Worm" monster, you can Special Summon this card (from your hand). If this card is destroyed by battle or card effect and sent to the GY: Add 1 "Worm" monster from your GY to your hand, except "Worm &". You can only use this effect of "Worm &" once per turn.
+[14133859] note: property 'effect' of card id 3575142 (Worm !?!) was changed
+[14133859] from: 2 "Worm" monstersWhen this monster is Fusion Summoned: Change all face-up "Worm" monsters on the field to face-down Defense Position. Once per turn: You can send 1 "Worm" monster to the GY, and if you do, Special Summon 1 "Worm" monster from your GY, except the sent monster.
+[14133859] to: 2 "Worm" monstersWhen this monster is Fusion Summoned: Change all face-up "Worm" monsters on the field to face-down Defense Position. Once per turn: You can send 1 "Worm" monster from your Deck to the GY, and if you do, Special Summon 1 "Worm" monster from your GY, except the sent monster.
+[14133908] note: property 'type' of card id 4108602 (Recycle Beast Sharp Saviour) was changed
+[14133908] from: Machine
+[14133908] to: Machine Warrior
+[14133920] note: card id 4151132 (Scar-Knight Shock Troops) was made public
+[14133928] note: property 'type' of card id 3686989 (Iterator 62: Galaxy-Eyes Cipher Dragon EX) was changed
+[14133928] from: Dragon
+[14133928] to: High Dragon
+[14133930] note: property 'effect' of card id 3975966 (Cupid Bunt) was changed
+[14133930] from: (Quick Effect): You can send 1 LIGHT Fairy monster from your Deck to the GY, then target 1 monster you control whose Level is 2 higher or lower than that sent monster; increase or decrease its Level by 2. If a monster(s) with 600 DEF and/or a "Cupid Decathlon" leaves your field: You can Special Summon this card from your GY, then you can treat it as a Tuner, but banish it when it leaves the field. You can only use each effect of "Cupid Bunt" once per turn.
+[14133930] to: You can target 1 monster you control; send 1 LIGHT Fairy monster from your Deck to the GY whose Level is 2 higher or lower than that target, then increase or decrease its Level by 2. If a monster(s) with 600 DEF and/or a "Cupid Decathlon" leaves your field: You can Special Summon this card from your GY, then you can treat it as a Tuner, but banish it when it leaves the field. You can only use each effect of "Cupid Bunt" once per turn.
+[14133930] note: property 'effect' of card id 3575380 (Cupid Racket) was changed
+[14133930] from: You can reveal this card in your hand, then target 1 Level 4 or lower LIGHT Fairy monster in your GY; Special Summon either it or this card, and shuffle the other into the Deck. If a monster gains Levels, or if this card is sent to the GY: You can target 1 other Fairy monster you control; either increase its Level by 1 or its ATK by 600, then return 1 card in its column or this card to the hand. You can only use each effect of "Cupid Racket" once per turn.
+[14133930] to: You can reveal this card in your hand, then target 1 Level 4 or lower LIGHT Fairy monster in your GY; Special Summon either it or this card, and banish the other, but you cannot Special Summon monsters for the rest of the turn, except Fairy monsters. If a monster's Level changes, or if this card is sent to the GY: You can target 1 Fairy monster you control; it gains 600 ATK, also you can increase its Level by 1, then return 1 card in its column or this card to the hand. You can only use each effect of "Cupid Racket" once per turn.
+[14133930] note: property 'effect' of card id 3575391 (Cupid Judge) was changed
+[14133930] from: "Cupid Cross" or "Cupid Pitch" + 1+ non-Tuner monstersIf this card Synchro Summoned: You can add 1 "Golden Prizebow" or "Cupid Decathlon" from your Deck to your hand. Gains Levels equal to the total Levels of all monsters with 600 DEF you control, except Synchro Monsters. Once per turn (Quick Effect): You can target 1 monster you control and up to 1 monster on the field; banish them until your End Phase, then, inflict damage to your opponent equal to the total Levels of those banished monsters when they were on the field x 100.
+[14133930] to: "Cupid Cross" or "Cupid Pitch" + 1+ non-Tuner monstersGains Levels equal to the total Levels of all monsters with 600 DEF you control, except Synchro Monsters. You can only use each of the following effects of "Cupid Judge" once per turn. If this card is Synchro Summoned: You can add 1 "Golden Prizebow" or "Cupid Decathlon" from your Deck to your hand. (Quick Effect): You can target 1 monster you control and up to 1 monster on the field; banish them until your End Phase, and when this card returns to your field, inflict damage to your opponent equal to this card's Level on the field before it was banished x 100.
+[14133959] note: property 'effect' of card id 3680282 (Burstflame Contact) was changed
+[14133959] from: Send 1 "Laval" monster from your Deck to the GY, and if you do, apply 1 of these effects. You can only activate up to 2 "Burstflame Contact" per turn.● Special Summon 1 FIRE monster from your GY.● Add 1 Spell/Trap with "Laval" in its text from your Deck to your hand, except "Burstflame Contact".● Place 3 "Laval" monsters with different names from your Deck and/or GY on the top of your Deck in any order.
+[14133959] to: Discard 1 card; send 1 "Laval" monster from your Deck to the GY, and if you do, apply 1 of these effects. You can only activate up to 2 "Burstflame Contact" per turn.● Special Summon 1 FIRE monster from your GY.● Add 1 Spell/Trap with "Laval" in its text from your Deck to your hand, except "Burstflame Contact".● Place 3 "Laval" monsters with different names from your Deck and/or GY on the top of your Deck in any order.
+[14133959] note: property 'effect' of card id 3680324 (Magma Power Stone) was changed
+[14133959] from: When this card is activated: You can banish 1 FIRE monster from your hand, field or GY; add 1 "Laval" monster from your Deck to your hand. FIRE Synchro Monsters you control cannot be targeted or destroyed by your opponent's cards and effects. If a "Laval" monster is Normal or Special Summoned, you can: Immediately after this effect resolves, Normal Summon 1 "Laval" monster.
+[14133959] to: When this card is activated: You can banish 1 FIRE monster from your hand, field or GY; add 1 "Laval" monster from your Deck to your hand. FIRE Synchro Monsters you control cannot be destroyed by your opponent's cards and effects. If a "Laval" monster is Normal or Special Summoned, you can: Immediately after this effect resolves, Normal Summon 1 "Laval" monster. You can only activate 1 "Magma Power Stone" per turn,
+[14133985] note: property 'type' of card id 3892580 (Gravity-Eyes Nebula Newborn) was changed
+[14133985] from: Dragon
+[14133985] to: Galaxy
+[14133985] note: property 'type' of card id 3892574 (Gravity-Eyes Star Dragon) was changed
+[14133985] from: Dragon
+[14133985] to: Galaxy
+[14133986] note: property 'type' of card id 3914645 (Gravity-Eyes Rainbow Dragon) was changed
+[14133986] from: Dragon
+[14133986] to: Galaxy
+[14133986] note: property 'type' of card id 3914641 (Gravity-Eyes Rainbow Wyrm) was changed
+[14133986] from: Wyrm
+[14133986] to: Galaxy
+[14133986] note: property 'type' of card id 3914592 (Gravity-Eyes Fractal Twin Dragon) was changed
+[14133986] from: Dragon
+[14133986] to: Galaxy
+[14133986] note: property 'type' of card id 3914597 (Neo Gravity-Eyes Fractal Dragon) was changed
+[14133986] from: Dragon
+[14133986] to: Galaxy
+[14134015] warning: card id 4201628 (Shatha, Lurker of the Ghoti) is not public
+[14134015] warning: card id 4201737 (Ghoti Reef) is not public
+[14134020] note: property 'type' of card id 4040961 (Kaminari, Dyna Samurai) was changed
+[14134020] from: Thunder
+[14134020] to: Thunder Yokai
+[14134020] note: property 'type' of card id 3875455 (Ofuda, Dyna Oni) was changed
+[14134020] from: Warrior
+[14134020] to: Warrior Yokai
+[14134020] note: property 'type' of card id 4041028 (Shiryoku, Dyna Geisha) was changed
+[14134020] from: Fairy
+[14134020] to: Fairy Yokai
+[14134026] warning: card id 3262470 (Elixir Born - Royal Ghost) is not public
+[14134026] warning: card id 3262426 (Elixir Born - Skeletons) is not public
+[14134026] warning: card id 3262456 (Elixir Born - Giant Skeleton) is not public
+[14134050] note: property 'effect' of card id 3707091 (Cyberdark Extension Cords) was changed
+[14134050] from: Special Summon 1 Machine "Cyberdark" monster from your Deck, and if you do, equip this card to that monster, then equip to the Summoned monster, 1 Level 3 or lower Dragon monster from the GY as an Equip Spell that gives ATK equal to its original ATK. Other cards equipped to the equipped monster cannot be targeted by your opponent's card effects. If a Dragon or "Cyberdark" Monster Card would be destroyed, you can destroy this card instead.
+[14134050] to: Special Summon 1 Machine "Cyberdark" monster from your Deck, and if you do, equip this card to that monster, then equip to the Summoned monster, 1 Level 3 or lower Dragon monster from the GY as an Equip Spell that gives ATK equal to its original ATK. You can only use this effect of "Cyberdark Extension Cords" once per turn. Other cards equipped to the equipped monster cannot be targeted by your opponent's card effects. If a Dragon or "Cyberdark" Monster Card would be destroyed, you can destroy this card instead.
+[14134087] note: property 'effect' of card id 2647781 (V+-Beast Jet) was changed
+[14134087] from: (This card's name is always treated as "V-Tiger Jet".)Once per turn, you can either: Target 1 LIGHT Machine monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. If the equipped monster would be destroyed by battle or card effect, you can destroy this card instead. During your Main Phase, if this card is not equipped with a card(s): You can reveal 1 Fusion Monster in your Extra Deck that specifically lists this card as material; Special Summon 1 other monster from your Deck that is specifically listed as Fusion Material on that revealed monster, but it and this card cannot be used as material for a Fusion, Synchro, Xyz, or Link Summon. You can only use this effect of “V+-Beast Jet” once per turn.
+[14134087] to: (This card's name is always treated as "V-Tiger Jet".)Once per turn, you can either: Target 1 LIGHT Machine monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. If the equipped monster would be destroyed by battle or card effect, you can destroy this card instead. During your Main Phase, if this card is not equipped with a card(s): You can reveal 1 Fusion Monster in your Extra Deck that specifically lists this card as material; Special Summon 1 monster from your Deck that is specifically listed as Fusion Material on that revealed monster, except "V-Tiger Jet", but it and this card cannot be used as material for a Fusion, Synchro, Xyz, or Link Summon. You can only use this effect of “V+-Beast Jet” once per turn.
+[14134087] note: property 'effect' of card id 2647775 (X+-Helmet Cannon) was changed
+[14134087] from: (This card's name is always treated as "X-Head Cannon".)Once per turn, you can either: Target 1 LIGHT Machine monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. If the equipped monster would be destroyed by battle or card effect, you can destroy this card instead. If this card is banished as Fusion Material: You can reveal 1 monster in your Extra Deck that specifically lists “V-Tiger Jet”, “W-Wing Catapult”, “X-Head Cannon” , “Y-Dragon Head”, “Z-Metal Tank”, or “XYZ-Dragon Cannon” as material, except the monster you Special Summoned; shuffle from among your banished cards, all monsters that are specifically listed as Fusion Material on that revealed monster, and if you do, Special Summon the revealed monster (this Summon is treated as a Summon by its own procedure). You can only use this effect of “X+-Helmet Cannon” once per turn.
+[14134087] to: (This card's name is always treated as "X-Head Cannon".)Once per turn, you can either: Target 1 LIGHT Machine monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. If the equipped monster would be destroyed by battle or card effect, you can destroy this card instead. If this card is banished as Fusion Material: You can reveal 1 monster in your Extra Deck that specifically lists “V-Tiger Jet”, “W-Wing Catapult”, “X-Head Cannon” , “Y-Dragon Head”, “Z-Metal Tank”, or “XYZ-Dragon Cannon” as material, except a monster with the same name as the Fusion Monster that was Special Summoned using this card as Fusion Material; shuffle from among your banished cards, all monsters that are specifically listed as Fusion Material on that revealed monster, and if you do, Special Summon the revealed monster (this Summon is treated as a Summon by its own procedure). You can only use this effect of “X+-Helmet Cannon” once per turn.
+[14134128] note: property 'type' of card id 3142693 (Pure Truth Dragon) was changed
+[14134128] from: Dragon
+[14134128] to: Dragon Spellcaster
+[14134255] note: property 'effect' of card id 2050844 (Archaon, the Primordial Chaos Deity) was changed
+[14134255] from: 2+ Level 4 monsters including 1 LIGHT and 1 DARK monsterIf this card is banished: You can Special Summon this card, and if you do, attach 1 of your banished LIGHT or DARK monsters to this card as material. You can detach any number of materials from this card; apply the following effects, in sequence, depending on the Attribute of materials detached whose original card type is monster. You can only use each effect of "Archaon, the Primordial Chaos Deity" once per turn.● LIGHT: Draw 2 cards, then place 1 card from your hand to the bottom of the Deck.● DARK: Destroy 1 card on the field.
+[14134255] to: 2+ Level 4 monsters including 1 LIGHT and 1 DARK monsterIf this card is banished: You can Special Summon this card, and if you do, attach 1 of your banished LIGHT or DARK monsters to this card as material but return it to the Extra Deck when it leaves the field. You can detach any number of materials from this card; apply the following effects, in sequence, depending on the Attribute of materials detached whose original card type is monster. You can only use each effect of "Archaon, the Primordial Chaos Deity" once per turn.● LIGHT: Draw 2 cards, then place 1 card from your hand to the bottom of the Deck.● DARK: Destroy 1 card on the field.
+[14134324] note: property 'effect' of card id 1827982 (Chrono-Thief's Clock Tower) was changed
+[14134324] from: When this card is activated: Add 1 "Time Thief" monster from your Deck to your hand. If a "Time Thief" Xyz Monster detaches a material(s) by, or to activate its effect: You can apply 1 of the following effects depending on what was detached.● Monster: Special Summon 1 "Time Thief" monster from your hand but place it on the top of the Deck at the end of this Phase.● Spell: Shuffle up to 2 of your "Time Thief" cards that are banished or in your GY into the Deck.● Trap: Return 1 face-up card you control to the hand, and if you do, shuffle 1 card from your hand into the Deck.You can only use each effect of "Chrono-Thief's Clock Tower" once per turn. You cannot Special Summon monsters from the Extra Deck the turn you activate this card, except Psychic and Machine monsters.
+[14134324] to: When this card is activated: Add 1 "Time Thief" monster from your Deck to your hand. If a "Time Thief" Xyz Monster detaches a material(s) by, or to activate its effect: You can apply 1 of the following effects depending on what was detached.● Monster: Special Summon 1 "Time Thief" monster from your hand but place it on the top of the Deck at the end of this Phase.● Spell: Shuffle up to 2 of your "Time Thief" cards that are banished or in your GY into the Deck.● Trap: Return 1 face-up card you control to the hand, and if you do, shuffle 1 card from your hand into the Deck.You can only use each effect of "Chrono-Thief's Clock Tower" once per turn. You can only use each effect of "Chrono-Thief's Clock Tower" once per turn. You cannot Special Summon monsters from the Extra Deck the turn you activate this card, except Rank 4 or lower Xyz Monsters.
+[14134348] note: property 'effect' of card id 1546096 (Volcanic Flamvell Guardian) was changed
+[14134348] from: FIRE monsters you control gain 300 ATK/DEF for each Pyro monster you control. If this card is Normal or Special Summoned: You can send 1 Pyro monster from your Deck to your GY. You can discard 1 "Volcanic" or 1 "Blaze Accelerator" card; immediately after this effect resolves, Normal Summon 1 Pyro monster. You can only use each effect of "Volcanic Flamvell Guardian" once per turn.
+[14134348] to: FIRE monsters you control gain 300 ATK/DEF for each Pyro monster you control. You can only use each of these effects "Volcanic Flamvell Guardian" once per turn, and you cannot activate monster effects the turn you use either of these effects, except FIRE Pyro monster effects. If this card is Normal or Special Summoned: You can send 1 Pyro monster from your Deck to your GY. You can discard 1 "Volcanic" or 1 "Blaze Accelerator" card; immediately after this effect resolves, Normal Summon 1 Pyro monster.
+[14134395] note: property 'effect' of card id 1903201 (Yubel's Descent) was changed
+[14134395] from: Activate 1 of these effects.● Add 1 "Yubel" monster from your Deck to your hand.● Shuffle any number of Level 10 or higher monsters from your hand into the Deck, then draw the same number of cards.● Special Summon 1 Level 10 or higher monster from your your hand in Defense Positon.You can only activate 1 "Yubel's Descent" per turn.
+[14134395] to: Activate 1 of these effects.● Add 1 "Yubel" monster from your Deck to your hand, or if you control "Yubel", you can add 1 monster that mentions it instead.● Shuffle any number of Level 10 or higher monsters from your hand into the Deck, then draw the same number of cards.● Special Summon 1 Level 10 or higher monster from your your hand in Defense Positon.You can only activate 1 "Yubel's Descent" per turn.
+[14134395] note: property 'effect' of card id 1903194 (Yubel's Vendetta) was changed
+[14134395] from: If you control a"Yubel" monster or a monster that mentions "Yubel": Target 1 card on the field, then if you do not control a Level 12 "Yubel" monster, discard 1 card; destroy it. You can only use this effect of "Yubel's Vendetta" once per turn.
+[14134395] to: If you control a "Yubel" monster or a monster that mentions "Yubel": Target 1 card on the field, then if you do not control a Level 12 "Yubel" monster, discard 1 card; destroy it. You can only use this effect of "Yubel's Vendetta" once per turn.
+[main] note: [-] removed old card 3202575 (Red-Eyes Tenacity)
+[main] note: [-] removed old card 3202946 (Red-Eyes Metallic Inferno Dragon)
+[main] note: [-] removed old card 3499720 (Destined of Anrea)
+[main] note: [-] removed old card 3499779 (Gladiator of Anrea Raiko)
+[main] note: [-] removed old card 3560257 (Hunter of Anrea Lendaco)
+[main] note: [-] removed old card 3499729 (Spirit of Anrea Yuhiko)
+[main] note: [-] removed old card 3499714 (Call of the Lost Relics)
+[main] note: [-] removed old card 3499712 (Anreawakening)
+[main] note: [-] removed old card 3499730 (Nayra est Anrea)
+[main] note: [-] removed old card 3402708 (Anrea - Praétoan Planning)
+[main] note: [-] removed old card 3402689 (Anrea - Plagueric Power)
+[main] note: [-] removed old card 3499842 (Maana the Decaying Demon)
+[main] note: [-] removed old card 3545895 (Asurphiel the Just Judicator)
+[main] note: [-] removed old card 3545928 (Serell the Ceaseless Champion)
+[main] note: [-] removed old card 3547970 (Lethen the Ravishing Rider)
+[main] note: [-] removed old card 3545939 (Glarus the Pious Priest)
+[main] note: [-] removed old card 3545921 (Ascala the Gallant Guardian)
+[main] note: [-] removed old card 3561410 (Spirit of the Destined)
+[main] note: [-] removed old card 3265942 (Scrylak Hunter)
+[main] note: [-] removed old card 3267127 (Scrylak Scout)
+[main] note: [-] removed old card 3265961 (Scrylak Oracle)
+[main] note: [-] removed old card 1103134 (Cradling Wavering Winds)
+[main] note: [-] removed old card 1455462 (Elder of Wavering Winds)
+[main] note: [-] removed old card 1103172 (Kurari of Festive Wavering Winds)
+[main] note: [-] removed old card 1103224 (Majesdraco of Wavering Winds)
+[main] note: [-] removed old card 1926227 (Nimnim, Scientist Of Wavering Winds)
+[main] note: [-] removed old card 1103116 (Rez, Warrior of Wavering Winds)
+[main] note: [-] removed old card 1435306 (Windy, Wimstress of Wavering Winds)
+[main] note: [-] removed old card 1103217 (City of Wavering Winds)
+[main] note: [-] removed old card 1103204 (Return of the Wavering Winds)
+[main] note: [-] removed old card 1435270 (Roaring Wavering Winds)
+[main] note: [-] removed old card 1435248 (Whirling Wavering Winds)
+[main] note: [-] removed old card 1435227 (Jagustar, Beat of Wavering Winds)
+[main] note: [-] removed old card 1103234 (Nasuru, Harmony of Wavering Winds)
+[main] note: [-] removed old card 2065186 (Tempest Of Great Wavering Winds)
+[main] note: [-] removed old card 3314363 (Minion Hunter Darus)
+[main] note: [-] removed old card 3314375 (Minion Hunter Hanna)
+[main] note: [-] removed old card 3314401 (Mountain Minion of Air)
+[main] note: [-] removed old card 3314405 (Mountain Minion of Ice)
+[main] note: [-] removed old card 3314412 (Mountain Minion of Lava)
+[main] note: [-] removed old card 3314421 (Mountain Minion of Nature)
+[main] note: [-] removed old card 3314388 (Mountain Minion of Sun)
+[main] note: [-] removed old card 3314397 (Mountain Minion of Twilight)
+[main] note: [-] removed old card 3314426 (Conflict with the Mountain Minions)
+[main] note: [-] removed old card 3314446 (Minion Hunter Kara)
+[main] note: [-] removed old card 2790743 (Borrelfire Dragon)
+[main] note: [-] removed old card 2773292 (Borrelfire Stalwart Dragon)
+[main] note: [-] removed old card 2773267 (Borrelfire Future Dragon)
+[main] note: [-] removed old card 2773012 (Borrelfire eXalt Dragon)
+[main] note: [-] removed old card 3212205 (Butterfly Path)
+[main] note: [-] removed old card 3198074 (Reflection of a Past Trauma)
+[main] note: [-] removed old card 3212038 (Bond With A Powerful Patron)
+[main] note: [-] removed old card 3191848 (The Lost Tower of the Sun)
+[main] note: [-] removed old card 3198111 (Until Death Do Us Part)
+[main] note: [-] removed old card 3153501 (Assault Fur Hire)
+[main] note: [-] removed old card 3568797 (Flamiller Fiend)
+[main] note: [-] removed old card 3568822 (Flamiller Guard)
+[main] note: [-] removed old card 3568813 (Flamiller Piper)
+[main] note: [-] removed old card 3568818 (Flamiller Witch)
+[main] note: [-] removed old card 3568788 (Flamiller Crossbite)
+[main] note: [-] removed old card 3568781 (Flamiller Serpent)
+[main] note: [-] removed old card 3568833 (Flamiller Pyrviper)
+[main] note: [-] removed old card 3568838 (Flamiller Venomblast)
+[main] note: [-] removed old card 3568778 (Flamiller Fangking)
+[main] note: [-] removed old card 3568794 (Flamiller Snakqueen)
+[main] note: [-] removed old card 3641342 (Evil Eye Dystopian - Apophenia)
+[main] note: [-] removed old card 3641325 (Evil Eye Showdown)
+[main] note: [-] removed old card 3664715 (Pyrolisk, Familiar of the Evil Eye)
+[main] note: [-] removed old card 3663706 (Evil Eye Restoration)
+[main] note: [-] removed old card 3663754 (Cockatrice, Familiar of the Evil Eye)
+[main] note: [-] removed old card 3725759 (Dinomorphia Creation)
+[main] note: [-] removed old card 3454776 (Dinomorphia Brachioseismic)
+[main] note: [-] removed old card 3713749 (Dinomorphia Archaeoptis)
+[main] note: [-] removed old card 3815226 (Defector of the Remnant)
+[main] note: [-] removed old card 3713888 (Null-Eyes Omega)
+[main] note: [-] removed old card 3715362 (Null-Eyes Spiritual Omega)
+[main] note: [-] removed old card 3714935 (Omega Envoy)
+[main] note: [-] removed old card 3715316 (Omega Phoenix)
+[main] note: [-] removed old card 3715436 (Omega Encounter)
+[main] note: [-] removed old card 3715394 (Null-Eyes Ultimate Omega)
+[main] note: [-] removed old card 3016515 (Laval Kayenn)
+[main] note: [-] removed old card 3404581 (Dinomorphia Fury)
+[main] note: [-] removed old card 3324475 (Entropy Beast Sintonizza)
+[main] note: [-] removed old card 3566391 (Conscription to the Entropy King)
+[main] note: [-] removed old card 3324512 (Entropy King's Servant Orrore)
+[main] note: [-] removed old card 4114279 (Red Moon of Mikazukinoyaiba)
+[main] note: [-] removed old card 4114184 (Moon Sword of the Dragon)
+[main] note: [-] removed old card 4114172 (Mikazukinoyaiba - the Dragon of the Moon Swords)
+[main] note: [-] removed old card 4129246 (Orcust Tone Terror)
+[main] note: [-] removed old card 2158574 (Emissary of Entropy)
+[main] note: [-] removed old card 1574208 (Armatos Legio Sica)
+[main] note: [-] removed old card 1630476 (Honey, Mechaneer's Rebel)
+[main] note: [-] removed old card 1630453 (Darling, Mechaneer's Complex)
+[main] note: [-] removed old card 1630434 (Rose, Mechaneer's Purifier)
+[main] note: [-] removed old card 1630491 (Twinguns, Mechaneer's Duo)
+[main] note: [-] removed old card 1630450 (Mechaneer's Tricksleeves)
+[main] note: [-] removed old card 1631666 (Mechaneer's Anchor Assembly)
+[main] note: [-] removed old card 1630465 (Mechaneer's Descent)
+[main] note: [-] removed old card 1630464 (Rigid, Mechaneer's Specster)
+[main] note: [-] removed old card 1630442 (Lin, Mechaneer's Skyraid)
+[main] note: [-] removed old card 1631589 (Sloan, Mechaneer's Bulwark)
+[main] note: [-] removed old card 3013728 (Sky Striker Mobilize - Unleash!)
+[main] note: [-] removed old card 3649425 (Ronggeng, Fright of the Burning Abyss)
+[main] note: [-] removed old card 1582197 (Dr. Faust)
+[main] note: [-] removed old card 1582201 (Gretchen, Faust's Grace)
+[main] note: [-] removed old card 1582195 (Faustian Pact)
+[main] note: [-] removed old card 1805002 (Cosmech Captain)
+[main] note: [-] removed old card 1805110 (Cosmech Curious Technician)
+[main] note: [-] removed old card 1805008 (Cosmech Fireflighter)
+[main] note: [-] removed old card 1805014 (Cosmech Repair Kit)
+[main] note: [-] removed old card 1805085 (Cosmech Blazing Warp)
+[main] note: [-] removed old card 1804942 (Cosmech Reparation)
+[main] note: [-] removed old card 1804993 (Cosmech Expedition)
+[main] note: [-] removed old card 1805038 (Cosmech Research Vessel)
+[main] note: [-] removed old card 1805052 (Cosmech E.C.D.)
+[main] note: [-] removed old card 1805069 (Cosmech Auxiliary Driver)
+[main] note: [-] removed old card 1805032 (Cosmech Miner)
+[main] note: [-] removed old card 1805719 (Cosmech Primary Pilot)
+[main] note: [-] removed old card 2019198 (Lust, Lady of Lament)
+[main] note: [-] removed old card 2019215 (Shadus, the Wicked Reaper)
+[main] note: [-] removed old card 2019237 (Tormenting Tricks)
+[main] note: [-] removed old card 1731132 (O.F.F Worker Elsen)
+[main] note: [-] removed old card 1733162 (O.F.F The Ballville Ballman)
+[main] note: [-] removed old card 2190820 (Kitsento Natasha)
+[main] note: [-] removed old card 2190834 (Kitsento Sohra)
+[main] note: [-] removed old card 2190836 (Kitsento Dextras)
+[main] note: [-] removed old card 2190823 (Kitsento Madeline)
+[main] note: [-] removed old card 2190867 (Kitsento Rest)
+[main] note: [-] removed old card 2190849 (Kitsento Stratagem)
+[main] note: [-] removed old card 2190847 (Kitsento Arts of War)
+[main] note: [-] removed old card 3280724 (Thunder Metaphys Colossus)
+[main] note: [-] removed old card 3073439 (Metaphys Totem Dragon)
+[main] note: [-] removed old card 3033292 (Lord of W.)
+[main] note: [-] removed old card 3331809 (Paladin of Metaphys Dragon)
+[main] note: [-] removed old card 3280751 (Metaphys Star Eater)
+[main] note: [-] removed old card 1957466 (Perceval, Knight of the Underworld)
+[main] note: [-] removed old card 2021105 (Performage Cup Tricker)
+[main] note: [-] removed old card 2021081 (Performage Greedy Goblin)
+[main] note: [-] removed old card 1986541 (Supreme Skeleton Serpent)
+[main] note: [-] removed old card 1972910 (Cataclysmic Spiritual Art - Owari)
+[main] note: [-] removed old card 1976636 (Color Flash)
+[main] note: [-] removed old card 1957401 (Early Opening of the Sarcophagus)
+[main] note: [-] removed old card 1953298 (From the Palm of the Solar Sorcerer)
+[main] note: [-] removed old card 1957432 (Future Sight)
+[main] note: [-] removed old card 925666 (Jar Reborn)
+[main] note: [-] removed old card 925717 (Jar Warehouse)
+[main] note: [-] removed old card 1958133 (Knights of the Underworld)
+[main] note: [-] removed old card 1953301 (Material Reinforcements)
+[main] note: [-] removed old card 2029420 (Moment of Momentum)
+[main] note: [-] removed old card 1953248 (Pertinent)
+[main] note: [-] removed old card 1957398 (Pot of Relief)
+[main] note: [-] removed old card 1953295 (Rank Suppression Zone)
+[main] note: [-] removed old card 2057172 (Robbing the Treasury of Camelot)
+[main] note: [-] removed old card 1953250 (Suitable)
+[main] note: [-] removed old card 1957423 (Sun Mirror Shield)
+[main] note: [-] removed old card 1984594 (The Heavenly City)
+[main] note: [-] removed old card 1953290 (Xyz Recurance)
+[main] note: [-] removed old card 2281078 (Pendulum’s Swing)
+[main] note: [-] removed old card 1990772 (Chaos Dragon Knight)
+[main] note: [-] removed old card 1990808 (Chimera, Apex of All Chimera)
+[main] note: [-] removed old card 1990817 (Combo Meal #1)
+[main] note: [-] removed old card 1990799 (Hideous Hazardous Coaster Crasher)
+[main] note: [-] removed old card 1990816 (Steam King Avatar of the Sunken City)
+[main] note: [-] removed old card 1990812 (The Last of Days)
+[main] note: [-] removed old card 1101630 (Junk Drummer)
+[main] note: [-] removed old card 2458773 (Jester Archfiend)
+[main] note: [-] removed old card 1990823 (Silent Soul - Umbral Abyss)
+[main] note: [-] removed old card 1990820 (Super Duper Robolady)
+[main] note: [-] removed old card 1990819 (Super Duper Roboyarou)
+[main] note: [-] removed old card 1990806 (The Ultimate Defense)
+[main] note: [-] removed old card 1990801 (The Ultimate Offense)
+[main] note: [-] removed old card 1995485 (Archangel from the Sanctuary in the Sky)
+[main] note: [-] removed old card 1996492 (Beast on the Mountain Top)
+[main] note: [-] removed old card 1995477 (Cursed Raven of Eternity)
+[main] note: [-] removed old card 1995495 (Dragon of Rapture's Descent)
+[main] note: [-] removed old card 1995480 (Hijacked Consciousness)
+[main] note: [-] removed old card 1996496 (Merciless Murderer)
+[main] note: [-] removed old card 1996484 (Spirit of Chromatic Light)
+[main] note: [-] removed old card 1996503 (Split Samurais)
+[main] note: [-] removed old card 2598984 (Freya's Blessing)
+[main] note: [-] removed old card 2203356 (Leo, Leader Fur Hire)
+[main] note: [-] removed old card 2203343 (Wera, Assassin Fur Hire)
+[main] note: [-] removed old card 2204625 (Woolf, Rampager Fur Hire)
+[main] note: [-] removed old card 2681514 (Foxy, Arcane Mage Fur Hire)
+[main] note: [-] removed old card 2203587 (Sprigg, Archer Fur Hire)
+[main] note: [-] removed old card 2760097 (Fairy Tail - Ariel)
+[main] note: [-] removed old card 2760100 (Fairy Tail - Red)
+[main] note: [-] removed old card 2769380 (Cute Fairy Tail)
