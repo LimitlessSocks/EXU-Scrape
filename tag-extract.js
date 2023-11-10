@@ -175,6 +175,16 @@ const INDICATORS = [
         dateCompare: getComparison(match[1]),
         date: match[2],
     })).rememberParameter(),
+    new TagIndicator(/(?:ac|attr(?:ibute)?count|#attr(?:ibute)?)\s*(>=?|<=?|[/!]?==?)?\s*(\d+)/i, (match) => ({
+        type: "monster",
+        attributeCountCompare: getComparison(match[1]),
+        attributeCount: match[2],
+    })).rememberParameter(),
+    new TagIndicator(/(?:tc|typecount|#type)\s*(>=?|<=?|[/!]?==?)?\s*(\d+)/i, (match) => ({
+        type: "monster",
+        typeCountCompare: getComparison(match[1]),
+        typeCount: match[2],
+    })).rememberParameter(),
     new TagIndicator(/link(?:[- ]|\s*(>=?|<=?|[/!]?==?))?\s*(\d+)\s*(or\s*(higher|more|lower|less))?/i, (match) => ({
         type: "monster",
         monsterCategory: "link",

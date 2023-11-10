@@ -1008,6 +1008,28 @@ CardViewer.createFilter = function (query, exclude = null) {
         }
     }
     
+    if(query.attributeCount) {
+        let attributeCount = parseInt(query.attributeCount, 10);
+        if(!Number.isNaN(attributeCount)) {
+            filters.push(CardViewer.comparingComparator(
+                attributeCount,
+                query.attributeCountCompare || "equal",
+                _F.propda("attribute_count")
+            ));
+        }
+    }
+    
+    if(query.typeCount) {
+        let typeCount = parseInt(query.typeCount, 10);
+        if(!Number.isNaN(typeCount)) {
+            filters.push(CardViewer.comparingComparator(
+                typeCount,
+                query.typeCountCompare || "equal",
+                _F.propda("type_count")
+            ));
+        }
+    }
+    
     if(query.atk) {
         filters.push(CardViewer.comparingComparator(
             query.atk,

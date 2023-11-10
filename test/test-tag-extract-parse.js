@@ -498,6 +498,30 @@ const TEST_CASES = [
         { type: "monster", level: "2", levelCompare: "equal" },
         { type: "monster", atk: "500", atkCompare: "equal" },
     ]],
+    ["ac 2", [
+        { type: "monster", attributeCount: "2", attributeCountCompare: "equal" },
+    ]],
+    ["attributecount > 1", [
+        { type: "monster", attributeCount: "1", attributeCountCompare: "greater" },
+    ]],
+    ["attrcount 5", [
+        { type: "monster", attributeCount: "5", attributeCountCompare: "equal" },
+    ]],
+    ["#attr <= 2", [
+        { type: "monster", attributeCount: "2", attributeCountCompare: "lessequal" },
+    ]],
+    ["#attribute = 3", [
+        { type: "monster", attributeCount: "3", attributeCountCompare: "equal" },
+    ]],
+    ["tc 2", [
+        { type: "monster", typeCount: "2", typeCountCompare: "equal" },
+    ]],
+    ["typecount > 1", [
+        { type: "monster", typeCount: "1", typeCountCompare: "greater" },
+    ]],
+    ["#type <= 2", [
+        { type: "monster", typeCount: "2", typeCountCompare: "lessequal" },
+    ]],
 ];
 
 module.exports = function testTagExtractParse(debug = false) {
