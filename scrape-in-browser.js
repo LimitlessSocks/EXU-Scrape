@@ -71,7 +71,20 @@ const exuBrowserScraper = {
             }
         }
         
-        this.workingComposite[deckId] = deckData;
+        if(!deckData) {
+            let deckName = [
+                ...document.getElementById("decklist_cb").children
+            ]
+                .find(child => child.value == deckId)
+                .textContent;
+            console.warn(
+                "Could not download decklist", deckId,
+                "named", deckName
+            );
+        }
+        else {
+            this.workingComposite[deckId] = deckData;
+        }
     },
     async scrapeAll(ids = null) {
         ids ??= this.getAllDecks();
