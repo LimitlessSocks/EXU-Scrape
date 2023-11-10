@@ -69,6 +69,8 @@ new_database.each { |card_id, card|
                 end
             end
         }
+    elsif old_card.nil?
+        log deck_id, "note: [+] added new card #{display_text}"
     end
     # log deck_id, "Finished scraping."
 }
