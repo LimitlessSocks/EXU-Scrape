@@ -25,11 +25,11 @@ def normalize_card!(card)
     extra_names = []
     
     card["also_archetype"] ||= nil
-    # TODO: fix date property
-    card["date"] ||= nil
+    # TODO: fix date property for customs (format YYYY-MM-DD)
+    card["date"] ||= card["tcg_date"] || nil
     card["exu_limit"] ||= card["tcg_limit"] || 3
     
-    # TODO: banlist information
+    # TODO: original level?
     
     # also always
     if card["effect"] =~ /\(.*This card is also always treated as an?(.+?)(?:monster|card).*\)/
@@ -94,9 +94,31 @@ data.each { |card_id, card|
 
 # TODO: interact with alt arts?
 banlist = JSON::parse File.read "banlist.json"
+
+# sanity check for duplicates
+places_occurred = {}
+duplicate_ids = []
+
+# Iterate through each banlist
+%w(banned limited semi_limited unlimited).each { |list_name|
+    ids = banlist[list_name]
+    ids.each { |id|
+        places_occurred[id] ||= []
+        places_occurred[id] << list_name
+        if places_occurred[id].size == 2
+            # we only want to add the duplicate once, so == 2 is the first time we see a duplicate
+            duplicate_ids << id
+        end
+    }
+}
+
+duplicate_ids.each { |id|
+    puts "Warning: Card ID #{id} is duplicated in #{places_occurred[id] * "; "}"
+}
+
 banlist["banned"].each { |id| data[id.to_s]["exu_limit"] = 0 }
 banlist["limited"].each { |id| data[id.to_s]["exu_limit"] = 1 }
-banlist["semi-limited"].each { |id| data[id.to_s]["exu_limit"] = 2 }
+banlist["semi_limited"].each { |id| data[id.to_s]["exu_limit"] = 2 }
 banlist["unlimited"].each { |id| data[id.to_s]["exu_limit"] = 3 }
 
 puts "Writing normalized results to db-tmp.json..."

@@ -50,10 +50,22 @@ let onLoad = async function () {
     CardViewer.linkRetrain = true;
     
     // local testing
-    let response = await fetch("./banlist.json");
+    let response = await fetch("./db.json");
     // let response = await fetch("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/banlist.json");
     let db = await response.json();
-    CardViewer.Database.setInitial(db);
+    
+    const banlistInfoResponse = await fetch("./banlist.json");
+    const banlistInfo = await banlistInfoResponse.json();
+    const NewCards = banlistInfo.newly_changed;
+    
+    // remove irrelevant cards from our local database
+    const relevantCards = Object.values(banlistInfo).flatMap(list => list);
+    let finalDb = {};
+    for(let id of relevantCards) {
+        finalDb[id] = db[id];
+    }
+    
+    CardViewer.Database.setInitial(finalDb);
     
     CardViewer.Elements.results = $("#results");
     CardViewer.Elements.tableOfContents = $("#toc");
@@ -74,13 +86,6 @@ let onLoad = async function () {
     });
     
     let tags = ["Forbidden", "Limited", "Semi-Limited", "Unlimited"];
-    
-    const NewCards = [
-        5793, 884, 13840, 13869, 2272, 13895, 13904, 13837, 2102, 2784, 12717,
-        4546, 9551, 9639, 10198, 12964, 2952, 10855, 9138, 864, 12986, 1559,
-        2230, 13326, 2966, 3300, 9775, 11051, 5788, 12420, 11553, 7192, 9079,
-        12112, 9391, 8429, 8407,
-    ];
     
     const GradeFilters = [
         CardViewer.Filters.isNormal,
