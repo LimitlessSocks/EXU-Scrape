@@ -1231,6 +1231,26 @@ const getLinkArrowText = (arrows) => {
     return result;
 };
 
+const setMonsterAttributeIcons = (card, attribute) => {
+    if(card.attribute_count > 1) {
+        attribute = [ attribute ];
+        while(attribute.length < card.attribute_count) {
+            attribute.push(attribute[0].clone());
+        }
+        card.attribute.split("/").forEach((attr, i) => {
+            attribute[i].attr("src", getAttribute(attr));
+        });
+    }
+    else if(card.attribute_count === 0) {
+        attribute = [];
+    }
+    else {
+        attribute.attr("src", getAttribute(card.attribute));
+    }
+    
+    return attribute;
+};
+
 // CardViewer.
 CardViewer.composeResultSmall = function (card) {
     card.src = card.src || (
@@ -1277,7 +1297,7 @@ CardViewer.composeResultSmall = function (card) {
     
     let linkArrows;
     if(card.card_type === "Monster") {
-        attribute.attr("src", getAttribute(card.attribute))
+        attribute = setMonsterAttributeIcons(card, attribute);
         let kind = [];
         
         let levelIndicator;
@@ -1437,7 +1457,7 @@ CardViewer.composeResult = function (card) {
     
     let linkArrows;
     if(card.card_type === "Monster") {
-        attribute.attr("src", getAttribute(card.attribute))
+        attribute = setMonsterAttributeIcons(card, attribute);
         let kind = [];
         
         let levelIndicator;
