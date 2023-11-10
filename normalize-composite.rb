@@ -82,8 +82,12 @@ def normalize_card!(card)
     end
     
     # update accordingly
-    card["attribute"] = ([card["attribute"]] + extra_attributes).join " "
-    card["type"] = ([card["type"]] + extra_types).join " "
+    # we join attributes/types by "/", but names by " "
+    # this makes parsing out separate types/attributes easier, but does not introduce an unexpected artifact with also_archetype
+    card["attribute"] = ([card["attribute"]] + extra_attributes).join "/"
+    card["type"] = ([card["type"]] + extra_types).join "/"
+    card["attribute_count"] = card["attribute"].count("/") + 1
+    card["type_count"] = card["type"].count("/") + 1
     card["also_archetype"] = extra_names.join " "
 end
 
