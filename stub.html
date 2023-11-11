@@ -1,0 +1,30 @@
+<script>
+let [ , id ] = window.location.search.match(/id=(\d+)/);
+console.log(id);
+
+window.side_arr = window.deck_arr = window.extra_arr = [];
+
+const addCard = (deck, info) => {
+    deck.push({ data() { return info; } });
+};
+
+let string;
+if(id === "6774584") {
+    string = JSON.stringify({ action: "Error" });
+}
+else {
+    string = JSON.stringify({ action: "Complete" })
+}
+function loadDeckComplete(string) {
+    console.log("pretend i'm processing");
+    addCard(side_arr, { "name": "Test 1", "monster_color":"Effect" });
+    addCard(deck_arr, { "name": "Test 2", "monster_color":"Ritual" });
+    addCard(extra_arr, { "name": "Test 3", "monster_color":"Fusion" });
+};
+
+
+setTimeout(() => {
+    loadDeckComplete(string);
+}, 500);
+
+</script>

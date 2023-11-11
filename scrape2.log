@@ -1,0 +1,30 @@
+{ "type": "Archetype", "id": "5597068", "name": "Goo-T" },
+Deck deleted: {"type"=>"Archetype", "id"=>"5781120", "name"=>"Stars"}
+Deck deleted: {"type"=>"Archetype", "id"=>"6135219", "name"=>"The Parallel"}
+Deck deleted: {"type"=>"Archetype", "id"=>"6256752", "name"=>"Concept of Reality"}
+Deck deleted: {"type"=>"Archetype", "id"=>"6733479", "name"=>"Ookazi"}
+Deck deleted: {"type"=>"Archetype", "id"=>"6793361", "name"=>"Lacrimosa"}
+[2023-10-27 00:17:20 -0400] Starting...
+[2023-10-27 00:17:20 -0400] Recovering from error:
+"Interrupt"
+[2023-10-27 00:17:25 -0400] Captcha encountered
+[2023-10-27 00:20:36 -0400] Missing deck {"type"=>"Archetype", "id"=>"6516859", "name"=>"E^rabastel"}
+[2023-10-27 00:20:51 -0400] Captcha encountered
+[2023-10-27 00:21:51 -0400] Captcha encountered
+[2023-10-27 00:22:28 -0400] Captcha encountered
+[2023-10-27 00:24:22 -0400] Captcha encountered
+[2023-10-27 00:25:21 -0400] Time elapsed: 481.0688762s
+[2023-10-27 00:25:21 -0400] Stopping due to error:
+"Interrupt"
+[2023-10-27 00:28:03 -0400] Starting...
+[2023-10-27 00:28:03 -0400] Recovering from error:
+"Interrupt"
+[2023-10-27 00:28:12 -0400] Captcha encountered
+[2023-10-27 00:29:07 -0400] Missing deck {"type"=>"Archetype", "id"=>"9051430", "name"=>"Deadly Waters"}
+[2023-10-27 00:29:13 -0400] Captcha encountered
+[2023-10-27 00:31:12 -0400] Missing deck {"type"=>"Archetype", "id"=>"7586564", "name"=>"Straw Hat"}
+[2023-10-27 00:31:15 -0400] Captcha encountered
+[2023-10-27 00:32:43 -0400] Captcha encountered
+[2023-10-27 00:32:45 -0400] Time elapsed: 282.3354242s
+[2023-10-27 00:32:45 -0400] Stopping due to error:
+"Interrupt"
