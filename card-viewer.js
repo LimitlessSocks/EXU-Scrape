@@ -75,32 +75,33 @@ const escapeXMLString = (str) =>
 const DB_DATE_FORMAT = /(.{4})-(.{2})-(.{2})/; // year-month-day
 const EXU_DATE_FORMAT = /(.{2})-(.{2})-(.{4})\.(.{2})\.(.{2})\.(.{2})/; // month-day-year.hour.minute.second
 const DISPLAY_DATE_FORMAT = /(.{2})\/(.{2})\/(.{4})/; // month/day/year
-const formatDateAdded = (date, raw=false) => {
+const formatDateAdded = (date) => {
+    console.log(date);
     let fmt, year, month, day, hour, minute, second;
-    let action;
+    // let action;
     if(fmt = DB_DATE_FORMAT.exec(date)) {
         [, year, month, day] = fmt;
-        action = "Released";
+        // action = "Released";
     }
     else if(fmt = EXU_DATE_FORMAT.exec(date)) {
         [, month, day, year, hour, minute, second] = fmt;
-        action = "Integrated";
+        // action = "Integrated";
     }
     else if(fmt = DISPLAY_DATE_FORMAT.exec(date)) {
         [, month, day, year] = fmt;
-        action = null;
+        // action = null;
     }
     
     let str = month + "/" + day + "/" + year;
     
-    if(!raw && action) {
-        str = action + " " + str;
-    }
+    // if(!raw && action) {
+        // str = action + " " + str;
+    // }
     
     return str;
 };
 const getComparableDate = (date) => {
-    let dateString = formatDateAdded(date, true);
+    let dateString = formatDateAdded(date);
     return new Date(dateString);
 };
 
@@ -1447,7 +1448,8 @@ CardViewer.composeResult = function (card) {
     let author = $("<h4 class=result-author>").text(card.username);
     let dateAdded = $("<h4 class=result-date>");
     if(card.date) {
-        dateAdded.text(formatDateAdded(card.date));
+        let action = card.custom && card.custom > 0 ? "Integrated " : "Released ";
+        dateAdded.text(action + formatDateAdded(card.date));
     }
     
     let res = $("<div class=result>");

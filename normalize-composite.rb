@@ -18,6 +18,11 @@ ATTRIBUTES = %w(
 ATTRIBUTES_REG = Regexp.new ATTRIBUTES.join "|"
 NAME_REGEX = /"((?:".*?")?(?: ".*?"|[^"])+|"[^"]+")"/
 
+puts "Calling date manage..."
+system "ruby date-manage.rb"
+$date_data = JSON::parse File.read "db-dates.json"
+$no_date = []
+
 def normalize_card!(card)
     # TODO: use treated_as property?
     extra_types = []
@@ -25,9 +30,20 @@ def normalize_card!(card)
     extra_names = []
     
     card["also_archetype"] ||= nil
-    # TODO: fix date property for customs (format YYYY-MM-DD)
     card["date"] ||= card["tcg_date"] || nil
     card["exu_limit"] ||= card["tcg_limit"] || 3
+    
+    # TODO: abstract this check into a single consistent function
+    if card["custom"] && card["custom"] > 0
+        # TODO: do we want to override like this, instead of `||=`?
+        new_date_info = $date_data["added"][card["id"].to_s]
+        if new_date_info && !new_date_info.empty?
+            most_recent = new_date_info[0]["date"]
+            card["date"] = most_recent
+        else
+            $no_date << card["id"]
+        end
+    end
     
     # TODO: original level?
     
@@ -124,6 +140,7 @@ duplicate_ids = []
 duplicate_ids.each { |id|
     puts "Warning: Card ID #{id} is duplicated in #{places_occurred[id] * "; "}"
 }
+puts "Warning: No associated date for cards with id: #{$no_date}"
 
 banlist["banned"].each { |id| data[id.to_s]["exu_limit"] = 0 }
 banlist["limited"].each { |id| data[id.to_s]["exu_limit"] = 1 }
