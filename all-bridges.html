@@ -24,8 +24,14 @@
         .inline-result {
             display: inline-block;
         }
-        #search-filter {
+        #any-filter {
             width: 60ch;
+        }
+        .search-container {
+            display: flex;
+        }
+        .search-container > * {
+            padding: 15px;
         }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -37,7 +43,12 @@
 <h1 id="top">EXU Small Bridge Finder</h1>
 <p><input type="file" id="deck-input" accept=".xml"> <button id="find-submit">Find</button></p>
 <h2>Results</h2>
-Refine search: <input id="search-filter">
+<label for="any-filter">Refine search (anywhere): <input id="any-filter"></label>
+<div class="search-container">
+    <label for="hand-filter">Card in hand: <input id="hand-filter"></label>
+    <label for="bridge-filter">Bridge: <input id="bridge-filter"></label>
+    <label for="deck-filter">Card in Deck: <input id="deck-filter"></label>
+</div>
 <div id="message-holder">
 <i>Upload a file and press "Find".</i>
 </div>

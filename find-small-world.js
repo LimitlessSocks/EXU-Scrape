@@ -57,12 +57,24 @@ window.addEventListener("load", async function () {
     const messageHolder = $("#message-holder");
     const deckInput = $("#deck-input");
     const updateSearch = () => {
-        let value = $("#search-filter").val().toLowerCase();
+        console.log("Change!");
+        let anyValue = $("#any-filter").val().toLowerCase();
+        let handValue = $("#hand-filter").val().toLowerCase();
+        let bridgeValue = $("#bridge-filter").val().toLowerCase();
+        let deckValue = $("#deck-filter").val().toLowerCase();
         $("#message-holder > *").each(function() {
-            $(this).toggle($(this).text().toLowerCase().includes(value));
+            // console.log(this.children);
+            let showThis = $(this).text().toLowerCase().includes(anyValue);
+            showThis &&= this.children[0].textContent.toLowerCase().includes(handValue)
+                && this.children[1].textContent.toLowerCase().includes(bridgeValue)
+                && this.children[2].textContent.toLowerCase().includes(deckValue);
+            $(this).toggle(showThis);
         });
     };
-    $("#search-filter").change(updateSearch);
+    $("#any-filter, #hand-filter, #bridge-filter, #deck-filter").each(function() {
+        $(this).change(updateSearch);
+        $(this).keydown(updateSearch);
+    });
     $("#find-submit").click(function () {
         let file = deckInput[0].files[0];
         // console.log(file);
