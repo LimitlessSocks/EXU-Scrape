@@ -37,6 +37,11 @@ def normalize_card!(card)
     if card["custom"] && card["custom"] > 0
         # TODO: do we want to override like this, instead of `||=`?
         new_date_info = $date_data["added"][card["id"].to_s]
+        if card["id"].to_s == "21570"
+            puts "!!!"
+            p card["name"]
+            p new_date_info
+        end
         if new_date_info && !new_date_info.empty?
             most_recent = new_date_info[0]["date"]
             card["date"] = most_recent

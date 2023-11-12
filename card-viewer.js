@@ -76,7 +76,6 @@ const DB_DATE_FORMAT = /(.{4})-(.{2})-(.{2})/; // year-month-day
 const EXU_DATE_FORMAT = /(.{2})-(.{2})-(.{4})\.(.{2})\.(.{2})\.(.{2})/; // month-day-year.hour.minute.second
 const DISPLAY_DATE_FORMAT = /(.{2})\/(.{2})\/(.{4})/; // month/day/year
 const formatDateAdded = (date) => {
-    console.log(date);
     let fmt, year, month, day, hour, minute, second;
     // let action;
     if(fmt = DB_DATE_FORMAT.exec(date)) {
@@ -1135,8 +1134,11 @@ CardViewer.createFilter = function (query, exclude = null) {
     return filter;
 };
 
+const ONE_YEAR_FROM_NOW = Date.now() + 365 * 24 * 60 * 60 * 1000;
 const SortByPropertyMap = {
-    text: (card) => card.effect.length + (card.pendulum_effect || "").length
+    text: (card) => card.effect.length + (card.pendulum_effect || "").length,
+    // add a year from today's date when comparing cards to shove null dated cards to the end
+    date: (card) => new Date(card.date ?? ONE_YEAR_FROM_NOW),
 };
 //SortByIsNumber
 const SortByFunction = {
@@ -1170,12 +1172,14 @@ CardViewer.filter = function (query, exclude = null) {
     // console.log("AFTER:", CardViewer.caseSensitive);
     
     let sortByProperty = query.sortBy;
-    if(typeof sortByProperty === "undefined")
+    if(typeof sortByProperty === "undefined") {
         sortByProperty = CardViewer.Search.config.sortByProperty;
+    }
     
     let sortOrder = query.sortOrder;
-    if(typeof sortOrder === "undefined")
+    if(typeof sortOrder === "undefined") {
         sortOrder = CardViewer.Search.config.sortOrder;
+    }
     
     if(sortByProperty in SortByPropertyMap) {
         sortByProperty = SortByPropertyMap[sortByProperty];

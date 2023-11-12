@@ -69,6 +69,18 @@ base.each { |id, card|
     # break
 }
 
+
+log "deduce", "Applying date overrides"
+overrides = JSON::parse File.read("#{param}-dates-override.json")
+overrides.each { |card_id, value|
+    METHODS.each { |meth|
+        if value[meth]
+            date_added[meth][card_id] ||= []
+            date_added[meth][card_id] += value[meth]
+        end
+    }
+}
+
 # separate date and time
 METHODS.each { |method|
     date_added[method].each { |card_id, values|
@@ -84,6 +96,6 @@ METHODS.each { |method|
 
 log "deduce", "Done sorting DB"
 
-# TODO: add overrides json to implement old "add" pair feature
 File.write "#{OUTPUT_DATES}.json", date_added.to_json
 log "main", "Outputed to #{OUTPUT_DATES}.json"
+

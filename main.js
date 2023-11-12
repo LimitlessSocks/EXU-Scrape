@@ -1,12 +1,13 @@
 let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
-// baseURL = "./";
-window.ycgDatabase = baseURL + "ycg.json";
+baseURL = "./";
+// window.ycgDatabase = baseURL + "ycg.json";
 window.exuDatabase = baseURL + "db.json";
 
 // window.databaseToUse = baseURL + "/users/LimitlessSocks.json";
 
 let loadDatabase = async function () {
-    await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
+    // await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
+    await CardViewer.Database.initialReadAll(exuDatabase);
     CardViewer.excludeTcg = false;
     CardViewer.showImported = true;
 };
