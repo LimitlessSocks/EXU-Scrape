@@ -76,11 +76,14 @@ def normalize_card!(card)
         # p card
     end
     # name always change
-    if card["effect"] =~ /\(This (?:card|monster).?s name is always treated as "(.+?)".*\)/
+    if card["effect"] =~ /\(This (?:card|monster).?s name is always treated as ["“”](.+?)["“”].*\)/
         card["treated_as"] = $1
     end
     # name also always change
-    if card["effect"] =~ /\(This (?:card|monster).?s name is also always treated as "(.+?)".*\)/
+    if card["effect"] =~ /\(This (?:card|monster).?s name is also always treated as ["“”](.+?)["“”].*\)/
+        extra_names << $1
+    end
+    if card["effect"] =~ /\(This (?:card|monster) is (?:also )?always treated as an? ["“”](.+?)["“”].*\)/
         extra_names << $1
     end
     
