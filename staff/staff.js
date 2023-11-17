@@ -38,18 +38,21 @@ window.addEventListener("load", function () {
             }
         }
         // TODO: better consolidation, this assumes just one logical guideline
+        // gives each h2 an ID
         for(let header of md.querySelectorAll("h2")) {
             // console.log(header);
             let match = header.textContent.match(/^(\d+)\./)?.[1];
             if(match) {
                 header.id = `${SECTION_HANDLE}-${match}`;
+                let refLink = document.createElement("a");
+                refLink.classList.add("reflink");
+                refLink.href = `#${header.id}`;
+                refLink.textContent = "#";
+                header.appendChild(refLink);
             }
-            let refLink = document.createElement("a");
-            refLink.classList.add("reflink");
-            refLink.href = `#${header.id}`;
-            refLink.textContent = "#";
-            header.appendChild(refLink);
         }
+        
+        // give item ids to each bulletpoint
         for(let li of md.querySelectorAll("li")) {
             let parentOl = li.parentNode;
             let myIndex = [...parentOl.children].indexOf(li) + 1;
@@ -68,6 +71,27 @@ window.addEventListener("load", function () {
                     .slice(ITEM_HANDLE.length + 1);
             }
             li.id = `${ITEM_HANDLE}-${parentReference}.${myIndex}`;
+        }
+        
+        // populates table of contents
+        let tocHead = [...document.querySelectorAll("h2")].find(header => header.textContent === "TOC");
+        if(tocHead) {
+            tocHead.id = "TOC";
+            tocHead.textContent = "Table of Contents";
+            let baseList = document.createElement("ul");
+            for(let header of document.querySelectorAll("h2")) {
+                if(header.id === "TOC") {
+                    continue;
+                }
+                let li = document.createElement("li");
+                let anchor = document.createElement("a");
+                anchor.href = `#${header.id}`;
+                anchor.textContent = `§${header.childNodes[0].textContent}`;
+                li.appendChild(anchor);
+                baseList.appendChild(li);
+                // let nextOl = header.nextElementSibling;
+            }
+            tocHead.after(baseList);
         }
     }
     
