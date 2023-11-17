@@ -1,0 +1,54 @@
+article {
+    background-color: rgba(30,30,30,0.8);
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 15px;
+}
+.md h1 {
+    font-size: 2em;
+    border-bottom: 1px solid;
+    margin-bottom: 6px;
+}
+.md h1.draft {
+    font-size: 3em;
+    color: red;
+    border-bottom: none;
+}
+.md h2 {
+    font-size: 1.5em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    margin-bottom: 6px;
+}
+.md h3 {
+    font-size: 1.3em;
+}
+.md h4 {
+    font-size: 1.2em;
+}
+.md h5 {
+    font-size: 1.1em;
+}
+.md h6 {
+    font-size: 1em;
+}
+.md li > strong:first-child {
+    text-decoration: underline;
+}
+li {
+    line-height: 29px;
+    /* margin-bottom: 10px; */
+}
+.reflink {
+    opacity: 0.5;
+    /* margin-left: 1ch; */
+    float: left;
+    margin-right: 1ch;
+}
+.reflink:hover {
+    opacity: 1;
+}
+.highlight {
+    background-color: rgba(255, 255, 255, 0.3);
+}
