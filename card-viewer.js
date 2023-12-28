@@ -2,6 +2,7 @@ const CardViewer = {
     autoSearch: false,
     Database: {
         cards: null,
+        cardsIdsByName: null,
     },
     Filters: {
         Dictionary: null,
@@ -29,6 +30,26 @@ const isNode = typeof window === "undefined";
 if(isNode) {
     window = { DEBUG: false };
 }
+
+CardViewer.initCardIdsByName = () => {
+    CardViewer.Database.cardsIdsByName = {};
+    for(let card of Object.values(CardViewer.Database.cards)) {
+        let key = card.name.toLowerCase();
+        CardViewer.Database.cardsIdsByName[key] ??= [];
+        CardViewer.Database.cardsIdsByName[key].push(card.id);
+    }
+};
+CardViewer.getCardByName = name => {
+    if(!CardViewer.Database.cardsIdsByName) {
+        CardViewer.initCardIdsByName();
+    }
+    return CardViewer.Database.cards[
+        CardViewer.Database.cardsIdsByName[name.toLowerCase()]?.[0]
+    ];
+};
+
+CardViewer.getCardLink = card =>
+    `https://limitlesssocks.github.io/EXU-Scrape/card?id=${card.id}`;
 
 // some constants
 const CATEGORY_RETRAIN = 1;

@@ -5,3 +5,7 @@
  3. Run `normalize-composite.rb`, generating `db-tmp.json`
  4. Run `note-differences.rb`, generating scrape info. If just changing normalization process, run `cp db-tmp.json db.json`.
  5. Run `finalize-scrape.rb`, generating `db.json`
+
+# Updating banlist
+ 1. Run `normalize-composite.rb`, generating `db-tmp.json`
+ 2. Run `cp db-tmp.json db.json`.

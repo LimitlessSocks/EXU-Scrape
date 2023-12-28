@@ -21,6 +21,16 @@ html, body {
     /* height: 100vh; */
 }
 
+
+article {
+    /* background-color: rgba(0,0,0,0.5); */
+    background-color: rgba(20,20,20,0.8);
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 15px;
+}
+
 select {
     width: 100%;
 }
