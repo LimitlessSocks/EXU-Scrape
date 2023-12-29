@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q3RKXFLZRZ');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3RKXFLZRZ"></script>
     <meta charset="UTF-8">
-    <title>Logo Generation</title>
+    <title>EXU Logo Generation</title>
     <link rel="STYLESHEET" href="./../card-viewer.css">
     <!-- <script -->
 			  <!-- src="https://code.jquery.com/jquery-3.4.1.min.js" -->
@@ -29,7 +38,7 @@
         #method-options {
             display: none;
         }
-        h1 {
+        h2 {
             font-family: "Press Start 2P";
         }
         #save-gen {
@@ -38,7 +47,8 @@
     </style>
 </head>
 <body>
-    <h1>Logo Generation</h1>
+    <h1 class="title"><a href="./">EXU Graphics</a></h1>
+    <h2>Logo Generation</h2>
     <label for="method">Method: </label><select id="method">
         <option value=""></option>
         <option value="arch">Archetype Display</option>

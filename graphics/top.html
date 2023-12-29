@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q3RKXFLZRZ');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3RKXFLZRZ"></script>
+    <meta charset="UTF-8">
+    <title>EXU Logo Generation</title>
+    <link rel="STYLESHEET" href="./../card-viewer.css">
+    <link rel="STYLESHEET" href="./top.css">
+    <script src="./../card-viewer.js"></script>
+    <script src="./top.js"></script>
+</head>
+<body>
+    <h1 class="title"><a href="./">EXU Graphics</a></h1>
+    <article>
+    <form id="input">
+        <fieldset>
+            <legend>Event Information</legend>
+            <label>Name: <input data-target="eventName" type="text" placeholder="EXU Battleground #36"></label>
+            <label>Date: <input data-target="eventDate" type="text" placeholder="August 2023"></label>
+            <label>Topcut size: <input data-target="topcutSize" type="number" placeholder="4"></label>
+        </fieldset>
+        <fieldset>
+            <legend>Duelist Information</legend>
+            <label>Duelist name: <input data-target="duelistName" type="text" placeholder="Wingully"></label>
+            <label>Place in event: <input data-target="duelistPlace" type="text" placeholder="3rd place"></label>
+            <label>Deck/strategy name: <input data-target="deckName" type="text" placeholder="Rescue-ACE"></label>
+        </fieldset>
+        <fieldset>
+            <legend>Deck information</legend>
+            <p>
+                <label>Deck .xml: <input data-target="deckXml" type="file" id="deck-input" accept=".xml"></label>
+            </p>
+            <p><label>Deck hyperlink: <input data-target="deckLink" class="long" type="text" placeholder="https://www.duelingbook.com/deck?id=13700073"></label></p>
+        </fieldset>
+        <fieldset>
+            <legend>Image position</legend>
+            <p style="color: red">
+                <strong><u>Tip: You can click-and-drag/zoom the image below to move/scale it.</u></strong>
+            </p>
+            <p>
+                <label>Card thumbnail (URL, card name, or card ID): <input data-target="cardThumb" type="text" placeholder="Rescue-ACE Air Lifter"></label>
+            </p>
+            <p>
+                <label>Image offset X: <input data-target="imgOffsetX" data-ancestor="cardThumb" type="number" value=0></label>
+                <label>Image offset Y: <input data-target="imgOffsetY" data-ancestor="cardThumb" type="number" value=0></label>
+            </p>
+            <p>
+                <label>Image zoom: <input data-target="imgZoom" data-ancestor="cardThumb" type="number" value=100>%</label>
+            </p>
+        </fieldset>
+    </form>
+    </article>
+    <div id="output">
+        <div class="cardThumbHolder">
+            <img class="cardThumb">
+            <!-- <div class="cardThumbShadow"></div> -->
+        </div>
+        <div class="header">
+            <div class="eventName"></div>
+            <div class="topcutSizeContainer">Top <span class="topcutSize"></span></div>
+            <div class="eventDate"></div>
+        </div>
+        <img src="./res/logo.png" class="exuLogo">
+        <div class="infoPanel">
+            <div class="decklistHeader">Decklist</div>
+            <div class="duelistPlace"></div>
+            <div class="duelistName"></div>
+            <div class="deckName"></div>
+        </div>
+    </div>
+</body>
+</html>

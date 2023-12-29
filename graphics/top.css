@@ -1,0 +1,126 @@
+@font-face {
+    font-family: "RoadRadio Black";
+    src: local("RoadRadio Black"), url("./res/RoadRadio Black.ttf");
+}
+
+@font-face {
+    font-family: "Nexa-Heavy";
+    src: local("Nexa-Heavy"), url("./res/Nexa-Heavy.ttf");
+}
+
+@font-face {
+    font-family: "Sweet Sans Pro Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Sweet Sans Pro Italic"), url("./res/SweetSansProItalic.woff");
+}
+
+input.long {
+    width: 45ch;
+}
+
+#output {
+    width: 810px;
+    height: 810px;
+    background-color: white;
+    position: absolute;
+    margin: 15px;
+    overflow: hidden;
+}
+
+#output .cardThumbHolder {
+    position: absolute;
+    top: 0;
+    width: 810px;
+    height: 810px;
+    background-color: #300000;
+    clip-path: path('M -12 387 C 53 468 334 610 820 610 L 820 -10 L -10 -10');
+}
+
+#output .cardThumbShadow {
+    position: absolute;
+    top: 0;
+    width: 810px;
+    height: 810px;
+    /* clip-path: path('M -12 387 C 53 468 334 610 820 610 L 820 -10 L -10 -10'); */
+    /* box-shadow: inset 0 0 15px white; */
+    pointer-events: none;
+    filter: drop-shadow(0px 0px 15px blue);
+}
+
+#output .cardThumb {
+    width: 810px;
+    cursor: move;
+    position: relative;
+}
+
+#output .eventName, #output .topcutSizeContainer {
+    font-family: "RoadRadio Black";
+}
+
+#output .header {
+    position: relative;
+    top: 0;
+    background-color: #800000;
+    text-align: right;
+    text-transform: uppercase;
+    clip-path: path('M 0 90 C 78 178 463 337 820 240 L 820 -10 L -10 -10');
+    /* clip-path: path('M 0 90 C 78 178 475 276 820 210 L 820 -10 L -10 -10'); */   
+    width: 100%;
+    height: 100%;
+}
+#output .eventName {
+    font-size: 50px;
+    margin-right: 10px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 9px rgba(0,0,0,0.4);
+}
+#output .topcutSizeContainer {
+    font-size: 120px;
+    color: #ff0000;
+    letter-spacing: 9px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    text-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+#output .eventDate {
+    font-family: "Sweet Sans Pro Italic";
+    font-size: 48px;
+    margin-right: 10px;
+    text-shadow: 0 0 9px rgba(0,0,0,0.4);
+}
+#output .exuLogo {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    width: 132px;
+    height: 132px;
+}
+#output .infoPanel {
+    position: absolute;
+    top: 300px;
+    right: 0;
+    width: 350px;
+    height: 300px;
+    /* background-color: rgba(0,0,0,0.2); */
+    pointer-events: none;
+}
+#output .infoPanel {
+    text-align: center;
+}
+#output .infoPanel {
+    font-family: "Nexa-Heavy";
+    text-transform: uppercase;
+    font-size: 48px;
+    text-shadow: 0 0 7px black, 0 0 7px black, 0 0 7px black, 0 0 7px black, 0 0 7px black, 0 0 7px black, 0 0 7px black, 0 0 7px black, 0 0 7px black, 0 0 7px black, 0 0 7px black;
+    line-height: 1em;
+}
+#output .deckName {
+    font-size: 36px;
+}
+#output .duelistPlace {
+    font-size: 54px;
+}
+#output .infoPanel > div {
+    /* margin-bottom: -14px; */
+}
