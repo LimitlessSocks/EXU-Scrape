@@ -36,6 +36,8 @@ let onLoad = async function () {
             return;
         }
         
+        names.sort((a, b) => b.length - a.length);
+        
         let reg = new RegExp(names.map(escapeRegExp).join("|"), "gi");
         let html = value.replace(reg, name => {
             let card = CardViewer.getCardByName(name);
