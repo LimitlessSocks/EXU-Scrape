@@ -38,7 +38,7 @@ let onLoad = async function () {
         
         names.sort((a, b) => b.length - a.length);
         
-        let reg = new RegExp(names.map(escapeRegExp).join("|"), "gi");
+        let reg = new RegExp(names.map(name => "\\b" + escapeRegExp(name) + "\\b").join("|"), "gui");
         let html = value.replace(reg, name => {
             let card = CardViewer.getCardByName(name);
             return `<a href="${CardViewer.getCardLink(card)}">${name}</a>`;

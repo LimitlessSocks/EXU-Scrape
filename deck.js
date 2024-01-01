@@ -64,7 +64,8 @@ class Deck {
             [Deck.Location.MAIN]: 10,
             [Deck.Location.SIDE]: 0,
             [Deck.Location.EXTRA]: 0,
-        }
+        };
+        this.bannerScale = 0.3;
     }
     
     setDeckWidth(width) {
@@ -221,7 +222,7 @@ class Deck {
         
         let baseUnits = getUnits(deckWidthInCards);
         
-        const inBetweenMultiplier = 0.3;
+        const inBetweenMultiplier = this.bannerScale;
         
         for(let container of this.target.children()) {
             let i = 0;
@@ -275,7 +276,7 @@ class Deck {
             info.css({
                 top: (j + cIndexOffset * inBetweenMultiplier) * baseUnits.totalHeight + 7.5,
                 // fontSize: 0.25 * baseUnits.totalHeight + "px",
-                height: 0.3 * baseUnits.totalHeight + "px",
+                height: this.bannerScale * baseUnits.totalHeight + "px",
                 width: pixelWidth,
             });
             

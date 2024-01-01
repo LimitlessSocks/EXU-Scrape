@@ -8,7 +8,6 @@ window.addEventListener("load", async function () {
     const form = document.getElementById("input");
     const output = document.getElementById("output");
     
-    
     let cardThumb = output.getElementsByClassName("cardThumb")[0];
     let imgOffsetX = document.querySelector("input[data-target='imgOffsetX']");
     let imgOffsetY = document.querySelector("input[data-target='imgOffsetY']");
@@ -17,6 +16,15 @@ window.addEventListener("load", async function () {
     imgOffsetX.value ||= "0";
     imgOffsetY.value ||= "0";
     imgZoom.value ||= "100";
+    
+    CardViewer.Editor.DeckInstance = new Deck(
+        [],
+        [],
+        [],
+        false, //not editable
+    );
+    CardViewer.Editor.DeckInstance.bannerScale = 0.15;
+    CardViewer.Editor.DeckInstance.setDeckWidth(10);
     
     // console.log(imgOffsetX.value, imgOffsetY.value);
     const MouseState = {
@@ -74,12 +82,58 @@ window.addEventListener("load", async function () {
     MouseState.syncXYWithInputs();
     window.MouseState = MouseState;
     
+    const loadDeckDisplay = file => {
+        if(!file) {
+            return;
+        }
+        CardViewer.Editor.DeckInstance.clear();
+        
+        let reader = new FileReader();
+        reader.onload = (e) => {
+            let text = e.target.result;
+            let parser = new DOMParser();
+            let xmlDoc = parser.parseFromString(text, "text/xml");
+            let deck = CardViewer.Editor.DeckInstance;
+            
+            deck.clear();
+            
+            let i = 0;
+            for(let deckContainer of xmlDoc.querySelectorAll("main, side, extra")) {
+                for(let card of deckContainer.querySelectorAll("card")) {
+                    deck.addCard(card.id, i);
+                }
+                i++;
+            }
+            
+            if(CardViewer.Elements.deckEditor) {
+                CardViewer.Editor.updateDeck();
+            }
+            
+            for(let area of ["main", "side", "extra"]) {
+                let count = xmlDoc.querySelectorAll(area + " card").length;
+                let text = `${count} cards`;
+                $(`.${area}.count`).text(text);
+            }
+        };
+        reader.readAsText(file);
+        if(CardViewer.Elements.deckEditor) {
+            CardViewer.Editor.updateDeck();
+        }   
+    };
+    
     const updateState = el => {
         if(typeof el === "string") {
             el = form.querySelector(`[data-target="${el}"]`);
         }
         let { target: targetName, ancestor } = el.dataset;
+        
+        if(targetName === "deckXml") {
+            loadDeckDisplay(el.files[0]);
+            return;
+        }
+        
         let targets = output.getElementsByClassName(ancestor || targetName);
+        
         // let { value } = el;
         let value = el.value || el.placeholder;
         for(let target of targets) {
@@ -107,17 +161,37 @@ window.addEventListener("load", async function () {
                 let amount = BASE_WIDTH * parseFloat(value, 10) / 100;
                 target.style.width = `${amount}px`;
             }
+            else if(targetName === "duelistNameFontSize") {
+                target.style.fontSize = value + "px";
+                target.style.lineHeight = parseFloat(value, 10) * 1.1 + "px";
+            }
+            else if(targetName === "deckNameColor") {
+                target.style.color = value;
+            }
             else {
                 target.textContent = value;
             }
         }
     };
     
+    // start loading
+    CardViewer.Database.initialReadAll(exuDatabase).then(() => {
+        updateState("cardThumb");
+        // database loaded; load the deck
+        CardViewer.Editor.MajorContainer = $("#majorContainer");
+        CardViewer.Elements.deckEditor = $("#deckEditor");
+        CardViewer.Elements.cardPreview = $("<div></div>");
+        CardViewer.Editor.updateDeck();
+        CardViewer.Editor.recalculateView();
+    });
+    
     const updateAll = () => {
         for(let input of form.querySelectorAll("input")) {
             updateState(input);
         }
     };
+    
+    updateAll();
     
     form.addEventListener("input", ev => {
         updateState(ev.target);
@@ -134,12 +208,7 @@ window.addEventListener("load", async function () {
         */
     });
     
-    // start loading
-    CardViewer.Database.initialReadAll(exuDatabase).then(() => updateState("cardThumb"));
-    
-    updateAll();
-    
-    
+    // events
     cardThumb.addEventListener("mousedown", ev => {
         MouseState.startPressing(ev.clientX, ev.clientY);
     });
