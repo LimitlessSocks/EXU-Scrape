@@ -141,7 +141,8 @@ class Prompt {
         this.anchor = $("<div>").addClass("popup-background");
         
         this.anchor.click(e => {
-            if(e.target == this.anchor.get(0)) {
+            const popupBackground = this.anchor.get(0);
+            if(e.target == popupBackground) {
                 this.close(true);
             }
             // console.log(e.target);
