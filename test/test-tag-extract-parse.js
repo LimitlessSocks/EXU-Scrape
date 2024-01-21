@@ -17,6 +17,14 @@ const TEST_CASES = [
         type: "monster",
         monsterAttribute: "DARK",
     }]],
+    ["dARK", [{
+        type: "monster",
+        monsterAttribute: "DARK",
+    }]],
+    ["DARK", [{
+        type: "monster",
+        monsterAttribute: "DARK",
+    }]],
     ["Dragon \"Number\"", [{
         type: "monster",
         monsterType: "Dragon"
@@ -45,6 +53,10 @@ const TEST_CASES = [
         { type: "monster", monsterCategory: "link", level: "2", levelCompare: "equal" },
     ]],
     ["wind beast", [
+        { type: "monster", monsterAttribute: "WIND" },
+        { type: "monster", monsterType: "Beast" },
+    ]],
+    ["wind beAst", [
         { type: "monster", monsterAttribute: "WIND" },
         { type: "monster", monsterType: "Beast" },
     ]],
@@ -95,6 +107,11 @@ const TEST_CASES = [
         OPERATOR_INLINE_OR,
         { type: "monster", def: "1600", defCompare: "equal" },
     ]],
+    ["1600 atk or DeF", [
+        { type: "monster", atk: "1600", atkCompare: "equal" },
+        OPERATOR_INLINE_OR,
+        { type: "monster", def: "1600", defCompare: "equal" },
+    ]],
     ["1600 ATK or DEF", [
         { type: "monster", atk: "1600", atkCompare: "equal" },
         OPERATOR_INLINE_OR,
@@ -133,7 +150,7 @@ const TEST_CASES = [
         OPERATOR_INLINE_OR,
         { type: "monster", monsterAttribute: "DARK" },
     ]],
-    ["light or dragon", [
+    ["lighT oR dragon", [
         { type: "monster", monsterAttribute: "LIGHT" },
         OPERATOR_INLINE_OR,
         { type: "monster", monsterType: "Dragon" },
@@ -166,16 +183,29 @@ const TEST_CASES = [
     ["continuous", [
         { type: "any", kind: "Continuous" },
     ]],
-    ["continuous trap", [
+    ["continuous Trap", [
         { type: "trap", kind: "Continuous" },
     ]],
     ["ritual monster", [
         { type: "monster", monsterCategory: "ritual" },
     ]],
+    ["Ritual monster", [
+        { type: "monster", monsterCategory: "ritual" },
+    ]],
     ["ritual spell", [
         { type: "spell", kind: "Ritual" },
     ]],
+    ["Ritual spell", [
+        { type: "spell", kind: "Ritual" },
+    ]],
     ["ritual", [
+        LEFT_PARENTHESIS,
+        { type: "spell", kind: "Ritual" },
+        OPERATOR_INLINE_OR,
+        { type: "monster", monsterCategory: "ritual" },
+        RIGHT_PARENTHESIS,
+    ]],
+    ["RiTuAl", [
         LEFT_PARENTHESIS,
         { type: "spell", kind: "Ritual" },
         OPERATOR_INLINE_OR,
@@ -210,6 +240,14 @@ const TEST_CASES = [
         OPERATOR_NOT,
         { type: "spell" },
     ]],
+    ["NOT spell", [
+        OPERATOR_NOT,
+        { type: "spell" },
+    ]],
+    ["nOt spell", [
+        OPERATOR_NOT,
+        { type: "spell" },
+    ]],
     ["not (spell or trap)", [
         OPERATOR_NOT,
         LEFT_PARENTHESIS,
@@ -219,6 +257,9 @@ const TEST_CASES = [
         RIGHT_PARENTHESIS
     ]],
     ["by sock", [
+        { author: "sock" },
+    ]],
+    ["bY sock", [
         { author: "sock" },
     ]],
     ["author=sock", [
@@ -241,6 +282,9 @@ const TEST_CASES = [
         { type: "monster", atk: "1300", atkCompare: "equal" },
     ]],
     ["id 2067145", [
+        { id: "2067145" },
+    ]],
+    ["ID 2067145", [
         { id: "2067145" },
     ]],
     ["id=1", [
@@ -302,6 +346,9 @@ const TEST_CASES = [
     ["level        12", [
         { type: "monster", level: "12", levelCompare: "equal" },
     ]],
+    ["Level        12", [
+        { type: "monster", level: "12", levelCompare: "equal" },
+    ]],
     ["[warrior] not monster not [beast-warrior]", [
         { effect: "warrior" },
         OPERATOR_NOT,
@@ -359,6 +406,9 @@ const TEST_CASES = [
     ["rank 10 or higher", [
         { type: "monster", monsterCategory: "xyz", level: "10", levelCompare: "greaterequal" },
     ]],
+    ["rank 10 or HIgher", [
+        { type: "monster", monsterCategory: "xyz", level: "10", levelCompare: "greaterequal" },
+    ]],
     ["rank 2 or less", [
         { type: "monster", monsterCategory: "xyz", level: "2", levelCompare: "lessequal" },
     ]],
@@ -398,7 +448,13 @@ const TEST_CASES = [
     ["date <= 05/16/2007", [
         { date: "05/16/2007", dateCompare: "lessequal" },
     ]],
+    ["DATe <= 05/16/2007", [
+        { date: "05/16/2007", dateCompare: "lessequal" },
+    ]],
     ["case", [
+        CASE_SENSITIVE,
+    ]],
+    ["CaSe", [
         CASE_SENSITIVE,
     ]],
     ["at 0", [
@@ -408,6 +464,9 @@ const TEST_CASES = [
         { limit: "1" },
     ]],
     ["at 2", [
+        { limit: "2" },
+    ]],
+    ["AT 2", [
         { limit: "2" },
     ]],
     ["limit 3", [
@@ -442,6 +501,9 @@ const TEST_CASES = [
     ]],
     ["pend: [destroy this card]", [
         { pend_effect: "destroy this card" },
+    ]],
+    ["PEND: [ ]", [
+        { pend_effect: " " },
     ]],
     ["text: [destroy this card]", [
         { main_effect: "destroy this card" },
@@ -501,6 +563,9 @@ const TEST_CASES = [
     ["ac 2", [
         { type: "monster", attributeCount: "2", attributeCountCompare: "equal" },
     ]],
+    ["AC 2", [
+        { type: "monster", attributeCount: "2", attributeCountCompare: "equal" },
+    ]],
     ["attributecount > 1", [
         { type: "monster", attributeCount: "1", attributeCountCompare: "greater" },
     ]],
@@ -521,6 +586,15 @@ const TEST_CASES = [
     ]],
     ["#type <= 2", [
         { type: "monster", typeCount: "2", typeCountCompare: "lessequal" },
+    ]],
+    ["non-effect", [
+        { type: "noneffect" },
+    ]],
+    ["NONEFFECt", [
+        { type: "noneffect" },
+    ]],
+    ["effectless", [
+        { type: "noneffect" },
     ]],
 ];
 
