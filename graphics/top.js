@@ -3,6 +3,21 @@ let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/maste
 baseURL = "./../";
 window.exuDatabase = baseURL + "db.json";
 
+/*
+// doesn't work: unsupported CSS properties by html2canvas
+const saveElementToImage = (element, outputFileName="output.png") => {
+    html2canvas(element).then(canvas => {
+        const dataURL = canvas.toDataURL("image/png");
+
+        const link = document.createElement("a");
+        link.href = dataURL;
+        link.download = outputFileName;
+
+        link.click();
+    });
+};
+*/
+
 const BASE_WIDTH = 810;
 window.addEventListener("load", async function () {
     const form = document.getElementById("input");
