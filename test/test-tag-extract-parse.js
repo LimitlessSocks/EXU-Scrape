@@ -240,6 +240,26 @@ const TEST_CASES = [
         OPERATOR_NOT,
         { type: "spell" },
     ]],
+    ["non spell", [
+        OPERATOR_NOT,
+        { type: "spell" },
+    ]],
+    ["non-spell", [
+        OPERATOR_NOT,
+        { type: "spell" },
+    ]],
+    ["non- spell", [
+        OPERATOR_NOT,
+        { type: "spell" },
+    ]],
+    ["NON- spell", [
+        OPERATOR_NOT,
+        { type: "spell" },
+    ]],
+    ["nOn - spell", [
+        OPERATOR_NOT,
+        { type: "spell" },
+    ]],
     ["NOT spell", [
         OPERATOR_NOT,
         { type: "spell" },

@@ -339,6 +339,7 @@ const INDICATORS = [
     
     new TagIndicator(/\(/, () => LEFT_PARENTHESIS),
     new TagIndicator(/\)/, () => RIGHT_PARENTHESIS),
+    new TagIndicator(/non/i, () => OPERATOR_NOT),
     
     new TagIndicator(/(>=?|<=?|[/!]?==?)?\s*(\w+)|"([^"]+)"/, (match, memory) => {
         if(!memory.lastParameter) {
