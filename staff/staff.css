@@ -159,6 +159,10 @@ pre {
     position: absolute;
     right: 0;
 }
+.thin-icons {
+    letter-spacing: -8px;
+    right: 8px;
+}
 
 @keyframes jitter {
     0% { transform: translate(-1px, 0px); }
