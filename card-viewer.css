@@ -599,3 +599,9 @@ input.large {
 .hidden {
     display: none;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;50;700&display=swap');
+code {
+	white-space: pre-wrap;
+    font-family: "Fira Mono", "Consolas", monospace;
+}
