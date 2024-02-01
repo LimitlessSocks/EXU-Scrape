@@ -55,7 +55,7 @@ new_database.each { |card_id, card|
         log deck_id, "warning: card id #{display_text} is not public"
     end
     old_card = old_database[card_id]
-    unless old_card.nil? || card["custom"].nil?
+    if !(old_card.nil? || card["custom"].nil?)
         attr_checks.each { |check|
             unless approximately_equal(old_card[check], card[check])
                 changed_ids << card_id
