@@ -335,6 +335,11 @@ window.addEventListener("load", function () {
     const updateVerdict = (gid, reaction) => {
         let parent = document.querySelector(`[data-gid="${gid}"]`);
         
+        if(!parent) {
+            console.error("Could not find parent with gid", gid);
+            return;
+        }
+        
         if(reaction === "clear") {
             parent.style.order = "";
         }

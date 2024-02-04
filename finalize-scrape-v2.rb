@@ -1,9 +1,30 @@
 require 'json'
 require_relative 'finalize-scrape.rb'
 
-now_time_ident = ARGV[0]
+option = ARGV[0]
 
 outname = "db"
-database = get_database "tmp/#{option}.json"
+database = get_database "tmp/#{option}"
 old_database = get_database outname
-verdict_path = "tmp/verdict-#{option}.json"
+
+p database.find { |k,v| v["name"].include? "Mekangel" }
+
+verdicts = JSON::parse File.read "tmp/verdict-#{option}.json"
+
+verdicts.each { |id, verdict|
+    case verdict
+    when "accept"
+        # do nothing
+    when "remove"
+        database.delete id
+    when "reject"
+        database[id] = old_database[id]
+    else
+        STDERR.puts "I don't know what to do with verdict #{{id => verdict}}"
+    end
+}
+# p database.find { |k,v| v["name"].include? "Mekangel" }
+
+#TODO: remove old tmp info
+File.write "#{outname}.json", database.to_json
+puts "Finalized."

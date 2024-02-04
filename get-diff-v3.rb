@@ -57,7 +57,7 @@ if now_time_ident.nil?
 end
 
 old_database = JSON::parse File.read "#{output_name}.json"
-new_database = JSON::parse File.read "#{output_name}-tmp.json"
+new_database = JSON::parse File.read "tmp/#{now_time_ident}.json"
 
 ids = old_database.keys + new_database.keys
 ids.uniq!
@@ -120,7 +120,9 @@ claves = {
 # ids = []
 # ids << old_database.find { |id, val| val["name"] == "Bucket Squadmech Hellfire Buster" }[0]
 
-ids.each.with_index { |id|
+# STDIN.gets
+ids.each.with_index { |id, j|
+    # p "#{j}/#{ids.size} #{id}"
     old_card = old_database[id]
     new_card = new_database[id]
     
@@ -131,8 +133,6 @@ ids.each.with_index { |id|
     left_card = right_card = nil
     name = nil
     destination = nil
-    
-    break if claves.values.all? { |list| list.size >= 2 }
     
     if old_card.nil?
         # added new card
