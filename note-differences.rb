@@ -1,37 +1,9 @@
 require 'json'
 require_relative 'finalize-scrape.rb'
+require_relative 'diff-lib.rb'
 
 # TODO: allow config
 output_name = "db"
-
-attr_checks = [
-    "name",
-    "effect",
-    "pendulum_effect",
-    "attribute",
-    "scale",
-    "atk",
-    "def",
-    "monster_color",
-    "level",
-    "arrows",
-    "card_type",
-    "ability",
-    "custom",
-    "type",
-]
-
-def string_normalize(s)
-    s.to_s.gsub(/[\r\n\t]/, "")
-end
-
-def approximately_equal(a, b)
-    if String === a
-        a = string_normalize a
-        b = string_normalize b
-    end
-    a == b
-end
 
 now_time_ident = Time.now.strftime("#{output_name}-%m-%d-%Y.%H.%M.%S")
 now_time_name = "log/" + now_time_ident + ".txt"
@@ -56,16 +28,16 @@ new_database.each { |card_id, card|
     end
     old_card = old_database[card_id]
     if !(old_card.nil? || card["custom"].nil?)
-        attr_checks.each { |check|
-            unless approximately_equal(old_card[check], card[check])
+        DiffLib::ATTR_CHECKS.each { |check|
+            unless DiffLib::approximately_equal?(old_card[check], card[check])
                 changed_ids << card_id
                 if check == "custom"
                     mode = ["public", "private"][card[check] - 1]
                     log deck_id, "note: card id #{display_text} was made #{mode}"
                 else
                     log deck_id, "note: property '#{check}' of card id #{display_text} was changed"
-                    log deck_id, "from: #{string_normalize old_card[check]}"
-                    log deck_id, "to: #{string_normalize card[check]}"
+                    log deck_id, "from: #{DiffLib::string_normalize old_card[check]}"
+                    log deck_id, "to: #{DiffLib::string_normalize card[check]}"
                 end
             end
         }
@@ -96,8 +68,11 @@ File.write $SCRAPE_FILE, scrape_info.to_json
 $log_file.close
 
 # write differences
-system "ruby get-diff-v2.rb #{now_time_name}"
+# system "ruby get-diff-v2.rb #{now_time_name}"
+system "ruby get-diff-v3.rb #{now_time_ident}"
+
 system "ruby gen-dir.rb"
 
-puts "Complete scrape with:"
-puts "  finalize-scrape.rb \"#{now_time_ident}\""
+puts "Complete scrape by downloading verdict-#{now_time_ident}.json to ./tmp/ and running:"
+puts "  finalize-scrape-v2.rb \"#{now_time_ident}\""
+# puts "  finalize-scrape.rb \"#{now_time_ident}\""

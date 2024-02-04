@@ -1,7 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;50;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap');
 
 h1, h2, h3, p {
     margin: 0;
+}
+
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+    border-bottom: 1px solid;
+    margin-bottom: 3px;
+}
+h3 {
+    border-bottom: 1px dashed rgba(255,255,255,0.7);
+    margin:15px 0;
+}
+h3 {
+    font-size: 20px;
+}
+h4 {
+    font-size: 18px;
+}
+
+.card-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.inline-card {
+    width: 35vw;
+    flex-grow: 1;
+}
+.separator {
+    /* width: 4vw; */
+    align-self: center;
+    text-align: center;
+    font-size: 36px;
+    padding: 5px;
+}
+.inline-card p {
+    white-space: pre-wrap;
+}
+.inline-card.deleted, .inline-card.empty {
+    align-self: center;
+    text-align: center;
+}
+.inline-card.deleted {
+    color: #dd3333;
+}
+
+#chat {
+    position: fixed;
+    width: 300px;
+    height: 200px;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0,0,70,0.8);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+#chat-input {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    width: 280px;
+    display: block;
+}
+
+#chat-messages {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+
+.verdict {
+    font-size: 26px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 5px 0;
+    user-select: none;
+}
+.emoji-button {
+    --animation-time: 0.25s;
+    --hover-color: #cfc;
+    filter: grayscale(70%);
+    cursor: pointer;
+    transition: filter var(--animation-time), background-color var(--animation-time);
+    background-color: #444;
+    border-radius: 5px;
+    padding: 5px;
+}
+.emoji-button:hover, .emoji-button.selected {
+    filter: grayscale(0%);
+    background-color: var(--hover-color);
+}
+.verdict.overall {
+    padding: 8px;
+    background-color: #222;
+}
+.verdict.overall .emoji-button {
+    --hover-color: #ccf;
+}
+
+#host-peer-id {
+    width: 36ch;
+}
+
+.change-entries {
+    display: flex;
+    flex-wrap: wrap;
+}
+.change-entries > * {
+    /* flex-grow: 1; */
+    order: -1;
+    /* transition: order 0.3s; */
 }
 
 .minimized {
