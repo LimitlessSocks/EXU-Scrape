@@ -12,6 +12,12 @@ VERDICT_OPTIONS = <<~EOT
     <span class="clear emoji-button" alt="Clear my reactions">🗑️</span>
 EOT
 
+def safe_diffy_html(left, right)
+    left = left.gsub(/\r\n|\r/, "\n")
+    right = right.gsub(/\r\n|\r/, "\n")
+    Diffy::SplitDiff.new(left, right, :format => :html)
+end
+
 def card_display(card, key, diffs)
     # TODO: html escape
     result = []
@@ -54,6 +60,7 @@ old_database = JSON::parse File.read "#{output_name}.json"
 new_database = JSON::parse File.read "#{output_name}-tmp.json"
 
 ids = old_database.keys + new_database.keys
+ids.uniq!
 
 outfile = File.open("log-out/#{now_time_ident}.html", "w")
 path = "log/#{now_time_ident}.txt"
@@ -110,7 +117,8 @@ claves = {
     # "4192153",
 # ]
 
-# ids << old_database.find { |id, val| new_database[id].nil? }[0]
+# ids = []
+# ids << old_database.find { |id, val| val["name"] == "Bucket Squadmech Hellfire Buster" }[0]
 
 ids.each.with_index { |id|
     old_card = old_database[id]
@@ -165,7 +173,7 @@ ids.each.with_index { |id|
             left = old_card[check]
             right = new_card[check]
             diff = if DiffLib::DIFF_CHECKS.include? check
-                diffy_output = Diffy::SplitDiff.new(left, right, :format => :html)
+                diffy_output = safe_diffy_html left, right
                 { left: diffy_output.left, right: diffy_output.right }
             else
                 { left: left, right: right }
@@ -179,6 +187,7 @@ ids.each.with_index { |id|
     text = <<~EOT
     <div data-gid="#{id}">
         <h3>#{name}</h3>
+        <h4>#{id} &sdot; <a href="https://www.duelingbook.com/card?id=#{id}" target="_blank">DB</a> &sdot; <a href="https://limitlesssocks.github.io/EXU-Scrape/card?id=#{id}" target="_blank">EXU</a></h4>
         <div class="verdict">
             #{VERDICT_OPTIONS}
             <span class="total-emoji"></span>
@@ -197,7 +206,7 @@ ids.each.with_index { |id|
 %w(Changed Removed Added).each { |clave|
     sym = clave.downcase.to_sym
     outfile.puts "<h2>#{clave} cards</h2>"
-    outfile.puts "<span>(The following options will change all of <em>your</em> reactions for each of the following entries.)</span>"
+    outfile.puts "<span>(The following options will change all of the reactions for each of the following entries.)</span>"
     outfile.puts <<~EOT
         <div class="overall verdict">
             #{VERDICT_OPTIONS}

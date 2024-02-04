@@ -55,6 +55,7 @@ const Reactions = {
             gid,
             reaction,
         };
+        console.log("Signaling once", payload);
         UserInfo.handlePayload(payload, exclude);
     },
     propogateAllReactions(reactions, exclude) {
@@ -382,8 +383,9 @@ window.addEventListener("load", function () {
                     
                     for(let otherVerdict of domain.querySelectorAll(".verdict")) {
                         let theirGid = otherVerdict.parentElement.dataset.gid;
+                        // console.log(theirGid, reaction);
                         updateVerdict(theirGid, reaction);
-                        Reactions.propogateReaction(theirGid, reaction);
+                        // Reactions.propogateReaction(theirGid, reaction);
                         propogations.push({
                             gid: theirGid,
                             reaction
