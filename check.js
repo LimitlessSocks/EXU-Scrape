@@ -116,19 +116,19 @@ const verifyXMLList = (raw) => {
 };
 
 const getList = async (name) => {
-    let response = await fetch("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/" + name + ".json");
+    let response = await fetch("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/main/" + name + ".json");
     let db = await response.json();
     return db;
 };
 
-let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
-// baseURL = "./";
-window.ycgDatabase = baseURL + "ycg.json";
+let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/main/";
+baseURL = "./";
+// window.ycgDatabase = baseURL + "ycg.json";
 window.exuDatabase = baseURL + "db.json";
 window.addEventListener("load", async function () {
     window.banlist = await getList("banlist");
     // window.pool = await getList("db");
-    await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
+    await CardViewer.Database.initialReadAll(exuDatabase);
     window.pool = CardViewer.Database.cards;
     
     const messageHolder = $("#message-holder");
