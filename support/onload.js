@@ -1,8 +1,3 @@
-let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
-window.ycgDatabase = baseURL + "ycg.json";
-window.exuDatabase = baseURL + "db.json";
-window.supportDatabase = baseURL + "support.json";
-
 let onLoad = async function () {
     // load static info
     // $("#cardCount").text(CardViewer.Editor.DeckInstance.decks[0].length);
@@ -23,7 +18,7 @@ let onLoad = async function () {
     // CardViewer.setUpTabSearchSwitching();
     
     CardViewer.Elements.deckEditor.text("Loading deck...");
-    await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase, supportDatabase);
+    await CardViewer.Database.initialReadAll("./db.json", "./support.json");
     
     // load ids into deck
     

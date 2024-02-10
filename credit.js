@@ -1,9 +1,5 @@
-let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
-// baseURL = "./";
-window.exuDatabase = baseURL + "db.json";
-
 window.addEventListener("load", async function () {
-    await CardViewer.Database.initialReadAll(exuDatabase);
+    await CardViewer.Database.initialReadAll("./db.json");
     
     const per = document.getElementById("percent");
     const sofar = document.getElementById("sofar");

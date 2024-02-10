@@ -1,8 +1,3 @@
-let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
-// baseURL = "./";
-window.ycgDatabase = baseURL + "ycg.json";
-window.exuDatabase = baseURL + "db.json";
-
 // add background plugin
 // https://stackoverflow.com/a/71395413/4119004
 const custom_canvas_background_color = bgColor => ({
@@ -1014,10 +1009,7 @@ window.addEventListener("load", async function () {
     CardViewer.excludeTcg = false;
     CardViewer.showImported = true;
     
-    // let response = await fetch(window.databaseToUse);
-    // let db = await response.json();
-    // CardViewer.Database.setInitial(db);
-    await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
+    await CardViewer.Database.initialReadAll("./db.json");
     for(let [ id, card ] of Object.entries(CardViewer.Database.cards)) {
         if(!card.username) {
             card.username = "TCG/OCG";

@@ -26,10 +26,7 @@ const verifyXMLList = (raw) => {
             reason = "OCG card";
         }
         else {
-            if(banlist[idValue]) {
-                limit = banlist[idValue].exu_limit;
-            }
-            else if(pool[idValue]) {
+            if(pool[idValue]) {
                 limit = pool[idValue].exu_limit;
             }
             // assume at 3
@@ -115,20 +112,8 @@ const verifyXMLList = (raw) => {
     return messages;
 };
 
-const getList = async (name) => {
-    let response = await fetch("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/main/" + name + ".json");
-    let db = await response.json();
-    return db;
-};
-
-let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/main/";
-baseURL = "./";
-// window.ycgDatabase = baseURL + "ycg.json";
-window.exuDatabase = baseURL + "db.json";
 window.addEventListener("load", async function () {
-    window.banlist = await getList("banlist");
-    // window.pool = await getList("db");
-    await CardViewer.Database.initialReadAll(exuDatabase);
+    await CardViewer.Database.initialReadAll("./db.json");
     window.pool = CardViewer.Database.cards;
     
     const messageHolder = $("#message-holder");

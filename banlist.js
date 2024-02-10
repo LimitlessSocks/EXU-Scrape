@@ -51,7 +51,6 @@ let onLoad = async function () {
     
     // local testing
     let response = await fetch("./db.json");
-    // let response = await fetch("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/banlist.json");
     let db = await response.json();
     
     const banlistInfoResponse = await fetch("./banlist.json");

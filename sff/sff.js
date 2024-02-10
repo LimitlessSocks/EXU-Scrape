@@ -1,6 +1,6 @@
-let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
-// baseURL = "./";
-window.ycgDatabase = baseURL + "ycg.json";
+let baseURL = "./";
+// TODO: refactor, ycg.json does not exist anymore
+window.ycgDatabase = baseURL + "../ycg.json";
 window.sffDatabase = baseURL + "sff.json";
 
 CardViewer.format = "sff";

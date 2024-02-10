@@ -1,9 +1,3 @@
-// custom-or-not.js
-let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
-// baseURL = "./";
-window.ycgDatabase = baseURL + "ycg.json";
-window.exuDatabase = baseURL + "db.json";
-
 const focusMenu = (selector) => {
     $("#menu-container > div").toggle(false);
     $(selector).toggle(true);
@@ -276,7 +270,7 @@ window.addEventListener("load", async function () {
     showStart();
     
     $("#start").attr("disabled", true);
-    await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
+    await CardViewer.Database.initialReadAll("./db.json");
     CardViewer.excludeTcg = false;
     CardViewer.showImported = true;
     

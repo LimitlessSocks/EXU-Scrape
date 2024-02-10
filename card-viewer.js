@@ -1232,7 +1232,7 @@ CardViewer.filter = function (query, exclude = null) {
 };
 
 const getResource = (...path) =>
-    `https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/res/${path.join("/")}.png`;
+    `./res/${path.join("/")}.png`;
 
 const getAttribute = (attr) =>
     getResource("attribute", attr[0] + attr.slice(1).toLowerCase());

@@ -1,11 +1,6 @@
 // todo
-let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
-baseURL = "./";
-// window.ycgDatabase = baseURL + "ycg.json";
-window.exuDatabase = baseURL + "db.json";
-
 let onLoad = async function () {
-    await CardViewer.Database.initialReadAll(exuDatabase);
+    await CardViewer.Database.initialReadAll("./db.json");
     
     const updateCardNameToLinkOutput = () => {
         let value = $("#cardNameToLinkInput").val();

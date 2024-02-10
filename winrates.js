@@ -228,11 +228,6 @@ const Winrates = {
     },
 };
 
-//let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
-let baseURL = "./";
-window.ycgDatabase = baseURL + "ycg.json";
-window.exuDatabase = baseURL + "db.json";
-    
 // column IDs
 const ID_COLUMN = 0;
 const NAME_COLUMN = 1;
@@ -376,7 +371,7 @@ window.addEventListener("load", async function () {
         // dfInput.append($("<option>").text(name));
     // }
     
-    await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
+    await CardViewer.Database.initialReadAll("./db.json");
     CardViewer.excludeTcg = false;
     CardViewer.showImported = true;
     

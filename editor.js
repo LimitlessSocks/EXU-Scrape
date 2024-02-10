@@ -1,8 +1,3 @@
-let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
-// baseURL = "./";
-window.ycgDatabase = baseURL + "ycg.json";
-window.exuDatabase = baseURL + "db.json";
-
 let onLoad = async function () {
     CardViewer.excludeTcg = false;
     CardViewer.showImported = true;
@@ -61,7 +56,7 @@ let onLoad = async function () {
     CardViewer.setUpTabSearchSwitching();
     CardViewer.setUpArrowToggle();
     
-    await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
+    await CardViewer.Database.initialReadAll("./db.json");
     
     // remove ocg
     // for(let [id, card] of Object.entries(CardViewer.Database.cards)) {

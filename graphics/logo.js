@@ -1,8 +1,3 @@
-let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
-// baseURL = "./";
-window.ycgDatabase = baseURL + "ycg.json";
-window.exuDatabase = baseURL + "db.json";
-
 const fetchImage = (url) => new Promise((resolve, reject) => {
     let result = new Image();
     result.onload = function () {
@@ -443,7 +438,7 @@ window.addEventListener("load", async function () {
     CardViewer.excludeTcg = false;
     CardViewer.showImported = true;
     
-    await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
+    await CardViewer.Database.initialReadAll("./../db.json");
     
     let canvas = document.getElementById("raw-output");
     let ctx = canvas.getContext("2d");

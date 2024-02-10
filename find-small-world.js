@@ -39,19 +39,8 @@ const findSmallWorldBridges = (raw) => {
     return bridges;
 };
 
-/*const getList = async (name) => {
-    let response = await fetch("https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/" + name + ".json");
-    let db = await response.json();
-    return db;
-};*/
-
-let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
-// baseURL = "./";
-window.ycgDatabase = baseURL + "ycg.json";
-window.exuDatabase = baseURL + "db.json";
 window.addEventListener("load", async function () {
-    // window.banlist = await getList("banlist");
-    await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
+    await CardViewer.Database.initialReadAll("./db.json");
     CardViewer.composeStrategy = CardViewer.composeResultSmall;
     
     const messageHolder = $("#message-holder");

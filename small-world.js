@@ -71,11 +71,6 @@ let findAllBridgesBelow = function (thresh) {
     });
 };
 
-let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
-// baseURL = "./";
-window.ycgDatabase = baseURL + "ycg.json";
-window.exuDatabase = baseURL + "db.json";
-
 const getRandomCard = (kind=null) => {
     let cache = CardViewer.Search.pages.flat();
     if(kind === Deck.Location.MAIN) {
@@ -183,7 +178,7 @@ let onLoad = async function () {
     changeContentToCard(handCard, NO_CARD_LOADED);
     changeContentToCard(deckCard, NO_CARD_LOADED);
     
-    await CardViewer.Database.initialReadAll(ycgDatabase, exuDatabase);
+    await CardViewer.Database.initialReadAll("./db.json");
     CardViewer.Search.config.noTable = true;
     
     // get two random cards

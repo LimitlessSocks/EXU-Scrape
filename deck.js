@@ -1,7 +1,7 @@
 const CARD_BASE_WIDTH = 813;
 const CARD_BASE_HEIGHT = 1185;
 const NO_CARD = {
-    src: "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/res/no_img.png",
+    src: "./res/no_img.png",
     name: "Error: No Card",
     id: -1,
     username: "--",

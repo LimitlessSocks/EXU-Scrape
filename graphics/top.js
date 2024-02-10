@@ -1,7 +1,4 @@
 // import "tag-extract.js"
-let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
-baseURL = "./../";
-window.exuDatabase = baseURL + "db.json";
 
 /*
 // doesn't work: unsupported CSS properties by html2canvas
@@ -190,7 +187,7 @@ window.addEventListener("load", async function () {
     };
     
     // start loading
-    CardViewer.Database.initialReadAll(exuDatabase).then(() => {
+    CardViewer.Database.initialReadAll("./../db.json").then(() => {
         updateState("cardThumb");
         // database loaded; load the deck
         CardViewer.Editor.MajorContainer = $("#majorContainer");

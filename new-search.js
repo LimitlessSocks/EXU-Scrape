@@ -1,9 +1,4 @@
 // import "tag-extract.js"
-let baseURL = "https://raw.githubusercontent.com/LimitlessSocks/EXU-Scrape/master/";
-baseURL = "./";
-// window.ycgDatabase = baseURL + "ycg.json";
-window.exuDatabase = baseURL + "db.json";
-    
 const EMPTY_QUERY = {
     type: "",
     name: "",
@@ -31,7 +26,7 @@ let onLoad = async function () {
         // TODO: actually implement
     });
     
-    await CardViewer.Database.initialReadAll(exuDatabase);
+    await CardViewer.Database.initialReadAll("./db.json");
     
     const state = {
         stepSize: 25,
