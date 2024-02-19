@@ -4,7 +4,7 @@ require_relative 'finalize-scrape.rb'
 option = ARGV[0]
 
 outname = "db"
-database = get_database "tmp/#{option}"
+database = get_database ARGV[1] || "tmp/#{option}"
 old_database = get_database outname
 
 p database.find { |k,v| v["name"].include? "Mekangel" }

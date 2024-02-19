@@ -84,7 +84,7 @@ let onLoad = async function () {
             ["unlimited", "unlimited"],
         ]);
         for(let [ category, target ] of ADJUST_CATEGORIES) {
-            for(let name of categories[category]) {
+            for(let name of categories[category] ?? []) {
                 let { id } = CardViewer.getCardByName(name);
                 newBanlist.newly_changed.push(id);
                 // remove from existing arrays
