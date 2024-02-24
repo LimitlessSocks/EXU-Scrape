@@ -9,6 +9,6 @@
 # Updating banlist
  1. Run `normalize-composite.rb`, generating `db-tmp.json`
  2. Run `cp db-tmp.json db.json`.
- 3. Run `finalize-scrape-v2.rb <last-scrape-id> db` to incorporate the verdict.
+ 3. Run `finalize-scrape-v2.rb latest db` to incorporate the verdict.
 
-`scrape-book.rb && browser-scrape-to-db.rb && normalize-composite.rb && cp db-tmp.json db.json && finalize-scrape-v2.rb <last-scrape-id> db`
+`scrape-book.rb && browser-scrape-to-db.rb && normalize-composite.rb && cp db-tmp.json db.json && finalize-scrape-v2.rb latest db`
