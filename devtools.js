@@ -2,6 +2,66 @@
 let onLoad = async function () {
     await CardViewer.Database.initialReadAll("./db.json");
     
+    let totalComposite;
+    const MAX_LENGTH = 10;
+    fetch("./totalComposite.json").then(async (data) => {
+        let decklists = await data.json();
+        let originalToFind = document.getElementById("originalToFind");
+        let originalResults = document.getElementById("originalResults");
+        let results = originalResults.querySelector("tbody");
+        
+        const findResults = () => {
+            let { value } = originalToFind;
+            if(!value) {
+                return;
+            }
+            
+            value = value.toLowerCase();
+            
+            let messages = [];
+            
+            results.innerHTML = "";
+            let matchingLists = Object.entries(decklists).map(([id, decklist]) => {
+                let allCards = [].concat(decklist.main, decklist.side, decklist.extra);
+                let matches = allCards.filter(card => card.id == value || card.name?.toLowerCase()?.includes(value));
+                return { id, name: decklist.name, matches };
+            })
+            .filter(({ matches }) => matches.length !== 0);
+            
+            if(matchingLists.length > MAX_LENGTH) {
+                matchingLists = matchingLists.slice(0, MAX_LENGTH);
+                messages.push(`Showing first 10 of ${matchingLists.length} results`);
+            }
+            
+            for(let { id, name, matches } of matchingLists) {
+                let tr = document.createElement("tr");
+                let idTd = document.createElement("td");
+                let nameTd = document.createElement("td");
+                let matchTd = document.createElement("td");
+                
+                idTd.textContent = id;
+                nameTd.textContent = name;
+                matchTd.textContent = matches.map(match => [
+                    match.name,
+                    match.id,
+                    match.username,
+                    match.card_type,
+                    match.type,
+                ].join(" · ")).join("\n");
+                
+                tr.appendChild(idTd);
+                tr.appendChild(nameTd);
+                tr.appendChild(matchTd);
+                
+                results.appendChild(tr);
+            }
+        };
+        
+        findResults();
+        originalToFind.addEventListener("input", findResults);
+        
+    });
+    
     const updateCardNameToLinkOutput = () => {
         let value = $("#cardNameToLinkInput").val();
         
