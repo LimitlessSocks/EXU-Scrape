@@ -1231,9 +1231,12 @@ CardViewer.filter = function (query, exclude = null) {
     return cards;
 };
 
-window.PREFIX_PATH = "";
+window.PREFIX_PATH = "https://limitlesssocks.github.io/EXU-Scrape/";
+if(window?.location?.toString()?.includes("localhost")) {
+    window.PREFIX_PATH = "http://localhost:8080/";
+}
 const getResource = (...path) =>
-    `./${window.PREFIX_PATH}/res/${path.join("/")}.png`;
+    `${window.PREFIX_PATH}/res/${path.join("/")}.png`;
 
 const getAttribute = (attr) =>
     getResource("attribute", attr[0] + attr.slice(1).toLowerCase());

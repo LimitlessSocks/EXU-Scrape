@@ -15,8 +15,6 @@ const saveElementToImage = (element, outputFileName="output.png") => {
 };
 */
 
-window.PREFIX_PATH = "..";
-
 const BASE_WIDTH = 810;
 window.addEventListener("load", async function () {
     const form = document.getElementById("input");
