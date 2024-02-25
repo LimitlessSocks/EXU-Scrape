@@ -1231,8 +1231,9 @@ CardViewer.filter = function (query, exclude = null) {
     return cards;
 };
 
+window.PREFIX_PATH = "";
 const getResource = (...path) =>
-    `./res/${path.join("/")}.png`;
+    `./${window.PREFIX_PATH}/res/${path.join("/")}.png`;
 
 const getAttribute = (attr) =>
     getResource("attribute", attr[0] + attr.slice(1).toLowerCase());
