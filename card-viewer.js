@@ -1252,6 +1252,7 @@ const BANLIST_ICONS = {
     1: getIcon("banlist-limited"),
     2: getIcon("banlist-semilimited"),
     
+    explicitlyUnlimited: getIcon("banlist-explicitly-unlimited"),
     imported: getIcon("banlist-import"),
     notImported: getIcon("banlist-no-import"),
     ocg: getIcon("ocg"),

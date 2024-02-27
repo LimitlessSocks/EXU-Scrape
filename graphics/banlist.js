@@ -27,7 +27,7 @@ window.addEventListener("load", async function () {
     ];
     categories = [[], [], [], []];
     
-    // these do NOT change corresponding CSS scale/manual height set
+    const showUnlimited = document.getElementById("show-unlimited");
     
     const ORIGINAL_HEIGHT = 1185;
     const ORIGINAL_WIDTH = 813;
@@ -108,10 +108,11 @@ window.addEventListener("load", async function () {
         categories.forEach((cat, limit) => {
             let gallery = $($(".gallery")[limit]);
             gallery.empty();
+            let exu_limit = limit === 3 && showUnlimited.checked ? "explicitlyUnlimited" : limit;
             cat.forEach(cardId => {
                 let card = {
                     ...CardViewer.Database.cards[cardId],
-                    exu_limit: limit,
+                    exu_limit,
                 };
                 // console.log(card);
                 let view = CardViewer.composeResultDeckPreview(card);
