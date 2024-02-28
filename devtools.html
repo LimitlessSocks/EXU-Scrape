@@ -26,16 +26,16 @@
 <body>
 <h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1>
 <article>
-    <h2>Banlist Text &rarr; Changes</h2>
+    <h2 id="banlist_changes">Banlist Text &rarr; Changes</h2>
     <textarea id="banlistChanges"></textarea>
     <textarea class="hidden" readonly id="banlistChangesOutput"></textarea>
     
-    <h2>Card Names &rarr; EXU Links</h2>
+    <h2 id="card_names">Card Names &rarr; EXU Links</h2>
     <textarea id="cardNameToLinkInput"></textarea>
     <div class="hidden" id="cardNameToLinkOutput"></div>
     <textarea class="hidden" readonly id="cardNameToLinkMarkdown"></textarea>
     
-    <h2>Find original card source</h2>
+    <h2 id="card_source">Find original card source</h2>
     <label>Name or ID: <input id="originalToFind"></label>
     <table id="originalResults">
         <thead>
@@ -47,6 +47,10 @@
             
         </tbody>
     </table>
+    
+    <h2 id="spreadsheet">Banlist status &amp; Spreadsheet</h2>
+    <textarea id="cardsToSpreadsheet"></textarea>
+    <textarea class="hidden" id="spreadsheetOutput" readonly></textarea>
 </article>
 </body>
 </html>

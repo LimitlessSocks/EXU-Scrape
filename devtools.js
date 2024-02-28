@@ -190,6 +190,36 @@ let onLoad = async function () {
     };
     $("#banlistChanges").on("input", updateBanlistChanges);
     updateBanlistChanges();
+    
+    const updateSpreadsheetOutput = () => {
+        let val = $("#cardsToSpreadsheet").val();
+        if(!val.trim()) {
+            return;
+        }
+        let limits = ["Forbidden", "Limited", "Semi-Limited", "Unlimited"];
+        let tableValues = val
+            .trim()
+            .split("\n")
+            .map(e => CardViewer.getCardByName(e) ?? CardViewer.Database.cards[e])
+            .map(e => [
+                e.card_type + (
+                    e.card_type=="Monster" && e.monster_color !== "Normal"
+                        ? "/" + e.monster_color : ""
+                    ),
+                    e.serial_number,
+                    e.name.toUpperCase(),
+                    limits[e.tcg_limit],
+                    ,
+                    limits[e.exu_limit],
+            ]);
+        
+        // console.log(tableValues);
+        $("#spreadsheetOutput").removeClass("hidden").val(
+            tableValues.map(row => row.join("\t")).join("\n")
+        );
+    };
+    $("#cardsToSpreadsheet").on("input", updateSpreadsheetOutput);
+    updateSpreadsheetOutput();
 };
 
 window.addEventListener("load", onLoad);
