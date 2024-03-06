@@ -126,6 +126,8 @@ const getComparableDate = (date) => {
 };
 
 class Prompt {
+    // innerFn should be a function that returns the HTML body of the prompt
+    // supported types: small / large / nothing
     constructor(title, innerFn, buttons, type = null) {
         this.title = title;
         if(typeof innerFn !== "function") {
@@ -137,7 +139,7 @@ class Prompt {
         this.type = type;
     }
     
-    deploy() {
+    deploy(...args) {
         this.anchor = $("<div>").addClass("popup-background");
         
         this.anchor.click(e => {
@@ -147,7 +149,7 @@ class Prompt {
             }
             // console.log(e.target);
         });
-        let inner = this.innerFn(this) || $("");
+        let inner = this.innerFn(this, ...args) || $("");
         let buttonEls = this.buttons.map(text => $("<button>").text(text));
         inner = $("<div class=popup-inner>").append(
             $("<h2 class=popup-title>").text(this.title),
@@ -164,7 +166,7 @@ class Prompt {
             for(let button of buttonEls) {
                 let v = i;
                 button.click(() => {
-                    resolve([v, this]);
+                    resolve([v, this, inner]);
                     this.close();
                 });
                 i++;
