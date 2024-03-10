@@ -83,3 +83,7 @@
 textarea {
     width: 350px;
 }
+
+.missing {
+    opacity: 0.5;
+}

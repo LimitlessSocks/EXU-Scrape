@@ -28,6 +28,8 @@ window.addEventListener("load", async function () {
     categories = [[], [], [], []];
     
     const showUnlimited = document.getElementById("show-unlimited");
+    const showOCGSymbol = document.getElementById("show-ocg-symbol");
+    const showTCGSymbol = document.getElementById("show-tcg-symbol");
     
     const ORIGINAL_HEIGHT = 1185;
     const ORIGINAL_WIDTH = 813;
@@ -108,12 +110,19 @@ window.addEventListener("load", async function () {
         categories.forEach((cat, limit) => {
             let gallery = $($(".gallery")[limit]);
             gallery.empty();
+            gallery.prev().toggleClass("missing", cat.length === 0);
             let exu_limit = limit === 3 && showUnlimited.checked ? "explicitlyUnlimited" : limit;
             cat.forEach(cardId => {
                 let card = {
                     ...CardViewer.Database.cards[cardId],
                     exu_limit,
                 };
+                if(!showOCGSymbol.checked) {
+                    card.tcg = 1;
+                }
+                if(!showTCGSymbol.checked) {
+                    card.ocg = 1;
+                }
                 // console.log(card);
                 let view = CardViewer.composeResultDeckPreview(card);
                 let holder = $("<div class=card-holder>");
