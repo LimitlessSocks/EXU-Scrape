@@ -165,15 +165,17 @@ const INDICATORS = [
     new TagIndicator(/or/i, () => OPERATOR_INLINE_OR),
     new TagIndicator(/and/i, () => OPERATOR_INLINE_AND),
     new TagIndicator(/!|not/i, () => OPERATOR_NOT),
-    new TagIndicator(/asc(?:end(?:ing)?)?|up/, () => ({
+    new TagIndicator(/asc(?:end(?:ing)?)?|up/i, () => ({
         sortOrder: "ascending",
     })),
-    new TagIndicator(/desc(?:end(?:ing)?)?|down/, () => ({
+    new TagIndicator(/desc(?:end(?:ing)?)?|down/i, () => ({
         sortOrder: "descending",
     })),
-    new TagIndicator(/sort(?:\s*by)\s*(name|atk|def|level|date|text)/i, (match) => ({
-        sortBy: match[1],
-        ... MONSTER_SORTS.includes(match[1]) ? { type: "monster" } : {},
+    new TagIndicator(/sort(?:\s*(?:(asc(?:end(?:ing)?)?|up)|(desc(?:end(?:ing)?)?|down)))?(?:\s*by)?\s*(name|atk|def|level|date|text)/i, (match) => ({
+        sortBy: match[3].toLowerCase(),
+        ... MONSTER_SORTS.includes(match[3]) ? { type: "monster" } : {},
+        ... match[1] ? { sortOrder: "ascending" } : {},
+        ... match[2] ? { sortOrder: "descending" } : {},
     })),
     new TagIndicator(/case(d| sensitive)?/i, () => CASE_SENSITIVE),
     new TagIndicator(/(?:limit|at)\s*(-?\d+|any)/i, (match) => ({ limit: match[1] })),

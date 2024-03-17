@@ -616,6 +616,34 @@ const TEST_CASES = [
     ["effectless", [
         { type: "noneffect" },
     ]],
+    ["sort by text", [
+        { sortBy: "text" },
+    ]],
+    ["SORT NAME", [
+        { sortBy: "name" },
+    ]],
+    ["sort  by  def", [
+        { sortBy: "def", type: "monster" },
+    ]],
+    ["sort  by  atk  down", [
+        { sortBy: "atk", type: "monster" },
+        { sortOrder: "descending" },
+    ]],
+    ["UP", [
+        { sortOrder: "ascending" },
+    ]],
+    ["asc", [
+        { sortOrder: "ascending" },
+    ]],
+    ["ascEND", [
+        { sortOrder: "ascending" },
+    ]],
+    ["sort down by date", [
+        { sortBy: "date", sortOrder: "descending" },
+    ]],
+    ["sort up by LEVEL", [
+        { sortBy: "level", sortOrder: "ascending" },
+    ]],
 ];
 
 module.exports = function testTagExtractParse(debug = false) {
