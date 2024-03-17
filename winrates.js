@@ -243,10 +243,10 @@ const showResultsForDataFile = async name => {
     }
     $("#datafile-title").text(name);
     
-    let data = await fetch("./data/" + name);
+    let data = await fetch("./data/old/" + name);
     
     if(!data.ok) {
-        $("#matched").text("Could not load file: ./data/" + name);
+        $("#matched").text("Could not load file: ./data/old/" + name);
         return;
     }
     
