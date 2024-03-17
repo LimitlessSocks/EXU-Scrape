@@ -155,6 +155,7 @@ const getComparison = (text) => (
                         : "equal"
 );
 
+const MONSTER_SORTS = [ "atk", "def", "level" ];
 const INDICATORS = [
     new TagIndicator(/(@+)(.+?)\1/, (match) => ({
         customExpression: match[2],
@@ -164,6 +165,16 @@ const INDICATORS = [
     new TagIndicator(/or/i, () => OPERATOR_INLINE_OR),
     new TagIndicator(/and/i, () => OPERATOR_INLINE_AND),
     new TagIndicator(/!|not/i, () => OPERATOR_NOT),
+    new TagIndicator(/asc(?:end(?:ing)?)?|up/, () => ({
+        sortOrder: "ascending",
+    })),
+    new TagIndicator(/desc(?:end(?:ing)?)?|down/, () => ({
+        sortOrder: "descending",
+    })),
+    new TagIndicator(/sort(?:\s*by)\s*(name|atk|def|level|date|text)/i, (match) => ({
+        sortBy: match[1],
+        ... MONSTER_SORTS.includes(match[1]) ? { type: "monster" } : {},
+    })),
     new TagIndicator(/case(d| sensitive)?/i, () => CASE_SENSITIVE),
     new TagIndicator(/(?:limit|at)\s*(-?\d+|any)/i, (match) => ({ limit: match[1] })),
     new TagIndicator(/semi[- ]?limit(ed)?/i, () => ({ limit: "2" })),

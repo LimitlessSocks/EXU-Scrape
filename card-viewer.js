@@ -387,6 +387,7 @@ CardViewer.Database.initialReadAll = async function (...names) {
 const _F = {
     propda: (prop) => (obj) => obj[prop],
     id: x => x,
+    // NOTE: this will not behave nicely with NaN. be sure to filter out NaN beforehand!!!
     sortBy: (list, ...fns) =>
         list.map(e => [e, fns.map(fn => fn(e))])
             .sort(([l, lcs], [r, rcs]) =>
@@ -1164,14 +1165,19 @@ const SortByPropertyMap = {
     // add a year from today's date when comparing cards to shove null dated cards to the end
     date: (card) => new Date(card.date ?? ONE_YEAR_FROM_NOW),
 };
-//SortByIsNumber
-const SortByFunction = {
-    atk: parseInt,
-    def: parseInt,
-    level: parseInt,
+
+// put ? values before everything else
+const preprocessYugiohStat = str =>
+    str === "?" ? -1 : parseInt(str, 10);
+
+const SortByPreprocess = {
+    atk: preprocessYugiohStat,
+    def: preprocessYugiohStat,
+    level: preprocessYugiohStat,
     date: getComparableDate,
 };
-CardViewer.filter = function (query, exclude = null) {
+
+CardViewer.filter = function (query, exclude = null, sortOptions = query) {
     CardViewer.caseSensitive = query.caseSensitive;
     // console.log(query, query.caseSensitive, CardViewer.caseSensitive);
     let filter = CardViewer.createFilter(query, exclude);
@@ -1195,12 +1201,12 @@ CardViewer.filter = function (query, exclude = null) {
     
     // console.log("AFTER:", CardViewer.caseSensitive);
     
-    let sortByProperty = query.sortBy;
+    let sortByProperty = sortOptions.sortBy;
     if(typeof sortByProperty === "undefined") {
         sortByProperty = CardViewer.Search.config.sortByProperty;
     }
     
-    let sortOrder = query.sortOrder;
+    let sortOrder = sortOptions.sortOrder;
     if(typeof sortOrder === "undefined") {
         sortOrder = CardViewer.Search.config.sortOrder;
     }
@@ -1214,8 +1220,8 @@ CardViewer.filter = function (query, exclude = null) {
     }
     else {
         sortFn = _F.propda(sortByProperty);
-        if(SortByFunction[sortByProperty]) {
-            sortFn = _F.compose(SortByFunction[sortByProperty], sortFn);
+        if(SortByPreprocess[sortByProperty]) {
+            sortFn = _F.compose(SortByPreprocess[sortByProperty], sortFn);
         }
     }
     
@@ -1223,12 +1229,15 @@ CardViewer.filter = function (query, exclude = null) {
     
     switch(sortOrder) {
         case "ascending":
+        case undefined:
             break;
         case "descending":
             cards.reverse();
             break;
+        default:
+            console.warn("Unknown sort order", sortOrder);
+            break;
     }
-    
     
     return cards;
 };

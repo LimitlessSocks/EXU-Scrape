@@ -53,10 +53,20 @@ let onLoad = async function () {
         }
         lastInput = text;
         let query = naturalInputToQuery(text);
-        query = condenseQuery(query);
-        console.log("owo", text, "==>", query, query.caseSensitive);
+        let condensed = condenseQuery(query);
         
-        state.results = CardViewer.filter(query);
+        // extract date info
+        let congealed = query.reduce((p, c) => ({...p, ...c}));
+        
+        console.log("owo");
+        console.log("TEXT:", text);
+        console.log("QUERY:", query);
+        console.log("CONDENSED:", condensed, "(case sensitive:", condensed.caseSensitive, ")");
+        console.log("CONGEALED DATE:", congealed);
+        // text, "==>", query, condensed, condensed.caseSensitive);
+        
+        
+        state.results = CardViewer.filter(condensed, null, congealed);
         state.total = state.results.length
         state.showing = Math.min(state.total, state.stepSize);
         
