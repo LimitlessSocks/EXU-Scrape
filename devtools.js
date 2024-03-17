@@ -197,10 +197,12 @@ let onLoad = async function () {
             return;
         }
         let limits = ["Forbidden", "Limited", "Semi-Limited", "Unlimited"];
+        let rejected = [];
         let tableValues = val
             .trim()
             .split("\n")
-            .map(e => CardViewer.getCardByName(e) ?? CardViewer.Database.cards[e])
+            .map(e => CardViewer.getCardByName(e) ?? CardViewer.Database.cards[e] ?? (rejected.push(e), undefined))
+            .filter(e => e)
             .map(e => [
                 e.card_type + (
                     e.card_type=="Monster" && e.monster_color !== "Normal"
@@ -215,7 +217,10 @@ let onLoad = async function () {
         
         // console.log(tableValues);
         $("#spreadsheetOutput").removeClass("hidden").val(
-            tableValues.map(row => row.join("\t")).join("\n")
+            (rejected.length
+                ? `!!! ERROR !!! COULD NOT FIND !!!\n${rejected.join("; ")}\n------------------------------\n`
+                : ""
+            ) + tableValues.map(row => row.join("\t")).join("\n")
         );
     };
     $("#cardsToSpreadsheet").on("input", updateSpreadsheetOutput);
