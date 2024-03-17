@@ -56,7 +56,7 @@ let onLoad = async function () {
         let condensed = condenseQuery(query);
         
         // extract date info
-        let congealed = query.reduce((p, c) => ({...p, ...c}));
+        let congealed = query.reduce((p, c) => ({...p, ...c}), {});
         
         console.log("owo");
         console.log("TEXT:", text);
