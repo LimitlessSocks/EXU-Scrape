@@ -482,7 +482,8 @@ CardViewer.Search.showPage = function (id = CardViewer.Search.currentPage, confi
     
     // humans measure in 1-based indices
     if(CardViewer.Elements.currentPage) {
-        CardViewer.Elements.currentPage.text(id + 1);
+        CardViewer.Elements.currentPage.val(id + 1);
+        CardViewer.Elements.currentPage.attr("max", CardViewer.Search.pages.length);
     }
 };
 

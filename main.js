@@ -48,7 +48,7 @@ let onLoad = async function () {
     CardViewer.Elements.cardLevelCompare = $("#cardLevelCompare");
     CardViewer.Elements.cardATKCompare = $("#cardATKCompare");
     CardViewer.Elements.cardDEFCompare = $("#cardDEFCompare");
-    CardViewer.Elements.toTopButton = $("#totop");
+    // CardViewer.Elements.toTopButton = $("#totop");
     CardViewer.Elements.saveSearch = $("#saveSearch");
     CardViewer.Elements.clearSearch = $("#clearSearch");
     CardViewer.Elements.searchSortBy = $("#searchSortBy");
@@ -60,12 +60,27 @@ let onLoad = async function () {
     CardViewer.Elements.previousPage.click(CardViewer.Search.previousPage);
     CardViewer.Elements.nextPage.click(CardViewer.Search.nextPage);
     
+    
+    CardViewer.Elements.currentPage.on("input", (ev) => {
+        let { value } = ev.target;
+        CardViewer.Search.currentPage = Math.floor(
+            Math.min(CardViewer.Search.pages.length,
+                Math.max(0,
+                    parseInt(value, 10) - 1
+                )
+            )
+        );
+        CardViewer.Search.showPage();
+    });
+    
+    /*
     CardViewer.Elements.toTopButton.click(() => {
         $("html, body").animate(
             { scrollTop: "0px" },
             { duration: 200, }
         );
     });
+    */
     
     const unsavedValues = [ "", "any" ];
     const unsavedKeys = [ "imported", "notImported", "alsoImported" ];
