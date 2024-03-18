@@ -79,26 +79,32 @@ let onLoad = async function () {
             appendCard(card);
         }
         updateTexts();
-        $("#expand").toggle(true);
+        
+        let needsExpansion = state.results.length > state.stepSize;
+        $(".button-expand").toggleClass("hidden", !needsExpansion);
+        $(".navigation.bottom").toggle("hidden", !needsExpansion);
     };
     
-    $("#expand").click(() => {
-        let step = () => {
-            for(let i = 0; i < state.stepSize; i++) {
-                if(state.showing >= state.results.length) {
-                    state.showing = state.results.length;
-                    break;
-                }
-                let card = state.results[state.showing++];
-                appendCard(card);
+    let expandOnce = () => {
+        for(let i = 0; i < state.stepSize; i++) {
+            if(state.showing >= state.results.length) {
+                state.showing = state.results.length;
+                break;
             }
-            updateTexts();
-            if(state.showing < state.results.length) {
-                setTimeout(step, 0);
-            }
-        };
-        step();
-    });
+            let card = state.results[state.showing++];
+            appendCard(card);
+        }
+        updateTexts();
+    };
+    let expandAll = () => {
+        expandOnce();
+        if(state.showing < state.results.length) {
+            setTimeout(expandAll, 0);
+        }
+    };
+    
+    $(".button-expand.some").click(expandOnce);
+    $(".button-expand.all").click(expandAll);
     search.change(changeInput);
     search.keypress((ev) => {
         if(ev.key === "Enter") {

@@ -72,6 +72,9 @@
             float: right;
             color: white;
         }
+        .navigation button + button {
+            margin-left: 5px;
+        }
     </style>
 </head>
 <body>
@@ -80,11 +83,15 @@
 <input id="search" class="large" placeholder="Try clicking [Reference] (right)!">
 <div id="container">
     <div class="navigation">
-        <button id="save-link">Share Search</button><span class="vr"></span><span class="search-stats">Showing <span class="cards-showing">X</span> of <span class="cards-total">Y</span> result(s)</span><span class="vr"></span><button id="expand" class="hidden">Expand all</button>
+        <span class="search-stats">Showing <span class="cards-showing">X</span> of <span class="cards-total">Y</span> result(s)</span><span class="vr"></span><button class="hidden button-expand some">Expand 25</button><button class="hidden button-expand all">Expand all</button><button id="save-link">Share Search</button>
         <a id="reference" target="_blank" href="./new-search-reference" class="fake-button red-button large">Reference</a>
     </div>
     
     <div id="output">Loading, please wait&hellip;</div>
+    
+    <div class="navigation hidden bottom">
+        <span class="search-stats">Showing <span class="cards-showing">X</span> of <span class="cards-total">Y</span> result(s)</span><span class="vr"></span><button class="hidden button-expand some">Expand 25</button><button class="hidden button-expand all">Expand all</button>
+    </div>
 </div>
 <div id="creditArt" class="square-button hidden">
     <div id="creditArtToggle" class="toggleIcon"><img src="./res/art.png"/></div>
