@@ -391,15 +391,19 @@ const _F = {
     propda: (prop) => (obj) => obj[prop],
     id: x => x,
     // NOTE: this will not behave nicely with NaN. be sure to filter out NaN beforehand!!!
-    sortBy: (list, ...fns) =>
-        list.map(e => [e, fns.map(fn => fn(e))])
+    sortBy: (list, ...fns) => {
+        let isAscending = fns.map(entry => Array.isArray(entry) ? entry[1] : true);
+        fns = fns.map(entry => Array.isArray(entry) ? entry[0] : entry);
+        return list.map(e => [e, fns.map(fn => fn(e))])
             .sort(([l, lcs], [r, rcs]) =>
                 lcs.map((lc, i) => {
                     rc = rcs[i];
-                    return (lc > rc) - (lc < rc);
+                    let judgment = (lc > rc) - (lc < rc);
+                    return isAscending[i] ? judgment : -judgment;
                 }).find(x => x) || 0
             )
-            .map(([e, ec]) => e),
+            .map(([e, ec]) => e);
+    },
     // more accurate, but more expensive
     sortByLocale: (list, ...fns) =>
         list.map(e => [e, fns.map(fn => fn(e))])
@@ -1248,19 +1252,22 @@ CardViewer.filter = function (query, exclude = null, sortOptions = query) {
         }
     }
     
-    cards = _F.sortBy(cards, sortFn);
-    
+    let isAscending;
     switch(sortOrder) {
         case "ascending":
         case undefined:
+            isAscending = true;
             break;
         case "descending":
-            cards.reverse();
+            isAscending = false;
             break;
         default:
             console.warn("Unknown sort order", sortOrder);
+            isAscending = true;
             break;
     }
+    
+    cards = _F.sortBy(cards, [ sortFn, isAscending ], _F.propda("name"), _F.propda("custom"));
     
     return cards;
 };
