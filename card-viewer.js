@@ -1059,6 +1059,17 @@ CardViewer.createFilter = function (query, exclude = null) {
         }
     }
     
+    if(query.playRate) {
+        let playRate = parseFloat(query.playRate) / 100;
+        if(!Number.isNaN(playRate)) {
+            filters.push(CardViewer.comparingComparator(
+                playRate,
+                query.playRateCompare || "equal",
+                CardViewer.getPlayrate,
+            ));
+        }
+    }
+    
     if(query.atk) {
         filters.push(CardViewer.comparingComparator(
             query.atk,
@@ -1222,6 +1233,14 @@ CardViewer.filter = function (query, exclude = null, sortOptions = query) {
     if(typeof sortByProperty === "function") {
         sortFn = sortByProperty;
     }
+    else if(sortByProperty === "playrate") {
+        if(CardViewer.Playrates.Summary) {
+            sortFn = CardViewer.getPlayrate;
+        }
+        else {
+            sortFn = card => 0;
+        }
+    }
     else {
         sortFn = _F.propda(sortByProperty);
         if(SortByPreprocess[sortByProperty]) {
@@ -1319,6 +1338,9 @@ const setMonsterAttributeIcons = (card, attribute) => {
     
     return attribute;
 };
+
+const formatPercent = percent =>
+    Math.round(percent * 10000) / 100 + "%";
 
 // CardViewer.
 CardViewer.composeResultSmall = function (card) {
@@ -1682,20 +1704,36 @@ CardViewer.composeResult = function (card) {
     );
     
     if(CardViewer.Playrates.Summary) {
-        let myIndicator = card.serial_number || card.id;
-        let myPlayrates = CardViewer.Playrates.Summary[myIndicator];
-        if(myPlayrates) {
-            let [ mySummary, myPercent ] = myPlayrates;
+        let indicator = card.serial_number || card.id;
+        let playrateInfo = CardViewer.Playrates.Summary[indicator];
+        if(playrateInfo) {
+            let { mode, modeRatio, playedAt, playRate } = playrateInfo;
+            let playRatio = mode + " in " + formatPercent(modeRatio);
+            playRate = formatPercent(playRate);
             
-            myPercent = Math.round(myPercent * 10000) / 100 + "%";
-            let text = mySummary + " in " + myPercent;
-            innerResult.append($("<h4 class=playrate-summary>").text(text));
+            innerResult.append($("<h4 class=playrate-summary>").append(
+                $("<em>").text("Playrate: "),
+                `${playRate} (${playRatio})`,
+            ));
         }
     }
     
     res.append(innerResult);
     
     return res;
+};
+
+CardViewer.getPlayrateWarned = false;
+CardViewer.getPlayrate = card => {
+    if(!CardViewer.Playrates.Summary) {
+        if(!CardViewer.getPlayrateWarned) {
+            console.warn("Warning: Attempting to get card playrate without a playrate summary connected (You might need `CardViewer.Playrates.Summary = await fetch(\"./data/playrate-summary.json\").then(req => req.json());` first!)");
+            CardViewer.getPlayrateWarned = true;
+        }
+        return;
+    }
+    let indicator = card.serial_number || card.id;
+    return CardViewer.Playrates.Summary[indicator]?.playRate ?? 0;
 };
 
 CardViewer.setUpTabSearchSwitching = function () {

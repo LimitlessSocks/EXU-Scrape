@@ -171,12 +171,22 @@ const INDICATORS = [
     new TagIndicator(/desc(?:end(?:ing)?)?|down/i, () => ({
         sortOrder: "descending",
     })),
-    new TagIndicator(/sort(?:\s*(?:(asc(?:end(?:ing)?)?|up)|(desc(?:end(?:ing)?)?|down)))?(?:\s*by)?\s*(name|atk|def|level|date|text)/i, (match) => ({
+    new TagIndicator(/sort(?:\s*(?:(asc(?:end(?:ing)?)?|up)|(desc(?:end(?:ing)?)?|down)))?(?:\s*by)?\s*(name|atk|def|level|date|text|playrate)/i, (match) => ({
         sortBy: match[3].toLowerCase(),
         ... MONSTER_SORTS.includes(match[3]) ? { type: "monster" } : {},
         ... match[1] ? { sortOrder: "ascending" } : {},
         ... match[2] ? { sortOrder: "descending" } : {},
     })),
+    new TagIndicator(/playrate\s*(?:(>=?|<=?|[/!]?==?)\s*)?(\d+(?:\.\d*)?|\.d\d+)%?/i, (match) => ({
+        playRateCompare: getComparison(match[1]),
+        playRate: match[2],
+    })),
+    new TagIndicator(/(\d+(?:\.\d*)?|\.d\d+)%?\s*playrate/i, (match) => ({
+        playRateCompare: "equal",
+        playRate: match[1],
+    })),
+    new TagIndicator(/played/, () => ({ playRate: "0", playRateCompare: "greater" })),
+    new TagIndicator(/unplayed/, () => ({ playRate: "0", playRateCompare: "equal" })),
     new TagIndicator(/case(d| sensitive)?/i, () => CASE_SENSITIVE),
     new TagIndicator(/(?:limit|at)\s*(-?\d+|any)/i, (match) => ({ limit: match[1] })),
     new TagIndicator(/semi[- ]?limit(ed)?/i, () => ({ limit: "2" })),

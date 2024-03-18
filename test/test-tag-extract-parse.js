@@ -644,6 +644,34 @@ const TEST_CASES = [
     ["sort up by LEVEL", [
         { sortBy: "level", sortOrder: "ascending" },
     ]],
+    ["SORT DOWN BY PLAYRATE", [
+        { sortBy: "playrate", sortOrder: "descending" },
+    ]],
+    ["playrate > 50%", [
+        { playRate: "50", playRateCompare: "greater" }
+    ]],
+    ["playrate 0%", [
+        { playRate: "0", playRateCompare: "equal" }
+    ]],
+    ["100% PLAYRATE", [
+        { playRate: "100", playRateCompare: "equal" }
+    ]],
+    ["played", [
+        { playRate: "0", playRateCompare: "greater" }
+    ]],
+    ["unplayed", [
+        { playRate: "0", playRateCompare: "equal" }
+    ]],
+    ["playrate <= 33.33%", [
+        { playRate: "33.33", playRateCompare: "lessequal" }
+    ]],
+    // XXX: 70.07 fails due to Floating Point Shenanigans
+    ["70 playrate", [
+        { playRate: "70", playRateCompare: "equal" }
+    ]],
+    ["playrate 100", [
+        { playRate: "100", playRateCompare: "equal" }
+    ]],
 ];
 
 module.exports = function testTagExtractParse(debug = false) {

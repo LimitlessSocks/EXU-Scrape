@@ -82,7 +82,7 @@ let onLoad = async function () {
         
         let needsExpansion = state.results.length > state.stepSize;
         $(".button-expand").toggleClass("hidden", !needsExpansion);
-        $(".navigation.bottom").toggle("hidden", !needsExpansion);
+        $(".navigation.bottom").toggleClass("hidden", !needsExpansion);
     };
     
     let expandOnce = () => {
