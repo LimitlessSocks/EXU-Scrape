@@ -131,7 +131,7 @@ const getComparableDate = (date) => {
 class Prompt {
     // innerFn should be a function that returns the HTML body of the prompt
     // supported types: small / large / nothing
-    constructor(title, innerFn, buttons, type = null) {
+    constructor(title, innerFn, buttons, ...types) {
         this.title = title;
         if(typeof innerFn !== "function") {
             let oldInnerFn = innerFn;
@@ -139,7 +139,7 @@ class Prompt {
         }
         this.innerFn = innerFn;
         this.buttons = buttons;
-        this.type = type;
+        this.types = types;
     }
     
     deploy(...args) {
@@ -159,8 +159,8 @@ class Prompt {
             inner,
             $("<div>").append(buttonEls),
         );
-        if(this.type !== null) {
-            inner.addClass(this.type);
+        for(let type of this.types) {
+            inner.addClass(type);
         }
         this.anchor.append(inner);
         return new Promise((resolve, reject) => {
@@ -1481,52 +1481,47 @@ CardViewer.composeResult = function (card) {
     let img = $("<img class=img-result>").attr("src", card.src);
     let name = $("<h3 class=result-name>").text(card.name);
     
-    /*
-    let idText = card.id;
-    let altText = `(~${card.submission_source})`;
-    let id = $("<h4 class=result-id>")
-        .contextmenu((e) => {
-            e.preventDefault();
-            idText = idText === card.id ? altText : card.id;
-            id.text(idText);
-        })
-        .text(idText);
-    */
-    
-    let texts = [
-        [ "DB ID", card.id ]
-    ];
-    if(card.serial_number) {
-        texts.push([ "Konami Passcode", card.serial_number ]);
-    }
-    if(card.submission_source) {
-        texts.push([ "Submission Source", card.submission_source ]);
-    }
     let textHolder = $("<span>")
-        .text(card.id)
-        .data("textIndex", 0);
+        .text(card.id);
     let id = $("<h4 class=result-id>")
         .append(textHolder);
-    if(texts.length > 1) {
-        let cycleButton = $("<button class=small title='Show other IDs'>🔧</button>")
-            .click(() => {
-                let nextIdx = textHolder.data("textIndex") + 1;
-                nextIdx %= texts.length;
-                textHolder.data("textIndex", nextIdx);
-                let [ label, value ] = texts[nextIdx];
-                textHolder.text(`${label}: ${value}`);
-            })
-            .contextmenu((ev) => {
-                textHolder.text(card.id);
-                textHolder.data("textIndex", 0);
-                ev.preventDefault();
-            });
-        id.append(cycleButton);
-    }
     
-    let linkButton = $("<button class=small title='Grab link to card'>🔗</button>");
-    id.append(linkButton);
-        
+    // info button code
+    let infoButton = $("<button class='small info-inline' title='Show more info'>?</button>");
+    id.append(infoButton);
+    
+    let promptLines = [
+        [ "DB ID", card.id ],
+    ];
+    if(card.serial_number) {
+        promptLines.push([ "Konami Passcode", card.serial_number ]);
+    }
+    if(card.submission_source) {
+        promptLines.push([
+            $("<a>").text("DB Submission Source").attr("href", `https://www.duelingbook.com/deck?id=${card.submission_source}`).attr("target", "_blank"),
+            card.submission_source,
+        ]);
+    }
+    let dbCardLink = `https://www.duelingbook.com/card?id=${card.id}`;
+    promptLines.push([
+        $("<a>").text("DB Link").attr("href", dbCardLink).attr("target", "_blank"),
+        $("<code>").text(`[${card.name}](<${dbCardLink}>)`),
+    ]);
+    let exuCardLink = `https://limitlesssocks.github.io/EXU-Scrape/card?id=${card.id}`;
+    promptLines.push([
+        $("<a>").text("EXU Link").attr("href", exuCardLink).attr("target", "_blank"),
+        $("<code>").text(`[${card.name}](${exuCardLink})`),
+    ]);
+    
+    promptLines = promptLines
+        .map(line => $("<tr>").append(...line.map(el => $("<td>").append(el))))
+        .reduce((p, c) => p.add(c), $(""));
+    
+    promptLines = $("<table class=spacey>").append(promptLines);
+    let infoPrompt = new Prompt("Card Details", promptLines, ["OK"], "large", "auto");
+    infoButton.click(() => {
+        infoPrompt.deploy();
+    });
     
     let author = $("<h4 class=result-author>").text(card.username);
     let dateAdded = $("<h4 class=result-date>");
