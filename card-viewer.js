@@ -14,6 +14,9 @@ const CardViewer = {
         currentPage: null,
         processResults: null,
     },
+    Playrates: {
+        Summary: null,
+    },
     Elements: {},
     // methods
     submit: null,
@@ -1478,6 +1481,7 @@ CardViewer.composeResult = function (card) {
     let img = $("<img class=img-result>").attr("src", card.src);
     let name = $("<h3 class=result-name>").text(card.name);
     
+    /*
     let idText = card.id;
     let altText = `(~${card.submission_source})`;
     let id = $("<h4 class=result-id>")
@@ -1487,6 +1491,43 @@ CardViewer.composeResult = function (card) {
             id.text(idText);
         })
         .text(idText);
+    */
+    
+    let texts = [
+        [ "DB ID", card.id ]
+    ];
+    if(card.serial_number) {
+        texts.push([ "Konami Passcode", card.serial_number ]);
+    }
+    if(card.submission_source) {
+        texts.push([ "Submission Source", card.submission_source ]);
+    }
+    let textHolder = $("<span>")
+        .text(card.id)
+        .data("textIndex", 0);
+    let id = $("<h4 class=result-id>")
+        .append(textHolder);
+    if(texts.length > 1) {
+        let cycleButton = $("<button class=small title='Show other IDs'>🔧</button>")
+            .click(() => {
+                let nextIdx = textHolder.data("textIndex") + 1;
+                nextIdx %= texts.length;
+                textHolder.data("textIndex", nextIdx);
+                let [ label, value ] = texts[nextIdx];
+                textHolder.text(`${label}: ${value}`);
+            })
+            .contextmenu((ev) => {
+                textHolder.text(card.id);
+                textHolder.data("textIndex", 0);
+                ev.preventDefault();
+            });
+        id.append(cycleButton);
+    }
+    
+    let linkButton = $("<button class=small title='Grab link to card'>🔗</button>");
+    id.append(linkButton);
+        
+    
     let author = $("<h4 class=result-author>").text(card.username);
     let dateAdded = $("<h4 class=result-date>");
     if(card.date) {
@@ -1632,14 +1673,32 @@ CardViewer.composeResult = function (card) {
         )));
     }
     
-    res.append($("<div class=result-inner>").append(id, name, dateAdded, linkArrows, author, stats,
+    let innerResult = $("<div class=result-inner>")
+        .append(id, name, dateAdded, linkArrows, author, stats);
+    
+    innerResult.append(
         $("<table>").append(
             $("<tr>").append(
                 $("<td class=result-img-holder>").append(img, attribute, marking),
                 $("<td class=result-effect>").append(effect)
             )
         )
-    ));
+    );
+    
+    if(CardViewer.Playrates.Summary) {
+        let myIndicator = card.serial_number || card.id;
+        let myPlayrates = CardViewer.Playrates.Summary[myIndicator];
+        if(myPlayrates) {
+            let [ mySummary, myPercent ] = myPlayrates;
+            
+            myPercent = Math.round(myPercent * 10000) / 100 + "%";
+            let text = mySummary + " in " + myPercent;
+            innerResult.append($("<h4 class=playrate-summary>").text(text));
+        }
+    }
+    
+    res.append(innerResult);
+    
     return res;
 };
 

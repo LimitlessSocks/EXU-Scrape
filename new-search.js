@@ -28,6 +28,9 @@ let onLoad = async function () {
     
     await CardViewer.Database.initialReadAll("./db.json");
     
+    const playrateSummary = await fetch("./data/playrate-summary.json").then(req => req.json());
+    CardViewer.Playrates.Summary = playrateSummary;
+    
     const state = {
         stepSize: 25,
     };

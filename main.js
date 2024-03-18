@@ -7,6 +7,9 @@ let loadDatabase = async function () {
 let onLoad = async function () {
     await loadDatabase();
     
+    const playrateSummary = await fetch("./data/playrate-summary.json").then(req => req.json());
+    CardViewer.Playrates.Summary = playrateSummary;
+    
     CardViewer.Elements.searchParameters = $("#searchParameters, .extraParamaters");
     
     CardViewer.Elements.cardType = $("#cardType");
