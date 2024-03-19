@@ -31,6 +31,10 @@ article {
     border-radius: 15px;
 }
 
+article.wide {
+    width: 95%;
+}
+
 select {
     width: 100%;
 }
@@ -159,9 +163,6 @@ textarea {
     width: auto;
     display: inline-block;
 }
-.pagetable td {
-    vertical-align: top;
-}
 #totop {
     font-size: 2em;
     margin: 10px;
@@ -186,8 +187,23 @@ textarea {
     vertical-align: top;
 }
 
-.pagetable > tr > td {
-    width: 50%;
+.pagetable {
+    display: flex;
+    flex-wrap: wrap;
+}
+.pagetable .pagetable-cell {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+.result table td {
+    vertical-align: top;
+}
+
+@media screen and (min-width: 1200px) {
+    .pagetable .pagetable-cell {
+        width: 50%;
+    }
 }
 
 img.star {

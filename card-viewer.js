@@ -467,17 +467,15 @@ CardViewer.Search.showPage = function (id = CardViewer.Search.currentPage, confi
         });
     }
     else {
-        let table = $("<table class=pagetable>");
+        let table = $("<div class=pagetable>");
         let row = [];
         page.forEach((result, i, arr) => {
             let composed = CardViewer.composeStrategy(result);
             row.push(composed);
             if(row.length === CardViewer.Search.columnWidth || i + 1 === arr.length) {
-                let tr = $("<tr>");
                 for(let c of row) {
-                    tr.append($("<td>").append(c));
+                    table.append($("<div class=pagetable-cell>").append(c));
                 }
-                table.append(tr);
                 row = [];
             }
         });
