@@ -105,7 +105,7 @@ let onLoad = async function () {
                 strs.push(key + "=" + value);
             }
         }
-        alert("saving " + JSON.stringify(strs));
+        // alert("saving " + JSON.stringify(strs));
         if(strs.length || window.location.search) {
             window.location.search = encodeURI(strs.join(","))
                 .replaceAll(".", "%2E")
@@ -135,6 +135,8 @@ let onLoad = async function () {
         atkCompare:         CardViewer.Elements.cardATKCompare,
         def:                CardViewer.Elements.cardDEF,
         defCompare:         CardViewer.Elements.cardDEFCompare,
+        playRate:           CardViewer.Elements.playRate,
+        playRateCompare:    CardViewer.Elements.playRateCompare,
     };
     
     const parseStringValue = (str) => {
