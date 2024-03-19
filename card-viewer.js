@@ -677,17 +677,19 @@ CardViewer.showImported = false;
 
 CardViewer.query = function () {
     let baseStats = {
-        name:         CardViewer.Elements.cardName.val(),
-        effect:       CardViewer.Elements.cardDescription.val(),
-        type:         CardViewer.Elements.cardType.val(),
-        limit:        CardViewer.Elements.cardLimit.val(),
-        id:           CardViewer.Elements.cardId.val(),
-        author:       CardViewer.Elements.cardAuthor.val(),
-        category:     CardViewer.Elements.cardCategory.val(),
-        visibility:   CardViewer.Elements.cardVisibility.val(),
-        imported:     false,
-        notImported:  false,
-        alsoImported: CardViewer.showImported
+        name:               CardViewer.Elements.cardName.val(),
+        effect:             CardViewer.Elements.cardDescription.val(),
+        type:               CardViewer.Elements.cardType.val(),
+        limit:              CardViewer.Elements.cardLimit.val(),
+        id:                 CardViewer.Elements.cardId.val(),
+        author:             CardViewer.Elements.cardAuthor.val(),
+        category:           CardViewer.Elements.cardCategory.val(),
+        visibility:         CardViewer.Elements.cardVisibility.val(),
+        imported:           false,
+        notImported:        false,
+        alsoImported:       CardViewer.showImported,
+        playRate:           CardViewer.Elements.playRate.val(),
+        playRateCompare:    CardViewer.Elements.playRateCompare.val(),
     };
     let extraVisibility = [];
     if(CardViewer.format) {
@@ -1254,6 +1256,7 @@ CardViewer.filter = function (query, exclude = null, sortOptions = query) {
     switch(sortOrder) {
         case "ascending":
         case undefined:
+        case null:
             isAscending = true;
             break;
         case "descending":
@@ -1839,7 +1842,13 @@ CardViewer.setUpAllInputs = function () {
         for(let el of allInputs) {
             el = $(el);
             if(el.is("select")) {
-                el.val(el.children().first().val());
+                let defaultSelection = el.find("[selected=selected]");
+                if(defaultSelection.length) {
+                    el.val(defaultSelection.val());
+                }
+                else {
+                    el.val(el.children().first().val());
+                }
             }
             else if(el.is("input[type=checkbox]")) {
                 el.prop("checked", !!el.attr("checked"));
