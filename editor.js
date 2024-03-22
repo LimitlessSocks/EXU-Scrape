@@ -2,6 +2,9 @@ let onLoad = async function () {
     CardViewer.excludeTcg = false;
     CardViewer.showImported = true;
     
+    const playrateSummary = await fetch("./data/playrate-summary.json").then(req => req.json());
+    CardViewer.Playrates.Summary = playrateSummary;
+    
     CardViewer.Editor.MajorContainer = $("#majorContainer");
     window.addEventListener("resize", CardViewer.Editor.recalculateView);
     CardViewer.Elements.results = $("#results");
@@ -18,9 +21,9 @@ let onLoad = async function () {
     CardViewer.Elements.resultCount = $("#resultCount");
     CardViewer.Elements.cardDescription = $("#cardDescription");
     CardViewer.Elements.currentPage = $("#currentPage");
-    CardViewer.Elements.pageCount = $("#pageCount");
-    CardViewer.Elements.nextPage = $("#nextPage");
-    CardViewer.Elements.previousPage = $("#previousPage");
+    CardViewer.Elements.pageCount = $(".pageCount");
+    CardViewer.Elements.nextPage = $(".nextPage");
+    CardViewer.Elements.previousPage = $(".previousPage");
     CardViewer.Elements.resultNote = $("#resultNote");
     CardViewer.Elements.cardId = $("#cardId");
     CardViewer.Elements.cardCategory= $("#cardCategory");
@@ -45,6 +48,8 @@ let onLoad = async function () {
     CardViewer.Elements.cardATKCompare = $("#cardATKCompare");
     CardViewer.Elements.cardDEFCompare = $("#cardDEFCompare");
     CardViewer.Elements.toTopButton = $("#totop");
+    CardViewer.Elements.playRate = $("#cardPlayRate");
+    CardViewer.Elements.playRateCompare = $("#cardPlayRateCompare");
     CardViewer.Elements.saveSearch = $("#saveSearch");
     CardViewer.Elements.clearSearch = $("#clearSearch");
     CardViewer.Elements.searchSortBy = $("#searchSortBy");

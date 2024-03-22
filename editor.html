@@ -120,7 +120,8 @@
                         <option class="ifMonster" value="atk">ATK</option>
                         <option class="ifMonster" value="def">DEF</option>
                         <option class="ifMonster" value="level">Level/Rank</option>
-                        <option value="" disabled>TODO: Date Added</option>
+                        <option value="date">Date Added</option>
+                        <option value="playrate">Playrate</option>
                     </select>
                 </td>
             </tr>
@@ -155,6 +156,23 @@
                     <td><button class="arrow-button">↘</button></td>
                 </tr>
             </tbody>
+        </table>
+        <table id=playrateStats>
+            <tr>
+                <th colspan=2>Other Stats</th>
+            </tr>
+            <tr>
+                <td>Playrate</td>
+                <td><select id=cardPlayRateCompare class=thin>
+                    <option value="equal">=</option>
+                    <option value="lessequal">&le;</option>
+                    <option value="less">&lt;</option>
+                    <option value="greaterequal" selected="selected">&ge;</option>
+                    <option value="greater">&gt;</option>
+                    <option value="unequal">&ne;</option>
+                </select>
+                <input type=number id=cardPlayRate min=0 max=100 step=1>%</td>
+            </tr>
         </table>
         <table id=conditionalStats>
             <tr class="ifMonster ifSpell ifTrap">
@@ -315,8 +333,11 @@
     </div>
     </div>
     <div id=resultsContainer>
-        <h3>Results found: <span id=resultCount>n/a</span> <button id=previousPage>&lt;</button> Showing page <span id=currentPage>X</span> of <span id=pageCount>X</span> <button id=nextPage>&gt;</button></h3>
+        <h3>Results found: <span id=resultCount>n/a</span>
+        <h4 id=resultNote></h4>
+        <button class=previousPage>&lt;</button> Showing page <input class="inline currentPage" type=number value="1" min="1"> of <span class=pageCount>X</span> <button class=nextPage>&gt;</button>
         <div id=results>nothing here</div>
+        <!-- <button class=previousPage>&lt;</button> Showing page <input class="inline currentPage" type=number value="1" min="1"> of <span class=pageCount>X</span> <button class=nextPage>&gt;</button> -->
     </div>
 </div>
 </div>
