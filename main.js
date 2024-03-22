@@ -63,17 +63,7 @@ let onLoad = async function () {
     CardViewer.Elements.nextPage.click(CardViewer.Search.nextPage);
     
     
-    CardViewer.Elements.currentPage.on("input", (ev) => {
-        let { value } = ev.target;
-        CardViewer.Search.currentPage = Math.floor(
-            Math.min(CardViewer.Search.pages.length,
-                Math.max(0,
-                    parseInt(value, 10) - 1
-                )
-            )
-        );
-        CardViewer.Search.showPage();
-    });
+    CardViewer.addCurrentPageListener();
     
     /*
     CardViewer.Elements.toTopButton.click(() => {

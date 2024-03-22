@@ -20,7 +20,7 @@ let onLoad = async function () {
     CardViewer.Elements.cardName = $("#cardName");
     CardViewer.Elements.resultCount = $("#resultCount");
     CardViewer.Elements.cardDescription = $("#cardDescription");
-    CardViewer.Elements.currentPage = $("#currentPage");
+    CardViewer.Elements.currentPage = $(".currentPage");
     CardViewer.Elements.pageCount = $(".pageCount");
     CardViewer.Elements.nextPage = $(".nextPage");
     CardViewer.Elements.previousPage = $(".previousPage");
@@ -60,6 +60,7 @@ let onLoad = async function () {
     
     CardViewer.setUpTabSearchSwitching();
     CardViewer.setUpArrowToggle();
+    CardViewer.addCurrentPageListener();
     
     await CardViewer.Database.initialReadAll("./db.json");
     

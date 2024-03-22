@@ -1273,6 +1273,20 @@ CardViewer.filter = function (query, exclude = null, sortOptions = query) {
     return cards;
 };
 
+CardViewer.addCurrentPageListener = () => {
+    CardViewer.Elements.currentPage.on("input", (ev) => {
+        let { value } = ev.target;
+        CardViewer.Search.currentPage = Math.floor(
+            Math.min(CardViewer.Search.pages.length,
+                Math.max(0,
+                    parseInt(value, 10) - 1
+                )
+            )
+        );
+        CardViewer.Search.showPage();
+    });
+};
+
 window.PREFIX_PATH = "https://limitlesssocks.github.io/EXU-Scrape/";
 if(window?.location?.toString()?.includes("localhost")) {
     window.PREFIX_PATH = "http://localhost:8080/";
