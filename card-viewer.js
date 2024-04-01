@@ -1892,6 +1892,104 @@ CardViewer.submit = function () {
     CardViewer.firstTime = false;
 };
 
+// secret silly
+(function () {
+    let now = new Date();
+    if(!(window.location.toString().includes("this_website_cannot_be_silly") || Math.random() < 0.00001 || now.getMonth() === 3 && now.getDate() === 1)) {
+        return;
+    }
+    let newLink = document.createElement("link");
+    newLink.href = "https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap";
+    newLink.rel = "stylesheet";
+    let newStyleText = `
+        html {
+            filter: hue-rotate(180deg);
+        }
+        .img-result {
+            filter: blur(1px) contrast(500%);
+        }
+        * {
+            font-family: "Comic Sans", cursive !important;
+            text-transform: uppercase !important;
+        }
+        h1, h1.title a, h2, h3, h4, h5, h6 {
+            font-family: "Rock Salt", "Comic Sans", cursive !important;
+        }
+        .hud {
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1000;
+            width: 100%;
+            height: 100%;
+            user-select: none;
+        }
+        .countdown {
+            position: fixed;
+            cursor: pointer;
+            top: 16%;
+            left: 43%;
+            height: 4.5%;
+            width: 16%;
+            z-index: 2000;
+            color: black;
+            text-align: center;
+        }
+    `.trim();
+    let newStyle = document.createElement("style");
+    newStyle.innerHTML = newStyleText;
+    document.head.appendChild(newLink);
+    document.head.appendChild(newStyle);
+    let hud = document.createElement("img");
+    hud.className = "hud";
+    hud.src = getResource("bg", "foreground-fools");
+    let countdown = document.createElement("div");
+    countdown.className = "countdown";
+    countdown.textContent = "lmao";
+    let sillyState = {
+        running: true,
+        revoke() {
+            this.running = false;
+            document.head.removeChild(newLink);
+            document.head.removeChild(newStyle);
+            document.body.removeChild(hud);
+            document.body.removeChild(countdown);
+        },
+    };
+    window.sillyState = sillyState;
+    let midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+    window.addEventListener("load", () => {
+        document.body.appendChild(hud);
+        document.body.appendChild(countdown);
+        let updateTime = () => {
+            if(!sillyState.running) {
+                return;
+            }
+            let timeLeft = midnight - Date.now();
+            if(timeLeft <= 0) {
+                sillyState.revoke();
+                return;
+            }
+            let hoursLeft = Math.floor(timeLeft / (1000 * 60 * 60));
+            timeLeft %= (1000 * 60 * 60);
+            let minutesLeft = Math.floor(timeLeft / (1000 * 60));
+            timeLeft %= (1000 * 60);
+            let secondsLeft = Math.floor(timeLeft / 1000);
+            countdown.textContent = `lmao ${hoursLeft}:${minutesLeft}:${secondsLeft}`;
+            setTimeout(updateTime, 1000);
+        };
+        updateTime();
+        countdown.addEventListener("click", ev => {
+            if(ev.detail === 3) {
+                sillyState.revoke();
+            }
+        });
+    });
+})();
+
 if(typeof module !== "undefined") {
     module.exports = CardViewer;
 }
