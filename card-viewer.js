@@ -373,6 +373,7 @@ const LINK_ARROWS = {
 // CardViewer.Database.banlist = Banlist;
 
 CardViewer.Database.setInitial = function (db) {
+    CardViewer.Database.cardsIdsByName = {};
     CardViewer.Database.cards = db;
 };
 CardViewer.Database.initialReadAll = async function (...names) {
@@ -702,8 +703,8 @@ CardViewer.query = function () {
         baseStats.sortOrder = CardViewer.Elements.searchSortOrder.val();
     }
     if(CardViewer.Elements.includeCustoms && CardViewer.Elements.includeYcg) {
-        let useCustoms = CardViewer.Elements.includeCustoms.prop("checked")
-        let useYcg = CardViewer.Elements.includeYcg.prop("checked")
+        let useCustoms = CardViewer.Elements.includeCustoms.prop("checked");
+        let useYcg = CardViewer.Elements.includeYcg.prop("checked");
         if(!useCustoms || !useYcg) {
             baseStats.visibility = [ baseStats.visibility ];
         }
@@ -1890,6 +1891,63 @@ CardViewer.submit = function () {
     CardViewer.demonstrate(query);
     CardViewer.Elements.resultNote.text(CardViewer.firstTime ? "Note: You are currently viewing a curated selection of our cards. Please search again to see all available cards." : "");
     CardViewer.firstTime = false;
+};
+
+const readFile = accept => new Promise((resolve, reject) => {
+    const fileInput = document.createElement("input");
+    fileInput.type = "file";
+    fileInput.accept = accept;
+
+    fileInput.onchange = ev => {
+        const file = ev.target.files[0];
+        const reader = new FileReader();
+
+        reader.onload = ev => resolve(ev.target.result);
+
+        reader.readAsText(file);
+    };
+
+    fileInput.click();
+});
+const readJSONFile = () => readFile(".json").then(JSON.parse);
+
+// TODO: make this not hang the webpage
+let baseFormat;
+CardViewer.monkeyPatchFormat = formatData => {
+    // TODO: override playrates
+    if(!baseFormat) {
+        baseFormat = {...CardViewer.Database.cards};
+    }
+    let {
+        name,
+        passcodes,
+        banlist,
+        customs,
+    } = formatData;
+    
+    CardViewer.Database.setInitial({});
+    for(let [ id, card ] of Object.entries(baseFormat)) {
+        if(passcodes.some(passcode => passcode == card.serial_number)) {
+            CardViewer.Database.cards[id] = {
+                ...card,
+                exu_limit: banlist[card.serial_number]
+            };
+        }
+    }
+    
+    for(let card of customs) {
+        let idMod = parseInt(card.id, 10);
+        idMod = idMod - idMod % 100000;
+        let src = `https://www.duelingbook.com/images/custom-pics/${idMod}/${card.id}.jpg`;
+        if(typeof card.pic !== "undefined" && card.pic != "1") {
+            src += "?version=" + card.pic;
+        }
+        CardViewer.Database.cards[card.id] = {
+            src,
+            ...card,
+            exu_limit: 3,
+        };
+    }
 };
 
 // secret silly

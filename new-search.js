@@ -26,6 +26,15 @@ let onLoad = async function () {
         // TODO: actually implement
     });
     
+    const uploadFormatButton = document.getElementById("uploadFormat");
+    uploadFormatButton.addEventListener("click", async function () {
+        let data = await readJSONFile();
+        document.querySelector(".title a").textContent = `${data.name} Query`;
+        CardViewer.monkeyPatchFormat(data);
+        lastInput = null;
+        changeInput();
+    });
+    
     await CardViewer.Database.initialReadAll("./db.json");
     
     const playrateSummary = await fetch("./data/playrate-summary.json").then(req => req.json());

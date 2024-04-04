@@ -289,6 +289,15 @@ let onLoad = async function () {
     $("#expandPurpose, #contractPurpose").click(function () {
         $("#purposeFilter button").toggle();
     });
+    
+    const uploadFormatButton = document.getElementById("uploadFormat");
+    uploadFormatButton.addEventListener("click", async function () {
+        let data = await readJSONFile();
+        document.querySelector(".title a").textContent = `${data.name}`;
+        CardViewer.monkeyPatchFormat(data);
+        CardViewer.Elements.includeYcg.prop("checked", true);
+        CardViewer.submit();
+    });
 };
 
 window.addEventListener("load", onLoad);
