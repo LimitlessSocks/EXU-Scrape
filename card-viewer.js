@@ -373,7 +373,7 @@ const LINK_ARROWS = {
 // CardViewer.Database.banlist = Banlist;
 
 CardViewer.Database.setInitial = function (db) {
-    CardViewer.Database.cardsIdsByName = {};
+    CardViewer.Database.cardsIdsByName = null;
     CardViewer.Database.cards = db;
 };
 CardViewer.Database.initialReadAll = async function (...names) {
