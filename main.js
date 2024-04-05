@@ -58,10 +58,10 @@ let onLoad = async function () {
     CardViewer.Elements.includeCustoms = $("#includeCustoms");
     CardViewer.Elements.includeYcg = $("#includeYcg");
     
+    CardViewer.Search.snapNavigation = true;
     CardViewer.Elements.search.click(CardViewer.submit);
     CardViewer.Elements.previousPage.click(CardViewer.Search.previousPage);
     CardViewer.Elements.nextPage.click(CardViewer.Search.nextPage);
-    
     
     CardViewer.addCurrentPageListener();
     

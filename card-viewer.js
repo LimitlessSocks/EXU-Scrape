@@ -443,7 +443,17 @@ CardViewer.Search.config = {
     reverseSearch: "ascending",
 };
 
+CardViewer.Search.snapNavigation = false;
+CardViewer.Search.snapDelta = null;
 CardViewer.Search.showPage = function (id = CardViewer.Search.currentPage, config = CardViewer.Search.config) {
+    // only use snap if the user is scrolled at least 50% of the webpage down
+    let useSnap = window.scrollY / window.scrollMaxY >= 0.50;
+    if(useSnap && CardViewer.Search.snapNavigation) {
+        // the expression (window.scrollMaxY - window.scrollY) works, but has an issue with drifting the webpage up over time
+        // just snap the user to the bottom if they're beyond the halfway point for smooth, consistent deltas.
+        // TODO: this could maybe be fixed by not changing snapDelta if it doesn't exceed a certain difference, assuming the drifting is due to fp arithmetic differences in scrollY.
+        CardViewer.Search.snapDelta = 0;
+    }
     let target = config.target || CardViewer.Elements.results;
     if(!config.append) {
         target.empty();
@@ -487,6 +497,10 @@ CardViewer.Search.showPage = function (id = CardViewer.Search.currentPage, confi
     if(CardViewer.Elements.currentPage) {
         CardViewer.Elements.currentPage.val(id + 1);
         CardViewer.Elements.currentPage.attr("max", CardViewer.Search.pages.length);
+    }
+    
+    if(useSnap && CardViewer.Search.snapNavigation) {
+        window.scrollTo({ top: window.scrollMaxY - CardViewer.Search.snapDelta });
     }
 };
 
