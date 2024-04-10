@@ -1939,12 +1939,18 @@ CardViewer.monkeyPatchFormat = formatData => {
         customs,
     } = formatData;
     
+    banlist ??= {};
+    
     CardViewer.Database.setInitial({});
     for(let [ id, card ] of Object.entries(baseFormat)) {
-        if(passcodes.some(passcode => passcode == card.serial_number)) {
+        if(card.custom) {
+            // ignore source format's custom
+            continue;
+        }
+        if(!passcodes || passcodes.some(passcode => passcode == card.serial_number)) {
             CardViewer.Database.cards[id] = {
                 ...card,
-                exu_limit: banlist[card.serial_number]
+                exu_limit: banlist[card.serial_number] ?? 3
             };
         }
     }
@@ -1959,7 +1965,7 @@ CardViewer.monkeyPatchFormat = formatData => {
         CardViewer.Database.cards[card.id] = {
             src,
             ...card,
-            exu_limit: 3,
+            exu_limit: banlist[card.id] ?? 3,
         };
     }
 };
