@@ -1928,7 +1928,6 @@ const readJSONFile = () => readFile(".json").then(JSON.parse);
 // TODO: make this not hang the webpage
 let baseFormat;
 CardViewer.monkeyPatchFormat = formatData => {
-    // TODO: override playrates
     if(!baseFormat) {
         baseFormat = {...CardViewer.Database.cards};
     }
@@ -1937,7 +1936,10 @@ CardViewer.monkeyPatchFormat = formatData => {
         passcodes,
         banlist,
         customs,
+        playrates,
     } = formatData;
+    
+    CardViewer.Playrates.Summary = playrates;
     
     banlist ??= {};
     
