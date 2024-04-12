@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q3RKXFLZRZ');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3RKXFLZRZ"></script>
+    <meta charset="UTF-8">
+    <title>EXU Logo Generation</title>
+    <link rel="STYLESHEET" href="./../card-viewer.css">
+    <link rel="STYLESHEET" href="./../deck.css">
+    <link rel="STYLESHEET" href="./top.css">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    -->
+    <!-- <script src="./../card-viewer.js"></script> -->
+    <!-- <script src="./../deck.js"></script> -->
+    <script src="./pie.js"></script>
+</head>
+<body>
+    <h1 class="title"><a href="./">EXU Graphics</a></h1>
+<div id="largeContainer">
+    <article>
+    <div id="chartInfo">
+        <fieldset>
+            <legend>Format</legend>
+            <label><input type="radio" name="format" value=exu checked> EXU</label>
+            <label><input type="radio" name="format" value=sff> SFF</label> 
+        </fieldset>
+        <fieldset>
+            <legend>Event Information</legend>
+            <p><label>Name: <input data-target="eventName" type="text" placeholder="EXU Battleground #36"></label></p>
+            <p><label>Date: <input data-target="eventDate" type="text" placeholder="August 2023"></label></p>
+        </fieldset>
+        </fieldset>
+        <fieldset>
+            <legend>Decks</legend>
+            <button type="button" onclick="addDeck()">Add Deck</button>
+            <div id="decksContainer"></div>
+        </fieldset>
+    </div>
+
+    </article>
+    <div id="outputWrapper">
+        <div id="output">
+            <div class="cardThumbHolder">
+                <img class="cardThumb">
+                <!-- <div class="cardThumbShadow"></div> -->
+            </div>
+            <div class="header">
+                <div class="eventName">Stungray Cup</div>
+                <div class="eventDate">April 2024</div>
+            </div>
+            <canvas id="renderCanvas" width=700 height=700></canvas>
+            <img src="./res/logo.png" class="exuLogo">
+            <div class="links">
+                <div class="deckLink"></div>
+                <div class="attribution">discord.gg/extinctionunleashed</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -63,6 +63,15 @@ input {
     background-color: white;
     position: absolute;
     overflow: hidden;
+    --background-swath-color: #300000;
+    --header-color: #800000;
+    --bold-color: #ff0000;
+}
+
+#output.sff {
+    --background-swath-color: #000030;
+    --header-color: #000080;
+    --bold-color: #0000ff;
 }
 
 #output .cardThumbHolder {
@@ -70,7 +79,7 @@ input {
     top: 0;
     width: 810px;
     height: 810px;
-    background-color: #300000;
+    background-color: var(--background-swath-color);
     /* long */
     clip-path: path('M -18 479 C 60 586 375 693 821 700 L 820 -10 L -10 -10');
     /* medium */
@@ -103,7 +112,7 @@ input {
 #output .header {
     position: relative;
     top: 0;
-    background-color: #800000;
+    background-color: var(--header-color);
     text-align: right;
     text-transform: uppercase;
     clip-path: path('M 0 90 C 78 178 463 337 820 240 L 820 -10 L -10 -10');
@@ -122,7 +131,7 @@ input {
 }
 #output .topcutSizeContainer {
     font-size: 120px;
-    color: #ff0000;
+    color: var(--bold-color);
     letter-spacing: 9px;
     text-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
@@ -186,6 +195,12 @@ input {
     pointer-events: none;
     user-select: none;
     background-color: rgba(0,0,0,0);
+}
+
+#output canvas {
+    position: absolute;
+    bottom: 20px;
+    left: 55px;
 }
 
 #output .deckStats {
