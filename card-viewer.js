@@ -1378,386 +1378,357 @@ const setMonsterAttributeIcons = (card, attribute) => {
 
 const formatPercent = percent =>
     Math.round(percent * 10000) / 100 + "%";
-
-// CardViewer.
-CardViewer.composeResultSmall = function (card) {
-    card.src = card.src || (
-        "https://www.duelingbook.com/images/low-res/" + card.id + ".jpg"
-    );
-    let img = $("<img class=img-result>")
-        .attr("src", card.src)
-        .attr("title", card.id);
-    let name = $("<h3 class=result-name>").text(card.name);
-    let id = $("<h4 class=result-id>").text(card.id);
-    let author = $("<h4 class=result-author>").text(card.username);
     
-    let res = $("<div class=result>");
-    res.attr("id", "card" + card.id);
-    res.addClass("small");
-    res.addClass(card.card_type.toLowerCase());
-    res.addClass(card.monster_color.toLowerCase());
-    
-    if(card.exu_ban_import) {
-        res.addClass("unimported");
-        // console.log(card.name, res);
-    }
-    
-    let isPrivate = card.custom && card.custom > 1;
-    
-    if(isPrivate) {
-        res.addClass("private");
-    }
-    
-    let effect = card.effect;
-    if(card.pendulum) {
-        effect = "[Pendulum Effect]\n" + card.pendulum_effect + "\n-----------\n[Monster Effect]\n" + effect;
-        res.addClass("pendulum");
-    }
-    
-    // effect = effect.split(/\r|\r?\n/).map(para => $("<p>").text(para));
-    effect = effect.replace(/\r|\r?\n/g, "\n");
-    effect = [$("<p>").text(effect).addClass("effect-text")];
-    
-    let stats = $("<div>");
-    
-    let attribute = $("<img class=result-attribute>");
-    let marking = $("<div class=markings>");
-    
-    let linkArrows;
-    if(card.card_type === "Monster") {
-        attribute = setMonsterAttributeIcons(card, attribute);
-        let kind = [];
+CardViewer.Compose = {
+    getImage(card) {
+        card.src = card.src || (
+            "https://www.duelingbook.com/images/low-res/" + card.id + ".jpg"
+        );
         
-        let levelIndicator;
-        let star;
-        switch(card.monster_color) {
-            case "Link":
-                levelIndicator = "Link-";
-                break;
-            case "Xyz":
-                levelIndicator = "Rank ";
-                star = "Xyz";
-                break;
-            default:
-                levelIndicator = "Level ";
-                star = "Normal";
-                break;
+        let img = $("<img class=img-result>")
+            .attr("src", card.src)
+            .attr("title", card.id);
+        
+        return img;
+    },
+    
+    makeResult(card, options = {}) {
+        options = {
+            includeId: true,
+            ...options
+        };
+        let outer = $("<div class=result>");
+
+        if(options.includeId) {
+            outer.attr("id", "card" + card.id);
+        }
+        outer.addClass(card.card_type.toLowerCase());
+        outer.addClass(card.monster_color.toLowerCase());
+    
+        if(!card.custom) {
+            outer.addClass("tcg");
+        }
+    
+        if(card.exu_ban_import) {
+            outer.addClass("unimported");
         }
         
-        if(star) {
-            for(let i = 0; i < card.level; i++) {
-                marking.append(
-                    $("<img class=star>").attr("src", getStar(star))
-                );
+        let isPrivate = card.custom && card.custom > 1;
+        if(isPrivate) {
+            outer.addClass("private");
+        }
+        
+        if(card.pendulum) {
+            outer.addClass("pendulum");
+        }
+        
+        let inner = $("<div class=result-inner>");
+        
+        outer.append(inner);
+        
+        return { outer, inner };
+    },
+    
+    getAttribute(card) {
+        let attribute = $("<img class=result-attribute>");
+        if(card.card_type === "Monster") {
+            attribute = setMonsterAttributeIcons(card, attribute);
+        }
+        else {
+            attribute.attr("src", getAttribute(card.card_type));
+        }
+        return attribute;
+    },
+    
+    getLevelIndicator(card) {
+        return {
+            Normal: "Level ",
+            Effect: "Level ",
+            Ritual: "Level ",
+            Fusion: "Level ",
+            Synchro: "Level ",
+            Xyz: "Rank ",
+            Link: "Link-",
+        }[card.monster_color];
+    },
+    
+    getMarking(card) {
+        let marking = $("<div class=markings>");
+        
+        if(card.card_type === "Monster") {
+            let star = {
+                Normal: "Normal",
+                Effect: "Normal",
+                Ritual: "Normal",
+                Fusion: "Normal",
+                Synchro: "Normal",
+                Xyz: "Xyz",
+                Link: null,
+            }[card.monster_color];
+            
+            if(star) {
+                for(let i = 0; i < card.level; i++) {
+                    marking.append(
+                        $("<img class=star>").attr("src", getStar(star))
+                    );
+                }
+            }
+            else {
+                let levelIndicator = CardViewer.Compose.getLevelIndicator(card);
+                marking.append(levelIndicator + card.level);
             }
         }
         else {
-            marking.append(levelIndicator + card.level);
+            marking.append($("<img class=cardicon>").attr("src", getIcon(card.type)));
         }
         
-        kind.push(levelIndicator + card.level);
-        kind.push(card.attribute);
-        kind.push(card.type);
-        
-        if(card.ability) {
-            kind.push(card.ability);
+        let banMarker = $("<img class=banicon>");
+        let importMarker = $("<img class=banicon>");
+        if(card.exu_ban_import) {
+            importMarker.attr("src", BANLIST_ICONS.notImported);
+        }
+        else if(card.exu_import) {
+            importMarker.attr("src", BANLIST_ICONS.imported);
+        }
+        else if(card.alt_art) {
+            importMarker.attr("src", BANLIST_ICONS.altArt);
+        }
+
+        if(!card.custom && !card.tcg && card.ocg) {
+            importMarker.addClass("wide");
+            importMarker.attr("src", BANLIST_ICONS.ocg);
         }
         
-        kind.push(card.monster_color);
-        
-        if(card.pendulum) {
-            kind.push("Pendulum");
+        let limit = CardViewer.getLimitProperty();
+        if(card[limit] !== 3) {
+            banMarker.attr("src", BANLIST_ICONS[card[limit]]);
         }
         
-        kind.push("Monster");
-        
-        stats.append($("<p>").text(kind.join(" ")));
-        
-        if(card.monster_color === "Link") {
-            stats.append($("<p>").text(`ATK/${card.atk}`));
-            linkArrows = $(
-                "<p class=link-arrows>" +
-                getLinkArrowText(card.arrows).replace(/\n/g,"<br>") +
-                "</p>"
-            );
+        if(importMarker.attr("src")) {
+            marking.append($("<div>").append(importMarker));
         }
-        else {
-            stats.append($("<p>").text(`ATK/${card.atk} DEF/${card.def}`));
+        if(banMarker.attr("src")) {
+            marking.append($("<div>").append(banMarker));
         }
-    }
-    else {
-        attribute.attr("src", getAttribute(card.card_type));
-        marking.append($("<img class=cardicon>").attr("src", getIcon(card.type)));
-    }
+        
+        return marking;
+    },
     
-    let banMarker = $("<img class=banicon>");
-    let importMarker = $("<img class=banicon>");
-    if(card.exu_ban_import) {
-        importMarker.attr("src", BANLIST_ICONS.notImported);
-    }
-    else if(card.exu_import) {
-        importMarker.attr("src", BANLIST_ICONS.imported);
-    }
-    else if(!card.custom && !card.tcg && card.ocg) {
-        importMarker.addClass("wide");
-        importMarker.attr("src", BANLIST_ICONS.ocg);
-    }
-    else if(card.alt_art) {
-        importMarker.attr("src", BANLIST_ICONS.altArt);
-    }
-    
-    let limit = CardViewer.getLimitProperty();
-    if(card[limit] !== 3) {
-        banMarker.attr("src", BANLIST_ICONS[card[limit]]);
-    }
-    
-    if(importMarker.attr("src")) {
-        marking.append($("<div>").append(importMarker));
-    }
-    if(banMarker.attr("src")) {
-        marking.append($("<div>").append(banMarker));
-    }
-    
-    res.append($("<div class=result-inner>").append(name, /*linkArrows, author, stats,*/
-        $("<div class=result-img-holder>").append(
+    getImageWithIcons(card) {
+        let img = CardViewer.Compose.getImage(card);
+        let attribute = CardViewer.Compose.getAttribute(card);
+        let marking = CardViewer.Compose.getMarking(card);
+        
+        let imageHolder = $("<div class=result-img-holder>");
+        imageHolder.append(
             $("<div>").append(img),
             $("<div>").append(attribute, marking),
-            // $("<div>").append()
+        );
+        return imageHolder;
+    },
+
+    getRetrainText(card) {
+        let retrain = RetrainMap[card.id];
+        let retrainCard = CardViewer.Database.cards[retrain];
+        if(retrain && retrainCard) {
+            let retrainText = "Retrain of: " + retrainCard.name;
+            // retrainText += " (Id #" + retrain + ")";
+            let link = $("<a>").text(retrainText);
+            if(CardViewer.linkRetrain) {
+                link.attr("href", "#card" + retrain)
+            }
+            return $("<p class=retrainText>").append($("<i>").append(
+                link
+            ));
+        }
+    },
+    
+    getAllText(card, options = {}) {
+        options = {
+            showRetrainText: true,
+            ...options
+        };
+        let effect = card.effect;
+        if(card.pendulum) {
+            effect = effect = "Scale = " + card.scale + "\n[Pendulum Effect]\n" + card.pendulum_effect + "\n-----------\n[Monster Effect]\n" + effect;
+        }
+    
+        // effect = effect.split(/\r|\r?\n/).map(para => $("<p>").text(para));
+        effect = effect.replace(/\r|\r?\n/g, "\n");
+        effect = [$("<p>").text(effect).addClass("effect-text")];
+
+        if(options.showRetrainText) {
+            let retrainText = CardViewer.Compose.getRetrainText(card);
+            effect.push(retrainText);
+        }
+
+        return effect;
+    },
+    
+    getIdHeader(card) {
+        let textHolder = $("<span>")
+            .text(card.id);
+        let id = $("<h4 class=result-id>")
+            .append(textHolder);
+        return id;
+    },
+
+    getInfoButton(card) {
+        let infoButton = $("<button class='small info-inline' title='Show more info'>?</button>");
+        let promptLines = [
+            [ "DB ID", card.id ],
+        ];
+        if(card.serial_number) {
+            promptLines.push([ "Konami Passcode", card.serial_number ]);
+        }
+        if(card.submission_source) {
+            promptLines.push([
+                $("<a>").text("DB Submission Source").attr("href", `https://www.duelingbook.com/deck?id=${card.submission_source}`).attr("target", "_blank"),
+                card.submission_source,
+            ]);
+        }
+        let dbCardLink = `https://www.duelingbook.com/card?id=${card.id}`;
+        promptLines.push([
+            $("<a>").text("DB Link").attr("href", dbCardLink).attr("target", "_blank"),
+            $("<code>").text(`[${card.name}](<${dbCardLink}>)`),
+        ]);
+        let exuCardLink = `https://limitlesssocks.github.io/EXU-Scrape/card?id=${card.id}`;
+        promptLines.push([
+            $("<a>").text("EXU Link").attr("href", exuCardLink).attr("target", "_blank"),
+            $("<code>").text(`[${card.name}](${exuCardLink})`),
+        ]);
+        
+        promptLines = promptLines
+            .map(line => $("<tr>").append(...line.map(el => $("<td>").append(el))))
+            .reduce((p, c) => p.add(c), $(""));
+        
+        promptLines = $("<table class=spacey>").append(promptLines);
+        let infoPrompt = new Prompt("Card Details", promptLines, ["OK"], "large", "auto");
+        infoButton.click(() => {
+            infoPrompt.deploy();
+        });
+        return infoButton;
+    },
+
+    getStats(card) {
+        let stats = $("<div>");
+
+        if(card.card_type === "Monster") {
+            let kind = [];
+            let levelIndicator = CardViewer.Compose.getLevelIndicator(card);
+            
+            kind.push(levelIndicator + card.level);
+            kind.push(card.attribute);
+            kind.push(card.type);
+            
+            if(card.ability) {
+                kind.push(card.ability);
+            }
+            
+            kind.push(card.monster_color);
+            
+            if(card.pendulum) {
+                kind.push("Pendulum");
+            }
+            
+            kind.push("Monster");
+            
+            stats.append($("<p>").text(kind.join(" ")));
+            
+            if(card.monster_color === "Link") {
+                stats.append($("<p>").text(`ATK/${card.atk}`));
+            }
+            else {
+                stats.append($("<p>").text(`ATK/${card.atk} DEF/${card.def}`));
+            }
+        }
+
+        return stats;
+    },
+
+    getPlayrateSummary(card) {
+        if(!CardViewer.Playrates.Summary) {
+            return;
+        }
+        let indicator = card.serial_number || card.id;
+        let playrateInfo = CardViewer.Playrates.Summary[indicator];
+        if(!playrateInfo) {
+            return;
+        }
+        let { mode, modeRatio, playedAt, playRate } = playrateInfo;
+        let playRatio = mode + " in " + formatPercent(modeRatio);
+        playRate = formatPercent(playRate);
+        
+        return $("<h4 class=playrate-summary>").append(
+            $("<em>").text("Playrate: "),
+            `${playRate} (${playRatio})`,
+        );
+    },
+
+    getNameHeader: card => $("<h3 class=result-name>").text(card.name),
+    getLinkArrows: card => card.card_type === "Monster" && card.monster_color === "Link"
+        ? $(
+            "<p class=link-arrows>" +
+            getLinkArrowText(card.arrows).replace(/\n/g,"<br>") +
+            "</p>"
         )
-        // $("<table>").append(
-            // $("<tr>").append(
-                // $("<td class=result-img-holder>").append(img, attribute, marking),
-                // $("<td class=result-effect>").append(effect)
-            // )
-        // )
-    ));
-    return res;
+        : undefined,
+    getAuthorHeader: card => $("<h4 class=result-author>").text(card.username),
+    getDateAddedHeader(card) {
+        let dateAdded = $("<h4 class=result-date>");
+        if(card.date) {
+            let action = card.custom && card.custom > 0 ? "Integrated " : "Released ";
+            dateAdded.text(action + formatDateAdded(card.date));
+        }
+        return dateAdded;
+    },
+};
+
+CardViewer.composeResultSmall = function (card) {
+    let name = CardViewer.Compose.getNameHeader(card);
+    
+    let { outer, inner } = CardViewer.Compose.makeResult(card);
+    outer.addClass("small");
+    
+    inner.append(
+        name,
+        CardViewer.Compose.getImageWithIcons(card)
+    );
+    return outer;
 };
 
 CardViewer.composeResult = function (card) {
-    card.src = card.src || (
-        "https://www.duelingbook.com/images/low-res/" + card.id + ".jpg"
-    );
-    let img = $("<img class=img-result>").attr("src", card.src);
-    let name = $("<h3 class=result-name>").text(card.name);
+    let { outer, inner } = CardViewer.Compose.makeResult(card);
     
-    let textHolder = $("<span>")
-        .text(card.id);
-    let id = $("<h4 class=result-id>")
-        .append(textHolder);
-    
-    // info button code
-    let infoButton = $("<button class='small info-inline' title='Show more info'>?</button>");
-    id.append(infoButton);
-    
-    let promptLines = [
-        [ "DB ID", card.id ],
-    ];
-    if(card.serial_number) {
-        promptLines.push([ "Konami Passcode", card.serial_number ]);
-    }
-    if(card.submission_source) {
-        promptLines.push([
-            $("<a>").text("DB Submission Source").attr("href", `https://www.duelingbook.com/deck?id=${card.submission_source}`).attr("target", "_blank"),
-            card.submission_source,
-        ]);
-    }
-    let dbCardLink = `https://www.duelingbook.com/card?id=${card.id}`;
-    promptLines.push([
-        $("<a>").text("DB Link").attr("href", dbCardLink).attr("target", "_blank"),
-        $("<code>").text(`[${card.name}](<${dbCardLink}>)`),
-    ]);
-    let exuCardLink = `https://limitlesssocks.github.io/EXU-Scrape/card?id=${card.id}`;
-    promptLines.push([
-        $("<a>").text("EXU Link").attr("href", exuCardLink).attr("target", "_blank"),
-        $("<code>").text(`[${card.name}](${exuCardLink})`),
-    ]);
-    
-    promptLines = promptLines
-        .map(line => $("<tr>").append(...line.map(el => $("<td>").append(el))))
-        .reduce((p, c) => p.add(c), $(""));
-    
-    promptLines = $("<table class=spacey>").append(promptLines);
-    let infoPrompt = new Prompt("Card Details", promptLines, ["OK"], "large", "auto");
-    infoButton.click(() => {
-        infoPrompt.deploy();
-    });
-    
-    let author = $("<h4 class=result-author>").text(card.username);
-    let dateAdded = $("<h4 class=result-date>");
-    if(card.date) {
-        let action = card.custom && card.custom > 0 ? "Integrated " : "Released ";
-        dateAdded.text(action + formatDateAdded(card.date));
-    }
-    
-    let res = $("<div class=result>");
-    res.attr("id", "card" + card.id);
-    res.addClass(card.card_type.toLowerCase());
-    res.addClass(card.monster_color.toLowerCase());
-    
-    if(!card.custom) {
-        res.addClass("tcg");
-    }
-    
-    let isPrivate = card.custom && card.custom > 1;
-    
-    if(isPrivate) {
-        res.addClass("private");
+    let name = CardViewer.Compose.getNameHeader(card);
+    if(outer.hasClass("private")) {
         name.append($("<i>").text(" (private)"));
     }
     
-    let effect = card.effect;
-    if(card.pendulum) {
-        effect = "Scale = " + card.scale + "\n[Pendulum Effect]\n" + card.pendulum_effect + "\n-----------\n[Monster Effect]\n" + effect;
-        res.addClass("pendulum");
-    }
+    let id = CardViewer.Compose.getIdHeader(card);
+    id.append(CardViewer.Compose.getInfoButton(card));
     
-    let stats = $("<div>");
+    inner.append(
+        id,
+        name,
+        CardViewer.Compose.getDateAddedHeader(card),
+        CardViewer.Compose.getLinkArrows(card),
+        CardViewer.Compose.getAuthorHeader(card),
+        CardViewer.Compose.getStats(card)
+    );
     
-    let attribute = $("<img>");
-    let marking = $("<div class=markings>");
-    
-    let linkArrows;
-    if(card.card_type === "Monster") {
-        attribute = setMonsterAttributeIcons(card, attribute);
-        let kind = [];
-        
-        let levelIndicator;
-        let star;
-        switch(card.monster_color) {
-            case "Link":
-                levelIndicator = "Link-";
-                break;
-            case "Xyz":
-                levelIndicator = "Rank ";
-                star = "Xyz";
-                break;
-            default:
-                levelIndicator = "Level ";
-                star = "Normal";
-                break;
-        }
-        
-        if(star) {
-            for(let i = 0; i < card.level; i++) {
-                marking.append(
-                    $("<img class=star>").attr("src", getStar(star))
-                );
-            }
-        }
-        
-        kind.push(levelIndicator + card.level);
-        kind.push(card.attribute);
-        kind.push(card.type);
-        
-        if(card.ability) {
-            kind.push(card.ability);
-        }
-        
-        kind.push(card.monster_color);
-        
-        if(card.pendulum) {
-            kind.push("Pendulum");
-        }
-        
-        kind.push("Monster");
-        
-        stats.append($("<p>").text(kind.join(" ")));
-        
-        if(card.monster_color === "Link") {
-            stats.append($("<p>").text(`ATK/${card.atk}`));
-            linkArrows = $(
-                "<p class=link-arrows>" +
-                getLinkArrowText(card.arrows).replace(/\n/g,"<br>") +
-                "</p>"
-            );
-        }
-        else {
-            stats.append($("<p>").text(`ATK/${card.atk} DEF/${card.def}`));
-        }
-    }
-    else {
-        attribute.attr("src", getAttribute(card.card_type));
-        marking.append($("<img class=cardicon>").attr("src", getIcon(card.type)));
-    }
-    
-    let banMarker = $("<img class=banicon>");
-    let importMarker = $("<img class=importicon>");
-    if(card.exu_ban_import) {
-        importMarker.attr("src", BANLIST_ICONS.notImported);
-    }
-    else if(card.exu_import) {
-        importMarker.attr("src", BANLIST_ICONS.imported);
-    }
-    else if(card.alt_art) {
-        importMarker.attr("src", BANLIST_ICONS.altArt);
-    }
-    
-    if(!card.custom && !card.tcg && card.ocg) {
-        importMarker.addClass("wide");
-        importMarker.attr("src", BANLIST_ICONS.ocg);
-    }
-    
-    let limit = CardViewer.getLimitProperty();
-    if(card[limit] !== 3) {
-        banMarker.attr("src", BANLIST_ICONS[card[limit]]);
-    }
-    
-    if(importMarker.attr("src")) {
-        marking.append($("<div>").append(importMarker));
-    }
-    if(banMarker.attr("src")) {
-        marking.append($("<div>").append(banMarker));
-    }
-    
-    // effect = effect.split(/\r|\r?\n/).map(para => $("<p>").text(para));
-    effect = effect.replace(/\r|\r?\n/g, "\n");
-    effect = [$("<p>").text(effect).addClass("effect-text")];
-    
-    let retrain = RetrainMap[card.id];
-    let retrainCard = CardViewer.Database.cards[retrain];
-    if(retrain && retrainCard) {
-        let retrainText = "Retrain of: " + retrainCard.name;
-        // retrainText += " (Id #" + retrain + ")";
-        let link = $("<a>").text(retrainText);
-        if(CardViewer.linkRetrain) {
-            link.attr("href", "#card" + retrain)
-        }
-        effect.push($("<p class=retrainText>").append($("<i>").append(
-            link
-        )));
-    }
-    
-    let innerResult = $("<div class=result-inner>")
-        .append(id, name, dateAdded, linkArrows, author, stats);
-    
-    innerResult.append(
+    inner.append(
         $("<table>").append(
             $("<tr>").append(
-                $("<td class=result-img-holder>").append(img, attribute, marking),
-                $("<td class=result-effect>").append(effect)
+                $("<td>").append(CardViewer.Compose.getImageWithIcons(card)),
+                $("<td class=result-effect>").append(CardViewer.Compose.getAllText(card))
             )
         )
     );
     
-    if(CardViewer.Playrates.Summary) {
-        let indicator = card.serial_number || card.id;
-        let playrateInfo = CardViewer.Playrates.Summary[indicator];
-        if(playrateInfo) {
-            let { mode, modeRatio, playedAt, playRate } = playrateInfo;
-            let playRatio = mode + " in " + formatPercent(modeRatio);
-            playRate = formatPercent(playRate);
-            
-            innerResult.append($("<h4 class=playrate-summary>").append(
-                $("<em>").text("Playrate: "),
-                `${playRate} (${playRatio})`,
-            ));
-        }
-    }
-    
-    res.append(innerResult);
-    
-    return res;
+    inner.append(CardViewer.Compose.getPlayrateSummary(card));
+
+    return outer;
 };
 
 CardViewer.getPlayrateWarned = false;
@@ -1821,10 +1792,6 @@ CardViewer.demonstrate = function (query) {
     CardViewer.Elements.resultCount.text(results.length);
     CardViewer.Search.currentPage = 0;
     CardViewer.Search.showPage();
-};
-
-CardViewer.setUpCompareCompares = function () {
-    //TODO:
 };
 
 CardViewer.setUpFilterByToggle = function (filterByToggle, filterBy, inner) {

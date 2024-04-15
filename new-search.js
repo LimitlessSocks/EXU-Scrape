@@ -45,12 +45,14 @@ let onLoad = async function () {
     };
     window.NewSearchState = state;
     
+    // CardViewer.composeStrategy = CardViewer.composeResultWide;
+    
     const updateTexts = () => {
         $(".cards-showing").text(state.showing);
         $(".cards-total").text(state.total);
     };
     const appendCard = (card, update=false) => {
-        $("#output").append(CardViewer.composeResult(card));
+        $("#output").append(CardViewer.composeStrategy(card));
         if(update) {
             updateTexts();
         }

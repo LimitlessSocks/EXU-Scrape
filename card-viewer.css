@@ -200,6 +200,18 @@ textarea {
     vertical-align: top;
 }
 
+.result.wide h2 {
+    font-size: 1em;
+}
+.result.wide .result-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.small-image {
+    max-height: 4ch;
+}
+
 @media screen and (min-width: 1200px) {
     .pagetable .pagetable-cell {
         width: 50%;
@@ -546,7 +558,6 @@ input[type=number].inline {
 select.thin {
     width: 10ch;
 }
-
 
 /*filterby*/
 
