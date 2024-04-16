@@ -63,6 +63,19 @@ let onLoad = async function () {
     for(let id of relevantCards) {
         finalDb[id] = db[id];
     }
+
+    // reintroduce retrains
+    for(let id of Object.keys(RetrainMap)) {
+        if(db[id]) {
+            finalDb[id] = {
+                exu_retrain: true,
+                ...db[id],
+            };
+        }
+        else {
+            console.warn(`Unknown card id ${id}`);
+        }
+    }
     
     CardViewer.Database.setInitial(finalDb);
     

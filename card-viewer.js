@@ -977,9 +977,9 @@ CardViewer.createFilter = function (query, exclude = null) {
         (card) =>
             query.category === "any" || !query.category
                 ? true
-                : query.category == 1
+                : query.category == CATEGORY_RETRAIN
                     ? card.exu_retrain
-                    : query.category == 2
+                    : query.category == CATEGORY_ALT_ART
                         ? card.alt_art
                         : true,
         // // retrain filter
