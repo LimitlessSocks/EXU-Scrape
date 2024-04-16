@@ -11,6 +11,8 @@ const EMPTY_QUERY = {
 };
 
 let onLoad = async function () {
+    CardViewer.excludeTcg = false;
+
     CardViewer.SaveData.init();
     if(!CardViewer.SaveData.get("credit")) {
         CardViewer.SaveData.set("credit", {
@@ -45,7 +47,7 @@ let onLoad = async function () {
     };
     window.NewSearchState = state;
     
-    // CardViewer.composeStrategy = CardViewer.composeResultWide;
+    CardViewer.composeStrategy = CardViewer.composeResultDense;
     
     const updateTexts = () => {
         $(".cards-showing").text(state.showing);

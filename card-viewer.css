@@ -200,16 +200,54 @@ textarea {
     vertical-align: top;
 }
 
-.result.wide h2 {
-    font-size: 1em;
+.result.dense-result {
+    cursor: pointer;
+    transition: box-shadow 200ms ease-in-out;
+    font-size: 14px;
 }
-.result.wide .result-inner {
+.result.dense-result .result-inner {
+    padding: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+}
+#output .result.dense-result {
+    margin-bottom: 5px;
+    width: calc(50% - 10px);
+}
+#output.dense {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.result.dense-result:hover {
+    box-shadow: 0 0 10px white;
+}
+.result.dense-result .result-attribute {
+    width: 32px;
+    height: 32px;
+}
+.result.dense-result p {
+    line-height: 1.5em;
+}
+.result.dense-result h2 {
+    font-size: 1.2em;
+}
+.result.dense-result .result-inner {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.small-image {
-    max-height: 4ch;
+
+.flex-item-right {
+    margin-left: auto;
+    align-self: flex-start;
+    text-align: right;
+    min-width: 225px;
+}
+.result .flex-item-right .result-date {
+    float: none;
+    clear: none;
 }
 
 @media screen and (min-width: 1200px) {
@@ -229,6 +267,13 @@ img.star {
     padding: 10px;
     border-radius: 15px;
     margin: auto 0;
+}
+.small-image {
+    /* max-height: 4ch; */
+    padding: 0;
+    border-radius: 4px;
+    height: 6ch;
+    width: 6ch;
 }
 
 .effect-text {

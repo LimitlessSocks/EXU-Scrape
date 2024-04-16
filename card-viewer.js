@@ -1452,7 +1452,11 @@ CardViewer.Compose = {
         }[card.monster_color];
     },
     
-    getMarking(card) {
+    getMarking(card, options = {}) {
+        options = {
+            onlyImage: false,
+            ...options
+        };
         let marking = $("<div class=markings>");
         
         if(card.card_type === "Monster") {
@@ -1473,7 +1477,7 @@ CardViewer.Compose = {
                     );
                 }
             }
-            else {
+            else if(!options.onlyImage) {
                 let levelIndicator = CardViewer.Compose.getLevelIndicator(card);
                 marking.append(levelIndicator + card.level);
             }
@@ -1642,6 +1646,9 @@ CardViewer.Compose = {
                 stats.append($("<p>").text(`ATK/${card.atk} DEF/${card.def}`));
             }
         }
+        else {
+            stats.append($("<p>").text(`${card.type} ${card.card_type}`));
+        }
 
         return stats;
     },
@@ -1674,7 +1681,7 @@ CardViewer.Compose = {
         )
         : undefined,
     getAuthorHeader: card => $("<h4 class=result-author>").text(card.username),
-    getDateAddedHeader(card) {
+    getFloatingDateAddedHeader(card) {
         let dateAdded = $("<h4 class=result-date>");
         if(card.date) {
             let action = card.custom && card.custom > 0 ? "Integrated " : "Released ";
@@ -1711,7 +1718,7 @@ CardViewer.composeResult = function (card) {
     inner.append(
         id,
         name,
-        CardViewer.Compose.getDateAddedHeader(card),
+        CardViewer.Compose.getFloatingDateAddedHeader(card),
         CardViewer.Compose.getLinkArrows(card),
         CardViewer.Compose.getAuthorHeader(card),
         CardViewer.Compose.getStats(card)
@@ -1727,6 +1734,38 @@ CardViewer.composeResult = function (card) {
     );
     
     inner.append(CardViewer.Compose.getPlayrateSummary(card));
+
+    return outer;
+};
+
+CardViewer.composeResultDense = function (card) {
+    let { outer, inner } = CardViewer.Compose.makeResult(card);
+    outer.addClass("dense-result");
+    
+    // inner.append($("<img class=small-image>").attr("src", card.src));
+    inner.append(CardViewer.Compose.getImage(card).addClass("small-image"));
+    inner.append(CardViewer.Compose.getAttribute(card));
+
+    let stats = CardViewer.Compose.getStats(card);
+    let reformattedStats = [...stats.children()]
+        .map(e => $(e).text())
+        .join(" · ");
+
+    inner.append($("<div>").append(
+        CardViewer.Compose.getNameHeader(card),
+        $("<p>").text(reformattedStats),
+    ));
+    /*
+    inner.append($("<div class=flex-item-right>").append(
+        // $("<h4>").text(CardViewer.Compose.getIdHeader(card).text()),
+        $("<h4>").text(CardViewer.Compose.getFloatingDateAddedHeader(card).text()),
+        CardViewer.Compose.getPlayrateSummary(card)
+    ));
+    */
+
+    outer.click(() => {
+        outer.replaceWith(CardViewer.composeResult(card));
+    });
 
     return outer;
 };
