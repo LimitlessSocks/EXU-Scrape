@@ -19,6 +19,22 @@ let onLoad = async function () {
             isArtFinder: false,
         });
     }
+
+    const updateInputDisplay = () => {
+        lastInput = null;
+        changeInput();
+    };
+
+    CardViewer.attachGlobalSearchOptions(
+        $("#showOptions"),
+        {
+            monkeyPatch(data) {
+                document.querySelector(".title a").textContent = `${data.name} Query`;
+                updateInputDisplay();
+            },
+            denseToggle: updateInputDisplay,
+        },
+    );
     
     const creditButton = document.getElementById("creditArt");
     if(CardViewer.SaveData.get("credit").isArtFinder) {
@@ -26,15 +42,6 @@ let onLoad = async function () {
     }
     creditButton.addEventListener("click", function () {
         // TODO: actually implement
-    });
-    
-    const uploadFormatButton = document.getElementById("uploadFormat");
-    uploadFormatButton.addEventListener("click", async function () {
-        let data = await readJSONFile();
-        document.querySelector(".title a").textContent = `${data.name} Query`;
-        CardViewer.monkeyPatchFormat(data);
-        lastInput = null;
-        changeInput();
     });
     
     await CardViewer.Database.initialReadAll("./db.json");
@@ -46,8 +53,6 @@ let onLoad = async function () {
         stepSize: 25,
     };
     window.NewSearchState = state;
-    
-    CardViewer.composeStrategy = CardViewer.composeResultDense;
     
     const updateTexts = () => {
         $(".cards-showing").text(state.showing);

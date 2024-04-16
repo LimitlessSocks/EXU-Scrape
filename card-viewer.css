@@ -64,12 +64,12 @@ table.spacey td {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    z-index: 50;
 }
 .popup-inner {
     width: 300px;
     height: 300px;
-    background: rgb(51, 0, 51, 0.9);
+    background: rgba(51, 0, 51, 0.9);
     text-align: center;
     padding: 10px;
 }
@@ -606,6 +606,67 @@ select.thin {
 
 /*filterby*/
 
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    --switch-unchecked: rgba(100, 100, 130, 0.8);
+    --switch-checked: rgb(200, 0, 200);
+}
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.toggle-switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--switch-unchecked);
+    transition: 200ms;
+}
+.toggle-switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 200ms;
+}
+.toggle-switch-label {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.toggle-switch input:checked + .slider {
+    background-color: var(--switch-checked);
+}
+
+.toggle-switch input:focus + .slider {
+    box-shadow: 0 0 1px var(--switch-checked);
+}
+
+.toggle-switch input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.toggle-switch.round .slider {
+    border-radius: 34px;
+}
+
+.toggle-switch.round .slider:before {
+    border-radius: 50%;
+}
+
 .square-button {
     background: rgba(100,100,130,0.8);
     display: flex;
@@ -614,6 +675,16 @@ select.thin {
     padding: 10px;
     border-radius: 15px;
     z-index: 15;
+}
+
+.square-button-row {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.square-button-row  .square-button {
+    /* display: inline-flex; */
+    position: relative;
 }
 
 #filterBy, #creditArt {

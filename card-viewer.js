@@ -130,7 +130,7 @@ const getComparableDate = (date) => {
 
 class Prompt {
     // innerFn should be a function that returns the HTML body of the prompt
-    // supported types: small / large / nothing
+    // supported types: small / large / auto / nothing
     constructor(title, innerFn, buttons, ...types) {
         this.title = title;
         if(typeof innerFn !== "function") {
@@ -1976,6 +1976,94 @@ CardViewer.monkeyPatchFormat = formatData => {
             exu_limit: banlist[card.id] ?? 3,
         };
     }
+};
+
+CardViewer.attachGlobalSearchOptions = (el, options = {}) => {
+    if(options.denseToggle) {
+        CardViewer.baseComposeStrategy ??= CardViewer.composeStrategy;
+        let isDense = CardViewer.SaveData.get("dense-view");
+        if(isDense === undefined) {
+            CardViewer.SaveData.set("dense-view", false);
+            isDense = false;
+        }
+        if(isDense) {
+            CardViewer.composeStrategy = CardViewer.composeResultDense;
+        }
+    }
+
+    let optionsPrompt = new Prompt("Options", () => {
+        let base = $("<div>").css({
+            display: "flex",
+            gap: "10px",
+            flexDirection: "column",
+            alignItems: "center",
+        });
+        let buttonRow = $(`<div class="square-button-row"></div>`);
+        if(options.monkeyPatch) {
+            let monkeyPatchUpload = $(`<div class="square-button"><div class=toggleIcon><img src="./res/upload.png"/></div></div>`);
+            monkeyPatchUpload.on("click", async () => {
+                let data = await readJSONFile();
+                CardViewer.monkeyPatchFormat(data);
+                if(typeof options.monkeyPatch === "function") {
+                    options.monkeyPatch(data);
+                }
+            });
+            buttonRow.append(monkeyPatchUpload);
+        }
+
+        if(buttonRow.children().length) {
+            base.append(buttonRow);
+        }
+
+        if(options.denseToggle) {
+            let denseToggleSwitch = $(`
+                <label class="toggle-switch-label" style="display: inline-flex">
+                    Dense: 
+                    <div class="toggle-switch round">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </div>
+                </label>
+            `);
+
+            denseToggleSwitch.find("input")
+                .prop("checked", CardViewer.SaveData.get("dense-view"))
+                .change(ev => {
+                    CardViewer.SaveData.set("dense-view", ev.target.checked);
+                    if(ev.target.checked) {
+                        CardViewer.composeStrategy = CardViewer.composeResultDense;
+                    }
+                    else {
+                        CardViewer.composeStrategy = CardViewer.baseComposeStrategy;
+                    }
+                    if(typeof options.denseToggle === "function") {
+                        options.denseToggle(ev.target.checked);
+                    }
+                });
+            base.append(denseToggleSwitch);
+        }
+        // <div class="square-button"><div class=toggleIcon><img src="./res/upload.png"/></div></div>
+
+
+        return base;
+    }, [ "Done"], "auto");
+    el.click(() => {
+        // deploy prompt
+        optionsPrompt.deploy()
+            .then(([buttonIdx, prompt, body]) => {
+                // done
+            })
+        // setTimeout(() => optionsPrompt.close(true), 1000);
+    })
+    /*
+    const uploadFormatButton = document.getElementById("uploadFormat");
+    uploadFormatButton.addEventListener("click", async function () {
+        let data = await readJSONFile();
+        CardViewer.monkeyPatchFormat(data);
+        lastInput = null;
+        changeInput();
+    });
+    */
 };
 
 // secret silly
