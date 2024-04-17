@@ -96,16 +96,51 @@ window.addEventListener("load", async function () {
         $(".cards-in-pool").text(state.pool.length);
     });
 
+    const jail = $("<div class=hidden></div>");
+    window.jail = jail;
+
+    const composeMutexDense = (card, parent) => {
+        let base = CardViewer.composeResultDense(card);
+        let expanded = CardViewer.composeResult(card);
+        base.off("click");
+        base.data("id", card.id);
+        expanded.data("id", card.id);
+
+        base.on("click", () => {
+            // unjail every dense element
+            [...parent.find(".result")].forEach(child => {
+                let jChild = $(child);
+                let theirId = jChild.data("id");
+                if(theirId !== card.id && !child.classList.contains("dense-result")) {
+                    let theirDenseCounterpart = [...jail.children()].find(child => $(child).data("id") === theirId);
+                    if(!theirDenseCounterpart) {
+                        console.log("Weird, no dense counterpart", theirId, card.id);
+                        return;
+                    }
+                    theirDenseCounterpart = $(theirDenseCounterpart);
+                    console.log(theirDenseCounterpart, jChild);
+                    theirDenseCounterpart.insertBefore(jChild);
+                    jChild.appendTo(jail);
+                }
+            });
+            expanded.insertBefore(base);
+            base.appendTo(jail);
+        });
+
+        return base;
+    };
+
     const renderHand = (hand, withQuery) => {
-        console.log(hand);
         let numberOfPacks = $(".pack").length;
         let rendered = $(`<div class=pack><h2>Pack ${numberOfPacks + 1}</h2></div>`);
         if(withQuery) {
             rendered.append(`<h3>Query: <code>${withQuery}</code></h3>`);
         }
+        
         for(let id of hand) {
             let card = CardViewer.Database.cards[id];
-            rendered.append(CardViewer.composeResultDense(card));
+            let renderedCard = composeMutexDense(card, rendered);
+            rendered.append(renderedCard);
         }
         $("#simulation").append(rendered);
     };
