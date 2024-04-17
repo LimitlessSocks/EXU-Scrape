@@ -144,6 +144,8 @@ let onLoad = async function () {
         defCompare:         CardViewer.Elements.cardDEFCompare,
         playRate:           CardViewer.Elements.playRate,
         playRateCompare:    CardViewer.Elements.playRateCompare,
+        pendScale:          CardViewer.Elements.cardPendScale,
+        pendScaleCompare:   CardViewer.Elements.cardPendScaleCompare,
     };
     
     const parseStringValue = (str) => {
