@@ -214,6 +214,12 @@ const INDICATORS = [
         levelCompare: getComparison(match[3] || match[1]),
         level: match[2],
     })).rememberParameter(),
+    new TagIndicator(/scale(?:\s*(>=?|<=?|[/!]?==?))?\s*(\d+)\s*(or\s*(higher|more|lower|less))?/i, (match) => ({
+        type: "monster",
+        monsterCategory: "pendulum",
+        pendScaleCompare: getComparison(match[3] || match[1]),
+        pendScale: match[2],
+    })).rememberParameter(),
     new TagIndicator(/(level\s*\/\s*rank|rank\s*\/\s*level)\s*(\d+)/i, (match, memory) => (
         memory.lastParameter = {
             type: "monster",
@@ -238,7 +244,7 @@ const INDICATORS = [
         levelCompare: getComparison(match[3] || match[1]),
         level: match[2],
     })).rememberParameter(),
-    new TagIndicator(/(?:by|author)[ =]+([\w.]+|"([^"]+)")/i, (match) => ({
+    new TagIndicator(/(?:by|author)[ =]+([\w.]+|["“”]([^"“”]+)["“”])/i, (match) => ({
         author: match[2] || match[1],
     })).rememberParameter(),
     new TagIndicator(/(\d+)\s*(atk|def)|(atk|def)\s*(>=?|<=?|[/!]?==?)?\s*(\d+)/i, (match) => {
@@ -269,6 +275,12 @@ const INDICATORS = [
     new TagIndicator(/custom/i, (match) => ({
         visibility: "5",
     })),
+    new TagIndicator(/nc/i, (match) => ([
+        OPERATOR_NOT,
+        {
+            visibility: "5",
+        }
+    ])),
     new TagIndicator(/tcg\/?ocg/i, (match) => ({
         visibility: "6",
     })),
@@ -354,7 +366,7 @@ const INDICATORS = [
         type: (match[2] || "any").toLowerCase(),
         kind: getProperSpellTrapType(match[1]),
     })),
-    new TagIndicator(/"((?:".*?")?(?: ".*?"|[^"])+|"[^"]+")"/, (match) => ({
+    new TagIndicator(/["“”]((?:["“”].*?["“”])?(?: ["“”].*?["“”]|[^"“”])+|["“”][^"“”]+["“”])["“”]/, (match) => ({
         name: match[1],
     })),
     new TagIndicator(/\|\|/, () => OPERATOR_MAJOR_OR),

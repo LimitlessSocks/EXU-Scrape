@@ -746,9 +746,11 @@ CardViewer.query = function () {
         baseStats.level = CardViewer.Elements.cardLevel.val();
         baseStats.atk = CardViewer.Elements.cardATK.val();
         baseStats.def = CardViewer.Elements.cardDEF.val();
+        baseStats.pendScale = CardViewer.Elements.cardPendScale.val();
         baseStats.levelCompare = CardViewer.Elements.cardLevelCompare.val();
         baseStats.atkCompare = CardViewer.Elements.cardATKCompare.val();
         baseStats.defCompare = CardViewer.Elements.cardDEFCompare.val();
+        baseStats.pendScaleCompare = CardViewer.Elements.cardPendScaleCompare.val();
         baseStats.exactArrows = false;
         baseStats.arrowMask = null;
         
@@ -1098,6 +1100,14 @@ CardViewer.createFilter = function (query, exclude = null) {
     }
     else if(query.atkCompare === "question") {
         filters.push(CardViewer.exactComparator("?", _F.propda("atk")));
+    }
+
+    if(query.pendScale) {
+        filters.push(CardViewer.comparingComparator(
+            query.pendScale,
+            query.pendScaleCompare || "equal",
+            _F.propda("scale")
+        ));
     }
     
     if(query.def) {
@@ -1812,12 +1822,8 @@ CardViewer.setUpTabSearchSwitching = function () {
     });
     CardViewer.Elements.cardMonsterCategory.change(function () {
         let val = CardViewer.Elements.cardMonsterCategory.val();
-        if(val === "link") {
-            CardViewer.Elements.ifLink.toggle(true);
-        }
-        else {
-            CardViewer.Elements.ifLink.toggle(false);
-        }
+        CardViewer.Elements.ifPendulum.toggle(val === "pendulum");
+        CardViewer.Elements.ifLink.toggle(val === "link");
     });
     CardViewer.Elements.cardMonsterCategory.change();
     CardViewer.Elements.cardType.change();

@@ -31,6 +31,15 @@ const TEST_CASES = [
     }, {
         name: "Number"
     }]],
+    ["“Number”", [{
+        name: "Number",
+    }]],
+    ["“Number\"", [{
+        name: "Number",
+    }]],
+    ["”Number”", [{
+        name: "Number",
+    }]],
     ["dark dragon \"number\"", [{
         type: "monster",
         monsterAttribute: "DARK",
@@ -288,6 +297,15 @@ const TEST_CASES = [
     ["by \"Yummy Socks\"", [
         { author: "Yummy Socks" },
     ]],
+    ["by “Yummy Socks“", [
+        { author: "Yummy Socks" },
+    ]],
+    ["by “Yummy Socks”", [
+        { author: "Yummy Socks" },
+    ]],
+    ["by ”Yummy Socks\"", [
+        { author: "Yummy Socks" },
+    ]],
     ["by \"Yummy Socks\" or Khreygond", [
         { author: "Yummy Socks" },
         OPERATOR_INLINE_OR,
@@ -397,6 +415,14 @@ const TEST_CASES = [
     ["normal spell", [
         { type: "spell", kind: "Normal" },
     ]],
+    ["nc", [
+        OPERATOR_NOT,
+        { visibility: "5" },
+    ]],
+    ["NC", [
+        OPERATOR_NOT,
+        { visibility: "5" },
+    ]],
     ["not custom not quick-play", [
         OPERATOR_NOT,
         { visibility: "5" },
@@ -431,6 +457,21 @@ const TEST_CASES = [
     ]],
     ["rank 2 or less", [
         { type: "monster", monsterCategory: "xyz", level: "2", levelCompare: "lessequal" },
+    ]],
+    ["scale 5", [
+        { type: "monster", monsterCategory: "pendulum", pendScale: "5", pendScaleCompare: "equal" },
+    ]],
+    ["scale >= 4", [
+        { type: "monster", monsterCategory: "pendulum", pendScale: "4", pendScaleCompare: "greaterequal" },
+    ]],
+    ["scale < 3", [
+        { type: "monster", monsterCategory: "pendulum", pendScale: "3", pendScaleCompare: "less" },
+    ]],
+    ["scale 10 or higher", [
+        { type: "monster", monsterCategory: "pendulum", pendScale: "10", pendScaleCompare: "greaterequal" },
+    ]],
+    ["scale 7 or leSS", [
+        { type: "monster", monsterCategory: "pendulum", pendScale: "7", pendScaleCompare: "lessequal" },
     ]],
     ["(level 2 rock) or (level 3 pyro)", [
         LEFT_PARENTHESIS,

@@ -267,6 +267,17 @@
                         <option value="Divine-Beast">Divine-Beast</option>
                     </select>
                 </td>
+                <td class="ifPendulum">Pendulum Scale:</td>
+                <td class="ifPendulum"><select id=cardPendScaleCompare class=thin>
+                    <option value="equal">=</option>
+                    <option value="lessequal">&le;</option>
+                    <option value="less">&lt;</option>
+                    <option value="greaterequal">&ge;</option>
+                    <option value="greater">&gt;</option>
+                    <option value="unequal">&ne;</option>
+                    <!-- <option value="choice">any of</option> -->
+                </select></td>
+                <td class="ifPendulum"><input type=number id=cardPendScale min=0 max=13></td>
             </tr>
         </tbody>
         <tbody class="ifSpell" id="spellStats">
