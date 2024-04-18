@@ -1003,11 +1003,18 @@ CardViewer.createFilter = function (query, exclude = null) {
     }
     */
     
+    // TODO: change these from snake_case to camelCase
     if(query.main_effect) {
         filters.push(CardViewer.regexComparator(query.main_effect, _F.propda("effect")));
     }
     if(query.pend_effect) {
         filters.push(CardViewer.regexComparator(query.pend_effect, _F.propda("pendulum_effect")));
+    }
+    if(query.material_line) {
+        filters.push(CardViewer.regexComparator(query.material_line, CardViewer.getMaterialLine));
+    }
+    if(query.hasMaterial) {
+        filters.push(card => CardViewer.getMaterialLine(card) !== null);
     }
     
     if(query.notNormal) {
@@ -2070,6 +2077,38 @@ CardViewer.attachGlobalSearchOptions = (el, options = {}) => {
         changeInput();
     });
     */
+};
+
+CardViewer.getMaterialLine = card => {
+    if(!CardViewer.Filters.isExtraDeck(card)) {
+        return null;
+    }
+    // DuelingBook is not consistent in how it delineates lines. Since it uses \r sometimes, /\r?\n/ isn't an option.
+    let lines = card.effect.split(/[\r\n]+/);
+    if(CardViewer.Filters.isNonEffect(card)) {
+        return lines[0];
+    }
+    if(lines[0].includes(" / ") || lines.length === 1) {
+        lines = card.effect.split(" / ");
+    }
+    if(lines.length === 1) {
+        return null;
+    }
+    let firstIndex = 0;
+    while(firstIndex < lines.length) {
+        let line = lines[firstIndex];
+        // pretty hacky.
+        if(line.startsWith("Must") || line.startsWith("Cannot") || line.startsWith("This")) {
+            return null;
+        }
+
+        if(!line.startsWith("(")) {
+            break;
+        }
+
+        firstIndex++;
+    }
+    return lines[firstIndex] || null;
 };
 
 // secret silly

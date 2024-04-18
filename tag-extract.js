@@ -341,6 +341,12 @@ const INDICATORS = [
     new TagIndicator(/(?:text:)\s*\[([^[\]]+)\]/i, (match) => ({
         main_effect: match[1],
     })),
+    new TagIndicator(/(?:material(?:_?line)?:)\s*\[([^[\]]+)\]/i, (match) => ({
+        material_line: match[1],
+    })),
+    new TagIndicator(/material(ed)?/i, (match) => ({
+        hasMaterial: true,
+    })),
     new TagIndicator(/\[([^[\]]+)\]/, (match) => ({
         effect: match[1],
     })),

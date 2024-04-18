@@ -569,6 +569,19 @@ const TEST_CASES = [
     ["text: [destroy this card]", [
         { main_effect: "destroy this card" },
     ]],
+    ["text:[\"]", [
+        { main_effect: "\"" },
+    ]],
+    ["material: [3 Level]", [
+        { material_line: "3 Level" }
+    ]],
+    ["not MaTeRIaL: [\"]", [
+        OPERATOR_NOT,
+        { material_line: "\"" }
+    ]],
+    ["material", [
+        { hasMaterial: true },
+    ]],
     ["? atk", [
         { type: "monster", atkCompare: "question", atk: "" },
     ]],
