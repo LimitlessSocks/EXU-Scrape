@@ -30,6 +30,10 @@ window.addEventListener("load", async function () {
     const showUnlimited = document.getElementById("show-unlimited");
     const showOCGSymbol = document.getElementById("show-ocg-symbol");
     const showTCGSymbol = document.getElementById("show-tcg-symbol");
+
+    const stop1 = document.getElementById("stop1");
+    const stop2 = document.getElementById("stop2");
+    const stop3 = document.getElementById("stop3");
     
     const ORIGINAL_HEIGHT = 1185;
     const ORIGINAL_WIDTH = 813;
@@ -50,16 +54,23 @@ window.addEventListener("load", async function () {
         return categories;
     };
     
+    let COLOR_DICTIONARIES = {
+        blue:  ["#3D747F", "#0F0F35", "#001013"],
+        red:   ["#7F743D", "#350F0F", "#131000"],
+        green: ["#747F3D", "#0F350F", "#101300"],
+    }
+    for(let input of document.querySelectorAll("input[name='theme']")) {
+        input.addEventListener("change", function () {
+            let chosenColors = COLOR_DICTIONARIES[this.value];
+            stop1.value = chosenColors[0];
+            stop2.value = chosenColors[1];
+            stop3.value = chosenColors[2];
+            updateDisplay();
+        });
+    }
     const updateDisplay = (categories) => {
         // update background
-        for(let input of document.querySelectorAll("input[name='theme']")) {
-            if(input.checked) {
-                output.classList.add(input.value);
-            }
-            else {
-                output.classList.remove(input.value);
-            }
-        }
+        output.style.background = `radial-gradient(circle, ${stop1.value} 0%, ${stop2.value} 88%, ${stop3.value} 100%)`;
         
         // update effective date display
         let [ year, month, day ] = document.getElementById("effective-date")

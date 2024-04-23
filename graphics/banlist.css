@@ -4,13 +4,8 @@
     transform: scale(1.0);
     transform-origin: top left;
     background: rgb(61,116,127);
-    background: radial-gradient(circle, rgba(61,116,127,1) 0%, rgba(15,15,53,1) 88%, rgba(0,16,19,1) 100%); 
     position: absolute;
     overflow: hidden;
-}
-
-#output.red {
-    background: radial-gradient(circle, rgba(127,116,61,1) 0%, rgba(53,15,15,1) 88%, rgba(19,16,0,1) 100%); 
 }
 
 #output .center {
