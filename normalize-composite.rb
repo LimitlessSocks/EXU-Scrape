@@ -129,6 +129,16 @@ data.each { |card_id, card|
     normalize_card! card
 }
 
+# remove certain kinds of cards
+proxy_ids = [
+    7456, # Proxy - Spell
+    7457, # Proxy - Trap
+    7848, # Proxy Land
+]
+data.reject! { |card_id, card|
+    card["card_type"] == "Skill" || proxy_ids.include?(card["id"])
+}
+
 # TODO: interact with alt arts?
 banlist = JSON::parse File.read "banlist.json"
 
