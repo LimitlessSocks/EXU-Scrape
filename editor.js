@@ -73,6 +73,19 @@ let onLoad = async function () {
             // delete CardViewer.Database.cards[id];
         // }
     // }
+
+    const updateInputDisplay = () => CardViewer.submit();
+
+    CardViewer.attachGlobalSearchOptions(
+        $("#showOptions"),
+        {
+            monkeyPatch(data) {
+                document.querySelector("#top a").textContent = `${data.name} Deck Editor`;
+                updateInputDisplay();
+            },
+            denseToggle: updateInputDisplay,
+        },
+    );
     
     CardViewer.firstTime = false;
     CardViewer.autoSearch = true;
