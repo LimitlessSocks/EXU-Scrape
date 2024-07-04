@@ -24,7 +24,9 @@
     "canvas": "^2.11.2",
     "flowo": "^1.0.0",
     "jpeg-js": "^0.4.4",
+    "node-cleanup": "^2.1.2",
     "sharp": "^0.32.6",
-    "sharp-phash": "^2.1.0"
+    "sharp-phash": "^2.1.0",
+    "ws": "^8.17.0"
   }
 }

@@ -6,6 +6,10 @@ const {
 const { objectEqual } = require("./lib.js");
 
 // [input, output]
+
+// TODO: (not custom) cased "HERO" fusion sort down by date
+// versus not custom...
+// versus nc....
 const TEST_CASES = [
     ["link 2", [{
         type: "monster",
@@ -111,6 +115,13 @@ const TEST_CASES = [
     ["ATK=2150", [
         { type: "monster", atk: "2150", atkCompare: "equal" },
     ]],
+    // ["level 5 or 6 and atk >= 2500", [
+        // { type: "monster", level: "5", levelCompare: "equal" },
+        // OPERATOR_INLINE_OR,
+        // { type: "monster", level: "6", levelCompare: "equal" },
+        // OPERATOR_INLINE_AND,
+        // { type: "monster", atk: "2500", atkCompare: "greaterequal" },
+    // ]],
     ["1600 ATK or DEF", [
         { type: "monster", atk: "1600", atkCompare: "equal" },
         OPERATOR_INLINE_OR,
@@ -726,6 +737,7 @@ const TEST_CASES = [
     ["playrate 100", [
         { playRate: "100", playRateCompare: "equal" }
     ]],
+    
 ];
 
 module.exports = function testTagExtractParse(debug = false) {

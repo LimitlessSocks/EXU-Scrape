@@ -6,6 +6,7 @@ option = ARGV[0]
 outname = "db"
 
 if option == "latest"
+    puts "Inducing latest..."
     latest_name, latest_time = Dir["tmp/verdict-#{outname}*.json"].map { |path|
         time = if /verdict-(.+?)\.json/ === path
             DateTime.strptime($1, "#{outname}-%m-%d-%Y.%H.%M.%S")
@@ -18,12 +19,13 @@ if option == "latest"
     .max_by { |match, time| time }
     
     option = latest_name
+    puts "Latest option: #{option}"
 end
 
 database = get_database ARGV[1] || "tmp/#{option}"
 old_database = get_database outname
 
-p database.find { |k,v| v["name"].include? "Mekangel" }
+p database.find { |k,v| v["name"].include? "Undyne" }
 
 verdicts = JSON::parse File.read "tmp/verdict-#{option}.json"
 
@@ -43,4 +45,4 @@ verdicts.each { |id, verdict|
 
 #TODO: remove old tmp info
 File.write "#{outname}.json", database.to_json
-puts "Finalized."
+puts "Finalized, written #{database.size} entries to #{outname}.json."
