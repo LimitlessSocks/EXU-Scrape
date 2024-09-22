@@ -11,4 +11,6 @@
  2. Run `cp db-tmp.json db.json`.
  3. Run `finalize-scrape-v2.rb latest db` to incorporate the verdict.
 
+# Updating to mirror DuelingBook's database
+
 `scrape-book.rb && browser-scrape-to-db.rb && normalize-composite.rb && cp db-tmp.json db.json && finalize-scrape-v2.rb latest db`
