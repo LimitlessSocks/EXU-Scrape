@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/LimitlessSocks/EXU-Scrape#readme",
   "dependencies": {
-    "axios": "^1.6.0",
+    "axios": "^1.7.4",
     "canvas": "^2.11.2",
     "flowo": "^1.0.0",
     "jpeg-js": "^0.4.4",
