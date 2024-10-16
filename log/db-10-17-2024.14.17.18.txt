@@ -1,0 +1,1040 @@
+[main] Created log file log/db-10-17-2024.14.17.18.txt
+[14128271] warning: card id 1295673 (Poppin Aqua Damselfish) is not public
+[14128271] warning: card id 1295669 (Poppin Bluetang) is not public
+[14128417] note: property 'name' of card id 1991507 (Legendary Golem of Regal Ice) was changed
+[14128417] from: Legendary Golem - Regice
+[14128417] to: Legendary Golem of Regal Ice
+[14128417] note: property 'effect' of card id 1991507 (Legendary Golem of Regal Ice) was changed
+[14128417] from: You can only control 1 "Legendary Golem - Regice". You can Special Summon this card (from your hand) by discarding 1 card or by controlling a "Legendary Golem" card. Once per Chain, when your opponent activates the effect of a monster whose ATK is less than or equal to this card's DEF (including during the Damage Step) (Quick Effect): You can make this card lose 500 DEF, and if you do, this card is unaffected by monster effects for the rest of this Chain. The first time each "Legendary Golem" card you control would be destroyed by card effect each turn, it is not destroyed.
+[14128417] to: You can only control 1 "Legendary Golem of Regal Ice". You can Special Summon this card (from your hand) by discarding 1 card or by controlling a "Legendary Golem" card. Once per Chain (Quick Effect): You can make this card unaffected by the activated effects of monsters with ATK less than or equal to this card's DEF for the rest of this Chain, and if you do, reduce this card's DEF by 500 once this Chain has finished resolving. The first time each "Legendary Golem" card you control would be destroyed by card effect each turn, you can reduce the ATK of 1 "Legendary Golem" monster in its column by 500 instead.
+[14128417] note: property 'level' of card id 1991507 (Legendary Golem of Regal Ice) was changed
+[14128417] from: 10
+[14128417] to: 9
+[14128417] note: property 'name' of card id 1991519 (Legendary Golem of Regal Rock) was changed
+[14128417] from: Legendary Golem - Regirock
+[14128417] to: Legendary Golem of Regal Rock
+[14128417] note: property 'effect' of card id 1991519 (Legendary Golem of Regal Rock) was changed
+[14128417] from: You can only control 1 "Legendary Golem - Regirock". You can Special Summon this card (from your hand), by discarding 1 card or by controlling a "Legendary Golem" card. Once per Chain, when your opponent activates the effect of a monster whose ATK is less than or equal to this card's DEF (including during the Damage Step) (Quick Effect): You can make this card lose 500 DEF, and if you do, this card is unaffected by monster effects for the rest of this Chain. The first time each "Legendary Golem" monster you control would be destroyed by battle each turn, it is not destroyed.
+[14128417] to: You can only control 1 "Legendary Golem of Regal Rocks". You can Special Summon this card (from your hand), by discarding 1 card or by controlling a "Legendary Golem" card. Once per Chain (Quick Effect): You can make this card unaffected by the activated effects of monsters with ATK less than or equal to this card's DEF for the rest of this Chain, and if you do, reduce this card's DEF by 500 once this Chain has finished resolving. The first time each "Legendary Golem" monster you control would be destroyed by battle each turn, you can reduce its ATK by 500 instead.
+[14128417] note: property 'level' of card id 1991519 (Legendary Golem of Regal Rock) was changed
+[14128417] from: 10
+[14128417] to: 9
+[14128417] note: property 'name' of card id 1991511 (Legendary Golem of Regal Steel) was changed
+[14128417] from: Legendary Golem - Registeel
+[14128417] to: Legendary Golem of Regal Steel
+[14128417] note: property 'effect' of card id 1991511 (Legendary Golem of Regal Steel) was changed
+[14128417] from: You can only control 1 "Legendary Golem - Registeel". You can Special Summon this card (from your hand) by discarding 1 card or by controlling a "Legendary Golem" card. Once per Chain, when your opponent activates the effect of a monster whose ATK is less than or equal to this card's DEF (including during the Damage Step) (Quick Effect): You can make this card lose 500 DEF, and if you do, this card is unaffected by monster effects for the rest of this Chain. Negate the first Spell/Trap card or effect your opponent activates each turn that targets a "Legendary Golem" monster(s) you control.
+[14128417] to: You can only control 1 "Legendary Golem of Regal Steel". You can Special Summon this card (from your hand) by discarding 1 card or by controlling a "Legendary Golem" card. Once per Chain (Quick Effect): You can make this card unaffected by the activated effects of monsters with ATK less than or equal to this card's DEF for the rest of this Chain, and if you do, reduce this card's DEF by 500 once this Chain has finished resolving. Before resolving the first Spell/Trap card or effect your opponent activates each turn that targets a "Legendary Golem" monster(s) you control, reduce that "Legendary Golem" monster(s) ATK by 500, and if you do, negate the effect.
+[14128417] note: property 'level' of card id 1991511 (Legendary Golem of Regal Steel) was changed
+[14128417] from: 10
+[14128417] to: 9
+[14128417] note: property 'name' of card id 1991494 (Continent Mover, the Legendary Golem Crafter) was changed
+[14128417] from: Legendary Golem Crafter - Regigigas
+[14128417] to: Continent Mover, the Legendary Golem Crafter
+[14128417] note: property 'effect' of card id 1991494 (Continent Mover, the Legendary Golem Crafter) was changed
+[14128417] from: You can only control 1 "Legendary Golem Crafter - Regigigas". If the current turn count is 5 or less, this card's original ATK and DEF are halved. If this card destroys an opponent's monster by battle: You can add 1 "Legendary Golem" card from your Deck to your hand.
+[14128417] to: You can only control 1 "Continent Mover, the Legendary Golem Crafter". If the current turn count is 5 or less, this card's original ATK and DEF are halved. If this card is Summoned: You can add 1 "Legendary Golem" monster from your Deck to your hand. If this card destroys an opponent's monster by battle: You can add 1 "Crush Grip" from your Deck or GY to your hand.
+[14128417] note: property 'name' of card id 1991464 (Legendary Golem's Sealed Chamber) was changed
+[14128417] from: Legendary Golems - Awaken!
+[14128417] to: Legendary Golem's Sealed Chamber
+[14128417] note: property 'effect' of card id 1991464 (Legendary Golem's Sealed Chamber) was changed
+[14128417] from: You cannot Special Summon monsters from the Extra Deck. Once per turn: You can Tribute 1 face-up monster, then apply these effects, in sequence, depending on what the monster was before it was Tributed, if it was any of these.●Warrior monster in your rightmost Main Monster Zone, or an EARTH monster: Special Summon 1 "Legendary Golem - Regirock" from your Deck.●Winged Beast monster in your center Main Monster Zone, or a LIGHT monster: Special Summon 1 "Legendary Golem - Registeel" from your Deck.● Monster that was on the field for 2 or more End Phases, or a WATER monster: Special Summon 1 "Legendary Golem - Regice" from your Deck.You can only control 1 "Legendary Golems - Awaken!".
+[14128417] to: Once per turn: You can Tribute 1 face-up monster you control, then you can choose and apply any of these effects in sequence, skipping any that were not chosen, depending on what the monster was before it was Tributed, if it was any of these.●Warrior monster in your rightmost Main Monster Zone, or an EARTH monster: Special Summon 1 "Legendary Golem of Regal Rock" from your Deck.●Winged Beast monster in your center Main Monster Zone, or a LIGHT monster: Special Summon 1 "Legendary Golem of Regal Steel" from your Deck.● Monster that was on the field while the turn count moved forward twice or more, or a WATER monster: Special Summon 1 "Legendary Golem of Regal Ice" from your DeckYou can only control 1 "Legendary Golem's Sealed Chamber".
+[14128417] note: property 'name' of card id 1991481 (Crush Grip) was changed
+[14128417] from: Legendary Golem's Crush Grip
+[14128417] to: Crush Grip
+[14128417] note: property 'effect' of card id 1991481 (Crush Grip) was changed
+[14128417] from: If a "Legendary Golem" monster you control destroys a monster by battle: You can change its battle position, and if you do, banish cards from the top of your opponent's Deck face-down, up to the number of "Legendary Golem" cards you control. You can discard 1 card, then target 1 card on the field; destroy it, but if you do not control "Legendary Golem Crafter -Regigigas", you must discard a "Legendary Golem" card to activate this effect. You can only use each effect of "Legendary Golem's Crush Grip" once per turn.
+[14128417] to: Activate 1 of the following effects.● Add 1 "Legendary Golem" card from your Deck to your hand, then you can move the turn count forward by 1 for each different Attribute among "Legendary Golem" monsters you control.● If you control a "Legendary Golem" monster: Target 1 card on the field; destroy it, then if you control "Continent Mover, the Legendary Golem Crafter" you can banish 1 card from the top of your opponent's Deck face-down for every 2000 LP they have.You can only activate 1 "Crush Grip" per turn.
+[14128417] note: property 'card_type' of card id 1991481 (Crush Grip) was changed
+[14128417] from: Trap
+[14128417] to: Spell
+[14128417] note: property 'type' of card id 1991481 (Crush Grip) was changed
+[14128417] from: Continuous
+[14128417] to: Quick-Play
+[14128796] note: property 'effect' of card id 3141991 (Doradis' Ultima Vision) was changed
+[14128796] from: (This card is always treated as a "Nebulence" card.)Target 1 monster your opponent controls; detach 1 material from an Xyz Monster you control, and if you do, return that target to the hand. During the Main Phase, if this card is in your GY except the turn it was sent there: You can shuffle this card and 2 other "Nebulence" cards from your GY into the Deck; draw 1 card. You can only use each effect of "Doradis' Ultima Vision" once per turn.
+[14128796] to: (This card is always treated as a "Nebulence" card.)When a Spell/Trap Card or monster effect is activated, while you control an Xyz Monster: Negate the activation, then, if you have a "Nebulence" monster in your GY, you can destroy that negated card. During the Main Phase, if this card is in your GY except the turn it was sent there: You can shuffle this card and 2 other "Nebulence" cards from your GY into the Deck; draw 1 card. You can only use each effect of "Doradis' Ultima Vision" once per turn.
+[14128796] note: property 'type' of card id 3141991 (Doradis' Ultima Vision) was changed
+[14128796] from: Normal
+[14128796] to: Counter
+[14128877] note: property 'effect' of card id 456490 (Great Dark Crusher Hydra) was changed
+[14128877] from: 2+ "Dark Crusher" monstersIf this card or a monster it points to battles an opponent's monster, that opponent's monster loses 400 ATK/DEF during the Damage Step only. If this card is Link Summoned: You can Special Summon up to 2 "Dark Crusher Hydra Tokens" (Sea Serpent/DARK/Level 7/ATK 2800/DEF 0) to your zones this card points to, but they cannot be Tributed or used as Link Material, also for the rest of this turn, all Battle Damage your opponent takes is halved. You can only use this effect of "Great Dark Crusher Hydra" once per turn. You can only use 1 of the following effects of "Great Dark Crusher Hydra" per turn and only once that turn. ● If this card is destroyed by battle or card effect, while you control a "Dark Crusher Hydra Token": You can Special Summon this card.● If a monster this card points to is destroyed by battle or card effect: You can Special Summon 1 "Dark Crusher Hydra Token" (Sea Serpent/DARK/Level 7/ATK 2800/DEF 0) to a zone this card points to, but it cannot be Tributed or used as Link Material
+[14128877] to: 2+ "Dark Crusher" monstersIf this card or a monster it points to battles an opponent's monster, that opponent's monster loses 400 ATK/DEF during the Damage Step only. If this card is Link Summoned: You can Special Summon up to 2 "Dark Crusher Hydra Tokens" (Sea Serpent/DARK/Level 7/ATK 2800/DEF 0) to your zones this card points to, but they cannot be Tributed or used as Link Material, also for the rest of this turn, all Battle Damage your opponent takes is halved. You can only use this effect of "Great Dark Crusher Hydra" once per turn. You can only use 1 of the following effects of "Great Dark Crusher Hydra" per turn, and only once that turn. ● If this card is destroyed by battle or card effect, while you control a "Dark Crusher Hydra Token": You can Special Summon this card.● If a monster this card points to is destroyed by battle or card effect: You can Special Summon 1 "Dark Crusher Hydra Token" to a zone this card points to, but it cannot be Tributed or used as Link Material
+[14128894] note: property 'effect' of card id 2531583 (Hessonite Riftchaser, Rufus) was changed
+[14128894] from: You can Set this card from your hand to your Spell & Trap Zone as a Trap. If this card is Set in your Spell/Trap Zone, you can activate it as a Continuous Trap. (Quick Effect): You can target 1 Spell/Trap on the field, then target 1 of your banished “Riftchaser” cards; banish that opponent's card, and if you do, add your card to your hand. During the End Phase: You can banish any number of “Riftchaser” cards from your Spell & Trap Zones; Special Summon an equal number of “Riftchaser” monsters from your hand. You can only use each effect of “Hessonite Riftchaser, Rufus” once per turn.
+[14128894] to: You can Set this card from your hand to your Spell & Trap Zone as a Trap. If this card is Set in your Spell/Trap Zone, you can activate it as a Continuous Trap. (Quick Effect): You can target 1 Spell/Trap on the field, then target 1 of your banished “Riftchaser” cards; banish the first target, and if you do, add the second target to your hand. During the End Phase: You can banish any number of “Riftchaser” cards from your Spell & Trap Zones; Special Summon an equal number of “Riftchaser” monsters from your hand. You can only use each effect of “Hessonite Riftchaser, Rufus” once per turn.
+[14128976] note: property 'effect' of card id 3324383 (H-Core Activation) was changed
+[14128976] from: Add 1 "Mechanima" card from your Deck, GY or face-up Extra Deck to your hand. If a "Mechanima" card(s) is Tributed while this card is in your GY: You can banish this card; Special Summon 1 "Mechanima" monster from your GY or face-up Extra Deck. You can only use 1 "H-Core Activation" effect per turn, and only once that turn.
+[14128976] to: Add 1 "Mechanima" card from your Deck, GY or face-up Extra Deck to your hand. If a "Mechanima" card(s) is Tributed while this card is in your GY: You can banish this card; Special Summon 1 "Mechanima" monster from your GY or face-up Extra Deck (This is treated as a Ritual Summon). You can only use 1 "H-Core Activation" effect per turn, and only once that turn.
+[14128976] note: property 'effect' of card id 2369228 (Mechanima Astutia) was changed
+[14128976] from: If this card is Summoned: You can add 1 "Mechanima" card from your GY or face-up Extra Deck to your hand. If this card is Tributed by another "Mechanima" card's effect: You can target 1 face-up card on the field; its effects are negated until the end of the turn, also it is unaffected by other cards' effects until the end of this turn. You can only use each effect of "Mechanima Astutia" once per turn.
+[14128976] to: You can Ritual Summon this card with any "Mechanima" card. Must first be either Ritual Summoned, or Pendulum Summoned. If this card or another "Mechanima" monster(s) is Summoned: You can target a number of cards in either GY or banishment up to the number of monsters that were Summoned; Until the end of the next turn, their effects are negated, as well as the activated effects and effects on the field of cards with the same original name. You can only use this effect of "Mechanima Astutia" once per turn. "Mechanima" monsters you control gain the following effect. Only 1 "Mechanima" monster can activate this effect per turn, and only once that turn.● You can target a number of cards on the field up to the number of "Mechanima" Pendulum Ritual monsters in the Monster Zones; negate their effects while face-up on the field.
+[14128976] note: property 'pendulum_effect' of card id 2369228 (Mechanima Astutia) was changed
+[14128976] from: You cannot Pendulum Summon monsters, except "Mechanima" monsters. This effect cannot be negated. You can Tribute this card; banish 1 card from your opponent's GY or face-up Extra Deck. You can only use this effect of "Mechanima Astutia" once per turn.
+[14128976] to: You cannot Pendulum Summon monsters, except "Mechanima" monsters. This effect cannot be negated. You can Ritual Summon 1 "Mechanima" Ritual monster from your hand, GY or face-up Extra Deck by Tributing monsters from your hand or field whose total Pendulum Scales equal or exceed the Level of that Ritual Monster. If you control a Pendulum Ritual Monster is Ritual Summoned: You can change this card's Pendulum Scale to 8. You can only use each effect of "Mechanima Astutia" once per turn. This card gains its Monster Zone effects, but cannot activate them.
+[14128976] note: property 'scale' of card id 2369228 (Mechanima Astutia) was changed
+[14128976] from: 6
+[14128976] to: 4
+[14128976] note: property 'atk' of card id 2369228 (Mechanima Astutia) was changed
+[14128976] from: 1800
+[14128976] to: 2700
+[14128976] note: property 'def' of card id 2369228 (Mechanima Astutia) was changed
+[14128976] from: 900
+[14128976] to: 2300
+[14128976] note: property 'monster_color' of card id 2369228 (Mechanima Astutia) was changed
+[14128976] from: Effect
+[14128976] to: Ritual
+[14128976] note: property 'level' of card id 2369228 (Mechanima Astutia) was changed
+[14128976] from: 4
+[14128976] to: 7
+[14128976] note: property 'effect' of card id 2374409 (Mechanima Movenza) was changed
+[14128976] from: If this card is Summoned: You add 1 "Mechanima" card from your Deck to your hand. If this card is Tributed by another "Mechanima" card's effect: You can target 1 card on the field; it cannot be destroyed by other cards' effects, also destroy it during the End Phase. You can only use each effect of "Mechanima Movenza" once per turn.
+[14128976] to: You can Ritual Summon this card with any "Mechanima" card. Must first be either Ritual Summoned, or Pendulum Summoned. If this card or another "Mechanima" monster(s) is Summoned: You can add 1 "Mechanima" card in your GY, banishment or face-up Extra Deck to your hand. You can only use this effect of "Mechanima Movenza" once per turn. "Mechanima" monsters you control gain the following effect. Only 1 "Mechanima" monster can activate this effect per turn, and only once that turn. ● (Quick Effect): You can target 1 card in either player's Pendulum Zone and 1 monster on either field; If the target in the Pendulum Zone is a Pendulum Monster, Special Summon that monster to its owner's field (this is treated as a Pendulum Summon), otherwise send it to the GY, then you can place the other target in its owner's unoccupied Pendulum Zone (If it wasn't a Pendulum monster, it's treated as a Continuous Spell Card).
+[14128976] note: property 'pendulum_effect' of card id 2374409 (Mechanima Movenza) was changed
+[14128976] from: You cannot Pendulum Summon monsters, except "Mechanima" monsters. This effect cannot be negated. You can send 1 "Mechanima" Pendulum Monster from your hand or field to your Extra Deck face-up; Special Summon 1 "Mechanima" Pendulum Monster from your Pendulum Zone. You can only use this effect of "Mechanima Movenza" once per turn.
+[14128976] to: You cannot Pendulum Summon monsters, except "Mechanima" monsters. This effect cannot be negated. When a card or effect is activated or a monster is Summoned: You can Ritual Summon 1 "Mechanima" Ritual monster from your hand, GY or face-up Extra Deck by Tributing monsters from your hand or field whose total Pendulum Scales equal or exceed the Level of that Ritual Monster. If you control a Pendulum Ritual Monster is Ritual Summoned: You can change this card's Pendulum Scale to 8. You can only use each effect of "Mechanima Movenza" once per turn. This card gains its Monster Zone effects, but cannot activate them.
+[14128976] note: property 'scale' of card id 2374409 (Mechanima Movenza) was changed
+[14128976] from: 6
+[14128976] to: 4
+[14128976] note: property 'atk' of card id 2374409 (Mechanima Movenza) was changed
+[14128976] from: 1600
+[14128976] to: 2300
+[14128976] note: property 'def' of card id 2374409 (Mechanima Movenza) was changed
+[14128976] from: 1300
+[14128976] to: 2700
+[14128976] note: property 'monster_color' of card id 2374409 (Mechanima Movenza) was changed
+[14128976] from: Effect
+[14128976] to: Ritual
+[14128976] note: property 'level' of card id 2374409 (Mechanima Movenza) was changed
+[14128976] from: 4
+[14128976] to: 7
+[14128976] note: property 'effect' of card id 2361135 (Mechanima Sagittae) was changed
+[14128976] from: If this card is Summoned: You can add 1 "Mechanima" Pendulum Monster from your Deck to your Extra Deck face-up. If this card is Tributed by another "Mechanima" card's effect: You can banish 1 face-up monster on the field until your next Main Phase 2. You can only use each effect of "Mechanima Sagittae" once per turn.
+[14128976] to: You can Ritual Summon this card with any "Mechanima" card. Must first be either Ritual Summoned, or Pendulum Summoned. If this card or another "Mechanima" monster(s) is Summoned: You can target a number of cards on the field up to the number of monsters that were Summoned; send them to the GY. You can only use this effect of "Mechanima Sagittae" once per turn. "Mechanima" monsters you control gain the following effect. Only 1 "Mechanima" monster can activate this effect per turn, and only once that turn.●If a card(s) is sent to the GY because of a card or effect; You can target an equal number of cards in your opponent's GY; banish them face down.
+[14128976] note: property 'pendulum_effect' of card id 2361135 (Mechanima Sagittae) was changed
+[14128976] from: You cannot Pendulum Summon monsters, except "Mechanima" monsters. This effect cannot be negated. You can Tribute this card, then target 1 face-up monster on the field; it cannot be used as Fusion, Synchro, Xyz or Link Material and it cannot be Tributed for the Tribute Summon of a monster for the rest of this turn. You can only use this effect of "Mechanima Sagittae" once per turn.
+[14128976] to: You cannot Pendulum Summon monsters, except "Mechanima" monsters. This effect cannot be negated. You can Ritual Summon 1 "Mechanima" Ritual monster from your hand, GY or face-up Extra Deck by Tributing monsters from your hand or field whose total Pendulum Scales equal or exceed the Level of that Ritual Monster. If you control a Pendulum Ritual Monster is Ritual Summoned: You can change this card's Pendulum Scale to 8. You can only use each effect of "Mechanima Sagittae" once per turn. This card gains its Monster Zone effects, but cannot activate them.
+[14128976] note: property 'scale' of card id 2361135 (Mechanima Sagittae) was changed
+[14128976] from: 6
+[14128976] to: 4
+[14128976] note: property 'atk' of card id 2361135 (Mechanima Sagittae) was changed
+[14128976] from: 1700
+[14128976] to: 2600
+[14128976] note: property 'def' of card id 2361135 (Mechanima Sagittae) was changed
+[14128976] from: 1000
+[14128976] to: 2400
+[14128976] note: property 'monster_color' of card id 2361135 (Mechanima Sagittae) was changed
+[14128976] from: Effect
+[14128976] to: Ritual
+[14128976] note: property 'level' of card id 2361135 (Mechanima Sagittae) was changed
+[14128976] from: 4
+[14128976] to: 7
+[14128976] note: property 'effect' of card id 2361948 (Mechanima Auxilium) was changed
+[14128976] from: You can Ritual Summon this card with any "Mechanima" card. Must first be either Ritual Summoned, or Pendulum Summoned (from your hand). If this card is Tributed by a "Mechanima" card's effect: You can target 1 face-up monster on the field; its ATK and DEF become 0, also it cannot be targeted by other cards' effects until the end of the turn. (Quick Effect): You can target 1 "Mechanima" monster you control with an effect that activates when it is Tributed; apply that effect. You can only use each effect of "Mechanima Auxilium" once per turn.
+[14128976] to: You can Ritual Summon this card with any "Mechanima" card. Must first be either Ritual Summoned, or Pendulum Summoned. If this card or another "Mechanima" monster(s) is Summoned: You can add 1 "Mechanima" card from your Deck to your hand. You can only use this effect of "Mechanima Auxilium" once per turn. "Mechanima" monsters you control gain the following effect. Only 1 "Mechanima" monster can activate this effect per turn, and only once that turn.● If a "Mechanima" card(s) you control is targeted by a card or effect: you can target up to an equal number of other cards on the field (min. 1) that would be an appropriate target (if you would target an opponent’s card with this effect, it is treated as if you owned and controlled it); that card/effect now targets the new target.
+[14128976] note: property 'pendulum_effect' of card id 2361948 (Mechanima Auxilium) was changed
+[14128976] from: You cannot Pendulum Summon monsters, except "Mechanima" monsters. You can Tribute this card; add 1 "Mechanima" non-Ritual monster from your Deck to your hand. You can only use this effect of "Mechanima Auxilium" once per turn.
+[14128976] to: You cannot Pendulum Summon monsters, except "Mechanima" monsters. This effect cannot be negated. You can Ritual Summon 1 "Mechanima" Ritual monster from your hand, GY or face-up Extra Deck by Tributing monsters from your hand or field whose total Pendulum Scales equal or exceed the Level of that Ritual Monster. If you control a Pendulum Ritual Monster is Ritual Summoned: You can change this card's Pendulum Scale to 8. You can only use each effect of "Mechanima Auxilium" once per turn. This card gains its Monster Zone effects, but cannot activate them.
+[14128976] note: property 'scale' of card id 2361948 (Mechanima Auxilium) was changed
+[14128976] from: 3
+[14128976] to: 4
+[14128976] note: property 'level' of card id 2361948 (Mechanima Auxilium) was changed
+[14128976] from: 5
+[14128976] to: 7
+[14128976] note: property 'effect' of card id 2393570 (Mechanima Clypeus) was changed
+[14128976] from: You can Ritual Summon this card with any "Mechanima" card. Must first be either Ritual Summoned, or Pendulum Summoned (from your hand). (Quick Effect): You can target 1 "Mechanima" card you control; Tribute it, and if you do this card gains 500 ATK/DEF until the end of this turn. If this card is Tributed by a "Mechanima" card's effect: You can target 1 "Mechanima" monster you control; it cannot be destroyed by battle or card effects until the End Phase. You can only use each effect of "Mechanima Clypeus" once per turn.
+[14128976] to: You can Ritual Summon this card with any "Mechanima" card. Must first be either Ritual Summoned, or Pendulum Summoned. If this card or another "Mechanima" monster(s) is Summoned: The first time those cards would be destroyed by battle or card effect, they are not destroyed. You can only use this effect of "Mechanima Clypeus" once per turn. "Mechanima" monsters you control gain the following effect. Only 1 "Mechanima" monster can activate this effect per turn, and only once that turn.●You can Tribute this card, then choose 1 card on the field; It becomes unaffected by card effects, except the effects of "Mechanima" cards.
+[14128976] note: property 'pendulum_effect' of card id 2393570 (Mechanima Clypeus) was changed
+[14128976] from: You cannot Pendulum Summon monsters, except "Mechanima" monsters. You can Tribute this card; place 1 "Mechanima" Pendulum Monster from your GY or face-up Extra Deck in your Pendulum Zone. You can only use this effect of "Mechanima Clypeus" once per turn.
+[14128976] to: You cannot Pendulum Summon monsters, except "Mechanima" monsters. This effect cannot be negated. You can Ritual Summon 1 "Mechanima" Ritual monster from your hand, GY or face-up Extra Deck by Tributing monsters from your hand or field whose total Pendulum Scales equal or exceed the Level of that Ritual Monster. If you control a Pendulum Ritual Monster is Ritual Summoned: You can change this card's Pendulum Scale to 8. You can only use each effect of "Mechanima Clypeus" once per turn. This card gains its Monster Zone effects, but cannot activate them.
+[14128976] note: property 'scale' of card id 2393570 (Mechanima Clypeus) was changed
+[14128976] from: 3
+[14128976] to: 4
+[14128976] note: property 'atk' of card id 2393570 (Mechanima Clypeus) was changed
+[14128976] from: 2500
+[14128976] to: 2400
+[14128976] note: property 'def' of card id 2393570 (Mechanima Clypeus) was changed
+[14128976] from: 2500
+[14128976] to: 2600
+[14128976] note: property 'level' of card id 2393570 (Mechanima Clypeus) was changed
+[14128976] from: 5
+[14128976] to: 7
+[14128976] note: property 'effect' of card id 2378202 (Mechanima Impetus) was changed
+[14128976] from: You can Ritual Summon this card with any "Mechanima" card. Must first be either Ritual Summoned, or Pendulum Summoned (from your hand). If this card is Tributed by a "Mechanima" card's effect: You can target 1 "Mechanima" card you control; return 1 card in its column to the hand. (Quick Effect): You can target 1 "Mechanima" Pendulum Monster you control with a Pendulum Effect that meets its activation conditions; apply that effect. You can only use each effect of "Mechanima Impetus" once per turn.
+[14128976] to: You can Ritual Summon this card with any "Mechanima" card. Must first be either Ritual Summoned, or Pendulum Summoned. If this card or another "Mechanima" monster(s) is Summoned: All "Mechanima" monsters you control gain 500 ATK/DEF for every monster Summoned until the End Phase. You can only use this effect of "Mechanima Impetus" once per turn. "Mechanima" monsters you control gain the following effect. Only 1 "Mechanima" monster can activate this effect per turn, and only once that turn.●During the Damage Step, if this card or another "Mechanima" monster battles an opponent's monster: You can send that monster to the GY before damage calculation, and if you do, deal damage to the opponent equal to that monster's original ATK. Your opponent cannot activate that monster's effects in response to this effect's activation or for the rest of the Battle Phase.
+[14128976] note: property 'pendulum_effect' of card id 2378202 (Mechanima Impetus) was changed
+[14128976] from: You cannot Pendulum Summon monsters, except "Mechanima" monsters. You can Tribute this card; place 1 non-Ritual "Mechanima" Pendulum Monster from your Deck in your Pendulum Zone. You can only use this effect of "Mechanima Impetus" once per turn.
+[14128976] to: You cannot Pendulum Summon monsters, except "Mechanima" monsters. This effect cannot be negated. You can Ritual Summon 1 "Mechanima" Ritual monster from your hand, GY or face-up Extra Deck by Tributing monsters from your hand or field whose total Pendulum Scales equal or exceed the Level of that Ritual Monster. If you control a Pendulum Ritual Monster is Ritual Summoned: You can change this card's Pendulum Scale to 8. You can only use each effect of "Mechanima Impetus" once per turn. This card gains its Monster Zone effects, but cannot activate them.
+[14128976] note: property 'scale' of card id 2378202 (Mechanima Impetus) was changed
+[14128976] from: 3
+[14128976] to: 4
+[14128976] note: property 'level' of card id 2378202 (Mechanima Impetus) was changed
+[14128976] from: 5
+[14128976] to: 7
+[14128976] note: property 'effect' of card id 2672603 (Mechanima Matrix of Arbitrium) was changed
+[14128976] from: This card can be used to Ritual Summon any "Mechanima" Ritual Monster from your hand, GY or face-up Extra Deck. You must also Tribute monsters from your hand or field whose total Pendulum Scales equal or exceed the Level of the Ritual Monster you Ritual Summon. If this card is in your GY, except the turn it was sent there: You can shuffle this card into the Deck; Special Summon 1 "Mechanima" Pendulum Monster from your GY or face-up Extra Deck.
+[14128976] to: If you would Ritual Summon "Mechanima" Ritual monsters, you can Tribute "Mechanima" Pendulum Monsters in the Pendulum Zone as material. When your opponent Summons a monster or activates a card or effect: You can target 1 "Mechanima" Pendulum monster you control and 1 "Mechanima" Pendulum monster in your Pendulum Zone; Special Summon the second target (This is treated as a Pendulum Summon), then you can place the other target in one of your unoccupied Pendulum Zones. If this card is in your GY: You can banish this card; You can change the Pendulum Scales of up to 2 Pendulum Monsters on the field to 8. You can only use each effect of "Mechanima Matrix of Arbitrium" once per turn.
+[14128976] note: property 'type' of card id 2672603 (Mechanima Matrix of Arbitrium) was changed
+[14128976] from: Ritual
+[14128976] to: Field
+[14128976] note: property 'effect' of card id 2393735 (Mechanima Catalys) was changed
+[14128976] from: 2 Pendulum Monsters, including 1 "Mechanima" monsterIf this card is Link Summoned: You can activate 1 of these effects.● Special Summon 1 "Mechanima" monster from your GY or face-up Extra Deck.● Place 1 "Mechanima" Pendulum Monster from your GY or face-up Extra Deck in your Pendulum Zone.If this card is Tributed by a "Mechanima" card's effect: Set 1 "Mechanima" Spell/Trap directly from your Deck or GY to your Spell & Trap Zone. You can only use each effect of "Mechanima Catalys" once per turn.
+[14128976] to: 2 Pendulum Monsters, including 1 "Mechanima" monsterIf this card is Link Summoned or a "Mechanima" monster is Ritual or Pendulum Summoned to a zone this card points to: You can activate 1 of these effects.● Special Summon 1 "Mechanima" Pendulum monster from your GY or face-up Extra Deck (This is treated as a Pendulum Summon)● Place 1 "Mechanima" Pendulum Monster from your GY or face-up Extra Deck in your Pendulum Zone.(Quick Effect) You can Tribute any number of "Mechanima" Pendulum monsters you control (min 1); Pendulum Summon a "Mechanima" Pendulum monster(s). You can only use each effect of "Mechanima Catalys" once per turn.
+[14128984] warning: card id 3742875 (Shadow of Amoralis) is not public
+[14129004] warning: card id 1252007 (Adal the Geídst Lookout.) is not public
+[14129004] warning: card id 395602 (Badulf the Geídst Vest.) is not public
+[14129004] warning: card id 396645 (Eadcyne the Geídst Poise.) is not public
+[14129004] warning: card id 395675 (Eadwald the Geídst Pelf.) is not public
+[14129004] warning: card id 395734 (Stanhelm the Geídst Warden.) is not public
+[14129004] warning: card id 2737379 (Stone Golem of Häsir) is not public
+[14129004] warning: card id 396894 (Invocation Circle of the Secret Beasts.) is not public
+[14129004] warning: card id 396793 (Mt. Häsir, Home of the Secret Beasts.) is not public
+[14129004] warning: card id 396970 (Secret Pathway to Häsir.) is not public
+[14129004] warning: card id 397037 (Stone Sentinel of Häsir) is not public
+[14129004] warning: card id 397186 (Vlad, the Swift Geídst Guardian.) is not public
+[14129004] warning: card id 397270 (Gir, the Brute Geídst Guardian) is not public
+[14129004] note: property 'name' of card id 397270 (Gir, the Brute Geídst Guardian) was changed
+[14129004] from: Gir, the Brute Geídst Guardian.
+[14129004] to: Gir, the Brute Geídst Guardian
+[14129004] note: property 'effect' of card id 397270 (Gir, the Brute Geídst Guardian) was changed
+[14129004] from: 1 "Geídst" Tuner + 1+ non-Tuner non-Synchro "Geídst" monsters"Geídst" cards you control cannot be destroyed by Spell effects while you control a face-up Continuous Spell. "Geídst" cards you control cannot be destroyed by Trap effects while you control a face-up Continuous Trap. If this card is Synchro Summoned: You can place 1 non-Synchro "Geídst" card from your GY face-up in your Spell & Trap Zone. Once per turn: You can send 1 face-up "Geídst" Continous Spell/Trap you control to the GY, then apply 1 of these effects depending on that sent card's type.● Continuous Spell: Take 1 "Geídst" card from your Deck or GY, and either place it face-up in your Spell & Trap Zone or add it to your hand.● Continuous Trap: Destroy 2 monsters OR 2 Spells/Traps on the field
+[14129004] to: 1 "Geídst" Tuner + 1+ non-Tuner non-Synchro "Geídst" monsters"Geídst" cards you control cannot be destroyed by Spell effects while you control a face-up "Geídst" Continuous Spell. "Geídst" cards you control cannot be destroyed by Trap effects while you control a face-up "Geídst" Continuous Trap. If this card is Synchro Summoned: You can place 1 non-Synchro "Geídst" card from your GY face-up in your Spell & Trap Zone. Once per turn: You can send 1 face-up "Geídst" Continous Spell/Trap you control to the GY, then apply 1 of these effects depending on that sent card's type.● Continuous Spell: Take 1 "Geídst" card from your Deck or GY, and either place it face-up in your Spell & Trap Zone or add it to your hand.● Continuous Trap: Destroy 2 monsters OR 2 Spells/Traps on the field
+[14129004] warning: card id 397446 (Graphorn, the Skyborn Geídst Guardian.) is not public
+[14129032] note: property 'effect' of card id 603375 (Knechtgeist-Imbolc) was changed
+[14129032] from: If a Token you control in this card's column leaves the field, except by this card's effect, destroy this card. During your Main Phase: You can add 1 "Knechtgeist" Spell/Trap from your Deck to your hand. You can only use this effect of "Knechtgeist-Imbolc" once per turn. You can only use 1 of the following effects of "Knechtgeist-Imbolc" per turn, and only once that turn.● During the Main Phase (Quick Effect): You can place this card face-up in your Spell & Trap Zone as a Continuous Trap, then Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600) to your Main Monster Zone in this card's column, but it cannot be used as Link Material, except for the Link Summon of a "Knechtgeist" monster.● During the Main Phase, if this card is in your Spell & Trap Zone: You can Tribute 1 Token in this card's column, then Special Summon this card.
+[14129032] to: During your Main Phase: You can add 1 "Knechtgeist" Spell/Trap from your Deck to your hand. You can only use this effect of "Knechtgeist-Imbolc" once per turn. Once per turn, you can either (Quick Effect): Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600) then equip this card to that target as a Normal Trap, OR: Tribute the Token this card is equipped to and Special Summon this card.
+[14129032] note: property 'ability' of card id 603375 (Knechtgeist-Imbolc) was changed
+[14129032] from: 
+[14129032] to: Union
+[14129032] note: property 'effect' of card id 603373 (Knechtgeist-Samhain) was changed
+[14129032] from: If a Token you control in this card's column leaves the field, except by this card's effect, destroy this card. During your Main Phase: You can add 1 "Knechtgeist" monster from your Deck to your hand. You can only use this effect of "Knechtgeist-Samhain" once per turn. You can only use 1 of the following effects of "Knechtgeist-Samhain" per turn, and only once that turn.● During the Main Phase (Quick Effect): You can place this card face-up in your Spell & Trap Zone as a Continuous Trap, then Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600) to your Main Monster Zone in this card's column, but it cannot be used as Link Material, except for the Link Summon of a "Knechtgeist" monster.● During the Main Phase, if this card is in your Spell & Trap Zone: You can Tribute 1 Token in this card's column, then Special Summon this card.
+[14129032] to: During your Main Phase: You can add 1 "Knechtgeist" monster from your Deck to your hand. You can only use this effect of "Knechtgeist-Samhain" once per turn. Once per turn, you can either (Quick Effect): Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600) then equip this card to that target as a Normal Trap, OR: Tribute the Token this card is equipped to and Special Summon this card.
+[14129032] note: property 'ability' of card id 603373 (Knechtgeist-Samhain) was changed
+[14129032] from: 
+[14129032] to: Union
+[14129032] note: property 'effect' of card id 602937 (Knechtgeist-Yule) was changed
+[14129032] from: If a Token you control in this card's column leaves the field, except by this card's effect, destroy this card. During your Main Phase: You can target 1 Level 4 or lower "Knechtgeist" monster in your GY; Special Summon it. You can only use this effect of "Knechtgeist-Yule" once per turn. You can only use 1 of the following effects of "Knechtgeist-Yule" per turn, and only once that turn.● During the Main Phase (Quick Effect): You can place this card face-up in your Spell & Trap Zone as a Continuous Trap, then Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600) to your Main Monster Zone in this card's column, but it cannot be used as Link Material, except for the Summon of a "Knechtgeist" monster.● During the Main Phase, if this card is in your Spell & Trap Zone: You can Tribute 1 Token in this card's column, then Special Summon this card.
+[14129032] to: During your Main Phase: You can target 1 Level 4 or lower "Knechtgeist" monster in your GY; Special Summon it. You can only use this effect of "Knechtgeist-Yule" once per turn. Once per turn, you can either (Quick Effect): Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600) then equip this card to that target as a Normal Trap, OR: Tribute the Token this card is equipped to and Special Summon this card.
+[14129032] note: property 'ability' of card id 602937 (Knechtgeist-Yule) was changed
+[14129032] from: 
+[14129032] to: Union
+[14129032] note: property 'effect' of card id 603379 (Knechtgeist-Litha) was changed
+[14129032] from: If a Token you control in this card's column leaves the field, except by this card's effect, destroy this card. During your Main Phase: You can Special Summon 1 "Knechtgeist" monster from your hand. You can only use this effect of "Knechtgeist-Litha" once per turn. You can only use 1 of the following effects of "Knechtgeist-Litha" per turn, and only once that turn.● During the Main Phase (Quick Effect): You can place this card face-up in your Spell & Trap Zone as a Continuous Trap, then Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600) to your Main Monster Zone in this card's column, but it cannot be used as Link Material, except for the Summon of a "Knechtgeist" monster.● During the Main Phase, if this card is in your Spell & Trap Zone: You can Tribute 1 Token in this card's column, then Special Summon this card.
+[14129032] to: During your Main Phase: You can Special Summon 1 "Knechtgeist" monster from your hand. You can only use this effect of "Knechtgeist-Litha" once per turn. Once per turn, you can either (Quick Effect): Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600) then equip this card to that target as a Normal Trap, OR: Tribute the Token this card is equipped to and Special Summon this card.
+[14129032] note: property 'ability' of card id 603379 (Knechtgeist-Litha) was changed
+[14129032] from: 
+[14129032] to: Union
+[14129032] note: property 'effect' of card id 603382 (Knechtgeist-Mabon) was changed
+[14129032] from: If a Token you control in this card's column leaves the field, except by this card's effect, destroy this card. If this card is Special Summoned from the Spell & Trap Zone: You can target 1 card your opponent controls; return it to the hand. You can only use 1 of the following effects of "Knechtgeist-Mabon" per turn, and only once that turn.● During the Main Phase (Quick Effect): You can place this card face-up in your Spell & Trap Zone as a Continuous Trap, then Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600) to your Main Monster Zone in this card's column, but it cannot be used as Link Material, except for the Link Summon of a "Knechtgeist" monster.● During the Main Phase, if this card is in your Spell & Trap Zone: You can Tribute 1 Token in this card's column, then Special Summon this card.
+[14129032] to: If this card is Special Summoned from the Spell & Trap Zone: You can target 1 card your opponent controls; return it to the hand. You can only use this effect of "Knechtgeist-Mabon" once per turn. Once per turn, you can either (Quick Effect): Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600) then equip this card to that target as a Normal Trap, OR: Tribute the Token this card is equipped to and Special Summon this card.
+[14129032] note: property 'ability' of card id 603382 (Knechtgeist-Mabon) was changed
+[14129032] from: 
+[14129032] to: Union
+[14129032] note: property 'effect' of card id 603383 (Knechtgeist-Lughnasadh) was changed
+[14129032] from: If a Token you control in this card's column leaves the field, except by this card's effect, destroy this card. If this card is Special Summoned from the Spell & Trap Zone: You can target 1 card your opponent controls; destroy it. You can only use 1 of the following effects of "Knechtgeist-Lughnasadh" per turn, and only once that turn.● During the Main Phase (Quick Effect): You can place this card face-up in your Spell & Trap Zone as a Continuous Trap, then Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600) to your Main Monster Zone in this card's column, but it cannot be used as Link Material, except for the Link Summon of a "Knechtgeist" monster.● During the Main Phase, if this card is in your Spell & Trap Zone: You can Tribute 1 Token in this card's column, then Special Summon this card.
+[14129032] to: If this card is Special Summoned from the Spell & Trap Zone: You can target 1 card your opponent controls; destroy it. You can only use this effect of "Knechtgeist-Lughnasadh" once per turn. Once per turn, you can either (Quick Effect): Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600) then equip this card to that target as a Normal Trap, OR: Tribute the Token this card is equipped to and Special Summon this card.
+[14129032] note: property 'ability' of card id 603383 (Knechtgeist-Lughnasadh) was changed
+[14129032] from: 
+[14129032] to: Union
+[14129032] note: property 'effect' of card id 603385 (Knechtgeist-Ostara) was changed
+[14129032] from: If a Token you control in this card's column leaves the field, except by this card's effect, destroy this card. If this card is Special Summoned from the Spell & Trap Zone: You can target 1 face-up card your opponent controls; negate its effects. You can only use 1 of the following effects of "Knechtgeist-Ostara" per turn, and only once that turn.● During the Main Phase (Quick Effect): You can place this card face-up in your Spell & Trap Zone as a Continuous Trap, then Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600) to your Main Monster Zone in this card's column, but it cannot be used as Link Material, except for the Link Summon of a "Knechtgeist" monster.● During the Main Phase, if this card is in your Spell & Trap Zone: You can Tribute 1 Token in this card's column, then Special Summon this card.
+[14129032] to: If this card is Special Summoned from the Spell & Trap Zone: You can target 1 face-up card your opponent controls; negate its effects. You can only use this effect of "Knechtgeist-Ostara" once per turn. Once per turn, you can either (Quick Effect): Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600) then equip this card to that target as a Normal Trap, OR: Tribute the Token this card is equipped to and Special Summon this card.
+[14129032] note: property 'ability' of card id 603385 (Knechtgeist-Ostara) was changed
+[14129032] from: 
+[14129032] to: Union
+[14129032] note: property 'effect' of card id 603365 (Knechtgeist Altar) was changed
+[14129032] from: Non-Token "Knechtgeist" monsters you control gain 400 ATK for each Token you control. If a "Knechtgeist" monster(s) is placed face-up in your Spell & Trap Zone by a monster's effect: You can Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600), then place 1 Level 4 or lower "Knechtgeist" monster from your hand or GY face-up in your Spell & Trap Zone in that Summoned Token's column as a Continuous Trap. You can only use each effect of "Knechtgeist Altar" once per turn.
+[14129032] to: Non-Token "Knechtgeist" monsters you control gain 400 ATK for each Token you control. If a "Knechtgeist" monster becomes equipped to a Token: You can Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600), then equip 1 Level 4 or lower "Knechtgeist" monster from your hand or GY to that Token as a Normal Trap. You can only use each effect of "Knechtgeist Altar" once per turn.
+[14129032] note: property 'effect' of card id 606570 (Knechtgeist Awakening) was changed
+[14129032] from: Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600), and if you do, you can place 1 "Knechtgeist" monster from your hand or GY face-up in your Spell & Trap Zone in that Summoned Token's column as a Continuous Trap. You can only activate 1 "Knechtgeist Awakening" per turn.
+[14129032] to: Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600), and if you do, you can equip 1 "Knechtgeist" monster from your hand or GY to that Token as a Normal Trap. You can only activate 1 "Knechtgeist Awakening" per turn.
+[14129032] note: property 'effect' of card id 3396489 (Knechtgeist Passage) was changed
+[14129032] from: You can send this face-up card to the GY, then target 1 "Knechtgeist" Spell/Trap in your GY; Set it to your field. You can target 1 "Knechtgeist" Monster Card you control, then activate 1 of these effects depending on its location;● Monster Zone: Place it face-up in your Spell & Trap Zone as a Continuous Trap, then Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600) to your Main Monster Zone in the column that card was in, but it cannot be used as Link Material, except for the Link Summon of a "Knechtgeist" Link Monster.● Spell & Trap Zone: Tribute 1 Token in its column, then Special Summon it.You can only use each effect of "Knechtgeist Passage" once per turn.
+[14129032] to: You can send this face-up card to the GY, then target 1 "Knechtgeist" Spell/Trap in your GY; Set it to your field. You can target 1 "Knechtgeist" Monster Card you control, then activate 1 of these effects depending on its location;● Monster Zone: Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600), then equip the monster to that Token as a Normal Trap.● Spell & Trap Zone: Tribute 1 Token it's equipped to, then Special Summon it.You can only use each effect of "Knechtgeist Passage" once per turn.
+[14129032] note: property 'effect' of card id 606758 (Knechtgeist Defender) was changed
+[14129032] from: When your opponent activates a card or effect while you control at least 3 "Knechtgeist" cards: Send 1 other "Knechtgeist" card from your Spell & Trap Zone to the GY; negate the activation, and if you do, destroy it. You can only activate 1 "Knechtgeist Defender" per turn.
+[14129032] to: When your opponent activates a card or effect while you control at least 2 "Knechtgeist" cards: Send 1 other "Knechtgeist" card from your Spell & Trap Zone to the GY; negate the activation, and if you do, destroy it. You can only activate 1 "Knechtgeist Defender" per turn.
+[14129032] note: property 'effect' of card id 608998 (Knechtgeist-Brigid) was changed
+[14129032] from: 1 "Knechtgeist Token"Cannot be used as Link Material, except for the Link Summon of a "Knechtgeist" monster. "Knechtgeist" monsters this card points to are unaffected by card effects, also this card cannot be targeted for attacks while it points to a Token. You can banish this card from your GY; Special Summon 1 "Knechtgeist" monster from your hand. You can only use this effect of "Knechtgeist-Brigid" once per turn.
+[14129032] to: 1 "Knechtgeist Token""Knechtgeist" monsters this card points to are unaffected by card effects, also this card cannot be targeted for attacks while it points to a Token. You can banish this card from your GY; Special Summon 1 "Knechtgeist" monster from your hand. You can only use this effect of "Knechtgeist-Brigid" once per turn.
+[14129032] note: property 'effect' of card id 606607 (Knechtgeist-Sabbat) was changed
+[14129032] from: 2 "Knechtgeist" monstersTokens you control and "Knechtgeist" Continuous Traps you control cannot be destroyed by your opponent's card effects. While this card points to a Token, it cannot be targeted for attacks. If this card is Link Summoned: You can Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600), and if you do, you can place 1 "Knechtgeist" monster from your Deck face-up in your Spell & Trap Zone in that Summoned Token's column as a Continuous Trap. You can only use this effect of "Knechtgeist-Sabbat" once per turn.
+[14129032] to: 2 "Knechtgeist" monstersTokens you control and "Knechtgeist" Normal Traps you control cannot be destroyed by your opponent's card effects. While this card points to a Token, it cannot be targeted for attacks. If this card is Link Summoned: You can Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600), and if you do, equip 1 "Knechtgeist" monster from your Deck to that Token. You can only use this effect of "Knechtgeist-Sabbat" once per turn.
+[14129032] note: property 'effect' of card id 609000 (Knechtgeist-Lammas) was changed
+[14129032] from: (This card's original Level is always treated as 8.)Cannot be Fusion Summoned. Must first be Special Summoned (from your Extra Deck) by Tributing 2 "Knechtgeist" cards you control. If a Token you control in this card's column leaves the field, except by this card's effect, destroy this card. During the Main Phase (Quick Effect): You can place this card face-up in your Spell & Trap Zone as a Continuous Trap, then Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600) to your Main Monster Zone in this card's column. During the Damage Step, if this card is in your Spell & Trap Zone: You can Tribute 1 Token in this card's column, then target 1 "Knechtgeist" monster on the field; Special Summon this card, and if you do, your opponent cannot activate cards or effects until the end of the Damage Step, also double the ATK of that target until the end of this turn. You can only use each effect of "Knechtgeist-Lammas" once per turn.
+[14129032] to: (This card's original Level is always treated as 8.)Cannot be Fusion Summoned. Must first be Special Summoned (from your Extra Deck) by Tributing 2 "Knechtgeist" cards you control. During the Main Phase (Quick Effect): You can Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600), then equip this card to it as a Normal Trap. During the Damage Step: You can Tribute 1 Token this card is equipped to, then target 1 "Knechtgeist" monster on the field; Special Summon this card, and if you do, your opponent cannot activate cards or effects until the end of the Damage Step, also double the ATK of that target until the end of this turn. You can only use each effect of "Knechtgeist-Lammas" once per turn.
+[14129032] note: property 'ability' of card id 609000 (Knechtgeist-Lammas) was changed
+[14129032] from: 
+[14129032] to: Union
+[14129032] note: property 'effect' of card id 609007 (Knechtgeist-Esbat) was changed
+[14129032] from: (This card's original Rank is always treated as 8.)Cannot be Xyz Summoned. Must first be Special Summoned (from your Extra Deck) by Tributing 3 "Knechtgeist" cards you control. If a Token you control in this card's column leaves the field, except by this card's effect, destroy this card. During the Main Phase (Quick Effect): You can place this card face-up in your Spell & Trap Zone as a Continuous Trap, then Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600) to your Main Monster Zone in this card's column. When your opponent would Summon exactly 1 monster while this card is in your Spell & Trap Zone: You can Tribute 1 Token in this card's column; negate the Summon, and if you do, banish that monster, face-down, then Special Summon this card. You can only use each effect of "Knechtgeist-Esbat" once per turn.
+[14129032] to: (This card's original Rank is always treated as 8.)Cannot be Xyz Summoned. Must first be Special Summoned (from your Extra Deck) by Tributing 3 "Knechtgeist" cards you control. During the Main Phase (Quick Effect): You can Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600), then equip this card to it as a Normal Trap. When your opponent would Summon a monster(s) while this card is in your Spell & Trap Zone: You can Tribute 1 Token this card is equipped to; negate the Summon, and if you do, banish that monster face-down, then Special Summon this card. You can only use each effect of "Knechtgeist-Esbat" once per turn.
+[14129032] note: property 'ability' of card id 609007 (Knechtgeist-Esbat) was changed
+[14129032] from: 
+[14129032] to: Union
+[14129032] note: property 'effect' of card id 606637 (Knechtgeist-Beltane) was changed
+[14129032] from: (This card's original Level is always treated as 8.)Cannot be Synchro Summoned. Must first be Special Summoned (from your Extra Deck) by Tributing 4 "Knechtgeist" cards you control. If a Token you control in this card's column leaves the field, except by this card's effects, destroy this card. During the Main Phase (Quick Effect): You can place this card face-up in your Spell & Trap Zone as a Continuous Trap, then Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600) to your Main Monster Zone in this card's column. When your opponent activates a card or effect while this card is in your Spell & Trap Zone: You can Tribute 1 Token in this card's column; negate the activation, and if you do, destroy it, then Special Summon this card. You can only use each effect of "Knechtgeist-Beltane" once per turn.
+[14129032] to: (This card's original Level is always treated as 8.)Cannot be Synchro Summoned. Must first be Special Summoned (from your Extra Deck) by Tributing 4 "Knechtgeist" cards you control. During the Main Phase (Quick Effect): You can Special Summon 1 "Knechtgeist Token" (Zombie/DARK/Level 8/ATK 1600/DEF 1600), then equip this card to it as a Normal Trap. When your opponent activates a card or effect while this card is equipped: You can Tribute the Token this card is equipped to; negate the activation, and if you do, destroy it, then Special Summon this card. You can only use each effect of "Knechtgeist-Beltane" once per turn.
+[14129032] note: property 'ability' of card id 606637 (Knechtgeist-Beltane) was changed
+[14129032] from: 
+[14129032] to: Union
+[14129085] warning: card id 4177555 (Foo's Dark Impversion) is not public
+[14129107] note: property 'effect' of card id 3352314 (Bakudan Spark) was changed
+[14129107] from: When this card is activated: Destroy 1 other "Bakudan" card from your hand or face-up field, and if you do, draw 2 cards, also destroy this card. During the Main Phase: You can destroy 1 Pyro monster in your Deck. You can only use this effect of "Bakudan Spark" once per turn. You can only activate 1 "Bakudan Spark" per turn.
+[14129107] to: When this card is activated: Destroy 1 other "Bakudan" card from your hand or face-up field, and if you do, draw 2 cards, also destroy this card. During the Main Phase: You can destroy 1 Bakudan monster in your Deck. You can only use this effect of "Bakudan Spark" once per turn. You can only activate 1 "Bakudan Spark" per turn.
+[14129143] note: property 'name' of card id 3314319 (Celestial Signs In Eternity) was changed
+[14129143] from: Celestial Sign Dragon Clap
+[14129143] to: Celestial Signs In Eternity
+[14129143] note: property 'effect' of card id 3314319 (Celestial Signs In Eternity) was changed
+[14129143] from: Activate 1 of these effects.● Send "Celestial Sign" monster from your hand or field to the GY; Draw 2 cards.● If you control "Celestial Sign Relic Dragon": Target 1 card your opponent controls; shuffle it into the Deck.You can only activate 1 "Celestial Sign Dragon Clap" once per turn.
+[14129143] to: Activate 1 of these effects.● Send "Celestial Sign" monster from your hand or field to the GY; Draw 2 cards.● If you control "Celestial Sign Relic Dragon": Target 1 card your opponent controls; shuffle it into the Deck.You can only activate 1 "Celestial Sign In Eternity" once per turn.
+[14133716] warning: card id 2393744 (Soul Chronicler) is not public
+[14133720] note: property 'effect' of card id 3210565 (Hiiragi) was changed
+[14133720] from: When an opponent's monster declares an attack: Negate the attack, and if you do, inflict damage to your opponent equal to half that monster's ATK, or if you control "Baiken, The Unfaltering Awakened Samurai", inflict damage to your opponent equal to that monster's ATK instead, and if you do that, change that monster to Defense Position. You can only activate 1 "Hiiragi" per turn.
+[14133720] to: When an opponent's monster declares an attack or activates an effect: Negate that attack or effect, and if you do, inflict damage to your opponent equal to half that monster's ATK, or if you control "Baiken, The Unfaltering Awakened Samurai", inflict damage to your opponent equal to that monster's ATK instead, and if you do that, if that monster is face-up on the field, change that monster to Defense Position. You can only activate 1 "Hiiragi" per turn.
+[14133725] note: property 'effect' of card id 3453645 (Last Ashes of World’s End) was changed
+[14133725] from: 2 Effect MonstersIf this card is Link Summoned: You can add 1 Level 4 or lower monster from your GY to your hand, and if you do, you cannot Summon monsters with the same name until the end of your opponent’s next turn, or activate the effects of monsters with that name until the end of your opponent’s next turn. If you control this Link Summoned card (Quick Effect): You can Tribute this card, then target 1 Level 4 or lower FIRE monster in your GY; Special Summon it in Defense Position. You can only use 1 “Last Ashes of World’s End” per turn, and only once that turn.
+[14133725] to: 2 Effect MonstersIf this card is Link Summoned: You can add 1 Level 4 or lower monster from your GY to your hand, and if you do, you cannot Summon monsters with the same name until the end of your opponent’s next turn, or activate the effects of monsters with that name until the end of your opponent’s next turn. If you control this Link Summoned card (Quick Effect): You can Tribute this card, then target 1 Level 4 or lower FIRE monster in your GY; Special Summon it in Defense Position. You can only use 1 “Last Ashes of World’s End” effect per turn, and only once that turn.
+[14133727] note: property 'atk' of card id 4311819 (Beetrooper Armed Blader) was changed
+[14133727] from: 1000
+[14133727] to: 2000
+[14133727] note: property 'def' of card id 4311819 (Beetrooper Armed Blader) was changed
+[14133727] from: 2500
+[14133727] to: 600
+[14133739] note: property 'effect' of card id 3759267 (Projective 16: Toyosatomimi no Miko, True Administrator) was changed
+[14133739] from: (This monster is also treated as a Yokai monster.)1 Tuner + 1 non-Tuner monstersThere can only be 1 “Projective 16: Toyosatomimi no Miko, True Administrator” on the field. Cannot be targeted for attacks by Link Monsters. While you control this card that was Synchro Summoned using a Yokai monster as material, or Special Summoned by your “Projective” Synchro Monster’s effect, it cannot be destroyed by battle or card effects, also neither player can target it with card effects. Each time a monster(s) is Summoned/Set, or a card or effect is activated, place 1 Taoist Counter on this card. Once per turn, if this card has 10 or less Taoist Counters on it: The turn player can make each player add 1 card from their Deck to their hand (the turn player adds first), then remove all Taoist Counters from this card, also it becomes the End Phase.
+[14133739] to: 1 Tuner + 1 non-Tuner monsters / (This monster is also treated as a Yokai monster.)There can only be 1 “Projective 16: Toyosatomimi no Miko, True Administrator” on the field. Cannot be targeted for attacks by Link Monsters. While you control this card that was Synchro Summoned using a Yokai monster as material, or Special Summoned by your “Projective” Synchro Monster’s effect, it cannot be destroyed by battle or card effects, also neither player can target it with card effects. Each time a monster(s) is Summoned/Set, or a card or effect is activated, place 1 Taoist Counter on this card. Once per turn, if this card has 10 or less Taoist Counters on it: The turn player can make each player add 1 card from their Deck to their hand (the turn player adds first), then remove all Taoist Counters from this card, also it becomes the End Phase.
+[14133739] note: property 'effect' of card id 3784713 (Number 160: Descendant of Novox) was changed
+[14133739] from: (This card is always treated as a "Voiceless Voice" card.)If this card is Xyz Summoned: You can target 1 Ritual Spell in your GY; add it to your hand, then, if that card was "Novox's Prayer", you can add 1 "Skull Guardian" monster from your Deck or GY to your hand. During the Main Phase: You can detach 1 material from this card; until the End Phase, all "Voiceless Voice" Ritual Monsters you control gain 1000 ATK, also they cannot be destroyed by your opponent's card effects. You can banish 1 "Voiceless Voice" card from your GY, then target 1 "Skull Guardian" you control; equip this card from your GY to that target as an Equip Spell with the following effect. You can only use each effect of "Number 160: Descendant of Novox" once per turn.● The equipped monster is unaffected by your opponent's card effects that do not target it. Once per turn: You can send 1 "Skull Guardian" monster from your hand or field to the GY; add 1 "Novox" card or 1 "Lo, the Prayers of the Voiceless Voice" from your Deck to your hand.
+[14133739] to: (This card is always treated as a "Voiceless Voice" card.)2 Level 7 monstersIf this card is Xyz Summoned: You can target 1 Ritual Spell in your GY; add it to your hand, then, if that card was "Novox's Prayer", you can add 1 "Skull Guardian" monster from your Deck or GY to your hand. During the Main Phase: You can detach 1 material from this card; until the End Phase, all "Voiceless Voice" Ritual Monsters you control gain 1000 ATK, also they cannot be destroyed by your opponent's card effects. You can banish 1 "Voiceless Voice" card from your GY, then target 1 "Skull Guardian" you control; equip this card from your GY to that target as an Equip Spell with the following effect. You can only use each effect of "Number 160: Descendant of Novox" once per turn.● The equipped monster is unaffected by your opponent's card effects that do not target it. Once per turn: You can send 1 "Skull Guardian" monster from your hand or field to the GY; add 1 "Novox" card or 1 "Lo, the Prayers of the Voiceless Voice" from your Deck to your hand.
+[14133741] note: property 'atk' of card id 3287263 (Magma Eater) was changed
+[14133741] from: 1500
+[14133741] to: 700
+[14133741] note: property 'level' of card id 3287263 (Magma Eater) was changed
+[14133741] from: 4
+[14133741] to: 2
+[14133755] note: property 'effect' of card id 3988667 (Projective 14: Mononobe no Futo, Pale Shikaisen) was changed
+[14133755] from: 1 Tuner with an odd Level + 1+ monsters(This card is also treated as a Yokai monster.) Cannot be targeted for attacks by Link Monsters. Once per turn (Quick Effect): You can send 1 “Projective” Synchro Monster from your Extra Deck to the GY, then target 1 face-up monster on the field with a different Attribute than that sent monster; banish it, also this effect cannot be used again next turn. If this card leaves the field by battle or your opponent's card effect: You can target 1 “Projective” Synchro Monster in your GY, except “Projective 14: Mononobe no Futo, Pale Shikaisen”; during the End Phase of this turn, Special Summon 1 “Projective” Synchro Monster from your Extra Deck, whose Level is up to 2 higher or lower than that target’s. You can only use this effect of “Projective 14: Mononobe no Futo, Pale Shikaisen” once per turn.
+[14133755] to: 1 Tuner with an odd Level + 1+ monsters / (This card is also treated as a Yokai monster.) Cannot be targeted for attacks by Link Monsters. Once per turn (Quick Effect): You can send 1 “Projective” Synchro Monster from your Extra Deck to the GY, then target 1 face-up monster on the field with a different Attribute than that sent monster; banish it, also this effect cannot be used again next turn. If this card leaves the field by battle or your opponent's card effect: You can target 1 “Projective” Synchro Monster in your GY, except “Projective 14: Mononobe no Futo, Pale Shikaisen”; during the End Phase of this turn, Special Summon 1 “Projective” Synchro Monster from your Extra Deck, whose Level is up to 2 higher or lower than that target’s. You can only use this effect of “Projective 14: Mononobe no Futo, Pale Shikaisen” once per turn.
+[14133756] note: property 'effect' of card id 4032173 (Projective 10: Soga no Tojiko, Shocking Specter) was changed
+[14133756] from: 1 Tuner with an even Level + 2+ monsters(This card is also treated as a Yokai monster.)Cannot be targeted for attacks by Link Monsters. If this card is Synchro Summoned, or Special Summoned by your “Projective” Synchro Monster’s effect: You can return 2 of your “Projective” Synchro Monsters that are banished and/or in your GY to the Extra Deck, then you can Special Summon 1 monster from your Extra Deck with the same original name as 1 of those cards (This is treated as a Synchro Summon). When your opponent activates a Spell/Trap Card (Quick Effect): You can Tribute this card; that activated card’s effect becomes “Your opponent sends 1 “Projective” Synchro Monster from their Extra Deck to the GY, and if they do, they lose LP equal to that monster’s original ATK or DEF (whichever is higher).” You can only use 1 “Projective 10: Soga no Tojiko, Shocking Specter” effect per turn, and only once per turn.
+[14133756] to: 1 Tuner with an even Level + 2+ monsters / (This card is also treated as a Yokai monster.)Cannot be targeted for attacks by Link Monsters. If this card is Synchro Summoned, or Special Summoned by your “Projective” Synchro Monster’s effect: You can return 2 of your “Projective” Synchro Monsters that are banished and/or in your GY to the Extra Deck, then you can Special Summon 1 monster from your Extra Deck with the same original name as 1 of those cards (This is treated as a Synchro Summon). When your opponent activates a Spell/Trap Card (Quick Effect): You can Tribute this card; that activated card’s effect becomes “Your opponent sends 1 “Projective” Synchro Monster from their Extra Deck to the GY, and if they do, they lose LP equal to that monster’s original ATK or DEF (whichever is higher).” You can only use 1 “Projective 10: Soga no Tojiko, Shocking Specter” effect per turn, and only once per turn.
+[14133756] note: property 'effect' of card id 4014264 (Ceramic Capture Jar) was changed
+[14133756] from: After this card's activation, it remains on the field. When this card is activated: You can target 1 monster on the field; banish it until this card leaves the field. If this card is banished: You can Special Summon 1 banished monster. You can only use each effect of "Ceramic Capture Jar" once per turn.
+[14133756] to: After this card's activation, it remains on the field. When this card is activated: Target 1 face-up monster on the field; banish it until this card leaves the field. If this card is banished: You can Special Summon 1 banished monster. You can only use each effect of "Ceramic Capture Jar" once per turn.`
+[14133760] note: property 'effect' of card id 4163057 (Floowandereeze & Parro) was changed
+[14133760] from: If this face-up card would leave the field, banish it instead. You can only use each of the following effects of "Floowandereeze & Parro" once per turn, and cannot Special Summon during the turn you activate either effect. During the Main Phase (Quick Effect): You can reveal this card in your hand; banish 1 Winged Beast monster from your field, or if it is your turn, you can banish 1 card from your hand instead; immediately after this effect resolves, Normal Summon 1 Winged Beast monster. If a Winged Beast monster is Normal Summoned to your field while this card is banished: You can add this card to your hand.
+[14133760] to: If this face-up card would leave the field, banish it instead. You can only use each of the following effects of "Floowandereeze & Parro" once per turn, and cannot Special Summon during the turn you activate either effect. During the Main Phase: You can reveal this card in your hand; banish 1 Winged Beast monster from your hand or field then, immediately after this effect resolves, Normal Summon 1 Winged Beast monster. This is a Quick Effect if you control a "Floowandereeze" monster. If this card is Normal Summoned: You can draw 1 card, then immediately after this effect resolves, you can Normal Summon 1 Winged Beast monster.
+[14133762] note: property 'effect' of card id 1577575 (Darkest Desires) was changed
+[14133762] from: Draw 2 cards and if you do, your opponent draws 1 card. If you activate this card during your opponent's End Phase, both players draw 2 cards instead. During the End Phase, if this card is in the GY because it was sent there from the field: You can banish this card from your GY; draw 1 card. You can only use 1 effect of "Darkest Desires" per turn and only once that turn.
+[14133762] to: Draw 2 cards, and if you do, your opponent draws 1 card. During the End Phase, if this card is in the GY because it was sent there from the field: You can banish this card from your GY; draw 1 card. You can only use 1 effect of "Darkest Desires" per turn, and only once that turn.
+[14133775] note: property 'effect' of card id 2700656 (Rain of Devastation) was changed
+[14133775] from: If your opponent controls more cards than you do: Send any number of cards you control to the GY, then you can destroy 1 card in a column adjacent to a column that sent card(s) was in for each card sent to the GY by this effect.
+[14133775] to: If your opponent controls more cards than you do: Send any number of cards you control to the GY, then you can destroy 1 card your opponent controls for each card sent to the GY by this effect.
+[14133806] note: property 'effect' of card id 4293049 (Cyber Dragon Spion) was changed
+[14133806] from: This card's name becomes "Cyber Dragon" while on the field or in the GY. You can only each of the following effects of "Cyber Dragon Spion" once per turn. (Quick Effect): You can banish 1 "Cyber Dragon" monster from your hand or GY; Special Summon this card from your hand. During your Main Phase, except the turn this card was sent to the GY: You can banish this card from your GY, then target 1 "Cyber Dragon" in your GY; either add it to your hand or Special Summon it.
+[14133806] to: This card's name becomes "Cyber Dragon" while on the field or in the GY. You can only use each of the following effects of "Cyber Dragon Spion" once per turn. (Quick Effect): You can banish 1 "Cyber Dragon" monster from your hand or GY; Special Summon this card from your hand. During your Main Phase, except the turn this card was sent to the GY: You can banish this card from your GY, then target 1 "Cyber Dragon" in your GY; either add it to your hand or Special Summon it.
+[14133815] note: property 'effect' of card id 2385442 (Shooting Star Dragon - Stardust Mirage) was changed
+[14133815] from: 1 Tuner Synchro Monster + 1+ non-Tuner Synchro MonstersMust first be Synchro Summoned. Cannot be destroyed by card effects. You can only use each of the following effects of "Shooting Star Dragon - Stardust Mirage" once per turn. During your Main Phase 1: You can shuffle up to 4 Tuners from your GY into the Deck, and if you do, during each Battle Phase this turn, this card gains 1 additional attack for each card shuffled. When a card or effect is activated would banish a card(s) from the field, or send a card(s) from the field to the GY (Quick Effect): You can negate that effect, and if you negated a monster effect that activated on the field, banish that monster. When an opponent's monster declares an attack: You can banish this card (until the End Phase), and if you do, negate that attack, then end the Battle Phase.
+[14133815] to: 1 Tuner Synchro Monster + 1+ non-Tuner Synchro MonstersCannot be destroyed by card effects. You can only use each of the following effects of "Shooting Star Dragon - Stardust Mirage" once per turn. During your Main Phase 1: You can shuffle up to 4 Tuners from your GY into the Deck, and if you do, during each Battle Phase this turn, this card gains 1 additional attack for each card shuffled. When a card or effect is activated that would banish a card(s) from the field, or send a card(s) from the field to the GY (Quick Effect): You can negate that effect, and if you negated a monster effect that activated on the field, banish that monster. When an opponent's monster declares an attack: You can banish this card (until the End Phase), and if you do, negate that attack, then end the Battle Phase.
+[14133815] note: property 'effect' of card id 2698663 (Lycaon the Nefarious Armory) was changed
+[14133815] from: Once per turn, you can either: Target 1 monster on the field; equip this card from your hand or field to that target, OR: Unequip this card and Special Summon it. While you control a Equip Card, this card or a monster equipped with this card gains 500 ATK and the following effect. ● Once per turn, during your End Phase: You can target 1 card in your GY; equip it to a monster on the field.
+[14133815] to: Once per turn, you can either: Target 1 monster on the field; equip this card from your hand or field to that target, OR: Unequip this card and Special Summon it. While you control a Equip Card, this card or a monster equipped with this card gains 500 ATK and the following effect. ● Once per turn, during the End Phase: You can target 1 card in your GY; equip it to a monster on the field.
+[14133823] note: property 'effect' of card id 3028492 (Dragonic Vanquisher) was changed
+[14133823] from: If this is the only “Dragonic Vanquisher” you control: You can banish 1 card from your hand, face-down, then target 1 monster your opponent controls; return it to the hand, then, if you have less cards in your hand than your opponent, both players banish 1 card from their hand, face-down. If 3 or more cards are banished: You can activate this effect; all LIGHT Thunder monsters on the field that mention "Dragonic Vanquisher" gain 1000 ATK until the end of this turn. You can only use each effect of “Dragonic Vanquisher” once per turn.
+[14133823] to: If this is the only “Dragonic Vanquisher” you control: You can banish 1 card from your hand, face-down, then target 1 monster your opponent controls; return it to the hand, then, if you have less cards in your hand than your opponent, both players banish 1 card from their hand, face-down. If 3 or more cards were banished face-down this turn: You can activate this effect; all LIGHT Thunder monsters on the field that mention "Dragonic Vanquisher" gain 1000 ATK until the end of this turn. You can only use each effect of “Dragonic Vanquisher” once per turn.
+[14133842] warning: card id 2084027 (Goober Gabber) is not public
+[14133842] note: card id 2084027 (Goober Gabber) was made private
+[14134022] note: property 'name' of card id 3555175 (Blue Star Station) was changed
+[14134022] from: Grey Star Station
+[14134022] to: Blue Star Station
+[14134022] note: property 'effect' of card id 3555175 (Blue Star Station) was changed
+[14134022] from: You can remove any number of Gate Counters from your field; Special Summon 1 Machine monster with the same Level as the number of Gate Counters removed from your hand or GY. You can only use each of the following effects of "Grey Star Station" once per turn. If this card is activated and "Planet Pathfinder" is in your GY: You can add 1 "Solar Wind Jammer" from your Deck to your hand. If you Special Summon a Level 5 or higher Machine monster(s) with 1000 or less ATK: You can target 1 Level 4 or lower Machine monster with 1000 or less ATK in your GY; add 1 "Tannhauser Gate" from your Deck to your hand, and if you do, Special Summon that target. If a face-up Spell/Trap(s) you control leaves the field: You can add 1 Level 9 LIGHT Machine monster from your Deck to your hand.
+[14134022] to: You can remove any number of Gate Counters from your field; Special Summon 1 Machine monster with the same Level as the number of Gate Counters removed from your hand or GY. You can only use each of the following effects of "Blue Star Station" once per turn. If this card is activated and "Planet Pathfinder" is in your GY: You can add 1 "Solar Wind Jammer" from your Deck to your hand. If you Special Summon a Level 5 or higher Machine monster(s) with 1000 or less ATK: You can target 1 Level 4 or lower Machine monster with 1000 or less ATK in your GY; add 1 "Tannhauser Gate" from your Deck to your hand, and if you do, Special Summon that target. If a face-up Spell/Trap(s) you control leaves the field: You can add 1 Level 9 LIGHT Machine monster from your Deck to your hand.
+[14134026] warning: card id 3262470 (Elixir Born - Royal Ghost) is not public
+[14134026] warning: card id 3262426 (Elixir Born - Skeletons) is not public
+[14134026] warning: card id 3262456 (Elixir Born - Giant Skeleton) is not public
+[14134032] warning: card id 1631059 (Clear Malicious Fusion) is not public
+[14135923] warning: card id 3641342 (Evil Eye Dystopian - Apophenia) is not public
+[14135923] warning: card id 3641325 (Evil Eye Showdown) is not public
+[14135933] warning: card id 3664715 (Pyrolisk, Familiar of the Evil Eye) is not public
+[14135933] warning: card id 3663706 (Evil Eye Restoration) is not public
+[14135933] warning: card id 3663754 (Cockatrice, Familiar of the Evil Eye) is not public
+[14210750] note: property 'effect' of card id 4053177 (D.D. Brain) was changed
+[14210750] from: (Quick Effect): You can banish this card from your hand or face-up field, then target 1 "D.D." monster you control, except "D.D. Brain"; banish it, and if you do, add 1 card with a the same name from your Deck to your hand. During the End Phase of the turn this card was banished while face-up on your field: Special Summon this banished card. You can only use each effect of "D.D. Brain" once per turn.
+[14210750] to: (Quick Effect): You can banish this card from your hand or face-up field, then target 1 "D.D." monster you control, except "D.D. Brain"; banish it, and if you do, add 1 card with the same name from your Deck to your hand. During the End Phase of the turn this card was banished while face-up on your field: Special Summon this banished card. You can only use each effect of "D.D. Brain" once per turn.
+[14211475] note: property 'effect' of card id 3755008 (Destroy the Ordinary!) was changed
+[14211475] from: If you have no Normal Spells/Traps in your GY: Send 1 monster your opponent controls to the GY except a Spellcaster, Fairy, Fiend, Dragon or Zombie monster. For the rest of this Duel after you activate this card, you cannot activate Normal Spell/Trap Cards or effects. You can only activate 1 "Kill the Ordinary!" per turn
+[14211475] to: If you have no Normal Spells/Traps in your GY: Send 1 monster your opponent controls to the GY except a Spellcaster, Fairy, Fiend, Dragon or Zombie monster. For the rest of this Duel after you activate this card, you cannot activate Normal Spell/Trap Cards or effects. You can only activate 1 "Destroy the Ordinary!" per turn
+[14454317] note: property 'attribute' of card id 4224056 (Voidsent Lord Veral Hollow) was changed
+[14454317] from: LIGHT
+[14454317] to: DARK
+[14454317] note: property 'effect' of card id 4224141 (Voidcast Fire Prism) was changed
+[14454317] from: (This card is never treated as a "Void" card.)Non-Fiend monsters on the field lose 500 ATK/DEF for each Voidsight Counter on them. You can only use each of the following effects of "Voidcast Fire Prism" once per turn. You can target 1 card on the field; reveal 1 "Voidsent" monster in your hand, and if you do, send that target to the GY. If a Spell/Trap Card is activated: You can reveal 1 "Voidsent" monster in your hand.
+[14454317] to: (This card is never treated as a "Void" card.)Non-Fiend monsters on the field lose 500 ATK/DEF for each Voidsight Counter on them. You can only use each of the following effects of "Voidcast Fire Prism" once per turn. You can target 1 card on the field; reveal 1 "Voidsent" monster in your hand, and if you do, destroy that target. If a Spell/Trap Card is activated: You can reveal 1 "Voidsent" monster in your hand.
+[14454318] note: property 'type' of card id 4053784 (Despairce Disturbing Host) was changed
+[14454318] from: Fiend
+[14454318] to: Machine
+[14454318] note: property 'type' of card id 4046639 (Despairce Crimson Carrion) was changed
+[14454318] from: Fairy
+[14454318] to: Spellcaster
+[14454318] note: property 'name' of card id 3979546 (Despairce Midnight Dancer) was changed
+[14454318] from: Despairce Midnight Walker
+[14454318] to: Despairce Midnight Dancer
+[14454318] note: property 'effect' of card id 3979546 (Despairce Midnight Dancer) was changed
+[14454318] from: During your Main Phase: You can banish this card from your hand. During the Battle Phase, if this card is currently banished (Quick Effect): You can Special Summon this card (but banish it at the end of the Battle Phase), then you can apply this effect.● Banish 1 "Despairce" monster from your Deck. You can only use this effect of "Despairce Midnight Walker" once per turn.
+[14454318] to: During your Main Phase: You can banish this card from your hand. During the Battle Phase, if this card is currently banished (Quick Effect): You can Special Summon this card (but banish it at the end of the Battle Phase), then you can apply this effect.● Banish 1 "Despairce" monster from your Deck. You can only use this effect of "Despairce Midnight Dancer" once per turn.
+[14454318] note: property 'type' of card id 3979546 (Despairce Midnight Dancer) was changed
+[14454318] from: Cyberse
+[14454318] to: Illusion
+[14454318] note: property 'name' of card id 4058540 (Despairce Silent Sinner) was changed
+[14454318] from: Despairce Silenced Beast
+[14454318] to: Despairce Silent Sinner
+[14454318] note: property 'effect' of card id 4058540 (Despairce Silent Sinner) was changed
+[14454318] from: During your Main Phase: You can banish this card from your hand. During the Battle Phase, if this card is currently banished (Quick Effect): You can Special Summon this card (but banish it at the end of the Battle Phase), then you can apply this effect.● Add 1 "Field of Timelessness" or 1 "Despairce" Spell/Trap from your Deck to your hand.You can only use this effect of "Despairce Silenced Beast" once per turn.
+[14454318] to: During your Main Phase: You can banish this card from your hand. During the Battle Phase, if this card is currently banished (Quick Effect): You can Special Summon this card (but banish it at the end of the Battle Phase), then you can apply this effect.● Add 1 "Channel 09: Loathing" or 1 "Despairce" Spell/Trap from your Deck to your hand.You can only use this effect of "Despairce Silent Sinner" once per turn.
+[14454318] note: property 'name' of card id 4046651 (Channel 09: Loathing) was changed
+[14454318] from: Field of Timelessness
+[14454318] to: Channel 09: Loathing
+[14454318] note: property 'effect' of card id 4046651 (Channel 09: Loathing) was changed
+[14454318] from: All "Despairce" monsters you control gain 600 ATK. When this card is activated: You can banish 1 "Despairce" card from your Deck. If you control no monsters: You can target 1 of your banished "Despairce" monsters; shuffle it into the Deck, then apply that monster's effect that applies when it is Special Summoned by its own effect. You can only use this effect of "Field of Timelessness" once per turn. You can only activate 1 "Field of Timelessness" per turn.
+[14454318] to: All "Despairce" monsters you control gain 600 ATK. When this card is activated: You can banish 1 "Despairce" card from your Deck. If you control no monsters: You can target 1 of your banished "Despairce" monsters; shuffle it into the Deck, then apply that monster's effect that applies when it is Special Summoned by its own effect. You can only use this effect of "Channel 09: Loathing" once per turn. You can only activate 1 "Channel 09: Loathing" per turn.
+[14532052] note: property 'effect' of card id 4292968 (Spectrelecirque Dixie) was changed
+[14532052] from: If this card is in your hand: You can target 1 "Spectrelecirque" card in your GY; Special Summon this card, and if you do, add that card to your hand, or, if it a monster, banish it instead. If this banished card is returned to the GY: You can Fusion Summon 1 "Spectrelecirque" Fusion Monster from your Extra Deck by banishing "Spectrelecirque" monsters from field and/or your GY as Fusion Material. You can only use each effect of "Spectrelecirque Dixie" once per turn.
+[14532052] to: If this card is in your hand: You can target 1 "Spectrelecirque" card in your GY; Special Summon this card, and if you do, add that card to your hand, or, if it a monster, banish it instead. If this banished card is returned to the GY: You can Fusion Summon 1 "Spectrelecirque" Fusion Monster from your Extra Deck, by banishing "Spectrelecirque" monsters from field and/or your GY as Fusion Material. You can only use each effect of "Spectrelecirque Dixie" once per turn.
+[14614010] note: property 'effect' of card id 2937575 (Ferabolt Archmage - Angellus) was changed
+[14614010] from: Gains 100 ATK for each Spell in your GY. You can only use each of the following effects of "Ferabolt Archmage - Angellus" once per turn. If this card is Normal or Special Summoned: You can add 1 "Ferabolt" Spell/Trap from your Deck to your hand. If your opponent Special Summons a monster(s) (Quick Effect): You can banish this card and 1 "Ferabolt" Spell from your GY; change that monster(s) to face-down Defense Position. Monsters changed to face-down Defense Position by this effect cannot change their battle positions.
+[14614010] to: If this card is Normal or Special Summoned: You can add 1 "Ferabolt" Spell/Trap from your Deck to your hand. If your opponent Special Summons a monster(s) (Quick Effect): You can banish this card and 1 "Ferabolt" Spell from your GY; change that monster(s) to face-down Defense Position. Monsters changed to face-down Defense Position by this effect cannot change their battle positions. You can only use each effect of "Ferabolt Archmage - Angellus" once per turn.
+[14614010] note: property 'atk' of card id 2937575 (Ferabolt Archmage - Angellus) was changed
+[14614010] from: 2400
+[14614010] to: 2800
+[14899294] note: [+] added new card 1780384 (Horror of the Depths)
+[14899294] note: property 'effect' of card id 4457447 (H-Hop Charger) was changed
+[14899294] from: 1 Machine Normal MonsterYou can also use 1 LIGHT Machine Union monster to Link Summon this card, except "H-Hop Charger". You cannot Special Summon monsters from the Extra Deck the turn you Link Summon this card this way, except LIGHT Machine monsters. Once per turn, you can either: Target 1 LIGHT Machine monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. If a monster equipped with this card would be destroyed by battle or card effect, destroy this card instead
+[14899294] to: 1 Machine Normal MonsterYou can also use 1 LIGHT Machine Union monster to Link Summon this card, except "H-Hop Charger". You cannot Special Summon monsters from the Extra Deck the turn you Link Summon this card this way, except LIGHT Machine monsters. Once per turn, you can either: Target 1 LIGHT Machine monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. If a monster equipped with this card would be destroyed by battle or card effect, destroy this card instead.
+[15861889] note: card id 4441581 (Undyne Empress) was made public
+[15861889] note: card id 4441563 (Undyne Retainer) was made public
+[15861889] note: card id 4441567 (Undyne Vicereine) was made public
+[15861889] note: card id 4441560 (Undyne Vassal) was made public
+[15861889] note: card id 4441697 (Undyne Calling) was made public
+[15861889] note: card id 4441719 (Undyne Empire) was made public
+[15861889] note: card id 4441702 (Undyne Pact) was made public
+[15861889] note: card id 4441572 (Undyne Guardian) was made public
+[16571109] note: [+] added new card 4506210 (Yostar!: Carrier - Akagi)
+[16571109] note: [+] added new card 4506170 (Yostar!: Carrier - Enterprise)
+[16571109] note: [+] added new card 4506187 (Yostar!: Carrier - Illustrious)
+[16571109] note: [+] added new card 4506226 (Yostar!: Carrier - Kaga)
+[16571109] note: [+] added new card 4506206 (Yostar!: Carrier - Shinano)
+[16571109] note: [+] added new card 4506240 (Yostar!: Limit Break Ship - Bulin Mk 3!)
+[16571110] note: [+] added new card 4585771 (Silverwing Chromejet LV3)
+[16571110] note: [+] added new card 4585807 (Silverwing Chromejet LV6)
+[16571111] note: [+] added new card 4370614 (Fallen Vanity)
+[16571111] note: [+] added new card 4370622 (Treacherous Trap of the Terrible Treasure)
+[16571113] note: [+] added new card 2999304 (Lostpera - Blessing From Above)
+[16571113] note: [+] added new card 2999300 (Lostpera - Demon in Waiting)
+[16571113] note: [+] added new card 2996781 (Lostpera - Flames Come Eternal)
+[16571115] note: [+] added new card 4336214 (Preserver of Sanctity)
+[16571116] note: [+] added new card 4495960 (Agni, the Pyro Spellcaster)
+[16571116] note: [+] added new card 4495965 (Ritual of Fire Will)
+[16571154] note: [+] added new card 3914158 (Beetle Scout Duelist)
+[16571154] note: [+] added new card 2894452 (Beetle Scout's Agility)
+[16571154] note: [+] added new card 4379783 (Lux Benevolence)
+[16571154] note: [+] added new card 4342757 (Projective 27: Quad Gambiteer)
+[16571154] note: [+] added new card 4342725 (Projective 35: Venus)
+[16571154] note: [+] added new card 4342658 (Projective 51: Annihilatory Enigma)
+[16571154] note: [+] added new card 4194891 (Off Course Kaiser - Carrier)
+[16571154] note: [+] added new card 4262569 (Off Course Kaiser - Warrior)
+[16571156] note: [+] added new card 4264372 (Firewall Attacker)
+[16571156] note: [+] added new card 4413980 (Incarnation with Eyes of Blue)
+[16571156] note: [+] added new card 4543377 (Satellite Pegasus)
+[16571156] note: [+] added new card 4113503 (Traveler with Eyes of Blue)
+[16571156] note: [+] added new card 4541041 (2 seconds in Heaven)
+[16571156] note: [+] added new card 4509183 (A Home For You & I)
+[16571156] note: [+] added new card 4436591 (Greedy Illusion)
+[16571156] note: [+] added new card 4448906 (Sleepless Night)
+[16571156] note: [+] added new card 4204686 (That Morgue Looks Wighter)
+[16571156] note: [+] added new card 4537889 (The Champions Gather)
+[16571156] note: [+] added new card 2261853 (Evolution with Eyes of Blue)
+[16571156] note: [+] added new card 3279796 (Interdimensional Matter Wyvern)
+[16571156] note: [+] added new card 4201949 (Gnasty Gnorc)
+[16571156] note: [+] added new card 4536026 (Goblin Biker BIG Head Gabonga)
+[16571156] note: [+] added new card 3129245 (Number S38: Star-Eyed Photon Dragon Galactica Singularity)
+[16572639] note: [+] added new card 4548673 (Moai Interceptor Fortress)
+[16572639] note: [+] added new card 4386102 (A bit too far)
+[16572639] note: [+] added new card 4546980 (Angel's Legend)
+[16572639] note: [+] added new card 4386119 (Anticipation)
+[16572639] note: [+] added new card 4410343 (Congregation)
+[16572639] note: [+] added new card 4415276 (Overlay Degeneration)
+[16572639] note: [+] added new card 4415731 (Quarrying Diagram)
+[16572639] note: [+] added new card 3180719 (Revenge Xyz)
+[16572639] note: [+] added new card 4343671 (Projective 74: Nightmare Entrancing Shaman)
+[16572639] note: [+] added new card 4403005 (Psi-Flame Aeterna)
+[16572639] note: [+] added new card 4436350 (Kototama)
+[16572639] note: [+] added new card 4455277 (Luminous Harmonia Maiden - Miku Izayoi)
+[16572639] note: [+] added new card 4455041 (Maiden of Cuteness - Ellen Vankrieft)
+[16572694] note: [+] added new card 4521666 (Glistened Moonlight)
+[16572694] note: [+] added new card 4530175 (Halotechnician)
+[16572694] note: [+] added new card 3768295 (Panglacial Jelly)
+[16572694] note: [+] added new card 4502506 (Twinshard Elemental)
+[16572694] note: [+] added new card 4520713 (Enchantment Mixing)
+[16572694] note: [+] added new card 4506336 (True Loss)
+[16572694] warning: card id 4468778 (Saw it Coming) is not public
+[16572694] note: [+] added new card 4468778 (Saw it Coming)
+[16572694] note: [+] added new card 4520712 (Flora, the Mystical Enchanter)
+[16572694] note: [+] added new card 4485537 (Deadsoul Salamander)
+[16572695] note: [+] added new card 4547699 (Astrorescue)
+[16572695] note: [+] added new card 4543320 (Black Handshaker)
+[16572695] warning: card id 4547270 (Mima the Forgotten Spirit) is not public
+[16572695] note: [+] added new card 4547270 (Mima the Forgotten Spirit)
+[16572695] note: [+] added new card 4547702 (Ozone Layer)
+[16572695] note: [+] added new card 4544490 (Meteor Charge)
+[16572695] note: [+] added new card 4546963 (Reincarnation)
+[16573652] note: [+] added new card 4577055 (Deep-Dweller, the Mutated Fish Kaiju)
+[16573652] note: [+] added new card 3416430 (Wisp of the Shackled Sky)
+[16573652] warning: card id 4603948 (The Tormentuous Journey) is not public
+[16573652] note: [+] added new card 4603948 (The Tormentuous Journey)
+[16573652] note: [+] added new card 4637142 (Tsubakura Enraku)
+[16573652] note: [+] added new card 4637150 (Yabusame Houlen)
+[16573652] note: [+] added new card 4066631 (Evigishki Pristidae Warrior)
+[16573652] note: [+] added new card 4600744 (Sangen Assembling)
+[16573652] note: [+] added new card 4375768 (Vernusylph and the Happy Memories)
+[16573652] note: [+] added new card 4594055 (Aquamirror Crash)
+[16573652] note: [+] added new card 4567947 (Counterlunge)
+[16573652] note: [+] added new card 4425663 (Net Terminal Genes of the NTG Safeguards)
+[16573652] note: [+] added new card 4600507 (Promised Return)
+[16573652] note: [+] added new card 4569349 (El Shaddoll Windierre)
+[16573652] note: [+] added new card 4225039 (Invoked Dionokles)
+[16573652] note: [+] added new card 3416468 (Crackling Knight)
+[16573658] note: [+] added new card 4421878 (Ailith, The Joyful Punk)
+[16573658] note: [+] added new card 4530465 (Cataclysmic Dracoverlord)
+[16573658] note: [+] added new card 4561810 (Childhood's Bane)
+[16573658] note: [+] added new card 4214844 (Still Here)
+[16573658] note: [+] added new card 4486917 (Archfriends)
+[16573658] note: [+] added new card 4564893 (Blaze-Soul Squire)
+[16573658] note: [+] added new card 4560737 (Great Pilgrim's Bonfire)
+[16573658] note: [+] added new card 4448834 (Inhumane Synthesis)
+[16573658] note: [+] added new card 4349871 (Skulls Up, Bodies Down)
+[16573658] note: [+] added new card 4565404 (Olden Omen)
+[16573658] note: [+] added new card 4560720 (Great Pilgrim Daisei)
+[16573658] note: [+] added new card 4564900 (Blaze-Soul Knight)
+[16573672] note: [+] added new card 4641177 ("D" City Sentinel)
+[16573672] note: [+] added new card 4199436 (Beast Behind the Waterfall Fin)
+[16573672] note: [+] added new card 4614688 (Bountying Mousesketeer)
+[16573672] note: [+] added new card 4158338 (Nightmarish Dark Unicorn)
+[16573672] note: [+] added new card 4433941 (Vanquish Soul Braisong)
+[16573672] warning: card id 4603541 (Musslebound Lobster) is not public
+[16573672] note: [+] added new card 4603541 (Musslebound Lobster)
+[16573672] note: [+] added new card 4529785 (Shieldbravery)
+[16573672] note: [+] added new card 4608027 (Performpal Odd-Eyes Kuribow)
+[16573672] note: [+] added new card 4428504 (Fennec, the Light-Fox of the Foxes)
+[16573672] note: [+] added new card 4428502 (Kitsune, the Fox-Warrior of the Foxes)
+[16573672] note: [+] added new card 4631218 (Projective 50: Petabyte Dragon)
+[16573672] note: [+] added new card 4570570 (The Evil Fallen Demon)
+[16573672] note: [+] added new card 1291855 (Alicia, Apprentice of Archery)
+[16573672] note: [+] added new card 4566142 (Phantom Dragon Emperor of the Third Heaven)
+[16573672] note: [+] added new card 4568236 (Deathly Devil Emperor of the Fourth Heaven)
+[16573675] note: [+] added new card 4530810 (Infernalis Magmafiend)
+[16573675] note: [+] added new card 4543606 (Necroceanic Leviathan)
+[16573675] note: [+] added new card 4554793 (Subnautic Risk Agent)
+[16573675] note: [+] added new card 4382191 (Zanmu Nippaku, Ruler of Nothingness)
+[16573675] note: [+] added new card 4643373 (Zerael, Regent of Rebirth)
+[16573675] note: [+] added new card 4568294 (Earthly Floral Emperor of the First Heaven)
+[16573675] note: [+] added new card 3956806 (Quantum Recall)
+[16573675] note: [+] added new card 4647281 (Dinomorphia Onslaught)
+[16573675] note: [+] added new card 4570658 (Renko & Maribel’s Eclipse Observation)
+[16573675] note: [+] added new card 4565388 (Old One Peithos)
+[16573675] note: [+] added new card 4458416 (Daugolan, Guardian of the Highland)
+[16573675] note: [+] added new card 4547713 (Binomial 44: Des Scybernetic)
+[16573675] note: [+] added new card 4565024 (Magma Giant)
+[16573677] note: [+] added new card 4405987 (Finflame Goldspark)
+[16573677] note: [+] added new card 4493788 (Sorcerer of Eldlich)
+[16573677] note: [+] added new card 4591542 (Surface Aqlimator)
+[16573677] note: [+] added new card 4317819 (Luna Light Gathering)
+[16573677] note: [+] added new card 4604817 (Nightmare Embrace)
+[16573677] note: [+] added new card 4547049 (Rank-Up-Magic Conversion Force)
+[16573677] note: [+] added new card 4613443 (Soulbound Servant)
+[16573677] note: [+] added new card 4628732 (W'ras, Planar Upsetter)
+[16573677] note: [+] added new card 3762310 (Alaric, Enthralled in Himself)
+[16573677] note: [+] added new card 4478693 (Number C91: Thunderous Megastorm Dragon)
+[16573677] note: [+] added new card 4454724 (Walltop Neko)
+[16573739] note: [+] added new card 4179920 (Chi Dragonic Envoys)
+[16573739] note: [+] added new card 4178989 (Era Serenum Ancient: Darius)
+[16573739] note: [+] added new card 4178990 (Era Serenum Novel: Varia)
+[16573739] note: [+] added new card 4185224 (Protocal Code Name: Azura)
+[16573739] note: [+] added new card 4179007 (Era Serenum Technique: Chi Bladefall)
+[16573739] note: [+] added new card 4179011 (Era Serenum Technique: Dragonflow)
+[16573739] note: [+] added new card 4179001 (Era Serenum Technique: Emergency Cyberlock)
+[16573739] note: [+] added new card 4178993 (Era Serenum Technique: Insight)
+[16573739] note: [+] added new card 4179005 (Era Serenum Technique: Life Burst)
+[16573739] note: [+] added new card 4178999 (Era Serenum Technique: Overflow)
+[16573739] note: [+] added new card 4178996 (Era Serenum Technique: Pulse)
+[16573739] note: [+] added new card 4179013 (Harmony of Duality)
+[16573739] note: [+] added new card 4203009 (Modernized Serenum, Azuria)
+[16573739] note: [+] added new card 4179078 (Primordial Serenum, Darius)
+[16573739] note: [+] added new card 4179765 (Darius, Era Nexus)
+[16573739] note: [+] added new card 4192282 (Liora, Unity Era)
+[16573739] note: [+] added new card 4179079 (Varia, Epoch Linker)
+[16573742] note: [+] added new card 4194838 (Gauss-Unit Ferro)
+[16573742] note: [+] added new card 4194841 (Gauss-Unit Dia)
+[16573742] note: [+] added new card 4194839 (Gauss-Unit Ferri)
+[16573742] note: [+] added new card 4194845 (Gauss-Unit Para)
+[16573742] note: [+] added new card 4194846 (Gauss-Unit G-Post)
+[16573742] note: [+] added new card 4194856 (Gauss-United Blow)
+[16573742] note: [+] added new card 4194936 (Gauss-Unity Drive)
+[16573742] note: [+] added new card 4194939 (Gauss-Unit Matrix)
+[16573742] note: [+] added new card 4194943 (Gauss-Unit Ensign Almico)
+[16573742] note: [+] added new card 4195006 (Gauss-Unit Admiral Dia)
+[16573742] note: [+] added new card 4195008 (Gauss-Unit Lieutenant Samari)
+[16573742] note: [+] added new card 4195010 (Gauss-Unit Marshal Ferri)
+[16573744] note: [+] added new card 3945133 (Darkstalker, the Terror of the Wings of Fire)
+[16573744] note: [+] added new card 3945082 (The Sky Kingdom)
+[16573744] note: [+] added new card 3945086 (The Sea Kingdom)
+[16573744] note: [+] added new card 3945091 (The Rain Kingdom)
+[16573744] note: [+] added new card 3945095 (The Night Kingdom)
+[16573744] note: [+] added new card 3945102 (The Sand Kingdom)
+[16573744] note: [+] added new card 3945076 (The Dragonet Prophecy)
+[16573744] note: [+] added new card 4264182 (The Lost Heir)
+[16573744] note: [+] added new card 4264185 (The Hidden Kingdom)
+[16573744] note: [+] added new card 4264187 (The Dark Secret)
+[16573744] note: [+] added new card 4264186 (The Brightest Night)
+[16573744] note: [+] added new card 3945056 (Starflight, the Wings of Fire)
+[16573744] note: [+] added new card 3945037 (Clay, the Wings of Fire)
+[16573744] note: [+] added new card 3945049 (Tsunami, the Wings of Fire)
+[16573744] note: [+] added new card 3945053 (Glory, the Wings of Fire)
+[16573744] note: [+] added new card 3945041 (Sunny, the Wings of Fire)
+[16573745] note: [+] added new card 2220607 (Mind Layer Eight)
+[16573745] note: [+] added new card 1649669 (Mind Layer Five)
+[16573745] note: [+] added new card 1649662 (Mind Layer Four)
+[16573745] note: [+] added new card 1649630 (Mind Layer One)
+[16573745] note: [+] added new card 2220582 (Mind Layer Seven)
+[16573745] note: [+] added new card 1649992 (Mind Layer Six)
+[16573745] warning: card id 2826527 (Mind Layer Ten) is not public
+[16573745] note: [+] added new card 2826527 (Mind Layer Ten)
+[16573745] note: [+] added new card 1650019 (Mind Layer Three)
+[16573745] note: [+] added new card 1649642 (Mind Layer Two)
+[16573745] note: [+] added new card 1650087 (Mind Layer Utopics)
+[16573745] note: [+] added new card 2205090 (Mind Layer Force)
+[16573745] note: [+] added new card 2204081 (Mind Layer Blaze)
+[16573745] note: [+] added new card 2204099 (Mind Layer Brawn)
+[16573745] note: [+] added new card 2204088 (Mind Layer Breeze)
+[16573746] note: [+] added new card 4168899 (Blitzkrieg Tempester Aella)
+[16573746] note: [+] added new card 4160434 (Blitzkrieg Tempester Archer)
+[16573746] note: [+] added new card 4139190 (Blitzkrieg Tempester Blader)
+[16573746] note: [+] added new card 4139201 (Blitzkrieg Tempester Julie)
+[16573746] note: [+] added new card 4150793 (Blitzkrieg Tempester Klay)
+[16573746] note: [+] added new card 4160517 (Blitzkrieg Tempester Leon)
+[16573746] note: [+] added new card 4451956 (Blitzkrieg Tempester Reese)
+[16573746] note: [+] added new card 4142571 (Blitzkrieg Tempester Accelerate)
+[16573746] note: [+] added new card 4269373 (Blitzkrieg Tempester Grounds)
+[16573746] note: [+] added new card 4291495 (Blitzkrieg Tempester Rally)
+[16573746] note: [+] added new card 4172112 (Blitzkrieg Tempester Barrage)
+[16573746] note: [+] added new card 4430628 (Blitzkrieg Tempester Dash)
+[16573746] note: [+] added new card 4170296 (Blitzkrieg Tempester Bellatrix)
+[16573746] note: [+] added new card 4452694 (Blitzkrieg Tempester Finola)
+[16573746] note: [+] added new card 4453034 (Blitzkrieg Tempester King Ymir)
+[16573746] note: [+] added new card 4170062 (Blitzkrieg Tempester Lucas)
+[16573746] note: [+] added new card 4431342 (Blitzkrieg Tempester Revolted)
+[16573747] note: [+] added new card 4051913 (Fuelfire Aliburn)
+[16573747] note: [+] added new card 4052096 (Fuelfire Iltscar)
+[16573747] note: [+] added new card 4051924 (Fuelfire Prixscorch)
+[16573747] note: [+] added new card 4052006 (Fuelfire Ravsflare)
+[16573747] note: [+] added new card 4051945 (Fuelfire Sulfkindle)
+[16573747] note: [+] added new card 4051972 (Fuelfire Zorsmoke)
+[16573747] note: [+] added new card 4052105 (Fuelfire Furnace)
+[16573747] note: [+] added new card 4052200 (Fuelfire Fusion)
+[16573747] note: [+] added new card 4052303 (Fuelfire Spark)
+[16573747] note: [+] added new card 4052511 (Fuelfire Eruption)
+[16573747] note: [+] added new card 4052568 (Fuelfire Titan - Blazjin, Blaze of Glory)
+[16573747] note: [+] added new card 4052606 (Fuelfire Titan - Charfan, Darkest Death)
+[16573747] note: [+] added new card 4052474 (Fuelfire Titan - Hellmor)
+[16573747] note: [+] added new card 4052357 (Fuelfire Titan - Infergrath)
+[16573747] note: [+] added new card 4052530 (Fuelfire Titan - Wrathsul)
+[16573749] note: [+] added new card 3681565 (Crom.aic)
+[16573749] note: [+] added new card 4532526 (Item #: 015-IT - Terror)
+[16573749] note: [+] added new card 3679798 (Item #: 049 - Plague Doctor)
+[16573749] note: [+] added new card 3679816 (Item #: 079 - Artificial Intelligence)
+[16573749] note: [+] added new card 3679832 (Item #: 096 - Shyness)
+[16573749] note: [+] added new card 3679837 (Item #: 1155 - Street Art)
+[16573749] note: [+] added new card 3679852 (Item #: 173 - Origin)
+[16573749] note: [+] added new card 4402714 (Item #: 352 - Babushka)
+[16573749] note: [+] added new card 3679872 (Item #: 531 - Guardianship)
+[16573749] note: [+] added new card 4495737 (Item #: 808-2 - Chorale)
+[16573749] note: [+] added new card 3681607 (Foundation Gate A)
+[16573749] note: [+] added new card 3681638 (Foundation Gate B)
+[16573749] note: [+] added new card 3679785 (Item #: 035 - Mask of Anguish)
+[16573749] note: [+] added new card 3679851 (Item #: 1499 - Mask of Shades)
+[16573749] note: [+] added new card 3679874 (Item #: 294 - Coffee Machine)
+[16573749] note: [+] added new card 3679860 (Item #: 407 - Genesis)
+[16573749] note: [+] added new card 3683835 (Item #: 179/026-ES - Sister)
+[16573749] note: [+] added new card 3679792 (Item #: 008 - Pathologic Prion)
+[16573749] note: [+] added new card 4402643 (Item #: 2079 - Subject to Law)
+[16573749] note: [+] added new card 3679869 (Item #: 4975 - Countdown)
+[16573763] note: [+] added new card 4276477 (Astromini Discovery)
+[16573789] note: [+] added new card 3136823 (Turboroid)
+[16573789] note: [+] added new card 3157167 (Satellite Asteroid)
+[16573789] note: [+] added new card 3136830 (Transportroid)
+[16573789] note: [+] added new card 3136838 (Hoveroid)
+[16573789] note: [+] added new card 3307970 (Containeroid)
+[16573789] note: [+] added new card 3136793 (Launcheroid)
+[16573790] note: [+] added new card 4353357 (Magical Musketeer Survivor)
+[16573790] note: [+] added new card 4353370 (Magical Musket - Crooked Initiation⠀)
+[16573790] note: [+] added new card 4354172 (Magical Musket - Battleground)
+[16573790] note: [+] added new card 4353499 (Magical Musketeer Otto)
+[16573791] note: [+] added new card 4057876 (Pot of Forgery)
+[16573791] note: [+] added new card 4057893 (Pot of Luxuria)
+[16573791] note: [+] added new card 4057916 (Pot of Gluttony)
+[16573791] note: [+] added new card 4057935 (Pot of Sloth)
+[16573791] note: [+] added new card 4057942 (Pot of Wrath)
+[16573791] note: [+] added new card 4057944 (Pot of Envy)
+[16573791] note: [+] added new card 4057946 (Pot of Pride)
+[16573792] note: [+] added new card 4401824 (Tundran Spirit of the Frosted Bygone)
+[16573792] note: [+] added new card 4401823 (Tundran Warrior of the Chilling Outskirts)
+[16573792] note: [+] added new card 4401819 (Clash With The Tundran Dragon)
+[16573792] note: [+] added new card 4403195 (Tundran Mirage of the Freezing Ether)
+[16573793] note: [+] added new card 4473022 (InSanity Devil of Biting, Viscous, Alarming)
+[16573793] note: [+] added new card 3656449 (InSanity Devil of Insane, Wailing, Feral)
+[16573793] note: [+] added new card 3794644 (Sanity Devil of Hear No Evil)
+[16573793] note: [+] added new card 3720433 (Sanity Devil of Speak No Evil)
+[16573793] note: [+] added new card 3794656 (The Twisted Lands of the Awoken Lord)
+[16573793] note: [+] added new card 3729164 (The Twisted Lands of the Star-Fallen Fortress)
+[16573793] note: [+] added new card 3926219 (The Twisted Lands of the Sky Leviathan)
+[16573794] note: [+] added new card 3154634 (Fortekhne Isol Quarantine)
+[16573794] note: [+] added new card 1133040 (Fortekhne Byrgies Rite)
+[16573796] note: [+] added new card 4597141 (War Rock Walhart)
+[16573796] note: [+] added new card 4597146 (War Rock Rally)
+[16573798] note: [+] added new card 4647061 (Dragon Ruler's Kingdom)
+[16573798] note: [+] added new card 4647066 (Dragon Ruler's Call)
+[16573798] note: [+] added new card 4647073 (Dragon Ruler's Convergence)
+[16573798] note: [+] added new card 4647092 (Dragon Ruler's Escape)
+[16573798] note: [+] added new card 4647107 (Beam, Dragon Ruler of Sunlight)
+[16573798] note: [+] added new card 4647081 (Dusk, Dragon Ruler of Shadows)
+[16573798] note: [+] added new card 4647101 (Midnight, Dragon Ruler of the Void)
+[16573798] note: [+] added new card 4647044 (Rex, Dragon Ruler of Divinity)
+[16573802] note: [+] added new card 3970128 (Nemleria's Nemesis)
+[16573802] note: [+] added new card 3970121 (Nemleria Dream Devourer - Pois)
+[16573802] note: [+] added new card 3970133 (Princess Nemleria's Flee-Fly-Foe Fumble)
+[16573803] warning: card id 4530038 (Vivid Dark Magician Girl) is not public
+[16573803] note: [+] added new card 4530038 (Vivid Dark Magician Girl)
+[16573803] note: [+] added new card 4530031 (Magician Girls' Twin Blast)
+[16573803] note: [+] added new card 4530023 (Magician Girl's Cylinders)
+[16573805] note: [+] added new card 4165641 (Mizfortuna Lysithea)
+[16573805] note: [+] added new card 4165625 (Mizfortuna Mercedes)
+[16573806] note: [+] added new card 4425394 (Doodle Beast Pterodactyl)
+[16573806] note: [+] added new card 4425397 (Doodle Beast - Tricera)
+[16573806] note: [+] added new card 4425399 (Doodle Beast - Spino)
+[16574311] note: [+] added new card 4460887 (Rin Kaenbyou, Hell's Traffic Accident)
+[16574311] warning: card id 4715750 (Artillery Beetle) is not public
+[16574311] note: [+] added new card 4715750 (Artillery Beetle)
+[16574311] note: [+] added new card 4489663 (Serprotector of the Royal Grave)
+[16574311] note: [+] added new card 4730539 (Gattai! Hyper Cross!)
+[16574311] note: [+] added new card 4628881 (Topologic Triquetra)
+[16574311] note: [+] added new card 4626609 (Floowandereeze & Ballen)
+[16574311] note: [+] added new card 4824406 (Haevateinn, Generaider Boss of Carnage)
+[16574311] note: [+] added new card 3780969 (Winged Grimflame)
+[16574311] note: [+] added new card 4856033 (Xyz Subjugation)
+[16574314] note: [+] added new card 4506140 (Birdbloom)
+[16574314] note: [+] added new card 4506134 (Houndbloom)
+[16574314] note: [+] added new card 4506130 (Leopardbloom)
+[16574314] note: [+] added new card 4506153 (Seedbloom)
+[16574314] note: [+] added new card 4506157 (Deadbloom)
+[16574314] note: [+] added new card 4506149 (Wildbloom)
+[16574315] note: [+] added new card 4689472 (Foxphet Deity Gintaro)
+[16574315] note: [+] added new card 2134808 (Foxphet Deity Haru)
+[16574315] note: [+] added new card 2136028 (Foxphet Deity Kinshoujo)
+[16574315] note: [+] added new card 2135006 (Foxphet Deity Madara)
+[16574315] note: [+] added new card 2134981 (Foxphet Priest Natsume)
+[16574315] note: [+] added new card 2134835 (Foxphet Priest Satoru)
+[16574315] note: [+] added new card 2136024 (Foxphet Priestess Inari)
+[16574315] note: [+] added new card 2134772 (Foxphet Priestess Makoto)
+[16574315] note: [+] added new card 2134934 (A Taste of Silver Luck)
+[16574315] note: [+] added new card 2134660 (Foxphet Temple)
+[16574315] note: [+] added new card 2135018 (Foxphet Daze)
+[16574315] note: [+] added new card 2134911 (Foxphet Doom)
+[16574315] note: [+] added new card 2134941 (Foxphet Revelation)
+[16574315] note: [+] added new card 2135036 (Foxphet Secrets)
+[16574315] note: [+] added new card 2917306 (Foxphet Priestess Kikyo)
+[16574315] note: [+] added new card 3554985 (Silver Luck Spirit)
+[16574317] note: [+] added new card 1013178 (Mythorror Savant Dullahan)
+[16574317] note: [+] added new card 3144912 (Mythorror Savant Leshin)
+[16574317] note: [+] added new card 1011742 (Mythorror Savant Shadow)
+[16574317] note: [+] added new card 1011739 (Mythorror Savant Shaman)
+[16574317] note: [+] added new card 1013177 (Mythorror Savant Grist)
+[16574317] note: [+] added new card 1029738 (Kornus, Mythorror Omen of Silence)
+[16574317] note: [+] added new card 1029722 (Moreth, Mythorror Omen of Corruption)
+[16574317] note: [+] added new card 4550828 (Zeleria, Mythorror Omen of Lust)
+[16574317] note: [+] added new card 1011745 (Gates of the Mythorror)
+[16574317] note: [+] added new card 1011769 (Conjuring of the Mythorror)
+[16574317] note: [+] added new card 3145575 (Heart of the Mythorror)
+[16574317] note: [+] added new card 3144917 (Offerings to the Mythorror)
+[16574321] note: [+] added new card 4477992 (Speedroid Spintop)
+[16574321] note: [+] added new card 4734168 (Speedroid Overdrive)
+[16574321] note: [+] added new card 4734157 (Hi-Speedroid Clear Wing Dashing Dragon)
+[16574322] warning: card id 4518693 (Altergeist Arachnalyzer) is not public
+[16574322] note: [+] added new card 4518693 (Altergeist Arachnalyzer)
+[16574322] warning: card id 4519437 (Altergeist Adzip) is not public
+[16574322] note: [+] added new card 4519437 (Altergeist Adzip)
+[16574322] warning: card id 4518714 (Altergeist Meduplex) is not public
+[16574322] note: [+] added new card 4518714 (Altergeist Meduplex)
+[16574323] note: [+] added new card 4455953 (Evervolving 43: Reshef Remains Reforged)
+[16574323] note: [+] added new card 4796974 (Evervolving 77: Wanderful Winter Warbler)
+[16574323] note: [+] added new card 4797013 (Evervolving 64: Ancient-King Skeleton Oarfish)
+[16574323] note: [+] added new card 4445818 (Evervolving 40: Another Step Towards Forever)
+[16574323] note: [+] added new card 4455406 (Evervolving 31: Verdant Mambo)
+[16574325] note: [+] added new card 4699123 (Dinomorphia Proto Rexterm)
+[16574325] note: [+] added new card 4711337 (Dinomorphia Triborg)
+[16574326] note: [+] added new card 4671877 (Sylvamiliar Hearthorn)
+[16574326] note: [+] added new card 4594532 (Sylvamiliar Muttmiraj)
+[16574326] note: [+] added new card 4436923 (Sylvamiliar Petalpaca)
+[16574326] note: [+] added new card 4583703 (Sylvamiliar Prowlhowler)
+[16574326] warning: card id 4538018 (Sylvamiliar Puff-Ear Jackalope) is not public
+[16574326] note: [+] added new card 4538018 (Sylvamiliar Puff-Ear Jackalope)
+[16574326] note: [+] added new card 4594529 (Sylvamiliar Servernal)
+[16574326] note: [+] added new card 4700432 (Feast of Sylvamiliar)
+[16574326] warning: card id 4389946 (Sylvamiliar Promised Kingdom) is not public
+[16574326] note: [+] added new card 4389946 (Sylvamiliar Promised Kingdom)
+[16574326] note: [+] added new card 4669986 (Sylvamiliar Falling Winds)
+[16574326] note: [+] added new card 4715748 (Sylvamiliar Feral Lunge)
+[16574326] note: [+] added new card 4685225 (Sylvamiliar Kaiserleo)
+[16574326] note: [+] added new card 4339407 (Sylvamiliar Kitsunerin)
+[16574326] note: [+] added new card 4334006 (Sylvamiliar Kujakitsune)
+[16574326] note: [+] added new card 4714663 (Sylvamiliar Lepidoptephant)
+[16574327] note: [+] added new card 3639889 (Springans Penwith)
+[16574327] note: [+] added new card 3639956 (Roll-out! Springans)
+[16574327] note: [+] added new card 3639938 (Springans Lindwurm)
+[16574328] note: [+] added new card 4546175 (Deep Salvo Bishop)
+[16574328] note: [+] added new card 4546160 (Hex-Touched Armogeist)
+[16574328] note: [+] added new card 4459126 (Howling Fortrezowler)
+[16574328] note: [+] added new card 4761310 (Iron Soul Fencer)
+[16574328] note: [+] added new card 4641297 (Mundus of Lifeless Heaven)
+[16574328] note: [+] added new card 4505284 (Plaguetrain Labolas)
+[16574328] note: [+] added new card 4783112 (Binomial 65: Saint Snare Serpent)
+[16574328] note: [+] added new card 4540272 (Voracious Haljaliger)
+[16574328] note: [+] added new card 4722582 (Wave Quake Genetron)
+[16574329] note: [+] added new card 4795563 (Ninaazar Past - Shattered)
+[16574329] note: [+] added new card 4795548 (Beneath the Soil)
+[16574329] note: [+] added new card 4795560 (Primal Craving)
+[16574331] note: [+] added new card 3992749 (Idan, Emeraheart Sorcerer)
+[16574331] note: [+] added new card 3992754 (Idari, Emeraheart Sword)
+[16574331] note: [+] added new card 3992788 (Ijapa, Emeraheart Protector)
+[16574331] note: [+] added new card 3976889 (Meji, Emeraheart Dual)
+[16574331] note: [+] added new card 3992783 (Olutoju, Emeraheart Guardian)
+[16574331] note: [+] added new card 3992772 (Tafatafa, Emeraheart Archer)
+[16574331] note: [+] added new card 3992825 (Emeraheart Growth)
+[16574331] note: [+] added new card 3992814 (Emeraheart Rejuvenation)
+[16574331] note: [+] added new card 3992794 (Emeraheart Release)
+[16574331] note: [+] added new card 3992802 (Emeraheart Vines)
+[16574331] note: [+] added new card 3992852 (Algaba, Emeraheart Elder)
+[16574331] note: [+] added new card 3992834 (Ikunkun, Emeraheart Spirit)
+[16574331] note: [+] added new card 3992833 (Sise Sare, Emeraheart Rusher)
+[16574331] note: [+] added new card 3992839 (Yinyin, Emeraheart Wanderer)
+[16574331] note: [+] added new card 3992865 (Emi Iwin, Emeraheart Fairy)
+[16574333] note: property 'effect' of card id 2599023 (Azure Knight of the Soul's Edge) was changed
+[16574333] from: If you activate the effect of a DARK Warrior monster you control: You can Special Summon this card from your GY (if it was there when the effect was activated) or hand (even if not). You can only use this effect of "Azure Knight of the Soul's Edge" once per turn. If this card was Special Summoned from the GY, banish it when it leaves the field. This card cannot be destroyed by battle.
+[16574333] to: If you activate a DARK Warrior monster effect: You can Special Summon this card from your GY (if it was there when the effect was activated) or hand (even if not). You can only use this effect of "Azure Knight of the Soul's Edge" once per turn. If this card was Special Summoned from the GY, banish it when it leaves the field. This card cannot be destroyed by battle.
+[16574333] note: [+] added new card 4873743 (Pot of Exquisiteness)
+[16574333] note: property 'effect' of card id 2365741 (Alzur's Double Cross) was changed
+[16574333] from: (This card is also always treated as an "Aen Seidhe" card.)If you control a Spellcaster monster: Special Summon 1 "Viy Token" (Fiend/DARK/Level 10/ATK 4000 /DEF 2500). It cannot be Tributed for a Tribute Summon, or used as material for the Summon of a monster from the Extra Deck.
+[16574333] to: (This card is also always treated as an "Aen Seidhe" card.)If you control a Spellcaster monster: Special Summon 1 "Viy Token" (Fiend/DARK/Level 10/ATK 4000 /DEF 2500). It cannot be Tributed for a Tribute Summon, or used as material for the Summon of a monster from the Extra Deck, also, the first time it would be destroyed by battle or card effect this turn, it is not.
+[16574333] note: property 'effect' of card id 2583662 (Paradigm Shift) was changed
+[16574333] from: If your opponent activates a card or effect, except during the Main Phase: You can draw 1 card. You can use this effect of "Paradigm Shift" up to twice per turn. During the Main Phase, if this face-up card is sent from the field to the GY by your opponent's card: You can target 1 monster you control; it gains 1000 ATK until the End Phase.
+[16574333] to: If your opponent activates a card or effect, except during the Main Phase: You can draw 1 card. You can use this effect of "Paradigm Shift" up to thrice per turn. During the Main Phase, if this face-up card is sent from the field to the GY by your opponent's card: You can draw 1 card.
+[16574333] note: property 'effect' of card id 2561158 (Demonic Mirage) was changed
+[16574333] from: Banish 1 Level 3 or lower Fiend monster from your Deck, and if you do, Special Summon 1 monster with the same name from your Deck, but change its ATK and DEF to 0, also, shuffle it into the Deck during the End Phase or if it leaves the field. The monster banished by this effect cannot activate its effects. You can only activate 1 "Demonic Mirage" per turn.
+[16574333] to: Banish 1 Level 3 or lower Fiend monster from your Deck, and if you do, Special Summon 1 monster with the same name from your Deck, but change its ATK/DEF to 0. The monster banished by this effect cannot activate its effects. You can only activate 1 "Demonic Mirage" per turn.
+[16574333] note: property 'effect' of card id 2610738 (Murderous Gust) was changed
+[16574333] from: Target 1 Set card and 1 face-up card your opponent controls including at least 1 Spell/Trap and 1 monster; destroy them.
+[16574333] to: Target 1 Set card and 1 face-up card on the field; destroy them.
+[16574333] note: property 'effect' of card id 3538984 (Number 143: Shadow of the Mind Hunter) was changed
+[16574333] from: 2+ Level 9 monstersThis card's ATK/DEF becomes the combined original ATK/DEF of the monsters used as Xyz Material for its Summon. If this card is Xyz Summoned: You can negate the effects of 1 face-up monster on the field whose ATK or DEF is lower than this card's. You can detach any number of materials from this card; destroy an equal number of face-up monsters on the field whose effects are negated, and if you do, draw 1 card for each. You can only use each effect of "Number 143: Shadow of the Mind Hunter" once per turn.
+[16574333] to: 2+ Level 9 monstersThis card's ATK/DEF becomes the combined original ATK/DEF of the monsters attached to it as material. If this card is Xyz Summoned: You can negate the effects of face-up monsters on the field whose combined ATK or DEF is lower than this card's. (Quick Effect): You can detach any number of materials from this card; destroy an equal number of face-up monsters on the field whose effects are negated, and if you do, draw 1 card for each. You can only use each effect of "Number 143: Shadow of the Mind Hunter" once per turn.
+[16574333] note: property 'effect' of card id 2576502 (Sho'tul Self, the Dragon's Fist) was changed
+[16574333] from: 2 Effect MonstersOnce per turn, during the Battle Phase (Quick Effect): You can target 1 Effect Monster your opponent controls; negate the effects of that monster and all cards in your opponent's possession with the same name until the end of the Battle Phase, also, if this card destroys that monster by battle this turn, you can Special Summon it to your field at the end of the Battle Phase, but its effects cannot be activated this turn.
+[16574333] to: 2 Effect MonstersGains 100 ATK for each different Type and Attribute used for its Link Summon. Once per turn, during the Battle Phase (Quick Effect): You can negate the effects of 1 monster your opponent controls and all cards in your opponent's possession with the same name until the end of the Battle Phase, also, if that monster is destroyed by battle this turn, you can Special Summon it to your field at the end of the Battle Phase, but its effects cannot be activated this turn.
+[16574333] note: property 'atk' of card id 2576502 (Sho'tul Self, the Dragon's Fist) was changed
+[16574333] from: 1800
+[16574333] to: 1900
+[16574333] note: property 'effect' of card id 3001350 (Optical LANcer) was changed
+[16574333] from: 2 monsters with different namesCannot be targeted by your opponent's card effects. Gains 600 ATK for each monster it points to.
+[16574333] to: 2 monsters with different namesCannot be targeted by your opponent's card effects. Gains 800 ATK for each monster it points to.
+[16574334] note: [+] added new card 4701116 (Violent Bladed Emperor of the Fifth Heaven)
+[16574334] note: [+] added new card 3245245 (Bladesman of the Revolting World)
+[16574334] note: [+] added new card 3697299 (Gyre Trick Rush)
+[16574334] note: [+] added new card 4574725 (March of Dead Men)
+[16574334] note: [+] added new card 4461886 (The Monsterous Thorn Basilisk)
+[16574334] note: [+] added new card 4535571 (The Remorseful Thorn Knight)
+[16574334] note: [+] added new card 3538958 (Crazed Crimson Gyre Dragon)
+[16574334] note: [+] added new card 4568321 (Blazing Sky Emperor of the Second Heaven)
+[main] note: [-] removed old card 2331650 (Mermaidol Aoi)
+[main] note: [-] removed old card 2331657 (Mermaidol Belle Donna)
+[main] note: [-] removed old card 2331668 (Mermaidol Backup Dancer)
+[main] note: [-] removed old card 2331679 (Mermaidol Heart Hitter)
+[main] note: [-] removed old card 2331685 (Mermaidol Cheery Peer Leader)
+[main] note: [-] removed old card 2331691 (Mermaidol Vaunted Venue)
+[main] note: [-] removed old card 2331695 (Mermaidol Super Special Silk Scarf)
+[main] note: [-] removed old card 2331701 (Mermaidol Duo Dance)
+[main] note: [-] removed old card 2331706 (Mermaidol Groupie Guppy)
+[main] note: [-] removed old card 2331717 (Mermaidol Leading Ladies)
+[main] note: [-] removed old card 2331879 (Mermaidol Magnificent Maestra)
+[main] note: [-] removed old card 2331891 (Mermaidol Gracious Goddess)
+[main] note: [-] removed old card 2045744 (Metaverse Persona User - Yusuke)
+[main] note: [-] removed old card 2045713 (Metaverse Persona User - Joker)
+[main] note: [-] removed old card 2045753 (Metaverse Persona User - Morgana)
+[main] note: [-] removed old card 2053755 (Metaverse Persona User - Haru)
+[main] note: [-] removed old card 2045810 (Metaverse Persona User - Fut@ba)
+[main] note: [-] removed old card 2045785 (Metaverse Persona User - Ann)
+[main] note: [-] removed old card 2053750 (Metaverse Persona User - Makoto)
+[main] note: [-] removed old card 2045733 (Metaverse Persona User - Ryuji)
+[main] note: [-] removed old card 2054106 (Creating Rivers in the Desert)
+[main] note: [-] removed old card 2053760 (Life Will Change)
+[main] note: [-] removed old card 2053741 (Metaverse Persona - Arsene)
+[main] note: [-] removed old card 2053719 (Metaverse Persona - Ippon-Datara)
+[main] note: [-] removed old card 2053649 (Metaverse Persona - Jack Frost)
+[main] note: [-] removed old card 2053678 (Metaverse Persona - Koppa Tengu)
+[main] note: [-] removed old card 2053680 (Metaverse Persona - Oni)
+[main] note: [-] removed old card 2053737 (Metaverse Persona - Sarasvati)
+[main] note: [-] removed old card 2163105 (Doom Instrument Gear of Carnage)
+[main] note: [-] removed old card 1949030 (Doom Instrument Gear of Depravity)
+[main] note: [-] removed old card 1949054 (Doom Instrument Gear of Despair)
+[main] note: [-] removed old card 2162761 (Doom Instrument Gear of Madness)
+[main] note: [-] removed old card 2163071 (Horrifying Scheme of the Doom Instruments)
+[main] note: [-] removed old card 2163024 (Dismaying Advancement of the Doom Instruments)
+[main] note: [-] removed old card 2163047 (Terrible Preparation of the Doom Instruments)
+[main] note: [-] removed old card 2162893 (Chaotic Arrangement of the Doom Instruments)
+[main] note: [-] removed old card 2162996 (Dark Terminus of the Doom Instruments)
+[main] note: [-] removed old card 2162865 (Scattered Ruination of the Doom Instruments)
+[main] note: [-] removed old card 1573065 (Entropy Beast Ferita)
+[main] note: [-] removed old card 1573058 (Entropy Beast Guerra)
+[main] note: [-] removed old card 1573046 (Entropy Beast Marcire)
+[main] note: [-] removed old card 1573062 (Entropy Beast Rovina)
+[main] note: [-] removed old card 1573054 (Entropy Beast Sangue)
+[main] note: [-] removed old card 3324475 (Entropy Beast Sintonizza)
+[main] note: [-] removed old card 1588432 (Entropy Beast Schiavo)
+[main] note: [-] removed old card 2158574 (Emissary of Entropy)
+[main] note: [-] removed old card 1573103 (Preparations for the Entropy King)
+[main] note: [-] removed old card 2158540 (Threat of the Entropy King's Dragon)
+[main] note: [-] removed old card 1573107 (Discovery of the Entropy King)
+[main] note: [-] removed old card 2158564 (Entropy King's Dragon Viverna)
+[main] note: [-] removed old card 3324512 (Entropy King's Servant Orrore)
+[main] note: [-] removed old card 1573072 (Entropy King Morte)
+[main] note: [-] removed old card 2000649 (Entei - The Sacred Fire)
+[main] note: [-] removed old card 2000657 (Raikou - The Legend of Thunder)
+[main] note: [-] removed old card 2000666 (Suicune - The North Wind)
+[main] note: [-] removed old card 2000716 (Revived Beast Lord's Tin Tower)
+[main] note: [-] removed old card 2000705 (Tin Tower Kimono Ritual)
+[main] note: [-] removed old card 2000686 (Ho-oh - Lord of the Revived Beasts)
+[main] note: [-] removed old card 1646214 (Shirakashi Dakki)
+[main] note: [-] removed old card 1646243 (Shirakashi Hajun)
+[main] note: [-] removed old card 1647812 (Shirakashi Shafu)
+[main] note: [-] removed old card 1647818 (Shirakashi Jyougen)
+[main] note: [-] removed old card 1647833 (Shirakashi Yasha)
+[main] note: [-] removed old card 1650290 (Shirakashi Yuki-Musume)
+[main] note: [-] removed old card 1650241 (Ghost Meets Girl - A Shirakashi Story)
+[main] note: [-] removed old card 1650199 (Shirakashi Style Synthesis)
+[main] note: [-] removed old card 1650217 (Shirakashi Style Reversal)
+[main] note: [-] removed old card 1650011 (Shirakashi Gashadokuro)
+[main] note: [-] removed old card 1649833 (Shirakashi Oboro-Guruma)
+[main] note: [-] removed old card 1649881 (Shirakashi Tengu)
+[main] note: [-] removed old card 1649836 (Shirakashi Jyougenmushi)
+[main] note: [-] removed old card 1650002 (Shirakashi Yoko)
+[main] note: [-] removed old card 1650265 (Shirakashi Spirit Trainer)
+[main] note: [-] removed old card 1650052 (Shirakashi Yuki-Onna)
+[main] note: [-] removed old card 2849687 (The Princess of Autumn)
+[main] note: [-] removed old card 2915095 (The Princess of Susurrous)
+[main] note: [-] removed old card 2916237 (The Queen of the Equinox)
+[main] note: [-] removed old card 1381019 (Remnant Arrival)
+[main] note: [-] removed old card 2960733 (Mechanima Matrix of Limitation)
+[main] note: [-] removed old card 3759340 (Fragenerator Boomtorch)
+[main] note: [-] removed old card 3759348 (Fragenerator Plieranha)
+[main] note: [-] removed old card 3759347 (Fragenerator Screwbang)
+[main] note: [-] removed old card 3759353 (Fragenerator Irotrail)
+[main] note: [-] removed old card 3759341 (Fragenerator Whammer)
+[main] note: [-] removed old card 3759358 (Fragenerator Kitcutter)
+[main] note: [-] removed old card 3759370 (Fragenerator Drillployment)
+[main] note: [-] removed old card 3759367 (Fragenerator Socketerror)
+[main] note: [-] removed old card 3759365 (Fragenerator Spiritsocket)
+[main] note: [-] removed old card 3759362 (Fragenerator Synthesaw)
+[main] note: [-] removed old card 3759359 (Fragenerator Socketron)
+[main] note: [-] removed old card 3184289 (Projective 23: Afrua)
+[main] note: [-] removed old card 1696298 (Gimmick Puppet Night Slicer)
+[main] note: [-] removed old card 4370566 (Pulling The Plug)
+[main] note: [-] removed old card 601991 (Revoking Tradition)
+[main] note: [-] removed old card 2884024 (Gimmick Puppet Spider Grip)
+[main] note: [-] removed old card 2184144 (Refurbish Puppet)
+[main] note: [-] removed old card 4052336 (Cecil and Cecilia, the Dream Mirror Adventurers)
+[main] note: [-] removed old card 3750150 (Core Extraction)
+[main] note: [-] removed old card 1225771 (Projective 37: Konveiar Mullmang)
+[main] note: [-] removed old card 1225753 (Projective 82: Konveiar Tantsitudruk)
+[main] note: [-] removed old card 1225719 (Projective 96: Konveiar Kuratumm)
+[main] note: [-] removed old card 3990422 (Lunactus of the Ascended Moon)
+[main] note: [-] removed old card 3812722 (Subterror Krkorca)
+[main] note: [-] removed old card 4337953 (Magmuchen, Devourer of Hasty Flames)
+[main] note: [-] removed old card 2390296 (If I Could Save Time)
+[main] note: [-] removed old card 4351255 (Magical Musket - Piercing Shot)
+[main] note: [-] removed old card 2458344 (Retribution Returns)
+[main] note: [-] removed old card 3392450 (Furnatron Coal Shoveler)
+[main] note: [-] removed old card 3392459 (Furnatron Haphazard)
+[main] note: [-] removed old card 2402352 (Satahnamet)
+[main] note: [-] removed old card 2419086 (Spiritual Beast Falco)
+[main] note: [-] removed old card 4338024 (Cybernailation Firefly)
+[main] note: [-] removed old card 4258733 (Solactus of the Descended Sun)
+[main] note: [-] removed old card 4255499 (Abyss Actor - Playful Pooch)
+[main] note: [-] removed old card 4255516 (Abyss Actor - Tiny Stagehand)
+[main] note: [-] removed old card 4150469 (Yubel, Phantasm of Lords)
+[main] note: [-] removed old card 4150465 (Yubel, Phantasm of Searing Flames)
+[main] note: [-] removed old card 930161 (Miraclady)
+[main] note: [-] removed old card 930149 (Penguino wit a Needlebab)
+[main] note: [-] removed old card 930115 (RibbonEYE Party Box)
+[main] note: [-] removed old card 930216 (Destroying Dice Dimension)
+[main] note: [-] removed old card 930175 (Fatal Fallen Funk Fish Feeding)
+[main] note: [-] removed old card 4150468 (Yubel, Phantasm of Striking Thunder)
+[main] note: [-] removed old card 3591056 (Furnatron Minor)
+[main] note: [-] removed old card 3591066 (Shortfuse Wheeler)
+[main] note: [-] removed old card 3697031 (Ancient Gear Bunker)
+[main] note: [-] removed old card 3697020 (Ancient, Ancient Gear)
+[main] note: [-] removed old card 3697039 (Ancient Gear Enactor Wyvern)
+[main] note: [-] removed old card 3697045 (The Ancient Gear, Gear Goliath)
+[main] note: [-] removed old card 2452396 (Genex Ally Tracer)
+[main] note: [-] removed old card 1981433 (R-Genex Pipeline)
+[main] note: [-] removed old card 1981463 (R-Genex Adjuster)
+[main] note: [-] removed old card 1981445 (R-Genex Gravitron)
+[main] note: [-] removed old card 1981470 (Genex Ally Recruiter)
+[main] note: [-] removed old card 1981837 (R-Genex Capacitor)
+[main] note: [-] removed old card 2141426 (Genex Jetron)
+[main] note: [-] removed old card 2409489 (Spiritual Beast Tamer Zefrapilicanna)
+[main] note: [-] removed old card 2409486 (Ritual Beast Inheritance)
+[main] note: [-] removed old card 2409332 (Ritual Beast Ulti-Zeframpengu)
+[main] note: [-] removed old card 2398703 (Ancient Gear Infantry)
+[main] note: [-] removed old card 2398787 (Ancient Gear Polybody)
+[main] note: [-] removed old card 450905 (Ancient Gear Temple)
+[main] note: [-] removed old card 2398718 (Ancient Gear Capacitor Abomination)
+[main] note: [-] removed old card 2398750 (Ancient Gear Shark)
+[main] note: [-] removed old card 1953934 (Idol to the Earthbound Immortal)
+[main] note: [-] removed old card 1953925 (Earthbound Ethereoglyph)
+[main] note: [-] removed old card 1954082 (Tower of the Earthbound Immortal)
+[main] note: [-] removed old card 1954201 (Earthbound Hound Ccoshobar)
+[main] note: [-] removed old card 1954147 (Earthbound Slave Ukupacha Callao)
+[main] note: [-] removed old card 1956265 (Earthbound Immortal Cuauhcoatl)
+[main] note: [-] removed old card 1959488 (Earthbound Immortal Ccomnosuma)
+[main] note: [-] removed old card 1954198 (Earthbound Messanger Huacachina)
+[main] note: [-] removed old card 1954163 (Xolotl, The Earthbound Overlord)
+[main] note: [-] removed old card 1954232 (Earthbound Beast Llama Pacuilla)
+[main] note: [-] removed old card 1903214 (Yubel - Harbinger of Disaster)
+[main] note: [-] removed old card 1903217 (Yubel - Infernal Remnant)
+[main] note: [-] removed old card 1903207 (Yubel - The Final End)
+[main] note: [-] removed old card 1903210 (Yubel - The Torturous Symbiote)
+[main] note: [-] removed old card 1903206 (Yubel Projection)
+[main] note: [-] removed old card 1903201 (Yubel's Descent)
+[main] note: [-] removed old card 1903193 (Yubel Consciousness Harvester)
+[main] note: [-] removed old card 1903196 (Yubel Contagion)
+[main] note: [-] removed old card 1903189 (Yubel's Continuation)
+[main] note: [-] removed old card 1903194 (Yubel's Vendetta)
+[main] note: [-] removed old card 1856581 (Dark Arts Influence)
+[main] note: [-] removed old card 4046923 (TTT, the Tenacious Tactician)
+[main] note: [-] removed old card 4260306 (Constant Conceptualization)
+[main] note: [-] removed old card 4261008 (Magical Materialization)
+[main] note: [-] removed old card 4102586 (Samurai from the World Far Beyond)
+[main] note: [-] removed old card 4392318 (Eclipactus of the Eclipsing Sky)
+[main] note: [-] removed old card 4388156 (Iceldia, Vassilisa of Snowdrift Souls)
+[main] note: [-] removed old card 2585693 (Autelonium Matlettem)
+[main] note: [-] removed old card 4506374 (The Exchanger)
