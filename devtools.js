@@ -117,9 +117,10 @@ let onLoad = async function () {
         let categories = {};
         let category = null;
         for(let line of text.split(/\r?\n/)) {
+            console.log(category);
             line = line.trim();
             // remove everything before the non-word characters (emoji, bullets, etc)
-            line = line.replace(/^.*?\W+/, "");
+            line = line.replace(/^.*?(:[~\w]+?:|\W)+/, "");
             if(line.endsWith(":")) {
                 line = line.replace(/\W/g, "");
                 category = line.toLowerCase();
@@ -136,16 +137,22 @@ let onLoad = async function () {
         });
         
         let newNewlyChanged = [];
-        // key: what red types; value: what banlist.json uses
+        // key: what @Red types; value: what banlist.json uses
         const ADJUST_CATEGORIES = new Map([
             ["forbidden", "banned"],
             ["limited", "limited"],
             ["semilimited", "semi_limited"],
+            ["semi-limited", "semi_limited"],
             ["unlimited", "unlimited"],
         ]);
         for(let [ category, target ] of ADJUST_CATEGORIES) {
             for(let name of categories[category] ?? []) {
-                let { id } = CardViewer.getCardByName(name);
+                let card = CardViewer.getCardByName(name);
+                if(!card) {
+                    // TODO: we can do better than alert
+                    alert(`Could not find card with name '${name}'`);
+                }
+                let { id } = card;
                 newBanlist.newly_changed.push(id);
                 // remove from existing arrays
                 for(let removeTarget of ADJUST_CATEGORIES.values()) {
