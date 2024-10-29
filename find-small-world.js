@@ -5,14 +5,27 @@ const SMALL_WORLD_PROPS = ["atk", "def", "level", "type", "attribute"];
 const isSmallWorldRelated = (a, b) =>
     sharedProperties(a, b, SMALL_WORLD_PROPS).length === 1;
 
-const findSmallWorldBridges = (raw) => {
+const getCardIds = raw => {
+    console.log(raw);
     let parser = new DOMParser();
     let doc = parser.parseFromString(raw, "text/xml");
-    window.doc = doc;
-    // let cards = doc.querySelectorAll("main card");
-    let cards = doc.getElementsByTagName("card");
-    let cardIds = new Set([...cards].map(card => card.id));
-    let cardData = [...cardIds].map(id => CardViewer.Database.cards[id] ?? console.warn("Could not find id", id));
+    let errorNode = doc.querySelector("parsererror");
+    let baseIds = errorNode
+        // parse ydk
+        ? raw.split(/\r?\n/g)
+            .filter(e => !e.startsWith("#") && !e.startsWith("!"))
+            .map(passcodeToDbId)
+        // parse xml
+        : [...doc.getElementsByTagName("card")].map(card => card.id);
+    let cardIds = new Set(baseIds);
+    return cardIds;
+};
+
+const findSmallWorldBridges = (raw) => {
+    let allCardIds = getCardIds(raw);
+    let cardData = [...allCardIds].map(id =>
+        CardViewer.Database.cards[id] ?? console.warn("Could not find id", id)
+    );
     console.log(cardData);
     let mainCards = cardData.filter(card => card).filter(CardViewer.Filters.isMainDeck);
     
@@ -71,6 +84,7 @@ window.addEventListener("load", async function () {
         reader.readAsText(file, "UTF-8");
         reader.onload = function (evt) {
             let result = evt.target.result;
+            console.log(file.name);
             let bridges = findSmallWorldBridges(result);
             messageHolder.empty();
             for(let options of bridges) {

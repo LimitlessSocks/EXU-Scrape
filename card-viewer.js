@@ -1944,6 +1944,22 @@ const readFile = accept => new Promise((resolve, reject) => {
 });
 const readJSONFile = () => readFile(".json").then(JSON.parse);
 
+let passcodeToDbIdCache = null;
+const passcodeToDbId = passcode => {
+    if(!passcodeToDbIdCache) {
+        passcodeToDbIdCache = {};
+        for(let card of Object.values(CardViewer.Database.cards)) {
+            let reportedPasscode = card.serial_number;
+            if(reportedPasscode) {
+                let paddedPasscode = reportedPasscode.padStart(8, "0");
+                passcodeToDbIdCache[reportedPasscode] ??= card.id;
+                passcodeToDbIdCache[paddedPasscode] ??= card.id;
+            }
+        }
+    }
+    return passcodeToDbIdCache[passcode.toString()];
+};
+
 // TODO: make this not hang the webpage
 let baseFormat;
 CardViewer.monkeyPatchFormat = formatData => {
