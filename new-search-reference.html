@@ -25,6 +25,27 @@
         .fake-button:visited {
             color: white;
         }
+        .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: red;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid red;
+        }
+
+        .separator:not(:empty)::before {
+            margin-right: .25em;
+        }
+
+        .separator:not(:empty)::after {
+            margin-left: .25em;
+        }
     </style>
 </head>
 <body>
@@ -34,6 +55,31 @@
         <article>
             <p>In general, you can think of using the <a href="./new-search" target="_blank">Custom Query</a> like writing PSCT for a card. <em>Case does not matter!</em> Here are some examples:</p>
             <ul>
+                <li>
+                    <a class="fake-button" target="_blank" href='./new-search?q=[[noble knight]]'><code>[[noble knight]]</code></a>
+                    shows all cards with "Noble Knight" in the title or card text.
+                </li>
+                <li>
+                    <a class="fake-button" target="_blank" href='./new-search?q=text:[Your opponent cannot]'><code>text:[Your opponent cannot]</code></a>
+                    shows all cards with "Your opponent cannot" in the text.
+                </li>
+                <li>
+                    <a class="fake-button" target="_blank" href='./new-search?q=pend:[draw 1]'><code>pend:[draw 1]</code></a>
+                    shows all Pendulum Monsters with "draw 1" in the text.
+                </li>
+                <li>
+                    <a class="fake-button" target="_blank" href='./new-search?q=pend:[^$] pendulum'><code>pend:[^$] pendulum</code></a>
+                    shows all Pendulum Monsters without a Pendulum Effect using <a target="_blank" href="https://www.rexegg.com/regex-anchors.php">regular expression anchors</a>.
+                </li>
+                <li>
+                    <a class="fake-button" target="_blank" href='./new-search?q=water sort down by date'><code>water sort down by date</code></a>
+                    shows all WATER monsters, ordered from most to least recently released in the TCG.
+                </li>
+                <li>
+                    <a class="fake-button" target="_blank" href='./new-search?q=1300 atk sort down by date not ocg'><code>1300 atk sort down by date not ocg</code></a>
+                    shows all monsters with 1300 ATK, ordered from most to least recently released in the TCG, excluding OCG cards.
+                </li>
+                <div class="separator">New!</div>
                 <li>
                     <a class="fake-button" target="_blank" href="./new-search?q=light or dark dragon"><code>light or dark dragon</code></a>
                     shows all monsters whose Type is Dragon, and that are LIGHT and/or DARK attribute.
