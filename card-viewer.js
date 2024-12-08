@@ -2127,6 +2127,59 @@ CardViewer.getMaterialLine = card => {
     return lines[firstIndex] || null;
 };
 
+const BanlistGradeFilters = [
+    CardViewer.Filters.isNormal,
+    CardViewer.Filters.isEffect,
+    CardViewer.Filters.isRitual,
+    CardViewer.Filters.isFusion,
+    CardViewer.Filters.isSynchro,
+    CardViewer.Filters.isXyz,
+    // _F.propda("is_link"),
+    CardViewer.Filters.isLink,
+    CardViewer.Filters.isSpell,
+    CardViewer.Filters.isTrap,
+];
+CardViewer.naturalBanlistGrade = card =>
+    BanlistGradeFilters.findIndex(filter => filter(card));
+
+CardViewer.naturalBanlistSortFunction = (a, b) => {
+    let diff = CardViewer.naturalBanlistGrade(a) - CardViewer.naturalBanlistGrade(b);
+    if(diff) {
+        return diff;
+    }
+    else {
+        return (a.name > b.name) - (a.name < b.name);
+    }
+};
+
+CardViewer.naturalBanlistSort = page =>
+    page.sort(CardViewer.naturalBanlistSortFunction);
+
+CardViewer.integrateNameChanges = nameChanges => {
+    for(let { before, after } of nameChanges) {
+        let oldId = CardViewer.Database.cardsIdsByName[before.toLowerCase()];
+        if(oldId) {
+            CardViewer.Database.cardsIdsByName[after.toLowerCase()] = oldId;
+            CardViewer.Database.cards[oldId].name = after;
+        }
+        else {
+            console.warn("Could not find ID for ", before, "(and it's supposed to correspond to", after, ")");
+        }
+    }
+};
+
+CardViewer.integrateBanlistChanges = banlistChanges => {
+    for(let [ limit, cards ] of Object.entries(banlistChanges)) {
+        cards.forEach(cardData => {
+            let { name, newStatus } = cardData;
+            let card = CardViewer.getCardByName(name);
+            if(card) {
+                card[CardViewer.getLimitProperty()] = newStatus;
+            }
+        });
+    }
+};
+
 // secret silly
 (function () {
     let now = new Date();

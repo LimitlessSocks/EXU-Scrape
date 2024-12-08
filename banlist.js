@@ -99,21 +99,6 @@ let onLoad = async function () {
     
     let tags = ["Forbidden", "Limited", "Semi-Limited", "Unlimited"];
     
-    const GradeFilters = [
-        CardViewer.Filters.isNormal,
-        CardViewer.Filters.isEffect,
-        CardViewer.Filters.isRitual,
-        CardViewer.Filters.isFusion,
-        CardViewer.Filters.isSynchro,
-        CardViewer.Filters.isXyz,
-        _F.propda("is_link"),
-        CardViewer.Filters.isSpell,
-        CardViewer.Filters.isTrap,
-    ];
-    
-    const grade = (card) =>
-        GradeFilters.findIndex(filter => filter(card));
-    
     let nameExists = {};
     const appendSearchPage = (results, tag) => {
         results = results.filter((card) => {
@@ -155,16 +140,7 @@ let onLoad = async function () {
                 });
                 return el;
             },
-            sort: (page) =>
-                page.sort((a, b) => {
-                    let diff = grade(a) - grade(b);
-                    if(diff) {
-                        return diff;
-                    }
-                    else {
-                        return (a.name > b.name) - (a.name < b.name);
-                    }
-                }),
+            sort: CardViewer.naturalBanlistSort,
         });
         
         let sameGroup = sub.find(".same");

@@ -26,6 +26,15 @@
 <body>
 <h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1>
 <article>
+    <button id="updateChanges">UPDATE THE PAGE WITH CHANGES JSON</button>
+    <h2>Table of Contents</h2>
+    <ul>
+        <li><a href="#banlist_changes">Banlist Test &rarr; Changes</a></li>
+        <li><a href="#card_names">Card Names &rarr; EXU Links</a></li>
+        <li><a href="#card_source">Find original card source</a></li>
+        <li><a href="#spreadsheet">Card names &rarr; Banlist Status &amp; Spreadsheet</a></li>
+        <li><a href="#banlist_prepare">Text Banlist &rarr; Nice Banlist</a></li>
+    </ul>
     <h2 id="banlist_changes">Banlist Text &rarr; Changes</h2>
     <textarea id="banlistChanges"></textarea>
     <textarea class="hidden" readonly id="banlistChangesOutput"></textarea>
@@ -51,6 +60,24 @@
     <h2 id="spreadsheet">Banlist status &amp; Spreadsheet</h2>
     <textarea id="cardsToSpreadsheet"></textarea>
     <textarea class="hidden" id="spreadsheetOutput" readonly></textarea>
+    
+    <h2 id="banlist_prepare">Text Banlist &rarr; Nice Banlist</h2>
+    <textarea id="textBanlistInput" placeholder="Format cards like - Kuriboh 3 > 0"></textarea>
+    <div class="hidden" id="missingCards">
+        <h3>Missing cards</h3>
+        <table>
+            <thead>
+                <th>New name</th>
+                <th>Old name</th>
+                <th>Found card</th>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <button id="submitMissingCards">Fix</button>
+    </div>
+    <textarea class="hidden" id="textBanlistOutput" readonly></textarea>
 </article>
 </body>
 </html>

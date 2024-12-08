@@ -68,6 +68,7 @@ window.addEventListener("load", async function () {
             updateDisplay();
         });
     }
+    const cachedCategories = [];
     const updateDisplay = (categories) => {
         // update background
         output.style.background = `radial-gradient(circle, ${stop1.value} 0%, ${stop2.value} 88%, ${stop3.value} 100%)`;
@@ -118,11 +119,13 @@ window.addEventListener("load", async function () {
             output.style.transform = `scale(1)`;
         }
         
+        window.cachedCategories=cachedCategories;
         categories.forEach((cat, limit) => {
             let gallery = $($(".gallery")[limit]);
             gallery.empty();
             gallery.prev().toggleClass("missing", cat.length === 0);
             let exu_limit = limit === 3 && showUnlimited.checked ? "explicitlyUnlimited" : limit;
+            cachedCategories[limit] = [];
             cat.forEach(cardId => {
                 let card = {
                     ...CardViewer.Database.cards[cardId],
@@ -134,7 +137,8 @@ window.addEventListener("load", async function () {
                 if(!showTCGSymbol.checked) {
                     card.ocg = 1;
                 }
-                // console.log(card);
+                // console.log("HMMMM", cardId, card.name);
+                cachedCategories[limit].push(card);
                 let view = CardViewer.composeResultDeckPreview(card);
                 let holder = $("<div class=card-holder>");
                 holder.append(view);
@@ -145,6 +149,80 @@ window.addEventListener("load", async function () {
     
     $("#input textarea, #input input").on("input", ev => {
         updateDisplay();
+    });
+    
+    $("#sortEachBanlist").click(() => {
+        let textareas = [...$("#input textarea")];
+        for(let limit = 0; limit <= 3; limit++) {
+            let cards = cachedCategories[limit];
+            let sorted = CardViewer.naturalBanlistSort([...cards]);
+            let newValue = sorted.map(card => card.name).join("\n");
+            textareas[limit].value = newValue;
+        }
+        updateDisplay();
+    });
+    
+    const loadFromJSON = json => {
+        if(json.nameChanges) {
+            CardViewer.getCardByName("");
+            CardViewer.integrateNameChanges(json.nameChanges);
+        }
+        let textareas = [...$("#input textarea")];
+        for(let limit = 0; limit <= 3; limit++) {
+            textareas[limit].value = json.banlistChanges[limit]?.map(card => card.name)?.join("\n") ?? "";
+        }
+        
+        updateDisplay();
+    };
+        
+    let cachedJSON = null;
+    $("#loadFromText").click(() => {
+        let p = new Prompt("Load from text", () => $("<textarea>"), ["Submit", "Cancel"], "large");
+        p.deploy().then(data => {
+            let [ buttonIndex, , inner ] = data;
+            if(buttonIndex !== 0) {
+                return;
+            }
+            let value = inner.find("textarea").val();
+            let json = JSON.parse(value);
+            cachedJSON = json;
+            loadFromJSON(json);
+        });
+    });
+    
+    $("#saveAsText").click(() => {
+        let oldStatusByName = {};
+        if(cachedJSON) {
+            Object.entries(cachedJSON.banlistChanges).forEach(([limit, cards]) => {
+                for(let card of cards) {
+                    oldStatusByName[card.name] = card.oldStatus;
+                }
+            });
+        }
+        
+        const getOldLimit = card => {
+            return oldStatusByName[card.name] ?? card[CardViewer.getLimitProperty()];
+        };
+        
+        let result = "";
+        
+        const AMOUNTS = [":banlistbanned:", ":banlistlimited:", ":banlistsemilimited:", ":banlistunlimited:"];
+        
+        let textareas = [...$("#input textarea")];
+        textareas.forEach((textarea, limit) => {
+            textarea.value.split("\n").forEach(cardName => {
+                if(!cardName) {
+                    return; // skip
+                }
+                let card = CardViewer.getCardByName(cardName);
+                console.log(cardName, card);
+                result += `- ${card.name} ${AMOUNTS[getOldLimit(card)]} » ${AMOUNTS[limit]}\n`; 
+            });
+            result += "\n";
+        });
+        let p = new Prompt("Saved text", () => $("<textarea readonlys>").val(result), ["OK"], "large");
+        p.deploy();
+        
     });
     
     updateDisplay();

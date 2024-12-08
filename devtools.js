@@ -232,6 +232,124 @@ let onLoad = async function () {
     };
     $("#cardsToSpreadsheet").on("input", updateSpreadsheetOutput);
     updateSpreadsheetOutput();
+    
+    const updateCardGuess = (name, cardDisplay) => {
+        let guess = CardViewer.getCardByName(name);
+        if(guess) {
+            cardDisplay.empty();
+            cardDisplay.append(CardViewer.composeResultSmall(guess));
+        }
+        else {
+            cardDisplay.text("Could not find <" + name + ">");
+        }
+    };
+    const textBanlistState = {
+        missingCards: [],
+        changeMap: {},
+    };
+    const updateTextBanlistOutput = () => {
+        let val = $("#textBanlistInput").val();
+        if(!val) {
+            return;
+        }
+        
+        textBanlistState.missingCards = [];
+        textBanlistState.changeMap = {};
+        
+        let errored = false;
+        let errorMessages = [];
+        
+        val.split(/\r?\n/).forEach(line => {
+            if(line.startsWith("- ")) {
+                line = line.slice(2);
+            }
+            if(!line) {
+                return; // skip
+            }
+            let parts = line
+                .trim()
+                .match(/^(.+) ([0-3]\s*(?:>|->|>>)\s*[0-3])\s*$/);
+            if(!parts) {
+                errorMessages.push("Malformed line: " + line);
+                errored = true;
+                return;
+            }
+            let [ , name, statusChange ] = parts;
+            let oldStatus = statusChange.at(0);
+            let newStatus = statusChange.at(-1);
+            
+            let card = CardViewer.getCardByName(name);
+            
+            if(!card) {
+                textBanlistState.missingCards.push(name);
+            }
+            textBanlistState.changeMap[newStatus] ||= [];
+            textBanlistState.changeMap[newStatus].push({ name, oldStatus, newStatus });
+            // console.log(name, ";", oldStatus, ";", newStatus);
+        });
+        
+        if(errored) {
+            $("#textBanlistOutput").removeClass("hidden");
+            $("#missingCards").addClass("hidden");
+            $("#textBanlistOutput").val(errorMessages.join("\n"));
+            return;
+        }
+        
+        if(textBanlistState.missingCards.length > 0) {
+            $("#missingCards").removeClass("hidden");
+            $("#textBanlistOutput").addClass("hidden");
+            $("#missingCards tbody").empty();
+            for(let name of textBanlistState.missingCards) {
+                let row = $("<tr>");
+                let input = $("<input>");
+                let cardDisplay = $("<div>");
+                input.on("input", () => {
+                    updateCardGuess(input.val(), cardDisplay);
+                });
+                row.append($("<td>").text(name));
+                row.append($("<td>").append(input));
+                row.append($("<td>").append(cardDisplay));
+                $("#missingCards tbody").append(row);
+            }
+        }
+        else {
+            $("#missingCards").addClass("hidden");
+            finishTextBanlist();
+        }
+    };
+    
+    const finishTextBanlist = () => {
+        $("#textBanlistOutput").removeClass("hidden");
+        let finishedEntries = [...$("#missingCards input")].map(i => i.value);
+        let output = JSON.stringify({
+            nameChanges: textBanlistState.missingCards.map((newName, idx) => ({
+                before: finishedEntries[idx],
+                after: newName,
+            })),
+            banlistChanges: textBanlistState.changeMap, 
+        });
+        $("#textBanlistOutput").val(output);
+    };
+    
+    $("#submitMissingCards").on("click", finishTextBanlist);
+    $("#textBanlistInput").on("input", updateTextBanlistOutput);
+    updateTextBanlistOutput();
+    
+    $("#updateChanges").click(() => {
+        let p = new Prompt("Load from text", () => $("<textarea>"), ["Submit", "Cancel"], "large");
+        p.deploy().then(data => {
+            let [ buttonIndex, , inner ] = data;
+            if(buttonIndex !== 0) {
+                return;
+            }
+            let value = inner.find("textarea").val();
+            let json = JSON.parse(value);
+            CardViewer.integrateNameChanges(json.nameChanges);
+            CardViewer.integrateBanlistChanges(json.banlistChanges);
+            $("#cardsToSpreadsheet").val(Object.entries(json.banlistChanges).flatMap(([ limit, cards ]) => cards.map(card => card.name)).join("\n"));
+            updateSpreadsheetOutput();
+        });
+    });
 };
 
 window.addEventListener("load", onLoad);
