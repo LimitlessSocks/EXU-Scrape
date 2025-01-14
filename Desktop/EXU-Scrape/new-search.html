@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q3RKXFLZRZ');
+    </script>
+    <title>EXU Custom Query</title>
+    <meta charset="UTF-8">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/flowo" async></script>
+    <script src="./card-viewer.js"></script>
+    <!-- <script src="./deck.js"></script> -->
+    <script src="./tag-extract.js"></script>
+    <!-- <script src="./main.js"></script> -->
+    <script src="./new-search.js"></script>
+    <link rel="STYLESHEET" href="./card-viewer.css">
+    <!-- <link rel="STYLESHEET" href="./deck.css"> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3RKXFLZRZ"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        #container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        #container > div {
+            margin-top: 15px;
+        }
+        #output .result {
+            margin: 0;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        .hidden {
+            display: none;
+        }
+        .vr {
+            margin: 0 10px;
+            user-select: none;
+            border: 1px solid;
+            width: 0px;
+        }
+        #container .navigation {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 3px;
+            font-size: 26px;
+        }
+        .red-button {
+            background: #226600;
+            border: 3px dashed #cceeaa;
+        }
+        .red-button:hover {
+            background: #448822;
+        }
+        /*
+        #reference {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 70px;
+            height: 70px;
+        }
+        */
+        #reference {
+            float: right;
+            color: white;
+        }
+        .navigation button + button {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1 class="title" style="margin-bottom: 12px"><a href="./">EXU Custom Query</a></h1>
+
+<input id="search" class="large" placeholder="Try clicking [Reference] (right)!">
+<div id="container">
+    <div class="navigation">
+        <span class="search-stats">Showing <span class="cards-showing">X</span> of <span class="cards-total">Y</span> result(s)</span><span class="vr"></span><button class="hidden button-expand some">Expand 25</button><button class="hidden button-expand all">Expand all</button><button id="save-link">Share Search</button>
+        <a id="reference" target="_blank" href="./new-search-reference" class="fake-button red-button large">Reference</a>
+    </div>
+    
+    <div id="output" class="dense">Loading, please wait&hellip;</div>
+    
+    <div class="navigation hidden bottom">
+        <span class="search-stats">Showing <span class="cards-showing">X</span> of <span class="cards-total">Y</span> result(s)</span><span class="vr"></span><button class="hidden button-expand some">Expand 25</button><button class="hidden button-expand all">Expand all</button>
+    </div>
+</div>
+<div id="creditArt" class="square-button hidden">
+    <div id="creditArtToggle" class="toggleIcon"><img src="./res/art.png"/></div>
+    <input type="text" id="filterByInner" class="toggleable">
+    <!-- <div class="toggleIcon toggleable"><img src="./../res/plus.png"/><div id="tagContainer" class="popup">asdf</div></div> -->
+</div>
+<div id="options" class="square-button right-button">
+    <div id="showOptions" class="toggleIcon"><img src="./res/options.png" /></div>
+</div>
+</body>
+</html>

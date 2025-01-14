@@ -1,0 +1,165 @@
+[main] Created log file log/beta-07-03-2022.19.10.46.txt
+[main] Reading beta.json
+[main] Creating new file beta-date-added.json
+[main] Started scraping
+[main] Making ID requests
+[main] Finalizing ID requests
+[main] Waiting for results
+[main] Successfully read all decklists
+[10155707] Starting to parse 10155707
+[10155707] Finished scraping.
+[10254790] Starting to parse 10254790
+[10254790] warning: card id 3051671 (Mervitralitta - Bleu) is not public
+[10254790] warning: card id 3051656 (Mervitralitta - Claves) is not public
+[10254790] warning: card id 3051668 (Mervitralitta - Nina) is not public
+[10254790] warning: card id 3051553 (Mervitralitta - Rondo) is not public
+[10254790] warning: card id 3051672 (Mervitralitta - Sara) is not public
+[10254790] warning: card id 3051523 (Mervitralitta - Viola) is not public
+[10254790] warning: card id 3051696 (Mervitralitta Balancing) is not public
+[10254790] warning: card id 3051681 (Mervitralitta - Death) is not public
+[10254790] Finished scraping.
+[10370099] Starting to parse 10370099
+[10370099] Finished scraping.
+[10414701] Starting to parse 10414701
+[10414701] warning: card id 3110418 (Harbinger of Divergence) is not public
+[10414701] warning: card id 3112495 (Mania from Divergence) is not public
+[10414701] warning: card id 3112371 (Raging Divergence - Vengance) is not public
+[10414701] warning: card id 3112501 (Riches in Divergence) is not public
+[10414701] warning: card id 3110486 (Gate of Divergence) is not public
+[10414701] warning: card id 3112389 (Origin of Divergence - Castle Diverge) is not public
+[10414701] warning: card id 3112374 (Sacrifice in Divergence) is not public
+[10414701] warning: card id 3110526 (Sentinels of Divergence) is not public
+[10414701] warning: card id 3112534 (Wave of Divergence) is not public
+[10414701] Finished scraping.
+[10485188] Starting to parse 10485188
+[10485188] Finished scraping.
+[10572032] Starting to parse 10572032
+[10572032] Finished scraping.
+[10609802] Starting to parse 10609802
+[10609802] Finished scraping.
+[10674934] Starting to parse 10674934
+[10674934] Finished scraping.
+[10756626] Starting to parse 10756626
+[10756626] Finished scraping.
+[10782154] Starting to parse 10782154
+[10782154] Finished scraping.
+[10794326] Starting to parse 10794326
+[10794326] Finished scraping.
+[10830386] Starting to parse 10830386
+[10830386] Finished scraping.
+[10846956] Starting to parse 10846956
+[10846956] Finished scraping.
+[10859018] Starting to parse 10859018
+[10859018] Finished scraping.
+[10863998] Starting to parse 10863998
+[10863998] Finished scraping.
+[10875332] Starting to parse 10875332
+[10875332] warning: card id 3262470 (Elixir Born - Royal Ghost) is not public
+[10875332] warning: card id 3262426 (Elixir Born - Skeletons) is not public
+[10875332] warning: card id 3262456 (Elixir Born - Giant Skeleton) is not public
+[10875332] Finished scraping.
+[10879519] Starting to parse 10879519
+[10879519] Finished scraping.
+[10892283] Starting to parse 10892283
+[10892283] Finished scraping.
+[10917540] Starting to parse 10917540
+[10917540] Finished scraping.
+[10925034] Starting to parse 10925034
+[10925034] warning: card id 1377491 (Ally of Justice Contingency) is not public
+[10925034] warning: card id 1377500 (Ally of Justice Decontamination) is not public
+[10925034] warning: card id 1371066 (Ally of Justice Defensive Formation) is not public
+[10925034] warning: card id 1377495 (Ally of Justice Deflector Shield) is not public
+[10925034] warning: card id 1371061 (Ally of Justice Deployment) is not public
+[10925034] warning: card id 1371056 (Ally of Justice Emergency) is not public
+[10925034] warning: card id 1377531 (Ally of Justice Mechanic) is not public
+[10925034] warning: card id 1371029 (Ally of Justice Mobile Base) is not public
+[10925034] warning: card id 1377524 (Ally of Justice Nexus) is not public
+[10925034] warning: card id 1377519 (Ally of Justice Scout) is not public
+[10925034] warning: card id 1371054 (Ally of Justice Security Protocol) is not public
+[10925034] warning: card id 1377511 (Ally of Justice Shock Trooper) is not public
+[10925034] warning: card id 1371079 (Ally of Justice Sentinel) is not public
+[10925034] warning: card id 1371093 (Ally of Justice Tactician) is not public
+[10925034] warning: card id 1377485 (Ally of Justice Supreme Commander) is not public
+[10925034] Finished scraping.
+[10957934] Starting to parse 10957934
+[10957934] Finished scraping.
+[10971774] Starting to parse 10971774
+[10971774] Finished scraping.
+[10974636] Starting to parse 10974636
+[10974636] warning: card id 3285638 (Leviabyss' Barnacle Lord) is not public
+[10974636] warning: card id 3285345 (Leviabyss' Depther) is not public
+[10974636] warning: card id 3285342 (Leviabyss' Hydreadnought) is not public
+[10974636] warning: card id 3285413 (Leviabyss' Manglerfish) is not public
+[10974636] warning: card id 3285407 (Leviabyss' Megajaw) is not public
+[10974636] warning: card id 3285463 (Leviabyss' Seeker) is not public
+[10974636] warning: card id 3285781 (Leviabyss' Rogue Wave) is not public
+[10974636] warning: card id 3286572 (Leviabyss' Waterspout) is not public
+[10974636] warning: card id 3285779 (Leviabyss' Nest) is not public
+[10974636] warning: card id 3285607 (Leviabyss' King Cesus) is not public
+[10974636] Finished scraping.
+[10998117] Starting to parse 10998117
+[10998117] Finished scraping.
+[11006625] Starting to parse 11006625
+[11006625] Finished scraping.
+[11019890] Starting to parse 11019890
+[11019890] note: property 'name' of card id 3309809 (Dual Fusion) was changed
+[11019890] from: Twin Polymerization
+[11019890] to: Dual Fusion
+[11019890] note: property 'effect' of card id 3309809 (Dual Fusion) was changed
+[11019890] from: (This card's name is always treated as"Polymerization".)
+Apply this effect twice.
+● Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from your hand or field as Fusion Material.
+[11019890] to: Apply this effect twice.
+● Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from your hand or field as Fusion Material.
+[11019890] Finished scraping.
+[11026619] Starting to parse 11026619
+[11026619] warning: card id 3144272 (FiM Spike, Dragon Assistant) is not public
+[11026619] Finished scraping.
+[11032208] Starting to parse 11032208
+[11032208] Finished scraping.
+[11034871] Starting to parse 11034871
+[11034871] Finished scraping.
+[5150448] Starting to parse 5150448
+[5150448] Finished scraping.
+[5192096] Starting to parse 5192096
+[5192096] warning: card id 1142504 (Phantasm Spiral Roar) is not public
+[5192096] warning: card id 1406453 (Phantasm Spiral Force) is not public
+[5192096] warning: card id 1406552 (Phantasm Spiral Demise) is not public
+[5192096] Finished scraping.
+[5619459] Starting to parse 5619459
+[5619459] Finished scraping.
+[6591476] Starting to parse 6591476
+[6591476] Finished scraping.
+[7432421] Starting to parse 7432421
+[7432421] Finished scraping.
+[7443406] Starting to parse 7443406
+[7443406] note: [+] added new card 2953665 (Elementsaber Molehu Mana)
+[7443406] note: [+] added new card 3262879 (Elite PSY-Framegear Iota)
+[7443406] note: [+] added new card 3243080 (The Doctor's Familiar)
+[7443406] note: [+] added new card 3224844 (Valkyrion the Power Magna Warrior)
+[7443406] note: [+] added new card 3302664 (Ghastly Maw)
+[7443406] note: [+] added new card 3280727 (Invocation Magnus)
+[7443406] note: [+] added new card 3258945 (Skyraptor Slaughter)
+[7443406] note: [+] added new card 3287688 (Wild Hunt Assault)
+[7443406] note: [+] added new card 3277164 (Und-oing the Competition)
+[7443406] note: [+] added new card 3259047 (Iterator 61: Skyraptor Silentwind Selector)
+[7443406] note: [+] added new card 2918773 (Neon Apatite Riftchaser, Ronan)
+[7443406] note: [+] added new card 3266295 (Supermegalodon - Yonghe Lama)
+[7443406] note: [+] added new card 2953652 (Elemental Lord Betrayer Elementsaber Molehu)
+[7443406] note: [+] added new card 3294203 (Parallel Circuit Watcher)
+[7443406] note: [+] added new card 3276976 (Solomons Studies, The Publisher)
+[7443406] Finished scraping.
+[9439877] Starting to parse 9439877
+[9439877] Finished scraping.
+[9673459] Starting to parse 9673459
+[9673459] Finished scraping.
+[9779554] Starting to parse 9779554
+[9779554] warning: card id 2887588 (Dragonaire Purificalling) is not public
+[9779554] Finished scraping.
+[main] filling in missing exu_limit
+[main] Time elapsed: 9.6884819s
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["3309809", "3309809"]
+[interact] Keypress: "i"
+[interact] No action taken
+[interact] Exiting interaction

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q3RKXFLZRZ');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3RKXFLZRZ"></script>
+    <meta charset="UTF-8">
+    <title>EXU Logo Generation</title>
+    <link rel="STYLESHEET" href="./../card-viewer.css">
+    <!-- <script -->
+			  <!-- src="https://code.jquery.com/jquery-3.4.1.min.js" -->
+			  <!-- integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" -->
+			  <!-- crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.2.2/jszip.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <script src="http://evanw.github.io/glfx.js/glfx.js"></script>
+    <script src="./../card-viewer.js"></script>
+    <script src="./logo.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        #raw-output {
+            display: none;
+        }
+        #scaled-output {
+            
+        }
+        select { 
+            width: auto;
+        }
+        #method-options {
+            padding: 15px;
+        }
+        #method-options {
+            display: none;
+        }
+        h2 {
+            font-family: "Press Start 2P";
+        }
+        #save-gen {
+            <!-- font-family: ""; -->
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title"><a href="./">EXU Graphics</a></h1>
+    <h2>Logo Generation</h2>
+    <label for="method">Method: </label><select id="method">
+        <option value=""></option>
+        <option value="arch">Archetype Display</option>
+        <option value="showcase">Card/Archetype Showcase</option>
+        <option value="ladder">Ladder Champion</option>
+        <!-- <option value="banner">Banner</option> -->
+    </select> <button id="save-gen">Save generated</button>
+    <div id="status"></div>
+    <div id="method-options">
+        <div class="if-arch">
+            <div>
+                <label for="arch-tag"><strong>Generate one: </strong>Tagline: <input id="arch-tag"></label>
+                <label for="arch-main-id">Main ID: <input type="number" id="arch-main-id"></label>
+                <label for="arch-side-id">Side ID: <input type="number" id="arch-side-id"></label>
+                <button id="arch-generate">Generate Single</button>
+            </div>
+            <div>
+                <label for="arch-file-input"><strong>Generate Multiple: </strong>Upload .txt file: <input id="arch-file-input" type="file" accept=".txt"></label>
+                <button id="arch-generate-file">Generate Multiple</button>
+            </div>
+        </div>
+        <div class="if-showcase">
+            <div>
+                <label for="showcase-background">Background (1920x1080): <input id="showcase-background" type="file" accept="image/*"></label>
+                <label for="showcase-card">Card image: <input id="showcase-card" type="file" accept="image/*"></label>
+            </div>
+            <div>
+                <label for="showcase-header">Header: <input id="showcase-header"></label>
+                <label for="showcase-content">Content: <input id="showcase-content"></label>
+                <button id="showcase-generate">Generate</button>
+            </div>
+        </div>
+        <div class="if-ladder">
+            <div>
+                <label for="ladder-main-id">Primary ID: <input type="number" id="ladder-main-id"></label>
+                <label for="ladder-side-id">Background ID: <input type="number" id="ladder-side-id"></label>
+            </div>
+            <div>
+                <label for="ladder-header">Header: <input id="ladder-header"></label>
+                <label for="ladder-content">Name: <input id="ladder-content"></label>
+                <button id="ladder-generate">Generate</button>
+            </div>
+        </div>
+        <div class="if-banner">
+            
+        </div>
+    </div>
+    <div>
+        <canvas id="scaled-output" width="50" height="50"></canvas>
+        <canvas id="raw-output" width="50" height="50"></canvas>
+    </div>
+</body>
+</html>

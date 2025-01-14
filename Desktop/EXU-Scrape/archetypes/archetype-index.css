@@ -1,0 +1,36 @@
+.deck-link-listing {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+.deck-link {
+    width: 320px;
+    /* text-align: left; */
+    background: rgba(75,75,75,0.8);
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: spread-between;
+    border-radius: 10px;
+    transition: background 100ms, box-shadow 100ms;
+    padding-left: 7px;
+    margin: 20px;
+    cursor: pointer;
+}
+.deck-link img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+.deck-link p {
+    margin: 10px;
+}
+.deck-link:hover {
+    background: rgba(130,100,100,0.8);
+    box-shadow: 0 0 10px rgb(160,130,130);
+}
+.deck-link, .deck-link:visited {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+}

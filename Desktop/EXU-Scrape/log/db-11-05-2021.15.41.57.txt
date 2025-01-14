@@ -1,0 +1,2054 @@
+[main] Created log file log/db-11-05-2021.15.41.57.txt
+[main] Reading db.json
+[main] Reading db-date-added.json
+[main] Started scraping
+[main] Making ID requests
+[main] Finalizing ID requests
+[main] Waiting for results
+[2166281] Starting to parse 2166281
+[2166281] warning: card id 8463 (Black Fang Magician) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 6634 (Odd-Eyes Pendulum Dragon) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 3283 (Peten the Dark Clown) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7766 (The Phantom Knights of Cloven Helm) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7766 (The Phantom Knights of Cloven Helm) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7767 (The Phantom Knights of Fragile Armor) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7767 (The Phantom Knights of Fragile Armor) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7765 (The Phantom Knights of Ragged Gloves) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7765 (The Phantom Knights of Ragged Gloves) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7764 (The Phantom Knights of Silent Boots) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7764 (The Phantom Knights of Silent Boots) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 82 (Allure of Darkness) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 1236 (Double Summon) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8381 (Foolish Burial Goods) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 2695 (Magical Stone Excavation) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 2954 (Monster Reincarnation) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 4158 (Swords of Revealing Light) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8233 (The Phantom Knights' Rank-Up-Magic Launch) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8233 (The Phantom Knights' Rank-Up-Magic Launch) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 2909 (Mirror Force) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7770 (Phantom Knights' Fog Blade) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7772 (Phantom Knights' Wing) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8534 (The Phantom Knights of Lost Vambrace) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7835 (The Phantom Knights of Shade Brigandine) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 6806 (The Phantom Knights of Shadow Veil) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8535 (The Phantom Knights of Wrong Magnetring) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7728 (Pendulum Reborn) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 6786 (Dark Rebellion Xyz Dragon) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 6786 (Dark Rebellion Xyz Dragon) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8228 (Dark Requiem Xyz Dragon) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8228 (Dark Requiem Xyz Dragon) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8651 (Supreme King Dragon Dark Rebellion) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8651 (Supreme King Dragon Dark Rebellion) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 7768 (The Phantom Knights of Break Sword) was duplicated in <2166281> from <2166281>
+[2166281] warning: card id 8510 (The Phantom Knights of Cursed Javelin) was duplicated in <2166281> from <2166281>
+[2166281] Finished scraping.
+[2775342] Starting to parse 2775342
+[2775342] Finished scraping.
+[2795851] Starting to parse 2795851
+[2795851] note: property 'level' of card id 124098 (Conqueror Femme, the Incinerating Phoenix) was changed
+[2795851] from: 7
+[2795851] to: 8
+[2795851] Finished scraping.
+[2952495] Starting to parse 2952495
+[2952495] Finished scraping.
+[3068977] Starting to parse 3068977
+[3068977] note: property 'effect' of card id 406392 (Nekojishi - Liao) was changed
+[3068977] from: Cannot be Normal Summoned/Set. Must first be Special Summoned by a "Nekojishi" card effect. When your "Nekojishi" monster destroys an opponent's monster by battle, or when the opponent takes damage from a battle involving your "Nekojishi" monster: You can Special Summon this card from your hand or your GY. During the Battle Phase, you can (Quick Effect): Immediately after this effect resolves, Synchro Summon 1 "Nekojishi" Synchro Monster using this card you control. You can only use each effect of "Nekojishi - Liao" once per turn.
+[3068977] to: Cannot be Normal Summoned/Set. Must first be Special Summoned by a card effect. When your "Nekojishi" monster destroys an opponent's monster by battle, or when the opponent takes damage from a battle involving your "Nekojishi" monster: You can Special Summon this card from your hand or your GY. During the Battle Phase, you can (Quick Effect): Immediately after this effect resolves, Synchro Summon 1 "Nekojishi" Synchro Monster using this card you control. You can only use each effect of "Nekojishi - Liao" once per turn.
+[3068977] note: property 'effect' of card id 417900 (Nekojishi - Cafeteria) was changed
+[3068977] from: You cannot activate this card if you control a Continuous Spell that does not list "Nekojishi" in its name or text. All "Nekojishi" monsters you control gain 200 ATK. The activation of your "Nekojishi" monsters' effects in this card's column cannot be negated. Once per turn: You can Special Summon 1 "Nekojishi" monster from your hand. You can only control 1 "Nekojishi - Cafeteria".
+[3068977] to: All "Nekojishi" monsters you control gain 200 ATK. The activation of your "Nekojishi" monsters' effects in this card's column cannot be negated. Once per turn: You can Special Summon 1 "Nekojishi" monster from your hand. You can only control 1 "Nekojishi - Cafeteria".
+[3068977] note: property 'effect' of card id 417877 (Nekojishi - Forest Trail) was changed
+[3068977] from: You cannot activate this card if you control a Continuous Spell that does not list "Nekojishi" in its name or text. All "Nekojishi" monsters you control gain 200 ATK. Your "Nekojishi" monsters in this card's column cannot be destroyed by card effects. If you Synchro Summon a "Nekojishi" monster: You can target 1 card your opponent controls; destroy that target. You can only control 1 "Nekojishi - Forest Trail".
+[3068977] to: All "Nekojishi" monsters you control gain 200 ATK. Your "Nekojishi" monsters in this card's column cannot be destroyed by card effects. If you Synchro Summon a "Nekojishi" monster: You can target 1 card your opponent controls; destroy that target. You can only control 1 "Nekojishi - Forest Trail".
+[3068977] note: property 'effect' of card id 417889 (Nekojishi - Hot Springs) was changed
+[3068977] from: You cannot activate this card if you control a Continuous Spell that does not list "Nekojishi" in its name or text. All "Nekojishi" monsters you control gain 200 ATK. Your "Nekojishi" monsters in this card's column are unaffected by your opponent's card effects that would make them leave the field without being destroyed or being sent to the GY. Once per turn, if you control no monsters: You can Special Summon 1 "Nekojishi" monster from your GY. You can only control 1 "Nekojishi - Hot Springs".
+[3068977] to: All "Nekojishi" monsters you control gain 200 ATK. Your "Nekojishi" monsters in this card's column are unaffected by your opponent's card effects that would make them leave the field without being destroyed or being sent to the GY. Once per turn, if you control no monsters: You can Special Summon 1 "Nekojishi" monster from your GY. You can only control 1 "Nekojishi - Hot Springs".
+[3068977] note: property 'effect' of card id 417907 (Nekojishi - Liao's Bedroom) was changed
+[3068977] from: You cannot activate this card if you control a Continuous Spell that does not list "Nekojishi" in its name or text. All "Nekojishi" monsters you control gain 200 ATK. At the start of the Damage Step, if a "Nekojishi" monster in this card's column attacks an opponent's monster: Return that opponent's monster to the hand. Once per turn: You can discard 1 "Nekojishi" monster; draw 2 cards. You can only control 1 "Nekojishi - Liao's Bedroom".
+[3068977] to: All "Nekojishi" monsters you control gain 200 ATK. At the start of the Damage Step, if a "Nekojishi" monster in this card's column attacks an opponent's monster: Return that opponent's monster to the hand. Once per turn: You can discard 1 "Nekojishi" monster; draw 2 cards. You can only control 1 "Nekojishi - Liao's Bedroom".
+[3068977] note: property 'effect' of card id 417866 (Nekojishi - Marketplace) was changed
+[3068977] from: You cannot activate this card if you control a Continuous Spell that does not list "Nekojishi" in its name or text. All "Nekojishi" monsters you control gain 200 ATK. If a "Nekojishi" monster in this card's column battles, your opponent cannot activate cards or effects until the end of the Damage Step. Once per turn: You can Special Summon 1 "Nekojishi Token" (Beast-Warrior/EARTH/Level 1/ATK 0/DEF 0), but it cannot be used as Link Material, except for the Link Summon of a "Nekojishi" monster. You can only control 1 "Nekojishi - Marketplace".
+[3068977] to: All "Nekojishi" monsters you control gain 200 ATK. If a "Nekojishi" monster in this card's column battles, your opponent cannot activate cards or effects until the end of the Damage Step. Once per turn: You can Special Summon 1 "Nekojishi Token" (Beast-Warrior/EARTH/Level 1/ATK 0/DEF 0), but it cannot be used as Link Material, except for the Link Summon of a "Nekojishi" monster. You can only control 1 "Nekojishi - Marketplace".
+[3068977] note: property 'effect' of card id 621300 (Nekojishi - Randolph) was changed
+[3068977] from: 1 Level 4 or lower "Nekojishi" monster
+During your Main Phase 1: You can banish this face-up card until your next Battle Phase. If this card is Link Summoned: You can target 1 "Nekojishi" Continuous Spell you control; send it to the GY, then place 1 "Nekojishi" Continuous Spell from your GY with a different name than that sent card in your Spell & Trap Zone face-up. (Quick Effect): You can move this card you control to another of your Main Monster Zones. You can only use each effect of "Nekojishi - Randolph" once per turn.
+[3068977] to: 1 Level 4 or lower "Nekojishi" monster
+During your Main Phase 1: You can banish this face-up card until your next Battle Phase. If this card is Link Summoned: You can target 1 Continuous Spell you control; send it to the GY, then place 1 "Nekojishi" Continuous Spell from your GY with a different name than that sent card in your Spell & Trap Zone face-up. (Quick Effect): You can move this card you control to another of your Main Monster Zones. You can only use each effect of "Nekojishi - Randolph" once per turn.
+[3068977] Finished scraping.
+[3734721] Starting to parse 3734721
+[3734721] Finished scraping.
+[3890554] Starting to parse 3890554
+[3890554] warning: card id 3951 (Sparks) was duplicated in <3890554> from <3890554>
+[3890554] warning: card id 3951 (Sparks) was duplicated in <3890554> from <3890554>
+[3890554] Finished scraping.
+[4016329] Starting to parse 4016329
+[4016329] Finished scraping.
+[4026672] Starting to parse 4026672
+[4026672] Finished scraping.
+[4177191] Starting to parse 4177191
+[4177191] Finished scraping.
+[4237940] Starting to parse 4237940
+[4237940] Finished scraping.
+[4294973] Starting to parse 4294973
+[4294973] Finished scraping.
+[4355718] Starting to parse 4355718
+[4355718] Finished scraping.
+[4406016] Starting to parse 4406016
+[4406016] Finished scraping.
+[4460492] Starting to parse 4460492
+[4460492] Finished scraping.
+[4475780] Starting to parse 4475780
+[4475780] Finished scraping.
+[4493192] Starting to parse 4493192
+[4493192] Finished scraping.
+[4523067] Starting to parse 4523067
+[4523067] Finished scraping.
+[4587548] Starting to parse 4587548
+[4587548] Finished scraping.
+[4604736] Starting to parse 4604736
+[4604736] Finished scraping.
+[4667428] Starting to parse 4667428
+[4667428] Finished scraping.
+[4757288] Starting to parse 4757288
+[4757288] Finished scraping.
+[4769548] Starting to parse 4769548
+[4769548] Finished scraping.
+[4804758] Starting to parse 4804758
+[4804758] Finished scraping.
+[4805092] Starting to parse 4805092
+[4805092] Finished scraping.
+[4806770] Starting to parse 4806770
+[4806770] Finished scraping.
+[4810529] Starting to parse 4810529
+[4810529] Finished scraping.
+[4825931] Starting to parse 4825931
+[4825931] note: [+] added new card 2715509 (Fishin' Pest)
+[4825931] note: [+] added new card 2715585 (Fishin' Tranquility)
+[4825931] Finished scraping.
+[4910893] Starting to parse 4910893
+[4910893] Finished scraping.
+[4936132] Starting to parse 4936132
+[4936132] Finished scraping.
+[4960158] Starting to parse 4960158
+[4960158] Finished scraping.
+[5075635] Starting to parse 5075635
+[5075635] Finished scraping.
+[5109480] Starting to parse 5109480
+[5109480] Finished scraping.
+[5187975] Starting to parse 5187975
+[5187975] Finished scraping.
+[5194131] Starting to parse 5194131
+[5194131] Finished scraping.
+[5219266] Starting to parse 5219266
+[5219266] Finished scraping.
+[5260210] Starting to parse 5260210
+[5260210] Finished scraping.
+[5297494] Starting to parse 5297494
+[5297494] Finished scraping.
+[5323883] Starting to parse 5323883
+[5323883] note: property 'effect' of card id 1412161 (Digitallias Odd The Feline) was changed
+[5323883] from: "Digitallias Odd Della Robbia" + 1 Cyberse monsterCannot be used as Fusion Material the turn it is Special Summoned. Must be Special Summoned (from your Extra Deck) by sending the above cards you control to the GY. (You do not use "Polymerization".) If this card inflicts damage to your opponent: You can add 1 "Digitallias" monster from your Deck to your hand. You can only use this effect of "Digitallias Odd The Feline" once per turn.
+[5323883] to: "Digitallias Odd Della Robbia" + 1 Cyberse monster
+Cannot be used as Fusion Material the turn it is Special Summoned. Must be Special Summoned (from your Extra Deck) by sending the above cards you control to the GY. (You do not use "Polymerization".) When this card or a "Digitallias" monster(s) is Summoned: You can target 1 Spell/Trap Card your opponent controls; destroy it. If a "Digitallias" monster(s) you control would be destroyed by battle or card effect, you can banish this card from your GY instead. You can only use each effect of "Digitallias Odd The Feline" once per turn.
+[5323883] Finished scraping.
+[5416935] Starting to parse 5416935
+[5416935] Finished scraping.
+[5496883] Starting to parse 5496883
+[5496883] Finished scraping.
+[5541683] Starting to parse 5541683
+[5541683] Finished scraping.
+[5541864] Starting to parse 5541864
+[5541864] Finished scraping.
+[5549562] Starting to parse 5549562
+[5549562] Finished scraping.
+[5571430] Starting to parse 5571430
+[5571430] Finished scraping.
+[5597068] Starting to parse 5597068
+[5597068] Finished scraping.
+[5601607] Starting to parse 5601607
+[5601607] note: property 'effect' of card id 1521961 (Chaos Performer Drogford) was changed
+[5601607] from: You can send 1 "Chaos Performer" card from your hand or field to the GY; Special Summon this card from your hand or GY, but return this card to the hand during your opponent's End Phase. (Quick Effect): You can reveal your hand until the End Phase; Your opponent must choose 1 of the following effects to apply as this effect.
+● Your opponent's monsters cannot target "Chaos Performer" monsters for attacks or card effects for the rest of this turn, except "Chaos Performer Drogford".
+● "Chaos Performer" monsters you control gain 700 ATK/DEF until the end of this turn.
+If a "Chaos Performer" Spell/Trap is activated, or if a "Chaos Performer" monster is Special Summoned: You can target 2 cards in your opponent's GY; banish them. You can only use each effect of "Chaos Performer Drogford" once per turn.
+[5601607] to: You can send 1 other "Chaos Performer" card from your hand or field to the GY; Special Summon this card from your hand or GY, but return this card to the hand during your opponent's End Phase. (Quick Effect): You can reveal your hand until the End Phase; Your opponent must choose 1 of the following effects to apply as this effect.
+● Your opponent's monsters cannot target "Chaos Performer" monsters for attacks or card effects for the rest of this turn, except "Chaos Performer Drogford".
+● "Chaos Performer" monsters you control gain 700 ATK/DEF until the end of this turn.
+If a "Chaos Performer" Spell/Trap is activated, or if a "Chaos Performer" monster is Special Summoned: You can target 2 cards in your opponent's GY; banish them. You can only use each effect of "Chaos Performer Drogford" once per turn.
+[5601607] note: property 'effect' of card id 1515101 (Chaos Performer Rindoki) was changed
+[5601607] from: You can send 1 "Chaos Performer" card from your hand or field to the GY; Special Summon this card from your hand or GY, but return it to the hand during your opponent's End Phase. (Quick Effect): You can reveal your hand until the End Phase; your opponent chooses 1 of these effects to apply as this effect.
+● Face-up "Chaos Performer" monsters you control cannot be destroyed by battle or card effects for the rest of this turn, except "Chaos Performer Rindoki".
+● Face-up monsters your opponent controls lose 500 ATK/DEF until the end of this turn.
+If a "Chaos Performer" Spell/Trap is activated, OR if a "Chaos Performer" monster(s) is Special Summoned: You can draw 1 card, then shuffle 1 card from your hand into the Deck. You can only use each effect of "Chaos Performer Rindoki" once per turn
+[5601607] to: You can send 1 other "Chaos Performer" card from your hand or field to the GY; Special Summon this card from your hand or GY, but return it to the hand during your opponent's End Phase. (Quick Effect): You can reveal your hand until the End Phase; your opponent chooses 1 of these effects to apply as this effect.
+● Face-up "Chaos Performer" monsters you control cannot be destroyed by battle or card effects for the rest of this turn, except "Chaos Performer Rindoki".
+● Face-up monsters your opponent controls lose 500 ATK/DEF until the end of this turn.
+If a "Chaos Performer" Spell/Trap is activated, OR if a "Chaos Performer" monster(s) is Special Summoned: You can draw 1 card, then shuffle 1 card from your hand into the Deck. You can only use each effect of "Chaos Performer Rindoki" once per turn
+[5601607] Finished scraping.
+[5615821] Starting to parse 5615821
+[5615821] Finished scraping.
+[5615949] Starting to parse 5615949
+[5615949] Finished scraping.
+[5642481] Starting to parse 5642481
+[5642481] Finished scraping.
+[5647256] Starting to parse 5647256
+[5647256] Finished scraping.
+[5659403] Starting to parse 5659403
+[5659403] Finished scraping.
+[5668288] Starting to parse 5668288
+[5668288] Finished scraping.
+[5675322] Starting to parse 5675322
+[5675322] Finished scraping.
+[5700651] Starting to parse 5700651
+[5700651] Finished scraping.
+[5705030] Starting to parse 5705030
+[5705030] Finished scraping.
+[5713627] Starting to parse 5713627
+[5713627] Finished scraping.
+[5731990] Starting to parse 5731990
+[5731990] Finished scraping.
+[5736933] Starting to parse 5736933
+[5736933] note: property 'effect' of card id 1574246 (Armatos Legio Magnus Dux) was changed
+[5736933] from: 3+ "Armatos Legio" monsters
+You can target cards on the field and/or GY, up to the number of monsters linked to this card; return them to the hand. If your opponent activates a Link Monster's effect while this card is linked (Quick Effect): You can negate the activation, and if you do, destroy it. You can only use each effect of "Armatos Legio Magnus Dux" once per turn.
+[5736933] to: 3+ "Armatos Legio" monsters
+You can target cards on the field and/or GY, up to the number of monsters linked to this card; return them to the hand. When your opponent activates a Link Monster's effect while this card is linked (Quick Effect): You can negate the activation, and if you do, destroy it. You can only use each effect of "Armatos Legio Magnus Dux" once per turn.
+[5736933] Finished scraping.
+[5744520] Starting to parse 5744520
+[5744520] Finished scraping.
+[5749949] Starting to parse 5749949
+[5749949] Finished scraping.
+[5751277] Starting to parse 5751277
+[5751277] Finished scraping.
+[5766412] Starting to parse 5766412
+[5766412] Finished scraping.
+[5781120] Starting to parse 5781120
+[5781120] Finished scraping.
+[5782891] Starting to parse 5782891
+[5782891] Finished scraping.
+[5793524] Starting to parse 5793524
+[5793524] Finished scraping.
+[5822335] Starting to parse 5822335
+[5822335] Finished scraping.
+[5830740] Starting to parse 5830740
+[5830740] Finished scraping.
+[5833853] Starting to parse 5833853
+[5833853] Finished scraping.
+[5834507] Starting to parse 5834507
+[5834507] Finished scraping.
+[5839316] Starting to parse 5839316
+[5839316] Finished scraping.
+[5844326] Starting to parse 5844326
+[5844326] Finished scraping.
+[5855756] Starting to parse 5855756
+[5855756] note: [+] added new card 12064 (Swordsoul of Mo Ye)
+[5855756] Finished scraping.
+[5856014] Starting to parse 5856014
+[5856014] note: [+] added new card 12100 (Destiny HERO - Destroyer Phoenix Enforcer)
+[5856014] Finished scraping.
+[5857248] Starting to parse 5857248
+[5857248] Finished scraping.
+[5857281] Starting to parse 5857281
+[5857281] Finished scraping.
+[5857285] Starting to parse 5857285
+[5857285] note: [+] added new card 5671 (Fire Formation - Tenki)
+[5857285] Finished scraping.
+[5860293] Starting to parse 5860293
+[5860293] Finished scraping.
+[5868144] Starting to parse 5868144
+[5868144] Finished scraping.
+[5869257] Starting to parse 5869257
+[5869257] Finished scraping.
+[5884678] Starting to parse 5884678
+[5884678] Finished scraping.
+[5887296] Starting to parse 5887296
+[5887296] Finished scraping.
+[5894044] Starting to parse 5894044
+[5894044] Finished scraping.
+[5895579] Starting to parse 5895579
+[5895579] note: property 'effect' of card id 1985232 (Blazing Aura) was changed
+[5895579] from: Each player can only activate 1 Spell/Trap Card or effect per turn. Once per turn, during the Standby Phase, you must pay 1200 LP (this is not optional) or this card is destroyed.
+[5895579] to: Each player can only activate 1 Spell/Trap Card or effect on the field per turn. Once per turn, during the Standby Phase, you must pay 1200 LP (this is not optional) or this card is destroyed.
+[5895579] note: property 'effect' of card id 2218012 (Noble Knight Lefay) was changed
+[5895579] from: 2 Warrior monsters, including a "Noble Knight" monster
+If this card is Link Summoned: You can add 1 "Noble Knight" monster from your Deck to your hand, but for the rest of this turn, you cannot Normal Summon/Set or Special Summon monsters with that name, nor activate their monster effects. You can send any number of Equip Spells with different names from your Deck to the GY; Special Summon 1 "Noble Knight" monster from your Deck, whose Level equals the number of cards sent to the GY. You can only use each effect of "Noble Knight Lefay" once per turn, also you cannot Special Summon monsters the turn you activate this effect, except "Noble Knight" monsters.
+[5895579] to: 2 Warrior monsters, including a "Noble Knight" monster
+If this card is Link Summoned: You can add 1 "Noble Knight" monster from your Deck to your hand, but for the rest of this turn, you cannot Normal Summon/Set or Special Summon monsters with that name. You can send any number of Equip Spells with different names from your Deck to the GY; Special Summon 1 "Noble Knight" monster from your Deck, whose Level equals the number of cards sent to the GY. You can only use each effect of "Noble Knight Lefay" once per turn, also you cannot Special Summon monsters the turn you activate this effect, except monsters that specifically list a "Noble Knight" monster in their text.
+[5895579] Finished scraping.
+[5895706] Starting to parse 5895706
+[5895706] Finished scraping.
+[5904696] Starting to parse 5904696
+[5904696] note: property 'effect' of card id 1635283 (Advanced Contraption: Ausilio) was changed
+[5904696] from: Cannot be Normal Summoned/Set. You can reveal 1 other "Contraption" card in your hand; Special Summon this card from your hand. If this card is Special Summoned: You can Set 1 "Contraption" Spell/Trap Card from your hand. It can be activated this turn. If a "Contraption" card(s) would be destroyed, you can banish this card from your GY instead. You can only use each effect of "Advanced Contraption: Ausilio" once per turn.
+[5904696] to: Cannot be Normal Summoned/Set. You can reveal 1 other "Contraption" card in your hand; shuffle it into the Deck, and if you do, Special Summon this card from your hand. If this card is Special Summoned from the hand: You can Set 1 "Contraption" Spell/Trap Card from your hand. It can be activated this turn. If a "Contraption" card(s) would be destroyed, you can banish this card from your GY instead. You can only use each effect of "Advanced Contraption: Ausilio" once per turn.
+[5904696] note: property 'effect' of card id 1637471 (Mysterious Contraption: Animato) was changed
+[5904696] from: Cannot be Normal Summoned/Set. You can reveal 1 other "Contraption" card in your hand; shuffle it into the Deck, and if you do, Special Summon this card from your hand. If this card is Special Summoned: You can Set 1 "Contraption" Spell/Trap Card from your Deck. It can be activated this turn. If a Machine monster you controls battles an opponent's monster (Quick Effect): You can banish this card from your GY; double your battling monster's ATK until the End Phase, but any battle damage dealt from that battle is halved. You can only use each effect of "Mysterious Contraption: Animato" once per turn.
+[5904696] to: Cannot be Normal Summoned/Set. You can reveal 1 other "Contraption" card in your hand; shuffle it into the Deck, and if you do, Special Summon this card from your hand. If this card is Special Summoned from the hand: You can Set 1 "Contraption" Spell/Trap Card from your Deck. It can be activated this turn. If a "Contraption" monster you controls battles an opponent's monster (Quick Effect): You can banish this card from your GY; double your battling monster's ATK until the End Phase, but any battle damage dealt from that battle is halved. You can only use each effect of "Mysterious Contraption: Animato" once per turn.
+[5904696] note: property 'effect' of card id 2283949 (Supporting Contraption: Gendarme) was changed
+[5904696] from: Cannot be Normal Summoned/Set. Must be Special Summoned by a card effect. You cannot Summon monsters from your hand the turn you Special Summon this card, except "Contraption" monsters. You can only use each of the following effects of "Supporting Contraption: Gendarme" once per turn. You can reveal this card and 1 other "Contraption" card in your hand; Special Summon this card. If this card is Special Summoned: You can add 1 "Contraption" card from your Deck to your hand. If you control a "S.I.E Contraption" monster, while this card is in your GY (Quick Effect): You can banish this card, then target 1 card on the field; destroy it.
+[5904696] to: Cannot be Normal Summoned/Set. Must be Special Summoned by a card effect. You cannot Summon monsters from your hand the turn you Special Summon this card, except "Contraption" monsters. You can only use each of the following effects of "Supporting Contraption: Gendarme" once per turn. You can reveal this card and 1 other "Contraption" card in your hand; shuffle the second card revealed to activate this effect into the Deck, and if you do, Special Summon this card. If this card is Special Summoned from the hand: You can add 1 "Contraption" monster from your Deck to your hand. If you control a "S.I.E Contraption" monster, while this card is in your GY (Quick Effect): You can banish this card, then target 1 card on the field; destroy it.
+[5904696] note: property 'effect' of card id 2067498 (S.I.E Contraption: Mastro Libero) was changed
+[5904696] from: 2 Machine monsters with different Attributes, including 1 "Contraption" monster
+(This card is also always treated as a WATER monster.) 
+Must first be Fusion Summoned, OR Special Summoned (from your Extra Deck) by sending the above cards you control to the GY. If this card is Summoned using only "Contraption" monsters as material: You can target 1 "Contraption" monster in your GY; Special Summon it. (Quick Effect): You can target face-up cards on the field, up to the number of face-up "Contraption" cards you control; negate their effects until the End Phase. You cannot Summon non-"Contraption" monsters the turn you activate this effect, except Machine monsters and Trap Cards with effects that Special Summon themselves as monsters. You can only use each effect of "S.I.E Contraption: Mastro Libero" once per turn.
+[5904696] to: 2 Machine monsters with different Attributes, including 1 "Contraption" monster
+(This card is also always treated as a WATER monster.) 
+Must first be Fusion Summoned, OR Special Summoned (from your Extra Deck) by sending the above cards you control to the GY. If this card is Summoned using only "Contraption" monsters as material: You can target 1 "Contraption" monster in your GY; Special Summon it. (Quick Effect): You can target face-up cards on the field, up to the number of face-up "Contraption" cards you control; negate their effects until the End Phase. You cannot Summon non-"Contraption" monsters the turn you activate this effect, except Machine monsters and Trap Cards with effects that Special Summon themselves as monsters. You can only use each effect of "S.I.E Contraption: Mastro Libero" once per turn. You cannot Normal Summon/Set monsters the turn you activate any of this card's effects.
+[5904696] note: property 'effect' of card id 2123509 (S.I.E Contraption: Mastro Ferreo) was changed
+[5904696] from: 2 Machine monsters with different Attributes, including 1 "Contraption" monster
+(This card is also always treated as a FIRE monster.)
+Must first be Fusion Summoned, OR Special Summoned (from your Extra Deck) by sending the above cards you control to the GY. If this card is Summoned using only "Contraption" monsters as material: Halve the ATK and DEF of all monsters your opponent currently controls. If a Machine monster or face-up Trap in your Main Monster Zone battles an opponent's monster (Quick Effect): You can make that monster you control gain ATK and DEF equal to the ATK or DEF of that opponent's monster. You can only use each effect of "S.I.E Contraption: Mastro Ferreo" once per turn.
+[5904696] to: 2 Machine monsters with different Attributes, including 1 "Contraption" monster
+(This card is also always treated as a FIRE monster.)
+Must first be Fusion Summoned, OR Special Summoned (from your Extra Deck) by sending the above cards you control to the GY. If this card is Summoned using only "Contraption" monsters as material: Halve the ATK and DEF of all monsters your opponent currently controls. If a Machine monster or face-up Trap in your Main Monster Zone battles an opponent's monster (Quick Effect): You can make that monster you control gain ATK and DEF equal to the ATK or DEF of that opponent's monster. You can only use each effect of "S.I.E Contraption: Mastro Ferreo" once per turn. You cannot Normal Summon/Set monsters the turn you activate any of this card's effects.
+[5904696] note: property 'name' of card id 2068077 (S.I.E Contraption: Mastro Eclisse) was changed
+[5904696] from: S.I.E. Contraption: Mastro Eclisse
+[5904696] to: S.I.E Contraption: Mastro Eclisse
+[5904696] note: property 'effect' of card id 2068077 (S.I.E Contraption: Mastro Eclisse) was changed
+[5904696] from: 2 Machine monsters with different Attributes, including 1 "Contraption" monster
+(This card is also always treated as a DARK monster.) 
+Must first be Fusion Summoned, OR Special Summoned (from your Extra Deck) by sending the above cards you control to the GY. If this card is Summoned using only "Contraption" monsters as material: You can target 1 "Contraption" Spell/Trap Card in your GY; Set it in your Spell/Trap Zone. It can be activated this turn. If a card(s) is Special Summoned from either Spell/Trap Zone to a Main Monster Zone: You can target 1 card your opponent controls or in their GY; banish it. You cannot Summon non-"Contraption" monsters the turn you activate this effect, except Machine monsters and Trap Cards with effects that Special Summon themselves as monsters. You can only activate each effect of "S.I.E Contraption: Mastro Eclisse" once per turn.
+[5904696] to: 2 Machine monsters with different Attributes, including 1 "Contraption" monster
+(This card is also always treated as a DARK monster.) 
+Must first be Fusion Summoned, OR Special Summoned (from your Extra Deck) by sending the above cards you control to the GY. If this card is Summoned using only "Contraption" monsters as material: You can target 1 "Contraption" Spell/Trap Card in your GY; Set it in your Spell/Trap Zone. It can be activated this turn. If a card(s) is Special Summoned from either Spell/Trap Zone to a Main Monster Zone: You can target 1 card your opponent controls or in their GY; banish it. You cannot Summon non-"Contraption" monsters the turn you activate this effect, except Machine monsters and Trap Cards with effects that Special Summon themselves as monsters. You can only activate each effect of "S.I.E Contraption: Mastro Eclisse" once per turn. You cannot Normal Summon/Set monsters the turn you activate any of this card's effects.
+[5904696] Finished scraping.
+[5917260] Starting to parse 5917260
+[5917260] Finished scraping.
+[5925194] Starting to parse 5925194
+[5925194] note: property 'effect' of card id 1646578 (Yurei, Invoquer) was changed
+[5925194] from: (This monster's original Type is treated as Yokai rather than Fiend.)
+If this card is Normal Summoned: You can send 1 "The Mighty Yurei" from your Deck to the GY; add 1 Level 3 or lower Yokai monster from your Deck to your hand, then discard 1 card. During the End Phase: You can equip this card from your GY to a Yokai non-Effect Monster you control. You can only use each of the preceding effects of "Yurei, Invoquer" once per turn. While this card is equipped to a Yokai monster, this card gains the following effect.
+● All monsters your opponent controls lose 1000 ATK/DEF, also, if a Yokai monster you control battles an opponent's Defense Position monster, inflict piercing battle damage.
+[5925194] to: (This monster's original Type is treated as Yokai rather than Fiend.)
+If this card is Normal Summoned: You can send 1 "The Mighty Yurei" from your Deck to the GY; send the top 3 cards of your Deck to the GY, then you can Special Summon 1 monster from your GY that lists "The Mighty Yurei" in its text. During the End Phase: You can equip this card from your GY to a Yokai non-Effect Monster you control. You can only use each of the preceding effects of "Yurei, Invoquer" once per turn. While this card is equipped to a Yokai monster, this card gains the following effect.
+● All monsters your opponent controls lose 1000 ATK/DEF, also, if a Yokai monster you control battles an opponent's Defense Position monster, inflict piercing battle damage.
+[5925194] note: property 'effect' of card id 1646246 (Yurei Emergence of the Yokai) was changed
+[5925194] from: Target 2 Yokai monsters in your GY, including a monster that lists "The Mighty Yurei" in its text; Special Summon the first target, and if you do, equip it with the second target. You can banish this card from your GY; Special Summon 1 "The Mighty Yurei" from your hand or GY, and if you do, you can Special Summon 1 Yokai monster from your GY. You can only use 1 "Yurei Emergence of the Yokai" effect per turn, and only once that turn.
+[5925194] to: Special Summon 1 Yokai non-Effect Monster from your GY, and if you do, draw 1 card, then discard 1 card. You can banish this card from your GY; Special Summon 1 "The Mighty Yurei" from your hand or GY, then you can equip 1 monster that lists "The Mighty Yurei" in its text from your Deck or GY to it. You can only use 1 "Yurei Emergence of the Yokai" effect per turn, and only once that turn.
+[5925194] note: property 'effect' of card id 1646232 (Yurei, Village Defender) was changed
+[5925194] from: 1 Level 3 or 4 Yokai monster
+(This monster's original Type is treated as Yokai rather than Fiend.)
+While this card points to a monster, your opponent cannot target it for attacks. If this card is Link Summoned: You can Special Summon 1 Level 3 Yokai monster from your Deck, also you cannot Special Summon monsters for the rest of this turn, except Yokai non-Effect Monsters. You can send from your hand or field to the GY, 1 "The Mighty Yurei", or 1 other Yokai monster that lists that card in its text; draw 1 card. You can only use each effect of "Yurei, Village Defender" once per turn.
+[5925194] to: 2 Yokai monsters
+(This monster's original Type is treated as Yokai rather than Fiend.)
+While this card points to a monster, your opponent cannot target it for attacks. You can only use each of the following effects of "Yurei, Village Defender" once per turn. You can send from your hand or field to the GY, 1 "The Mighty Yurei", or 1 other Yokai monster that lists that card in its text; draw 1 card. If a non-Effect monster(s) is sent to your GY: You can banish this card from your GY, then target 1 of those monsters; Special Summon it.
+[5925194] note: property 'atk' of card id 1646232 (Yurei, Village Defender) was changed
+[5925194] from: 1300
+[5925194] to: 1600
+[5925194] note: property 'level' of card id 1646232 (Yurei, Village Defender) was changed
+[5925194] from: 1
+[5925194] to: 2
+[5925194] note: property 'arrows' of card id 1646232 (Yurei, Village Defender) was changed
+[5925194] from: 00000100
+[5925194] to: 00000101
+[5925194] Finished scraping.
+[5935151] Starting to parse 5935151
+[5935151] Finished scraping.
+[5936560] Starting to parse 5936560
+[5936560] Finished scraping.
+[5954949] Starting to parse 5954949
+[5954949] Finished scraping.
+[5967432] Starting to parse 5967432
+[5967432] Finished scraping.
+[5979508] Starting to parse 5979508
+[5979508] Finished scraping.
+[5979832] Starting to parse 5979832
+[5979832] note: property 'effect' of card id 1667267 (Raycor, the Tsunami Channeler) was changed
+[5979832] from: "Raycor, the Mystic Channeler" + 1 WATER monsterWhile this card is in Defense Position, all monsters your opponent controls lose 900 ATK/DEF. When your opponent activates a card or effect (Quick Effect): You can decrease this cards ATK by 900; negate the activation, and if you do, destroy that card. You can only use this effect of "Raycor, the Tsunami Channeler" once per turn.
+[5979832] to: "Raycor, the Mystic Channeler" + 1 WATER monster
+While this card is in face-up Defense Position, all face-up monsters your opponent controls lose 900 ATK/DEF. When your opponent activates a card or effect (Quick Effect): You can banish 1 "Rayna" or "Raycor" monster from your GY and make this card lose exactly 900 ATK; negate the activation, and if you do, destroy it. You can only use this effect of "Raycor, the Tsunami Channeler" once per turn.
+[5979832] Finished scraping.
+[6008240] Starting to parse 6008240
+[6008240] Finished scraping.
+[6011815] Starting to parse 6011815
+[6011815] Finished scraping.
+[6040042] Starting to parse 6040042
+[6040042] Finished scraping.
+[6044732] Starting to parse 6044732
+[6044732] Finished scraping.
+[6086340] Starting to parse 6086340
+[6086340] Finished scraping.
+[6109070] Starting to parse 6109070
+[6109070] Finished scraping.
+[6116920] Starting to parse 6116920
+[6116920] Finished scraping.
+[6123628] Starting to parse 6123628
+[6123628] Finished scraping.
+[6124612] Starting to parse 6124612
+[6124612] Finished scraping.
+[6135219] Starting to parse 6135219
+[6135219] Finished scraping.
+[6156689] Starting to parse 6156689
+[6156689] Finished scraping.
+[6169009] Starting to parse 6169009
+[6169009] Finished scraping.
+[6188330] Starting to parse 6188330
+[6188330] Finished scraping.
+[6209092] Starting to parse 6209092
+[6209092] Finished scraping.
+[6222166] Starting to parse 6222166
+[6222166] Finished scraping.
+[6226330] Starting to parse 6226330
+[6226330] Finished scraping.
+[6233896] Starting to parse 6233896
+[6233896] Finished scraping.
+[6236137] Starting to parse 6236137
+[6236137] Finished scraping.
+[6239411] Starting to parse 6239411
+[6239411] Finished scraping.
+[6245917] Starting to parse 6245917
+[6245917] Finished scraping.
+[6247363] Starting to parse 6247363
+[6247363] Finished scraping.
+[6256752] Starting to parse 6256752
+[6256752] Finished scraping.
+[6262300] Starting to parse 6262300
+[6262300] Finished scraping.
+[6267789] Starting to parse 6267789
+[6267789] Finished scraping.
+[6291306] Starting to parse 6291306
+[6291306] Finished scraping.
+[6292623] Starting to parse 6292623
+[6292623] Finished scraping.
+[6294677] Starting to parse 6294677
+[6294677] Finished scraping.
+[6318313] Starting to parse 6318313
+[6318313] Finished scraping.
+[6334551] Starting to parse 6334551
+[6334551] Finished scraping.
+[6347993] Starting to parse 6347993
+[6347993] Finished scraping.
+[6353294] Starting to parse 6353294
+[6353294] warning: card id 1318485 (Ambush Lotus) was duplicated in <6353294> from <>
+[6353294] warning: card id 1619088 (Fishborg Defender) was duplicated in <6353294> from <>
+[6353294] warning: card id 1318524 (Phoenixian Cluster Hippeastrum) was duplicated in <6353294> from <>
+[6353294] warning: card id 1318550 (Reynard Chemist) was duplicated in <6353294> from <>
+[6353294] warning: card id 1102188 (Yova the Wind Silencer) was duplicated in <6353294> from <5869257>
+[6353294] Finished scraping.
+[6353380] Starting to parse 6353380
+[6353380] warning: card id 1765725 (Number 108: Divine Wind Dragon) was duplicated in <6353380> from <6353294>
+[6353380] Finished scraping.
+[6353400] Starting to parse 6353400
+[6353400] note: property 'effect' of card id 1952019 (Ukko) was changed
+[6353400] from: You can discard this card; add 1 "Mountain" from your Deck to your hand. If you control "Mountain": You can target 1 card on the field, except "Mountain"; destroy it, then, if you destroyed a card you control this way, draw 1 card. You can only use this effect of "Ukko" once per turn.
+[6353400] to: You can discard this card; add 1 "Mountain" from your Deck to your hand. If you control "Mountain" (Quick Effect): You can target 1 card on the field, except "Mountain"; destroy it, then, if you destroyed a card you control this way, draw 1 card. You can only use this effect of "Ukko" once per turn.
+[6353400] note: property 'effect' of card id 1952050 (Zorya) was changed
+[6353400] from: You can discard this card; add 1 "Yami" from your Deck to your hand. If you control "Yami": You can banish up to 2 cards from your GY, then target that many cards in your opponent's GY; banish them. You can only use this effect of "Zorya" once per turn.
+[6353400] to: You can discard this card; add 1 "Yami" from your Deck to your hand. If you control "Yami": You can banish up to 2 cards from your GY, then target that many cards in your opponent's GY +1; banish them. You can only use this effect of "Zorya" once per turn.
+[6353400] warning: card id 1638076 (Horror of the Depths) was duplicated in <6353400> from <>
+[6353400] warning: card id 1566623 (EX-Saber Gottoms) was duplicated in <6353400> from <>
+[6353400] warning: card id 1524802 (Halter of the Winds' Messages, Yova) was duplicated in <6353400> from <5869257>
+[6353400] Finished scraping.
+[6353414] Starting to parse 6353414
+[6353414] warning: card id 1755179 (Transient Herald of the Inferno) was duplicated in <6353414> from <6353380>
+[6353414] warning: card id 1653369 (Naturia Baihu) was duplicated in <6353414> from <>
+[6353414] warning: card id 2020789 (Union Conductor) was duplicated in <6353414> from <>
+[6353414] Finished scraping.
+[6353430] Starting to parse 6353430
+[6353430] warning: card id 2031615 (Draconian Spirit) was duplicated in <6353430> from <4804758>
+[6353430] warning: card id 797597 (Kaiser Arena) was duplicated in <6353430> from <>
+[6353430] warning: card id 1708820 (Numeron Extraction) was duplicated in <6353430> from <>
+[6353430] note: property 'effect' of card id 1277656 (Pot of Pixels) was changed
+[6353430] from: Shuffle 3 or 6 monsters in your GY with different Attributes into the deck, then draw 1 card for every 3 cards shuffled into the deck by this effect. You can only activate 1 "Pot of Pixels" per turn.
+[6353430] to: Shuffle 3 or 6 monsters in your GY with different Attributes into the Deck, then draw 1 card for every 3 cards shuffled. You can only activate 1 "Pot of Pixels" per turn.
+[6353430] warning: card id 1319058 (Resurrected Blade of Elma) was duplicated in <6353430> from <>
+[6353430] warning: card id 1523787 (The Winds Will Never Respond) was duplicated in <6353430> from <5869257>
+[6353430] note: property 'effect' of card id 1995487 (Barrier Warrior in the Wasteland) was changed
+[6353430] from: 1 "Synchron" Tuner + 1+ non-Tuner monsters
+(Quick Effect): You can place 1 Barrier Counter on 1 face-up card on the field. (If a face-up card with a Barrier Counter would be destroyed by battle or card effect, remove 1 Barrier Counter from it instead.) You can only use this effect of "Barrier Warrior in the Wasteland" once per turn.
+[6353430] to: 1 Tuner + 1+ non-Tuner monsters
+(Quick Effect): You can place 1 Barrier Counter on 1 face-up card on the field. (If a face-up card with a Barrier Counter would be destroyed by battle or card effect, remove 1 Barrier Counter from it instead.) You can only use this effect of "Barrier Warrior in the Wasteland" once per turn.
+[6353430] Finished scraping.
+[6353449] Starting to parse 6353449
+[6353449] note: property 'effect' of card id 1807482 (Signature Evolution) was changed
+[6353449] from: Tribute 1 monster from your hand or field; apply the appropriate effect depending on the name of the monster Tributed while in your hand or on the field.
+● "Dark Magician": Special Summon 1 "Magician of Chaos" from your hand or Deck in Defense Position (this is treated as a Ritual Summon).
+● "Red-Eyes Black Dragon": Special Summon 1 "Lord of the Red" from your hand or Deck in Attack Position (this is treated as a Ritual Summon).
+You cannot Link Summon while you control a monster Special Summoned by this effect. You can only activate 1 "Signature Evolution" per turn.
+[6353449] to: Tribute 1 monster from your hand or field; Special Summon the appropriate monster from your hand or Deck depending on the name of the monster Tributed while in your hand or on the field (this is treated as a Ritual Summon.)
+● "Dark Magician": 1 “Magician of Chaos".
+● "Dark Magician Girl": 1 “Magician Girl of Chaos".
+● "Red-Eyes Black Dragon": 1 "Lord of the Red".
+You cannot Link Summon while you control a monster Special Summoned by this effect. You can only activate 1 "Signature Evolution" per turn.
+[6353449] note: property 'effect' of card id 1478036 (The Last Star Goes Dark) was changed
+[6353449] from: If a card(s) is sent to the GY to activate your opponent's card effect OR if a card(s) is sent to the GY by your opponent's card effect: You can target 1 card in either player's GY; banish that target, also add 1 card with the same original name as that banished card from your Deck to your hand. You can only activate 1 "The Last Star Goes Dark" per turn. If you control no cards, you can activate this card from your hand.
+[6353449] to: If a card(s) is sent to the GY to activate your opponent's card effect OR if a card(s) is sent to the GY by your opponent's card effect: Target 1 card in either player's GY; banish that target, also after, you can add 1 card with the same original name as that banished card from your Deck to your hand. You can only activate 1 "The Last Star Goes Dark" per turn. If you control no cards, you can activate this card from your hand.
+[6353449] warning: card id 1958597 (Jillian, False Royalty) was duplicated in <6353449> from <6353414>
+[6353449] Finished scraping.
+[6353457] Starting to parse 6353457
+[6353457] warning: card id 1865422 (Majespecter Dragon - Ryu) was duplicated in <6353457> from <>
+[6353457] warning: card id 1239281 (Volcanic Scavenger) was duplicated in <6353457> from <5668288>
+[6353457] warning: card id 1638270 (Shien's Will) was duplicated in <6353457> from <>
+[6353457] warning: card id 1743438 (Spellbook of Silencing) was duplicated in <6353457> from <>
+[6353457] warning: card id 1862633 (True King of Dimension's End) was duplicated in <6353457> from <>
+[6353457] warning: card id 1768966 (Hieratic Dragon of Khonsu) was duplicated in <6353457> from <>
+[6353457] note: property 'effect' of card id 1318580 (Lyrilusc - Stellar Bunting) was changed
+[6353457] from: 1 "Lyrilusc" monster + 1 Winged Beast monsterMust first be either Fusion Summoned, or Special Summoned from your Extra Deck by returning the above cards you control to the hand (in which case you do not use "Polymerization"). You can only Special Summon "Lyrilusc - Stellar Bunting" once per turn. If this card is Special Summoned from the Extra Deck: You can Special Summon 2 "Lyrilusc" monsters from your hand or GY. You can only use this effect of "Lyrilusc - Stellar Bunting" once per turn.
+[6353457] to: "Lyrilusc - Prom Thrush" + 1 "Lyrilusc" monster
+Cannot be targeted by card effects. If this card is Fusion Summoned using an Xyz Monster on the field as Fusion Material whose original name includes "Lyrilusc": You can increase this card's Level by the number of materials that Xyz Monster(s) had on the field. Face-up monsters your opponent controls lose ATK equal to this card's Level x 500. Once per turn: You can target 1 face-up monster your opponent controls; increase this card's Level by that target's Level/Rank/Link Rating, then you can gain 1000 LP for each face-up monster your opponent controls with 0 ATK.
+[6353457] warning: card id 1319245 (Lavalval Shadow) was duplicated in <6353457> from <>
+[6353457] Finished scraping.
+[6353465] Starting to parse 6353465
+[6353465] warning: card id 1048356 (Anne, Lightsworn Incensor) was duplicated in <6353465> from <6353457>
+[6353465] warning: card id 1374705 (Bone Chimera) was duplicated in <6353465> from <6353294>
+[6353465] warning: card id 1097563 (Danger! Kirin!) was duplicated in <6353465> from <5844326>
+[6353465] warning: card id 907798 (Danger!? Buru?) was duplicated in <6353465> from <5844326>
+[6353465] warning: card id 1205167 (Danger!? Kikiyaon?) was duplicated in <6353465> from <5844326>
+[6353465] warning: card id 1307739 (Danger!? Wolpertinger?) was duplicated in <6353465> from <5844326>
+[6353465] warning: card id 1537498 (Ghost Wind & Bright Mist) was duplicated in <6353465> from <6353294>
+[6353465] warning: card id 1194334 (Inspector Enforcer) was duplicated in <6353465> from <6353294>
+[6353465] warning: card id 1281323 (Muto, the Toxic Duo Kaiju) was duplicated in <6353465> from <6353457>
+[6353465] warning: card id 1318550 (Reynard Chemist) was duplicated in <6353465> from <6353294>
+[6353465] warning: card id 1544585 (Soul Eater Azande) was duplicated in <6353465> from <6353294>
+[6353465] warning: card id 1222148 (Called by the Spell Book) was duplicated in <6353465> from <6353430>
+[6353465] warning: card id 1393301 (Cosmic Vacuum) was duplicated in <6353465> from <6353430>
+[6353465] warning: card id 913982 (Digital Hallway) was duplicated in <6353465> from <6353430>
+[6353465] warning: card id 1537032 (Ember Cards) was duplicated in <6353465> from <6353430>
+[6353465] warning: card id 930975 (Equip Equality) was duplicated in <6353465> from <6353430>
+[6353465] warning: card id 1717113 (Glimmering Drytronis) was duplicated in <6353465> from <>
+[6353465] warning: card id 610240 (Growthblade) was duplicated in <6353465> from <6353430>
+[6353465] warning: card id 1409651 (Underwhelming Observations) was duplicated in <6353465> from <6353430>
+[6353465] warning: card id 1333641 (Chained Down) was duplicated in <6353465> from <6353449>
+[6353465] warning: card id 1577575 (Darkest Desires) was duplicated in <6353465> from <6353449>
+[6353465] warning: card id 1395956 (Faster than a Speeding Bullet!) was duplicated in <6353465> from <6353449>
+[6353465] warning: card id 1144500 (Free to be Together) was duplicated in <6353465> from <6353449>
+[6353465] warning: card id 1409993 (Localized Typhoon) was duplicated in <6353465> from <6353449>
+[6353465] warning: card id 1318849 (Power Seal) was duplicated in <6353465> from <6353449>
+[6353465] warning: card id 1450950 (You Are Not the Father!) was duplicated in <6353465> from <6353449>
+[6353465] warning: card id 1450929 (You Are the Father!) was duplicated in <6353465> from <6353449>
+[6353465] warning: card id 928560 (Doom Emperor Dragon) was duplicated in <6353465> from <6353380>
+[6353465] warning: card id 1239767 (Hylablazing Champion) was duplicated in <6353465> from <6353380>
+[6353465] warning: card id 1638076 (Horror of the Depths) was duplicated in <6353465> from <6353400>
+[6353465] warning: card id 1479932 (Painted Soulseaker) was duplicated in <6353465> from <6353380>
+[6353465] warning: card id 1526251 (Sorcerer of the Void) was duplicated in <6353465> from <6353380>
+[6353465] warning: card id 1479910 (Swift Archer Lumis) was duplicated in <6353465> from <6353380>
+[6353465] warning: card id 1289117 (Battalion Buster) was duplicated in <6353465> from <6353294>
+[6353465] note: [+] added new card 2700620 (The Lost Dragon of Polymer)
+[6353465] Finished scraping.
+[6356932] Starting to parse 6356932
+[6356932] Finished scraping.
+[6358715] Starting to parse 6358715
+[6358715] Finished scraping.
+[6360689] Starting to parse 6360689
+[6360689] Finished scraping.
+[6365184] Starting to parse 6365184
+[6365184] Finished scraping.
+[6395566] Starting to parse 6395566
+[6395566] note: property 'effect' of card id 1807183 (Akularks of the Submerzans) was changed
+[6395566] from: FLIP: You can add 1 "Submerzan" monster from your Deck to your hand.
+You can Special Summon this card (from your hand) in face-down Defense Position. If your opponent targets this card for an attack or an effect, while it is face-down: Change this card to face-up Attack Position, then, if it was targeted by an effect, you can negate that effect. During your Main Phase: You can change this card to face-down Defense Position. You can only use each effect of "Akularks of the Submerzans" per turn.
+[6395566] to: FLIP: You can add 1 "Submerzan" monster from your Deck to your hand.
+You can Special Summon this card (from your hand) in face-down Defense Position. When your opponent activates a card or effect in this card's column, while it is face-down (Quick Effect): Change this card to face-up Attack Position. During your Main Phase: You can change this card to face-down Defense Position. You can only use each effect of "Akularks of the Submerzans" per turn.
+[6395566] note: property 'effect' of card id 1807184 (Mynoctos of the Submerzans) was changed
+[6395566] from: FLIP: You can add 1 "Submerzan" Spell/Trap from your Deck to your hand.
+You can Special Summon this card (from your hand) in face-down Defense Position. If your opponent targets this card for an attack or an effect, while it is face-down: Change this card to face-up Attack Position, then, if it was targeted by an effect, you can banish 1 card from your opponent's GY. During your Main Phase: You can change this card to face-down Defense Position. You can only use each effect of "Mynoctos of the Submerzans" per turn.
+[6395566] to: FLIP: You can add 1 "Submerzan" Spell/Trap from your Deck to your hand.
+You can Special Summon this card (from your hand) in face-down Defense Position. When your opponent activates a card or effect in this card's column, while it is face-down (Quick Effect): Change this card to face-up Attack Position. During your Main Phase: You can change this card to face-down Defense Position. You can only use each effect of "Mynoctos of the Submerzans" per turn.
+[6395566] note: property 'effect' of card id 1807131 (Omarabs of the Submerzans) was changed
+[6395566] from: FLIP: You can add 1 "Submerzan" card from your GY to your hand.
+You can Special Summon this card (from your hand) in face-down Defense Position. If your opponent targets this card for an attack or an effect, while it is face-down: Change this card to face-up Attack Position, then, if it was targeted by an effect, you can draw 1 card. During your Main Phase: You can change this card to face-down Defense Position. You can only use each effect of "Omarabs of the Submerzans" per turn.
+[6395566] to: FLIP: You can add 1 "Submerzan" card from your GY to your hand.
+You can Special Summon this card (from your hand) in face-down Defense Position. When your opponent activates a card or effect in this card's column, while it is face-down (Quick Effect): Change this card to face-up Attack Position. During your Main Phase: You can change this card to face-down Defense Position. You can only use each effect of "Omarabs of the Submerzans" per turn.
+[6395566] note: property 'effect' of card id 1807150 (Vuhoreels of the Submerzans) was changed
+[6395566] from: FLIP: You can Special Summon 1 "Submerzan" monster from your GY in face-down Defense Position.
+You can Special Summon this card (from your hand) in face-down Defense Position. If your opponent targets this card for an attack or an effect, while it is face-down: Change this card to face-up Attack Position, then, if it was targeted by an effect, you can destroy 1 card on the field. During your Main Phase: You can change this card to face-down Defense Position. You can only use each effect of "Vuhoreels of the Submerzans" per turn.
+[6395566] to: FLIP: You can Special Summon 1 "Submerzan" monster from your GY in face-down Defense Position.
+You can Special Summon this card (from your hand) in face-down Defense Position. When your opponent activates a card or effect in this card's column, while it is face-down (Quick Effect): Change this card to face-up Attack Position.. During your Main Phase: You can change this card to face-down Defense Position. You can only use each effect of "Vuhoreels of the Submerzans" per turn.
+[6395566] note: property 'effect' of card id 1814816 (Cheretle, Submerzan Empress) was changed
+[6395566] from: FLIP: You can target 1 card your opponent controls; move it to an adjacent unoccupied Zone, then negate the effects of all cards your opponent controls in that moved card's column until the end of this turn.
+Cannot be Summoned. When your opponent activates a card or effect in this card's column, while this card is face-down (Quick Effect): You can change this card to face-up Attack Position. You can change this card to face-down Defense Position. You can only use each effect of "Cheretle, Submerzan Empress" once per turn.
+[6395566] to: FLIP: Target 1 face-up "Submerzan" monster you control; negate the effects of all cards your opponent controls in that column.
+Cannot be Summoned. When your opponent activates a card or effect in this card's column, while this card is face-down (Quick Effect): You can change this card to face-up Attack Position. Once per turn: You can change this card to face-down Defense Position.
+[6395566] note: property 'effect' of card id 1807122 (Kythale, Submerzan Emperor) was changed
+[6395566] from: FLIP: You can activate 1 of the following effects.
+● You can target 1 card in your opponent's Main Monster Zone; if it is Set, reveal it, also place it in your opponent's unoccupied Spell & Trap Zone in the same column as a Continuous Spell with the following effect: "Once per turn: You can send this card to the GY."
+● You can target 1 card in your opponent's Spell & Trap Zone; if it is Set, reveal it, also Special Summon it in Attack Position as a Normal Monster in your opponent's unoccupied Main Monster Zone in the same column as that targeted card (Sea Serpent/DARK/Level 1/ATK 0/DEF 0). (That card is NOT treated as a Spell or Trap.)
+Cannot be Summoned. When your opponent activates a card or effect in this card's column, while this card is face-down (Quick Effect): You can change this card to Attack Position. You can change this card to face-down Defense Position. You can only use each effect of "Kythale, Submerzan Emperor" once per turn.
+[6395566] to: FLIP: Target 1 face-up "Submerzan" monster you control; destroy all cards your opponent controls in that card's column.
+Cannot be Summoned. When your opponent activates a card or effect in this card's column, while this card is face-down (Quick Effect): You can change this card to Attack Position. Once per turn: you can change this card to face-down Defense Position.
+[6395566] note: property 'def' of card id 1807122 (Kythale, Submerzan Emperor) was changed
+[6395566] from: 2500
+[6395566] to: 1500
+[6395566] note: property 'effect' of card id 1807142 (Submerzan Sub-World) was changed
+[6395566] from: If your "Submerzan" monster battles: You can have your opponent take all battle damage you would take from that battle. During your Main Phase: You can change 1 Set WATER "Submerzan" monster you control to face-up Attack Position, and if you do, you can change 1 face-up "Submerzan" monster you control to face-down Defense Position. You can reveal 1 Set non-WATER "Submerzan" monster you control; rearrange the face-down Defense Position monsters in your Main Monster Zones, then change them to face-down Defense Position. You can only use each effect of "Submerzan Sub-World" once per turn.
+[6395566] to: If your "Submerzan" monster battles: You can have your opponent take all battle damage you would take from that battle. During your Main Phase: You can change 1 Set "Submerzan" monster you control to face-up Attack Position. You can reveal 1 Set "Submerzan" monster you control; rearrange the face-down Defense Position monsters in your Main Monster Zones, then change them to face-down Defense Position. You can only use each effect of "Submerzan Sub-World" once per turn.
+[6395566] note: property 'effect' of card id 1816927 (Submerzan Sublimation) was changed
+[6395566] from: You can reveal 1 Set non-WATER "Submerzan" monster you control; rearrange the face-down Defense Position monsters in your Main Monster Zones, then change them to face-down Defense Position. If a card(s) on the field changes Zones: You can target 1 card your opponent controls; destroy it. You can only use each effect of "Submerzan Sublimation" once per turn.
+[6395566] to: You can reveal 1 Set non-WATER "Submerzan" monster you control; rearrange the face-down Defense Position monsters in your Main Monster Zones, then change them to face-down Defense Position. You can target 1 face-down monster you control, move that monster to another Main Monster Zone you control. You can only use each effect of "Submerzan Sublimation" once per turn.
+[6395566] note: property 'effect' of card id 1807185 (Submerzan Submergence) was changed
+[6395566] from: Reveal 1 Set non-WATER "Submerzan" monster you control, then banish any number of cards from your hand or field; Special Summon "Submerzan" monsters from your Deck, up to the number of cards banished to activate this effect in face-down Defense Position. You cannot Summon monsters from your Extra Deck during the turn you activate this card, except "Submerzan" monsters. You can only activate 1 "Submerzan Submergence" per turn.
+[6395566] to: Reveal 1 Set non-WATER "Submerzan" monster you control, then banish up to 1 card each from your hand, field, and GY; Special Summon "Submerzan" monsters from your Deck in face-down Defense Position, up to the number of cards banished to activate this effect. You cannot Special Summon monsters during the turn you activate this card, except "Submerzan" monsters. You can only activate 1 "Submerzan Submergence" per turn.
+[6395566] note: property 'effect' of card id 1814821 (Submerzan Submission) was changed
+[6395566] from: Target up to 2 Set monsters you control; change them to face-up Defense Position, then destroy all face-up monsters you control, except for "Submerzan" monsters. During the End Phase, change as many monsters you control to facedown Defense Position as possible. You can only activate 1 "Submerzan Submission" per turn.
+[6395566] to: Change all face-down monsters you control to face-up Defense Position, then destroy all face-up monsters you control, except for "Submerzan" monsters. During the End Phase, change as many monsters you control to facedown Defense Position as possible, and if you do, you can draw 1 card. You can only activate 1 "Submerzan Submission" per turn.
+[6395566] note: property 'effect' of card id 2085534 (Kralobs of the Submerzans) was changed
+[6395566] from: 1 Level 3 or lower "Submerzan" monster
+When this card is Link Summoned: You can discard 1 card; add 1 "Submerzan" monster from your Deck to your hand. You cannot Summon monsters the turn you activate this effect, except "Submerzan" monsters. You can banish this card from your GY, then target 1 "Submerzan" monster you control; it gains ATK equal to its original DEF until the end of this turn. You can only use each effect of "Kralobs of the Submerzans" once per turn.
+[6395566] to: 1 Level 3 or lower "Submerzan" monster
+When this card is Link Summoned: You can add 1 "Submerzan" monster from your Deck to your hand, but for the rest of this turn, you cannot Special Summon monsters, except "Submerzan" monsters. You can target 1 face-down monster you control; Change it to face-up Attack Position. You can only use each effect of "Kralobs of the Submerzans" once per turn.
+[6395566] note: property 'effect' of card id 1814994 (Meduzelly, Submerzan Princess) was changed
+[6395566] from: 2 Sea Serpent monsters
+This card can be treated as 2 Tributes for the Tribute Set of a monster. When this card is Link Summoned: You can Special Summon 1 "Submerzan" monster from your Deck in face-down Defense Position, but for the rest of this turn, you cannot Special Summon monsters, except in face-down Defense Position. You can change 1 Set "Submerzan" monster you control to face-up Attack Position; this turn, you can Normal Set 1 monster, in addition to your Normal Summon/Set (You can only gain this effect once per turn.) You can only use each effect of "Meduzelly, Princess of the Submerzans" once per turn.
+[6395566] to: 2 Sea Serpent monsters, including at least 1 "Submerzan" monster
+This card can be treated as 2 Tributes for the Tribute Set of a monster. When this card is Link Summoned: You can Special Summon 1 "Submerzan" monster from your Deck in face-down Defense Position, but for the rest of this turn, you cannot Special Summon monsters, except in face-down Defense Position. You can change 1 Set "Submerzan" monster you control to face-up Attack Position; this turn, you can Normal Set 1 monster, in addition to your Normal Summon/Set (You can only gain this effect once per turn.) You can only use each effect of "Meduzelly, Princess of the Submerzans" once per turn.
+[6395566] Finished scraping.
+[6402157] Starting to parse 6402157
+[6402157] Finished scraping.
+[6407622] Starting to parse 6407622
+[6407622] Finished scraping.
+[6412660] Starting to parse 6412660
+[6412660] Finished scraping.
+[6419184] Starting to parse 6419184
+[6419184] note: property 'effect' of card id 1807498 (Seer's Ledger) was changed
+[6419184] from: When this card is activated, if you have "Ledger of Legerdemain" in your GY: Neither player takes damage until the end of your next turn. While you control exactly 1 Attack Position monster with an original ATK of 1500 or less and no other monsters, it cannot be destroyed by battle, also any damage either player takes from a battle involving it is halved. During the End Phase: The turn player's opponent can shuffle any number of their cards that are banished and/or in their GY into the Deck. During your Draw Phase, before you draw: You can give up your normal draw this turn, and if you do, add 1 "Ledger of Legerdemain" from your GY to your hand, then return this card to your hand, also for the rest of this turn, you cannot activate "Seer's Ledger".
+[6419184] to: During your Draw Phase, before you draw: You can give up your normal draw this turn, and if you do, add 1 "Ledger of Legerdemain" from your GY to your hand. For the effect of “Ledger of Legerdemain” banish 4 cards instead of 3. While the only monsters you control are Attack Position monsters with 1500 or less ATK and “Ledger of Legerdemain” is in your GY, apply the following effects.
+● Neither player takes damage.
+● Monsters you control cannot be destroyed by battle.
+[6419184] warning: card id 1933842 (Dreadful Arsenal ZZ-ARES - Abyssal Flames) was duplicated in <6419184> from <>
+[6419184] Finished scraping.
+[6438706] Starting to parse 6438706
+[6438706] Finished scraping.
+[6446977] Starting to parse 6446977
+[6446977] Finished scraping.
+[6460257] Starting to parse 6460257
+[6460257] note: property 'effect' of card id 1832292 (Dark Arts Fear Manifestation) was changed
+[6460257] from: 1 Tuner + 1 non-Tuner "Dark Arts" Synchro Monster
+The first time this card would leave the field by a card effect, it does not. You can excavate the top 3 cards of your Deck; this card gains a number of additional attacks during each Battle Phase this turn equal to the combined number of "Dark Arts" cards excavated by this effect, also shuffle all cards excavated by this effect into the Deck. When a card or effect is activated that would destroy a card(s) on the field (Quick Effect): You can negate the effect, and if you do, destroy it. You can only use each effect of "Dark Arts Fear Manifestation" once per turn.
+[6460257] to: 1 Tuner + 1 non-Tuner "Dark Arts" Synchro Monster
+The first time this card would leave the field by a card effect, it does not. You can excavate the top 3 cards of your Deck; this card gains a number of additional attacks during each Battle Phase this turn equal to the combined number of "Dark Arts" cards excavated by this effect, also shuffle all cards excavated by this effect into the Deck. This card cannot attack directly the turn you activate this effect. When a card or effect is activated that would destroy a card(s) on the field (Quick Effect): You can negate that effect, and if you do, destroy it. You can only use each effect of "Dark Arts Fear Manifestation" once per turn.
+[6460257] note: property 'effect' of card id 1832274 (Dark Arts Wraith) was changed
+[6460257] from: 1 Tuner + 1 "Dark Arts" non-Tuner monster
+If this card is Synchro Summoned: You can banish 1 "Dark Arts" monster from your GY, then target up to 2 cards on the field; destroy them. You can target 1 Level 6 or lower "Dark Arts" monster in your GY; destroy 1 face-up "Dark Arts" Spell/Trap you control, and if you do, Special Summon that target. You can only use each effect of "Dark Arts Wraith" once per turn.
+[6460257] to: 1 Tuner + 1 "Dark Arts" non-Tuner monster
+If this card is Synchro Summoned: You can banish 2 "Dark Arts" cards from your hand, field or GY, then target up to 2 cards on the field; destroy them. You can target 1 Level 6 or lower "Dark Arts" monster in your GY; destroy 1 face-up "Dark Arts" Spell/Trap you control, and if you do, Special Summon that target. You can only use each effect of "Dark Arts Wraith" once per turn.
+[6460257] Finished scraping.
+[6511321] Starting to parse 6511321
+[6511321] warning: card id 1920888 (Scrap Turbo) was duplicated in <6511321> from <>
+[6511321] warning: card id 1842914 (Kuuroma - Monotonous Maiden) was duplicated in <6511321> from <6040042>
+[6511321] warning: card id 1863180 (Rybish, Submerzan Servant) was duplicated in <6511321> from <6395566>
+[6511321] warning: card id 1842888 (Zeniphyr Lanatae) was duplicated in <6511321> from <6086340>
+[6511321] note: property 'effect' of card id 1949676 (Black Luster Soldier - Super Soldier of Chaos) was changed
+[6511321] from: You can Ritual Summon this card with "Super Soldier Synthesis". If this card is in your hand: You can target 1 LIGHT Warrior monster and 1 DARK Warrior monster in your GY; banish them, then Special Summon this card from your hand, but send it to the GY during the end of the next turn (this is treated as a Ritual Summon). During your opponent's turn, when your opponent activates a card or effect, while you control this card that was not Special Summoned by its own effect (Quick Effect): You can target 1 LIGHT banished monster and 1 DARK banished monster; return this card to the hand and if you do, return those targets to the GY, then, you can add 1 "Black Luster Soldier" or "Super Soldier" card from your GY to your hand. You can only use each effect of "Black Luster Soldier - Super Soldier of Chaos" once per turn.
+[6511321] to: You can Ritual Summon this card with "Super Soldier Synthesis". If this card is in your hand: You can target 1 LIGHT Warrior monster and 1 DARK Warrior monster in your GY; banish them, then Special Summon this card from your hand, but send it to the GY during the end of the next turn (this is treated as a Ritual Summon). During your opponent's turn, when your opponent activates a card or effect, while you control this card that was not Special Summoned by its own effect (Quick Effect): You can target 1 banished LIGHT monster and 1 banished DARK monster; return this card to the hand and if you do, return those targets to the GY, then, you can add 1 "Black Luster Soldier" or "Super Soldier" card from your GY to your hand. You can only use each effect of "Black Luster Soldier - Super Soldier of Chaos" once per turn.
+[6511321] Finished scraping.
+[6514931] Starting to parse 6514931
+[6514931] warning: card id 1516537 (Dinomist Therizino) was duplicated in <6514931> from <6353457>
+[6514931] warning: card id 1245901 (Dinomist Cooldown) was duplicated in <6514931> from <6353457>
+[6514931] Finished scraping.
+[6516859] Starting to parse 6516859
+[6516859] Finished scraping.
+[6524605] Starting to parse 6524605
+[6524605] Finished scraping.
+[6532506] Starting to parse 6532506
+[6532506] Finished scraping.
+[6537631] Starting to parse 6537631
+[6537631] Finished scraping.
+[6556030] Starting to parse 6556030
+[6556030] Finished scraping.
+[6560628] Starting to parse 6560628
+[6560628] warning: card id 1565558 (Charismatic Holy Conversion) was duplicated in <6560628> from <5713627>
+[6560628] warning: card id 1558753 (Charismatic Priestess) was duplicated in <6560628> from <5713627>
+[6560628] Finished scraping.
+[6563112] Starting to parse 6563112
+[6563112] Finished scraping.
+[6582550] Starting to parse 6582550
+[6582550] note: property 'effect' of card id 1623170 (Darkwater Angler) was changed
+[6582550] from: If this card is Special Summoned: You can banish 1 Spell/Trap from your GY that lists "Darkwater" in its text. If this card is banished: You can add 1 of your banished "Darkwater" Spells/Traps to your hand. You can only use 1 monster effect of "Darkwater Angler" per turn and only once that turn.
+[6582550] to: If this card is Special Summoned: You can banish 1 card from your GY that lists "Darkwater" in its text. If this card is banished: You can add 1 of your banished "Darkwater" Spells/Traps to your hand. You can only use 1 monster effect of "Darkwater Angler" per turn and only once that turn.
+[6582550] warning: card id 2609533 (Watery Grave) was duplicated in <6582550> from <>
+[6582550] Finished scraping.
+[6590945] Starting to parse 6590945
+[6590945] Finished scraping.
+[6598717] Starting to parse 6598717
+[6598717] note: property 'effect' of card id 1985232 (Blazing Aura) was changed
+[6598717] from: Each player can only activate 1 Spell/Trap Card or effect per turn. Once per turn, during the Standby Phase, you must pay 1200 LP (this is not optional) or this card is destroyed.
+[6598717] to: Each player can only activate 1 Spell/Trap Card or effect on the field per turn. Once per turn, during the Standby Phase, you must pay 1200 LP (this is not optional) or this card is destroyed.
+[6598717] warning: card id 1985232 (Blazing Aura) was duplicated in <6598717> from <>
+[6598717] warning: card id 1966485 (Ledger of Demise) was duplicated in <6598717> from <>
+[6598717] warning: card id 1951635 (Penultimate Offering) was duplicated in <6598717> from <>
+[6598717] note: property 'effect' of card id 1760958 (Heavenly Majestic Dragon) was changed
+[6598717] from: (This card's name is always treated as "Majestic Dragon".)
+Cannot by Synchro Summoned. Must first be Special Summoned (from your Extra Deck) by sending 2 monsters you control to the GY whose total difference in their Levels equals exactly 1 (1 Tuner and 1 non-Tuner). If this card is Special Summoned while you control a Level 8 Dragon Synchro Monster: You can Special Summon 1 "Majestic Token" (Dragon/LIGHT/Level 1/ATK 0/DEF 0). If a "Majestic" Synchro Monster you control would be returned to the Extra Deck by its own effect, you can return this card from your GY to the Extra Deck instead. You can only Special Summon "Heavenly Majestic Dragon" once per turn.
+[6598717] to: (This card's name is always treated as "Majestic Dragon".)
+Cannot be Synchro Summoned. Must first be Special Summoned (from your Extra Deck) by sending 2 monsters you control to the GY whose total difference in their Levels equals exactly 1 (1 Tuner and 1 non-Tuner). If this card is Special Summoned while you control a Level 8 Dragon Synchro Monster: You can Special Summon 1 "Majestic Token" (Dragon/LIGHT/Level 1/ATK 0/DEF 0). If a "Majestic" Synchro Monster you control would be returned to the Extra Deck by its own effect, you can return this card from your GY to the Extra Deck instead. You can only Special Summon "Heavenly Majestic Dragon" once per turn.
+[6598717] warning: card id 1715267 (Cornelius, with Technology of Elder Years) was duplicated in <6598717> from <6353400>
+[6598717] Finished scraping.
+[6598851] Starting to parse 6598851
+[6598851] Finished scraping.
+[6598859] Starting to parse 6598859
+[6598859] Finished scraping.
+[6601142] Starting to parse 6601142
+[6601142] Finished scraping.
+[6604359] Starting to parse 6604359
+[6604359] Finished scraping.
+[6611617] Starting to parse 6611617
+[6611617] Finished scraping.
+[6616619] Starting to parse 6616619
+[6616619] Finished scraping.
+[6622494] Starting to parse 6622494
+[6622494] Finished scraping.
+[6628957] Starting to parse 6628957
+[6628957] Finished scraping.
+[6635173] Starting to parse 6635173
+[6635173] Finished scraping.
+[6645825] Starting to parse 6645825
+[6645825] Finished scraping.
+[6670355] Starting to parse 6670355
+[6670355] Finished scraping.
+[6674104] Starting to parse 6674104
+[6674104] Finished scraping.
+[6677155] Starting to parse 6677155
+[6677155] Finished scraping.
+[6686412] Starting to parse 6686412
+[6686412] Finished scraping.
+[6699578] Starting to parse 6699578
+[6699578] Finished scraping.
+[6707275] Starting to parse 6707275
+[6707275] Finished scraping.
+[6708539] Starting to parse 6708539
+[6708539] Finished scraping.
+[6719358] Starting to parse 6719358
+[6719358] Finished scraping.
+[6733479] Starting to parse 6733479
+[6733479] Finished scraping.
+[6746888] Starting to parse 6746888
+[6746888] Finished scraping.
+[6760980] Starting to parse 6760980
+[6760980] Finished scraping.
+[6771198] Starting to parse 6771198
+[6771198] Finished scraping.
+[6771472] Starting to parse 6771472
+[6771472] warning: card id 1943564 (Avendread Ruby) was duplicated in <6771472> from <6771198>
+[6771472] warning: card id 1943574 (Avendreads, Assemble!) was duplicated in <6771472> from <6771198>
+[6771472] warning: card id 1941018 (Avendread Tale) was duplicated in <6771472> from <6771198>
+[6771472] warning: card id 1941026 (Vendread Commander) was duplicated in <6771472> from <6771198>
+[6771472] Finished scraping.
+[6774584] Starting to parse 6774584
+[6774584] Finished scraping.
+[6780728] Starting to parse 6780728
+[6780728] Finished scraping.
+[6785116] Starting to parse 6785116
+[6785116] Finished scraping.
+[6785271] Starting to parse 6785271
+[6785271] warning: card id 1310876 (Aria Fey of Day) was duplicated in <6785271> from <4910893>
+[6785271] warning: card id 1310877 (Aria Fey of Lune) was duplicated in <6785271> from <4910893>
+[6785271] warning: card id 1310880 (Aria Fey, Mistress of Personality) was duplicated in <6785271> from <4910893>
+[6785271] warning: card id 1499072 (Temperament of Aria Fey) was duplicated in <6785271> from <6353430>
+[6785271] warning: card id 1310884 (Winds of Aria Fey) was duplicated in <6785271> from <4910893>
+[6785271] Finished scraping.
+[6785434] Starting to parse 6785434
+[6785434] Finished scraping.
+[6787178] Starting to parse 6787178
+[6787178] Finished scraping.
+[6791911] Starting to parse 6791911
+[6791911] warning: card id 1281323 (Muto, the Toxic Duo Kaiju) was duplicated in <6791911> from <6353457>
+[6791911] Finished scraping.
+[6792668] Starting to parse 6792668
+[6792668] Finished scraping.
+[6792679] Starting to parse 6792679
+[6792679] warning: card id 1945626 (Cyber Dragon Fuhren) was duplicated in <6792679> from <6353457>
+[6792679] warning: card id 1942628 (Cyber Tear Dragon) was duplicated in <6792679> from <6353449>
+[6792679] Finished scraping.
+[6793309] Starting to parse 6793309
+[6793309] warning: card id 1649387 (Subterror Behemoth Rodrake) was duplicated in <6793309> from <6353457>
+[6793309] warning: card id 1798351 (Subterror Ice Cave) was duplicated in <6793309> from <6353457>
+[6793309] warning: card id 1798355 (Subterror Behemoth Darkdealles) was duplicated in <6793309> from <6353430>
+[6793309] Finished scraping.
+[6793361] Starting to parse 6793361
+[6793361] Finished scraping.
+[6793424] Starting to parse 6793424
+[6793424] warning: card id 1942080 (The Time Thieves) was duplicated in <6793424> from <6419184>
+[6793424] Finished scraping.
+[6793437] Starting to parse 6793437
+[6793437] warning: card id 1731744 (Artifact Ame-No-Nuboku) was duplicated in <6793437> from <>
+[6793437] Finished scraping.
+[6793451] Starting to parse 6793451
+[6793451] Finished scraping.
+[6794841] Starting to parse 6794841
+[6794841] Finished scraping.
+[6798989] Starting to parse 6798989
+[6798989] Finished scraping.
+[6801590] Starting to parse 6801590
+[6801590] Finished scraping.
+[6804350] Starting to parse 6804350
+[6804350] warning: card id 1745866 (Exponential Cipher) was duplicated in <6804350> from <6353457>
+[6804350] Finished scraping.
+[6804358] Starting to parse 6804358
+[6804358] Finished scraping.
+[6807125] Starting to parse 6807125
+[6807125] Finished scraping.
+[6807794] Starting to parse 6807794
+[6807794] Finished scraping.
+[6819600] Starting to parse 6819600
+[6819600] Finished scraping.
+[6834530] Starting to parse 6834530
+[6834530] Finished scraping.
+[6837403] Starting to parse 6837403
+[6837403] Finished scraping.
+[6845097] Starting to parse 6845097
+[6845097] Finished scraping.
+[6845786] Starting to parse 6845786
+[6845786] Finished scraping.
+[6848354] Starting to parse 6848354
+[6848354] Finished scraping.
+[6858396] Starting to parse 6858396
+[6858396] Finished scraping.
+[6858407] Starting to parse 6858407
+[6858407] Finished scraping.
+[6858740] Starting to parse 6858740
+[6858740] Finished scraping.
+[6862415] Starting to parse 6862415
+[6862415] warning: card id 1976423 (The Phantom Knights of Forgotten Brigade) was duplicated in <6862415> from <>
+[6862415] Finished scraping.
+[6869158] Starting to parse 6869158
+[6869158] Finished scraping.
+[6871664] Starting to parse 6871664
+[6871664] warning: card id 1547701 (1,000 Sun Sword) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1586040 (A New Page) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1429959 (Aqua Treasure) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1622476 (Called by the Different Dimension) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1222148 (Called by the Spell Book) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1293436 (Canary Cry) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1807491 (Celestia Alphas) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1615372 (Chalice of Pain) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1393301 (Cosmic Vacuum) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1951631 (Deflect) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 913982 (Digital Hallway) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 631317 (Dogra's Wind) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 2031615 (Draconian Spirit) was duplicated in <6871664> from <4804758>
+[6871664] warning: card id 1537032 (Ember Cards) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 930975 (Equip Equality) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1409912 (Friends Being Friends) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1701618 (Fusion of the Normal) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1761344 (Golden Chance Encounter) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1395445 (Gravity Beam Attack!) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 610240 (Growthblade) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1975263 (Head in the Clouds) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1522513 (Hellenic Heart) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1102075 (Hope Shines Above All Else) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 797597 (Kaiser Arena) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 2196974 (Kozmonslaught) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1853067 (Mobius Zone Q7z) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1649255 (Mokey Mokey Induction) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1649233 (Mokey Mokey Resonation) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1304949 (Molten Sparks) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1795233 (Night of the Witches) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1681602 (No One Expects the Inquisition!) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1708820 (Numeron Extraction) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1319024 (Occult Lab) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1175945 (ON SALE!!!) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1551956 (One Thousand and One Nights) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1701943 (One with Nothing) was duplicated in <6871664> from <6353430>
+[6871664] note: property 'effect' of card id 1277656 (Pot of Pixels) was changed
+[6871664] from: Shuffle 3 or 6 monsters in your GY with different Attributes into the deck, then draw 1 card for every 3 cards shuffled into the deck by this effect. You can only activate 1 "Pot of Pixels" per turn.
+[6871664] to: Shuffle 3 or 6 monsters in your GY with different Attributes into the Deck, then draw 1 card for every 3 cards shuffled. You can only activate 1 "Pot of Pixels" per turn.
+[6871664] warning: card id 1277656 (Pot of Pixels) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1704626 (Raging River) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1319058 (Resurrected Blade of Elma) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1565156 (Sacramental Bell) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1410026 (Sacred Violin of Brigid) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1951735 (Santa's Sleigh) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1409778 (Space Station) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1423723 (Stirring The Cauldron) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1395971 (Suit of Armor Around the World) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1319017 (Telekinetic Rehabilitation) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1499072 (Temperament of Aria Fey) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1406205 (Tethered in the Void) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1951629 (The Holy Abacus) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1565325 (The Sanctuary in the Afterlife) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1523787 (The Winds Will Never Respond) was duplicated in <6871664> from <5869257>
+[6871664] warning: card id 1951622 (Tonic of the Old Man) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1409651 (Underwhelming Observations) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1951626 (United Front) was duplicated in <6871664> from <6353430>
+[6871664] note: property 'effect' of card id 1614328 (Yokai? Ryokai!) was changed
+[6871664] from: During your Main Phase: You can Special Summon 1 Yokai monster from your hand or GY, then, if you Special Summoned a monster from the GY this way, destroy this card. You can only use this effect of "Yokai? Ryokai!" once per turn.
+[6871664] to: Activate 1 of the following effects.
+● Special Summon 1 Yokai monster from your hand or GY.
+●Banish 1 card from your Deck, face-up, but if you control no Yokai monsters, you can only banish Yokai monsters with this effect. During your second Standby Phase after this card's activation, add that card to your hand.
+You can only activate 1 "Yokai? Ryokai!" per turn.
+[6871664] note: property 'type' of card id 1614328 (Yokai? Ryokai!) was changed
+[6871664] from: Continuous
+[6871664] to: Quick-Play
+[6871664] note: property 'effect' of card id 1995487 (Barrier Warrior in the Wasteland) was changed
+[6871664] from: 1 "Synchron" Tuner + 1+ non-Tuner monsters
+(Quick Effect): You can place 1 Barrier Counter on 1 face-up card on the field. (If a face-up card with a Barrier Counter would be destroyed by battle or card effect, remove 1 Barrier Counter from it instead.) You can only use this effect of "Barrier Warrior in the Wasteland" once per turn.
+[6871664] to: 1 Tuner + 1+ non-Tuner monsters
+(Quick Effect): You can place 1 Barrier Counter on 1 face-up card on the field. (If a face-up card with a Barrier Counter would be destroyed by battle or card effect, remove 1 Barrier Counter from it instead.) You can only use this effect of "Barrier Warrior in the Wasteland" once per turn.
+[6871664] warning: card id 1995487 (Barrier Warrior in the Wasteland) was duplicated in <6871664> from <6353430>
+[6871664] note: [+] added new card 2603280 (Galdred Thunderstrike)
+[6871664] warning: card id 1794778 (Blowback) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1713262 (Book of Midnight) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1619852 (Creationist's Erasure) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1650756 (Cupid Shoots for Love) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1360883 (Debts Eternally Frozen) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1670381 (Deep Lorffen Mountains) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1762076 (Draconic Eradication) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1812699 (Enmaddening Call) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1773035 (Give It Up for All the Benjamins!) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1592293 (Offerings) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 747487 (Reset!) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1656347 (The Moon and The Sun) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1797690 (The World Lives) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 696166 (Gravekeeper's Sorcerer) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1994794 (Deity of the Sanctuary in the Sky) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1951640 (Fiery Hole) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1951644 (Flying Freeze) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1994361 (Hi-Speedroid Race Raptor) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1994816 (Mechanized Dino Doomsday Device) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1994814 (Rogue Warrior from Another Planet) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1995498 (Storm Serpent) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1712856 (Alala, Martian Spirit) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1712793 (Enyo, Martian Idol) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1934288 (Number 189: Delicious Dragon) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1934304 (Number 190: The 19th Sabre) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1798355 (Subterror Behemoth Darkdealles) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1853089 (Voltcircut) was duplicated in <6871664> from <6353430>
+[6871664] warning: card id 1853088 (Voltconduit) was duplicated in <6871664> from <6353430>
+[6871664] Finished scraping.
+[6871713] Starting to parse 6871713
+[6871713] warning: card id 2014209 (Cryotitan the Elemental Lord) was duplicated in <6871713> from <>
+[6871713] warning: card id 2021204 (Cyber Angel Benzaiten) was duplicated in <6871713> from <>
+[6871713] warning: card id 2001559 (Armorizer Cereza) was duplicated in <6871713> from <6044732>
+[6871713] warning: card id 1999194 (El Shaddoll Winlao) was duplicated in <6871713> from <>
+[6871713] warning: card id 1884551 (Panera the Dazzling Ringmaster) was duplicated in <6871713> from <6419184>
+[6871713] warning: card id 1644412 (Pacifis Squid) was duplicated in <6871713> from <6353414>
+[6871713] Finished scraping.
+[6874481] Starting to parse 6874481
+[6874481] warning: card id 1785670 (Dark Hole Emissary) was duplicated in <6874481> from <6871713>
+[6874481] Finished scraping.
+[6879409] Starting to parse 6879409
+[6879409] note: property 'effect' of card id 1981463 (R-Genex Adjuster) was changed
+[6879409] from: If this card is added to your hand by a card effect: You can increase or decrease the Level of 1 monster you control by 1. (Quick Effect): You can, immediately after this effect resolves, Synchro Summon 1 Synchro Monster using only this card in your hand and "Genex" monsters you control. You can only use this effect of "R-Genex Adjuster" once per turn.
+[6879409] to: If this card is added to your hand by a card effect: You can increase or decrease the Level of 1 monster you control by 1. (Quick Effect): You can, immediately after this effect resolves, Synchro Summon 1 Synchro Monster using only this card in your hand and another "Genex" monster(s) you control. You can only use this effect of "R-Genex Adjuster" once per turn.
+[6879409] Finished scraping.
+[6881030] Starting to parse 6881030
+[6881030] Finished scraping.
+[6891534] Starting to parse 6891534
+[6891534] Finished scraping.
+[6895350] Starting to parse 6895350
+[6895350] warning: card id 1708833 (Prescient Owlsh) was duplicated in <6895350> from <6353414>
+[6895350] Finished scraping.
+[6906385] Starting to parse 6906385
+[6906385] Finished scraping.
+[6913421] Starting to parse 6913421
+[6913421] Finished scraping.
+[6918022] Starting to parse 6918022
+[6918022] Finished scraping.
+[6922630] Starting to parse 6922630
+[6922630] Finished scraping.
+[6933325] Starting to parse 6933325
+[6933325] Finished scraping.
+[6933560] Starting to parse 6933560
+[6933560] Finished scraping.
+[6936982] Starting to parse 6936982
+[6936982] Finished scraping.
+[6942144] Starting to parse 6942144
+[6942144] Finished scraping.
+[6948850] Starting to parse 6948850
+[6948850] Finished scraping.
+[6952745] Starting to parse 6952745
+[6952745] Finished scraping.
+[6979146] Starting to parse 6979146
+[6979146] Finished scraping.
+[6979527] Starting to parse 6979527
+[6979527] Finished scraping.
+[6981414] Starting to parse 6981414
+[6981414] Finished scraping.
+[6993829] Starting to parse 6993829
+[6993829] Finished scraping.
+[6997240] Starting to parse 6997240
+[6997240] Finished scraping.
+[7000259] Starting to parse 7000259
+[7000259] Finished scraping.
+[7002660] Starting to parse 7002660
+[7002660] Finished scraping.
+[7003669] Starting to parse 7003669
+[7003669] Finished scraping.
+[7003838] Starting to parse 7003838
+[7003838] Finished scraping.
+[7015993] Starting to parse 7015993
+[7015993] Finished scraping.
+[7020690] Starting to parse 7020690
+[7020690] Finished scraping.
+[7022063] Starting to parse 7022063
+[7022063] Finished scraping.
+[7022155] Starting to parse 7022155
+[7022155] Finished scraping.
+[7022231] Starting to parse 7022231
+[7022231] Finished scraping.
+[7025794] Starting to parse 7025794
+[7025794] Finished scraping.
+[7027111] Starting to parse 7027111
+[7027111] Finished scraping.
+[7027802] Starting to parse 7027802
+[7027802] Finished scraping.
+[7027863] Starting to parse 7027863
+[7027863] Finished scraping.
+[7074117] Starting to parse 7074117
+[7074117] note: [+] added new card 2039399 (Scrylak Aggressor)
+[7074117] note: [+] added new card 2042798 (Scrylak Ambush)
+[7074117] note: [+] added new card 2039410 (Scrylak Author)
+[7074117] note: [+] added new card 2042786 (Scrylak Enforcer)
+[7074117] note: [+] added new card 2039394 (Scrylak Recruiter)
+[7074117] note: [+] added new card 2039356 (Scrylak Relaxer)
+[7074117] note: [+] added new card 2039407 (Scrylak Altar)
+[7074117] note: [+] added new card 2039398 (Scrylak Force)
+[7074117] note: [+] added new card 2043515 (Scrylak Insight)
+[7074117] note: [+] added new card 2042770 (Scrylak Preparation)
+[7074117] note: [+] added new card 2697266 (Scrylak Research)
+[7074117] note: [+] added new card 2042810 (Scrylak Shine)
+[7074117] note: [+] added new card 2039411 (Scrylak Botta)
+[7074117] note: [+] added new card 2039464 (Scrylak Folora)
+[7074117] note: [+] added new card 2043561 (Scrylak Lancer)
+[7074117] note: [+] added new card 2039362 (Scrylak Bodyblock)
+[7074117] note: [+] added new card 2700580 (Scrylak Dynabow)
+[7074117] Finished scraping.
+[7085230] Starting to parse 7085230
+[7085230] warning: card id 2050037 (Majestic Ivory Chaoserpent) was duplicated in <7085230> from <>
+[7085230] Finished scraping.
+[7086187] Starting to parse 7086187
+[7086187] Finished scraping.
+[7093024] Starting to parse 7093024
+[7093024] Finished scraping.
+[7094214] Starting to parse 7094214
+[7094214] Finished scraping.
+[7124125] Starting to parse 7124125
+[7124125] warning: card id 9189 (Called by the Grave) was duplicated in <7124125> from <>
+[7124125] Finished scraping.
+[7127621] Starting to parse 7127621
+[7127621] Finished scraping.
+[7138655] Starting to parse 7138655
+[7138655] Finished scraping.
+[7139390] Starting to parse 7139390
+[7139390] warning: card id 1177845 (Bubble Dragon) was duplicated in <7139390> from <6353294>
+[7139390] warning: card id 5632 (Bahamut Shark) was duplicated in <7139390> from <>
+[7139390] Finished scraping.
+[7140843] Starting to parse 7140843
+[7140843] Finished scraping.
+[7163783] Starting to parse 7163783
+[7163783] Finished scraping.
+[7166789] Starting to parse 7166789
+[7166789] Finished scraping.
+[7180332] Starting to parse 7180332
+[7180332] Finished scraping.
+[7184403] Starting to parse 7184403
+[7184403] Finished scraping.
+[7193014] Starting to parse 7193014
+[7193014] warning: card id 1565532 (Auctioneering) was duplicated in <7193014> from <5713627>
+[7193014] warning: card id 1565558 (Charismatic Holy Conversion) was duplicated in <7193014> from <5713627>
+[7193014] warning: card id 1681750 (Far Reaches of Infestation) was duplicated in <7193014> from <6011815>
+[7193014] warning: card id 1565578 (Mortal Hourglass) was duplicated in <7193014> from <5713627>
+[7193014] note: property 'effect' of card id 1478775 (Scattershot Blazing Barrage) was changed
+[7193014] from: Add 1 DARK "Scattershot" monster from your Deck to your hand, but for the rest of this turn, you cannot Special Summon monsters from the Extra Deck, except DARK Warrior monsters. If this Set card is destroyed by an opponent's card effect: You can reveal 1 "Scattershot" Link Monster in your Extra Deck; during your opponent's End Phase, Special Summon it to the Extra Monster Zone. You can only use each effect of "Scattershot Blazing Barrage" per turn.
+[7193014] to: Add 1 DARK "Scattershot" monster from your Deck to your hand, but for the rest of this turn, you cannot Special Summon monsters from the Extra Deck, except DARK Warrior monsters. If this Set card is destroyed by an card effect: You can reveal 1 "Scattershot" Link Monster in your Extra Deck; during the End Phase, Special Summon it to the Extra Monster Zone, and if you do, return it to the Extra Deck during your next Standby Phase. You can only use each effect of "Scattershot Blazing Barrage" per turn.
+[7193014] note: property 'effect' of card id 1473549 (Scattershot Zone) was changed
+[7193014] from: If you control a "Scattershot" Link Monster: Target 1 face-up monster your opponent controls; negate its effects, then, if your opponent controls a monster that is adjacent to the targeted monster, you can have both players draw 1 card. If this card is in your GY: You can target 1 "Scattershot" Link Monster in your GY; return it to the Extra Deck, and if you do, shuffle this card into the Deck, and if you do that, draw 1 card. You can only use 1 "Scattershot Zone" effect per turn, and only once that turn.
+[7193014] to: If you control a "Scattershot" Link Monster: Target 1 face-up monster your opponent controls; negate its effects, then, if your opponent controls a monster that is adjacent to the targeted monster, you can have both players draw 1 card. If this card is in your GY: You can target 3 "Scattershot" monsters in you control and/or in your GY; shuffle them into the Deck, and if you do, draw 1 card. You can only use 1 "Scattershot Zone" effect per turn, and only once that turn.
+[7193014] note: property 'effect' of card id 2092917 (Scattershot Soldier) was changed
+[7193014] from: If this card is Normal or Special Summoned: You can Special Summon 1 DARK "Scattershot" monster from your Deck or GY, but its effects are negated, also you cannot Special Summon monsters for the rest of this turn, except "Scattershot" monsters. If a card(s) is destroyed by the effect of a DARK "Scattershot" monster, while this card is in your GY: You can banish this card; add 1 "Scattershot" card from your Deck to your hand, except "Volcanic Scattershot". You can only use each effect of "Scattershot Soldier" once per turn.
+[7193014] to: If this card is Normal or Special Summoned: You can Special Summon 1 DARK "Scattershot" monster from your Deck or GY, but its effects are negated, also you cannot Special Summon monsters for the rest of this turn, except DARK Warrior monsters. If a card(s) is destroyed by the effect of a DARK "Scattershot" monster, while this card is in your GY: You can banish this card; add 1 "Scattershot" card from your Deck to your hand, except "Volcanic Scattershot". You can only use each effect of "Scattershot Soldier" once per turn.
+[7193014] warning: card id 993447 (A Phoenix Rising) was duplicated in <7193014> from <6353465>
+[7193014] note: [+] added new card 2603310 (Red Rocket Dragon)
+[7193014] note: property 'effect' of card id 1473158 (Scattershot Sniper) was changed
+[7193014] from: 2+ Effect Monsters with the same Type and Attribute
+If this card is Link Summoned: You can target any number of Spells/Traps in adjacent columns to this card; destroy them, and if you do, each player draws 1 card for each Spell/Trap they controlled that was destroyed by this effect. If a Link Monster(s) is Special Summoned, while this card is in your GY: You can banish this card, then target 1 Set card your opponent controls; it cannot be activated this turn. Your opponent cannot activate the targeted card in response to this card's activation. You can only use 1 "Scattershot Sniper" effect per turn, and only once that turn.
+[7193014] to: 2+ Effect Monsters with the same Type and Attribute
+Must be Link Summoned to the Extra Monster Zone. If this card is Special Summoned: You can target any number of Spells/Traps in adjacent columns to this card; destroy them, and if you do, each player draws 1 card for each Spell/Trap they controlled that was destroyed by this effect. At the start of the damage step: You can target 1 card in either player's GY that was destroyed by a card effect this turn; equip it to this card as an Equip Spell with 1 of the following effects.
+● If a card(s) your opponent controls is destroyed by a card effect and sent to the GY: You can banish that opponent's card(s).
+● Once per turn (Quick Effect): You can target 1 card in either player's GY that was destroyed by a card effect this turn; equip it to a "Scattershot" monster you control as an Equip Spell that gives it 500 ATK, and if you do, send this card to the GY.
+You can only use each effect of "Scattershot Sniper" once per turn.
+[7193014] warning: card id 2108640 (Number 160: Scorching Slayer) was duplicated in <7193014> from <6598717>
+[7193014] warning: card id 2109243 (Number 164: Midnight Phantom) was duplicated in <7193014> from <6871713>
+[7193014] warning: card id 2109271 (Number 165: Deviant Lucien) was duplicated in <7193014> from <6353380>
+[7193014] note: property 'effect' of card id 2106784 (Number 333: Full Moonlit Citadel) was changed
+[7193014] from: 3 Level 12 monsters
+Once per Duel, you can also Xyz Summon "Number 333: Full Moonlit Citadel" by using 5 monsters you control as material, but its original ATK/DEF are halved. Cannot be used as Xyz Material. Banish this card when it leaves the field. Your opponent's monsters must attack this card, if able. Neither player can change face-up Attack Position monsters on the field to Defense Position, nor can they activate cards or effects that would change the battle position of a monster(s). During the End Phase, if this card is currently banished, as was banished this turn: You can Special Summon it. You can only use this effect of "Number 333: Full Moonlit Citadel" once per turn.
+[7193014] to: 3 Level 12 monsters
+Once per Duel, you can also Xyz Summon "Number 333: Full Moonlit Citadel" by using 5 monsters you control as material, but its original ATK/DEF are halved. Cannot be used as Xyz Material. Banish this card when it leaves the field. Your opponent's monsters must attack this card, if able. Neither player can change face-up Attack Position monsters on the field to Defense Position, nor can they activate cards or effects that would change the battle position of a monster(s). During the End Phase, if this card is currently banished, and was banished this turn: You can Special Summon it. You can only use this effect of "Number 333: Full Moonlit Citadel" once per turn.
+[7193014] Finished scraping.
+[7193016] Starting to parse 7193016
+[7193016] warning: card id 2078157 (Imposing Attraction) was duplicated in <7193016> from <>
+[7193016] warning: card id 2142705 (Level King Ugly Toadfish) was duplicated in <7193016> from <6598717>
+[7193016] Finished scraping.
+[7193018] Starting to parse 7193018
+[7193018] warning: card id 1565554 (Two Tuners' Lampoon) was duplicated in <7193018> from <5713627>
+[7193018] warning: card id 1793538 (Masked HERO Dusk Law) was duplicated in <7193018> from <>
+[7193018] Finished scraping.
+[7203610] Starting to parse 7203610
+[7203610] Finished scraping.
+[7225933] Starting to parse 7225933
+[7225933] Finished scraping.
+[7236701] Starting to parse 7236701
+[7236701] Finished scraping.
+[7247437] Starting to parse 7247437
+[7247437] Finished scraping.
+[7251527] Starting to parse 7251527
+[7251527] Finished scraping.
+[7252887] Starting to parse 7252887
+[7252887] Finished scraping.
+[7256172] Starting to parse 7256172
+[7256172] Finished scraping.
+[7263281] Starting to parse 7263281
+[7263281] Finished scraping.
+[7284131] Starting to parse 7284131
+[7284131] Finished scraping.
+[7294550] Starting to parse 7294550
+[7294550] Finished scraping.
+[7297777] Starting to parse 7297777
+[7297777] Finished scraping.
+[7301908] Starting to parse 7301908
+[7301908] Finished scraping.
+[7306486] Starting to parse 7306486
+[7306486] Finished scraping.
+[7310491] Starting to parse 7310491
+[7310491] Finished scraping.
+[7311070] Starting to parse 7311070
+[7311070] Finished scraping.
+[7311950] Starting to parse 7311950
+[7311950] warning: card id 2115959 (Darkwater Hadras) was duplicated in <7311950> from <6582550>
+[7311950] warning: card id 2116000 (Abyssal Rift) was duplicated in <7311950> from <6582550>
+[7311950] Finished scraping.
+[7318790] Starting to parse 7318790
+[7318790] Finished scraping.
+[7367392] Starting to parse 7367392
+[7367392] Finished scraping.
+[7389331] Starting to parse 7389331
+[7389331] Finished scraping.
+[7410698] Starting to parse 7410698
+[7410698] Finished scraping.
+[7432421] Starting to parse 7432421
+[7432421] Finished scraping.
+[7435843] Starting to parse 7435843
+[7435843] Finished scraping.
+[7439337] Starting to parse 7439337
+[7439337] Finished scraping.
+[7443209] Starting to parse 7443209
+[7443209] Finished scraping.
+[7446763] Starting to parse 7446763
+[7446763] Finished scraping.
+[7448539] Starting to parse 7448539
+[7448539] Finished scraping.
+[7452180] Starting to parse 7452180
+[7452180] warning: card id 1565156 (Sacramental Bell) was duplicated in <7452180> from <6353430>
+[7452180] Finished scraping.
+[7455513] Starting to parse 7455513
+[7455513] warning: card id 1948792 (Doom Instrument of Maddening Devastation) was duplicated in <7455513> from <6871713>
+[7455513] warning: card id 1948996 (Doom Instrument of Entrancing Chaos) was duplicated in <7455513> from <6871713>
+[7455513] Finished scraping.
+[7458028] Starting to parse 7458028
+[7458028] Finished scraping.
+[7464737] Starting to parse 7464737
+[7464737] Finished scraping.
+[7478308] Starting to parse 7478308
+[7478308] Finished scraping.
+[7484447] Starting to parse 7484447
+[7484447] Finished scraping.
+[7495126] Starting to parse 7495126
+[7495126] Finished scraping.
+[7496225] Starting to parse 7496225
+[7496225] note: property 'level' of card id 2179993 (Primordial Driver - Exhume) was changed
+[7496225] from: 8
+[7496225] to: 10
+[7496225] Finished scraping.
+[7499095] Starting to parse 7499095
+[7499095] Finished scraping.
+[7499352] Starting to parse 7499352
+[7499352] Finished scraping.
+[7499374] Starting to parse 7499374
+[7499374] Finished scraping.
+[7516077] Starting to parse 7516077
+[7516077] Finished scraping.
+[7516633] Starting to parse 7516633
+[7516633] Finished scraping.
+[7516896] Starting to parse 7516896
+[7516896] Finished scraping.
+[7519530] Starting to parse 7519530
+[7519530] Finished scraping.
+[7522856] Starting to parse 7522856
+[7522856] Finished scraping.
+[7529948] Starting to parse 7529948
+[7529948] warning: card id 2206067 (Vicious Syndicate) was duplicated in <7529948> from <7193016>
+[7529948] Finished scraping.
+[7531842] Starting to parse 7531842
+[7531842] Finished scraping.
+[7534403] Starting to parse 7534403
+[7534403] Finished scraping.
+[7544944] Starting to parse 7544944
+[7544944] warning: card id 2190984 (Prismatic Colorless Burst) was duplicated in <7544944> from <7193014>
+[7544944] warning: card id 2190075 (Lure of the Clear Prism) was duplicated in <7544944> from <7193016>
+[7544944] Finished scraping.
+[7547609] Starting to parse 7547609
+[7547609] note: property 'effect' of card id 2221740 (Nauticorpse Chase Gun) was changed
+[7547609] from: If your opponent controls a face-up monster whose ATK is lower than 1 "Nauticorpse" monster you control in the same column as that monster: Target 1 card your opponent controls in the same column as that "Nauticorpse" monster you control; destroy it. During your Main Phase, except the turn this card was sent to the GY: You can banish this card, then target 1 of your banished "Nauticorpse" cards, except "Nauticorpse Chase Gun"; shuffle it into the Deck. You can only use this effect of "Nauticorpse Chase Gun" once per turn. You can only activate 1 "Nauticorpse Chase Gun" per turn.
+[7547609] to: If your opponent controls a face-up monster whose ATK is lower than 1 "Nauticorpse" monster you control in the same column as that monster: Target 1 card your opponent controls in the same column as that "Nauticorpse" monster you control; destroy it. During your Main Phase, except the turn this card was sent to the GY: You can banish this card; banish 1 "Nauticorpse" card from your Deck. You can only use this effect of "Nauticorpse Chase Gun" once per turn. You can only activate 1 "Nauticorpse Chase Gun" per turn.
+[7547609] note: property 'effect' of card id 2217366 (Nauticorpse Old Salt) was changed
+[7547609] from: Target 3 of your "Nauticorpse" cards of different types that are banished or in your GY (1 Monster, 1 Spell, and 1 Trap); shuffle them into the Deck, and if you do, add 2 "Nauticorpse" cards from your Deck to your hand with different card types from each other. If this card is in your GY, except the turn it was sent there: You can banish this card; banish or send to the GY, 1 "Nauticorpse" card from your Deck with the same original name as 1 "Nauticorpse" card from among your cards on the field, in your GY, or your face-up banished cards. You can only use this effect of "Nauticorpse Old Salt" once per turn. You can only activate 1 "Nauticorpse Old Salt" per turn.
+[7547609] to: Target 3 of your "Nauticorpse" cards of different types that are banished and/or in your GY (1 Monster, 1 Spell, and 1 Trap); shuffle them into the Deck, and if you do, add 2 "Nauticorpse" cards from your Deck to your hand with different card types from each other. If this card is in your GY, except the turn it was sent there: You can banish this card; banish or send to the GY, 1 "Nauticorpse" card from your Deck with the same original name as 1 "Nauticorpse" card from among your cards on the field, in your GY, or your face-up banished cards. You can only use this effect of "Nauticorpse Old Salt" once per turn. You can only activate 1 "Nauticorpse Old Salt" per turn.
+[7547609] note: property 'effect' of card id 2211914 (Nauticorpse Voyage!) was changed
+[7547609] from: You can target 1 other face-up "Nauticorpse" card you control and 1 card your opponent controls; banish the first target, and if you do, destroy the second target. During the Main Phase, except the turn this card was sent to the GY: You can banish this card; banish 1 "Nauticorpse" card from your Deck. You can only use each effect of "Nauticorpse Voyage!" once per turn.
+[7547609] to: You can target 1 other face-up "Nauticorpse" card you control and 1 card your opponent controls; banish the first target, and if you do, destroy the second target. During the Main Phase, except the turn this card was sent to the GY: You can banish this card, then target 1 of your banished "Nauticorpse" cards, except "Nauticorpse Voyage!"; shuffle it into the Deck. You can only use each effect of "Nauticorpse Voyage!" once per turn.
+[7547609] Finished scraping.
+[7548170] Starting to parse 7548170
+[7548170] Finished scraping.
+[7552348] Starting to parse 7552348
+[7552348] warning: card id 1565180 (Celebratory Bell) was duplicated in <7552348> from <7452180>
+[7552348] note: property 'effect' of card id 2218012 (Noble Knight Lefay) was changed
+[7552348] from: 2 Warrior monsters, including a "Noble Knight" monster
+If this card is Link Summoned: You can add 1 "Noble Knight" monster from your Deck to your hand, but for the rest of this turn, you cannot Normal Summon/Set or Special Summon monsters with that name, nor activate their monster effects. You can send any number of Equip Spells with different names from your Deck to the GY; Special Summon 1 "Noble Knight" monster from your Deck, whose Level equals the number of cards sent to the GY. You can only use each effect of "Noble Knight Lefay" once per turn, also you cannot Special Summon monsters the turn you activate this effect, except "Noble Knight" monsters.
+[7552348] to: 2 Warrior monsters, including a "Noble Knight" monster
+If this card is Link Summoned: You can add 1 "Noble Knight" monster from your Deck to your hand, but for the rest of this turn, you cannot Normal Summon/Set or Special Summon monsters with that name. You can send any number of Equip Spells with different names from your Deck to the GY; Special Summon 1 "Noble Knight" monster from your Deck, whose Level equals the number of cards sent to the GY. You can only use each effect of "Noble Knight Lefay" once per turn, also you cannot Special Summon monsters the turn you activate this effect, except monsters that specifically list a "Noble Knight" monster in their text.
+[7552348] warning: card id 2218012 (Noble Knight Lefay) was duplicated in <7552348> from <>
+[7552348] Finished scraping.
+[7552464] Starting to parse 7552464
+[7552464] note: property 'name' of card id 2292910 (Frozen Over) was changed
+[7552464] from: Flash Frozen
+[7552464] to: Frozen Over
+[7552464] warning: card id 2250290 (Tragic Defeat of the Carcharracks) was duplicated in <7552464> from <3734721>
+[7552464] Finished scraping.
+[7553027] Starting to parse 7553027
+[7553027] Finished scraping.
+[7556770] Starting to parse 7556770
+[7556770] Finished scraping.
+[7557629] Starting to parse 7557629
+[7557629] Finished scraping.
+[7563615] Starting to parse 7563615
+[7563615] Finished scraping.
+[7565819] Starting to parse 7565819
+[7565819] note: property 'effect' of card id 2204088 (Mind Layer Breeze) was changed
+[7565819] from: 2 Level 3 Psychic monsters
+You can detach 1 material from this card; Special Summon 1 "Mind Layer" monster from your Deck, also you cannot Special Summon monsters for the rest of this turn, except "Mind Layer" monsters. If this card is banished: You can target 1 face-up card your opponent controls; negate its effects, also you cannot activate the effects of monsters on the field for the rest of the turn, except Psychic monsters. You can only use each effect of "Mind Layer Breeze" once per turn.
+[7565819] to: 2 Level 3 Psychic monsters
+You can detach 1 material from this card; Special Summon 1 "Mind Layer" monster from your Deck, also you cannot Special Summon monsters for the rest of this turn, except Psychic monsters. If this card is banished: You can target 1 face-up card your opponent controls; negate its effects, also you cannot activate the effects of monsters on the field for the rest of the turn, except Psychic monsters. You can only use each effect of "Mind Layer Breeze" once per turn.
+[7565819] Finished scraping.
+[7566464] Starting to parse 7566464
+[7566464] Finished scraping.
+[7568710] Starting to parse 7568710
+[7568710] Finished scraping.
+[7577360] Starting to parse 7577360
+[7577360] Finished scraping.
+[7594853] Starting to parse 7594853
+[7594853] Finished scraping.
+[7608828] Starting to parse 7608828
+[7608828] Finished scraping.
+[7609855] Starting to parse 7609855
+[7609855] Finished scraping.
+[7619657] Starting to parse 7619657
+[7619657] Finished scraping.
+[7637725] Starting to parse 7637725
+[7637725] Finished scraping.
+[7645365] Starting to parse 7645365
+[7645365] Finished scraping.
+[7659844] Starting to parse 7659844
+[7659844] warning: card id 1807507 (Singular-Eyes Restrict) was duplicated in <7659844> from <6353457>
+[7659844] warning: card id 2214269 (Restricted) was duplicated in <7659844> from <7552348>
+[7659844] Finished scraping.
+[7664359] Starting to parse 7664359
+[7664359] Finished scraping.
+[7671393] Starting to parse 7671393
+[7671393] Finished scraping.
+[7678716] Starting to parse 7678716
+[7678716] Finished scraping.
+[7679392] Starting to parse 7679392
+[7679392] Finished scraping.
+[7687348] Starting to parse 7687348
+[7687348] Finished scraping.
+[7695428] Starting to parse 7695428
+[7695428] Finished scraping.
+[7714198] Starting to parse 7714198
+[7714198] Finished scraping.
+[7723773] Starting to parse 7723773
+[7723773] Finished scraping.
+[7727566] Starting to parse 7727566
+[7727566] Finished scraping.
+[7728700] Starting to parse 7728700
+[7728700] Finished scraping.
+[7730748] Starting to parse 7730748
+[7730748] Finished scraping.
+[7733925] Starting to parse 7733925
+[7733925] warning: card id 2447086 (Panera The Dazzling Ringmaster) was duplicated in <7733925> from <>
+[7733925] warning: card id 1884551 (Panera the Dazzling Ringmaster) was duplicated in <7733925> from <6419184>
+[7733925] Finished scraping.
+[7742679] Starting to parse 7742679
+[7742679] Finished scraping.
+[7743608] Starting to parse 7743608
+[7743608] Finished scraping.
+[7745973] Starting to parse 7745973
+[7745973] Finished scraping.
+[7746134] Starting to parse 7746134
+[7746134] Finished scraping.
+[7753395] Starting to parse 7753395
+[7753395] warning: card id 2242234 (Aether Faisy) was duplicated in <7753395> from <>
+[7753395] warning: card id 2269297 (Sir Fangar, Enemy of Chima) was duplicated in <7753395> from <7225933>
+[7753395] warning: card id 2109227 (Number 162: Sizzling Serenade) was duplicated in <7753395> from <7193014>
+[7753395] warning: card id 2235450 (Infrastructure Frenzy Hardware Dragon) was duplicated in <7753395> from <6869158>
+[7753395] warning: card id 2242028 (Backcode Talker) was duplicated in <7753395> from <>
+[7753395] warning: card id 2231144 (Cryptocode Talker) was duplicated in <7753395> from <>
+[7753395] Finished scraping.
+[7758078] Starting to parse 7758078
+[7758078] Finished scraping.
+[7759421] Starting to parse 7759421
+[7759421] warning: card id 2529570 (Never Surrender!) was duplicated in <7759421> from <>
+[7759421] warning: card id 2393744 (Soul Chronicler) is not public
+[7759421] note: property 'effect' of card id 2268280 (Fairy Tail - Sakuya) was changed
+[7759421] from: If this card is Normal or Special Summoned while you control no monsters with more than 1850 ATK: You can target cards your opponent controls, up to the number of Spellcaster monsters you currently control with 1850 ATK but different names; destroy those targets, then if this card was Normal Summoned, you can draw 1 card. If this card is Tributed: You can target 1 card in your opponent’s GY; banish it face-down. You can only use each effect of “Fairy Tail - Sakuya” once per turn.
+[7759421] to: If this card is Normal or Special Summoned while you control no monsters with more than 1850 original ATK: You can target cards your opponent controls, up to the number of Spellcaster monsters you currently control whose original ATK is 1850; destroy those targets, then if this card was Normal Summoned, you can draw 1 card. If this card is Tributed: You can target 1 card in your opponent’s GY; banish it face-down. You can only use each effect of “Fairy Tail - Sakuya” once per turn.
+[7759421] Finished scraping.
+[7763073] Starting to parse 7763073
+[7763073] warning: card id 2116147 (Darkwater Dirge) was duplicated in <7763073> from <6582550>
+[7763073] warning: card id 2116093 (Darkwater Deckhand) was duplicated in <7763073> from <6582550>
+[7763073] warning: card id 2116083 (Darkwater Hullbream) was duplicated in <7763073> from <6582550>
+[7763073] Finished scraping.
+[7763820] Starting to parse 7763820
+[7763820] warning: card id 2258888 (Nekker Chieftain) was duplicated in <7763820> from <7753395>
+[7763820] Finished scraping.
+[7769900] Starting to parse 7769900
+[7769900] Finished scraping.
+[7771474] Starting to parse 7771474
+[7771474] Finished scraping.
+[7795290] Starting to parse 7795290
+[7795290] Finished scraping.
+[7814419] Starting to parse 7814419
+[7814419] warning: card id 2168022 (Poppin Polarize) is not public
+[7814419] Finished scraping.
+[7816634] Starting to parse 7816634
+[7816634] Finished scraping.
+[7823128] Starting to parse 7823128
+[7823128] Finished scraping.
+[7834508] Starting to parse 7834508
+[7834508] Finished scraping.
+[7842189] Starting to parse 7842189
+[7842189] Finished scraping.
+[7846987] Starting to parse 7846987
+[7846987] Finished scraping.
+[7852899] Starting to parse 7852899
+[7852899] Finished scraping.
+[7874062] Starting to parse 7874062
+[7874062] note: property 'effect' of card id 2505088 (Conflagrant Future Ace) was changed
+[7874062] from: 1 "Conflagrant" monster + 1 Level 3 or lower "Conflagrant" monster
+If this card is Fusion Summoned by a "Conflagrant" card effect: You can target 1 monster your opponent controls; destroy it. If this card is in your GY: You can target 1 banished "Conflagrant" Synchro Monster; return both this card and that target to the Extra Deck. You can only use each effect of "Conflagrant Future Ace" once per turn.
+[7874062] to: 1 "Conflagrant" monster + 1 Level 3 or lower "Conflagrant" monster
+If this card is Fusion Summoned by a "Conflagrant" or "Ignescent" card effect: You can target 1 monster your opponent controls; destroy it. If this card is in your GY: You can target 1 banished "Conflagrant" Synchro Monster; return both this card and that target to the Extra Deck. You can only use each effect of "Conflagrant Future Ace" once per turn.
+[7874062] Finished scraping.
+[7877166] Starting to parse 7877166
+[7877166] Finished scraping.
+[7881252] Starting to parse 7881252
+[7881252] Finished scraping.
+[7882788] Starting to parse 7882788
+[7882788] Finished scraping.
+[7885271] Starting to parse 7885271
+[7885271] note: [+] added new card 12091 (Lord of the Heavenly Prison)
+[7885271] note: [+] added new card 12066 (Swordsoul Strategist Longyuan)
+[7885271] note: [+] added new card 185 (Anti-Spell Fragrance)
+[7885271] note: [+] added new card 12102 (Swordsoul Grandmaster - Chixiao)
+[7885271] Finished scraping.
+[7885378] Starting to parse 7885378
+[7885378] Finished scraping.
+[7920705] Starting to parse 7920705
+[7920705] Finished scraping.
+[7922328] Starting to parse 7922328
+[7922328] Finished scraping.
+[7934345] Starting to parse 7934345
+[7934345] warning: card id 1953330 (Cyberdark Fusion) was duplicated in <7934345> from <6353457>
+[7934345] note: property 'effect' of card id 1991776 (Pot of Masochism) was changed
+[7934345] from: If you control no other Spells/Traps: Pay 2000 or 4000 LP; draw 1 card for every 2000 LP paid. Until your next Standby Phase, after this card resolves, any battle or effect damage you take is tripled, also, you cannot draw any cards by card effects the turn you activate this effect. You can only activate 1 "Pot of Masochism" per turn.
+[7934345] to: If you control no other Spells/Traps: Pay 2000 or 4000 LP; draw 1 card for every 2000 LP paid. Until your next Standby Phase after this card resolves, any damage you take is tripled and you cannot draw cards by other card effects. You can only activate 1 "Pot of Masochism" per turn.
+[7934345] warning: card id 1961738 (True King's Diagram) was duplicated in <7934345> from <>
+[7934345] note: property 'level' of card id 2711201 (Ojamasked HERO Yellow Koga) was changed
+[7934345] from: 2
+[7934345] to: 3
+[7934345] warning: card id 2350096 (Madolche Queen Crownnoli) was duplicated in <7934345> from <>
+[7934345] Finished scraping.
+[7934346] Starting to parse 7934346
+[7934346] note: property 'effect' of card id 2283949 (Supporting Contraption: Gendarme) was changed
+[7934346] from: Cannot be Normal Summoned/Set. Must be Special Summoned by a card effect. You cannot Summon monsters from your hand the turn you Special Summon this card, except "Contraption" monsters. You can only use each of the following effects of "Supporting Contraption: Gendarme" once per turn. You can reveal this card and 1 other "Contraption" card in your hand; Special Summon this card. If this card is Special Summoned: You can add 1 "Contraption" card from your Deck to your hand. If you control a "S.I.E Contraption" monster, while this card is in your GY (Quick Effect): You can banish this card, then target 1 card on the field; destroy it.
+[7934346] to: Cannot be Normal Summoned/Set. Must be Special Summoned by a card effect. You cannot Summon monsters from your hand the turn you Special Summon this card, except "Contraption" monsters. You can only use each of the following effects of "Supporting Contraption: Gendarme" once per turn. You can reveal this card and 1 other "Contraption" card in your hand; shuffle the second card revealed to activate this effect into the Deck, and if you do, Special Summon this card. If this card is Special Summoned from the hand: You can add 1 "Contraption" monster from your Deck to your hand. If you control a "S.I.E Contraption" monster, while this card is in your GY (Quick Effect): You can banish this card, then target 1 card on the field; destroy it.
+[7934346] warning: card id 2283949 (Supporting Contraption: Gendarme) was duplicated in <7934346> from <5904696>
+[7934346] warning: card id 2321201 (Tenechorus Lady) was duplicated in <7934346> from <7759421>
+[7934346] warning: card id 2321198 (Tenechorus Lord) was duplicated in <7934346> from <7759421>
+[7934346] warning: card id 2308044 (Whispess - Eldest of the Crones) was duplicated in <7934346> from <7759421>
+[7934346] note: [+] added new card 2263523 (A Fallen Draconoid With Two Swords)
+[7934346] Finished scraping.
+[7937711] Starting to parse 7937711
+[7937711] Finished scraping.
+[7961879] Starting to parse 7961879
+[7961879] Finished scraping.
+[7969621] Starting to parse 7969621
+[7969621] Finished scraping.
+[7973339] Starting to parse 7973339
+[7973339] Finished scraping.
+[7995546] Starting to parse 7995546
+[7995546] warning: card id 1764858 (Net Terminal Genes - Replica) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1765081 (Net Terminal Gate) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1764999 (Net Terminal Genes - Vanish) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1765072 (Net Terminal Genes - Reboot) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1764903 (Net Terminal Genes - Memory) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1764924 (Net Terminal Genes - Immunity) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1765044 (Net Terminal Genes - Safeguard Mode) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1765054 (Net Terminal Genes - Shell) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1764979 (Net Terminal Genesis) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1764957 (NTG Safeguard Cibo) was duplicated in <7995546> from <6563112>
+[7995546] warning: card id 1764824 (NTG Safeguard Sana) was duplicated in <7995546> from <6563112>
+[7995546] Finished scraping.
+[7997640] Starting to parse 7997640
+[7997640] Finished scraping.
+[8010982] Starting to parse 8010982
+[8010982] Finished scraping.
+[8034682] Starting to parse 8034682
+[8034682] Finished scraping.
+[8055360] Starting to parse 8055360
+[8055360] Finished scraping.
+[8055913] Starting to parse 8055913
+[8055913] Finished scraping.
+[8105715] Starting to parse 8105715
+[8105715] warning: card id 1763951 (Spacial Demon Braucore) is not public
+[8105715] warning: card id 1763991 (Spacial Demon Holies) is not public
+[8105715] Finished scraping.
+[8105851] Starting to parse 8105851
+[8105851] Finished scraping.
+[8109335] Starting to parse 8109335
+[8109335] Finished scraping.
+[8119660] Starting to parse 8119660
+[8119660] Finished scraping.
+[8152211] Starting to parse 8152211
+[8152211] Finished scraping.
+[8167114] Starting to parse 8167114
+[8167114] Finished scraping.
+[8170513] Starting to parse 8170513
+[8170513] Finished scraping.
+[8174923] Starting to parse 8174923
+[8174923] Finished scraping.
+[8184053] Starting to parse 8184053
+[8184053] Finished scraping.
+[8187355] Starting to parse 8187355
+[8187355] Finished scraping.
+[8194294] Starting to parse 8194294
+[8194294] Finished scraping.
+[8196897] Starting to parse 8196897
+[8196897] Finished scraping.
+[8202812] Starting to parse 8202812
+[8202812] warning: card id 1953265 (Bujingi Moo Moo) was duplicated in <8202812> from <7934346>
+[8202812] Finished scraping.
+[8202865] Starting to parse 8202865
+[8202865] Finished scraping.
+[8208847] Starting to parse 8208847
+[8208847] Finished scraping.
+[8213421] Starting to parse 8213421
+[8213421] Finished scraping.
+[8221267] Starting to parse 8221267
+[8221267] Finished scraping.
+[8224351] Starting to parse 8224351
+[8224351] Finished scraping.
+[8253171] Starting to parse 8253171
+[8253171] warning: card id 2277819 (Archfiend Zoa) was duplicated in <8253171> from <8202812>
+[8253171] warning: card id 1551505 (Genshutsu Knight) was duplicated in <8253171> from <2952495>
+[8253171] Finished scraping.
+[8263489] Starting to parse 8263489
+[8263489] Finished scraping.
+[8269957] Starting to parse 8269957
+[8269957] Finished scraping.
+[8283182] Starting to parse 8283182
+[8283182] Finished scraping.
+[8306788] Starting to parse 8306788
+[8306788] Finished scraping.
+[8308338] Starting to parse 8308338
+[8308338] Finished scraping.
+[8310242] Starting to parse 8310242
+[8310242] Finished scraping.
+[8312789] Starting to parse 8312789
+[8312789] Finished scraping.
+[8318509] Starting to parse 8318509
+[8318509] warning: card id 1743544 (Absolutely Dazzling!) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1940490 (Arcane Ritual) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1830258 (Better Universal Adapter) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1918441 (Call to Ambiguity) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 2420903 (Coronation of the Auspicious Omen) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1949684 (Cost Down - Holiday Sale) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1741129 (Creation Manifesto) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1819618 (Cynet Systems Hack) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1918378 (D.D.D. - Different Dimension Dice) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1956880 (Destructive Desire) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1519816 (Diabound Scatter Nucleues) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1918313 (Dice Dungeon) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1891833 (Doubled Down) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1741062 (Dream Mirror Parasomnia) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1867878 (Drop of Restoration) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1738691 (Dual Diamond, Azul) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1738688 (Dual Diamond, Rojo) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 2396467 (Electromagnetic Anode Stimulation) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1892572 (Expeditioning) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1951615 (Fidget Device) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1949673 (Fierce Night under the Moonlight) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 2421930 (Fire of Armageddon) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1884314 (Fusion Fire Field) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1891872 (Giga-Jiga) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 696189 (Gravekeeper's Slab) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1885708 (Happy Holidays, EXU!) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1951974 (Herpocalypse) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1893988 (Jerry's Time to Shine) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 2184852 (Joyous Moon) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1894003 (Level Limit - Area C) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1926130 (Mass Polymerization) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1884188 (Muddy Swamp) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1891838 (Normal Rush) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1864562 (Ojamalgamation) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1984591 (Parallel World Paradigm) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1833964 (Pink Horizon) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1880841 (Pot of Exquisiteness) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1847964 (Pot of Rapacity) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1811816 (Pyromaniac Tendencies) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1818742 (Rank-Down-Magic Accursed Force) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1827495 (Rank-Up-Magic Puppet Force) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1780265 (Rank-Up-Magic Transient Heraldrie) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1949686 (Relentless Rampage) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 2197176 (Rest in Peace) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1951738 (Santa's Sack) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 2011467 (Sealing Spell of the Sorcerors) was duplicated in <8318509> from <6419184>
+[8318509] note: property 'effect' of card id 1807498 (Seer's Ledger) was changed
+[8318509] from: When this card is activated, if you have "Ledger of Legerdemain" in your GY: Neither player takes damage until the end of your next turn. While you control exactly 1 Attack Position monster with an original ATK of 1500 or less and no other monsters, it cannot be destroyed by battle, also any damage either player takes from a battle involving it is halved. During the End Phase: The turn player's opponent can shuffle any number of their cards that are banished and/or in their GY into the Deck. During your Draw Phase, before you draw: You can give up your normal draw this turn, and if you do, add 1 "Ledger of Legerdemain" from your GY to your hand, then return this card to your hand, also for the rest of this turn, you cannot activate "Seer's Ledger".
+[8318509] to: During your Draw Phase, before you draw: You can give up your normal draw this turn, and if you do, add 1 "Ledger of Legerdemain" from your GY to your hand. For the effect of “Ledger of Legerdemain” banish 4 cards instead of 3. While the only monsters you control are Attack Position monsters with 1500 or less ATK and “Ledger of Legerdemain” is in your GY, apply the following effects.
+● Neither player takes damage.
+● Monsters you control cannot be destroyed by battle.
+[8318509] warning: card id 1807498 (Seer's Ledger) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1742112 (Show No Fear) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1949683 (Silence!) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1949662 (Splash Damage) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1891836 (Stalemate Scepter) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1738031 (Ta-Daaa!) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1928530 (Tarragon Prison of Correction) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1889745 (The Repetitive Redundancy that happens to Repeat Itself) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1891825 (Token Terror) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1891828 (Token Town) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1898341 (Tomb Murmurs) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1949658 (Unproductive Boost) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1738022 (Watching Life Go By) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1884192 (Wave Fusion) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1591061 (Zibelthiurdos) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1920451 (Enid, Dimensional Hunter) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1920395 (Ibika, The Cunning Dragon Master) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1920537 (Kaminari, Ultimate Taiko Shinobi) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1748447 (Terminaia, Sanctified Authority) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1942080 (The Time Thieves) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1916983 (Blazera, A Danger To All) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1933842 (Dreadful Arsenal ZZ-ARES - Abyssal Flames) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1921795 (Enraged Yokasha) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1934462 (Number 181: Razer, the Sky Slashing Dragon) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1933786 (Number 182: Spiritous, the Divine Soul) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1933820 (Number 183: Eternas, Ghoul King of Death) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1884247 (Ancestral Mudragon of the Hex-Sealed Swamp) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1884266 (King Mudragon of the Swamp) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1737992 (Spritzy Spring Fox) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1884254 (The Hex-Sealed Mudragon) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1884551 (Panera the Dazzling Ringmaster) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1834020 (Etherea, Valedictorian of Maple High) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1890154 (Melene, Awakened Psycho Hunter) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1798503 (Number 176: Dark Anubis) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1844606 (Number 177: Mythical Mage) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1851942 (Number 178: Laval Thunder Strix) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1853601 (Number 179: Dark Statue of Unforgiveness) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1733091 (Number C39: Utopia Rayv) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1890045 (Tele-Ranger - Mind Jumper) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1820196 (Displacement Eradicator) was duplicated in <8318509> from <6419184>
+[8318509] warning: card id 1834121 (Tin Soldier) was duplicated in <8318509> from <6419184>
+[8318509] Finished scraping.
+[8344690] Starting to parse 8344690
+[8344690] Finished scraping.
+[8345249] Starting to parse 8345249
+[8345249] Finished scraping.
+[8352501] Starting to parse 8352501
+[8352501] note: property 'effect' of card id 2451780 (The Mad Doctor) was changed
+[8352501] from: You can Special Summon this card (from your hand) by sending 1 "Chirurgeon" Spell from your hand or field to the GY. You can only Special Summon "The Mad Doctor" once per turn this way. If a monster(s) is sent to your opponent's GY: You can activate 1 of these effects. (but you cannot activate that same effect of "The Mad Doctor" again this turn). 
+● Target 1 monster in your opponent's GY; Special Summon it to your field, but while you control that monster, its effects cannot be activated, also, it becomes a Zombie monster.
+● Target 1 monster your opponent controls; take control of it, but while you control that monster, its effects cannot be activated, also, it becomes a Zombie monster.
+[8352501] to: You can Special Summon this card (from your hand) by sending 1 "Chirurgeon" Spell from your hand or field to the GY. You can only Special Summon "The Mad Doctor" once per turn this way. If a monster(s) is sent to your opponent's GY: You can activate 1 of these effects. (but you cannot apply that same effect of "The Mad Doctor" again this turn). 
+● Target 1 monster in your opponent's GY; Special Summon it to your field, but while you control that monster, its effects cannot be activated, also, it becomes a Zombie monster.
+● Target 1 monster your opponent controls; take control of it, but while you control that monster, its effects cannot be activated, also, it becomes a Zombie monster.
+[8352501] note: property 'effect' of card id 2451806 (Chirurgeon Anesthetic) was changed
+[8352501] from: Target 1 face-up monster your opponent controls; Negate its effects until the end of this turn, also, if you control "The Mad Doctor", send the top 2 cards of your opponent's Deck to the GY. During the Standby Phase, except the turn this card was sent to the GY: Your opponent chooses 1 of these effects for you to apply. You can only use this effect of "Chirurgeon Anesthetic" once per turn.
+●Send the top 2 cards of your opponent's Deck to the GY.
+●Set this card to your field, also, it can be activated this turn.
+[8352501] to: Target 1 face-up monster your opponent controls; negate its effects until the end of this turn, also, if you control "The Mad Doctor", send the top 2 cards of your opponent's Deck to the GY. During the Standby Phase, except the turn this card was sent to the GY: Your opponent chooses 1 of these effects for you to apply. You can only use this effect of "Chirurgeon Anesthetic" once per turn.
+●Send the top 2 cards of your opponent's Deck to the GY.
+●Set this card to your field, also, it can be activated this turn. Banish it when it leaves the field.
+[8352501] note: property 'effect' of card id 2451802 (Chirurgeon Inhibitor) was changed
+[8352501] from: Target 1 Spell/Trap on the field; destroy it, also, if you control "The Mad Doctor", send the top 2 cards of your opponent's Deck to the GY. During the Standby Phase, except the turn this card was sent to the GY: Your opponent chooses 1 of these effects for you to apply. You can only use this effect of "Chirurgeon Inhibitor" once per turn.
+●Send the top 2 cards of your opponent's Deck to the GY.
+●Set this card to your field, also, it can be activated this turn.
+[8352501] to: Target 1 Spell/Trap on the field; destroy it, also, if you control "The Mad Doctor", send the top 2 cards of your opponent's Deck to the GY. During the Standby Phase, except the turn this card was sent to the GY: Your opponent chooses 1 of these effects for you to apply. You can only use this effect of "Chirurgeon Inhibitor" once per turn.
+●Send the top 2 cards of your opponent's Deck to the GY.
+●Set this card to your field, also, it can be activated this turn. Banish it when it leaves the field.
+[8352501] note: property 'effect' of card id 2453109 (Chirurgeon Invigorator) was changed
+[8352501] from: Add 1 "Chirurgeon" Spell from your GY to your hand, except Chirurgeon Invigorator", also, if you control "The Mad Doctor", send the top 2 cards of your opponent's Deck to the GY. During the Standby Phase, except the turn this card was sent to the GY: Your opponent chooses 1 of these effects for you to apply. You can only use this effect of "Chirurgeon Invigorator" once per turn.
+●Send the top 2 cards from your opponent's Deck to the GY.
+●Set this card to your field, also, it can be activated this turn.
+[8352501] to: Add 1 of your "Chirurgeon" Spells that is banished or in your GY to your hand, except Chirurgeon Invigorator", also, if you control "The Mad Doctor", send the top 2 cards of your opponent's Deck to the GY. During the Standby Phase, except the turn this card was sent to the GY: Your opponent chooses 1 of these effects for you to apply. You can only use this effect of "Chirurgeon Invigorator" once per turn.
+●Send the top 2 cards from your opponent's Deck to the GY.
+●Set this card to your field, also, it can be activated this turn. Banish it when it leaves the field.
+[8352501] note: property 'effect' of card id 2452625 (Chirurgeon Mind-Dulling Toxin) was changed
+[8352501] from: Send the top 3 cards of your opponent's Deck to the GY, also, if you control "The Mad Doctor", send the top 2 cards of your opponent's Deck to the GY. During the Standby Phase, except the turn this card was sent to the GY: Your opponent chooses 1 of these effects for you to apply. You can only use this effect of "Chirurgeon Mind-Dulling Toxin" once per turn.
+●Send the top 2 cards of your opponent's Deck to the GY.
+●Set this card to your field, also, it can be activated this turn.
+[8352501] to: Send the top 3 cards of your opponent's Deck to the GY, also, if you control "The Mad Doctor", send the top 2 cards of your opponent's Deck to the GY. During the Standby Phase, except the turn this card was sent to the GY: Your opponent chooses 1 of these effects for you to apply. You can only use this effect of "Chirurgeon Mind-Dulling Toxin" once per turn.
+●Send the top 2 cards of your opponent's Deck to the GY.
+●Set this card to your field, also, it can be activated this turn. Banish it when it leaves the field.
+[8352501] note: property 'effect' of card id 2451798 (Chirurgeon Revivifying Elixir) was changed
+[8352501] from: Special Summon 1 "The Mad Doctor" from your GY, also, if you control "The Mad Doctor", send the top 2 cards of your opponent's Deck to the GY. During the Standby Phase, except the turn this card was sent to the GY: Your opponent chooses 1 of these effects for you to apply. You can only use this effect of "Chirurgeon Revivifying Elixir" once per turn.
+●Send the top 2 cards of your opponent's Deck to the GY.
+●Set this card to your field, also, it can be activated this turn.
+[8352501] to: Special Summon 1 "The Mad Doctor" from your GY, also, if you control "The Mad Doctor", send the top 2 cards of your opponent's Deck to the GY. During the Standby Phase, except the turn this card was sent to the GY: Your opponent chooses 1 of these effects for you to apply. You can only use this effect of "Chirurgeon Revivifying Elixir" once per turn.
+●Send the top 2 cards of your opponent's Deck to the GY.
+●Set this card to your field, also, it can be activated this turn. Banish it when it leaves the field.
+[8352501] note: property 'effect' of card id 2451873 (Chirurgeon Transmogrifier) was changed
+[8352501] from: Add 1 "The Mad Doctor" or 1 "Deranged Surgeon's Laboratory" from your Deck to your hand, also, if you control "The Mad Doctor", your opponent sends the top 2 cards of their Deck to the GY. During the Standby Phase, except the turn this card was sent to the GY: Your opponent chooses 1 of these effects for you to apply. You can only use this effect of "Chirurgeon Transmogrifier" once per turn.
+●Send the top 2 cards of your opponent's Deck to the GY.
+●Set this card to your field, also, it can be activated this turn.
+[8352501] to: Add 1 "The Mad Doctor" or 1 "Deranged Surgeon's Laboratory" from your Deck to your hand, also, if you control "The Mad Doctor", your opponent sends the top 2 cards of their Deck to the GY. During the Standby Phase, except the turn this card was sent to the GY: Your opponent chooses 1 of these effects for you to apply. You can only use this effect of "Chirurgeon Transmogrifier" once per turn.
+●Send the top 2 cards of your opponent's Deck to the GY.
+●Set this card to your field, also, it can be activated this turn. Banish it when it leaves the field.
+[8352501] note: property 'effect' of card id 2451868 (Deranged Surgeon's Laboratory) was changed
+[8352501] from: While you control a Level 8 or higher Spellcaster monster, your opponent cannot activate Spell/Trap effects in the GY. You can only use each of the following effects of "Deranged Surgeon's Laboratory" once per turn. 
+● If a monster(s) is sent to your opponent's GY: You can add 1 "The Mad Doctor" from your Deck to your hand, or, if that monster(s) was sent there by your card effect, you can Special Summon it instead.
+●During the Main Phase, if you control a Level 8 or higher Spellcaster monster: You can Tribute 1 Zombie monster you control; add 1 "Chirurgeon" Spell from your Deck to your hand.
+[8352501] to: While you control a Level 8 or higher Spellcaster monster, your opponent cannot activate Spell/Trap effects in the GY. You can only use each of the following effects of "Deranged Surgeon's Laboratory" once per turn. 
+● If a monster(s) is sent to your opponent's GY: You can add 1 "The Mad Doctor" from your Deck to your hand, or, if that monster(s) was sent there by your card effect, you can Special Summon 1 "The Mad Doctor" from your Deck instead.
+●During the Main Phase, if you control a Level 8 or higher Spellcaster monster: You can Tribute 1 Zombie monster you control; add 1 "Chirurgeon" Spell from your Deck to your hand.
+[8352501] Finished scraping.
+[8353364] Starting to parse 8353364
+[8353364] Finished scraping.
+[8362609] Starting to parse 8362609
+[8362609] warning: card id 2095415 (Unshackled Amaterasu) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2095424 (Unshackled Dark Dust Spirit) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2095423 (Unshackled Fenghuang) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2095419 (Unshackled Great Long Nose) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2095431 (Unshackled Yamato-no-Kami) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 1978664 (Plant Sprite Gaia) was duplicated in <8362609> from <6871713>
+[8362609] warning: card id 2074007 (A Capella) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2072265 (Be Careful of the Flying Iron Maiden, Chad!) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2102115 (Genetically Modified Organism) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2150793 (HERO Fusion Spark) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2151495 (Jester's Panic) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2059335 (Occult Sermon) was duplicated in <8362609> from <7193014>
+[8362609] note: [+] added new card 2711197 (Ojamask Change)
+[8362609] warning: card id 2147722 (Photon Fusion) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2103338 (Pot of Cursed Greetings) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2056078 (Prayer to the Sanctuary in the Sky) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2151398 (Runner-Up) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2074011 (Song Sheet Space) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2029430 (Strike Assault) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2190018 (Theatrical Dice) was duplicated in <8362609> from <7193014>
+[8362609] note: [+] added new card 1101630 (Junk Drummer)
+[8362609] warning: card id 1990826 (The Wretched Darklord) was duplicated in <8362609> from <7193014>
+[8362609] warning: card id 2151496 (Jester King) was duplicated in <8362609> from <7193014>
+[8362609] Finished scraping.
+[8376563] Starting to parse 8376563
+[8376563] Finished scraping.
+[8397719] Starting to parse 8397719
+[8397719] note: property 'effect' of card id 2465453 (Wrasslin' Eagle) was changed
+[8397719] from: You can Ritual Summon this card with "Wrasslin' Spirit". Cannot be destroyed by card effects. If this card is Special Summoned: You can target 1 Spell/Trap your opponent controls; destroy it. If this card is destroyed by battle: You can return this card to your hand; Special Summon 1 "Wrasslin' Jaguar" from your Extra Deck, ignoring summoning conditions.
+[8397719] to: You can Ritual Summon this card with "Wrasslin' Spirit". Cannot be destroyed by card effects. If this card is Special Summoned: You can target 1 Spell/Trap your opponent controls; destroy it. If this card is destroyed by battle: You can return this card to your hand; Special Summon 1 "Wrasslin' Jaguar" from your Extra Deck, ignoring its Summoning conditions.
+[8397719] note: property 'effect' of card id 2465460 (Wrasslin' Jaguar) was changed
+[8397719] from: 2 "Wrasslin'" monsters
+Cannot be destroyed by card effects. If this card is Special Summoned: You can target 1 monster your opponent controls; destroy it. If this card is destroyed by battle: You can return this card to your Extra Deck; Special Summon 1 "Wrasslin' Eagle" from your hand, ignoring summoning conditions.
+[8397719] to: 2 "Wrasslin'" monsters
+Cannot be destroyed by card effects. If this card is Special Summoned: You can target 1 monster your opponent controls; destroy it. If this card is destroyed by battle: You can return this card to your Extra Deck; Special Summon 1 "Wrasslin' Eagle" from your hand, ignoring its Summoning conditions.
+[8397719] Finished scraping.
+[8405156] Starting to parse 8405156
+[8405156] Finished scraping.
+[8430979] Starting to parse 8430979
+[8430979] warning: card id 1993556 (Cuezal, the Cursed Xiuhqui) was duplicated in <8430979> from <4667428>
+[8430979] warning: card id 1253117 (Ixcoz, the Blessed Xiuhqui) was duplicated in <8430979> from <4667428>
+[8430979] Finished scraping.
+[8451189] Starting to parse 8451189
+[8451189] warning: card id 2268098 (Slifer the Sky Dragon - Final Ember) was duplicated in <8451189> from <6353380>
+[8451189] warning: card id 2059347 (Egyptian Dragon Slime) was duplicated in <8451189> from <6353465>
+[8451189] warning: card id 2059350 (Egyptian Pheonix Slime) was duplicated in <8451189> from <6353465>
+[8451189] Finished scraping.
+[8475666] Starting to parse 8475666
+[8475666] Finished scraping.
+[8487086] Starting to parse 8487086
+[8487086] warning: card id 1990045 (Cyber Hybrid) was duplicated in <8487086> from <8362609>
+[8487086] Finished scraping.
+[8533195] Starting to parse 8533195
+[8533195] Finished scraping.
+[8536599] Starting to parse 8536599
+[8536599] note: property 'effect' of card id 2508671 (Byron, Steelbrand Dragoon) was changed
+[8536599] from: You can Ritual Summon this card with "Steelbrand Catalyst". You can only use 1 of the following effects of "Byron, Steelbrand Dragoon" per turn, and only once that turn.
+● (Quick Effect): You can banish 1 Machine monster from your hand or GY, then target 1 face-up card your opponent controls; negate its effects.
+● If this card is Tributed or banished by a "Steelbrand" card or effect: You can banish 2 other Machine monsters from your GY; Special Summon 1 "Steelbrand" monster from your Deck, except "Byron, Steelbrand Dragoon".
+[8536599] to: You can Ritual Summon this card with "Steelbrand Catalyst". You can only use 1 of the following effects of "Byron, Steelbrand Dragoon" per turn, and only once that turn.
+● (Quick Effect): You can banish 1 Machine monster from your hand or GY, then target 1 face-up card your opponent controls; negate its effects.
+● If this card is Tributed or banished by a "Steelbrand" card or effect: You can banish 2 other Machine monsters from your GY; Special Summon 1 "Steelbrand" monster from your Deck.
+[8536599] Finished scraping.
+[8540960] Starting to parse 8540960
+[8540960] note: property 'effect' of card id 2300930 (Miragelle The Magic Swordswoman) was changed
+[8540960] from: If this card is currently banished: You can banish 1 "Magic Swordsman" monster from your hand or GY; Special Summon this card, but for the rest of this turn, you cannot Special Summon monsters, except Spellcaster monsters. During the Battle Phase (Quick Effect): You can target 1 of your banished "Magic Swordsman" Normal Monsters, and 1 face-up card your opponent controls; Special Summon that target, and if you do, destroy the second target. You can only use each effect of "Miragelle The Magic Swordswoman" once per turn.
+[8540960] to: (This card is always treated as a “Magic Swordsman” card.)
+If this card is currently banished: You can banish 1 "Magic Swordsman" monster from your hand or GY; Special Summon this card, but for the rest of this turn, you cannot Special Summon monsters, except Spellcaster monsters. During the Battle Phase (Quick Effect): You can target 1 of your banished "Magic Swordsman" Normal Monsters, and 1 face-up card your opponent controls; Special Summon that target, and if you do, destroy the second target. You can only use each effect of "Miragelle The Magic Swordswoman" once per turn.
+[8540960] Finished scraping.
+[8558559] Starting to parse 8558559
+[8558559] note: property 'atk' of card id 2516435 (Yostar!: Submarine Class - Albacore µ) was changed
+[8558559] from: 2400
+[8558559] to: 2500
+[8558559] note: property 'atk' of card id 2515502 (Yostar!: Torpedo Class Destroyer - Laffey) was changed
+[8558559] from: 2400
+[8558559] to: 2500
+[8558559] Finished scraping.
+[8560865] Starting to parse 8560865
+[8560865] Finished scraping.
+[8568805] Starting to parse 8568805
+[8568805] Finished scraping.
+[8596515] Starting to parse 8596515
+[8596515] warning: card id 1267999 (Vapor Saucer) was duplicated in <8596515> from <6353380>
+[8596515] Finished scraping.
+[8608821] Starting to parse 8608821
+[8608821] note: property 'effect' of card id 2531361 (C.I. Agent Liliana) was changed
+[8608821] from: (Quick Effect): You can activate this effect; banish this card (until the End Phase), then, you can Special Summon 1 Level 4 "C.I." monster from your GY in Defense Position, but it cannot activate its effects this turn. If this card is destroyed by your opponent's card (by battle or card effect): You can discard 1 card, then target 1 Spell/Trap your opponent controls; destroy it. You can only use each effect of "C.I. Agent Liliana" once per turn.
+[8608821] to: (Quick Effect): You can activate this effect; banish this card (until the End Phase), then, you can Special Summon 1 Level 4 "C.I." monster from your GY in Defense Position. If this card is destroyed by your opponent's card (by battle or card effect): You can discard 1 card, then target 1 Spell/Trap your opponent controls; destroy it. You can only use each effect of "C.I. Agent Liliana" once per turn.
+[8608821] note: property 'name' of card id 2577238 (C.I. Atlas Magna Zero) was changed
+[8608821] from: C.I. Magna Zero
+[8608821] to: C.I. Atlas Magna Zero
+[8608821] note: property 'effect' of card id 2577238 (C.I. Atlas Magna Zero) was changed
+[8608821] from: Cannot be Normal Summoned/Set. Must be Special Summoned by a "C.I." card effect. Cannot be targeted by monster effects. You can only use each of the following effects of "C.I. Magna Zero" once per turn. You can banish 3 "C.I." monsters from your GY; Special Summon this card from your hand. If this card battles a monster Special Summoned from the Extra Deck: You can activate this effect; this card gains ATK equal to that monster's ATK until the end of the Battle Phase.
+[8608821] to: Cannot be Normal Summoned/Set. Must be Special Summoned by a "C.I." card effect. Cannot be targeted by monster effects. You can only use each of the following effects of "C.I. Atlas Magna Zero" once per turn. You can banish 3 "C.I." monsters from your GY; Special Summon this card from your hand. If this card battles a monster Special Summoned from the Extra Deck: You can activate this effect; this card gains ATK equal to that monster's ATK until the end of the Battle Phase.
+[8608821] note: property 'name' of card id 2531383 (C.I. Administrator Warden) was changed
+[8608821] from: C.I. Supervisor Warden
+[8608821] to: C.I. Administrator Warden
+[8608821] note: property 'effect' of card id 2531383 (C.I. Administrator Warden) was changed
+[8608821] from: If a "C.I." monster(s) you control is banished (except during the Damage Step): You can Special Summon this card from your hand, and if you do, your opponent cannot target other monsters you control for attacks, also, your opponent's monsters must declare an attack this turn, if able. (Quick Effect): You can Tribute 1 other "C.I." monster from your hand or field, then target 1 card your opponent controls; destroy it. You can only use each effect of "C.I. Supervisor Warden" once per turn.
+[8608821] to: If a "C.I." monster(s) you control is banished (except during the Damage Step): You can Special Summon this card from your hand, and if you do, your opponent cannot target other monsters you control for attacks, also, your opponent's monsters must declare an attack this turn, if able. (Quick Effect): You can Tribute 1 other "C.I." monster from your hand or field, then target 1 card your opponent controls; destroy it. You can only use each effect of "C.I. Administrator Warden" once per turn.
+[8608821] Finished scraping.
+[8624721] Starting to parse 8624721
+[8624721] Finished scraping.
+[8631072] Starting to parse 8631072
+[8631072] Finished scraping.
+[8635701] Starting to parse 8635701
+[8635701] warning: card id 2533677 (Sengen Taisha) was duplicated in <8635701> from <>
+[8635701] warning: card id 2534916 (Prévoyance DeLaVoix) was duplicated in <8635701> from <8376563>
+[8635701] warning: card id 2543585 (Crystron Vermeridhogg) was duplicated in <8635701> from <>
+[8635701] Finished scraping.
+[8637210] Starting to parse 8637210
+[8637210] Finished scraping.
+[8656533] Starting to parse 8656533
+[8656533] Finished scraping.
+[8658932] Starting to parse 8658932
+[8658932] warning: card id 2424983 (Aromage Hyssop) was duplicated in <8658932> from <8635701>
+[8658932] note: [+] added new card 2650530 (Lunch Lady)
+[8658932] note: [+] added new card 2698663 (Lycaon the Nefarious Armory)
+[8658932] note: [+] added new card 2698717 (White Pharros Fox)
+[8658932] warning: card id 2457989 (Annie Bannie) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 2484219 (Edge of Life, Simulacrum) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 2477513 (Kujira, the Coastal Orca) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 1956727 (Gathering Magic) was duplicated in <8658932> from <8362609>
+[8658932] warning: card id 2422238 (Gladiator Beast Tiberius) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 823738 (Hellerus Hunting Hood Hounds) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 2421830 (Eldlich the Sage Golden Lord) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 2394597 (A Force of Nature) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 1952290 (Chaos Supreme Lightning Dragon) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 1867972 (Green Gadgetron) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 1867968 (Red Gadgetron) was duplicated in <8658932> from <8635701>
+[8658932] warning: card id 1867969 (Yellow Gadgetron) was duplicated in <8658932> from <8635701>
+[8658932] Finished scraping.
+[8664482] Starting to parse 8664482
+[8664482] Finished scraping.
+[8681245] Starting to parse 8681245
+[8681245] Finished scraping.
+[8686389] Starting to parse 8686389
+[8686389] warning: card id 2420916 (Des Gardius, the Four-Face Masked Beast) was duplicated in <8686389> from <8253171>
+[8686389] Finished scraping.
+[8695927] Starting to parse 8695927
+[8695927] warning: card id 1642313 (Rooftop Inu) was duplicated in <8695927> from <6353414>
+[8695927] warning: card id 2273799 (Elusive Dashing Techniques) was duplicated in <8695927> from <7552464>
+[8695927] Finished scraping.
+[8735092] Starting to parse 8735092
+[8735092] warning: card id 2458363 (Connected Contact) was duplicated in <8735092> from <8487086>
+[8735092] Finished scraping.
+[8759630] Starting to parse 8759630
+[8759630] Finished scraping.
+[8760406] Starting to parse 8760406
+[8760406] Finished scraping.
+[8766544] Starting to parse 8766544
+[8766544] note: property 'effect' of card id 1640568 (Lee, World Legacy's Deciever) was changed
+[8766544] from: (This card is also treated as a "World Chalice" monster.)
+This card is treated as a Normal Monster while face-up on the field or in the GY. While this card is a Normal Monster on the field, you can Normal Summon it to have it become an Effect Monster with this effect.
+● This card becomes DARK Fairy. (Quick Effect): You can banish 1 "World Legacy" Gemini monster from your GY, then target 1 Link monster on the field or in the GY; destroy cards on the field equal to that card's Link Rating. You can only activate this effect of "Lee, World Legacy's Deciever" once per turn.
+[8766544] to: (This card is also treated as a "World Chalice" monster.)
+This card is treated as a Normal Monster while face-up on the field or in the GY. While this card is a Normal Monster on the field, you can Normal Summon it to have it become an Effect Monster with this effect.
+● This card becomes DARK Fairy. (Quick Effect): You can banish 1 "World Legacy" or “World Chalice” monster from your GY, then target 1 Link-3 or lower Link monster on the field or in the GY;. You can only activate this effect of "Lee, World Legacy's Deciever" once per turn.
+[8766544] Finished scraping.
+[8819779] Starting to parse 8819779
+[8819779] note: [+] added new card 2597347 (Aequalis Vulpesprite)
+[8819779] note: [+] added new card 2596402 (Aequalis Magiasprite)
+[8819779] note: [+] added new card 2596393 (Aequalis Phoenixsprite)
+[8819779] note: [+] added new card 2596530 (Aequalis Watchsprite)
+[8819779] note: [+] added new card 2596376 (Aequalis Wondersprite)
+[8819779] note: [+] added new card 2596405 (Aequalis Shadowsprite)
+[8819779] note: [+] added new card 2596321 (Aequalis Monarchsprite)
+[8819779] note: [+] added new card 2596408 (Aequalis Rebalancing)
+[8819779] note: [+] added new card 2596531 (Aequalis Blaze)
+[8819779] note: [+] added new card 2596548 (Aequalis Duality)
+[8819779] note: [+] added new card 2596536 (Aequalis Miasma)
+[8819779] warning: card id 10654 (Diviner of the Herald) was duplicated in <8819779> from <>
+[8819779] note: [+] added new card 7115 (Cat Shark)
+[8819779] note: [+] added new card 5117 (Daigusto Phoenix)
+[8819779] note: [+] added new card 5098 (Gachi Gachi Gantetsu)
+[8819779] note: [+] added new card 8746 (Number 29: Mannequin Cat)
+[8819779] note: [+] added new card 8129 (Number 45: Crumble Logos the Prophet of Demolition)
+[8819779] note: [+] added new card 5114 (Shining Elf)
+[8819779] note: [+] added new card 7034 (Sky Cavalry Centaurea)
+[8819779] note: [+] added new card 2596557 (Aequalis Brightsprite)
+[8819779] Finished scraping.
+[8832576] Starting to parse 8832576
+[8832576] Finished scraping.
+[8886344] Starting to parse 8886344
+[8886344] note: property 'effect' of card id 2676879 (Darker Armed Dragon) was changed
+[8886344] from: Cannot be Normal Summoned/Set. Cannot be Special Summoned, except by its own effect. During your Main Phase, if you have exactly 3 or 5 DARK monsters in your GY: You can Special Summon this card from your hand. Once per turn (Quick Effect): You can banish 1 DARK monster from your GY, then target 1 card your opponent controls; destroy it. You can only control 1 "Darker Armed Dragon".
+[8886344] to: Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand), while you have exactly 3 or 5 DARK monsters in your GY. Once per turn (Quick Effect): You can banish 1 DARK monster from your GY, then target 1 card your opponent controls; destroy it. You can only control 1 "Darker Armed Dragon".
+[8886344] note: [+] added new card 2711063 (Fairy Tail - Fiona)
+[8886344] note: [+] added new card 2699220 (Star Streamer)
+[8886344] note: property 'effect' of card id 2597929 (Faux Fae Deity) was changed
+[8886344] from: You can Ritual Summon this card with "Sprite's Blessing", OR you can Normal Summon this card. (It cannot be Normal Set. This is NOT treated as properly Summoning this card.) This Normal Summoned card cannot be destroyed by battle. If this card is Ritual Summoned: You can add 1 Level 2 monster from your Deck to your hand, but for the rest of this turn, if a monster(s) with that name would be Special Summoned, it is Special Summoned in face-down Defense Position instead. You can only use this effect of "Faux Fae Deity" once per turn.
+[8886344] to: You can Ritual Summon this card with "Sprite's Blessing", OR you can Normal Summon this card. (It cannot be Normal Set. This is NOT treated as properly Summoning this card.) This Normal Summoned card cannot be destroyed by battle. If this card is Ritual Summoned: You can add 1 Level 2 monster from your Deck to your hand, but for the rest of this turn, if a monster(s) with that name would be Summoned, it is Summoned in face-down Defense Position instead. You can only use this effect of "Faux Fae Deity" once per turn.
+[8886344] note: property 'effect' of card id 2601116 (Reader of Prophecy) was changed
+[8886344] from: 2 or 3 Level 3 ”Prophecy” monsters
+Once per turn, you can also Xyz Summon “Reader of Prophecy” while you have 4 or more “Spellbook” cards in your GY by using 1 “Crowley the First Prophoseer” or 1 Level 6 or higher LIGHT or DARK Spellcater monster you control as material. This card’s ATK/DEF is equal to the number of Spells that are banished and in the GYs with different names x300. You can only use 1 of these “Reader of Prophecy” effects per turn, and only once that turn.
+●During the Main Phase (Quick Effect): You can target 2 of your “Spellbook” cards (1 that is banished and 1 in your GY); shuffle them into the Deck, and if you do, add 1 “Spellbook” card from your Deck to your hand.
+● If you activate a “Spellbook” card or effect:, You can detach 1 material from this card; destroy 1 face-up card on the field.
+[8886344] to: 2 or 3 Level 3 ”Prophecy” monsters
+Once per turn, you can also Xyz Summon “Reader of Prophecy” while you have 4 or more “Spellbook” cards in your GY by using 1 “Crowley the First Propheseer” or 1 Level 6 or higher LIGHT or DARK Spellcater monster you control as material. This card’s ATK/DEF is equal to the number of Spells that are banished and in the GYs with different names x300. You can only use 1 of these “Reader of Prophecy” effects per turn, and only once that turn.
+●During the Main Phase (Quick Effect): You can target 2 of your “Spellbook” cards (1 that is banished and 1 in your GY); shuffle them into the Deck, and if you do, add 1 “Spellbook” card from your Deck to your hand.
+● If you activate a “Spellbook” card or effect: You can detach 1 material from this card; destroy 1 face-up card on the field.
+[8886344] note: property 'effect' of card id 2608048 (Springans Mobitank) was changed
+[8886344] from: 2 Level 4 monsters, including a FIRE monster or "Fallen of Albaz"
+Once per turn, you can also Xyz Summon "Springans Mobitank" by using 1 Level 8 "Springans" monster or 1 "Springans" Xyz Monster you control with a different name as material. (Transfer its materials to this card.) If Summoned this way, you cannot activate the effects of monsters Special Summoned from the Extra Deck this turn, except FIRE monsters. During the Main or Battle Phase (Quick Effect): You can banish this card until the End Phase, then, if you banished this card while it had 2 or more materials, you can also send 1 Fusion Monster that specifically lists "Fallen of Albaz" as Fusion Material from your Extra Deck to the GY. You can only use this effect of "Springans Mobitank" once per turn. While this card is face-up on your field or banished, for the effect of “Springans Interlurder”, you can return 1 face-up “Springans” card or "Great Sand Sea - Gold Golgonda" you control to the hand instead of returning an Xyz Monster to the Extra Deck.
+[8886344] to: 2 Level 4 monsters, including a FIRE monster or "Fallen of Albaz"
+Once per turn, you can also Xyz Summon "Springans Mobitank" by using 1 Level 8 "Springans" monster or 1 "Springans" Xyz Monster you control with a different name as material. (Transfer its materials to this card.) If Summoned this way, you cannot activate the effects of monsters Special Summoned from the Extra Deck this turn, except FIRE monsters. During the Main or Battle Phase (Quick Effect): You can banish this card until the End Phase, then if you banished this card with 2 or more materials, you can also send 1 Fusion Monster from your Extra Deck to the GY that lists "Fallen of Albaz" as material. You can only use this effect of "Springans Mobitank" once per turn. While this card is face-up on your field or banished, for the effect of “Springans Interlurder”, you can return 1 face-up “Springans” card or "Great Sand Sea - Gold Golgonda" you control to the hand instead of returning an Xyz Monster to the Extra Deck.
+[8886344] Finished scraping.
+[8886345] Starting to parse 8886345
+[8886345] warning: card id 2566208 (Bekker's Dark Mirror) was duplicated in <8886345> from <7759421>
+[8886345] warning: card id 2561158 (Demonic Mirage) was duplicated in <8886345> from <7759421>
+[8886345] note: [+] added new card 601991 (Revoking Tradition)
+[8886345] note: property 'level' of card id 2711206 (Ojamasked HERO Black Law) was changed
+[8886345] from: 2
+[8886345] to: 3
+[8886345] note: property 'level' of card id 2711204 (Ojamasked HERO Green Blast) was changed
+[8886345] from: 2
+[8886345] to: 3
+[8886345] Finished scraping.
+[8886348] Starting to parse 8886348
+[8886348] note: [+] added new card 2681180 (Armor of the Lich King)
+[8886348] note: [+] added new card 2680986 (Botani Ritual)
+[8886348] warning: card id 2566443 (Dead Man's Treasure) was duplicated in <8886348> from <8658932>
+[8886348] note: [+] added new card 2681146 (Nurgle Stronghold)
+[8886348] note: [+] added new card 2700656 (Rain of Devastation)
+[8886348] warning: card id 2566264 (Spoils of War) was duplicated in <8886348> from <8658932>
+[8886348] note: [+] added new card 2681107 (Stormwind Retaliation)
+[8886348] warning: card id 2566634 (Submerged Loot) was duplicated in <8886348> from <8658932>
+[8886348] note: [+] added new card 2681902 (Terrorgheist Unity)
+[8886348] note: [+] added new card 2681034 (Traditional Taiji Rumble)
+[8886348] note: [+] added new card 2698505 (Try Something New)
+[8886348] Finished scraping.
+[8924579] Starting to parse 8924579
+[8924579] warning: card id 2629056 (Mudafi Mustira - Oualid) was duplicated in <8924579> from <8637210>
+[8924579] warning: card id 2628977 (Mudafi Malady - Nizar) was duplicated in <8924579> from <8637210>
+[8924579] Finished scraping.
+[8954457] Starting to parse 8954457
+[8954457] Finished scraping.
+[8960883] Starting to parse 8960883
+[8960883] Finished scraping.
+[8976659] Starting to parse 8976659
+[8976659] warning: card id 2357408 (Fossil Dragon Skullglia) was duplicated in <8976659> from <7934345>
+[8976659] warning: card id 2681334 (Excavation Site) was duplicated in <8976659> from <8886348>
+[8976659] warning: card id 2574951 (Fossil Transformation) was duplicated in <8976659> from <8886348>
+[8976659] Finished scraping.
+[8982767] Starting to parse 8982767
+[8982767] warning: card id 2538044 (D-Defense Lion) was duplicated in <8982767> from <8635701>
+[8982767] warning: card id 2538049 (E-Energy Raider) was duplicated in <8982767> from <8635701>
+[8982767] warning: card id 2538054 (DE-Lion Raider) was duplicated in <8982767> from <8635701>
+[8982767] Finished scraping.
+[9015610] Starting to parse 9015610
+[9015610] warning: card id 2287280 (Oracle’s Dragon) was duplicated in <9015610> from <7934346>
+[9015610] warning: card id 2271948 (Starry Knight Galacael) was duplicated in <9015610> from <7753395>
+[9015610] warning: card id 2382859 (Silent Night, Starry Dragon) was duplicated in <9015610> from <7934345>
+[9015610] warning: card id 2699330 (Darkest Night, Starry Dragon) was duplicated in <9015610> from <8886345>
+[9015610] Finished scraping.
+[9016753] Starting to parse 9016753
+[9016753] note: property 'effect' of card id 2358634 (Dance of Swords, Shishiou) was changed
+[9016753] from: Cannot be used as material for the Summon of a monster from the Extra Deck, except for the Synchro Summon of a WATER monster . If this card is in your hand: You can excavate the top 4 cards of your Deck, then, if you excavated 2 or more "Dance of Swords" cards, you can Special Summon this card, then, if you excavated 3 or more "Dance of Swords" cards, you can have all "Dance of Swords" monsters you control gain 300 ATK/DEF, also shuffle the excavated cards into the Deck. If this card is Special Summoned while you control another "Dance of Swords" monster: You can target 1 monster your opponent controls; destroy it. You can only use each effect of "Dance of Swords, Shishiou" once per turn.
+[9016753] to: Cannot be used as material for the Summon of a monster from the Extra Deck, except for the Synchro Summon of a WATER monster . If this card is in your hand (Quick Effect): You can excavate the top 4 cards of your Deck, then, if you excavated 2 or more "Dance of Swords" cards, you can Special Summon this card, then, if you excavated 3 or more "Dance of Swords" cards, you can have all "Dance of Swords" monsters you control gain 300 ATK/DEF, also shuffle the excavated cards into the Deck. If this card is Special Summoned while you control another "Dance of Swords" monster: You can target 1 monster your opponent controls; destroy it. You can only use each effect of "Dance of Swords, Shishiou" once per turn.
+[9016753] note: property 'effect' of card id 2358626 (Dance of Swords, Souza) was changed
+[9016753] from: Cannot be used as material for the Summon of a monster from the Extra Deck, except for the Synchro Summon of a WATER monster . If this card is in your hand: You can excavate the top 4 cards of your Deck, then, if you excavated 2 or more "Dance of Swords" cards, you can Special Summon this card, then, if you excavated 3 or more "Dance of Swords" cards, you can gain 400 LP for each evcavated "Dance of Swords" card, also shuffle the excavated cards into the Deck. If this card is Special Summoned while you control another "Dance of Swords" monster: You can target 1 Spell/Trap your opponent controls; banish it. You can only use each effect of "Dance of Swords, Souza" once per turn.
+[9016753] to: Cannot be used as material for the Summon of a monster from the Extra Deck, except for the Synchro Summon of a WATER monster . If this card is in your hand (Quick Effect): You can excavate the top 4 cards of your Deck, then, if you excavated 2 or more "Dance of Swords" cards, you can Special Summon this card, then, if you excavated 3 or more "Dance of Swords" cards, you can gain 400 LP for each evcavated "Dance of Swords" card, also shuffle the excavated cards into the Deck. If this card is Special Summoned while you control another "Dance of Swords" monster: You can target 1 Spell/Trap your opponent controls; banish it. You can only use each effect of "Dance of Swords, Souza" once per turn.
+[9016753] Finished scraping.
+[9020851] Starting to parse 9020851
+[9020851] Finished scraping.
+[9022784] Starting to parse 9022784
+[9022784] warning: card id 2659192 (Gala-XY Captain) is not public
+[9022784] note: [+] added new card 2659192 (Gala-XY Captain)
+[9022784] warning: card id 2527501 (Gala-XY Observer) is not public
+[9022784] note: [+] added new card 2527501 (Gala-XY Observer)
+[9022784] warning: card id 2527682 (Gala-XY Researcher) is not public
+[9022784] note: [+] added new card 2527682 (Gala-XY Researcher)
+[9022784] warning: card id 2528392 (Gala-XY Rider) is not public
+[9022784] note: [+] added new card 2528392 (Gala-XY Rider)
+[9022784] warning: card id 2527521 (Gala-XY Soldier) is not public
+[9022784] note: [+] added new card 2527521 (Gala-XY Soldier)
+[9022784] warning: card id 2528339 (Gala-XY Driver) is not public
+[9022784] note: [+] added new card 2528339 (Gala-XY Driver)
+[9022784] warning: card id 2657798 (Gala-XY Outpost) is not public
+[9022784] note: [+] added new card 2657798 (Gala-XY Outpost)
+[9022784] note: [+] added new card 2546475 (Gala-XY Crash)
+[9022784] warning: card id 2527657 (Gala-XY Fleet) is not public
+[9022784] note: [+] added new card 2527657 (Gala-XY Fleet)
+[9022784] warning: card id 2529732 (Gala-XY Raid) is not public
+[9022784] note: [+] added new card 2529732 (Gala-XY Raid)
+[9022784] warning: card id 2678818 (Etta, the Bird of Prey) is not public
+[9022784] note: [+] added new card 2678818 (Etta, the Bird of Prey)
+[9022784] warning: card id 2678818 (Etta, the Bird of Prey) is not public
+[9022784] note: [+] added new card 2678818 (Etta, the Bird of Prey)
+[9022784] warning: card id 2678818 (Etta, the Bird of Prey) was duplicated in <9022784> from <9022784>
+[9022784] warning: card id 2527501 (Gala-XY Observer) is not public
+[9022784] note: [+] added new card 2527501 (Gala-XY Observer)
+[9022784] warning: card id 2527501 (Gala-XY Observer) was duplicated in <9022784> from <9022784>
+[9022784] note: [+] added new card 2546535 (Gala-XY CQ-90)
+[9022784] warning: card id 2527828 (Gala-XY PT-60) is not public
+[9022784] note: [+] added new card 2527828 (Gala-XY PT-60)
+[9022784] Finished scraping.
+[9044366] Starting to parse 9044366
+[9044366] Finished scraping.
+[9051430] Starting to parse 9051430
+[9051430] note: [+] added new card 2543560 (Lich, Scavanger of the Deadly Waters)
+[9051430] note: [+] added new card 2543565 (Shen, Swordsman of the Deadly Waters)
+[9051430] note: [+] added new card 2543598 (Ragnar, Butcher of the Deadly Waters)
+[9051430] note: [+] added new card 2545068 (Batis, Firepower of the Deadly Waters)
+[9051430] note: [+] added new card 2545058 (Jai, Watcher of the Deadly Waters)
+[9051430] note: [+] added new card 2545073 (Yorn, Brigand of the Deadly Waters)
+[9051430] note: [+] added new card 2545111 (Deadly Waters' Ghost Bay)
+[9051430] note: [+] added new card 2543567 (Treasure of the Deadly Waters)
+[9051430] note: [+] added new card 2546195 (Venturing in the Deadly Waters)
+[9051430] note: [+] added new card 2545479 (Open Conflict in the Deadly Waters)
+[9051430] note: [+] added new card 2545525 (Carnage in the Deadly Waters)
+[9051430] note: [+] added new card 2543572 (Lark, the Deadly Waters Patrol Ship)
+[9051430] note: [+] added new card 2545157 (Ebon, the Deadly Waters Assault Cruiser)
+[9051430] note: [+] added new card 2545167 (Firefly, the Deadly Waters Command Vessel)
+[9051430] Finished scraping.
+[9072263] Starting to parse 9072263
+[9072263] Finished scraping.
+[9079255] Starting to parse 9079255
+[9079255] Finished scraping.
+[9094270] Starting to parse 9094270
+[9094270] warning: card id 2190047 (Elemental HERO Neos Bubbleman) was duplicated in <9094270> from <6353400>
+[9094270] warning: card id 2240629 (Elemental HERO Toon Wingman) was duplicated in <9094270> from <7679392>
+[9094270] warning: card id 2102115 (Genetically Modified Organism) was duplicated in <9094270> from <7193014>
+[9094270] warning: card id 2150793 (HERO Fusion Spark) was duplicated in <9094270> from <7193014>
+[9094270] warning: card id 2620647 (Jaden’s Polymerization) was duplicated in <9094270> from <8735092>
+[9094270] warning: card id 2674638 (Elemental HERO Ancient Gear Wingman) was duplicated in <9094270> from <8886348>
+[9094270] warning: card id 2241170 (Elemental HERO Shining Electrum) was duplicated in <9094270> from <7552464>
+[9094270] warning: card id 2241160 (Elemental HERO Shining Mariner) was duplicated in <9094270> from <7552464>
+[9094270] warning: card id 2190031 (Elemental HERO Shining Shaman) was duplicated in <9094270> from <7552348>
+[9094270] warning: card id 2234055 (Elemental HERO Shining Storm) was duplicated in <9094270> from <7552464>
+[9094270] warning: card id 2241167 (Elemental HERO Shining Wild Wingman) was duplicated in <9094270> from <7552464>
+[9094270] warning: card id 2173866 (Elemental HERO Shiningedge) was duplicated in <9094270> from <6353465>
+[9094270] warning: card id 2268160 (Elemental HERO Shinning Darkness) was duplicated in <9094270> from <7759421>
+[9094270] Finished scraping.
+[9104023] Starting to parse 9104023
+[9104023] warning: card id 2458796 (Plaguespreader Corpse) was duplicated in <9104023> from <8487086>
+[9104023] warning: card id 1996487 (Plagueoriginator Zombie) was duplicated in <9104023> from <8658932>
+[9104023] warning: card id 2458352 (Plagueruler Zombie) was duplicated in <9104023> from <8487086>
+[9104023] warning: card id 2186772 (Plaguespreader Warwolf) was duplicated in <9104023> from <7552348>
+[9104023] warning: card id 2639169 (Red-Eyes Plaguespreader Zombie Dragon) was duplicated in <9104023> from <8886348>
+[9104023] Finished scraping.
+[9105198] Starting to parse 9105198
+[9105198] warning: card id 2553364 (Retreat of the Dark Scorpions) was duplicated in <9105198> from <7759421>
+[9105198] warning: card id 2233962 (Dark Scorpion - Kachka the Slash) was duplicated in <9105198> from <7552464>
+[9105198] Finished scraping.
+[9109731] Starting to parse 9109731
+[9109731] note: [+] added new card 1332994 (Bandit of the Endless Sands)
+[9109731] note: [+] added new card 1333030 (Beetle of the Endless Sands)
+[9109731] note: [+] added new card 1333022 (Insectoid of the Endless Sands)
+[9109731] note: [+] added new card 1333001 (Merchant of the Endless Sands)
+[9109731] note: [+] added new card 1332256 (Rider of the Endless Sands)
+[9109731] note: [+] added new card 1333017 (Scorpion of the Endless Sands)
+[9109731] note: [+] added new card 1330651 (Spearman of the Endless Sands)
+[9109731] note: [+] added new card 1333035 (Release of the Endless Sands)
+[9109731] note: [+] added new card 1333031 (Shifting of the Sands)
+[9109731] note: [+] added new card 1333056 (The Endless Sands of Time)
+[9109731] note: [+] added new card 1333045 (Hourglass of Distortion)
+[9109731] note: [+] added new card 1333063 (Hourglass of Dreams)
+[9109731] note: [+] added new card 1333041 (Hourglass of Idealism)
+[9109731] note: [+] added new card 1333048 (Hourglass of Might)
+[9109731] note: [+] added new card 1333077 (Amphisbanea, Nightmare of the Endless Sands)
+[9109731] note: [+] added new card 1330623 (Embodiment of the Endless Sands)
+[9109731] note: [+] added new card 1330639 (Quan, Swordsman of the Endless Sands)
+[9109731] note: [+] added new card 2293318 (Vipera, Wyvern of the Endless Sands)
+[9109731] Finished scraping.
+[9123660] Starting to parse 9123660
+[9123660] Finished scraping.
+[9131225] Starting to parse 9131225
+[9131225] note: [+] added new card 2175564 (Marty the Anti-Goo-T Prisoner)
+[9131225] note: [+] added new card 2159656 (Anti-Goo Carrier Deltia)
+[9131225] Finished scraping.
+[9223893] Starting to parse 9223893
+[9223893] Finished scraping.
+[9233282] Starting to parse 9233282
+[9233282] warning: card id 370159 (Blue-Eyes Advance Dragon) was duplicated in <9233282> from <4810529>
+[9233282] warning: card id 1294122 (Blue-Eyes Savage Dragon) was duplicated in <9233282> from <4810529>
+[9233282] warning: card id 46012 (Sorceress with Eyes of Blue) was duplicated in <9233282> from <4810529>
+[9233282] warning: card id 926502 (Blue-Eyes Spirit) was duplicated in <9233282> from <4810529>
+[9233282] warning: card id 413075 (Resonance of the White Dragon) was duplicated in <9233282> from <4810529>
+[9233282] warning: card id 1106180 (White Dragon's Chaos) was duplicated in <9233282> from <4810529>
+[9233282] warning: card id 2242735 (Balmung, Alternative Dragoon of the Underworld) was duplicated in <9233282> from <7753395>
+[9233282] warning: card id 370253 (Blue-Eyes Advance Ultimate Dragon) was duplicated in <9233282> from <4810529>
+[9233282] warning: card id 2236760 (Flame-Eyes MAX Frost Dragon) was duplicated in <9233282> from <8658932>
+[9233282] warning: card id 2640077 (Violet-Eyes Chaos Dragon) was duplicated in <9233282> from <8886348>
+[9233282] warning: card id 2640066 (Violet-Eyes Purgatory Dragon) was duplicated in <9233282> from <8886348>
+[9233282] warning: card id 676834 (Blue-Eyes Ascended Dragon) was duplicated in <9233282> from <4810529>
+[9233282] warning: card id 40322 (Blue-Eyes Burning Dragon) was duplicated in <9233282> from <4810529>
+[9233282] warning: card id 928062 (Chosen with Eyes of Blue) was duplicated in <9233282> from <4810529>
+[9233282] Finished scraping.
+[9389807] Starting to parse 9389807
+[9389807] note: [+] added new card 2689955 (Clear Wing Speedroid Dragon)
+[9389807] note: [+] added new card 2642585 (Gem-Knight Marble Madams)
+[9389807] Finished scraping.
+[main] note: [-] removed old card 1364182 (Black Starship Soldier Mk.209)
+[main] note: [-] removed old card 1364223 (Light Absorbing Starship Dark Blade 203)
+[main] note: [-] removed old card 1364254 (M.F.E. Stream Starship Mech)
+[main] note: [-] removed old card 1364202 (Raging Starship Gear 5.20)
+[main] note: [-] removed old card 1364394 (Shield Starship Guardian K.F.02)
+[main] note: [-] removed old card 1364310 (Starship Repairman)
+[main] note: [-] removed old card 1365661 (Starship Scout)
+[main] note: [-] removed old card 1365546 (Disobeying Directive)
+[main] note: [-] removed old card 1364424 (Pilot Front Squad)
+[main] note: [-] removed old card 1365024 (Moral Starship Mech - Barrage Fighter)
+[main] note: [-] removed old card 1365513 (Moral Starship Mech - Grand Cannoner)
+[main] note: [-] removed old card 1365504 (Moral Starship Mech - Lancer of Freedom)
+[main] note: [-] removed old card 1364340 (Moral Starship Mech - Pilot of Hope)
+[main] note: [-] removed old card 1365519 (Moral Starship Mechanized Station - World Defender)
+[main] note: [-] removed old card 1614305 (Enma's Plea Bargain)
+[main] note: [-] removed old card 1629699 (Everliving Otherworld Cannon)
+[main] note: [-] removed old card 1852515 (E^rabastel Spellunkers)
+[main] note: [-] removed old card 2490216 (E^rabastel Robastel)
+[main] note: [-] removed old card 1853094 (E^rabastel Adriana)
+[main] note: [-] removed old card 1853114 (E^rabastel Tinkerer)
+[main] note: [-] removed old card 1853103 (E^rabastel Mischieveous Adversary)
+[main] note: [-] removed old card 1853816 (E^rabastel Adriana's Vacuum)
+[main] note: [-] removed old card 1943964 (E^rabastel Jayson, Ex/Strider Hunting Velonthroda)
+[main] note: [-] removed old card 1853837 (E^rabastel Big Benbylonian Tower)
+[main] note: [-] removed old card 1307859 (E^rabastel Prophecy Chapter 1: Genesis)
+[main] note: [-] removed old card 1853026 (E^rabastel Infinite Chapter 1: Revelation)
+[main] note: [-] removed old card 1853010 (E^rabastel Chapter 2: Wonder World)
+[main] note: [-] removed old card 1853018 (E^rabastel Chapter 3: Mischievous Betrayal)
+[main] note: [-] removed old card 1853041 (E^rabastel Climactic Chapter 3: Climaclysm)
+[main] note: [-] removed old card 1852994 (E^rabastel Chapter 4: Carcharrackan Expedition)
+[main] note: [-] removed old card 2437694 (E^rabastel Rev/Strider Meltdown)
+[main] note: [-] removed old card 1853057 (E^rabastel Trials in the Library)
+[main] note: [-] removed old card 2404173 (E^rabastel Spiral Fall)
+[main] note: [-] removed old card 2490189 (E^rabastel Mischievous Climbing)
+[main] note: [-] removed old card 1853043 (E^rabastel Disassembled)
+[main] Time elapsed: 48.194156s
+[final] Completing scrape at 11-05-2021.16.16.46
+[main] Reading tmp/db-11-05-2021.15.41.57.json
+[main] Reading db.json
+[interact] Beginning interaction phase.
+[interact] Changed ids: ["124098", "406392", "417900", "417877", "417889", "417907", "417866", "621300", "1412161", "1521961", "1515101", "1574246", "1985232", "2218012", "1635283", "1637471", "2283949", "2067498", "2123509", "2068077", "2068077", "1646578", "1646246", "1646232", "1646232", "1646232", "1646232", "1667267", "1952019", "1952050", "1277656", "1995487", "1807482", "1478036", "1318580", "1807183", "1807184", "1807131", "1807150", "1814816", "1807122", "1807122", "1807142", "1816927", "1807185", "1814821", "2085534", "1814994", "1807498", "1832292", "1832274", "1949676", "1623170", "1985232", "1760958", "1277656", "1614328", "1614328", "1995487", "1981463", "1478775", "1473549", "2092917", "1473158", "2106784", "2179993", "2221740", "2217366", "2211914", "2218012", "2292910", "2204088", "2268280", "2505088", "1991776", "2711201", "2283949", "1807498", "2451780", "2451806", "2451802", "2453109", "2452625", "2451798", "2451873", "2451868", "2465453", "2465460", "2508671", "2300930", "2516435", "2515502", "2531361", "2577238", "2577238", "2531383", "2531383", "1640568", "2676879", "2597929", "2601116", "2608048", "2711206", "2711204", "2358634", "2358626"]
+[interact] Exiting interaction
+[final] Finished in-progress scrape, removed 1 associated scrape(s).

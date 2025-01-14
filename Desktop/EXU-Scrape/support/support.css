@@ -1,0 +1,21 @@
+#infoContainer {
+    width: 24%;
+}
+#deckEditor {
+    width: 51%;
+}
+
+#tags {
+    white-space: pre-wrap;
+}
+
+.tag {
+    background: #448b99;
+    margin: 2px;
+    padding: 3px;
+    border-radius: 5px;
+    float: left;
+}
+#tags + div {
+    clear: left;
+}

@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap');
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+    border-bottom: 1px solid;
+    margin-bottom: 3px;
+}
+h3 {
+    border-bottom: 1px dashed rgba(255,255,255,0.7);
+    margin:15px 0;
+}
+h3 {
+    font-size: 20px;
+}
+h4 {
+    font-size: 18px;
+}
+
+.card-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.inline-card {
+    width: 35vw;
+    flex-grow: 1;
+}
+.separator {
+    /* width: 4vw; */
+    align-self: center;
+    text-align: center;
+    font-size: 36px;
+    padding: 5px;
+}
+.inline-card p {
+    white-space: pre-wrap;
+}
+.inline-card.deleted, .inline-card.empty {
+    align-self: center;
+    text-align: center;
+}
+.inline-card.deleted {
+    color: #dd3333;
+}
+
+#chat {
+    position: fixed;
+    width: 300px;
+    height: 200px;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0,0,70,0.8);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+#chat-input {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    width: 280px;
+    display: block;
+}
+
+#chat-messages {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+
+.verdict {
+    font-size: 26px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 5px 0;
+    user-select: none;
+}
+.emoji-button {
+    --animation-time: 0.25s;
+    --hover-color: #cfc;
+    filter: grayscale(70%);
+    cursor: pointer;
+    transition: filter var(--animation-time), background-color var(--animation-time);
+    background-color: #444;
+    border-radius: 5px;
+    padding: 5px;
+}
+.emoji-button:hover, .emoji-button.selected {
+    filter: grayscale(0%);
+    background-color: var(--hover-color);
+}
+.verdict.overall {
+    padding: 8px;
+    background-color: #222;
+}
+.verdict.overall .emoji-button {
+    --hover-color: #ccf;
+}
+
+#host-peer-id {
+    width: 36ch;
+}
+
+.change-entries {
+    display: flex;
+    flex-wrap: wrap;
+}
+.change-entries > * {
+    /* flex-grow: 1; */
+    order: -1;
+    /* transition: order 0.3s; */
+}
+
+.minimized {
+    display: none;
+}
+
+p.skip {
+    font-style: italic;
+    color: #ddd;
+}
+
+.diff-whole {
+    /* background: rgba(0,0,0,0.5); */
+    margin-bottom: 10px;
+}
+
+.chunks {
+    background: #36393f;
+    padding: 15px;
+}
+.display {
+    background: #2f3136;
+    color: #b9bbbe;
+    border: 1px solid #202225;
+    padding: 8px;
+    /* box-shadow: 0 0 15px #36393f, 0 0 15px #36393f, 0 0 15px #36393f; */
+    font-family: "Fira Mono", "Consolas", monospace;
+    border-radius: 6px;
+    white-space: pre-wrap;
+}
+.display + .display {
+    margin-top: 8px;
+}
+
+a.toplink, a.toplink:visited {
+    color: #88c;
+    text-decoration: none;
+}
+a.toplink:hover {
+    color: #bbf;
+}
+
+.diff-entry {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.diff-side {
+    flex: 0 0 50%;
+    padding: 10px;
+	background: rgba(0,0,0,0.6);
+}
+
+.diff-side {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.diff {
+	overflow: auto;
+    line-height: 1em;
+}
+
+.diff ul {
+	overflow: auto;
+	font-size: 13px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: table;
+	width: 100%;
+}
+
+.diff del,
+.diff ins {
+	display: block;
+	text-decoration: none;
+}
+
+.diff li {
+	padding: 0;
+	display: table-row;
+	margin: 0;
+	height: 1em;
+}
+
+.diff li.ins {
+	background: rgba(25,25,75,0.8);
+	color: #ddf;
+}
+
+.diff li.del {
+	background: rgba(75,25,25,0.8);
+	color: #fdd;
+}
+
+code,
+.diff del,
+.diff ins,
+.diff span {
+	white-space: pre-wrap;
+    font-family: "Fira Mono", "Consolas", monospace;
+}
+
+.diff del strong {
+	/* font-weight: normal; */
+	background: rgba(150,100,100,0.8);
+}
+
+.diff ins strong {
+	/* font-weight: normal; */
+	background: rgba(100,100,150,0.8);
+}
+
+.diff li:hover {
+	background: rgba(150,150,100,0.8);
+}
+/* .diff li:hover strong { */
+    /* font-weight: bold; */
+/* } */
+
+.diff li.diff-comment {
+	display: none;
+}
+
+.diff li.diff-block-info {
+	background: none repeat scroll 0 0 gray;
+}

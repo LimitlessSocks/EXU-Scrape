@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<deck id="EUCS1Titanus3rdPlace">
+ <meta>
+  <author>Redox</author>
+  <name>EUCS 1, 3rd place: Titanus</name>
+  <thumb>1314659</thumb>
+  <date></date>
+  <description>
+   <p>Very versatile going first and second, can establish 2-3 interruptions going first and break boards somewhat easily going second. Trade-in is a fantastic draw spell for the deck, and eternal battle helps OTK like never before.</p>
+   <p><em>Maintainer's note: The missing card in the extra deck is an unapproved card, <a href="https://www.duelingbook.com/card?id=1530819">"Destoroyah, the One True Devil"</a></em>.</p>
+  </description>
+ </meta>
+ <main>
+  <card id="1409194" passcode="">Anguirus, Armed Killer of the Titanus</card>
+  <card id="1409194" passcode="">Anguirus, Armed Killer of the Titanus</card>
+  <card id="8504" passcode="14558127">Ash Blossom &amp; Joyous Spring</card>
+  <card id="8504" passcode="14558127">Ash Blossom &amp; Joyous Spring</card>
+  <card id="8504" passcode="14558127">Ash Blossom &amp; Joyous Spring</card>
+  <card id="1314619" passcode="">Babyjira, Heir to the Titanus Throne</card>
+  <card id="1314619" passcode="">Babyjira, Heir to the Titanus Throne</card>
+  <card id="1314619" passcode="">Babyjira, Heir to the Titanus Throne</card>
+  <card id="1314659" passcode="">Gojira, King of the Titanus</card>
+  <card id="1314659" passcode="">Gojira, King of the Titanus</card>
+  <card id="1850472" passcode="">Larva of the Titanus</card>
+  <card id="1850472" passcode="">Larva of the Titanus</card>
+  <card id="1850472" passcode="">Larva of the Titanus</card>
+  <card id="1318149" passcode="">Monster Zero, False King of the Titanus</card>
+  <card id="1318149" passcode="">Monster Zero, False King of the Titanus</card>
+  <card id="1850468" passcode="">Mothra, Queen of the Titanus</card>
+  <card id="1850468" passcode="">Mothra, Queen of the Titanus</card>
+  <card id="1850468" passcode="">Mothra, Queen of the Titanus</card>
+  <card id="1318197" passcode="">Rodan, Fire Demon of the Titanus</card>
+  <card id="1310651" passcode="">Titanus - Fire Demon's Lair</card>
+  <card id="1310651" passcode="">Titanus - Fire Demon's Lair</card>
+  <card id="1310651" passcode="">Titanus - Fire Demon's Lair</card>
+  <card id="1576620" passcode="">Mysterious Odokuro of Titanus Island</card>
+  <card id="1576620" passcode="">Mysterious Odokuro of Titanus Island</card>
+  <card id="1576620" passcode="">Mysterious Odokuro of Titanus Island</card>
+  <card id="8029" passcode="08267140">Cosmic Cyclone</card>
+  <card id="8029" passcode="08267140">Cosmic Cyclone</card>
+  <card id="8029" passcode="08267140">Cosmic Cyclone</card>
+  <card id="1945002" passcode="">Eternal Battle of the Titanus</card>
+  <card id="1314637" passcode="">The Titanus Logs</card>
+  <card id="1314637" passcode="">The Titanus Logs</card>
+  <card id="1314637" passcode="">The Titanus Logs</card>
+  <card id="4436" passcode="38120068">Trade-In</card>
+  <card id="4436" passcode="38120068">Trade-In</card>
+  <card id="4436" passcode="38120068">Trade-In</card>
+  <card id="4574" passcode="70368879">Upstart Goblin</card>
+  <card id="1314648" passcode="">Ancient Rivalry of the Titanus</card>
+  <card id="9201" passcode="10045474">Infinite Impermanence</card>
+  <card id="9201" passcode="10045474">Infinite Impermanence</card>
+  <card id="9201" passcode="10045474">Infinite Impermanence</card>
+ </main>
+ <side>
+  <card id="1300" passcode="94145021">Droll &amp; Lock Bird</card>
+  <card id="1300" passcode="94145021">Droll &amp; Lock Bird</card>
+  <card id="1300" passcode="94145021">Droll &amp; Lock Bird</card>
+  <card id="1281323" passcode="">Muto, the Toxic Duo Kaiju</card>
+  <card id="1281323" passcode="">Muto, the Toxic Duo Kaiju</card>
+  <card id="1281323" passcode="">Muto, the Toxic Duo Kaiju</card>
+  <card id="10345" passcode="27204311">Nibiru, the Primal Being</card>
+  <card id="10345" passcode="27204311">Nibiru, the Primal Being</card>
+  <card id="10345" passcode="27204311">Nibiru, the Primal Being</card>
+  <card id="4108" passcode="48130397">Super Polymerization</card>
+  <card id="4108" passcode="48130397">Super Polymerization</card>
+  <card id="4108" passcode="48130397">Super Polymerization</card>
+  <card id="8257" passcode="83326048">Dimensional Barrier</card>
+  <card id="8257" passcode="83326048">Dimensional Barrier</card>
+  <card id="8257" passcode="83326048">Dimensional Barrier</card>
+ </side>
+ <extra>
+  <card id="1537818" passcode="">Destoroyah, the One True Devil</card>
+  <card id="1531352" passcode="">Biollante, Hybrid of the Titanus</card>
+  <card id="9866" passcode="93854893">Dingirsu, the Orcust of the Evening Star</card>
+  <card id="8263" passcode="02530830">Galaxy-Eyes Cipher Blade Dragon</card>
+  <card id="8135" passcode="18963306">Galaxy-Eyes Cipher Dragon</card>
+  <card id="6917" passcode="39030163">Galaxy-Eyes Full Armor Photon Dragon</card>
+  <card id="1305950" passcode="">Mechagodzilla, the Anti-Titanus Machine</card>
+  <card id="8747" passcode="90590303">Number 41: Bagooska the Terribly Tired Tapir</card>
+  <card id="10133" passcode="66011101">Number 60: Dugares the Timeless</card>
+  <card id="10058" passcode="04280258">Apollousa, Bow of the Goddess</card>
+  <card id="9756" passcode="49202162">Black Luster Soldier - Soldier of Chaos</card>
+  <card id="9313" passcode="85289965">Borrelsword Dragon</card>
+  <card id="10243" passcode="65741786">I:P Masquerena</card>
+  <card id="1322654" passcode="">MUTO, Toxic Entity of the Titanus</card>
+  <card id="1322654" passcode="">MUTO, Toxic Entity of the Titanus</card>
+ </extra>
+</deck>

@@ -1,0 +1,5 @@
+test.json
+log/test*
+credentials.txt
+node_modules/
+tmp/replay-copy*

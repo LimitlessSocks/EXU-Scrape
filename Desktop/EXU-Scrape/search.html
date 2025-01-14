@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q3RKXFLZRZ');
+    </script>
+    <title>EXU Card Viewer</title>
+    <meta charset="UTF-8">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script src="./card-viewer.js"></script>
+    <script src="./main.js"></script>
+    <link rel="STYLESHEET" href="./card-viewer.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3RKXFLZRZ"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1>
+<article class="wide">
+<h2>EXU Card Search</h2>
+<h3>Please report all bugs to Sock#3222</h3>
+<div id="extraButtons">
+    <button id="search">Search</button>
+    <button id="saveSearch">Save Search URL</button>
+    <button class="danger-button" id="clearSearch">Clear Search</button>
+    <label for="autoSearch">Auto search?</label><input id="autoSearch" type=checkbox checked>
+    <span class="extraParamaters">
+        <label for="includeCustoms">Include customs?</label><input id="includeCustoms" type=checkbox checked>
+        <label for="includeYcg">Include TCG/OCG?</label><input id="includeYcg" type=checkbox>
+    </span>
+</div>
+<div id=searchParameters>
+<div>
+    <table id=mainStats>
+        <tr>
+            <th colspan=4>Primary Stats</th>
+        </tr>
+        <tr>
+            <td>Card name:</td>
+            <td><input id="cardName"></td>
+            <td>Card ID:</td>
+            <td><input id="cardId" type=number></td>
+        </tr>
+        <tr>
+            <td>Card description:</td>
+            <td><input id="cardDescription"></td>
+            <td>Card author:</td>
+            <td><input id="cardAuthor"></td>
+        </tr>
+        <tr>
+            <td>Card type:</td>
+            <td>
+                <select id="cardType">
+                    <option value=any></option>
+                    <option value=monster>Monster Card</option>
+                    <option value=spell>Spell Card</option>
+                    <option value=trap>Trap Card</option>
+                </select>
+            </td>
+            <td>Card limit:</td>
+            <td>
+                <select id="cardLimit">
+                    <option value=any></option>
+                    <option value=3>Unlimited</option>
+                    <option value=2>Semi-limited</option>
+                    <option value=1>Limited</option>
+                    <option value=0>Forbidden</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="cardVisibility">Card visibility</label></td>
+            <td>
+                <select id="cardVisibility">
+                    <option value=any></option>
+                    <option value=1>Public</option>
+                    <option value=2>Private</option>
+                </select>
+            </td>
+            <td><label for="cardCategory">Card category:</label></td>
+            <td>
+                <select id="cardCategory">
+                    <option value=any></option>
+                    <option value=1>Retrain</option>
+                    <option value=2>Alt Art</option>
+                </select>
+            </td>
+            <!-- <td><label for="cardIsRetrain">Retrain?</label></td> -->
+            <!-- <td> -->
+                <!-- <input id="cardIsRetrain" type="checkbox"> -->
+            <!-- </td> -->
+        </tr>
+        <tr>
+            <td><label for="searchSortBy">Sort by:</label></td>
+            <td>
+                <select id="searchSortBy">
+                    <option value="name">Name</option>
+                    <option value="text">Text Length</option>
+                    <option class="ifMonster" value="atk">ATK</option>
+                    <option class="ifMonster" value="def">DEF</option>
+                    <option class="ifMonster" value="level">Level/Rank</option>
+                    <option value="date">Date Added</option>
+                    <option value="playrate">Playrate</option>
+                </select>
+            </td>
+            <td><label for="searchSortOrder">Sort order:</label></td>
+            <td>
+                <select id="searchSortOrder">
+                    <option value="ascending">Ascending</option>
+                    <option value="descending">Descending</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <table id=playrateStats>
+        <tr>
+            <th colspan=2>Other Stats</th>
+        </tr>
+        <tr>
+            <td>Playrate</td>
+            <td><select id=cardPlayRateCompare class=thin>
+                <option value="equal">=</option>
+                <option value="lessequal">&le;</option>
+                <option value="less">&lt;</option>
+                <option value="greaterequal" selected="selected">&ge;</option>
+                <option value="greater">&gt;</option>
+                <option value="unequal">&ne;</option>
+            </select>
+            <input type=number id=cardPlayRate min=0 max=100 step=1>%</td>
+        </tr>
+    </table>
+    <table id=conditionalStats>
+        <tr class="ifMonster ifSpell ifTrap">
+            <th colspan=5>Secondary Stats</th>
+        </tr>
+        <tbody class="ifMonster" id="monsterStats">
+            <tr>
+                <td>Category</td>
+                <td>
+                    <select id="cardMonsterCategory">
+                        <option value=any></option>
+                        <option value="normal">Normal</option>
+                        <option value="effect">Effect</option>
+                        <option value="ritual">Ritual</option>
+                        <option value="fusion">Fusion</option>
+                        <option value="synchro">Synchro</option>
+                        <option value="xyz">Xyz</option>
+                        <option value="pendulum">Pendulum</option>
+                        <option value="link">Link</option>
+                        <option value="leveled">Leveled</option>
+                        <option value="maindeck">Main Deck</option>
+                        <option value="extradeck">Extra Deck</option>
+                        <option value="noneffect">Non-Effect</option>
+                        <option value="flip">Flip</option>
+                        <option value="qq">? ATK or DEF</option>
+                    </select>
+                </td>
+                <td>ATK</td>
+                <td><select id=cardATKCompare class=thin>
+                    <option value="equal">=</option>
+                    <option value="lessequal">&le;</option>
+                    <option value="less">&lt;</option>
+                    <option value="greaterequal">&ge;</option>
+                    <option value="greater">&gt;</option>
+                    <option value="unequal">&ne;</option>
+                    <option value="question">?</option>
+                    <!-- <option value="choice">any of</option> -->
+                </select></td>
+                <td><input type=number id=cardATK min=0 max=9999 step=50></td>
+            </tr>
+            <tr>
+                <td>Ability</td>
+                <td>
+                    <select id="cardMonsterAbility">
+                        <option value=any></option>
+                        <option value="union">Union</option>
+                        <option value="gemini">Gemini</option>
+                        <option value="spirit">Spirit</option>
+                        <option value="tuner">Tuner</option>
+                        <option value="toon">Toon</option>
+                        <option value="noneffect">Non-Effect</option>
+                    </select>
+                </td>
+                <td>DEF</td>
+                <td><select id=cardDEFCompare class=thin>
+                    <option value="equal">=</option>
+                    <option value="lessequal">&le;</option>
+                    <option value="less">&lt;</option>
+                    <option value="greaterequal">&ge;</option>
+                    <option value="greater">&gt;</option>
+                    <option value="unequal">&ne;</option>
+                    <option value="question">?</option>
+                    <!-- <option value="choice">any of</option> -->
+                </select></td>
+                <td><input type=number id=cardDEF min=0 max=9999 step=50></td>
+            </tr>
+            <tr>
+                <td>Attribute</td>
+                <td>
+                    <select id="cardMonsterAttribute">
+                        <option value=""></option>
+                        <option value="DARK">DARK</option>
+                        <option value="EARTH">EARTH</option>
+                        <option value="FIRE">FIRE</option>
+                        <option value="LIGHT">LIGHT</option>
+                        <option value="WATER">WATER</option>
+                        <option value="WIND">WIND</option>
+                        <option value="DIVINE">DIVINE</option>
+                    </select>
+                </td>
+                <td>Level/Rank:</td>
+                <td><select id=cardLevelCompare class=thin>
+                    <option value="equal">=</option>
+                    <option value="lessequal">&le;</option>
+                    <option value="less">&lt;</option>
+                    <option value="greaterequal">&ge;</option>
+                    <option value="greater">&gt;</option>
+                    <option value="unequal">&ne;</option>
+                    <!-- <option value="choice">any of</option> -->
+                </select></td>
+                <td><input type=number id=cardLevel min=0 max=12></td>
+            </tr>
+            <tr>
+                <td>Type</td>
+                <td>
+                    <select id="cardMonsterType">
+                        <option value=""></option>
+                        <option value="Aqua">Aqua</option>
+                        <option value="Beast">Beast</option>
+                        <option value="Beast-Warrior">Beast-Warrior</option>
+                        <option value="Celestial Warrior">Celestial Warrior</option>
+                        <option value="Cyberse">Cyberse</option>
+                        <option value="Cyborg">Cyborg</option>
+                        <option value="Dinosaur">Dinosaur</option>
+                        <option value="Dragon">Dragon</option>
+                        <option value="Fairy">Fairy</option>
+                        <option value="Fiend">Fiend</option>
+                        <option value="Fish">Fish</option>
+                        <option value="Galaxy">Galaxy</option>
+                        <option value="High Dragon">High Dragon</option>
+                        <option value="Illusion">Illusion</option>
+                        <option value="Insect">Insect</option>
+                        <option value="Machine">Machine</option>
+                        <option value="Magical Knight">Magical Knight</option>
+                        <option value="Omega Psychic">Omega Psychic</option>
+                        <option value="Plant">Plant</option>
+                        <option value="Psychic">Psychic</option>
+                        <option value="Pyro">Pyro</option>
+                        <option value="Reptile">Reptile</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Sea Serpent">Sea Serpent</option>
+                        <option value="Spellcaster">Spellcaster</option>
+                        <option value="Thunder">Thunder</option>
+                        <option value="Warrior">Warrior</option>
+                        <option value="Winged Beast">Winged Beast</option>
+                        <option value="Wyrm">Wyrm</option>
+                        <option value="Yokai">Yokai</option>
+                        <option value="Zombie">Zombie</option>
+                        <option value="Creator God">Creator God</option>
+                        <option value="Divine-Beast">Divine-Beast</option>
+                    </select>
+                </td>
+                <td class="ifPendulum">Pendulum Scale:</td>
+                <td class="ifPendulum"><select id=cardPendScaleCompare class=thin>
+                    <option value="equal">=</option>
+                    <option value="lessequal">&le;</option>
+                    <option value="less">&lt;</option>
+                    <option value="greaterequal">&ge;</option>
+                    <option value="greater">&gt;</option>
+                    <option value="unequal">&ne;</option>
+                    <!-- <option value="choice">any of</option> -->
+                </select></td>
+                <td class="ifPendulum"><input type=number id=cardPendScale min=0 max=13></td>
+            </tr>
+        </tbody>
+        <tbody class="ifSpell" id="spellStats">
+            <tr>
+                <td>Kind</td>
+                <td>
+                    <select id="cardSpellKind">
+                        <option value=""></option>
+                        <option value=Normal>Normal Spell</option>
+                        <option value=Quick-Play>Quick-Play Spell</option>
+                        <option value=Field>Field Spell</option>
+                        <option value=Continuous>Continuous Spell</option>
+                        <option value=Ritual>Ritual Spell</option>
+                        <option value=Equip>Equip Spell</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+        <tbody class="ifTrap" id="trapStats">
+            <tr>
+                <td>Kind</td>
+                <td>
+                    <select id="cardTrapKind">
+                        <option value=""></option>
+                        <option value=Normal>Normal Trap</option>
+                        <option value=Continuous>Continuous Card</option>
+                        <option value=Counter>Counter Card</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table id="linkTable">
+        <tbody class="ifLink">
+            <tr>
+                <th colspan=3>Link Arrows</th>
+            </tr>
+            <tr>
+                <td><button class="arrow-button">↖</button></td>
+                <td><button class="arrow-button">↑</button></td>
+                <td><button class="arrow-button">↗</button></td>
+            </tr>
+            <tr>
+                <td><button class="arrow-button">←</button></td>
+                <td><button class="arrow-button" id="equals">=</button></td>
+                <td><button class="arrow-button">→</button></td>
+            </tr>
+            <tr>
+                <td><button class="arrow-button">↙</button></td>
+                <td><button class="arrow-button">↓</button></td>
+                <td><button class="arrow-button">↘</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id=purposeFilter>
+    <button id=expandPurpose>Show</button>
+    <button id=contractPurpose>Hide</button>
+</div>
+</div>
+<h2>Results</h2>
+<h3>Results found: <span id=resultCount>n/a</span></h3>
+<h4 id=resultNote></h4>
+<button class=previousPage>&lt;</button> Showing page <input class="inline currentPage" type=number value="1" min="1"> of <span class=pageCount>X</span> <button class=nextPage>&gt;</button>
+<div id=results>nothing here</div>
+<button class=previousPage>&lt;</button> Showing page <input class="inline currentPage" type=number value="1" min="1"> of <span class=pageCount>X</span> <button class=nextPage>&gt;</button>
+</article>
+<div id="options" class="square-button right-button">
+    <div id="showOptions" class="toggleIcon"><img src="./res/options.png" /></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<deck id="Test1">
+ <meta>
+  <name>Frog FTK</name>
+  <author>Sock</author>
+  <description>I'm sorry.</description>
+ </meta>
+ <main>
+  <card id="605" passcode="11384280">Cannon Soldier</card>
+  <card id="605" passcode="11384280">Cannon Soldier</card>
+  <card id="1637230" passcode="">Delivery Frog</card>
+  <card id="1637230" passcode="">Delivery Frog</card>
+  <card id="1637230" passcode="">Delivery Frog</card>
+  <card id="1308" passcode="46239604">Dupe Frog</card>
+  <card id="1308" passcode="46239604">Dupe Frog</card>
+  <card id="1308" passcode="46239604">Dupe Frog</card>
+  <card id="1635" passcode="81278754">Flip Flop Frog</card>
+  <card id="1616910" passcode="">Frogbat</card>
+  <card id="1616910" passcode="">Frogbat</card>
+  <card id="3329" passcode="56840658">Poison Draw Frog</card>
+  <card id="3329" passcode="56840658">Poison Draw Frog</card>
+  <card id="3633" passcode="01357146">Ronintoadin</card>
+  <card id="3633" passcode="01357146">Ronintoadin</card>
+  <card id="3633" passcode="01357146">Ronintoadin</card>
+  <card id="4088" passcode="20663556">Substitoad</card>
+  <card id="4088" passcode="20663556">Substitoad</card>
+  <card id="4088" passcode="20663556">Substitoad</card>
+  <card id="4137" passcode="09126351">Swap Frog</card>
+  <card id="4137" passcode="09126351">Swap Frog</card>
+  <card id="4137" passcode="09126351">Swap Frog</card>
+  <card id="4457" passcode="12538374">Treeborn Frog</card>
+  <card id="4457" passcode="12538374">Treeborn Frog</card>
+  <card id="4457" passcode="12538374">Treeborn Frog</card>
+  <card id="4559" passcode="56052205">Unifrog</card>
+  <card id="620" passcode="57953380">Card of Safe Return</card>
+  <card id="620" passcode="57953380">Card of Safe Return</card>
+  <card id="1091" passcode="44763025">Delinquent Duo</card>
+  <card id="1091" passcode="44763025">Delinquent Duo</card>
+  <card id="1091" passcode="44763025">Delinquent Duo</card>
+  <card id="7739" passcode="79571449">Graceful Charity</card>
+  <card id="7739" passcode="79571449">Graceful Charity</card>
+  <card id="7739" passcode="79571449">Graceful Charity</card>
+  <card id="2272" passcode="01845204">Instant Fusion</card>
+  <card id="2272" passcode="01845204">Instant Fusion</card>
+  <card id="2513" passcode="85602018">Last Will</card>
+  <card id="2513" passcode="85602018">Last Will</card>
+  <card id="2513" passcode="85602018">Last Will</card>
+  <card id="7818" passcode="86541496">Left Arm Offering</card>
+  <card id="7818" passcode="86541496">Left Arm Offering</card>
+  <card id="7818" passcode="86541496">Left Arm Offering</card>
+  <card id="2784" passcode="34906152">Mass Driver</card>
+  <card id="2784" passcode="34906152">Mass Driver</card>
+  <card id="2784" passcode="34906152">Mass Driver</card>
+  <card id="2952" passcode="83764718">Monster Reborn</card>
+  <card id="2952" passcode="83764718">Monster Reborn</card>
+  <card id="2952" passcode="83764718">Monster Reborn</card>
+  <card id="3212" passcode="02295440">One for One</card>
+  <card id="3212" passcode="02295440">One for One</card>
+  <card id="3212" passcode="02295440">One for One</card>
+  <card id="3249" passcode="74191942">Painful Choice</card>
+  <card id="3249" passcode="74191942">Painful Choice</card>
+  <card id="3249" passcode="74191942">Painful Choice</card>
+  <card id="3346" passcode="55144522">Pot of Greed</card>
+  <card id="3346" passcode="55144522">Pot of Greed</card>
+  <card id="3346" passcode="55144522">Pot of Greed</card>
+  <card id="8382" passcode="11110587">That Grass Looks Greener</card>
+  <card id="8382" passcode="11110587">That Grass Looks Greener</card>
+  <card id="8382" passcode="11110587">That Grass Looks Greener</card>
+ </main>
+ <side>
+  <card id="2086" passcode="20450925">Hanewata</card>
+  <card id="2086" passcode="20450925">Hanewata</card>
+  <card id="2086" passcode="20450925">Hanewata</card>
+ </side>
+ <extra>
+  <card id="6623" passcode="17412721">Elder Entity Norden</card>
+  <card id="9041" passcode="41578483">Millennium-Eyes Restrict</card>
+  <card id="8231" passcode="90809975">Toadally Awesome</card>
+  <card id="8231" passcode="90809975">Toadally Awesome</card>
+  <card id="8231" passcode="90809975">Toadally Awesome</card>
+  <card id="10606" passcode="86066372">Accesscode Talker</card>
+  <card id="10058" passcode="04280258">Apollousa, Bow of the Goddess</card>
+  <card id="10615" passcode="73309655">Eria the Water Charmer, Gentle</card>
+  <card id="8886" passcode="41999284">Linkuriboh</card>
+  <card id="10051" passcode="79130389">Marincess Coral Anemone</card>
+  <card id="8841" passcode="65170459">Mistar Boy</card>
+  <card id="8841" passcode="65170459">Mistar Boy</card>
+  <card id="9814" passcode="60303245">Salamangreat Almiraj</card>
+  <card id="8991" passcode="74997493">Saryuja Skull Dread</card>
+  <card id="9063" passcode="61665245">Summon Sorceress</card>
+ </extra>
+</deck>

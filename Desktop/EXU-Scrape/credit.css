@@ -1,0 +1,26 @@
+table {
+    border-spacing: 10px;
+    background: rgba(0,0,0,0.5);
+    padding: 15px;
+}
+
+th {
+    cursor: pointer;
+    min-width: 10ch;
+}
+#artist-header {
+    min-width: 30ch;
+}
+#source-header {
+    min-width: 15ch;
+}
+
+.bare::after {
+    content: "";
+}
+.ascending::after {
+    content: "▼";
+}
+.descending::after {
+    content: "▲";
+}
