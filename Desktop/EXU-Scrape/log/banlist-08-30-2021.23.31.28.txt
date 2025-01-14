@@ -1,8 +1,0 @@
-[main] Created log file log/banlist-08-30-2021.23.31.28.txt
-[main] Reading banlist.json
-[main] Creating new file banlist-date-added.json
-[main] Started scraping
-[main] Making ID requests
-[main] Finalizing ID requests
-[main] Waiting for results
-[5855756] Starting to parse 5855756

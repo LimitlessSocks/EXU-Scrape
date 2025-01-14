@@ -1,4 +1,0 @@
-[main] Created log file log/banlist-01-26-2021.11.22.19.txt
-[main] Reading banlist.json
-[main] Started scraping
-[6358712] STARTING TO SCRAPE DECK 6358712

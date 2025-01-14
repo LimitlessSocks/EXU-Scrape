@@ -1,3 +1,0 @@
-[main] Created log file log/db-07-30-2021.19.18.12.txt
-[main] Reading db.json
-[main] Started scraping

@@ -1,22 +1,0 @@
-[main] Created log file log/banlist-08-12-2020.21.14.07.txt
-[main] Reading banlist.json
-[main] Started scraping
-[5895579] STARTING TO SCRAPE DECK 5895579
-[5895579] note: [+] added new card 1743438 (Spellbook of Silencing)
-[5895579] note: [+] added new card 1684963 (The Thunder Dragon's Rider)
-[5895579] note: property 'effect' of card id 1319245 (Lavalval Shadow) was changed
-[5895579] from: 2 Level 4 monstersIf the only monsters this card has as material are FIRE and/or WATER monsters: You can detach 1 material from this card, then activate 1 of these effects;● Send 1 Level 4 or lower FIRE or WATER monster from your Deck to the Graveyard.● Discard 1 card, then place 1 of your Spells/Traps that is banished or in the GY on the top or bottom of your Deck.You can only use this effect of "Lavalval Shadow" once per turn.
-[5895579] to: 2 Level 4 monstersIf the only monsters this card has as material are FIRE and/or WATER monsters: You can detach 1 material from this card, then activate 1 of these effects;● Send 1 Level 4 or lower FIRE or WATER monster from your Deck to the GY.● Discard 1 card, then place 1 of your Spells/Traps that is banished or in the GY on the top or bottom of your Deck.You can only use this effect of "Lavalval Shadow" once per turn.
-[5895579] Finished scraping.
-[5855756] STARTING TO SCRAPE DECK 5855756
-[5855756] Finished scraping.
-[5856014] STARTING TO SCRAPE DECK 5856014
-[5856014] Finished scraping.
-[5857248] STARTING TO SCRAPE DECK 5857248
-[5857248] Finished scraping.
-[5857281] STARTING TO SCRAPE DECK 5857281
-[5857281] Finished scraping.
-[5857285] STARTING TO SCRAPE DECK 5857285
-[5857285] Finished scraping.
-[main] note: [-] removed old card 1591766 (Union Conductor)
-[main] Time elapsed: 14.087034s

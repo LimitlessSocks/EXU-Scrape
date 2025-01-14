@@ -1,4 +1,0 @@
-[main] Created log file log/db-06-15-2021.21.45.32.txt
-[main] Reading db.json
-[main] Started scraping
-[6787178] STARTING TO SCRAPE DECK 6787178

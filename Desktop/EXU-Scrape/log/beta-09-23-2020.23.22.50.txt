@@ -1,166 +1,0 @@
-[main] Created log file log/beta-09-23-2020.23.22.50.txt
-[main] Reading beta.json
-[main] Started scraping
-[6434094] STARTING TO SCRAPE DECK 6434094
-[6434094] note: [+] added new card 1825731 (Kugutsu Commander Judgment)
-[6434094] note: [+] added new card 1825743 (Kugutsu Commander Rush)
-[6434094] note: [+] added new card 1825924 (Kugutsu Puppet Flair)
-[6434094] note: [+] added new card 1825934 (Kugutsu Puppet Frenzy)
-[6434094] note: [+] added new card 1825953 (Kugutsu Puppet Lust)
-[6434094] note: [+] added new card 1825941 (Kugutsu Puppet Slash)
-[6434094] note: [+] added new card 1825914 (Kugutsu Puppet Swarm)
-[6434094] note: [+] added new card 1825932 (Kugutsu Puppet Weep)
-[6434094] note: [+] added new card 1825738 (Kugutsu Commander Grace)
-[6434094] note: [+] added new card 1825955 (Kugutsu Commander Shadow)
-[6434094] note: [+] added new card 82 (Allure of Darkness)
-[6434094] note: [+] added new card 1826033 (Kugutsu Duet)
-[6434094] note: [+] added new card 5839 (Sacred Sword of Seven Stars)
-[6434094] Finished scraping.
-[6309748] STARTING TO SCRAPE DECK 6309748
-[6309748] note: [+] added new card 1831175 (Kuuroma - "Insular Introspection")
-[6309748] note: [+] added new card 1831213 (Kuuroma - "Aesthetic Ascetic")
-[6309748] Finished scraping.
-[6450165] STARTING TO SCRAPE DECK 6450165
-[6450165] warning: card id 1830490 (Elemental Contraption: Glaciale) is not public
-[6450165] note: [+] added new card 1830490 (Elemental Contraption: Glaciale)
-[6450165] warning: card id 1830492 (Elemental Contraption: Luminoso) is not public
-[6450165] note: [+] added new card 1830492 (Elemental Contraption: Luminoso)
-[6450165] warning: card id 1830486 (Elemental Contraption: Cocente) is not public
-[6450165] note: [+] added new card 1830486 (Elemental Contraption: Cocente)
-[6450165] warning: card id 1830483 (Elemental Contraption: Caotico) is not public
-[6450165] note: [+] added new card 1830483 (Elemental Contraption: Caotico)
-[6450165] warning: card id 1829991 (Soaring Contraption: Mastro Libero) is not public
-[6450165] note: [+] added new card 1829991 (Soaring Contraption: Mastro Libero)
-[6450165] warning: card id 1830447 (Shining Contraption: Mastro Radiante) is not public
-[6450165] note: [+] added new card 1830447 (Shining Contraption: Mastro Radiante)
-[6450165] warning: card id 1830455 (Sinister Contraption: Mastro Tetro) is not public
-[6450165] note: [+] added new card 1830455 (Sinister Contraption: Mastro Tetro)
-[6450165] warning: card id 1830478 (Defensive Contraption: Mastro Ferreo) is not public
-[6450165] note: [+] added new card 1830478 (Defensive Contraption: Mastro Ferreo)
-[6450165] Finished scraping.
-[6434960] STARTING TO SCRAPE DECK 6434960
-[6434960] warning: card id 1824123 (World Reaper Peacekeeper) is not public
-[6434960] note: property 'effect' of card id 1824123 (World Reaper Peacekeeper) was changed
-[6434960] from: If you control a "World Reaper" monster: You can Special Summon this card from your hand. You can banish this card from your GY, then target 1 "World Reaper" monster you control: Equip 1 "World Reaper" monster from your hand to it. You can only use each effect of "World Reaper Peacekeeper" once per turn. You cannot Special Summon monsters from the Extra Deck, except "World Reaper" monsters.
-[6434960] to: If you control a "World Reaper" monster: You can Special Summon this card from your hand. You can banish this card from your GY, then target 1 "World Reaper" monster you control; equip 1 "World Reaper" monster from your hand to that monster as an Equip Card. You can only use each effect of "World Reaper Peacekeeper" once per turn. You cannot Special Summon monsters from the Extra Deck, except "World Reaper" monsters.
-[6434960] warning: card id 1826016 (World Reaper Young Lord) is not public
-[6434960] note: property 'effect' of card id 1826016 (World Reaper Young Lord) was changed
-[6434960] from: You can target 1 "World Reaper" monster in your GY: Special Summon it in defense position, but its effects are negated. If this card is sent to the GY for the Tribute Summon of a "World Reaper" monster; you can equip this card to a "World Reaper" monster you control. You can only use each effect of "World Reaper Young Lord" once per turn. You cannot Special Summon monster from the Extra Deck, except "World Reaper" monsters.
-[6434960] to: You can target 1 "World Reaper" monster in your GY; Special Summon it in Defense Position, but its effects are negated. If this card is sent to the GY for the Tribute Summon of a "World Reaper" monster: You can equip this card to 1 "World Reaper" monster you control as an Equip Card. You can only use each effect of "World Reaper Young Lord" once per turn. You cannot Special Summon monsters from the Extra Deck, except "World Reaper" monsters.
-[6434960] warning: card id 1824117 (World Reaper Swordsman) is not public
-[6434960] note: property 'effect' of card id 1824117 (World Reaper Swordsman) was changed
-[6434960] from: If you control no monsters: You can Special Summon this card from your hand. If this card is Normal or Special Summoned: Add 1 "World Reaper" card from your Deck to your hand. For the Tribute Summon of a Level 8 "World Reaper" monster, this card can be treated as 2 tributes. You can only use each effect of "World Reaper Swordsman" once per turn. You cannot Special Summon monsters from the Extra Deck, except "World Reaper" monsters.
-[6434960] to: If you control no monsters: You can Special Summon this card from your hand. If this card is Normal or Special Summoned: Add 1 "World Reaper" card from your Deck to your hand. This card can be treated as 2 Tributes for the Tribute Summon of a Level 8 "World Reaper" monster. You can only use each effect of "World Reaper Swordsman" once per turn. You cannot Special Summon monsters from the Extra Deck, except "World Reaper" monsters.
-[6434960] warning: card id 1825911 (World Reaper Void Engulfer) is not public
-[6434960] note: property 'effect' of card id 1825911 (World Reaper Void Engulfer) was changed
-[6434960] from: You cannot Special Summon monsters from the Extra Deck, except "World Reaper" monsters. If this card was Tribute Summoned using "World Reaper" monsters, it gains these effects:●During the Main Phase: You can target 1 Spell/Trap your opponent controls: Equip it to this card.●You can use Equip cards you control as tributes for the Tribute Summon of a "World Reaper" monster.●During your next End Phase after this card was Summoned, if this card is equipped with an opponents Spell/Trap: Add it it to your opponents hand.You can only use each effect of "World Reaper Void Engulfer" once per turn.
-[6434960] to: You cannot Special Summon monsters from the Extra Deck, except "World Reaper" monsters. If this card was Tribute Summoned using "World Reaper" monsters as Tributes, it gains these effects.● During the Main Phase: You can target 1 Spell/Trap your opponent controls; equip it to this card.● You can use Equip Cards you control as Tributes for the Tribute Summon of a "World Reaper" monster.● During your next End Phase after this card was Summoned, if this card has an opponent's Spell/Trap equipped to it: Add it it to your opponent's hand.You can only use each effect of "World Reaper Void Engulfer" once per turn.
-[6434960] warning: card id 1824289 (World Reaper Black Hole) is not public
-[6434960] note: property 'effect' of card id 1824289 (World Reaper Black Hole) was changed
-[6434960] from: You cannot Special Summon monsters from the Extra Deck, except "World Reaper" monsters. If this card was Tribute Summoned using "World Reaper" monsters, it gains these effects:●During the Main Phase: You can target 1 face-up monster your opponent controls: Equip it to this card.●You can use Equip cards you control as tributes for the Tribute Summon of a "World Reaper" monster.●During your next End Phase after this card was Summoned, if this card is equipped with an opponents monster, Special Summon it to their field.You can only use each effect of "World Reaper Black Hole" once per turn.
-[6434960] to: You cannot Special Summon monsters from the Extra Deck, except "World Reaper" monsters. If this card was Tribute Summoned using "World Reaper" monsters, it gains these effects.● During the Main Phase: You can target 1 face-up monster your opponent controls; equip it to this card.● You can use Equip Cards you control as Tributes for the Tribute Summon of a "World Reaper" monster.● During your next End Phase after this card was Summoned, if this card has an opponent's monster equipped to it: Special Summon it to their field.You can only use each effect of "World Reaper Black Hole" once per turn.
-[6434960] note: property 'effect' of card id 1825922 (World Reaper Comet Creator) was changed
-[6434960] from: Cannot be Normal Summoned/Set. Must first be Special Summoned from your hand or GY by Tributing up to 4 "World Reaper" monsters (min 2). You cannot Special Summon monsters from the Extra Deck, except "World Reaper" monsters. This monster gains effects based on the amount of Tributes used for its summon:●2: You can use Equip cards you control as Tributes for the Tribute Summon of a "World Reaper" monster.●3: If this card destroys an opponents monster by battle: You can equip 1 card your opponent controls to this card.●4: Cannot be destroyed by card effects. You can send 1 equip card you control to the GY, then target 1 card on the field: Banish it.You can only use each effect of "World Reaper Comet Creator" once per turn.
-[6434960] to: Cannot be Normal Summoned/Set. Must first be Special Summoned from your hand or GY by Tributing up to 4 "World Reaper" monsters you control (min 2). You cannot Special Summon monsters from the Extra Deck, except "World Reaper" monsters. This monster gains effects based on the amount of monsters Tributed for its Tribute Summon.● 2: You can use Equip Cards you control as Tributes for the Tribute Summon of a "World Reaper" monster.● 3: If this card destroys an opponent's monster by battle: You can equip 1 card your opponent controls to this card.● 4: Cannot be destroyed by card effects. You can send 1 Equip Card you control to the GY, then target 1 card on the field; banish it.You can only use each effect of "World Reaper Comet Creator" once per turn.
-[6434960] warning: card id 1825852 (World Reaper Galaxy Destroyer) is not public
-[6434960] note: property 'effect' of card id 1825852 (World Reaper Galaxy Destroyer) was changed
-[6434960] from: Cannot be Normal Summoned/Set. Must first be Special Summoned from your hand or GY by Tributing up to 4 "World Reaper" monsters (min 2). You cannot Special Summon monsters from the Extra Deck, except "World Reaper" monsters. This monster gains effects based on the amount of Tributes used for its summon:●2: You can use Equip cards you control as Tributes for the Tribute Summon of a "World Reaper" monster.●3: During the Main Phase: You can equip 1 card your opponent controls to this card.●4: Cannot be targeted by card effects. If this card destroys an opponents monster by battle: You can Special Summon 1 monster equipped to this card to your side of the field.You can only use each effect of "World Reaper Galaxy Destroyer" once per turn.
-[6434960] to: Cannot be Normal Summoned/Set. Must first be Special Summoned from your hand or GY by Tributing up to 4 "World Reaper" monsters you control (min 2). You cannot Special Summon monsters from the Extra Deck, except "World Reaper" monsters. This monster gains effects based on the amount of monsters Tributed for its Tribute Summon.●2: You can use Equip cards you control as Tributes for the Tribute Summon of a "World Reaper" monster.●3: During the Main Phase: You can equip 1 card your opponent controls to this card.●4: Cannot be targeted by card effects. If this card destroys an opponents monster by battle: You can Special Summon 1 monster equipped to this card to your side of the field.You can only use each effect of "World Reaper Galaxy Destroyer" once per turn.
-[6434960] warning: card id 1826041 (Overlook from the World Reapers) is not public
-[6434960] note: property 'effect' of card id 1826041 (Overlook from the World Reapers) was changed
-[6434960] from: Special Summon a Level 4 or lower "World Reaper" monster from your hand or GY, and if you do, it can be treated as 2 Tributes for the Tribute Summon of a "World Reaper" monster. You can banish this card from your GY and return 1 Level 8 or higher "World Reaper" monster from your hand to your Deck: Add a Level 8 or higher "World Reaper" monster from your Deck to your hand, with a different name than the returned monster, but it cannot be summoned this turn. You can only use each effectof "Overlook from the World Reapers" once per turn.
-[6434960] to: Special Summon 1 Level 4 or lower "World Reaper" monster from your hand or GY, and if you do, it can be treated as 2 Tributes for the Tribute Summon of a "World Reaper" monster. You can banish this card from your GY and shuffle 1 Level 8 or higher "World Reaper" monster from your hand into the Deck;add 1 Level 8 or higher "World Reaper" monster from your Deck to your hand, with a different name than that shuffled monster, but it cannot be Summoned this turn. You can only use each effect of "Overlook from the World Reapers" once per turn.
-[6434960] warning: card id 1824397 (World Reaper Void) is not public
-[6434960] note: property 'effect' of card id 1824397 (World Reaper Void) was changed
-[6434960] from: If this card is activated: Add 1 "World Reaper" monster from your deck to your hand. During your Main Phase, immediately after this effect resolves: Normal Summon 1 "World Reaper" monster. The first time your Tribute Summoned "World Reaper" monster would be destroyed ber turn, it is not. You can only use each effect of "World Reaper Void" once per turn.
-[6434960] to: If this card is activated: Add 1 "World Reaper" monster from your Deck to your hand. During your Main Phase, you can: Immediately after this effect resolves, Normal Summon 1 "World Reaper" monster. The first time your Tribute Summoned "World Reaper" monster would be destroyed each turn, it is not. You can only use each effect of "World Reaper Void" once per turn.
-[6434960] warning: card id 1825887 (World Reaper Gate) is not public
-[6434960] note: property 'effect' of card id 1825887 (World Reaper Gate) was changed
-[6434960] from: You can target 1 "World Reaper" monster you control: It can be treated as 2 Tributes for the Tribute Summon of a "World Reaper" monster this turn. If you Tribute Summon a "World Reaper" monster; you can target 1 card in either GY: Equip it to the Tribute Summoned monster. If your "World Reaper" monster destroys an opponents monster by battle; you can equip the destroyed monster to a "World Reaper" monster you control. You can only use each effect of "World Reaper Gate" once per turn.
-[6434960] to: You can target 1 "World Reaper" monster you control; it can be treated as 2 Tributes for the Tribute Summon of a "World Reaper" monster this turn. If you Tribute Summon a "World Reaper" monster: You can target 1 card in either GY; equip it to that Tribute Summoned monster. If your "World Reaper" monster destroys an opponent's monster by battle: You can equip that destroyed monster to 1 "World Reaper" monster you control as an Equip Card. You can only use each effect of "World Reaper Gate" once per turn.
-[6434960] warning: card id 1826296 (World Reaper Divine Judgement) is not public
-[6434960] note: property 'effect' of card id 1826296 (World Reaper Divine Judgement) was changed
-[6434960] from: 2 Level 12 "World Reaper" monsters summoned with 3+ TributesYou can detach any number of materials from this card, then target that many cards your opponent controls: Attach them to this card as material. For a Tribute Summon, you can detach materials from this card, equal to the amount of Tributes needed. If this card destroys an opponents monster by battle; attach it to this card as material. You can only use each effect of "World Reaper Divine Judgement" once per turn.
-[6434960] to: 2 Level 12 "World Reaper" monsters Tribute Summoned using 3+ TributesYou can detach any number of materials from this card, then target that many cards your opponent controls; attach them to this card as material. If you would Tribute a monster(s) for the Tribute Summon of a "World Reaper" monsters, you can detach materials from this card, equal to the number of monsters you would Tribute instead. If this card destroys an opponent's monster by battle: Attach that card to this card as material. You can only use each effect of "World Reaper Divine Judgement" once per turn.
-[6434960] Finished scraping.
-[6446977] STARTING TO SCRAPE DECK 6446977
-[6446977] note: [+] added new card 1507755 (Tagteamer Devil Heel)
-[6446977] note: [+] added new card 1507767 (Tagteamer Dual Chop)
-[6446977] note: [+] added new card 1507750 (Tagteamer Stunt Double)
-[6446977] note: [+] added new card 1507762 (Tagteamer Truant Giu)
-[6446977] note: [+] added new card 1507779 (Tagteamer Battle Royale)
-[6446977] note: [+] added new card 1507809 (Tagteamer Planning)
-[6446977] note: [+] added new card 1507781 (Tagteamer Solos Ring)
-[6446977] note: [+] added new card 1507785 (Tagteamer Tag-In)
-[6446977] note: [+] added new card 1507794 (Tagteamer Intent)
-[6446977] note: [+] added new card 1507788 (Tagteamer Tag-Out)
-[6446977] note: [+] added new card 1507797 (Tagteamer Whirlwind)
-[6446977] note: [+] added new card 1507771 (Tagteamer Ring Champ)
-[6446977] note: [+] added new card 1507775 (Tagteamer Twin Terrors)
-[6446977] Finished scraping.
-[3363706] STARTING TO SCRAPE DECK 3363706
-[3363706] note: [+] added new card 42021 (Gravitron - Phobos)
-[3363706] note: [+] added new card 42043 (Gravitron - Deimos)
-[3363706] note: [+] added new card 41287 (Gravitron - Europa)
-[3363706] note: [+] added new card 41310 (Gravitron - Callisto)
-[3363706] note: [+] added new card 41213 (Gravitron - Ganymede)
-[3363706] note: [+] added new card 41267 (Gravitron - Io)
-[3363706] note: [+] added new card 42122 (Gravitron Alignment)
-[3363706] note: [+] added new card 42084 (Gravitron Assimilation)
-[3363706] note: [+] added new card 220293 (Gravitron Arrival)
-[3363706] note: [+] added new card 1821254 (Gravitron Abduction)
-[3363706] warning: card id 226711 (Gravitron - Charon) is not public
-[3363706] note: [+] added new card 226711 (Gravitron - Charon)
-[3363706] note: [+] added new card 42065 (Gravitron - Luna)
-[3363706] Finished scraping.
-[6166483] STARTING TO SCRAPE DECK 6166483
-[6166483] note: [+] added new card 900020 (Misbah - Dancer of Swiftness)
-[6166483] note: [+] added new card 897896 (Misbah - Lamp Adquirer)
-[6166483] note: [+] added new card 914095 (Misbah - Lullaby of Grace)
-[6166483] note: [+] added new card 899556 (Misbah - Merchant)
-[6166483] note: [+] added new card 900714 (Misbah - Sha)
-[6166483] note: [+] added new card 899935 (Misbah - Dancer of Treason)
-[6166483] note: [+] added new card 885687 (Misbah - Cost Of Treason)
-[6166483] warning: card id 1828982 (Misbah - Jannah Summon) is not public
-[6166483] note: [+] added new card 1828982 (Misbah - Jannah Summon)
-[6166483] note: [+] added new card 917971 (Misbah's Last Oasis Pursuit)
-[6166483] note: [+] added new card 885294 (Misbah - Spiritual Snare)
-[6166483] note: [+] added new card 899517 (Misbah - Jaanah of Rage)
-[6166483] note: [+] added new card 897966 (Misbah - Jannah of Peace)
-[6166483] note: [+] added new card 914080 (Misbah - Bandit)
-[6166483] note: [+] added new card 914292 (Misbah - Blind Mystic)
-[6166483] note: [+] added new card 900737 (Misbah - Desert Soldier)
-[6166483] note: [+] added new card 900753 (Misbah - Royal Guard)
-[6166483] Finished scraping.
-[main] note: [-] removed old card 1238986 (Cherishing Knight, Branwen)
-[main] note: [-] removed old card 1239189 (Promising Knight, David)
-[main] note: [-] removed old card 1240454 (Blue Espada Dragon)
-[main] note: [-] removed old card 1241539 (Black-winged Swordbreaker)
-[main] note: [-] removed old card 1243438 (Morion Spear Dragon)
-[main] note: [-] removed old card 1247612 (Darkpride Dragon)
-[main] note: [-] removed old card 1240538 (Transcendance Rank-Up-Magic Supremacy Extract)
-[main] note: [-] removed old card 1237216 (Claret Sword Dragon)
-[main] note: [-] removed old card 1241635 (Supremacy True Dragon, Claret Sword Helheim)
-[main] note: [-] removed old card 1239496 (Supremacy Black Dragon, Aurageyser Dragon)
-[main] note: [-] removed old card 1241485 (Supremacy Black Dragon, Aurageyser Doomed)
-[main] note: [-] removed old card 857126 (Heat Hound Beagleblast)
-[main] note: [-] removed old card 857167 (Heat Hound Charcoal Corgi)
-[main] note: [-] removed old card 857238 (Heat Hound Scintillating Shih-Tzu)
-[main] note: [-] removed old card 857122 (Heat Hound Tinder Terrier)
-[main] note: [-] removed old card 857198 (Heat Hound Farenheit Foxhound)
-[main] note: [-] removed old card 1815301 (Heat Hound Burnin' Bernard)
-[main] note: [-] removed old card 859293 (Heat Hound's Charred Charge)
-[main] note: [-] removed old card 857220 (Heat Hound's Extinguishing)
-[main] note: [-] removed old card 857119 (Heat Hound's Grilling Game)
-[main] note: [-] removed old card 857156 (Heat Hound's Hot House)
-[main] note: [-] removed old card 857140 (Heat Hound's Reignition)
-[main] note: [-] removed old card 857502 (Heat Hound's Call)
-[main] note: [-] removed old card 857186 (Heat Hound Bonfire Boxer)
-[main] note: [-] removed old card 857332 (Heat Hound Sizzling Shiba)
-[main] note: [-] removed old card 857135 (Heat Hound Pyro Poodle)
-[main] note: [-] removed old card 857587 (Heat Hound Cinder Chihuahua)
-[main] note: [-] removed old card 1815786 (Heat Hound Blazin' Bichon)
-[main] Time elapsed: 13.615905s
-[interact] Beginning interaction phase.
-[interact] Changed ids: ["1824123", "1826016", "1824117", "1825911", "1824289", "1825922", "1825852", "1826041", "1824397", "1825887", "1826296"]
-[interact] Exiting interaction

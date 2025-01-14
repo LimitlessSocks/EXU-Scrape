@@ -1,4 +1,0 @@
-[main] Created log file log/support-06-15-2021.20.26.45.txt
-[main] Creating new file support.json
-[main] Started scraping
-[8029982] STARTING TO SCRAPE DECK 8029982
