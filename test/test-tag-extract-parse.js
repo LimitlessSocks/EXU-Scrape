@@ -737,7 +737,10 @@ const TEST_CASES = [
     ["playrate 100", [
         { playRate: "100", playRateCompare: "equal" }
     ]],
-    
+    ["monster [600 def]", [
+        { type: "monster" },
+        { effect: "600 def" },
+    ]],
 ];
 
 module.exports = function testTagExtractParse(debug = false) {
