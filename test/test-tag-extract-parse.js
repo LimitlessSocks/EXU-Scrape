@@ -741,6 +741,12 @@ const TEST_CASES = [
         { type: "monster" },
         { effect: "600 def" },
     ]],
+    ["[add**0 atk]", [
+        { effect: "add**0 atk" },
+    ]],
+    ["2500 or more atk", [
+        { type: "monster", atkCompare: "greaterequal", atk: "2500" },
+    ]],
 ];
 
 module.exports = function testTagExtractParse(debug = false) {
