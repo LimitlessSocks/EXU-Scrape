@@ -1166,7 +1166,7 @@ CardViewer.createFilter = function (query, exclude = null) {
         let dateValue;
         if(!isSimpleYear) {
             let [ whole, month, day, year ] = query.date.match(/(\d+)\/(\d+)\/(\d+)/);
-            dateValue = new Date(year, month, day);
+            dateValue = new Date(year, month - 1, day);
         }
         const longDateRegex = /^(\d+)-(\d+)-(\d+)\.(\d+)\.(\d+)\.(\d+)$/;
         filters.push((card) => {
@@ -1174,12 +1174,12 @@ CardViewer.createFilter = function (query, exclude = null) {
                 if(longDateRegex.test(card.date)) {
                     // console.log(card.date);
                     let [ whole, month, day, year, ...rest ] = card.date.match(longDateRegex);
-                    card.dateValue = new Date(year, month, day);
+                    card.dateValue = new Date(year, month - 1, day);
                 }
                 else if(card.date || card.updated) {
                     let date = card.date || card.updated;
                     let [ whole, year, month, day ] = date.match(/(\d+)-(\d+)-(\d+)/);
-                    card.dateValue = new Date(year, month, day);
+                    card.dateValue = new Date(year, month - 1, day);
                 }
                 else {
                     card.dateValue = null;
