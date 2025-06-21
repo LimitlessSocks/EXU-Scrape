@@ -179,6 +179,7 @@ let onLoad = async function () {
     changeContentToCard(deckCard, NO_CARD_LOADED);
     
     await CardViewer.Database.initialReadAll("./db.json");
+    await CardViewer.initialDatabaseSetup();
     CardViewer.Search.config.noTable = true;
     
     // get two random cards
@@ -249,6 +250,21 @@ let onLoad = async function () {
     };
     $("#submitBridge").click(displayBridges);
     displayBridges();
+
+    CardViewer.attachGlobalSearchOptions(
+        $("#showOptions"),
+        {
+            monkeyPatch(data) {
+                // document.querySelector(".title a").textContent = `${data.name} Query`;
+                displayBridges();
+            },
+            denseToggle: displayBridges,
+            formatSelect(data) {
+                // todo
+                displayBridges();
+            },
+        },
+    );
 };
 
 window.addEventListener("load", onLoad);
