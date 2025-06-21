@@ -30,6 +30,8 @@ const getStatsFilter = (query, exclude = null) => {
     }
     Object.assign(finalQuery, query);
     finalExclude = exclude;
+    console.log("Final query:", finalQuery)
+    console.log("Exclude:", finalExclude)
     let cards = CardViewer.filter(finalQuery, finalExclude);
 
     switch(Statistics.Options.metaFilter) {
@@ -435,7 +437,7 @@ const Statistics = {
             .map(e => e.value)
             .filter(e => e !== "null");
         //commit
-        Statistics.focus.button.click();
+        updateInputDisplay();
     },
     parameters: [ "type", "attribute" ],
     ParameterData: {
@@ -750,8 +752,10 @@ Statistics.addFeature(
     }
 );*/
 
+// TODO: automatically populate this, and use sessionStorage for values
 const filterHTML = `
-<div id=searchParameters><div>
+<div id=searchParameters>
+<div>
     <table id=mainStats>
         <tr>
             <th colspan=4>Primary Stats</th>
@@ -798,7 +802,7 @@ const filterHTML = `
                     <option value=2>Private</option>
                 </select>
             </td>
-            <td><label for="cardCategory">Card Category:</label></td>
+            <td><label for="cardCategory">Card category:</label></td>
             <td>
                 <select id="cardCategory">
                     <option value=any></option>
@@ -806,6 +810,48 @@ const filterHTML = `
                     <option value=2>Alt Art</option>
                 </select>
             </td>
+            <!-- <td><label for="cardIsRetrain">Retrain?</label></td> -->
+            <!-- <td> -->
+                <!-- <input id="cardIsRetrain" type="checkbox"> -->
+            <!-- </td> -->
+        </tr>
+        <tr>
+            <td><label for="searchSortBy">Sort by:</label></td>
+            <td>
+                <select id="searchSortBy">
+                    <option value="name">Name</option>
+                    <option value="text">Text Length</option>
+                    <option class="ifMonster" value="atk">ATK</option>
+                    <option class="ifMonster" value="def">DEF</option>
+                    <option class="ifMonster" value="level">Level/Rank</option>
+                    <option value="date">Date Added</option>
+                    <option value="playrate">Playrate</option>
+                </select>
+            </td>
+            <td><label for="searchSortOrder">Sort order:</label></td>
+            <td>
+                <select id="searchSortOrder">
+                    <option value="ascending">Ascending</option>
+                    <option value="descending">Descending</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <table id=playrateStats>
+        <tr>
+            <th colspan=2>Other Stats</th>
+        </tr>
+        <tr>
+            <td>Playrate</td>
+            <td><select id=cardPlayRateCompare class=thin>
+                <option value="equal">=</option>
+                <option value="lessequal">&le;</option>
+                <option value="less">&lt;</option>
+                <option value="greaterequal" selected="selected">&ge;</option>
+                <option value="greater">&gt;</option>
+                <option value="unequal">&ne;</option>
+            </select>
+            <input type=number id=cardPlayRate min=0 max=100 step=1>%</td>
         </tr>
     </table>
     <table id=conditionalStats>
@@ -939,6 +985,17 @@ const filterHTML = `
                         <option value="Divine-Beast">Divine-Beast</option>
                     </select>
                 </td>
+                <td class="ifPendulum">Pendulum Scale:</td>
+                <td class="ifPendulum"><select id=cardPendScaleCompare class=thin>
+                    <option value="equal">=</option>
+                    <option value="lessequal">&le;</option>
+                    <option value="less">&lt;</option>
+                    <option value="greaterequal">&ge;</option>
+                    <option value="greater">&gt;</option>
+                    <option value="unequal">&ne;</option>
+                    <!-- <option value="choice">any of</option> -->
+                </select></td>
+                <td class="ifPendulum"><input type=number id=cardPendScale min=0 max=13></td>
             </tr>
         </tbody>
         <tbody class="ifSpell" id="spellStats">
@@ -1009,7 +1066,25 @@ window.addEventListener("load", async function () {
     CardViewer.excludeTcg = false;
     CardViewer.showImported = true;
     
+    const updateInputDisplay = () => Statistics.focus.button.click();
+
+    CardViewer.attachGlobalSearchOptions(
+        $("#showOptions"),
+        {
+            monkeyPatch(data) {
+                document.querySelector("#top a").textContent = `${data.name} Statistics`;
+                updateInputDisplay();
+            },
+            denseToggle: false,
+            formatSelect(data) {
+                // todo
+                updateInputDisplay();
+            },
+        },
+    );
+    
     await CardViewer.Database.initialReadAll("./db.json");
+    await CardViewer.initialDatabaseSetup();
     for(let [ id, card ] of Object.entries(CardViewer.Database.cards)) {
         if(!card.username) {
             card.username = "TCG/OCG";
@@ -1069,7 +1144,6 @@ window.addEventListener("load", async function () {
             featureToClick = feature;
         }
     }
-    featureToClick.button.click();
     
     $("#share").click(() => {
         let params = [
@@ -1087,19 +1161,17 @@ window.addEventListener("load", async function () {
     let idToKey = {
         sortIndexer: "sortIndex",
         limiter: "limit",
-        useCustom: "metaFilter",
-        useTcg: "metaFilter",
-        useBoth: "metaFilter",
+        // useCustom: "metaFilter",
+        // useTcg: "metaFilter",
+        // useBoth: "metaFilter",
     };
     const sortIndexMap = {
         0: 0, // name
         1: 1, // value
         2: 1, // value ascending
     };
-    let inputElements = $("#otherOptions select, #otherOptions input, input[name='card-category']");
-    let onUpdate = function () {
-        // console.log(this);
-        if(this.value === "") return;
+    let inputElements = $("#otherOptions select, #otherOptions input, input[name='card-category'], #includeCustoms, #includeYcg");
+    const syncValueWithState = function () {
         let property = idToKey[this.id];
         
         /*
@@ -1126,55 +1198,36 @@ window.addEventListener("load", async function () {
             Statistics.Options.sortOrder = this.value == "1" ? -1 : 1;
             Statistics.Options[property] = sortIndexMap[Statistics.Options[property]];
         }
-        
-        Statistics.focus.button.click();
+    };
+    
+    const onUpdate = function () {
+        // console.log(this);
+        if(this.value === "") return;
+        syncValueWithState.call(this);
+        updateInputDisplay();
     };
     
     // window.popupPrompt = popupPrompt;
     const filterHide = $("#filterHide");
-    $("#filter").click(() => {
-        if(popupPrompt.needsSetup) {
-            let innerFn = popupPrompt.innerFn();
-            console.log(innerFn, popupPrompt);
-            CardViewer.Elements.cardType = innerFn.find("#cardType");
-            CardViewer.Elements.ifMonster = innerFn.find(".ifMonster");
-            CardViewer.Elements.ifSpell = innerFn.find(".ifSpell");
-            CardViewer.Elements.ifTrap = innerFn.find(".ifTrap");
-            CardViewer.Elements.ifLink = innerFn.find(".ifLink");
-            CardViewer.Elements.cardCategory = innerFn.find("#cardCategory");
-            CardViewer.Elements.monsterStats = innerFn.find("#monsterStats");
-            CardViewer.Elements.spellStats = innerFn.find("#spellStats");
-            CardViewer.Elements.trapStats = innerFn.find("#trapStats");
-            CardViewer.Elements.cardName = innerFn.find("#cardName");
-            CardViewer.Elements.cardDescription = innerFn.find("#cardDescription");
-            CardViewer.Elements.cardLimit = innerFn.find("#cardLimit");
-            CardViewer.Elements.cardId = innerFn.find("#cardId");
-            CardViewer.Elements.cardAuthor = innerFn.find("#cardAuthor");
-            // CardViewer.Elements.cardIsRetrain = innerFn.find("#cardIsRetrain");
-            CardViewer.Elements.cardVisibility = innerFn.find("#cardVisibility");
-            CardViewer.Elements.cardSpellKind = innerFn.find("#cardSpellKind");
-            CardViewer.Elements.cardTrapKind = innerFn.find("#cardTrapKind");
-            CardViewer.Elements.cardMonsterType = innerFn.find("#cardMonsterType");
-            CardViewer.Elements.cardMonsterAttribute = innerFn.find("#cardMonsterAttribute");
-            CardViewer.Elements.cardMonsterCategory = innerFn.find("#cardMonsterCategory");
-            CardViewer.Elements.cardMonsterAbility = innerFn.find("#cardMonsterAbility");
-            CardViewer.Elements.cardLevel = innerFn.find("#cardLevel");
-            CardViewer.Elements.cardATK = innerFn.find("#cardATK");
-            CardViewer.Elements.cardDEF = innerFn.find("#cardDEF");
-            CardViewer.Elements.cardLevelCompare = innerFn.find("#cardLevelCompare");
-            CardViewer.Elements.cardATKCompare = innerFn.find("#cardATKCompare");
-            CardViewer.Elements.cardDEFCompare = innerFn.find("#cardDEFCompare");
+    if(popupPrompt.needsSetup) {
+        let innerFn = popupPrompt.innerFn();
+        console.log(innerFn, popupPrompt);
+        innerFn.appendTo(filterHide);
+        CardViewer.setUpDefaultElements();
+        console.log("SETTING UP DONE, QUERY?", CardViewer.query());
+        console.log("SETTING UP DONE, Elements.cardName?", CardViewer.Elements.cardName);
 
-            // CardViewer.setUpTabSearchSwitching();
-            popupPrompt.needsSetup = false;
-        }
-        
+        // CardViewer.setUpTabSearchSwitching();
+        popupPrompt.needsSetup = false;
+    }
+    $("#filter").click(() => {
         filterHide.empty();
         CardViewer.setUpTabSearchSwitching();
-        popupPrompt.deploy().then(() => {
+        let cleanUp = () => {
             popupPrompt.innerFn().appendTo(filterHide);
-            Statistics.focus.button.click();
-        });
+            updateInputDisplay();
+        }
+        popupPrompt.deploy().then(cleanUp).catch(cleanUp);
         
     });
     
@@ -1200,4 +1253,8 @@ window.addEventListener("load", async function () {
     $(window).resize(resize);
     
     resize();
+    // hack; i cannot be forced to care
+    syncValueWithState.call(sortIndexer[0]);
+    syncValueWithState.call(limiter[0]);
+    featureToClick.button.click();
 });

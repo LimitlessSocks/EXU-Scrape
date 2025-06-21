@@ -722,11 +722,11 @@ CardViewer.query = function () {
         if(!useCustoms || !useYcg) {
             baseStats.visibility = [ baseStats.visibility ];
         }
-        if(!useYcg) {
-            baseStats.visibility.push(-6);
+        if(useCustoms && !useYcg) {
+            baseStats.visibility.push(-CardViewer.Visibilities.TCGOrOCG);
         }
-        if(!useCustoms) {
-            baseStats.visibility.push(-5);
+        if(useYcg && !useCustoms) {
+            baseStats.visibility.push(-CardViewer.Visibilities.PublicOrPrivateCustom);
         }
     }
     if(CardViewer.Elements.cardIsNotNormal) {
@@ -922,22 +922,45 @@ CardViewer.or = (...fns) => (...args) => fns.some(fn => fn(...args));
 
 CardViewer.getLimitProperty = () => `${CardViewer.format}_limit`;
 
-const checkVisibility = (card, visibility) =>
-    Array.isArray(visibility)
-        ? visibility.every(vis => checkVisibility(card, vis))
-        : visibility === "any" || !visibility
-            ? true
-            : visibility < 0
-                ? !checkVisibility(card, -visibility)
-                : visibility == 1 || visibility == 2
-                    ? card.custom == visibility
-                    : visibility == 3
-                        ? card.tcg && !card.ocg
-                        : visibility == 4
-                            ? card.ocg && !card.tcg
-                            : visibility == 5
-                                ? card.custom
-                                : card.ocg || card.tcg;
+CardViewer.Visibilities = {
+    Any: "any",
+    PublicCustom: 1,
+    PrivateCustom: 2,
+    TCGExclusive: 3,
+    OCGExclusive: 4,
+    PublicOrPrivateCustom: 5,
+    TCGOrOCG: 6,
+};
+const checkVisibility = (card, visibility) => {
+    if(Array.isArray(visibility)) {
+        return visibility.every(vis => checkVisibility(card, vis));
+    }
+    else if(visibility === "any" || !visibility) {
+        return true;
+    }
+    else if(visibility < 0) {
+        // invert
+        return !checkVisibility(card, -visibility);
+    }
+    else if(visibility == CardViewer.Visibilities.PublicCustom || visibility == CardViewer.Visibilities.PrivateCustom) {
+        return card.custom == visibility;
+    }
+    else if(visibility == CardViewer.Visibilities.TCGExclusive) {
+        return card.tcg && !card.ocg;
+    }
+    else if(visibility == CardViewer.Visibilities.OCGExclusive) {
+        return card.ocg && !card.tcg
+    }
+    else if(visibility == CardViewer.Visibilities.PublicOrPrivateCustom) {
+        return !!card.custom;
+    }
+    else if(visibility == CardViewer.Visibilities.TCGOrOCG) {
+        return card.ocg || card.tcg;
+    }
+    else {
+        throw Error("Unexpected visibility value " + Visibility);
+    }
+};
 
 CardViewer.createFilter = function (query, exclude = null) {
     if(exclude) {
@@ -1800,6 +1823,57 @@ CardViewer.getPlayrate = card => {
     return CardViewer.Playrates.Summary[indicator]?.playRate ?? 0;
 };
 
+CardViewer.setUpDefaultElements = function () {
+    CardViewer.Elements.cardType = $("#cardType");
+    CardViewer.Elements.cardLimit = $("#cardLimit");
+    CardViewer.Elements.cardAuthor = $("#cardAuthor");
+    CardViewer.Elements.search = $("#search");
+    CardViewer.Elements.results = $("#results");
+    CardViewer.Elements.autoSearch = $("#autoSearch");
+    CardViewer.Elements.cardName = $("#cardName");
+    CardViewer.Elements.resultCount = $("#resultCount");
+    CardViewer.Elements.cardDescription = $("#cardDescription");
+    CardViewer.Elements.currentPage = $(".currentPage");
+    CardViewer.Elements.pageCount = $(".pageCount");
+    CardViewer.Elements.nextPage = $(".nextPage");
+    CardViewer.Elements.previousPage = $(".previousPage");
+    CardViewer.Elements.resultNote = $("#resultNote");
+    CardViewer.Elements.cardId = $("#cardId");
+    CardViewer.Elements.cardCategory = $("#cardCategory");
+    CardViewer.Elements.cardVisibility = $("#cardVisibility");
+    CardViewer.Elements.ifMonster = $(".ifMonster");
+    CardViewer.Elements.ifSpell = $(".ifSpell");
+    CardViewer.Elements.ifTrap = $(".ifTrap");
+    CardViewer.Elements.ifLink = $(".ifLink");
+    CardViewer.Elements.ifPendulum = $(".ifPendulum");
+    CardViewer.Elements.cardSpellKind = $("#cardSpellKind");
+    CardViewer.Elements.cardTrapKind = $("#cardTrapKind");
+    CardViewer.Elements.monsterStats = $("#monsterStats");
+    CardViewer.Elements.spellStats = $("#spellStats");
+    CardViewer.Elements.trapStats = $("#trapStats");
+    CardViewer.Elements.cardLevel = $("#cardLevel");
+    CardViewer.Elements.cardMonsterCategory = $("#cardMonsterCategory");
+    CardViewer.Elements.cardMonsterAbility = $("#cardMonsterAbility");
+    CardViewer.Elements.cardMonsterType = $("#cardMonsterType");
+    CardViewer.Elements.cardMonsterAttribute = $("#cardMonsterAttribute");
+    CardViewer.Elements.cardATK = $("#cardATK");
+    CardViewer.Elements.cardDEF = $("#cardDEF");
+    CardViewer.Elements.cardPendScale = $("#cardPendScale");
+    CardViewer.Elements.cardLevelCompare = $("#cardLevelCompare");
+    CardViewer.Elements.cardATKCompare = $("#cardATKCompare");
+    CardViewer.Elements.cardDEFCompare = $("#cardDEFCompare");
+    CardViewer.Elements.cardPendScaleCompare = $("#cardPendScaleCompare");
+    CardViewer.Elements.playRate = $("#cardPlayRate");
+    CardViewer.Elements.playRateCompare = $("#cardPlayRateCompare");
+    // CardViewer.Elements.toTopButton = $("#totop");
+    CardViewer.Elements.saveSearch = $("#saveSearch");
+    CardViewer.Elements.clearSearch = $("#clearSearch");
+    CardViewer.Elements.searchSortBy = $("#searchSortBy");
+    CardViewer.Elements.searchSortOrder = $("#searchSortOrder");
+    CardViewer.Elements.includeCustoms = $("#includeCustoms");
+    CardViewer.Elements.includeYcg = $("#includeYcg");
+};
+
 CardViewer.setUpTabSearchSwitching = function () {
     CardViewer.Elements.cardType.change(function () {
         let val = CardViewer.Elements.cardType.val();
@@ -1961,10 +2035,16 @@ const passcodeToDbId = passcode => {
 };
 
 // TODO: make this not hang the webpage
-let baseFormat;
+CardViewer.BaseFormat = {
+    cards: null,
+    name: null,
+    playrates: null,
+};
 CardViewer.monkeyPatchFormat = formatData => {
-    if(!baseFormat) {
-        baseFormat = {...CardViewer.Database.cards};
+    if(!CardViewer.BaseFormat.cards) {
+        CardViewer.BaseFormat.cards = {...CardViewer.Database.cards};
+        CardViewer.BaseFormat.name = CardViewer.getCurrentFormat();
+        CardViewer.BaseFormat.playrates = CardViewer.Playrates.Summary;
     }
     let {
         name,
@@ -1977,9 +2057,10 @@ CardViewer.monkeyPatchFormat = formatData => {
     CardViewer.Playrates.Summary = playrates;
     
     banlist ??= {};
+    customs ??= [];
     
     CardViewer.Database.setInitial({});
-    for(let [ id, card ] of Object.entries(baseFormat)) {
+    for(let [ id, card ] of Object.entries(CardViewer.BaseFormat.cards)) {
         if(card.custom) {
             // ignore source format's custom
             continue;
@@ -2007,7 +2088,65 @@ CardViewer.monkeyPatchFormat = formatData => {
     }
 };
 
+CardViewer.restoreBaseFormat = (baseFormat) => {
+    CardViewer.Database.cards = {...baseFormat.cards};
+    CardViewer.Playrates.Summary = baseFormat.playrates; 
+};
+
+CardViewer.getCurrentFormat = (defaultFormat = "exu") => {
+    let selectedFormat = CardViewer.SaveData.get("selected-format");
+    if(selectedFormat === undefined) {
+        CardViewer.SaveData.set("selected-format", defaultFormat);
+        return defaultFormat;
+    }
+    return selectedFormat;
+};
+// prefer to call deployFormat directly
+CardViewer.setCurrentFormat = (format = "exu") => {
+    CardViewer.SaveData.set("selected-format", format);
+};
+const FormatSources = {
+    exu: "./db.json",
+    exulegacy: "./db-legacy.json",
+};
+CardViewer.deployFormat = async (format) => {
+    if(!format) {
+        throw new Error("Expected format for CardViewer.deployFormat");
+    }
+    console.log("Deploying format", format);
+    // exu, exulegacy, tcg, or perhaps a custom upload
+    let oldFormat = CardViewer.getCurrentFormat();
+    if(oldFormat === format) {
+        console.warn("no-op setting format `" + format + "` when already at that format");
+    }
+    if(format === "tcgocg") {
+        CardViewer.monkeyPatchFormat({
+            name: "TCG/OCG",
+            // passcodes: ,
+            // banlist: , // TODO
+            // customs: ,
+            // playrates: ,
+        });
+        for(let card of Object.values(CardViewer.Database.cards)) {
+            card.exu_limit = card.tcg_limit;
+        }
+    }
+    else {
+        if(CardViewer.BaseFormat.name === format) {
+            CardViewer.restoreBaseFormat(CardViewer.BaseFormat);
+        }
+        else {
+            let source = FormatSources[format];
+            await CardViewer.Database.initialReadAll(source);
+        }
+    }
+    CardViewer.setCurrentFormat(format);
+};
+
+// options.monkeyPatch expects either a boolean or a function
+// if a function, it is treated as a callback for when data is uploaded
 CardViewer.attachGlobalSearchOptions = (el, options = {}) => {
+    // initializations on page load (when attached)
     if(options.denseToggle) {
         CardViewer.baseComposeStrategy ??= CardViewer.composeStrategy;
         let isDense = CardViewer.SaveData.get("dense-view");
@@ -2020,16 +2159,54 @@ CardViewer.attachGlobalSearchOptions = (el, options = {}) => {
         }
     }
 
+    // prompt behavior for the button
     let optionsPrompt = new Prompt("Options", () => {
-        let base = $("<div>").css({
+        let base = $("<div>");
+        /*.css({
             display: "flex",
             gap: "10px",
             flexDirection: "column",
             alignItems: "center",
-        });
-        let buttonRow = $(`<div class="square-button-row"></div>`);
+        });*/
+        let optionsGrid = $(`<div class="options-grid"></div>`);
+        
+        if(options.formatSelect) {
+            let formatSelect = $(`
+                <label class="horizontal-label">
+                    <div class="label-text">Select format:</div>
+                    <div class="label-value">
+                        <select class="selected-format">
+                            <option value="exu">EXU</option>
+                            <option value="tcgocg">TCG/OCG</option>
+                            <option value="exulegacy">EXU Legacy</option>
+                        </select>
+                    </div>
+                </label>
+            `);
+            let select = formatSelect.find(".selected-format");
+            select.val(CardViewer.getCurrentFormat());
+            select.change(async ev => {
+                let { value } = ev.target;
+                await CardViewer.deployFormat(value);
+                if(typeof options.formatSelect === "function") {
+                    options.formatSelect(value);
+                }
+            });
+            optionsGrid.append(formatSelect);
+        }
+        
         if(options.monkeyPatch) {
-            let monkeyPatchUpload = $(`<div class="square-button"><div class=toggleIcon><img src="./res/upload.png"/></div></div>`);
+            // TODO: use a templates file
+            let monkeyPatchUpload = $(`
+                <label class="horizontal-label">
+                    <div class="label-text">Upload format:</div>
+                    <div class="label-value small square-button">
+                        <div class="toggleIcon">
+                            <img src="./res/upload.png"/>
+                        </div>
+                    </div>
+                </label>
+            `);
             monkeyPatchUpload.on("click", async () => {
                 let data = await readJSONFile();
                 CardViewer.monkeyPatchFormat(data);
@@ -2037,18 +2214,14 @@ CardViewer.attachGlobalSearchOptions = (el, options = {}) => {
                     options.monkeyPatch(data);
                 }
             });
-            buttonRow.append(monkeyPatchUpload);
-        }
-
-        if(buttonRow.children().length) {
-            base.append(buttonRow);
+            optionsGrid.append(monkeyPatchUpload);
         }
 
         if(options.denseToggle) {
             let denseToggleSwitch = $(`
-                <label class="toggle-switch-label" style="display: inline-flex">
-                    Dense: 
-                    <div class="toggle-switch round">
+                <label class="horizontal-label">
+                    <div class="label-text">Compact view:</div>
+                    <div class="label-value toggle-switch round">
                         <input type="checkbox">
                         <span class="slider"></span>
                     </div>
@@ -2069,7 +2242,11 @@ CardViewer.attachGlobalSearchOptions = (el, options = {}) => {
                         options.denseToggle(ev.target.checked);
                     }
                 });
-            base.append(denseToggleSwitch);
+            optionsGrid.append(denseToggleSwitch);
+        }
+
+        if(optionsGrid.children().length) {
+            base.append(optionsGrid);
         }
         // <div class="square-button"><div class=toggleIcon><img src="./res/upload.png"/></div></div>
 
@@ -2093,6 +2270,10 @@ CardViewer.attachGlobalSearchOptions = (el, options = {}) => {
         changeInput();
     });
     */
+};
+
+CardViewer.initialDatabaseSetup = async () => {
+    await CardViewer.deployFormat(CardViewer.getCurrentFormat());
 };
 
 CardViewer.getMaterialLine = card => {
