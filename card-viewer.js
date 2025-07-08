@@ -2105,6 +2105,7 @@ CardViewer.getCurrentFormat = (defaultFormat = "exu") => {
 CardViewer.setCurrentFormat = (format = "exu") => {
     CardViewer.SaveData.set("selected-format", format);
 };
+// TODO: do not hardcode relative to base directory
 const FormatSources = {
     exu: "./db.json",
     exulegacy: "./db-legacy.json",
@@ -2136,7 +2137,11 @@ CardViewer.deployFormat = async (format) => {
             CardViewer.restoreBaseFormat(CardViewer.BaseFormat);
         }
         else {
+            console.log(format);
             let source = FormatSources[format];
+            if(!source) {
+                throw new Error("Cannot find source " + format);
+            }
             await CardViewer.Database.initialReadAll(source);
         }
     }
