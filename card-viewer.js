@@ -1424,10 +1424,11 @@ CardViewer.Compose = {
         card.src = card.src || (
             "https://www.duelingbook.com/images/low-res/" + card.id + ".jpg"
         );
-        
+        // window.shittyDebug ??= "";
         let img = $("<img class=img-result>")
             .attr("src", card.src)
-            .attr("title", card.id);
+            .attr("title", card.id)
+            // .on("error", () => console.log("Card image didn't load (might be deleted):", card.id || card.serial_number, card.name) || (window.shittyDebug += card.name + "\n"));
         
         return img;
     },
@@ -2364,6 +2365,104 @@ CardViewer.integrateBanlistChanges = banlistChanges => {
             }
         });
     }
+};
+
+/*
+ * there's no debt like tech debt
+ * like no debt i know
+ * everything about it is revealing
+ * everything the deadline will allow
+ * nowhere can you get that dreadful feeling
+ * when you are appending that extra line
+ */
+CardViewer.savePlayedCustoms = async () => {
+    // this code is bad for multiple reasons
+    // chiefest being condenseQuery/naturalInputToQuery do not exist in this file
+    // and this requires zip.js, which is not a permanent include in any file page
+    /*
+    <script type="module">
+        import { BlobWriter, TextReader, ZipWriter } from "https://unpkg.com/@zip.js/zip.js@2.7.72/index.min.js";
+        window.zip = {
+            BlobWriter, TextReader, ZipWriter,
+        };
+    </script>
+    */
+    // i am too tired to do this correctly; i wish to be done
+    const simpleFilter = text =>
+        CardViewer.filter(
+            condenseQuery(query = naturalInputToQuery(text)),
+            null,
+            query.reduce((p, c) => ({...p, ...c}), {})
+        )
+        .map(card => `<card id="${card.id}" passcode="">${card.name}</card>`
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/'/g, "&#39;")
+            .replace(/"/g, "&quot;")
+        );
+
+    let playedExtra = simpleFilter("played custom extra");
+    let playedMain = simpleFilter("played custom (not extra)");
+    
+    playedExtra.reverse();
+    playedMain.reverse();
+    
+    let index = 1;
+    let zipFileWriter = new zip.BlobWriter();
+    let zipWriter = new zip.ZipWriter(zipFileWriter);
+    
+    while(playedExtra.length && playedMain.length) {
+        let displayIndex = index.toString().padStart(4, "0");
+        let saveName = `[EX2] Save_${displayIndex}`;
+        
+        let instanceMain = playedMain.splice(-60);
+        let instanceExtra = playedExtra.splice(-15);
+        
+        let instanceSide = [];
+        if(playedExtra.length) {
+            instanceSide.push(...playedExtra.splice(-15));
+        }
+        if(instanceSide.length < 15) {
+            instanceSide.push(...instanceMain.splice(-(15 - instanceSide.length)));
+        }
+        
+        index++;
+        
+        let fileContent = `<?xml version="1.0" encoding="utf-8" ?>
+<deck name="${saveName}">
+ <main>
+   ${instanceMain.join("\n")}
+ </main>
+ <side>
+   ${instanceSide.join("\n")}
+ </side>
+ <extra>
+   ${instanceExtra.join("\n")}
+ </extra>
+</deck>
+`;
+        await zipWriter.add(saveName + ".xml", new zip.TextReader(fileContent));
+        
+        
+        // console.log(instanceMain, instanceExtra, instanceSide);
+    }
+    await zipWriter.close();
+    let zipFileBlob = await zipFileWriter.getData();
+    
+    const downloadZipFile = (name, blob) => {
+        let a;
+        document.body.appendChild(a = Object.assign(document.createElement("a"), {
+            download: name,
+            href: URL.createObjectURL(blob),
+            textContent: "Download zip file",
+        }));
+        a.click();
+    };
+    
+    downloadZipFile("lists.zip", zipFileBlob);
+    
+    return;
 };
 
 // secret silly
