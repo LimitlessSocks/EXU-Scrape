@@ -2375,7 +2375,8 @@ CardViewer.integrateBanlistChanges = banlistChanges => {
  * nowhere can you get that dreadful feeling
  * when you are appending that extra line
  */
-CardViewer.savePlayedCustoms = async () => {
+CardViewer.savePlayedCustoms = async (baseQuery = "played custom", prefix=["EX2", "Save"]) => {
+    let [ prefixHead, prefixName ] = prefix;
     // this code is bad for multiple reasons
     // chiefest being condenseQuery/naturalInputToQuery do not exist in this file
     // and this requires zip.js, which is not a permanent include in any file page
@@ -2394,19 +2395,20 @@ CardViewer.savePlayedCustoms = async () => {
             null,
             query.reduce((p, c) => ({...p, ...c}), {})
         )
-        .map(card => `<card id="${card.id}" passcode="">${card.name}</card>`
-            .replace(/&/g, '&amp;')
+        .map(card => `<card id="${card.id}" passcode="">${card.name.replace(/&/g, '&amp;')
             .replace(/</g, '&lt;')
             .replace(/>/g, '&gt;')
             .replace(/'/g, "&#39;")
             .replace(/"/g, "&quot;")
-        );
-
-    let playedExtra = simpleFilter("played custom extra");
-    let playedMain = simpleFilter("played custom (not extra)");
+        }</card>`);
+    
+    let playedExtra = simpleFilter(`(${baseQuery}) extra`);
+    let playedMain = simpleFilter(`(${baseQuery}) (not extra)`);
     
     playedExtra.reverse();
     playedMain.reverse();
+    
+    console.log(`Compressing ${playedExtra.length} extra deck card(s) and ${playedMain.length} main deck cards`);
     
     let index = 1;
     let zipFileWriter = new zip.BlobWriter();
@@ -2414,7 +2416,7 @@ CardViewer.savePlayedCustoms = async () => {
     
     while(playedExtra.length && playedMain.length) {
         let displayIndex = index.toString().padStart(4, "0");
-        let saveName = `[EX2] Save_${displayIndex}`;
+        let saveName = `[${prefixHead}] ${prefixName}_${displayIndex}`;
         
         let instanceMain = playedMain.splice(-60);
         let instanceExtra = playedExtra.splice(-15);
