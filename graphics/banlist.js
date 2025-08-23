@@ -16,6 +16,7 @@ console.log(formattedDate); // Output: e.g., "October 03, 2022"
 
 window.addEventListener("load", async function () {
     await CardViewer.Database.initialReadAll("./../db.json");
+    // await CardViewer.initialDatabaseSetup();
     
     const output = document.getElementById("output");
     
@@ -78,10 +79,10 @@ window.addEventListener("load", async function () {
             .value
             .split("-")
             .map(e => parseInt(e, 10));
-        console.log(year, month, day);
+        console.log({ year, month, day });
         let date = new Date(year, month - 1, day); // takes monthIndex
         let dateDisplay = formatDate(date);
-        console.log(date, dateDisplay);
+        console.log({ date, dateDisplay });
         $(".date").text(dateDisplay);
         
         categories ??= getCategories();

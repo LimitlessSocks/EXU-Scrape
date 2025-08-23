@@ -643,13 +643,6 @@ select.thin {
     background-color: white;
     transition: 200ms;
 }
-.toggle-switch-label {
-    display: flex;
-    align-items: center;
-    user-select: none;
-    gap: 10px;
-    cursor: pointer;
-}
 
 .toggle-switch input:checked + .slider {
     background-color: var(--switch-checked);
@@ -671,14 +664,33 @@ select.thin {
     border-radius: 50%;
 }
 
+.horizontal-label {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    gap: 1ch;
+    cursor: pointer;
+}
 .square-button {
     background: rgba(100,100,130,0.8);
     display: flex;
-    transition: width 1s linear;
-    position: fixed;
+    /* transition: width 0.2s linear; */
     padding: 10px;
     border-radius: 15px;
     z-index: 15;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+}
+.square-button.small {
+    --my-width: 35px;
+    width: var(--my-width);
+    height: var(--my-width);
+    padding: 5px;
+    --toggle-padding: 5px;
+    --toggle-width: calc(var(--my-width) - 2 * var(--toggle-padding));
+    --toggle-radius: 10px;
+    /* padding:  */
 }
 
 .square-button-row {
@@ -691,14 +703,45 @@ select.thin {
     position: relative;
 }
 
+.options-grid {
+    display: grid;
+    grid-row-gap: 0.3em;
+    /* grid-template-columns: 1fr 1fr; */
+}
+.options-grid .horizontal-label {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+.options-grid .horizontal-label > .label-text {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-self: right;
+    /* background: rgb(0,0,255,0.3); */
+}
+.options-grid .horizontal-label > .label-value {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: left;
+    /* background: rgba(0,255,0,0.3); */
+}
+
 #filterBy, #creditArt {
+    position: fixed;
     bottom: 20px;
     left: 20px;
     /* width: 70%; */
     /* justify-content: space-between; */
 }
 .right-button {
+    position: fixed;
     bottom: 20px;
+    right: 20px;
+}
+.top-right-button {
+    position: fixed;
+    top: 20px;
     right: 20px;
 }
 #randomArchetype {
@@ -708,17 +751,17 @@ select.thin {
 
 .toggleIcon {
     display: inline-block;
-    padding: 10px;
     cursor: pointer;
     transition: background 0.2s ease-in-out;
-    border-radius: 15px;
+    border-radius: var(--toggle-radius, 15px);
+    padding: var(--toggle-padding, 10px);
 }
-.toggleIcon:hover, .toggleIcon.toggled {
+.toggleIcon:hover, .square-button:hover .toggleIcon, .toggleIcon.toggled {
     background: rgba(200,200,230,0.8);
 }
 .toggleIcon, .toggleIcon img {
-    width: 35px;
-    height: 35px;
+    width: var(--toggle-width, 35px);
+    height: var(--toggle-width, 35px);
     margin: 0;
     /* margin-top: 4px; */
 }

@@ -29,6 +29,7 @@
     }
     #canvasHolder {
         background: rgba(0,0,0,0.5);
+        background: rgba(20,20,20,1);
         padding: 10px;
     }
     #optionContainer button {
@@ -67,9 +68,8 @@
         <div>
             <button id="share">Save sharing URL</button>
             <button id="filter">Open Filter</button>
-            <label for="useCustom"><input type="radio" id="useCustom" name="card-category" checked> Custom only</label>
-            <label for="useTcg"><input type="radio" id="useTcg" name="card-category"> TCG/OCG only</label>
-            <label for="useBoth"><input type="radio" id="useBoth" name="card-category"> Custom &amp; TCG/OCG</label>
+            <label for="includeCustoms">Include customs?</label><input id="includeCustoms" type=checkbox checked>
+            <label for="includeYcg">Include TCG/OCG?</label><input id="includeYcg" type=checkbox>
         </div>
     </div>
 </header>
@@ -103,7 +103,13 @@
 <canvas id="primaryChart" width="800" height="400"></canvas>
 </div>
 
+<!-- used to hold the values of our elements from the prompt -->
 <div id="filterHide"></div>
+
+
+<div id="options" class="square-button top-right-button">
+    <div id="showOptions" class="toggleIcon"><img src="./res/options.png" /></div>
+</div>
 
 </body>
 </head>
