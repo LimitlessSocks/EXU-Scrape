@@ -114,18 +114,6 @@ const verifyXMLList = (raw) => {
 
 window.addEventListener("load", async function () {
     await CardViewer.Database.initialReadAll("./db.json");
-    await CardViewer.initialDatabaseSetup();
-
-    /*
-    CardViewer.attachGlobalSearchOptions(
-        $("#showOptions"),
-        {
-            monkeyPatch: true,
-            denseToggle: false,
-            formatSelect: true,
-        },
-    );
-    */
     window.pool = CardViewer.Database.cards;
     
     const messageHolder = $("#message-holder");

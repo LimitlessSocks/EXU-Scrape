@@ -33,10 +33,6 @@ let onLoad = async function () {
                 updateInputDisplay();
             },
             denseToggle: updateInputDisplay,
-            formatSelect(data) {
-                // todo
-                updateInputDisplay();
-            },
         },
     );
     
@@ -49,7 +45,6 @@ let onLoad = async function () {
     });
     
     await CardViewer.Database.initialReadAll("./db.json");
-    await CardViewer.initialDatabaseSetup();
     
     const playrateSummary = await fetch("./data/playrate-summary.json").then(req => req.json());
     CardViewer.Playrates.Summary = playrateSummary;

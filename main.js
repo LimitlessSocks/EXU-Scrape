@@ -1,6 +1,5 @@
 let loadDatabase = async function () {
     await CardViewer.Database.initialReadAll("./db.json");
-    await CardViewer.initialDatabaseSetup();
     CardViewer.excludeTcg = false;
     CardViewer.showImported = true;
 };
@@ -13,7 +12,54 @@ let onLoad = async function () {
     
     CardViewer.Elements.searchParameters = $("#searchParameters, .extraParamaters");
     
-    CardViewer.setUpDefaultElements();
+    CardViewer.Elements.cardType = $("#cardType");
+    CardViewer.Elements.cardLimit = $("#cardLimit");
+    CardViewer.Elements.cardAuthor = $("#cardAuthor");
+    CardViewer.Elements.search = $("#search");
+    CardViewer.Elements.results = $("#results");
+    CardViewer.Elements.autoSearch = $("#autoSearch");
+    CardViewer.Elements.cardName = $("#cardName");
+    CardViewer.Elements.resultCount = $("#resultCount");
+    CardViewer.Elements.cardDescription = $("#cardDescription");
+    CardViewer.Elements.currentPage = $(".currentPage");
+    CardViewer.Elements.pageCount = $(".pageCount");
+    CardViewer.Elements.nextPage = $(".nextPage");
+    CardViewer.Elements.previousPage = $(".previousPage");
+    CardViewer.Elements.resultNote = $("#resultNote");
+    CardViewer.Elements.cardId = $("#cardId");
+    CardViewer.Elements.cardCategory = $("#cardCategory");
+    CardViewer.Elements.cardVisibility = $("#cardVisibility");
+    CardViewer.Elements.ifMonster = $(".ifMonster");
+    CardViewer.Elements.ifSpell = $(".ifSpell");
+    CardViewer.Elements.ifTrap = $(".ifTrap");
+    CardViewer.Elements.ifLink = $(".ifLink");
+    CardViewer.Elements.ifPendulum = $(".ifPendulum");
+    CardViewer.Elements.cardSpellKind = $("#cardSpellKind");
+    CardViewer.Elements.cardTrapKind = $("#cardTrapKind");
+    CardViewer.Elements.monsterStats = $("#monsterStats");
+    CardViewer.Elements.spellStats = $("#spellStats");
+    CardViewer.Elements.trapStats = $("#trapStats");
+    CardViewer.Elements.cardLevel = $("#cardLevel");
+    CardViewer.Elements.cardMonsterCategory = $("#cardMonsterCategory");
+    CardViewer.Elements.cardMonsterAbility = $("#cardMonsterAbility");
+    CardViewer.Elements.cardMonsterType = $("#cardMonsterType");
+    CardViewer.Elements.cardMonsterAttribute = $("#cardMonsterAttribute");
+    CardViewer.Elements.cardATK = $("#cardATK");
+    CardViewer.Elements.cardDEF = $("#cardDEF");
+    CardViewer.Elements.cardPendScale = $("#cardPendScale");
+    CardViewer.Elements.cardLevelCompare = $("#cardLevelCompare");
+    CardViewer.Elements.cardATKCompare = $("#cardATKCompare");
+    CardViewer.Elements.cardDEFCompare = $("#cardDEFCompare");
+    CardViewer.Elements.cardPendScaleCompare = $("#cardPendScaleCompare");
+    CardViewer.Elements.playRate = $("#cardPlayRate");
+    CardViewer.Elements.playRateCompare = $("#cardPlayRateCompare");
+    // CardViewer.Elements.toTopButton = $("#totop");
+    CardViewer.Elements.saveSearch = $("#saveSearch");
+    CardViewer.Elements.clearSearch = $("#clearSearch");
+    CardViewer.Elements.searchSortBy = $("#searchSortBy");
+    CardViewer.Elements.searchSortOrder = $("#searchSortOrder");
+    CardViewer.Elements.includeCustoms = $("#includeCustoms");
+    CardViewer.Elements.includeYcg = $("#includeYcg");
     
     CardViewer.Search.snapNavigation = true;
     CardViewer.Elements.search.click(CardViewer.submit);
@@ -33,10 +79,6 @@ let onLoad = async function () {
                 updateInputDisplay();
             },
             denseToggle: updateInputDisplay,
-            formatSelect(data) {
-                // todo
-                updateInputDisplay();
-            },
         },
     );
     

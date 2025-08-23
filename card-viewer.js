@@ -722,11 +722,11 @@ CardViewer.query = function () {
         if(!useCustoms || !useYcg) {
             baseStats.visibility = [ baseStats.visibility ];
         }
-        if(useCustoms && !useYcg) {
-            baseStats.visibility.push(-CardViewer.Visibilities.TCGOrOCG);
+        if(!useYcg) {
+            baseStats.visibility.push(-6);
         }
-        if(useYcg && !useCustoms) {
-            baseStats.visibility.push(-CardViewer.Visibilities.PublicOrPrivateCustom);
+        if(!useCustoms) {
+            baseStats.visibility.push(-5);
         }
     }
     if(CardViewer.Elements.cardIsNotNormal) {
@@ -922,45 +922,22 @@ CardViewer.or = (...fns) => (...args) => fns.some(fn => fn(...args));
 
 CardViewer.getLimitProperty = () => `${CardViewer.format}_limit`;
 
-CardViewer.Visibilities = {
-    Any: "any",
-    PublicCustom: 1,
-    PrivateCustom: 2,
-    TCGExclusive: 3,
-    OCGExclusive: 4,
-    PublicOrPrivateCustom: 5,
-    TCGOrOCG: 6,
-};
-const checkVisibility = (card, visibility) => {
-    if(Array.isArray(visibility)) {
-        return visibility.every(vis => checkVisibility(card, vis));
-    }
-    else if(visibility === "any" || !visibility) {
-        return true;
-    }
-    else if(visibility < 0) {
-        // invert
-        return !checkVisibility(card, -visibility);
-    }
-    else if(visibility == CardViewer.Visibilities.PublicCustom || visibility == CardViewer.Visibilities.PrivateCustom) {
-        return card.custom == visibility;
-    }
-    else if(visibility == CardViewer.Visibilities.TCGExclusive) {
-        return card.tcg && !card.ocg;
-    }
-    else if(visibility == CardViewer.Visibilities.OCGExclusive) {
-        return card.ocg && !card.tcg
-    }
-    else if(visibility == CardViewer.Visibilities.PublicOrPrivateCustom) {
-        return !!card.custom;
-    }
-    else if(visibility == CardViewer.Visibilities.TCGOrOCG) {
-        return card.ocg || card.tcg;
-    }
-    else {
-        throw Error("Unexpected visibility value " + Visibility);
-    }
-};
+const checkVisibility = (card, visibility) =>
+    Array.isArray(visibility)
+        ? visibility.every(vis => checkVisibility(card, vis))
+        : visibility === "any" || !visibility
+            ? true
+            : visibility < 0
+                ? !checkVisibility(card, -visibility)
+                : visibility == 1 || visibility == 2
+                    ? card.custom == visibility
+                    : visibility == 3
+                        ? card.tcg && !card.ocg
+                        : visibility == 4
+                            ? card.ocg && !card.tcg
+                            : visibility == 5
+                                ? card.custom
+                                : card.ocg || card.tcg;
 
 CardViewer.createFilter = function (query, exclude = null) {
     if(exclude) {
@@ -1424,11 +1401,10 @@ CardViewer.Compose = {
         card.src = card.src || (
             "https://www.duelingbook.com/images/low-res/" + card.id + ".jpg"
         );
-        // window.shittyDebug ??= "";
+        
         let img = $("<img class=img-result>")
             .attr("src", card.src)
-            .attr("title", card.id)
-            // .on("error", () => console.log("Card image didn't load (might be deleted):", card.id || card.serial_number, card.name) || (window.shittyDebug += card.name + "\n"));
+            .attr("title", card.id);
         
         return img;
     },
@@ -1824,57 +1800,6 @@ CardViewer.getPlayrate = card => {
     return CardViewer.Playrates.Summary[indicator]?.playRate ?? 0;
 };
 
-CardViewer.setUpDefaultElements = function () {
-    CardViewer.Elements.cardType = $("#cardType");
-    CardViewer.Elements.cardLimit = $("#cardLimit");
-    CardViewer.Elements.cardAuthor = $("#cardAuthor");
-    CardViewer.Elements.search = $("#search");
-    CardViewer.Elements.results = $("#results");
-    CardViewer.Elements.autoSearch = $("#autoSearch");
-    CardViewer.Elements.cardName = $("#cardName");
-    CardViewer.Elements.resultCount = $("#resultCount");
-    CardViewer.Elements.cardDescription = $("#cardDescription");
-    CardViewer.Elements.currentPage = $(".currentPage");
-    CardViewer.Elements.pageCount = $(".pageCount");
-    CardViewer.Elements.nextPage = $(".nextPage");
-    CardViewer.Elements.previousPage = $(".previousPage");
-    CardViewer.Elements.resultNote = $("#resultNote");
-    CardViewer.Elements.cardId = $("#cardId");
-    CardViewer.Elements.cardCategory = $("#cardCategory");
-    CardViewer.Elements.cardVisibility = $("#cardVisibility");
-    CardViewer.Elements.ifMonster = $(".ifMonster");
-    CardViewer.Elements.ifSpell = $(".ifSpell");
-    CardViewer.Elements.ifTrap = $(".ifTrap");
-    CardViewer.Elements.ifLink = $(".ifLink");
-    CardViewer.Elements.ifPendulum = $(".ifPendulum");
-    CardViewer.Elements.cardSpellKind = $("#cardSpellKind");
-    CardViewer.Elements.cardTrapKind = $("#cardTrapKind");
-    CardViewer.Elements.monsterStats = $("#monsterStats");
-    CardViewer.Elements.spellStats = $("#spellStats");
-    CardViewer.Elements.trapStats = $("#trapStats");
-    CardViewer.Elements.cardLevel = $("#cardLevel");
-    CardViewer.Elements.cardMonsterCategory = $("#cardMonsterCategory");
-    CardViewer.Elements.cardMonsterAbility = $("#cardMonsterAbility");
-    CardViewer.Elements.cardMonsterType = $("#cardMonsterType");
-    CardViewer.Elements.cardMonsterAttribute = $("#cardMonsterAttribute");
-    CardViewer.Elements.cardATK = $("#cardATK");
-    CardViewer.Elements.cardDEF = $("#cardDEF");
-    CardViewer.Elements.cardPendScale = $("#cardPendScale");
-    CardViewer.Elements.cardLevelCompare = $("#cardLevelCompare");
-    CardViewer.Elements.cardATKCompare = $("#cardATKCompare");
-    CardViewer.Elements.cardDEFCompare = $("#cardDEFCompare");
-    CardViewer.Elements.cardPendScaleCompare = $("#cardPendScaleCompare");
-    CardViewer.Elements.playRate = $("#cardPlayRate");
-    CardViewer.Elements.playRateCompare = $("#cardPlayRateCompare");
-    // CardViewer.Elements.toTopButton = $("#totop");
-    CardViewer.Elements.saveSearch = $("#saveSearch");
-    CardViewer.Elements.clearSearch = $("#clearSearch");
-    CardViewer.Elements.searchSortBy = $("#searchSortBy");
-    CardViewer.Elements.searchSortOrder = $("#searchSortOrder");
-    CardViewer.Elements.includeCustoms = $("#includeCustoms");
-    CardViewer.Elements.includeYcg = $("#includeYcg");
-};
-
 CardViewer.setUpTabSearchSwitching = function () {
     CardViewer.Elements.cardType.change(function () {
         let val = CardViewer.Elements.cardType.val();
@@ -2036,16 +1961,10 @@ const passcodeToDbId = passcode => {
 };
 
 // TODO: make this not hang the webpage
-CardViewer.BaseFormat = {
-    cards: null,
-    name: null,
-    playrates: null,
-};
+let baseFormat;
 CardViewer.monkeyPatchFormat = formatData => {
-    if(!CardViewer.BaseFormat.cards) {
-        CardViewer.BaseFormat.cards = {...CardViewer.Database.cards};
-        CardViewer.BaseFormat.name = CardViewer.getCurrentFormat();
-        CardViewer.BaseFormat.playrates = CardViewer.Playrates.Summary;
+    if(!baseFormat) {
+        baseFormat = {...CardViewer.Database.cards};
     }
     let {
         name,
@@ -2058,10 +1977,9 @@ CardViewer.monkeyPatchFormat = formatData => {
     CardViewer.Playrates.Summary = playrates;
     
     banlist ??= {};
-    customs ??= [];
     
     CardViewer.Database.setInitial({});
-    for(let [ id, card ] of Object.entries(CardViewer.BaseFormat.cards)) {
+    for(let [ id, card ] of Object.entries(baseFormat)) {
         if(card.custom) {
             // ignore source format's custom
             continue;
@@ -2089,70 +2007,7 @@ CardViewer.monkeyPatchFormat = formatData => {
     }
 };
 
-CardViewer.restoreBaseFormat = (baseFormat) => {
-    CardViewer.Database.cards = {...baseFormat.cards};
-    CardViewer.Playrates.Summary = baseFormat.playrates; 
-};
-
-CardViewer.getCurrentFormat = (defaultFormat = "exu") => {
-    let selectedFormat = CardViewer.SaveData.get("selected-format");
-    if(selectedFormat === undefined) {
-        CardViewer.SaveData.set("selected-format", defaultFormat);
-        return defaultFormat;
-    }
-    return selectedFormat;
-};
-// prefer to call deployFormat directly
-CardViewer.setCurrentFormat = (format = "exu") => {
-    CardViewer.SaveData.set("selected-format", format);
-};
-// TODO: do not hardcode relative to base directory
-const FormatSources = {
-    exu: "./db.json",
-    exulegacy: "./db-legacy.json",
-};
-CardViewer.deployFormat = async (format) => {
-    if(!format) {
-        throw new Error("Expected format for CardViewer.deployFormat");
-    }
-    console.log("Deploying format", format);
-    // exu, exulegacy, tcg, or perhaps a custom upload
-    let oldFormat = CardViewer.getCurrentFormat();
-    if(oldFormat === format) {
-        console.warn("no-op setting format `" + format + "` when already at that format");
-    }
-    if(format === "tcgocg") {
-        CardViewer.monkeyPatchFormat({
-            name: "TCG/OCG",
-            // passcodes: ,
-            // banlist: , // TODO
-            // customs: ,
-            // playrates: ,
-        });
-        for(let card of Object.values(CardViewer.Database.cards)) {
-            card.exu_limit = card.tcg_limit;
-        }
-    }
-    else {
-        if(CardViewer.BaseFormat.name === format) {
-            CardViewer.restoreBaseFormat(CardViewer.BaseFormat);
-        }
-        else {
-            console.log(format);
-            let source = FormatSources[format];
-            if(!source) {
-                throw new Error("Cannot find source " + format);
-            }
-            await CardViewer.Database.initialReadAll(source);
-        }
-    }
-    CardViewer.setCurrentFormat(format);
-};
-
-// options.monkeyPatch expects either a boolean or a function
-// if a function, it is treated as a callback for when data is uploaded
 CardViewer.attachGlobalSearchOptions = (el, options = {}) => {
-    // initializations on page load (when attached)
     if(options.denseToggle) {
         CardViewer.baseComposeStrategy ??= CardViewer.composeStrategy;
         let isDense = CardViewer.SaveData.get("dense-view");
@@ -2165,54 +2020,16 @@ CardViewer.attachGlobalSearchOptions = (el, options = {}) => {
         }
     }
 
-    // prompt behavior for the button
     let optionsPrompt = new Prompt("Options", () => {
-        let base = $("<div>");
-        /*.css({
+        let base = $("<div>").css({
             display: "flex",
             gap: "10px",
             flexDirection: "column",
             alignItems: "center",
-        });*/
-        let optionsGrid = $(`<div class="options-grid"></div>`);
-        
-        if(options.formatSelect) {
-            let formatSelect = $(`
-                <label class="horizontal-label">
-                    <div class="label-text">Select format:</div>
-                    <div class="label-value">
-                        <select class="selected-format">
-                            <option value="exu">EXU</option>
-                            <option value="tcgocg">TCG/OCG</option>
-                            <option value="exulegacy">EXU Legacy</option>
-                        </select>
-                    </div>
-                </label>
-            `);
-            let select = formatSelect.find(".selected-format");
-            select.val(CardViewer.getCurrentFormat());
-            select.change(async ev => {
-                let { value } = ev.target;
-                await CardViewer.deployFormat(value);
-                if(typeof options.formatSelect === "function") {
-                    options.formatSelect(value);
-                }
-            });
-            optionsGrid.append(formatSelect);
-        }
-        
+        });
+        let buttonRow = $(`<div class="square-button-row"></div>`);
         if(options.monkeyPatch) {
-            // TODO: use a templates file
-            let monkeyPatchUpload = $(`
-                <label class="horizontal-label">
-                    <div class="label-text">Upload format:</div>
-                    <div class="label-value small square-button">
-                        <div class="toggleIcon">
-                            <img src="./res/upload.png"/>
-                        </div>
-                    </div>
-                </label>
-            `);
+            let monkeyPatchUpload = $(`<div class="square-button"><div class=toggleIcon><img src="./res/upload.png"/></div></div>`);
             monkeyPatchUpload.on("click", async () => {
                 let data = await readJSONFile();
                 CardViewer.monkeyPatchFormat(data);
@@ -2220,14 +2037,18 @@ CardViewer.attachGlobalSearchOptions = (el, options = {}) => {
                     options.monkeyPatch(data);
                 }
             });
-            optionsGrid.append(monkeyPatchUpload);
+            buttonRow.append(monkeyPatchUpload);
+        }
+
+        if(buttonRow.children().length) {
+            base.append(buttonRow);
         }
 
         if(options.denseToggle) {
             let denseToggleSwitch = $(`
-                <label class="horizontal-label">
-                    <div class="label-text">Compact view:</div>
-                    <div class="label-value toggle-switch round">
+                <label class="toggle-switch-label" style="display: inline-flex">
+                    Dense: 
+                    <div class="toggle-switch round">
                         <input type="checkbox">
                         <span class="slider"></span>
                     </div>
@@ -2248,11 +2069,7 @@ CardViewer.attachGlobalSearchOptions = (el, options = {}) => {
                         options.denseToggle(ev.target.checked);
                     }
                 });
-            optionsGrid.append(denseToggleSwitch);
-        }
-
-        if(optionsGrid.children().length) {
-            base.append(optionsGrid);
+            base.append(denseToggleSwitch);
         }
         // <div class="square-button"><div class=toggleIcon><img src="./res/upload.png"/></div></div>
 
@@ -2276,10 +2093,6 @@ CardViewer.attachGlobalSearchOptions = (el, options = {}) => {
         changeInput();
     });
     */
-};
-
-CardViewer.initialDatabaseSetup = async () => {
-    await CardViewer.deployFormat(CardViewer.getCurrentFormat());
 };
 
 CardViewer.getMaterialLine = card => {
@@ -2365,106 +2178,6 @@ CardViewer.integrateBanlistChanges = banlistChanges => {
             }
         });
     }
-};
-
-/*
- * there's no debt like tech debt
- * like no debt i know
- * everything about it is revealing
- * everything the deadline will allow
- * nowhere can you get that dreadful feeling
- * when you are appending that extra line
- */
-CardViewer.savePlayedCustoms = async (baseQuery = "played custom", prefix=["EX2", "Save"]) => {
-    let [ prefixHead, prefixName ] = prefix;
-    // this code is bad for multiple reasons
-    // chiefest being condenseQuery/naturalInputToQuery do not exist in this file
-    // and this requires zip.js, which is not a permanent include in any file page
-    /*
-    <script type="module">
-        import { BlobWriter, TextReader, ZipWriter } from "https://unpkg.com/@zip.js/zip.js@2.7.72/index.min.js";
-        window.zip = {
-            BlobWriter, TextReader, ZipWriter,
-        };
-    </script>
-    */
-    // i am too tired to do this correctly; i wish to be done
-    const simpleFilter = text =>
-        CardViewer.filter(
-            condenseQuery(query = naturalInputToQuery(text)),
-            null,
-            query.reduce((p, c) => ({...p, ...c}), {})
-        )
-        .map(card => `<card id="${card.id}" passcode="">${card.name.replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/'/g, "&#39;")
-            .replace(/"/g, "&quot;")
-        }</card>`);
-    
-    let playedExtra = simpleFilter(`(${baseQuery}) extra`);
-    let playedMain = simpleFilter(`(${baseQuery}) (not extra)`);
-    
-    playedExtra.reverse();
-    playedMain.reverse();
-    
-    console.log(`Compressing ${playedExtra.length} extra deck card(s) and ${playedMain.length} main deck cards`);
-    
-    let index = 1;
-    let zipFileWriter = new zip.BlobWriter();
-    let zipWriter = new zip.ZipWriter(zipFileWriter);
-    
-    while(playedExtra.length && playedMain.length) {
-        let displayIndex = index.toString().padStart(4, "0");
-        let saveName = `[${prefixHead}] ${prefixName}_${displayIndex}`;
-        
-        let instanceMain = playedMain.splice(-60);
-        let instanceExtra = playedExtra.splice(-15);
-        
-        let instanceSide = [];
-        if(playedExtra.length) {
-            instanceSide.push(...playedExtra.splice(-15));
-        }
-        if(instanceSide.length < 15) {
-            instanceSide.push(...instanceMain.splice(-(15 - instanceSide.length)));
-        }
-        
-        index++;
-        
-        let fileContent = `<?xml version="1.0" encoding="utf-8" ?>
-<deck name="${saveName}">
- <main>
-   ${instanceMain.join("\n")}
- </main>
- <side>
-   ${instanceSide.join("\n")}
- </side>
- <extra>
-   ${instanceExtra.join("\n")}
- </extra>
-</deck>
-`;
-        await zipWriter.add(saveName + ".xml", new zip.TextReader(fileContent));
-        
-        
-        // console.log(instanceMain, instanceExtra, instanceSide);
-    }
-    await zipWriter.close();
-    let zipFileBlob = await zipFileWriter.getData();
-    
-    const downloadZipFile = (name, blob) => {
-        let a;
-        document.body.appendChild(a = Object.assign(document.createElement("a"), {
-            download: name,
-            href: URL.createObjectURL(blob),
-            textContent: "Download zip file",
-        }));
-        a.click();
-    };
-    
-    downloadZipFile("lists.zip", zipFileBlob);
-    
-    return;
 };
 
 // secret silly
