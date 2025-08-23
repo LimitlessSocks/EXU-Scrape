@@ -66,7 +66,6 @@ let onLoad = async function () {
     CardViewer.addCurrentPageListener();
     
     await CardViewer.Database.initialReadAll("./db.json");
-    await CardViewer.initialDatabaseSetup();
     
     // remove ocg
     // for(let [id, card] of Object.entries(CardViewer.Database.cards)) {
@@ -85,10 +84,6 @@ let onLoad = async function () {
                 updateInputDisplay();
             },
             denseToggle: updateInputDisplay,
-            formatSelect(data) {
-                // todo
-                updateInputDisplay();
-            },
         },
     );
     
