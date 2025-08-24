@@ -3,3 +3,6 @@ log/test*
 credentials.txt
 node_modules/
 tmp/replay-copy*
+/Arts
+Arts.zip
+__pycache__/
