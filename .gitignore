@@ -5,3 +5,4 @@ node_modules/
 tmp/replay-copy*
 /Arts
 Arts.zip
+__pycache__/
