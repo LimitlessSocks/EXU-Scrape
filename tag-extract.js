@@ -156,6 +156,16 @@ const getComparison = (text) => (
 );
 
 const MONSTER_SORTS = [ "atk", "def", "level" ];
+const SORT_ABBREVIATIONS = {
+    "n": "name",
+    "a": "atk",
+    "d": "def",
+    "l": "level",
+    "D": "date",
+    "t": "text",
+    "e": "effect",
+    "p": "playrate",
+};
 const INDICATORS = [
     new TagIndicator(/(@+)(.+?)\1/, (match) => ({
         customExpression: match[2],
@@ -171,12 +181,25 @@ const INDICATORS = [
     new TagIndicator(/desc(?:end(?:ing)?)?|down/i, () => ({
         sortOrder: "descending",
     })),
-    new TagIndicator(/sort(?:\s*(?:(asc(?:end(?:ing)?)?|up)|(desc(?:end(?:ing)?)?|down)))?(?:\s*by)?\s*(name|atk|def|level|date|text|playrate)/i, (match) => ({
-        sortBy: match[3].toLowerCase(),
-        ... MONSTER_SORTS.includes(match[3]) ? { type: "monster" } : {},
-        ... match[1] ? { sortOrder: "ascending" } : {},
-        ... match[2] ? { sortOrder: "descending" } : {},
-    })),
+    new TagIndicator(/sort(?:\s*(?:(asc(?:end(?:ing)?)?|up)|(desc(?:end(?:ing)?)?|down)))?(?:\s*by)?\s*(name|atk|def|level|date|text|effect|playrate)/i, (match) => {
+        let sortBy = match[3].localeCompare("effect") === 0 ? "text" : match[3].toLowerCase();
+        return {
+            sortBy,
+            ... MONSTER_SORTS.includes(sortBy) ? { type: "monster" } : {},
+            ... match[1] ? { sortOrder: "ascending" } : {},
+            ... match[2] ? { sortOrder: "descending" } : {},
+        };
+    }),
+    // sort abbreviation, for my sanity
+    new TagIndicator(/[sS]([dDuU])[bB]([nadlDtep])/, (match) => {
+        let sortBy = SORT_ABBREVIATIONS[match[2]];
+        // TODO: error on unknown sort metric (i.e. when !sortBy)
+        return {
+            sortBy,
+            ... MONSTER_SORTS.includes(sortBy) ? { type: "monster" } : {},
+            sortOrder: match[1] === "d" || match[1] === "D" ? "descending" : "ascending",
+        };
+    }),
     new TagIndicator(/playrate\s*(?:(>=?|<=?|[/!]?==?)\s*)?(\d+(?:\.\d*)?|\.d\d+)%?/i, (match) => ({
         playRateCompare: getComparison(match[1]),
         playRate: match[2],
@@ -406,6 +429,10 @@ const INDICATORS = [
     }),
 ];
 
+// XXX: this is a terrible approach, and breaks the test case [add**0 atk] e.g.
+// trying to bandage the intrinsic problem of greedy regex descent any way other
+// than actually making it walk left to right and intelligently ignore certain
+// keywords, and highlighting errors, is lunacy
 const MATCH_FLOATING_ATKDEF = /(^|[a-zA-Z][^\w;\[]*)(\d+)\s*(atk|def)([^\d]*)(?![a-zA-Z])/i;
 const MAX_ITER = 20;
 const autoSeparate = (str) => {

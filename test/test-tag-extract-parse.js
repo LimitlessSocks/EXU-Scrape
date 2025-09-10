@@ -707,10 +707,19 @@ const TEST_CASES = [
         { sortBy: "date", sortOrder: "descending" },
     ]],
     ["sort up by LEVEL", [
-        { sortBy: "level", sortOrder: "ascending" },
+        { sortBy: "level", type: "monster", sortOrder: "ascending" },
     ]],
     ["SORT DOWN BY PLAYRATE", [
         { sortBy: "playrate", sortOrder: "descending" },
+    ]],
+    ["sdbp", [
+        { sortBy: "playrate", sortOrder: "descending" },
+    ]],
+    ["SubD", [
+        { sortBy: "date", sortOrder: "ascending" },
+    ]],
+    ["sDBd", [
+        { sortBy: "def", type: "monster", sortOrder: "descending" },
     ]],
     ["playrate > 50%", [
         { playRate: "50", playRateCompare: "greater" }
