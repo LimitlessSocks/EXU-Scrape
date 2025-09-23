@@ -350,19 +350,32 @@ class Deck {
                 ).join("") +
             ` </${name}>`
         ).join("\n");
+        
+        let hasThumb = !!+this.thumb;
+        console.log(this.thumb, hasThumb);
+        let metadata = [
+            this.author && `<author>${escapeXMLString(this.author)}</author>`,
+            this.description && `<description>${escapeXMLString(this.description)}</description>`,
+            this.name && `<name>${escapeXMLString(this.name)}</name>`,
+            hasThumb && `<thumb>${this.thumb}</thumb>`,
+        ].filter(el => el).map(el => "  " + el).join("\n");
+        
+        if(metadata) {
+            metadata = `
+ <meta>
+${metadata}
+ </meta>
+            `.trim() + "\n";
+        }
+        
         let xmlString = `
 <?xml version="1.0" encoding="utf-8" ?>
 <deck id="${this.getId()}">
- <meta>
-  <author>${escapeXMLString(this.author)}</author>
-  <description>${escapeXMLString(this.description)}</description>
-  <name>${escapeXMLString(this.name)}</name>
-  <thumb>${this.thumb}</thumb>
- </meta>
-${deckString}
+${metadata}${deckString}
 </deck>
         `.trim();
-        if(!CardViewer.Database.cards[this.thumb].custom) {
+        let thumbCard = CardViewer.Database.cards[this.thumb];
+        if(hasThumb && thumbCard && !thumbCard.custom) {
             xmlString = xmlString.replace("<thumb>", "<thumb custom=\"false\">");
         }
         return xmlString;

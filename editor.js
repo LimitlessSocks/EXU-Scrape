@@ -2,6 +2,12 @@ let onLoad = async function () {
     CardViewer.excludeTcg = false;
     CardViewer.showImported = true;
     
+    CardViewer.addEventListener("formatChange", format => {
+        console.log("format changing ....");
+        CardViewer.Editor.updateDeck();
+        CardViewer.Editor.recalculateView();
+    });
+    
     const playrateSummary = await fetch("./data/playrate-summary.json").then(req => req.json());
     CardViewer.Playrates.Summary = playrateSummary;
     
@@ -87,11 +93,15 @@ let onLoad = async function () {
             monkeyPatch(data) {
                 document.querySelector("#top a").textContent = `${data.name} Deck Editor`;
                 updateInputDisplay();
+                CardViewer.Editor.updateDeck();
+                CardViewer.Editor.recalculateView()
             },
             denseToggle: updateInputDisplay,
             formatSelect(data) {
                 // todo
                 updateInputDisplay();
+                CardViewer.Editor.updateDeck();
+                CardViewer.Editor.recalculateView()
             },
         },
     );
@@ -309,9 +319,105 @@ let onLoad = async function () {
     };
     $("#specialMenu").click(deploySpecial);
     
+    const downloadXmlFor = deck => {
+        let xml = deck.toXML();
+        downloadFile(xml, "text/xml", (deck.getId() || "deck") + ".xml");
+    };
+    
+    const simpleImportPrompt = new Prompt("Import Deck",
+        null,
+        ["YDKe", "File"],
+        "small",
+    );
+    $("#importDeck").click(() => {
+        simpleImportPrompt.deploy().then(async ([buttonIndex, p]) => {
+            if(buttonIndex === 0) {
+                // YDKe
+                let pasteConfirmation = Prompt.OK("Please select 'paste'");
+                pasteConfirmation.deploy();
+                let ydke;
+                try {
+                    ydke = await navigator.clipboard.readText();
+                    pasteConfirmation.close();
+                    console.log("pasted ydke", ydke);
+                    if(!ydke.startsWith("ydke://")) {
+                        throw new Error("Did not recognize ydke:// in clipboard");
+                    }
+                }
+                catch (error) {
+                    pasteConfirmation.close();
+                    const readPrompt = new Prompt("Input YDKe", () => {
+                        return $("<div>").append(
+                            $("<p>").text(error.message),
+                            $("<input>").attr("placeholder", "ydke://!!!"),
+                        );
+                    }, ["OK", "Cancel"]);
+                    ydke = await readPrompt.deploy().then(([buttonIndex, p]) => {
+                        // console.log(p);
+                        return p.anchor.find("input").val();
+                    });
+                    if(!ydke.startsWith("ydke://")) {
+                        return Prompt.OK("Please enter a ydke://");
+                    }
+                }
+                let sections = ydke.slice("ydke://".length).split("!");
+                if(sections.length < 3) {
+                    return Prompt.OK("Invalid ydke (not enough sections)");
+                }
+                sections = sections.map(section =>
+                    [
+                        ...new Uint32Array(Uint8Array.fromBase64(section).buffer)
+                    ]
+                );
+                console.log(sections);
+                let [ main, extra, side ] = sections.map(section => section.map(passcodeToDbId))
+                CardViewer.Editor.DeckInstance.decks = [ main, side, extra ];
+                CardViewer.Editor.updateDeck();
+            }
+            else if(buttonIndex === 1) {
+                // file
+                $("#importDeckFile").click();
+            }
+        });
+    });
+    
+    const simpleExportPrompt = new Prompt("Export Deck",
+        null,
+        ["YDK", "YDKe", "XML"],
+        "small",
+    );
+    $("#exportDeckSimple").click(() => {
+        simpleExportPrompt.deploy().then(async ([buttonIndex, p]) => {
+            let deck = CardViewer.Editor.DeckInstance;
+            if(buttonIndex === 0) {
+                // export to ydk
+                alert("shit");
+            }
+            else if(buttonIndex === 1) {
+                // export to ydke
+                let [ main, side, extra ] = CardViewer.Editor.DeckInstance.decks;
+                let ydke = "ydke://" + [ main, extra, side ].map(deck => 
+                    new Uint8Array(new Uint32Array(deck.map(dbId => +CardViewer.Database.cards[dbId].serial_number)).buffer).toBase64() + "!"
+                ).join("");
+                try {
+                    await navigator.clipboard.writeText(ydke);
+                    Prompt.OK("Copied!").deploy();
+                }
+                catch (error) {
+                    console.error(error.message);
+                    new Prompt("Failed to copy YDKe", ydke, ["OK"], "small").deploy();
+                }
+            }
+            else if(buttonIndex === 2) {
+                // quick export to xml
+                downloadXmlFor(CardViewer.Editor.DeckInstance);
+            }
+        });
+    });
+    
     const deckInfoSavedPrompt = Prompt.OK("Deck Info Saved!");
     const deckInfoClearedPrompt = Prompt.OK("Cleared!");
-    const exportPrompt = new Prompt("Export Deck",
+    const exportPrompt = new Prompt("Rich Export Deck",
         () => {
             let html = $(`
                 <table>
@@ -375,17 +481,17 @@ let onLoad = async function () {
             deck.description = html.find("#deckSaveDescription").val();// || deck.description;
             deck.author      = html.find("#deckSaveAuthor").val();// || deck.author;
             deck.thumb       = html.find("#deckSaveThumb").val();// || deck.thumb;
-            
             CardViewer.Editor.saveLocalDeck();
+            
             if(buttonIndex === 0) {
                 deckInfoSavedPrompt.deploy();
             }
             else if(buttonIndex === 1) {
-                let xml = deck.toXML();
-                downloadFile(xml, "text/xml", deck.getId() + ".xml");
+                downloadXmlFor(deck);
             }
         })
-        .catch(() => {
+        .catch((err) => {
+            console.warn("Error exporting:", err);
             //pass
         });
     });

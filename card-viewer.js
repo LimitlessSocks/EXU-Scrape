@@ -2043,13 +2043,19 @@ let passcodeToDbIdCache = null;
 const passcodeToDbId = passcode => {
     if(!passcodeToDbIdCache) {
         passcodeToDbIdCache = {};
-        for(let card of Object.values(CardViewer.Database.cards)) {
+        let cacheSource = Object.values(CardViewer.Database.cards)
+            .filter(card => card.serial_number)
+            .sort((a, b) => a.serial_number - b.serial_number);
+        for(let card of cacheSource) {
             let reportedPasscode = card.serial_number;
-            if(reportedPasscode) {
-                let paddedPasscode = reportedPasscode.padStart(8, "0");
-                passcodeToDbIdCache[reportedPasscode] ??= card.id;
-                passcodeToDbIdCache[paddedPasscode] ??= card.id;
+            while(passcodeToDbIdCache[reportedPasscode]) {
+                // alt art increment
+                reportedPasscode++;
             }
+            reportedPasscode = reportedPasscode.toString();
+            let paddedPasscode = reportedPasscode.padStart(8, "0");
+            passcodeToDbIdCache[reportedPasscode] = card.id;
+            passcodeToDbIdCache[paddedPasscode] = card.id;
         }
     }
     return passcodeToDbIdCache[passcode.toString()];
@@ -2138,6 +2144,7 @@ const GenesysPoints = {
 CardViewer.isPointsFormat = (format = CardViewer.getCurrentFormat()) => {
     return format === "genesys";
 };
+// prefer to call deployFormat
 CardViewer.toggleToFormat = (format = CardViewer.getCurrentFormat()) => {
     // TODO: generic to "points format" options
     console.log("Toggling current format", format);
@@ -2145,7 +2152,18 @@ CardViewer.toggleToFormat = (format = CardViewer.getCurrentFormat()) => {
     if(CardViewer.Elements.includeYcg?.is(":visible")) {
         CardViewer.Elements.includeYcg.prop("checked", format === "tcgocg" || format === "genesys");
     }
+    console.log("hm...", CardViewer.EventListing["formatChange"]);
+    CardViewer.EventListing["formatChange"].forEach(cb => cb(format));
 };
+CardViewer.EventListing = {
+    formatChange: [],
+};
+CardViewer.addEventListener = (event, callback) => {
+    if(!CardViewer.EventListing[event]) {
+        throw new Error("Unrecognized event: " + event);
+    }
+    CardViewer.EventListing[event].push(callback);
+}
 CardViewer.deployFormat = async (format) => {
     if(!format) {
         throw new Error("Expected format for CardViewer.deployFormat");

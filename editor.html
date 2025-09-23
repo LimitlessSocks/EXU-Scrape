@@ -29,9 +29,14 @@
 <header>
     <h1 id=top><a href="./">EXU Deck Editor [WIP]</a></h1>
     <button id="saveDeck">Save</button>
+    <!--
     <label for="importDeck" class="fake-button">Import</label>
-    <input id="importDeck" type="file" style="position: fixed; top: -100em">
-    <button id="exportDeck">Export</button>
+    -->
+    <button id="importDeck">Import</button>
+    <input id="importDeckFile" type="file" style="position: fixed; top: -100em">
+    
+    <button id="exportDeckSimple">Export</button>
+    <button id="exportDeck">Rich Export</button>
     <button id="sortDeck">Sort</button>
     <button id="shuffleDeck">Shuffle</button>
     <button id="clearDeck" class="danger-button">Clear</button>
@@ -123,6 +128,7 @@
                         <option class="ifMonster" value="level">Level/Rank</option>
                         <option value="date">Date Added</option>
                         <option value="playrate">Playrate</option>
+                        <option class="ifPoints" style="display:none" value="point_limit">Points</option>
                     </select>
                 </td>
             </tr>
