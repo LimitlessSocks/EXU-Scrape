@@ -12,6 +12,7 @@ let onLoad = async function () {
     
     CardViewer.Elements.searchParameters = $("#searchParameters");
     
+    // why is this (mostly?) duplicated from CardViewer.setUpDefaultElements?
     CardViewer.Elements.cardType = $("#cardType");
     CardViewer.Elements.cardLimit = $("#cardLimit");
     CardViewer.Elements.cardAuthor = $("#cardAuthor");
@@ -32,6 +33,7 @@ let onLoad = async function () {
     CardViewer.Elements.ifSpell = $(".ifSpell");
     CardViewer.Elements.ifTrap = $(".ifTrap");
     CardViewer.Elements.ifLink = $(".ifLink");
+    CardViewer.Elements.ifPoints = $(".ifPoints");
     CardViewer.Elements.ifPendulum = $(".ifPendulum");
     CardViewer.Elements.cardSpellKind = $("#cardSpellKind");
     CardViewer.Elements.cardTrapKind = $("#cardTrapKind");
@@ -57,6 +59,8 @@ let onLoad = async function () {
     CardViewer.Elements.clearSearch = $("#clearSearch");
     CardViewer.Elements.searchSortBy = $("#searchSortBy");
     CardViewer.Elements.searchSortOrder = $("#searchSortOrder");
+    CardViewer.Elements.cardPoints = $("#cardPoints");
+    CardViewer.Elements.cardPointsCompare = $("#cardPointsCompare");
     
     CardViewer.Elements.deckEditor = $("#deckEditor");
     CardViewer.Elements.cardPreview = $("#cardPreview");

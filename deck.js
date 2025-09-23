@@ -670,7 +670,11 @@ CardViewer.composeResultCardPreview = function (card) {
         importMarker.attr("src", BANLIST_ICONS.imported);
     }
     
-    if(card.exu_limit !== 3) {
+    
+    if(card.point_limit) {
+        marking.append($("<div>").append($("<span class=point-limit>").text(card.point_limit)));
+    }
+    else if(card.exu_limit !== 3) {
         banMarker.attr("src", BANLIST_ICONS[card.exu_limit]);
     }
     
@@ -836,7 +840,14 @@ CardViewer.composeResultDeckPreview = function (card) {
         importMarker.addClass("wide");
         importMarker.attr("src", BANLIST_ICONS.ocg);
     }
-    let hasBanMarker = !!banMarker.attr("src");
+    let hasBanMarker;
+    if(card.point_limit) {
+        banMarker = $("<div class=banicon>").append($("<span class=point-limit>").text(card.point_limit));
+        hasBanMarker = true;
+    }
+    else {
+        hasBanMarker = !!banMarker.attr("src");
+    }
     let hasImportMarker = !!importMarker.attr("src");
     let iconPosition = 0;
     
@@ -850,7 +861,8 @@ CardViewer.composeResultDeckPreview = function (card) {
         banMarker.addClass("icon" + iconPosition++);
     }
     
-    marking.prepend(attribute);
+    // why is this here?
+    // marking.prepend(attribute);
     
     res.append($("<div class=result-inner>").append(
         name, attribute, img, marking, banMarker, importMarker,

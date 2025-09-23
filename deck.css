@@ -199,6 +199,9 @@ header > * {
         right: 281.5px;
         top: 910px;
     }
+    .editor-item .banicon .point-limit {
+        font-size: 150px;
+    }
     .editor-item .banicon, .editor-item .importicon {
         position: absolute;
         /* transform-origin: top left; */

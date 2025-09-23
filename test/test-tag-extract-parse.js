@@ -756,6 +756,21 @@ const TEST_CASES = [
     ["2500 or more atk", [
         { type: "monster", atkCompare: "greaterequal", atk: "2500" },
     ]],
+    ["35 points", [
+        { pointsCompare: "equal", points: "35" },
+    ]],
+    ["0 PT", [
+        { pointsCompare: "equal", points: "0" },
+    ]],
+    ["pts <= 25", [
+        { pointsCompare: "lessequal", points: "25" },
+    ]],
+    ["points /== 0", [
+        { pointsCompare: "unequal", points: "0" },
+    ]],
+    ["sort up by points", [
+        { sortBy: "point_limit", sortOrder: "ascending" },
+    ]],
 ];
 
 module.exports = function testTagExtractParse(debug = false) {

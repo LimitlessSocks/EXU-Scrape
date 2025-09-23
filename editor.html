@@ -173,6 +173,18 @@
                 </select>
                 <input type=number id=cardPlayRate min=0 max=100 step=1>%</td>
             </tr>
+            <tr class="ifPoints" style="display:none">
+                <td>Points</td>
+                <td><select id=cardPointsCompare class=thin>
+                    <option value="equal">=</option>
+                    <option value="lessequal" selected="selected">&le;</option>
+                    <option value="less">&lt;</option>
+                    <option value="greaterequal">&ge;</option>
+                    <option value="greater">&gt;</option>
+                    <option value="unequal">&ne;</option>
+                </select>
+                <input type=number id=cardPoints min=0 max=100 step=1></td>
+            </tr>
         </table>
         <table id=conditionalStats>
             <tr class="ifMonster ifSpell ifTrap">

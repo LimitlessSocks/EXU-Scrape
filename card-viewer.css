@@ -823,3 +823,16 @@ code {
 	white-space: pre-wrap;
     font-family: "Fira Mono", "Consolas", monospace;
 }
+
+/* yugioh genesys */
+.point-limit {
+    border-radius: 50%;
+    color: #ffe000;
+    background-color: black;
+    border: 0.1875em solid #ef0000;
+    outline: 0.0625em solid black;
+    /* min-width: 2ch; */
+    /* display: inline-block; */
+    font-weight: bold;
+    padding: 0 1ch;
+}

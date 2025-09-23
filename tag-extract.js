@@ -165,6 +165,7 @@ const SORT_ABBREVIATIONS = {
     "t": "text",
     "e": "effect",
     "p": "playrate",
+    "P": "point_limit",
 };
 const INDICATORS = [
     new TagIndicator(/(@+)(.+?)\1/, (match) => ({
@@ -181,8 +182,12 @@ const INDICATORS = [
     new TagIndicator(/desc(?:end(?:ing)?)?|down/i, () => ({
         sortOrder: "descending",
     })),
-    new TagIndicator(/sort(?:\s*(?:(asc(?:end(?:ing)?)?|up)|(desc(?:end(?:ing)?)?|down)))?(?:\s*by)?\s*(name|atk|def|level|date|text|effect|playrate)/i, (match) => {
-        let sortBy = match[3].localeCompare("effect") === 0 ? "text" : match[3].toLowerCase();
+    new TagIndicator(/sort(?:\s*(?:(asc(?:end(?:ing)?)?|up)|(desc(?:end(?:ing)?)?|down)))?(?:\s*by)?\s*(name|atk|def|level|date|text|effect|playrate|point)/i, (match) => {
+        let sortBy = match[3].localeCompare("effect") === 0
+            ? "text"
+            : match[3].localeCompare("point") === 0
+                ? "point_limit"
+                : match[3].toLowerCase();
         return {
             sortBy,
             ... MONSTER_SORTS.includes(sortBy) ? { type: "monster" } : {},
@@ -191,7 +196,7 @@ const INDICATORS = [
         };
     }),
     // sort abbreviation, for my sanity
-    new TagIndicator(/[sS]([dDuU])[bB]([nadlDtep])/, (match) => {
+    new TagIndicator(/[sS]([dDuU])[bB]([nadlDtepP])/, (match) => {
         let sortBy = SORT_ABBREVIATIONS[match[2]];
         // TODO: error on unknown sort metric (i.e. when !sortBy)
         return {
@@ -207,6 +212,14 @@ const INDICATORS = [
     new TagIndicator(/(\d+(?:\.\d*)?|\.d\d+)%?\s*playrate/i, (match) => ({
         playRateCompare: "equal",
         playRate: match[1],
+    })),
+    new TagIndicator(/(?:pt|point)s?\s*(?:(>=?|<=?|[/!]?==?)\s*)?(\d+(?:\.\d*)?|\.d\d+)?/i, (match) => ({
+        pointsCompare: getComparison(match[1]),
+        points: match[2],
+    })),
+    new TagIndicator(/(\d+(?:\.\d*)?|\.d\d+)?\s*(?:pt|point)s?/i, (match) => ({
+        pointsCompare: getComparison(match[2]),
+        points: match[1],
     })),
     new TagIndicator(/played/, () => ({ playRate: "0", playRateCompare: "greater" })),
     new TagIndicator(/unplayed/, () => ({ playRate: "0", playRateCompare: "equal" })),
