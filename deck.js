@@ -890,6 +890,16 @@ CardViewer.Editor.updateDeck = function (deckInstance = CardViewer.Editor.DeckIn
     CardViewer.Elements.deckEditor.empty();
     deckInstance.renderHTML(CardViewer.Elements.deckEditor);
     // CardViewer.Editor.setPreview(0);
+    if(!document.getElementById("pointsTotal")) {
+        return;
+    }
+    if(CardViewer.isPointsFormat()) {
+        let pointsTotal = deckInstance.decks.flat().map(card => CardViewer.Database.cards[card].point_limit ?? 0).reduce((p, c) => p + +c, 0);
+        document.getElementById("pointsTotal").textContent = `Genesys points: ${pointsTotal} / 100`;
+    }
+    else {
+        document.getElementById("pointsTotal").textContent = "";
+    }
 };
 
 CardViewer.Editor.saveLocalDeck = function () {
