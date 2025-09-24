@@ -1,6 +1,9 @@
 let onLoad = async function () {
     CardViewer.excludeTcg = false;
     CardViewer.showImported = true;
+    CardViewer.Editor.MARGIN_TOP = 0;
+    // CardViewer.Editor.MARGIN_TOP = 34;
+    CardViewer.Search.pageSize = 32;
     
     CardViewer.addEventListener("formatChange", format => {
         console.log("format changing ....");
@@ -499,6 +502,7 @@ let onLoad = async function () {
     const minimizeSearchOptions = $("#minimizeSearchOptions");
     minimizeSearchOptions.click(() => {
         CardViewer.Elements.searchParameters.toggle();
+        CardViewer.Elements.clearSearch.toggle();
         CardViewer.Editor.recalculateView();
         minimizeSearchOptions.text(minimizeSearchOptions.text() !== "Minimize Options" ? "Minimize Options" : "Maximize Options");
     });

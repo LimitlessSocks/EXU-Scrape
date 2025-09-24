@@ -272,7 +272,16 @@ class Deck {
             
             if(i || !cardFound) j++;
             
-            info.text(`${["Main", "Side", "Extra"][containerIndex]} Deck (${size})`);
+            let infoText = `${["Main", "Side", "Extra"][containerIndex]} Deck (${size})`;
+            if(CardViewer.isPointsFormat()) {
+                let sum = CardViewer.getPointsTotal(this.decks[containerIndex]);
+                infoText += ` (${sum} point${sum === 1 ? "" : "s"})`;
+            }
+            info.text(infoText);
+            if(CardViewer.isPointsFormat() && containerIndex === 2) {
+                info.append($("<br/>"));
+                info.append(document.createTextNode(`Genesys points: ${CardViewer.getPointsTotal(this.decks.flat())} / 100`));
+            }
             info.css({
                 top: (j + cIndexOffset * inBetweenMultiplier) * baseUnits.totalHeight + 7.5,
                 // fontSize: 0.25 * baseUnits.totalHeight + "px",
@@ -545,12 +554,15 @@ CardViewer.Editor.trackMouse = function (deck, composed, offset) {
     $(window).mousemove(onMove);
     $(window).mouseup(onMouseUp);
 };
+CardViewer.Editor.MARGIN_TOP = 24;
 CardViewer.Editor.recalculateView = function () {
-    const MARGIN = 24;
+    const MARGIN = CardViewer.Editor.MARGIN_TOP;
+    // const MARGIN = 34;
     let windowHeight = $(window).height();
     
     let topPosition = CardViewer.Editor.MajorContainer.position().top;
     let max = windowHeight - topPosition - MARGIN;
+    // CardViewer.Editor.MajorContainer.css("height", max + "px");
     CardViewer.Editor.MajorContainer.children().css("height", max + "px");
     
     if(CardViewer.Elements.results) {
@@ -608,7 +620,7 @@ CardViewer.composeResultCardPreview = function (card) {
     let stats = $("<div>");
     
     let attribute = $("<img>").addClass("attribute");
-    let marking = $("<div class=markings>");
+    let marking = $("<span class=markings>");
     
     let linkArrows;
     if(card.card_type === "Monster") {
@@ -685,23 +697,27 @@ CardViewer.composeResultCardPreview = function (card) {
     
     
     if(card.point_limit) {
-        marking.append($("<div>").append($("<span class=point-limit>").text(card.point_limit)));
+        banMarker = $("<span class=point-limit>").text(card.point_limit);
     }
     else if(card.exu_limit !== 3) {
         banMarker.attr("src", BANLIST_ICONS[card.exu_limit]);
+    }
+    else {
+        banMarker = null;
     }
     
     if(importMarker.attr("src")) {
         marking.append($("<div>").append(importMarker));
     }
-    if(banMarker.attr("src")) {
-        marking.append($("<div>").append(banMarker));
-    }
     
     effect = effect.split(/\r|\r?\n/).map(para => $("<p>").text(para));
     // effect = 
     
-    res.append($("<div class=result-inner>").append(id, name, img, attribute, linkArrows, marking, author, stats, effect
+    let bioHolder = $("<div class=bio-holder>");
+    bioHolder.append($("<div class=left-pane>").append(img));
+    bioHolder.append($("<div class=right-pane>").append($("<div>").append(attribute, linkArrows, marking, banMarker)));
+    
+    res.append($("<div class=result-inner>").append(id, name, bioHolder, author, stats, effect
         // $("<table>").append(
             // $("<tr>").append(
                 // $("<td class=result-img-holder>").append(img, attribute, marking),
@@ -903,16 +919,18 @@ CardViewer.Editor.updateDeck = function (deckInstance = CardViewer.Editor.DeckIn
     CardViewer.Elements.deckEditor.empty();
     deckInstance.renderHTML(CardViewer.Elements.deckEditor);
     // CardViewer.Editor.setPreview(0);
+    /*
     if(!document.getElementById("pointsTotal")) {
         return;
     }
     if(CardViewer.isPointsFormat()) {
-        let pointsTotal = deckInstance.decks.flat().map(card => CardViewer.Database.cards[card].point_limit ?? 0).reduce((p, c) => p + +c, 0);
+        let pointsTotal = CardViewer.getPointsTotal(deckInstance.decks.flat());
         document.getElementById("pointsTotal").textContent = `Genesys points: ${pointsTotal} / 100`;
     }
     else {
         document.getElementById("pointsTotal").textContent = "";
     }
+    */
 };
 
 CardViewer.Editor.saveLocalDeck = function () {

@@ -1525,11 +1525,13 @@ CardViewer.Compose = {
             }[card.monster_color];
             
             if(star) {
+                let starMarkings = $("<div class=star-markings>");
                 for(let i = 0; i < card.level; i++) {
-                    marking.append(
+                    starMarkings.append(
                         $("<img class=star>").attr("src", getStar(star))
                     );
                 }
+                marking.append(starMarkings);
             }
             else if(!options.onlyImage) {
                 let levelIndicator = CardViewer.Compose.getLevelIndicator(card);
@@ -2144,6 +2146,10 @@ const GenesysPoints = {
 CardViewer.isPointsFormat = (format = CardViewer.getCurrentFormat()) => {
     return format === "genesys";
 };
+CardViewer.getPointsTotal = cards =>
+    cards
+        .map(card => card.point_limit ?? CardViewer.Database.cards[card].point_limit ?? 0)
+        .reduce((p, c) => p + +c, 0);
 // prefer to call deployFormat
 CardViewer.toggleToFormat = (format = CardViewer.getCurrentFormat()) => {
     // TODO: generic to "points format" options

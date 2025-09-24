@@ -26,41 +26,30 @@
 </head>
 <body>
 <!-- <h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1> -->
-<header>
-    <h1 id=top><a href="./">EXU Deck Editor [WIP]</a></h1>
-    <button id="saveDeck">Save</button>
-    <!--
-    <label for="importDeck" class="fake-button">Import</label>
-    -->
-    <button id="importDeck">Import</button>
-    <input id="importDeckFile" type="file" style="position: fixed; top: -100em">
-    
-    <button id="exportDeckSimple">Export</button>
-    <button id="exportDeck">Rich Export</button>
-    <button id="sortDeck">Sort</button>
-    <button id="shuffleDeck">Shuffle</button>
-    <button id="clearDeck" class="danger-button">Clear</button>
-    <button id="specialMenu">Special</button>
-    <span class="ifPoints" id="pointsTotal"></span>
-</header>
 <div id="majorContainer">
 <div id="cardPreview"></div>
 <div id="deckEditor"></div>
 <div id="searchContainer">
-    <button class="danger-button" id="clearSearch">Clear Search</button>
-    <button id="minimizeSearchOptions">Minimize Options</button>
+    <div class="searchButtons" style="position: fixed; top: 0; right: 0;">
+        <button class="danger-button" id="clearSearch">Clear Search</button>
+        <button id="minimizeSearchOptions">Minimize Options</button>
+    </div>
     <div id=searchParameters><div>
         <table id=mainStats>
             <tr>
-                <th colspan=2>Primary Stats</th>
+                <th colspan=4>Primary Stats</th>
             </tr>
             <tr>
                 <td>Card name:</td>
                 <td><input id="cardName"></td>
+                <td>Card ID:</td>
+                <td><input id="cardId" type=number></td>
             </tr>
             <tr>
                 <td>Card description:</td>
                 <td><input id="cardDescription"></td>
+                <td>Card author:</td>
+                <td><input id="cardAuthor"></td>
             </tr>
             <tr>
                 <td>Card type:</td>
@@ -72,8 +61,6 @@
                         <option value=trap>Trap Card</option>
                     </select>
                 </td>
-            </tr>
-            <tr>
                 <td>Card limit:</td>
                 <td>
                     <select id="cardLimit">
@@ -86,29 +73,15 @@
                 </td>
             </tr>
             <tr>
-                <td>Card ID:</td>
-                <td><input id="cardId" type=number></td>
-            </tr>
-            <tr>
-                <td>Card author:</td>
-                <td><input id="cardAuthor"></td>
-            </tr>
-            <tr>
-                <td><label for="cardVisibility">Card visibility<label></td>
+                <td><label for="cardVisibility">Card visibility</label></td>
                 <td>
                     <select id="cardVisibility">
                         <option value=any></option>
                         <option value=1>Public</option>
                         <option value=2>Private</option>
-                        <option value=3>TCG only</option>
-                        <option value=4>OCG only</option>
-                        <option value=5>Custom only</option>
-                        <option value=6>TCG/OCG</option>
                     </select>
                 </td>
-            </tr>
-            <tr>
-                <td><label for="cardCategory">Card Category:</label></td>
+                <td><label for="cardCategory">Card category:</label></td>
                 <td>
                     <select id="cardCategory">
                         <option value=any></option>
@@ -116,6 +89,10 @@
                         <option value=2>Alt Art</option>
                     </select>
                 </td>
+                <!-- <td><label for="cardIsRetrain">Retrain?</label></td> -->
+                <!-- <td> -->
+                    <!-- <input id="cardIsRetrain" type="checkbox"> -->
+                <!-- </td> -->
             </tr>
             <tr>
                 <td><label for="searchSortBy">Sort by:</label></td>
@@ -131,8 +108,6 @@
                         <option class="ifPoints" style="display:none" value="point_limit">Points</option>
                     </select>
                 </td>
-            </tr>
-            <tr>
                 <td><label for="searchSortOrder">Sort order:</label></td>
                 <td>
                     <select id="searchSortOrder">
@@ -179,10 +154,8 @@
                     <option value="unequal">&ne;</option>
                 </select>
                 <input type=number id=cardPlayRate min=0 max=100 step=1>%</td>
-            </tr>
-            <tr class="ifPoints" style="display:none">
-                <td>Points</td>
-                <td><select id=cardPointsCompare class=thin>
+                <td class="ifPoints" style="border-left:1px solid;padding-left:5px;display:none">Points</td>
+                <td class="ifPoints" style="display:none"><select id=cardPointsCompare class=thin>
                     <option value="equal">=</option>
                     <option value="lessequal" selected="selected">&le;</option>
                     <option value="less">&lt;</option>
@@ -363,16 +336,33 @@
     </div>
     </div>
     <div id=resultsContainer>
-        <h3>Results found: <span id=resultCount>n/a</span>
+        <p>Results found: <span id=resultCount>n/a</span> <button class=previousPage>&lt;</button> Showing page <input class="inline currentPage" type=number value="1" min="1"> of <span class=pageCount>X</span> <button class=nextPage>&gt;</button></p>
         <h4 id=resultNote></h4>
-        <button class=previousPage>&lt;</button> Showing page <input class="inline currentPage" type=number value="1" min="1"> of <span class=pageCount>X</span> <button class=nextPage>&gt;</button>
+        
         <div id=results>nothing here</div>
         <!-- <button class=previousPage>&lt;</button> Showing page <input class="inline currentPage" type=number value="1" min="1"> of <span class=pageCount>X</span> <button class=nextPage>&gt;</button> -->
     </div>
 </div>
 </div>
+<div style="position: fixed; left: 0; bottom: 0">
+    <!-- <h1 id=top><a href="./">EXU Deck Editor [WIP]</a></h1> -->
+    <button id="saveDeck">Save</button>
+    <!--
+    <label for="importDeck" class="fake-button">Import</label>
+    -->
+    <button id="importDeck">Import</button>
+    <input id="importDeckFile" type="file" style="position: fixed; top: -100em">
+    
+    <button id="exportDeckSimple">Export</button>
+    <button id="exportDeck">Rich Export</button>
+    <button id="sortDeck">Sort</button>
+    <button id="shuffleDeck">Shuffle</button>
+    <button id="clearDeck" class="danger-button">Clear</button>
+    <button id="specialMenu">Special</button>
+</div>
 <div id="options" class="square-button right-button">
     <div id="showOptions" class="toggleIcon"><img src="./res/options.png" /></div>
+</div>
 </div>
 </body>
 </html>

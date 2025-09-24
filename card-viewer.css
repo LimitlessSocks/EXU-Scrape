@@ -145,6 +145,7 @@ input, select, textarea {
     color: white;
     border: 1px solid #eeaaee;
     padding: 3px;
+    font-size: 0.83em;
 }
 textarea {
     font-family: "Consolas", monospace;
@@ -267,6 +268,8 @@ img.star {
     padding: 10px;
     border-radius: 15px;
     margin: auto 0;
+    object-fit: cover;
+    object-position: top;
 }
 .small-image {
     /* max-height: 4ch; */
@@ -320,11 +323,16 @@ h1, h2, h3, h4, h5, h6 {
     height: 24px;
 }
 
+.result {
+    --result-opacity: 0.8;
+}
 .result.spell {
     background: rgb(0, 134, 114, 0.8);
+    background: rgb(0, 134, 114, var(--result-opacity));
 }
 .result.trap {
     background: rgba(162, 17, 99, 0.8);
+    background: rgba(162, 17, 99, var(--result-opacity));
 }
 
 .result.monster {
@@ -332,57 +340,87 @@ h1, h2, h3, h4, h5, h6 {
 }
 .result.monster.effect {
     background: rgba(173, 76, 34, 0.8);
+    background: rgba(173, 76, 34, var(--result-opacity));
 }
 .result.monster.effect.pendulum {
     background: linear-gradient(180deg,
-        rgba(173,76,34,0.8) 15%,
+        rgba(173, 76, 34, 0.8) 15%,
         rgba(0, 134, 114, 0.8) 85%
+    );
+    background: linear-gradient(180deg,
+        rgba(173, 76, 34, var(--result-opacity)) 15%,
+        rgba(0, 134, 114, var(--result-opacity)) 85%
     );
 }
 .result.monster.ritual {
     background: rgba(75, 112, 185, 0.8);
+    background: rgba(75, 112, 185, var(--result-opacity));
 }
 .result.monster.ritual.pendulum {
     background: linear-gradient(180deg,
         rgba(75, 112, 185, 0.8) 15%,
         rgba(0, 134, 114, 0.8) 85%
     );
+    background: linear-gradient(180deg,
+        rgba(75, 112, 185, var(--result-opacity)) 15%,
+        rgba(0, 134, 114, var(--result-opacity)) 85%
+    );
 }
 .result.monster.xyz {
     background: rgba(19, 22, 25, 0.8);
+    background: rgba(19, 22, 25, var(--result-opacity));
 }
 .result.monster.xyz.pendulum {
     background: linear-gradient(180deg,
         rgba(19, 22, 25, 0.8) 15%,
         rgba(0, 134, 114, 0.8) 85%
     );
+    background: linear-gradient(180deg,
+        rgba(19, 22, 25, var(--result-opacity)) 15%,
+        rgba(0, 134, 114, var(--result-opacity)) 85%
+    );
 }
 .result.monster.fusion {
     background: rgba(125, 61, 138, 0.8);
+    background: rgba(125, 61, 138, var(--result-opacity));
 }
 .result.monster.fusion.pendulum {
     background: linear-gradient(180deg,
         rgba(125, 61, 138, 0.8) 15%,
         rgba(0, 134, 114, 0.8) 85%
     );
+    background: linear-gradient(180deg,
+        rgba(125, 61, 138, var(--result-opacity)) 15%,
+        rgba(0, 134, 114, var(--result-opacity)) 85%
+    );
 }
 .result.monster.normal {
     background: rgba(195, 148, 71, 0.8);
+    background: rgba(195, 148, 71, var(--result-opacity));
 }
 .result.monster.normal.pendulum {
     background: linear-gradient(180deg,
         rgba(195, 148, 71, 0.8) 15%,
         rgba(0, 134, 114, 0.8) 85%
     );
+    background: linear-gradient(180deg,
+        rgba(195, 148, 71, var(--result-opacity)) 15%,
+        rgba(0, 134, 114, var(--result-opacity)) 85%
+    );
 }
 
 .result.monster.synchro {
     background: rgba(155, 155, 156, 0.8);
+    background: rgba(155, 155, 156, var(--result-opacity));
 }
 .result.monster.synchro.pendulum {
     background: linear-gradient(180deg,
         rgba(155, 155, 156, 0.8) 15%,
         rgba(0, 134, 114, 0.8) 85%
+    );
+    background: linear-gradient(180deg,
+        rgba(155, 155, 156, var(--result-opacity)) 15%,
+        rgba(0, 134, 114, var(--result-opacity)) 85%
     );
 }
 
@@ -396,6 +434,10 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(180deg,
         rgba(0, 0, 0, 0) 0%,
         rgba(75, 112, 185, 0.8) 50%
+    );
+    background: linear-gradient(180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(75, 112, 185, var(--result-opacity)) 50%
     );
 }
 a, a:visited {
@@ -563,6 +605,7 @@ input[type=number].inline {
 }
 .result.small.clickable:hover {
     transform: scale(1.12);
+    --result-opacity: 1.0;
 }
 .result.small .result-img-holder {
     width: 100%;
