@@ -97,6 +97,11 @@ input[type=number] {
     float: left;
     height: 100%;
 }
+.deck-controls {
+    position: fixed;
+    left: calc(18% + 1ch);
+    bottom: 0;
+}
 .card-preview {
     border-radius: 0;
     margin: 0;
