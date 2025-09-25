@@ -273,9 +273,11 @@ class Deck {
             if(i || !cardFound) j++;
             
             let infoText = `${["Main", "Side", "Extra"][containerIndex]} Deck (${size})`;
+            let lineCount = 1;
             if(CardViewer.isPointsFormat()) {
                 let sum = CardViewer.getPointsTotal(this.decks[containerIndex]);
                 infoText += ` (${sum} point${sum === 1 ? "" : "s"})`;
+                lineCount++;
             }
             info.text(infoText);
             if(CardViewer.isPointsFormat() && containerIndex === 2) {
@@ -285,7 +287,7 @@ class Deck {
             info.css({
                 top: (j + cIndexOffset * inBetweenMultiplier) * baseUnits.totalHeight + 7.5,
                 // fontSize: 0.25 * baseUnits.totalHeight + "px",
-                height: this.bannerScale * baseUnits.totalHeight + "px",
+                height: this.bannerScale * baseUnits.totalHeight * lineCount + "px",
                 width: pixelWidth,
             });
             
