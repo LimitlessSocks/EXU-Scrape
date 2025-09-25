@@ -277,12 +277,12 @@ class Deck {
             if(CardViewer.isPointsFormat()) {
                 let sum = CardViewer.getPointsTotal(this.decks[containerIndex]);
                 infoText += ` (${sum} point${sum === 1 ? "" : "s"})`;
-                lineCount++;
             }
             info.text(infoText);
             if(CardViewer.isPointsFormat() && containerIndex === 2) {
                 info.append($("<br/>"));
                 info.append(document.createTextNode(`Genesys points: ${CardViewer.getPointsTotal(this.decks.flat())} / 100`));
+                lineCount++;
             }
             info.css({
                 top: (j + cIndexOffset * inBetweenMultiplier) * baseUnits.totalHeight + 7.5,
