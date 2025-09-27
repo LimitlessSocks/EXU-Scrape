@@ -2148,7 +2148,7 @@ CardViewer.isPointsFormat = (format = CardViewer.getCurrentFormat()) => {
 };
 CardViewer.getPointsTotal = cards =>
     cards
-        .map(card => card.point_limit ?? CardViewer.Database.cards[card].point_limit ?? 0)
+        .map(card => card ? card.point_limit ?? CardViewer.Database.cards[card].point_limit ?? 0 : 0)
         .reduce((p, c) => p + +c, 0);
 // prefer to call deployFormat
 CardViewer.toggleToFormat = (format = CardViewer.getCurrentFormat()) => {
