@@ -94,7 +94,7 @@ let onLoad = async function () {
         $("#showOptions"),
         {
             monkeyPatch(data) {
-                document.querySelector("#top a").textContent = `${data.name} Deck Editor`;
+                // document.querySelector("#top a").textContent = `${data.name} Deck Editor`;
                 updateInputDisplay();
                 CardViewer.Editor.updateDeck();
                 CardViewer.Editor.recalculateView()
