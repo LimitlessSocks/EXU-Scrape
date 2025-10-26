@@ -1,0 +1,95 @@
+[main] Created log file log/db-10-16-2025.12.28.37.txt
+[18293337] warning: card id 1631059 (Clear Malicious Fusion) is not public
+[18293373] warning: card id 4177555 (Foo's Dark Impversion) is not public
+[18293399] warning: card id 2229896 (Mekk-Knight Armageddon) is not public
+[18293416] warning: card id 1295669 (Poppin Bluetang) is not public
+[18293416] warning: card id 1295673 (Poppin Aqua Damselfish) is not public
+[18293603] note: property 'effect' of card id 4917065 (Never P'land Guide - Peter) was changed
+[18293603] from: If this card battles a monster, neither can be destroyed by that battle. You can only use 1 of the following effects of "Never P'land Guide - Peter" per turn, and only once that turn.● If you control a "Never P'land" Illusion monster: You can Special Summon this card from your hand or GY, also you cannot Summon monsters from the GY for the rest of this turn if you Summoned it from the GY this way.● During the Main or Battle Phase (Quick Effect): Fusion Summon 1 "Never P'land" Fusion Monster using monsters from your hand or field as Fusion Material.
+[18293603] to: If this card battles a monster, neither can be destroyed by that battle. You can only use each of the following effects of "Never P'Land Guide - Peter" once per turn.● If you control a "Never P'land" Illusion monster: You can Special Summon this card from your hand or GY, also you cannot Summon monsters from the GY for the rest of this turn if you Summoned it from the GY this way.● During the Main or Battle Phase (Quick Effect): Fusion Summon 1 "Never P'land" Fusion Monster using monsters from your hand or field as Fusion Material.
+[18293605] warning: card id 4883125 (Twirlstia Wrenorchid) is not public
+[18293605] warning: card id 4896262 (Twirlstia Wings of Hope) is not public
+[18324074] warning: card id 4518714 (Altergeist Meduplex) is not public
+[18324074] warning: card id 4715750 (Artillery Beetle) is not public
+[18324074] warning: card id 4518693 (Altergeist Arachnalyzer) is not public
+[18324074] warning: card id 4519437 (Altergeist Adzip) is not public
+[18324082] warning: card id 4430628 (Blitzkrieg Tempester Dash) is not public
+[18324097] warning: card id 4151302 (Lee the World Legacy Memory) is not public
+[18324112] warning: card id 4603541 (Musslebound Lobster) is not public
+[18324112] warning: card id 2826527 (Mind Layer Ten) is not public
+[18324119] note: property 'effect' of card id 4057946 (Pot of Pride) was changed
+[18324119] from: Choose 1 of the listed categories, and follow its text.● Declare 1 monster Type and Attribute.● Declare 1 Spell Card type. (Normal Spell, Quick-Play, Continuous, Equip, Field).● Declare 1 Trap Card type. (Normal Trap, Continuous, Counter).Then look at the top card of your Deck. If that card matches the declared option, draw 2 cards. Otherwise, banish the top 10 cards of your Deck, face-down (all, if less than 10). You can only activate 1 "Pot of Pride" per turn.
+[18324119] to: Apply both of these effects (simultaneously).● Declare 1 card type (Monster, Spell, or Trap), then excavate the top card of your opponent's Deck. If it is the declared card type, draw 2 card, and discard 1 card. Otherwise banish 1 card from your hand, face-down.● Declare 1 card type (Monster, Spell, or Trap), then excavate the top card of your Deck. If it is the declared card type, draw 1 card. Otherwise place 1 card from your hand on the bottom of your Deck, if able.You can only activate 1 "Pot of Pride" per Phase.
+[18324119] note: property 'effect' of card id 4057944 (Pot of Envy) was changed
+[18324119] from: Excavate cards from the top of your Deck, equal to the number of cards added from your opponent's Main Deck to their hand or GY in the previous turn (max. 6). Add up to 2 excavated cards with different names to your hand, then place 1 card from your hand, and the remaining cards, on the bottom of your Deck in any order. For the rest of the turn after this card resolves, each time you add a card(s) from your Deck to your hand, you must banish 1 card from your hand, face-down. Neither player can activate monster effects in response to this card's activation.
+[18324119] to: Excavate cards from the top of your Deck, equal to the number of cards moved from your opponent's Deck to their hand or GY since the previous turn (max. 12). Add up to 2 excavated cards with different names to your hand, then place the remaining cards on the bottom of your Deck in any order. For the rest of the turn after this card resolves, each time you add a card(s) from your Deck to your hand, you must banish 1 card from your hand, face-down. Neither player can activate monster effects in response to this card's activation.
+[18324137] note: [+] added new card 4265914 (Full Moon Dragon Umbralancer F)
+[18324155] warning: card id 3972191 (Illusion of Power) is not public
+[18324155] note: [+] added new card 4131347 (Hot Red Dragon Archfiend Lord Lotus)
+[18324168] note: property 'effect' of card id 4506130 (Leopardbloom) was changed
+[18324168] from: You can discard this card; Special Summon 1 "dbloom" monster from your hand, and if you do, it gains this effect.● Once while face-up on the field (Quick Effect): You can discard 1 card, and if you do, Special Summon 1 "dbloom" monster from your Deck, then the ATK/DEF of 1 monster your opponent owns becomes 0.When you activate a "Lindbloom" effect, even during the damage step (Quick Effect): You can Special Summon this card from your GY, but return it to the hand when it is sent to the GY. You can only use this effect of "Leopardbloom" once per turn.
+[18324168] to: You can discard this card; Special Summon 1 "dbloom" monster from your hand, and if you do, it gains this effect.● Once while face-up on the field (Quick Effect): You can discard 1 card, and if you do, Special Summon 1 "dbloom" monster from your Deck, then the ATK/DEF of 1 monster your opponent owns becomes equal to the summoned monster's ATK.When you activate a "Lindbloom" effect, even during the damage step (Quick Effect): You can Special Summon this card from your GY, but return it to the hand when it is sent to the GY. You can only use this effect of "Leopardbloom" once per turn.
+[18324173] warning: card id 4279698 (Ninjdow Kaze) is not public
+[18328305] note: [+] added new card 5242605 (Metalfoes Rookie)
+[18328305] note: [+] added new card 5242448 (Metalfoes Encounter)
+[18328305] note: [+] added new card 5454085 (Metalfoes' Campfire)
+[18328305] note: [+] added new card 5242532 (Heavymetalfoes Diamondriller)
+[18328305] note: [+] added new card 5242518 (Heavymetalfoes Mortary)
+[18328305] note: [+] added new card 3941897 (Truemetalfoes Imperium)
+[18328545] note: [+] added new card 5465055 (Rushburrow Scaleborn)
+[18328545] note: [+] added new card 5055622 (Beautiful Soul Tsujigiri)
+[18328545] note: [+] added new card 5175571 (Bedbug Fighting Bug!)
+[18328545] note: [+] added new card 5175546 (Number C100: Numeron Greatwyrm)
+[18328545] note: [+] added new card 5234802 (Guardian of the Coral Reef)
+[18328545] note: [+] added new card 5237339 (Leviathan, the Oceanic Caretaker)
+[18328545] note: [+] added new card 5235869 (Serpent of Neptune, Ruler of the Seas)
+[18328545] note: [+] added new card 5313852 (Princess's Inferno)
+[18328545] note: [+] added new card 5516982 (Galactic Tomohawk)
+[18610470] note: property 'effect' of card id 5245146 (Flickerwisp Torchlight) was changed
+[18610470] from: If you control a FIRE Fairy monster, or reveal a "Flickerwisp" card from your hand: You can banish 1 card from your hand; Special Summon this card. You can only use this effect of "Flickerwisp Torchlight" once per turn. Twice per turn: You can banish a "Flickerwisp" card from your GY; This card gains 500 ATK. If this card is returned from your banishment to the field or GY: Add 1 "Flickerwisp" card from your Deck to your hand.
+[18610470] to: If you control a FIRE Fairy monster, or reveal another "Flickerwisp" card from your hand: You can banish 1 card from your hand; Special Summon this card. You can only use this effect of "Flickerwisp Torchlight" once per turn. Twice per turn: You can banish a "Flickerwisp" card from your GY; This card gains 500 ATK. If this card is returned from your banishment to the field or GY: Add 1 "Flickerwisp" card from your Deck to your hand.
+[18610470] note: property 'effect' of card id 5245276 (Flickerwisp Distraction) was changed
+[18610470] from: Choose 2 monsters in your banishment: Your opponent chooses one of the monsters to return to the GY, then you can Special Summon the other monster. You can only use this effect of "Flickerwisp Distraction" once per turn. If this card is returned from your banishment to the GY: Target up to 2 Spell/Trap cards on the field, banish them.
+[18610470] to: Target 2 monsters in your banishment; your opponent chooses one of the monsters to return to the GY, then you can Special Summon the other monster. You can only use this effect of "Flickerwisp Distraction" once per turn. If this card is returned from your banishment to the GY: Target up to 2 Spell/Trap cards on the field, banish them.
+[18612233] note: property 'effect' of card id 3512952 (Orikami's Judgment) was changed
+[18612233] from: When this card is activated: You can add 1 "Orikami" card from your Deck to your hand, except "Orikami's Judgment". During your Main Phase, you can Normal Summon 1 "Orikamaze" monster in addition to your Normal Summon/Set. (You can only gain this effect once per turn.) Each time you roll a die or dice, place 1 Orikamaze Counter on this card.
+[18612233] to: When this card is activated: You can add 1 "Orikami" card from your Deck to your hand, except "Orikami's Judgment". You can only use this effect of "Orikami Judgment" once per turn. During your Main Phase, you can Normal Summon 1 "Orikamaze" monster in addition to your Normal Summon/Set. (You can only gain this effect once per turn.) Each time you roll a die or dice, place 1 Orikamaze Counter on this card.
+[18843519] note: [+] added new card 5447092 (Echo, Courier of Azurite)
+[18843519] note: [+] added new card 5447077 (Kael, Keeper of Azurite)
+[18843519] note: [+] added new card 5447117 (Quanta, Node of Azurite)
+[18843519] note: [+] added new card 5446254 (Rumi, Harnesser of Azurite)
+[18843519] note: [+] added new card 5446308 (Unit Zero, Azurite Innovation)
+[18843519] note: [+] added new card 5447124 (Azurite Conduit)
+[18843519] note: [+] added new card 5446358 (Azurite Final Citadel)
+[18843519] note: [+] added new card 5447118 (Azurite Infusion)
+[18843519] note: [+] added new card 5447101 (Aegis, Bastion of Azurite)
+[18843519] note: [+] added new card 5449716 (Nyx, Warden of Azurite)
+[18843519] note: [+] added new card 5447104 (Oblivion, Singularity of Azurite)
+[18843519] note: [+] added new card 5447109 (Sabre, Core of Azurite)
+[18843545] note: [+] added new card 3179962 (Adventure Kirby)
+[18843545] note: [+] added new card 3998502 (Kirby)
+[18843545] note: [+] added new card 3189002 (Kirby Bandanna Dee)
+[18843545] note: [+] added new card 3183922 (Kirby King DeDeDe)
+[18843545] note: [+] added new card 3181688 (Kirby Meta Knight)
+[18843545] note: [+] added new card 3179364 (Kirby Waddle Dee)
+[18843545] note: [+] added new card 3178149 (Star Ally Kirby)
+[18843545] note: [+] added new card 3178286 (Kirby Dreamland)
+[18843545] note: [+] added new card 5444926 (Kirby Drop Ability)
+[18843545] note: [+] added new card 3178329 (Kirby Essence Beam)
+[18843545] note: [+] added new card 3178362 (Kirby Essence Ice)
+[18843545] note: [+] added new card 3178374 (Kirby Essence Sword)
+[18843545] note: [+] added new card 3186918 (Kirby Mix)
+[18843545] note: [+] added new card 3178282 (Kirby Super Inhale)
+[18843545] note: [+] added new card 3181722 (Kirby Boss Battle!!)
+[18843545] note: [+] added new card 3178276 (Beam Kirby)
+[18843545] note: [+] added new card 5445202 (Drill Kirby)
+[18843545] note: [+] added new card 3181232 (Fire Kirby)
+[18843545] note: [+] added new card 3178301 (Ice Kirby)
+[18843545] note: [+] added new card 5445720 (Needle Kirby)
+[18843545] note: [+] added new card 5445144 (Paint Kirby)
+[18843545] note: [+] added new card 3182396 (Spark Kirby)
+[18843545] note: [+] added new card 3178280 (Sword Kirby)
+[18843545] note: [+] added new card 3179287 (Ultra Sword Kirby)
+[18843545] note: [+] added new card 3513078 (Kirby Marx)
+[main] note: [-] removed old card 4078742 (Book of Sun)
+[main] note: [-] removed old card 5243848 (That Evær'Wood Vol. I)
