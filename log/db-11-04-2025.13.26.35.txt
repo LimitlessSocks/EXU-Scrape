@@ -1,0 +1,113 @@
+[main] Created log file log/db-11-04-2025.13.26.35.txt
+[18293337] warning: card id 1631059 (Clear Malicious Fusion) is not public
+[18293373] warning: card id 4177555 (Foo's Dark Impversion) is not public
+[18293399] warning: card id 2229896 (Mekk-Knight Armageddon) is not public
+[18293416] warning: card id 1295669 (Poppin Bluetang) is not public
+[18293416] warning: card id 1295673 (Poppin Aqua Damselfish) is not public
+[18293605] warning: card id 4883125 (Twirlstia Wrenorchid) is not public
+[18293605] warning: card id 4896262 (Twirlstia Wings of Hope) is not public
+[18324074] warning: card id 4518714 (Altergeist Meduplex) is not public
+[18324074] warning: card id 4715750 (Artillery Beetle) is not public
+[18324074] warning: card id 4518693 (Altergeist Arachnalyzer) is not public
+[18324074] note: property 'effect' of card id 2134934 (A Taste of Silver Luck) was changed
+[18324074] from: Toss a coin:● Heads: Add 1 "Foxphet" monster from your Deck to your hand.● Tails: Add 1 "Foxphet" Spell/Trap from your Deck to your hand.You can only activate 1 "A Taste of Silver Luck" per turn.
+[18324074] to: (This card is always treated as a "Foxphet" card.)Toss a coin:● Heads: Add 1 "Foxphet" monster from your Deck to your hand.● Tails: Add 1 "Foxphet" Spell/Trap from your Deck to your hand.You can only activate 1 "A Taste of Silver Luck" per turn.
+[18324074] warning: card id 4519437 (Altergeist Adzip) is not public
+[18324082] note: property 'effect' of card id 1023689 (C.I. Administrator Lilith) was changed
+[18324082] from: 2+ Level 4 "C.I." monstersWhile a "C.I." card is banished, your opponent cannot target this card with card effects. You can only use each of the following effects of "C.I. Administrator Lilith" once per turn. (Quick Effect): You can detach 1 material from this card, then target 1 other face-up card on the field; place it on the top of the Deck. If another "C.I." monster you control is banished by its own effect: You can discard 1 card, and if you do, draw 2 cards.
+[18324082] to: 2+ Effect Monsters with different Types, including 1 "C.I." monsterMonsters this card points to cannot be targeted by card effects. (Quick Effect): You can banish this card (until the End Phase), and if you do, send cards on the field to the GY, up to the number of other "C.I." monsters banished this turn. You can only use this effect of "C.I. Administrator Lilith" once per turn. Once per Chain, when if a "C.I." monster was targeted by an effect this turn (Quick Effect): You can banish that monster (until the End Phase).
+[18324082] note: property 'atk' of card id 1023689 (C.I. Administrator Lilith) was changed
+[18324082] from: 2400
+[18324082] to: 2500
+[18324082] note: property 'def' of card id 1023689 (C.I. Administrator Lilith) was changed
+[18324082] from: 2500
+[18324082] to: ?
+[18324082] note: property 'monster_color' of card id 1023689 (C.I. Administrator Lilith) was changed
+[18324082] from: Xyz
+[18324082] to: Link
+[18324082] note: property 'arrows' of card id 1023689 (C.I. Administrator Lilith) was changed
+[18324082] from: 
+[18324082] to: 00011011
+[18324082] warning: card id 4430628 (Blitzkrieg Tempester Dash) is not public
+[18324097] warning: card id 4151302 (Lee the World Legacy Memory) is not public
+[18324112] warning: card id 4603541 (Musslebound Lobster) is not public
+[18324112] warning: card id 2826527 (Mind Layer Ten) is not public
+[18324119] note: property 'effect' of card id 4057942 (Pot of Wrath) was changed
+[18324119] from: Draw 1 card for every 1250 ATK the highest ATK on the field has, then reveal them. If the total ATK of the drawn card(s) is less than the highest ATK on the field (Spells/Traps are treated as having an ATK of 0), lose LP equal to the highest ATK on the field. After resolving this card, you cannot activate Spells/Traps until the next time battle damage is inflicted, also you cannot draw cards by card effects for the rest of the turn.
+[18324119] to: If damage was inflicted this turn: Draw 1 card for every 1500 damage that was inflicted to either player this turn, then if you drew 3 or more cards this way, apply these effects.● Banish random cards from your hand equal to the number of cards you drew -2.● You cannot activate "Pot of Wrath" for the rest of the turn.
+[18324119] note: property 'effect' of card id 4057935 (Pot of Sloth) was changed
+[18324119] from: Apply these effects.● During your next Draw Phase, draw 2 additional cards.● Only 1 monster you control can attack during each Battle Phase this turn.● You can only Special Summon up to 2 monsters during each Main Phase this turn.
+[18324119] to: Apply these effects.● During your next Draw Phase, draw 2 additional cards for your normal draw.● Only 1 monster you control can attack during each Battle Phase this turn.● You can only Special Summon up to 2 monsters during each Main Phase this turn.
+[18324119] note: property 'effect' of card id 4057893 (Pot of Luxuria) was changed
+[18324119] from: Choose 1 of the listed categories. If your opponent controls more cards of the chosen category than you do (min. 3), add the top 2 cards of your Deck to your hand.● Special Summoned monsters with 2500 or more ATK.● Face-up cards whose original type is Spell/Trap.After this effect resolves, until the End Phase of your next turn, or until you control 3 or more cards of the chosen category, you cannot add cards to your hand by card effects, except by Normal Spells/Traps, and monsters you control cannot attack directly this turn. You can only activate 1 "Pot of Luxuria" per turn.
+[18324119] to: Your opponent draws 2 cards, then you look at 2 random cards in their hand, and apply this effect on both of those cards.● Set it to your field if it can be Set, otherwise your opponent places it on the top of their Deck.You can only activate 1 "Pot of Luxuria" per Phase.
+[18324119] note: property 'effect' of card id 4057876 (Pot of Forgery) was changed
+[18324119] from: Banish 3 to 5 cards from your hand and/or Extra Deck, face-down (min. 1 from each location); for the rest of the turn after this effect resolves, any damage your opponent takes is halved, also excavate the same number of cards from the top of your Deck, and if you do, add 1 excavated card to your hand, and banish the rest, face-down. Then add the top card of your Deck to your hand. For the rest of the turn after this card resolves, you cannot add cards from your Deck to your hand by Spell/Trap effects.
+[18324119] to: Banish face-down, 6 cards (3 from the top of your Deck, 3 from your Extra Deck); excavate the top 4 cards of your Deck, add 1 of them to your hand, banish the rest, face-down, then add the top card of your Deck to your hand. For the rest of the turn after activating this card, any damage your opponent takes is halved, and you cannot add cards from your Deck to your hand.
+[18324119] note: property 'effect' of card id 4057944 (Pot of Envy) was changed
+[18324119] from: Excavate cards from the top of your Deck, equal to the number of cards moved from your opponent's Deck to their hand or GY since the previous turn (max. 12). Add up to 2 excavated cards with different names to your hand, then place the remaining cards on the bottom of your Deck in any order. For the rest of the turn after this card resolves, each time you add a card(s) from your Deck to your hand, you must banish 1 card from your hand, face-down. Neither player can activate monster effects in response to this card's activation.
+[18324119] to: Your opponent cannot activate monster effects in response to this card's activation. If your opponent controls more cards than you (min. 2): Excavate cards from the top of your Deck, equal to the number of cards the opponent controls. Add 1 of them to your hand, or 2 of them instead if your opponent controls 6 or more cards than you, and place the rest on the bottom of your Deck in any order. For the rest of the turn after this effect resolves, each time you add a card(s) from your Deck to your hand, you must banish 1 card from your hand, face-down (your entire hand, if less than). You can only activate 1 "Pot of Envy" per turn.
+[18324137] note: [+] added new card 4265914 (Full Moon Dragon Umbralancer F)
+[18324155] warning: card id 3972191 (Illusion of Power) is not public
+[18324155] note: [+] added new card 4131347 (Hot Red Dragon Archfiend Lord Lotus)
+[18324173] warning: card id 4279698 (Ninjdow Kaze) is not public
+[18327989] note: [+] added new card 5536736 (Noctambush Elking - Azerial)
+[18327989] note: [+] added new card 5536750 (Noctambush Godesscent - Kaguya)
+[18327989] note: [+] added new card 5536815 (Noctambush Sheeprayer - Lumia)
+[18327989] note: [+] added new card 5536768 (Noctambush Maiden - Yuhime)
+[18327989] note: [+] added new card 5538378 (Noctambush Overseer - Frejya)
+[18327989] note: [+] added new card 5538521 (Noctambush Princess - Diana)
+[18327989] note: [+] added new card 5536683 (Noctambush Shepard - Lucius)
+[18327989] note: [+] added new card 5536697 (Noctambush Gehenna)
+[18327989] note: [+] added new card 5536717 (Noctambush Delusion)
+[18328199] note: [+] added new card 5132682 (Embermane, The Canine Dauntless Behemoth)
+[18328199] note: [+] added new card 5132700 (Gnasher, The Beaver Dauntless Behemoth)
+[18328199] note: [+] added new card 5132930 (Rezakiri, The Insect Dauntless Behemoth)
+[18328199] note: [+] added new card 5137321 (Riftstalker, The Feline Dauntless Behemoth)
+[18328199] note: [+] added new card 5133833 (Shrike, The Airborn Dauntless Behemoth)
+[18328199] note: [+] added new card 5132895 (Shrowd, The Raven Dauntless Behemoth)
+[18328199] note: [+] added new card 5132629 (The First Slayer)
+[18328199] note: [+] added new card 5132691 (Dauntless Escalation)
+[18328199] note: [+] added new card 5132911 (Ramsgate, The Floating City)
+[18328199] note: [+] added new card 5133812 (Dauntless Stagger)
+[18328199] note: [+] added new card 5132953 (Chronovore, The Radiant Keystone Dauntless Behemoth)
+[18328199] note: [+] added new card 5132602 (Malkarion, The Shock Keystone Dauntless Behemoth)
+[18328199] note: [+] added new card 5132882 (Thrax, The Umbral Keystone Dauntless Behemoth)
+[18328199] note: [+] added new card 5133839 (Torgado, The Blaze Keystone Dauntless Behemoth)
+[18328545] note: [+] added new card 4912658 (Evervolving 35: Milkway Seastar)
+[18328545] note: [+] added new card 5362779 (The King's Chariot)
+[18328545] note: [+] added new card 5141315 (Monster Tomato)
+[18328545] note: [+] added new card 5141370 (D.D. Possessed Warrior Lady)
+[18328545] note: [+] added new card 5141295 (Futakuchi Onna)
+[18328545] note: [+] added new card 5430669 (Mulcharmy Blubean)
+[18328545] note: [+] added new card 5430678 (Mulcharmy Skreenew)
+[18386166] note: [+] added new card 4479381 (Wrasslin' Grizzly)
+[18386166] note: [+] added new card 5025758 (Wrasslin' Wolffo)
+[18386166] note: [+] added new card 5046654 (A Challenger Appears!)
+[18843519] note: property 'effect' of card id 5447117 (Quanta, Node of Azurite) was changed
+[18843519] from: You can only control 1 “Quanta, Node of Azurite.” You can banish 1 “Azurite” monster from your GY; Special Summon this card from your hand. If this card is Normal or Special Summoned: You can Set 1 “Azurite” Spell directly from your Deck. If an “Azurite” monster(s) you control would gain an Azurite Counter(s), you can place 1 additional Azurite Counter on each of those monsters.
+[18843519] to: You can only control 1 “Quanta, Node of Azurite. You can banish 1 “Azurite” monster from your GY; Special Summon this card from your hand, but it cannot be used as Link Material. If this card is Normal or Special Summoned: You can Set 1 “Azurite” Spell directly from your Deck. You can only use this effect of “Quanta, Node of Azurite” once per turn. If an “Azurite” monster(s) you control would gain Azurite Counter(s), you can place 1 additional Azurite Counter on each of those monsters.
+[18843519] note: property 'effect' of card id 5446358 (Azurite Final Citadel) was changed
+[18843519] from: "Azurite" monsters you control gain 200 ATK for each Azurite Counter on them. If an “Azurite” monster(s) you control are Summoned: You can place 1 Azurite Counter on each of those monsters. If an “Azurite” monster(s) you control are sent from the field to the GY: You can banish those monster(s); place 1 Azurite Counter on a monster you control. You can remove 5 Azurite Counters from your field, then target 1 Cyberse monster in your GY or banishment; Special Summon it. You can only activate this effect of Azurite Final Citadel" once per turn.
+[18843519] to: "Azurite" monsters you control gain 200 ATK for each Azurite Counter on them. If an “Azurite” monster(s) you control are Summoned: You can place 1 Azurite Counter on each of those monsters. If an “Azurite” monster(s) you control are sent from the field to the GY: You can banish those monster(s); place 1 Azurite Counter on a monster you control. You can remove 5 Azurite Counters from your field, then target 1 Cyberse monster in your GY or banishment; Special Summon it. You can only activate this effect of Azurite Final Citadel" once per turn. While this card is face-up on the field, you cannot Link Summon Link-4 or higher Link Monsters.
+[18843519] note: [+] added new card 5275041 (Toxicourier Archfiend)
+[18843519] note: [+] added new card 5275032 (Voidjester Archfiend)
+[18843519] note: [+] added new card 5275044 (Mortisage Archfiend)
+[18843519] note: [+] added new card 5275049 (Inquisitor King Archfiend)
+[18843519] note: [+] added new card 5275067 (Never Say Dice)
+[18843519] note: [+] added new card 5275069 (Medieval Archfiends)
+[18843519] note: [+] added new card 5275076 (Joy-Leap)
+[main] note: [-] removed old card 2135036 (Foxphet Secrets)
+[main] note: [-] removed old card 2134941 (Foxphet Revelation)
+[main] note: [-] removed old card 2134772 (Foxphet Priestess Makoto)
+[main] note: [-] removed old card 2136024 (Foxphet Priestess Inari)
+[main] note: [-] removed old card 2134835 (Foxphet Priest Satoru)
+[main] note: [-] removed old card 2134981 (Foxphet Priest Natsume)
+[main] note: [-] removed old card 2134911 (Foxphet Doom)
+[main] note: [-] removed old card 2135006 (Foxphet Deity Madara)
+[main] note: [-] removed old card 2136028 (Foxphet Deity Kinshoujo)
+[main] note: [-] removed old card 2134808 (Foxphet Deity Haru)
+[main] note: [-] removed old card 4689472 (Foxphet Deity Gintaro)
+[main] note: [-] removed old card 2135018 (Foxphet Daze)
+[main] note: [-] removed old card 3554985 (Silver Luck Spirit)
+[main] note: [-] removed old card 2917306 (High Foxphet Priestess Kikyo)
