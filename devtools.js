@@ -218,9 +218,19 @@ let onLoad = async function () {
                     e.serial_number,
                     e.name.toUpperCase(),
                     limits[e.tcg_limit],
-                    ,
+                    , // for traditional
                     limits[e.exu_limit],
             ]);
+        
+        if(!$("#includeTraditional").is(":checked")) {
+            tableValues = tableValues.map(table => [
+                table[0],
+                table[1],
+                table[2],
+                table[3],
+                table[5],
+            ]);
+        }
         
         // console.log(tableValues);
         $("#spreadsheetOutput").removeClass("hidden").val(
@@ -230,7 +240,7 @@ let onLoad = async function () {
             ) + tableValues.map(row => row.join("\t")).join("\n")
         );
     };
-    $("#cardsToSpreadsheet").on("input", updateSpreadsheetOutput);
+    $("#cardsToSpreadsheet, #includeTraditional").on("input", updateSpreadsheetOutput);
     updateSpreadsheetOutput();
     
     const updateCardGuess = (name, cardDisplay) => {
