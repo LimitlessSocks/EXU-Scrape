@@ -198,11 +198,14 @@ let onLoad = async function () {
     $("#banlistChanges").on("input", updateBanlistChanges);
     updateBanlistChanges();
     
+    const NO_INCLUDE = Symbol("NO_INCLUDE");
     const updateSpreadsheetOutput = () => {
         let val = $("#cardsToSpreadsheet").val();
         if(!val.trim()) {
             return;
         }
+        let includeTraditional = $("#includeTraditional").is(":checked");
+        let includeReleaseDate = $("#includeReleaseDate").is(":checked");
         let limits = ["Forbidden", "Limited", "Semi-Limited", "Unlimited"];
         let rejected = [];
         let tableValues = val
@@ -212,25 +215,15 @@ let onLoad = async function () {
             .filter(e => e)
             .map(e => [
                 e.card_type + (
-                    e.card_type=="Monster" && e.monster_color !== "Normal"
-                        ? "/" + e.monster_color : ""
-                    ),
-                    e.serial_number,
-                    e.name.toUpperCase(),
-                    limits[e.tcg_limit],
-                    , // for traditional
-                    limits[e.exu_limit],
-            ]);
-        
-        if(!$("#includeTraditional").is(":checked")) {
-            tableValues = tableValues.map(table => [
-                table[0],
-                table[1],
-                table[2],
-                table[3],
-                table[5],
-            ]);
-        }
+                    e.card_type == "Monster" && e.monster_color !== "Normal" ? "/" + e.monster_color : ""
+                ),
+                e.serial_number,
+                includeReleaseDate ? e.tcg_date ?? undefined : NO_INCLUDE,
+                e.name.toUpperCase(),
+                limits[e.tcg_limit],
+                includeTraditional ? undefined : NO_INCLUDE,
+                limits[e.exu_limit],
+            ].filter(el => el !== NO_INCLUDE));
         
         // console.log(tableValues);
         $("#spreadsheetOutput").removeClass("hidden").val(
@@ -240,7 +233,7 @@ let onLoad = async function () {
             ) + tableValues.map(row => row.join("\t")).join("\n")
         );
     };
-    $("#cardsToSpreadsheet, #includeTraditional").on("input", updateSpreadsheetOutput);
+    $("#cardsToSpreadsheet, .cardsToSpreadsheetOption").on("input", updateSpreadsheetOutput);
     updateSpreadsheetOutput();
     
     const updateCardGuess = (name, cardDisplay) => {
