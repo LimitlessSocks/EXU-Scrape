@@ -914,7 +914,21 @@ CardViewer.composeResultDeckPreview = function (card) {
     return res;
 };
 // CardViewer.composeStrategy = CardViewer.composeResultDeckPreview;
-CardViewer.composeStrategy = CardViewer.composeResultSmall;
+CardViewer.composeStrategy = function (card) {
+    let res = CardViewer.composeResultSmall(card);
+    res.hover(() => {
+        let container = $(".sub-deck-container");
+        let allCards = [...container.find(".editor-item")];
+        let matchingCards = allCards.filter(el => el.querySelector(".result-name").textContent === card.name);
+        matchingCards.forEach(card => card.classList.add("focused"));
+    });
+    res.mouseleave(() => {
+        let container = $(".sub-deck-container");
+        let allCards = container.find(".editor-item");
+        allCards.removeClass("focused");
+    });
+    return res;
+};
 CardViewer.excludeTcg = false;
 
 CardViewer.Editor.updateDeck = function (deckInstance = CardViewer.Editor.DeckInstance) {

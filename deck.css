@@ -219,6 +219,8 @@ header > * {
     .editor-item:hover, .editor-item:focus, .editor-item.focused {
         cursor: pointer;
         filter: brightness(1.5);
+        outline: 30px solid white;
+        /* box-sizing: border-box; */
     }
     .editor-item .result-name {
         position: absolute;
