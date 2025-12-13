@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3RKXFLZRZ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q3RKXFLZRZ');
+    </script>
+    <title>EXU Dev Tools</title>
+    <meta charset="UTF-8">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./card-viewer.js"></script>
+    <script src="./connections.js"></script>
+    <link rel="STYLESHEET" href="./card-viewer.css">
+    <link rel="STYLESHEET" href="./connections.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<!-- <h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1> -->
+<article>
+    <h2><a href="./">EXU's</a> Connections Helper</h2>
+    <p><label>Add card <input id="card-filter"></label> (click on card to remove it) &sdot;  <button id="clear" class="danger-button">Clear</button> <button id="fill-random">Fill Random</button></p>
+    <div id="results"></div>
+    <div id="status-container">
+        <div id="card-output"></div>
+        <div id="connections">
+            <div class="connections-group">
+                <h3>ATK</h3><ul><li>a</li><li>b</li></ul></div>
+            </div>
+        </div>
+    </div>
+</article>
+<div id="options" class="square-button right-button">
+    <div id="showOptions" class="toggleIcon"><img src="./res/options.png" /></div>
+</div>
+</body>
+</html>

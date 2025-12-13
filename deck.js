@@ -418,7 +418,6 @@ CardViewer.Editor.setPreview = function (id) {
         CardViewer.composeResultCardPreview(CardViewer.Database.cards[id])
     );
 };
-CardViewer.Editor
 CardViewer.Editor.TIMER_DELAY = 100;//ms
 CardViewer.Editor.addHoverTimerPreview = function (composed, id) {
     let hoverTimer = null;

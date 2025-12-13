@@ -1564,6 +1564,7 @@ CardViewer.Compose = {
             banMarker.attr("src", BANLIST_ICONS[card[limit]]);
         }
         
+        // NOTE: we use point_limit, but DuelingBook uses points. we might want to adopt their .points value instead of using our own
         if(card.point_limit) {
             marking.append($("<div>").append($("<span class=point-limit>").text(card.point_limit)));
         }
@@ -2216,7 +2217,6 @@ CardViewer.deployFormat = async (format) => {
     if(oldFormat === format) {
         console.warn("no-op setting format `" + format + "` when already at that format");
     }
-    CardViewer.toggleToFormat(format);
     if(format === "tcgocg") {
         CardViewer.monkeyPatchFormat({
             name: "TCG/OCG",
@@ -2260,6 +2260,7 @@ CardViewer.deployFormat = async (format) => {
         }
     }
     CardViewer.setCurrentFormat(format);
+    CardViewer.toggleToFormat(format);
 };
 
 // options.monkeyPatch expects either a boolean or a function
