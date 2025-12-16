@@ -353,6 +353,37 @@ let onLoad = async function () {
             updateSpreadsheetOutput();
         });
     });
+    
+    let genesysLflist = $("#genesysLflist");
+    let genesysLflistOutput = $("#genesysLflistOutput");
+    const updateLflistOutput = () => {
+        let val = genesysLflist.val().trim();
+        genesysLflistOutput[0].classList.toggle("hidden", !val);
+        if(!val) {
+            return;
+        }
+        let passcodeToPoints = {};
+        val.split("\n").forEach(line => {
+            let match = line.match(/(\d+) (\d+)/);
+            if(!match) {
+                return;
+            }
+            let [ , passcode, points ] = match;
+            passcodeToPoints[+passcode] = points;
+        });
+        let genesysPointsOutput = {};
+        Object.values(CardViewer.Database.cards).forEach(card => {
+            let points = passcodeToPoints[+card.serial_number];
+            if(points) {
+                genesysPointsOutput[card.id] = points;
+            }
+        });
+        let body = JSON.stringify(genesysPointsOutput);
+        body = body[0] + "\n    " + body.slice(1, -1) + "\n" + body.at(-1); 
+        genesysLflistOutput.val(body);
+    };
+    genesysLflist.on("input", updateLflistOutput);
+    updateLflistOutput();
 };
 
 window.addEventListener("load", onLoad);
