@@ -1,0 +1,384 @@
+[main] Created log file log/db-12-29-2025.14.10.55.txt
+[18293330] note: property 'effect' of card id 3245245 (Bladesman of the Revolting World) was changed
+[18293330] from: "Is this really what you desire? A life of pleasure with no opposition? A life of luxury with no substance? If that is your wish than be my guest but until then""We. Will. Battle. Till. We. Die" -Astia Hell. The Anomaly
+[18293330] to: "Is this really what you desire? A life of pleasure with no opposition? A life of luxury with no substance? If that is your wish than be my guest but until then""We. Will. Battle. Till. We. Die" -Astia Sinclair
+[18293337] warning: card id 1631059 (Clear Malicious Fusion) is not public
+[18293373] warning: card id 4177555 (Foo's Dark Impversion) is not public
+[18293399] warning: card id 2229896 (Mekk-Knight Armageddon) is not public
+[18293416] warning: card id 1295669 (Poppin Bluetang) is not public
+[18293416] warning: card id 1295673 (Poppin Aqua Damselfish) is not public
+[18293603] note: property 'effect' of card id 4974099 (Number 89: The Reaver of Minds, Diablosis) was changed
+[18293603] from: 2 Level 7 monsters (This card's name is always treated as "Number 89: Diablosis the Mind Hacker".) If this card is Xyz Summoned: You can banish 1 card on the field, face-down. You can detach 1 material from this card, then target up to 3 banished cards; shuffle them into the Deck(s), and if you do, this card gains 500 ATK/DEF. You can only use each effect of "Number 89: The Reaver of Minds, Diablosis" once per turn.
+[18293603] to: 2 Level 7 monstersIf this card is Xyz Summoned: You can banish 1 card on the field, face-down. During the Main Phase: You can apply 1 of these effects, but you cannot use that same effect next turn. If there are more than 3 cards banished, this effect becomes a Quick Effect.●Detach 1 material from this card, then target 1 monster on the field; banish it, face-down.●Target up to 3 banished cards; shuffle the first 2 into the Deck(s) and attach the third to this card, and if you do, make this card gain 500 ATK/DEF. You can only use each effect of "Number 89: The Reaver of Minds, Diablosis" once per turn.
+[18293605] warning: card id 4883125 (Twirlstia Wrenorchid) is not public
+[18293605] warning: card id 4896262 (Twirlstia Wings of Hope) is not public
+[18324074] note: card id 4518714 (Altergeist Meduplex) was made public
+[18324074] note: property 'name' of card id 3276067 (Arwin, the Augment Invoker) was changed
+[18324074] from: Arwin, the Arsenal Invoker
+[18324074] to: Arwin, the Augment Invoker
+[18324074] note: property 'effect' of card id 3276067 (Arwin, the Augment Invoker) was changed
+[18324074] from: During your Main Phase (Quick Effect): You can Tribute this card; Special Summon 1 Cyborg monster from your Deck that is 1 Level higher than the Level this card had on the field, also, for the rest of the turn, you cannot Special Summon monsters from the Extra Deck, except Cyborg monsters. During your Main Phase: You can discard 1 monster; this card's Level becomes the discarded monster's Level. You can only use each effect of "Arwin, the Arsenal Invoker" once per turn.
+[18324074] to: During your Main Phase (Quick Effect): You can Tribute this card; Special Summon 1 Cyborg monster from your Deck that is 1 Level higher than the Level this card had on the field, also, for the rest of the turn, you cannot Special Summon monsters from the Extra Deck, except Cyborg monsters. During your Main Phase: You can discard 1 monster; this card's Level becomes the discarded monster's Level. You can only use each effect of "Arwin, the Augment Invoker" once per turn.
+[18324074] note: card id 4715750 (Artillery Beetle) was made public
+[18324074] note: card id 4518693 (Altergeist Arachnalyzer) was made public
+[18324074] note: [+] added new card 2134934 (Foxphet Tale: The Silver Luck)
+[18324074] note: card id 4519437 (Altergeist Adzip) was made public
+[18324082] note: [+] added new card 1023689 (C.I. Administrator Lilith)
+[18324082] warning: card id 4430628 (Blitzkrieg Tempester Dash) is not public
+[18324082] note: property 'effect' of card id 4506140 (Birdbloom) was changed
+[18324082] from: Once per turn: You can send 1 "dbloom" Spell/Trap from your Deck to the GY; return this card to the hand. This is a Quick Effect if it was Normal Summoned. When you activate a "Lindbloom" effect, even during the damage step (Quick Effect): You can Special Summon this card from your hand or GY, but if you Summon it from the GY, banish it when it is sent to the GY. You can only use this effect of "Birdbloom" once per turn.
+[18324082] to: You can send 1 "dbloom" Spell/Trap from your Deck to the GY; return this card to the hand. This is a Quick Effect if it was Normal Summoned. When you activate a "Lindbloom" effect, even during the damage step (Quick Effect): You can Special Summon this card from your hand or GY, but if you Summon it from the GY, banish it when it is sent to the GY. You can only use each effect of "Birdbloom" once per turn.
+[18324084] note: property 'effect' of card id 4569349 (El Shaddoll Windierre) was changed
+[18324084] from: 1 "Shaddoll" monster + 1 DARK monsterMust first be Fusion Summoned. If this card is sent to the GY: You can target 1 "Shaddoll" Spell/Trap in your GY; add it to your hand. Other "Shaddoll" Fusion Monsters you control cannot be destroyed by card effects. You can only use each of the following effects of "El Shaddoll Windierre" once per turn. (Quick Effect): You can change 1 face-down Defense Position monster you control to face-up Attack or Defense Position. (Quick Effect): You can change 1 face-up "Shaddoll" monster you control to face-down Defense Position.
+[18324084] to: 1 "Shaddoll" monster + 1 DARK monsterMust first be Fusion Summoned. If this card is sent to the GY: You can target 1 "Shaddoll" Spell/Trap in your GY; add it to your hand. Other "Shaddoll" Fusion Monsters you control cannot be destroyed by card effects. You can only use each of the following effects of "El Shaddoll Windierre" once per turn. If this card is Fusion Summoned: You can add up to "Shaddoll" monsters from your GY and/or banishment to your hand, up to the number of Fusion Monsters you control. (Quick Effect): You can show 1 "Shaddoll" Flip Monster in your hand or field (if it is Set, reveal it), and if you do, apply its FLIP effect, then you can send it to the GY.
+[18324084] note: property 'effect' of card id 3342609 (Box of Phrightening Parts) was changed
+[18324084] from: Special Summon 1 "Phright" monster from your hand or GY, but send it to the GY at the end of this Phase OR add up to 2 "Phright" cards from your GY to your hand, except "Box of Phrightening Parts". If a "Phright" monster(s) is sent to your GY by card effect or to activate an Xyz Monster's effect: You can Set this card from your GY, but banish it when it leaves the field. You can only use each effect of "Box of Phrightening Parts" once per turn.
+[18324084] to: Special Summon 1 "Phright" monster from your hand or GY, but send it to the GY at the start of the next Phase OR add up to 2 "Phright" cards from your GY to your hand, except "Box of Phrightening Parts". If a "Phright" monster(s) is sent to your GY by card effect or to activate an Xyz Monster's effect: You can Set this card from your GY, but banish it when it leaves the field. You can only use each effect of "Box of Phrightening Parts" once per turn.
+[18324084] note: property 'effect' of card id 3945037 (Clay, the Wings of Fire) was changed
+[18324084] from: 1 Tuner + 1+ non-Tuner monstersIf this card is Special Summoned from the Extra Deck: You can target an equal number of cards on each field; return them to the hand. (Quick Effect): You can choose zones on your field, up to the number of cards your opponent controls; until the end of this turn, cards in those zones cannot be destroyed or banished by card effects. You can only use each effect of "Clay, the Wings of Fire" once per turn.
+[18324084] to: 1 Tuner + 1+ non-Tuner monstersIf this card is Special Summoned from the Extra Deck: You can target an equal number of cards on each field (up to 2 each); return them to the hand. (Quick Effect): You can choose zones on your field, up to the number of cards your opponent controls; until the end of this turn, cards in those zones cannot be destroyed or banished by card effects. You can only use each effect of "Clay, the Wings of Fire" once per turn.
+[18324097] warning: card id 4151302 (Lee the World Legacy Memory) is not public
+[18324104] note: property 'name' of card id 3174365 (Jasilisk Mentorship) was changed
+[18324104] from: Jasilisk Training
+[18324104] to: Jasilisk Mentorship
+[18324104] note: property 'effect' of card id 3174365 (Jasilisk Mentorship) was changed
+[18324104] from: Add 1 "Jasilisk" monster from your Deck to your hand. During the Main Phase, except the turn this card was sent to the GY: You can banish 1 "Jasilisk" monster from your GY; Set this card to your field. You can only use 1 "Jasilisk Training" effect per turn, and only once that turn.
+[18324104] to: Add 1 "Jasilisk" monster from your Deck to your hand, then if you control a Rank 5 or higher Reptile Xyz Monster, you can add a second such monster. If the a "Jasilisk" monster effect is activated while this card is in your GY: You can banish this card; add 1 "Jasil" Spell/Trap from your GY to your hand. You can only use each effect of "Jasilisk Mentorship" once per turn.
+[18324104] note: property 'effect' of card id 2127213 (Jasilisk Swindler) was changed
+[18324104] from: If you control no monsters, you can Special Summon this card (from your hand). If this card is Normal or Special Summoned: You can add 1 "Jasilisk" card from your Deck to your hand. (Quick Effect): You can detach 1 material from an Xyz Monster you control, then target 1 Set card on the field; send it to the GY, and if you do, both players draw 1 card. You can only use 1 effect of "Jasilisk Swindler" per turn, and only once that turn.
+[18324104] to: If you control no monsters, you can Special Summon this card (from your hand). If this card is Normal or Special Summoned: You can add 1 "Jasil" card from your Deck to your hand. (Quick Effect): You can detach 1 material from an Xyz Monster you control, then target 1 card on the field; send it to the GY, also, Special Summon this card from your GY. You can only use 1 effect of "Jasilisk Swindler" per turn, and only once that turn.
+[18324104] note: property 'atk' of card id 2127213 (Jasilisk Swindler) was changed
+[18324104] from: 2100
+[18324104] to: 1800
+[18324104] note: property 'def' of card id 2127213 (Jasilisk Swindler) was changed
+[18324104] from: 1600
+[18324104] to: 1800
+[18324104] note: property 'name' of card id 2127188 (Jasilisk Chameleos Scout) was changed
+[18324104] from: Jasilisk Scout
+[18324104] to: Jasilisk Chameleos Scout
+[18324104] note: property 'effect' of card id 2127188 (Jasilisk Chameleos Scout) was changed
+[18324104] from: If a "Jasilisk" monster is Summoned to your field: You can Special Summon this card from your hand, then, you can add 1 "Jasilisk" card that is banished to your hand. If this card is detached from an Xyz Monster or destroyed by an opponent's card: You can add 1 "Jasilisk" card from your GY to your hand. You can only use each effect of "Jasilisk Scout" once per turn.
+[18324104] to: If a "Jasilisk" monster effect is activated: You can Special Summon this card from your hand, then, you can add 1 "Jasilisk" card from your GY or banishment to your hand. If this card is detached from an Xyz Monster or destroyed by an opponent's card: You can activate this effect; during the next End Phase, look at your opponent's hand. You can only use each effect of "Jasilisk Chameleos Scout" once per turn.
+[18324104] note: property 'attribute' of card id 2127188 (Jasilisk Chameleos Scout) was changed
+[18324104] from: WIND
+[18324104] to: EARTH
+[18324104] note: property 'def' of card id 2127188 (Jasilisk Chameleos Scout) was changed
+[18324104] from: 1800
+[18324104] to: 1900
+[18324104] note: property 'name' of card id 2127241 (Jasilisk Marsh Stalker) was changed
+[18324104] from: Jasilisk River Warden
+[18324104] to: Jasilisk Marsh Stalker
+[18324104] note: property 'effect' of card id 2127241 (Jasilisk Marsh Stalker) was changed
+[18324104] from: If you control a Reptile monster: You can Special Summon this card from your hand. If this card is detached from an Xyz Monster or destroyed by an opponent's card: You can target 1 other "Jasilisk" monster in your GY; attach it to a Rank 5 Xyz Monster you control as material. You can only use each effect of "Jasilisk River Warden" once per turn.
+[18324104] to: If you control a Level/Rank 5 Reptile monster: You can Special Summon this card from your hand. If this card is detached from an Xyz Monster or destroyed by an opponent's card: You can attach 1 other Level 5 Reptile monster from your GY to an Xyz Monster you control. You can only use each effect of "Jasilisk Marsh Stalker" once per turn.
+[18324104] note: property 'attribute' of card id 2127241 (Jasilisk Marsh Stalker) was changed
+[18324104] from: WATER
+[18324104] to: EARTH
+[18324104] note: property 'atk' of card id 2127241 (Jasilisk Marsh Stalker) was changed
+[18324104] from: 1800
+[18324104] to: 1600
+[18324104] note: property 'name' of card id 4336189 (Jasilisk Arcanic Discovery) was changed
+[18324104] from: Jasilisk Forging
+[18324104] to: Jasilisk Arcanic Discovery
+[18324104] note: property 'effect' of card id 4336189 (Jasilisk Arcanic Discovery) was changed
+[18324104] from: Activate 1 of the following effects;● Send 2 "Jasilisk" cards from your hand to the GY; draw 2 cards.● Target 1 "Jasilisk" Xyz Monster you control; attach 1 Reptile monster from your hand or GY to to as material.You can only activate 1 "Jasilisk Forging" per turn.
+[18324104] to: Activate 1 of these effects (but you can only use each effect of this "Jasilisk Arcanic Discovery" once per turn);● Special Summon 1 Level 5 Reptile monster from your hand or Deck, but if you Summon from Deck this way, discard 1 card.● Target up to 2 "Jasil" cards in your GY; add them to your hand.
+[18324104] note: property 'name' of card id 3508434 (Jasilisk War Strider) was changed
+[18324104] from: Jasilisk Apothecary
+[18324104] to: Jasilisk War Strider
+[18324104] note: property 'effect' of card id 3508434 (Jasilisk War Strider) was changed
+[18324104] from: You can Normal Summon this card without Tributing. If this card is Normal or Special Summoned: You can discard any number of "Jasilisk" cards; send 1 "Jasilisk" Spell/Trap from your Deck to the GY, and if you do, during the End Phase, draw cards equal to the number of cards discarded to activate this effect. If this card is detached from an Xyz Monster or destroyed by your opponent's card: You can target 1 "Jasilisk" Xyz Monster you control or that is in your GY; gain LP equal to its ATK. You can only use each effect of "Jasilisk Apothecary" once per turn.
+[18324104] to: You can Normal Summon this card without Tributing. If this card is Normal or Special Summoned: You can send to the GY or Set to your field 1 "Jasil" Spell/Trap from your Deck. If this card is detached from an Xyz Monster or destroyed by an opponent's card: You can target 1 "Jasilisk" monster you control; apply 1 of these effects depending on its Type.● Non-Xyz: Discard 1 card, then draw 2 cards.● Xyz: Destroy 1 Spell/Trap on the field.You can only use each effect of "Jasilisk War Strider" once per turn.
+[18324104] note: property 'attribute' of card id 3508434 (Jasilisk War Strider) was changed
+[18324104] from: LIGHT
+[18324104] to: EARTH
+[18324104] note: property 'atk' of card id 3508434 (Jasilisk War Strider) was changed
+[18324104] from: 1500
+[18324104] to: 2100
+[18324104] note: property 'def' of card id 3508434 (Jasilisk War Strider) was changed
+[18324104] from: 1900
+[18324104] to: 1800
+[18324104] note: property 'name' of card id 2127178 (Jasilisk Nagini Sharpshooter) was changed
+[18324104] from: Jasilisk Alchemist
+[18324104] to: Jasilisk Nagini Sharpshooter
+[18324104] note: property 'effect' of card id 2127178 (Jasilisk Nagini Sharpshooter) was changed
+[18324104] from: If you control a "Jasilisk" monster, you can Special Summon this card (from your hand) by discarding 1 Level 5 Reptile monster. You can only Special Summon "Jasilisk Alchemist" once per turn this way. You can only use each of the following effects of "Jasilisk Alchemist" once per turn. If this card is Special Summoned: You can target 1 "Jasilisk" monster you control; it gains 400 ATK/DEF, and if it does, add 1 "Jasilisk" Spell/Trap from your Deck to your hand. If this card is detached from an Xyz Monster or destroyed by an opponent's card: You can target 1 face-up monster on the field; its ATK/DEF become 0.
+[18324104] to: During the Main Phase (Quick Effect): You can send 1 Level 5 Reptile monster from your Deck to the GY; Special Summon this card from your hand, then you can destroy 1 card in this card's Column. If this card is detached from an Xyz Monster or destroyed by an opponent's card: You can target 1 other "Jasilisk" card face-up in your possession; return it and this card to your hand.
+[18324104] note: property 'attribute' of card id 2127178 (Jasilisk Nagini Sharpshooter) was changed
+[18324104] from: DARK
+[18324104] to: EARTH
+[18324104] note: property 'atk' of card id 2127178 (Jasilisk Nagini Sharpshooter) was changed
+[18324104] from: 1700
+[18324104] to: 1900
+[18324104] note: property 'def' of card id 2127178 (Jasilisk Nagini Sharpshooter) was changed
+[18324104] from: 1600
+[18324104] to: 800
+[18324104] note: property 'effect' of card id 4506134 (Houndbloom) was changed
+[18324104] from: If this card is Normal or Special Summoned: You can target 1 monster your opponent controls; apply 1 of these effects.● If that target is a "bloom" monster, take control of it until the end of this Phase. ● Negate that target's effects, also, its name becomes "Lendbloom". When you activate a "Lindbloom" effect, or, if a "dbloom" card is destroyed, even during the damage step (Quick Effect): You can Special Summon this card from your GY, but banish it when it is sent to the GY. You can only use this effect of "Houndbloom" once per turn.
+[18324104] to: If this card is Normal or Special Summoned: You can target 1 monster your opponent controls; apply 1 of these effects.● If that target is a "dbloom" monster, take control of it. ● Negate that target's effects, also, its name becomes "Lendbloom". When you activate a "Lindbloom" effect, or, if a "dbloom" card is destroyed, even during the damage step (Quick Effect): You can Special Summon this card from your GY, but banish it when it is sent to the GY. You can only use this effect of "Houndbloom" once per turn.
+[18324112] warning: card id 4603541 (Musslebound Lobster) is not public
+[18324112] warning: card id 2826527 (Mind Layer Ten) is not public
+[18324119] note: property 'effect' of card id 2127260 (Prehistoric World Jasilia) was changed
+[18324119] from: Reptile monsters on the field gain 300 DEF. While you control a Rank 5 or higher Reptile Xyz Monster, this card cannot be destroyed by card effects. During your Main Phase: You can discard 1 card; add 1 "Jasilisk" card from your Deck to your hand. You can only use this effect of "Prehistoric World Jasilia" once per turn. Once per turn, if a "Jasilisk" Xyz Monster is Special Summoned: You can attach 1 "Jasilisk" monster from your Deck to that monster as material.
+[18324119] to: Reptile monsters on the field gain 300 ATK/DEF. While you control a Rank 5 or higher Reptile Xyz Monster, this card cannot be destroyed by card effects. During your Main Phase: You can discard 1 card; add 1 "Jasilisk" card from your Deck to your hand. You can only use this effect of "Prehistoric World Jasilia" once per turn. Once per turn, if a "Jasilisk" Xyz Monster is Special Summoned: You can attach 1 "Jasilisk" monster from your Deck to that monster as material.
+[18324119] note: [+] added new card 4057942 (Pot of Wrath)
+[18324119] note: [+] added new card 4057935 (Pot of Sloth)
+[18324119] note: [+] added new card 4057893 (Pot of Luxuria)
+[18324119] note: [+] added new card 4057876 (Pot of Forgery)
+[18324119] note: [+] added new card 4057944 (Pot of Envy)
+[18324119] note: property 'effect' of card id 3339734 (Phrightful Phantom - Mang-Eyl) was changed
+[18324119] from: If a monster you control would be used as Xyz Material for a Machine/Zombie monster, this card in your hand can also be used as material. When this card is detached from a "Phright" Xyz Monster and sent to the GY to activate a monster effect (Quick Effect): Special Summon it, but send it to the GY at the end of this Phase. Before resolving an opponent's monster effect activated in their GY or Extra Deck, if your opponent can banish cards, they can banish the top 4 cards of their Deck (all, if less than 4), otherwise negate that effect and banish that card.
+[18324119] to: If a monster you control would be used as Xyz Material for a Machine/Zombie monster, this card in your hand can also be used as material. When this card is detached from a "Phright" Xyz Monster and sent to the GY to activate a monster effect (Quick Effect): Special Summon it, but send it to the GY at the start of the next Phase. Before resolving an opponent's monster effect activated in their GY or Extra Deck, if your opponent can banish cards, they can banish the top 4 cards of their Deck (all, if less than 4), otherwise negate that effect and banish that card.
+[18324119] note: property 'effect' of card id 3339727 (Phrightful Phantom - Fre-D) was changed
+[18324119] from: If a monster you control would be used as Xyz Material for a Machine/Zombie monster, this card in your hand can also be used as material. When this card is detached from a "Phright" Xyz Monster and sent to the GY to activate a monster effect (Quick Effect): Special Summon it, but send it to the GY at the end of this Phase. Before resolving an opponent's monster effect activated on their field, if your opponent can banish cards, they can banish the top 4 cards of their Deck (all, if less than 4), otherwise negate that effect and destroy that card.
+[18324119] to: If a monster you control would be used as Xyz Material for a Machine/Zombie monster, this card in your hand can also be used as material. When this card is detached from a "Phright" Xyz Monster and sent to the GY to activate a monster effect (Quick Effect): Special Summon it, but send it to the GY at the start of the next Phase. Before resolving an opponent's monster effect activated on their field, if your opponent can banish cards, they can banish the top 4 cards of their Deck (all, if less than 4), otherwise negate that effect and destroy that card.
+[18324119] note: property 'effect' of card id 3339807 (Phrightful Phantom - Fox-E) was changed
+[18324119] from: If a monster you control would be used as Xyz Material for a Machine/Zombie monster, this card in your hand can also be used as material. When this card is detached from a "Phright" Xyz Monster and sent to the GY to activate a monster effect (Quick Effect): Special Summon it, but send it to the GY at the end of this Phase. Before resolving an opponent's monster effect activated while banished or in the hand, if your opponent can banish cards, they can banish the top 4 cards of their Deck (all, if less than 4), otherwise negate that effect and banish that card.
+[18324119] to: If a monster you control would be used as Xyz Material for a Machine/Zombie monster, this card in your hand can also be used as material. When this card is detached from a "Phright" Xyz Monster and sent to the GY to activate a monster effect (Quick Effect): Special Summon it, but send it to the GY at the start of the next Phase. Before resolving an opponent's monster effect activated while banished or in the hand, if your opponent can banish cards, they can banish the top 4 cards of their Deck (all, if less than 4), otherwise negate that effect and banish that card.
+[18324119] note: property 'effect' of card id 3339730 (Phrightful Phantom - Chi-Cah) was changed
+[18324119] from: If a monster you control would be used as Xyz Material for a Machine/Zombie monster, this card in your hand can also be used as material. When this card is detached from a "Phright" Xyz Monster and sent to the GY to activate a monster effect (Quick Effect): Special Summon it, but send it to the GY at the end of this Phase. Before resolving an opponent's Spell Card or effect activated on their field, if your opponent can banish cards, they can banish the top 4 cards of their Deck (all, if less than 4), otherwise negate that effect and destroy that card.
+[18324119] to: If a monster you control would be used as Xyz Material for a Machine/Zombie monster, this card in your hand can also be used as material. When this card is detached from a "Phright" Xyz Monster and sent to the GY to activate a monster effect (Quick Effect): Special Summon it, but send it to the GY at the start of the next Phase. Before resolving an opponent's Spell Card or effect activated on their field, if your opponent can banish cards, they can banish the top 4 cards of their Deck (all, if less than 4), otherwise negate that effect and destroy that card.
+[18324119] note: property 'effect' of card id 3339732 (Phrightful Phantom - Bon-Nei) was changed
+[18324119] from: If a monster you control would be used as Xyz Material for a Machine/Zombie monster, this card in your hand can also be used as material. When this card is detached from a "Phright" Xyz Monster and sent to the GY to activate a monster effect (Quick Effect): Special Summon it, but send it to the GY at the end of this Phase. Before resolving an opponent's Trap Card or effect activated on their field, if your opponent can banish cards, they can banish the top 4 cards of their Deck (all, if less than 4), otherwise negate that effect and destroy that card.
+[18324119] to: If a monster you control would be used as Xyz Material for a Machine/Zombie monster, this card in your hand can also be used as material. When this card is detached from a "Phright" Xyz Monster and sent to the GY to activate a monster effect (Quick Effect): Special Summon it, but send it to the GY at the start of the next Phase. Before resolving an opponent's Trap Card or effect activated on their field, if your opponent can banish cards, they can banish the top 4 cards of their Deck (all, if less than 4), otherwise negate that effect and destroy that card.
+[18324119] note: property 'def' of card id 4506149 (Wildbloom) was changed
+[18324119] from: 3000
+[18324119] to: 3300
+[18324155] warning: card id 3972191 (Illusion of Power) is not public
+[18324155] note: [+] added new card 4131347 (Hot Red Dragon Archfiend Lord Lotus)
+[18324155] note: property 'name' of card id 4568294 (Graceful Floral Emperor of the First Heaven) was changed
+[18324155] from: Earthly Floral Emperor of the First Heaven
+[18324155] to: Graceful Floral Emperor of the First Heaven
+[18324155] note: property 'effect' of card id 4568294 (Graceful Floral Emperor of the First Heaven) was changed
+[18324155] from: Must first be Ritual Summoned. You can Ritual Summon this card with "Earth Chant". Each time your opponent activates a card or effect, you gain 200 LP, and if you do, inflict 200 damage to your opponent. When your opponent activates a card or effect while you control this Ritual Summoned card (Quick Effect): You can negate the activation, and if you do, destroy it, and if you do that, place this card in your Pendulum Zone. You can only use this effect of "Earthly Floral Emperor of the First Heaven" once per turn.
+[18324155] to: Must first be Ritual Summoned. You can Ritual Summon this card with "Earth Chant". Each time your opponent activates a card or effect, you gain 200 LP, and if you do, inflict 200 damage to your opponent. When your opponent activates a card or effect while you control this Ritual Summoned card (Quick Effect): You can negate the activation, and if you do, destroy it, and if you do that, place this card in your Pendulum Zone. You can only use this effect of "Graceful Floral Emperor of the First Heaven" once per turn.
+[18324155] note: property 'pendulum_effect' of card id 4568294 (Graceful Floral Emperor of the First Heaven) was changed
+[18324155] from: You cannot Pendulum Summon monsters from your Extra Deck, except Ritual Monsters. You can banish 1 Spell from your GY; Ritual Summon 1 Ritual Monster from your hand, GY, face-up Extra Deck or Pendulum Zone. You must also Tribute monsters from your hand and/or Field whose combined Levels equal or exceed the Level of the Ritual Monster you Ritual Summon. You can only use this effect of "Earthly Floral Emperor of the First Heaven" once per turn.
+[18324155] to: You cannot Pendulum Summon monsters from your Extra Deck, except Ritual Monsters. You can banish 1 Spell from your GY; Ritual Summon 1 Ritual Monster from your hand, GY, face-up Extra Deck or Pendulum Zone. You must also Tribute monsters from your hand and/or Field whose combined Levels equal or exceed the Level of the Ritual Monster you Ritual Summon. You can only use this effect of "Graceful Floral Emperor of the First Heaven" once per turn.
+[18324168] note: property 'effect' of card id 4506130 (Leopardbloom) was changed
+[18324168] from: You can discard this card; Special Summon 1 "dbloom" monster from your hand, and if you do, it gains this effect.● Once while face-up on the field (Quick Effect): You can discard 1 card, and if you do, Special Summon 1 "dbloom" monster from your Deck, then the ATK/DEF of 1 monster your opponent owns becomes equal to the summoned monster's ATK.When you activate a "Lindbloom" effect, even during the damage step (Quick Effect): You can Special Summon this card from your GY, but return it to the hand when it is sent to the GY. You can only use this effect of "Leopardbloom" once per turn.
+[18324168] to: You can discard this card; Special Summon 1 "dbloom" monster from your hand, and if you do, it gains this effect.● Once while face-up on the field (Quick Effect): You can Special Summon 1 "dbloom" monster from your Deck, then the ATK/DEF of 1 monster your opponent owns becomes equal to the summoned monster's ATK.When you activate a "Lindbloom" effect, even during the damage step (Quick Effect): You can Special Summon this card from your GY, but return it to the hand when it is sent to the GY. You can only use this effect of "Leopardbloom" once per turn.
+[18324168] note: property 'effect' of card id 2127271 (Jasilisk Triumph) was changed
+[18324168] from: "Jasilisk" monsters you control gain 300 ATK and cannot be destroyed by card effects. If a "Jasilisk" Xyz Monster you control activates its effect: You can pay 800 LP; apply the appropriate effect depending on how many times this effect of "Jasilisk Triumph" has been activated this turn.● 1: Add 1 "Jasilisk" card from your GY to your hand.● 2: Special Summon 1 "Jasilisk" monster from your hand.● 3: Special Summon 2 Level 5 "Jasilisk" monsters (1 from your hand and 1 from your GY), and if you do, immediately after this effect resolves, Xyz Summon 1 "Jasilisk" monster from your Extra Deck using only those Summoned monsters as material.
+[18324168] to: "Jasil" monsters you control can make up to 2 attacks on monsters during each Battle Phase. You can only use each effect of "Jasilisk Triumph" once per turn. During the Main Phase, if a Level/Rank 5 Reptile monster activated its effect this turn: You can Special Summon 1 "Jasil" monster from your hand or GY. If a Level/Rank 5 Reptile Monster is Special Summoned from your Deck or Extra Deck: You can target 1 monster on the field; destroy it.
+[18324168] note: property 'effect' of card id 3342108 (Phrightful Phantom - Mare-E) was changed
+[18324168] from: 2+ Level 4 "Phright" monsters(Quick Effect): You can detach 1 material from this card; Special Summon 1 "Phright" monster from your Deck or GY, but send it to the GY at the end of this Phase. When a card or effect is activated that would destroy another "Phright" card(s) you control (Quick Effect): You can Tribute this card; negate that activation, and if you do, banish the top card of your opponent's Deck for each "Phright" card you control +1 (all, if less than). You can only use each effect of "Phrightful Phantom - Mare-E" once per turn.
+[18324168] to: 2+ Level 4 "Phright" monsters(Quick Effect): You can detach 1 material from this card; Special Summon 1 "Phright" monster from your Deck or GY, but send it to the GY at the start of the next Phase. When a card or effect is activated that would destroy another "Phright" card(s) you control (Quick Effect): You can Tribute this card; negate that activation, and if you do, banish the top card of your opponent's Deck for each "Phright" card you control +1 (all, if less than). You can only use each effect of "Phrightful Phantom - Mare-E" once per turn.
+[18324173] warning: card id 4279698 (Ninjdow Kaze) is not public
+[18324173] note: property 'effect' of card id 4535571 (The Remorseful Thorn Knight) was changed
+[18324173] from: 1 Warrior monster + 2 LIGHT and/or DARK monstersMust first be Fusion Summoned or Special Summoned (from your Extra Deck) by Tributing 1 Fairy, Fiend, Warrior or Spellcaster monster and banishing 2 Spells from your GY. Other monsters cannot be targeted for attacks. When your opponent's monster declares an attack, or when your opponent activates a Spell Card or effect (Quick Effect): You can Tribute 2 monsters you control, including this card; negate the attack or activation, then, Special Summon 1 "The Monsterous Thorn Basilisk" from your Extra Deck. You can only use this effect of "The Remorseful Thorn Knight" once per turn.
+[18324173] to: 1 LIGHT Monster + 1 DARK MonsterOther monsters you control cannot be targeted for attacks. When a Spell/Trap or it's effect is activated (Quick Effect): You can tribute this card; Negate the activation, then, Special Summon 1 "The Monsterous Thorn Basilisk" from your Extra Deck. During the End Phase if this card wasn't sent to the GY this turn: You can banish 1 Warrior Monster or Fusion Monster from your GY; Special Summon this card. You can only use 1 effect of "The Remorseful Thorn Knight" per turn and only once per turn.
+[18324173] note: property 'def' of card id 4535571 (The Remorseful Thorn Knight) was changed
+[18324173] from: 2500
+[18324173] to: 3500
+[18324173] note: property 'effect' of card id 4461886 (The Monsterous Thorn Basilisk) was changed
+[18324173] from: 1 Ritual, Fusion, Synchro, Xyz or Link Monster + 2 monsters you controlMust be Fusion Summoned or Special Summoned by the effect of "The Remorseful Thorn Knight". Your opponent cannot activate monster effects during the Battle Phase. If this card battles an opponent's monster: You can activate this effect; double all damage your opponent takes until the end of this turn, also this card inflicts piercing battle damage until the end of this Battle Phase. (Quick Effect): You can return this card to the Extra Deck; Special Summon 1 "The Remorseful Thorn Knight" from your GY. You can only use each effect of "The Monsterous Thorn Basilisk" once per turn.
+[18324173] to: 1 Ritual, Fusion, Synchro, Xyz or Link Monster + 2 monsters you controlMust be Fusion Summoned or Special Summoned by the effect of "The Remorseful Thorn Knight". This card cannot be targeted by card effects. If this card destroys a monster by battle: You can inflict 2300 damage to youe opponent. If a monster is Normal or Special Summoned: You can make it's ATK and DEF 0, then, draw 1 card. You can only use each effect of "The Monsterous Thorn Basilisk" once per turn
+[18327612] note: property 'name' of card id 4975927 (Number 89a: Diablosis, the Dimensional Tyrant) was changed
+[18327612] from: Number C89: Diablosis the Dimensional Tyrant
+[18327612] to: Number 89a: Diablosis, the Dimensional Tyrant
+[18327612] note: property 'effect' of card id 4975927 (Number 89a: Diablosis, the Dimensional Tyrant) was changed
+[18327612] from: 3 Level 8 monsters(This card's name is always treated as "Number 89: Diablosis the Mind Hacker".)If this card is Xyz Summoned: You can draw cards equal to the number of materials this card has, then banish cards from your hand, face-down, equal to that number -1. You can shuffle up to 4 banished cards into the Deck(s)/Extra Deck(s), then, for every 2 cards shuffled, detach 1 material from this card and target 1 Effect Monster on the field; negate their effects until the end of this turn. You can only use each effect of "Number C89: Diablosis the Dimensional Tyrant" once per turn.
+[18327612] to: 3 Level 8 monstersOnce per turn, you can also Xyz Summon this card using 1 Rank 7 monster you control as material (Transfer its materials to this card). If this card is Xyz Summoned: You can draw cards equal to the number of materials this card has, then banish cards from your hand, face-down, equal to that number -1. When your opponent activates a card or effect (Quick Effect): You can shuffle 3 cards from either banishment into the Deck, then, apply 1 of these effects. ●Banish the top 3 cards of your opponent's Deck, face-down.●Your opponent banishes 1 monster from their Extra Deck, face-down.You can only use each effect of "Number 89a: Diablosis, the Dimensional Tyrant" once per turn.
+[18327946] note: [+] added new card 5581675 (Clash of Hell and Heaven)
+[18327946] note: [+] added new card 5581674 (Hazbin Hotel)
+[18327946] note: [+] added new card 5581671 (Vaggie, Fallen Angel)
+[18327946] note: [+] added new card 5581670 (Charlie, Hell's Princess)
+[18327946] note: [+] added new card 5580879 (Nifty, Hotel's Cleaner)
+[18327946] note: [+] added new card 5580876 (Keekee, Hotel's Key)
+[18327946] note: [+] added new card 5580874 (Husk, Alcoholic Desk Clerk)
+[18327946] note: [+] added new card 5580872 (Angel Dust, Hotel's Resident)
+[18327946] note: [+] added new card 5581673 (Alastor, Radio Demon)
+[18327946] note: [+] added new card 5580880 (Adam, First Human)
+[18327946] note: [+] added new card 5580867 (Lucifer, King of Hell)
+[18327989] note: [+] added new card 3970133 (Princess Nemleria's Flee-Fly-Foe Fumble)
+[18328051] note: [+] added new card 5338178 (Protogen.Subject.Iota.Captain)
+[18328051] note: [+] added new card 5338311 (Protogen.Subject.Thi.Awakened)
+[18328051] note: [+] added new card 5338355 (Protogen.Subject.Eta.Scouter)
+[18328051] note: [+] added new card 5338156 (Protogen.Subject.Psi.Repairer)
+[18328199] note: [+] added new card 3508623 (Intermission of the Branded)
+[18328199] note: [+] added new card 3508614 (Despian Acapella)
+[18328199] note: property 'effect' of card id 5132602 (Malkarion, The Shock Keystone Dauntless Behemoth) was changed
+[18328199] from: 1 WIND monster + 1+ "Dauntless Behemoth" monstersIf this card is Fusion Summoned: You can target monsters your opponent controls, equal to the number of monsters used as Fusion material for this card's Fusion Summon; banish them. If this card was Fusion Summoned using 5 or more materials, you can also target cards in your opponent's GY. (max. 2). During the Main Phase (Quick Effect): You can banish 1 "Dauntless Behemoth" monster from your GY, and if you do, add 1 other non-WIND "Dauntless Behemoth" monster from your GY or banishment to your hand. You can only use each effect of "Malkarion, the Shock Keystone Dauntless Behemoth" once per turn.
+[18328199] to: 1 WIND monster + 1+ "Dauntless Behemoth" monstersIf this card is Fusion Summoned: You can target monsters your opponent controls, up to the number of monsters used as Fusion material for this card's Fusion Summon; banish them. If this card was Fusion Summoned using 3 or more materials, you can also target cards in your opponent's GY. (max. 2). During the Main Phase (Quick Effect): You can banish 1 "Dauntless Behemoth" monster from your GY, and if you do, add 1 other non-WIND "Dauntless Behemoth" monster from your GY or banishment to your hand. You can only use each effect of "Malkarion, the Shock Keystone Dauntless Behemoth" once per turn.
+[18328199] note: [+] added new card 3508588 (Quem of the Despian Dragon)
+[18328263] note: [+] added new card 5517212 (Chemical Cure Refinery)
+[18328263] note: [+] added new card 5517181 (Chemical Cure - Red)
+[18328263] note: [+] added new card 5517170 (Chemical Cure - Blue)
+[18328263] note: [+] added new card 5517217 (R.X Purple Medicine)
+[18328263] note: [+] added new card 5517159 (R.X Blue Medicine)
+[18328263] note: [+] added new card 5517147 (R.X Red Medicine)
+[18328263] note: [+] added new card 5517198 (Chemical Cure - Purple)
+[18328305] note: [+] added new card 5601661 (Mechanical Symbiote Jellyfish)
+[18328305] note: [+] added new card 5601268 (Mechanical Symbiote Kraken)
+[18328305] note: [+] added new card 5601301 (Mechanical Symbiote Whale)
+[18328305] note: [+] added new card 5521325 (Salmakis, Mystical Sprite Of Delusion)
+[18328305] note: [+] added new card 5521327 (Clytie, Mystical Sprite Of Adoration)
+[18328305] note: [+] added new card 5521265 (Minthe, Mystical Sprite Of Honor)
+[18328305] note: [+] added new card 5521264 (Echo, Mystical Sprite Of Sorrow)
+[18328305] note: [+] added new card 5606704 (Meteor Swarm Dragon)
+[18328305] note: [+] added new card 5606699 (Red-Eyes Black Meteor Dragon)
+[18328305] note: [+] added new card 5606703 (Red-Eyes Meteor Dragon)
+[18328305] note: [+] added new card 5601648 (Mechanical Symbiote Backdoor)
+[18328305] note: [+] added new card 5601282 (Mechanical Symbiote Curator)
+[18328305] note: [+] added new card 5601294 (Mechanical Symbiote Guidelight)
+[18328305] note: [+] added new card 5601258 (Mechanical Symbiote Node)
+[18328305] note: [+] added new card 5601255 (One with the Mechanical Symbiotes)
+[18328305] note: [+] added new card 5601263 (Mechanical Symbiote Downfall)
+[18328305] note: [+] added new card 5601303 (Mechanical Symbiote Launch)
+[18328305] note: [+] added new card 5601298 (Mechanical Symbiote Server Farm)
+[18328305] note: [+] added new card 5536879 (Mystical Sprite Rainbow Insignia)
+[18328305] note: [+] added new card 5532770 (Diable, The Deadly Tarot Hangman)
+[18328305] note: [+] added new card 5532764 (Tour, The Destined Tarot Tower)
+[18328305] note: [+] added new card 5527305 (Tressette, Diamond Ace Trump Crest)
+[18328305] note: [+] added new card 5521403 (Mystical Sprite Linking Circle)
+[18328305] note: [+] added new card 5521257 (Mystical Sprite Nights)
+[18328305] note: [+] added new card 5521244 (Mystalia, Mystical Sprite Domain)
+[18328305] note: [+] added new card 5521240 (Acanthus, Mystical Sprite Of Defiance)
+[18328305] note: [+] added new card 5521237 (Arethusa, Mystical Sprite Of Innocence)
+[18328305] note: [+] added new card 5521235 (Castalia, Mystical Sprite Of Rejection)
+[18328305] note: [+] added new card 5521227 (Lethe, Mystical Sprite Of Oblivion)
+[18328305] note: [+] added new card 5606706 (Meteor Swarm Entry Dragon)
+[18328305] note: [+] added new card 5606708 (Meteor Fall)
+[18328305] note: [+] added new card 5606709 (Meteor Dragon Calling)
+[18328305] note: [+] added new card 5606712 (Meteor Dragon's Chick)
+[18328305] note: [+] added new card 5606714 (Meteor Drake)
+[18328321] note: [+] added new card 5595232 (Red-Eyes Flame Swordsman)
+[18328321] note: [+] added new card 5606697 (Meteor Flare Fusion)
+[18328321] note: [+] added new card 5595264 (Red-Eyes Jupiter Dragon)
+[18328321] note: [+] added new card 5595219 (Red-Eyes Roar)
+[18328321] note: [+] added new card 5595205 (Red-Eyes Gearfried the Steel Knight)
+[18328321] note: [+] added new card 5595167 (Red-Eyes Meteor Metal Dragon)
+[18328321] note: [+] added new card 5303896 (R.E.X. Railcannon Rex)
+[18328321] note: [+] added new card 5059267 (R.E.X. Aggressive Battlegrounds)
+[18328321] note: [+] added new card 5059353 (R.E.X. Pteranadon Bomber)
+[18328321] note: [+] added new card 5059128 (R.E.X. Microraptor Scouts)
+[18328321] note: [+] added new card 5059124 (R.E.X. Armoured Ankylo)
+[18328321] note: [+] added new card 5059120 (R.E.X. Raptor Raiders)
+[18328321] note: [+] added new card 5595254 (Red-Eyes Turbo Dragon)
+[18328321] note: [+] added new card 5595241 (Red-Eyes Booster Dragon)
+[18328321] note: [+] added new card 5303927 (R.E.X. Quetzal Carrier)
+[18328321] note: [+] added new card 5303918 (R.E.X. Allosaurus Armoury)
+[18328321] note: [+] added new card 5059209 (R.E.X. Spinosaurus Sniper)
+[18328321] note: [+] added new card 5059221 (R.E.X. Gataling Gigantosaurus)
+[18328321] note: [+] added new card 5059133 (R.E.X. Triceratops Tank)
+[18328442] note: [+] added new card 5212911 (Aquamirror's Chamber)
+[18328442] note: [+] added new card 5212556 (Aquamirror Congregation)
+[18328545] note: property 'effect' of card id 5543548 (Dominus Triumph) was changed
+[18328545] from: If your opponent controls a card, you can activate this card from your hand. When your opponent activates a card or effect in the Gy, banishment or face-up Extra Deck: Negate that effect, then if you have a Trap in your GY, shuffle it into the Deck. If you activated this card from your hand, you cannot activate Set Spells/Traps for the rest of this Duel. You can only activate 1 "Dominus Triumph" per turn.
+[18328545] to: If your opponent controls a card, you can activate this card from your hand. When your opponent activates a card or effect in the GY, banishment or face-up Extra Deck: Negate that effect, then if you have a Trap in your GY, shuffle it into the Deck. If you activated this card from your hand, you cannot activate Set Spells/Traps for the rest of this Duel. You can only activate 1 "Dominus Triumph" per turn.
+[18328545] note: [+] added new card 5532621 (Grief, Incarnation of Sorrow)
+[18328545] note: [+] added new card 5532627 (Subtlety, Incarnation of Cunning)
+[18328545] note: [+] added new card 5532634 (Fury, Incarnation of Rage)
+[18328545] note: [+] added new card 5532638 (Endurance, Incarnation of Vitality)
+[18328545] note: [+] added new card 5532642 (Solitude, Incarnation of Silence)
+[18328545] note: [+] added new card 5545440 (Berserk Dread Dragon)
+[18328545] note: [+] added new card 5199282 (Guardian of the Wandering Spirits)
+[18328545] note: property 'effect' of card id 5148460 (Apocalypse Arsenal - Shiva) was changed
+[18328545] from: 3 monsters with different namesMust be Special Summoned (from your Extra Deck) by banishing the above cards from your hand or field. You can only Special Summon “Apocalypse Arsenal - Shiva” once per turn this way. You can only use each of the following effects of “Apocalypse Arsenal - Shiva” once per turn. If this card is Special Summoned: You can target 1 card on the field; destroy it, and if you do, this card cannot declare an attack this turn. (Quick Effect): You can target 1 monster you control; equip this card from your GY to it as an Equip Spell with this effect.● Your opponent cannot target this card with card effects.
+[18328545] to: 2 monsters with different namesIf this card is Special Summoned: You can target 1 card on the field; destroy it, and if you do, this card cannot declare an attack this turn. (Quick Effect): You can target 1 monster you control; equip this card from your GY to it as an Equip Spell with this effect.● Your opponent cannot target this card with card effects.
+[18328561] note: [+] added new card 5308563 (Spright Spear)
+[18328561] note: [+] added new card 5301204 (Quintus, Bishop for the Seaborn)
+[18328561] note: [+] added new card 5145787 (Seaborn Cephalopod)
+[18328561] note: [+] added new card 5121844 (Seaborn Crinoid)
+[18328561] note: [+] added new card 5121689 (Seaborn Humanoid)
+[18328561] note: [+] added new card 5145791 (Rise of the Sea Horrors)
+[18328561] note: [+] added new card 5248159 (Sal Viento, City of Desolation)
+[18328561] note: [+] added new card 5310822 (The Seaborn Project)
+[18328561] note: [+] added new card 5145797 (Utopia of We Many)
+[18328561] note: [+] added new card 5285050 (A Sacrifice for the Mother Ocean)
+[18328561] note: [+] added new card 5248078 (Equality as We Many)
+[18328561] note: [+] added new card 4082554 (Sharcuterie Feeding Frenzy)
+[18328561] note: [+] added new card 4082553 (Sharcuterie Boarding)
+[18328561] note: [+] added new card 4082547 (Sharcuterie Presentation)
+[18328561] note: [+] added new card 4082545 (Sharcuterie Butcher's Bay)
+[18328561] note: [+] added new card 4082544 (Sharcuterie White)
+[18328561] note: [+] added new card 4082539 (Sharcuterie Bull)
+[18328561] note: [+] added new card 4082536 (Sharcuterie Hammer)
+[18328561] note: [+] added new card 4082531 (Sharcuterie Tiger)
+[18328561] note: [+] added new card 4082529 (Sharcuterie Goblin)
+[18328561] note: [+] added new card 4889783 (Gilded Goldness of Shi-Zer-Mu)
+[18328561] note: [+] added new card 4608620 (Shi-Zer-Mu Escape)
+[18328561] note: [+] added new card 4461581 (Shi-Zer-Mu Storm)
+[18328561] note: [+] added new card 4461560 (Shi-Zer-Mu Invasion)
+[18328561] note: [+] added new card 4461546 (Shi-Zer-Mu Homecoming)
+[18328561] note: [+] added new card 5145865 ("Seaborn" Mártus, Witness to We Many)
+[18328561] note: [+] added new card 5145810 (Seaborn "Endspeaker", Will of We Many)
+[18328561] note: [+] added new card 5248222 (Seaborn "Herald", Messenger of We Many)
+[18328561] note: [+] added new card 4497203 (Treacherous Treader of Shi-Zer-Mu)
+[18328561] note: [+] added new card 4461654 (Lonely Leviathan of Shi-Zer-Mu)
+[18328561] note: [+] added new card 4461647 (Corrupted Cyclops of Shi-Zer-Mu)
+[18328561] note: [+] added new card 4461637 (Wild Worm of Shi-Zer-Mu)
+[18843519] note: property 'effect' of card id 5447092 (Echo, Courier of Azurite) was changed
+[18843519] from: If you control an "Azurite" monster: You can Special Summon this card from your hand, and if you do, you cannot Special Summon monsters for the rest of the turn, except Cyberse monsters. If this card is Normal or Special Summoned: You can place 1 Azurite Counter on an “Azurite” monster you control. You can remove 1 Azurite Counter from a monster you control; draw 1 card, then discard 1 card. You can only use each effect of “Echo, Courier of Azurite” once per turn.
+[18843519] to: If you control an "Azurite" monster: You can Special Summon this card from your hand, and if you do, you cannot Special Summon monsters for the rest of the turn, except Cyberse monsters. You can only use each of the following effects of "Echo, Courier of Azurite" once per turn.• When this card is Normal or Special Summoned: you can place 1 Azurite Counter on each "Azurite" monster you control.• You can remove 1 Azurite Counter from a monster you control; draw 1 card, then discard 1 card.• You can banish this card and 1 "Azurite" card from your GY, then target 1 "Azurite" monster in your GY or Banishment; add it to your hand.
+[18843519] note: property 'effect' of card id 5447077 (Kael, Keeper of Azurite) was changed
+[18843519] from: If this card is Normal or Special Summoned: Place 1 Azurite Counter on each “Azurite” monster you control. If this card is in your GY: you can remove 2 Azurite Counters from your field; Special Summon this card, and if you do, add 1 “Azurite” card from your Deck to your hand, except “Kael, Keeper of Azurite.” You can only use each effect of “Kael, Keeper of Azurite” once per turn.
+[18843519] to: If this card is Normal or Special Summoned: Place 1 Azurite Counter on each “Azurite” monster you control. You can only use each effect of “Kael, Keeper of Azurite” once per turn.• You can remove 2 Azurite Counters from your field; Special Summon this card from your GY, and if you do, add 1 “Azurite” card from your Deck to your hand, except “Kael, Keeper of Azurite.”• You can remove 1 Azurite Counter from your field; Special Summon this banished card, but its effects are negated, then draw 1 card.
+[18843519] note: property 'effect' of card id 5447117 (Quanta, Node of Azurite) was changed
+[18843519] from: You can only control 1 “Quanta, Node of Azurite. You can banish 1 “Azurite” monster from your GY; Special Summon this card from your hand, but it cannot be used as Link Material. If this card is Normal or Special Summoned: You can Set 1 “Azurite” Spell directly from your Deck. You can only use this effect of “Quanta, Node of Azurite” once per turn. If an “Azurite” monster(s) you control would gain Azurite Counter(s), you can place 1 additional Azurite Counter on each of those monsters.
+[18843519] to: You can banish 1 “Azurite” monster from your GY; Special Summon this card from your hand, also, for the rest of this turn, you cannot Link Summon Link-4 or higher Link Monsters. If this card is Normal or Special Summoned: You can Set 1 “Azurite” Spell or Trap directly from your Deck. It can be activated this turn. You can only activate this effect of "Quanta, Node of Azurite" once per turn. If an “Azurite” monster(s) you control would gain Azurite Counter(s), you can place 1 additional Azurite Counter on each of those monsters.
+[18843519] note: property 'effect' of card id 5446308 (Unit Zero, Azurite Innovation) was changed
+[18843519] from: Cannot be destroyed by battle. If you control an “Azurite” monster: You can Special Summon this card from your hand, and if you do, place 1 Azurite Counter on a monster you control. You can remove 1 Azurite Counter from this card, then target 1 monster in your GY; either add it to your hand or Special Summon it, also you cannot Special Summon monsters for the rest of this turn, except Cyberse monsters. You can only activate each effect of “Unit Zero, Azurite Innovation” once per turn.
+[18843519] to: Cannot be destroyed by battle. If you control an “Azurite” monster: You can Special Summon this card from your hand, and if you do, place 1 Azurite Counter on a monster you control. You can remove 1 Azurite Counter from this card, then target 1 "Azurite" monster in your GY; either add it to your hand or Special Summon it, also you cannot Special Summon monsters for the rest of this turn, except Cyberse monsters. You can only activate each effect of “Unit Zero, Azurite Innovation” once per turn.
+[18843519] note: property 'effect' of card id 5447124 (Azurite Conduit) was changed
+[18843519] from: Once per turn, when an “Azurite” Xyz Monster is Xyz Summoned: Place 1 Azurite Counter on that monster for each material used for it's Xyz Summon. You can remove 3 Azurite Counters your field, then target 1 “Azurite” Xyz Monster you control; attach 1 “Azurite” monster in your GY or banishment to it as material. You can only activate this effect of “Azurite Conduit” once per turn.
+[18843519] to: While this card is face-up on the field, you cannot Link Summon Link-4 or higher Link Monsters. Once per turn, when an “Azurite” Xyz Monster is Xyz Summoned: Place 1 Azurite Counter on that monster for each material used for its Xyz Summon. (Quick Effect): You can remove Azurite Counters from cards you control to activate these effects; you can only activate each effect of “Azurite Conduit” once per turn.● 2: Target 1 card your opponent controls; negate its effects until the end of this turn.● 3: Target 1 “Azurite” monster in your GY or that is banished; Special Summon it.● 5: Add 1 “Azurite” monster from your Deck or GY to your hand.● 15: Target any number of “Azurite” monsters in your GY and/or that are banished; Special Summon them.
+[18843519] note: property 'card_type' of card id 5447124 (Azurite Conduit) was changed
+[18843519] from: Spell
+[18843519] to: Trap
+[18843519] note: property 'effect' of card id 5446358 (Azurite Final Citadel) was changed
+[18843519] from: "Azurite" monsters you control gain 200 ATK for each Azurite Counter on them. If an “Azurite” monster(s) you control are Summoned: You can place 1 Azurite Counter on each of those monsters. If an “Azurite” monster(s) you control are sent from the field to the GY: You can banish those monster(s); place 1 Azurite Counter on a monster you control. You can remove 5 Azurite Counters from your field, then target 1 Cyberse monster in your GY or banishment; Special Summon it. You can only activate this effect of Azurite Final Citadel" once per turn. While this card is face-up on the field, you cannot Link Summon Link-4 or higher Link Monsters.
+[18843519] to: "Azurite" monsters you control gain 200 ATK for each Azurite Counter on them. If an “Azurite” monster(s) you control are Summoned: You can place 1 Azurite Counter on each of those monsters. If an “Azurite” monster(s) you control are sent from the field to the GY: You can banish those monster(s); place 1 Azurite Counter on each monster you control. You can remove 3 Azurite Counters from your field, then target 1 Non-XYZ "Azurite" monster your GY or banishment; Special Summon it. You can only activate this effect of Azurite Final Citadel" twice per turn. While this card is face-up on the field, you cannot Link Summon Link-4 or higher Link Monsters.
+[18843519] note: property 'effect' of card id 5447118 (Azurite Infusion) was changed
+[18843519] from: Target 1 "Azurite" monster in your GY; Special Summon it, then, immediately after this effect resolves, you can Xyz Summon 1 "Azurite" Xyz Monster using that monster as material, and if you do, place 1 Azurite Counter on it. You can only activate 1 "Azurite Infusion" per turn.
+[18843519] to: Target 1 "Azurite" monster in your GY or banishment; Special Summon it, then, immediately after this effect resolves, you can Xyz Summon 1 "Azurite" Xyz Monster using that monster as material, and if you do, place 1 Azurite Counter on it. You can banish this card from your GY; then target 1 "Azurite" monster in your GY; add it to your hand. You can only activate each effect of "Azurite Infusion" once per turn.
+[18843519] note: property 'effect' of card id 5447101 (Aegis, Bastion of Azurite) was changed
+[18843519] from: 2 Level 4 "Azurite" Monsters. Other Monsters you control with Azurite Counters cannot be targeted or destroyed by card effects. When a card or effect is activated (Quick Effect): You can detach a material from this card and remove two Azurite Counters from the field; negate the activation, and if you do, destroy that card. You can only use this effect of "Aegis, Bastion of Azurite" once per turn.
+[18843519] to: 2 Level 4 "Azurite" Monsters.Gains 300 ATK for each material attached to it. Once per turn: You can target 1 face-up Attack Position monster on the field; attach it to this card as material. When a card or effect is activated (Quick Effect): You can detach a material from this card and remove two Azurite Counters from the field; negate the activation, and if you do, destroy that card. You can only use this effect of "Aegis, Bastion of Azurite" once per turn.
+[18843519] note: property 'effect' of card id 5449716 (Nyx, Warden of Azurite) was changed
+[18843519] from: 2 level 4 Cyberse Monsters.If this card is Xyz Summoned: Place 1 Azurite Counter on each “Azurite” monster you control. You can detach 1 material from this card; Special Summon 1 “Azurite” monster from your Deck in Defense Position, but it cannot activate its effects, also, you cannot Special Summon Monsters for the rest of this turn, except Cyberse monsters. If this card is sent to the GY: You can place 2 Azurite Counters on monsters you control. You can only activate each effect of "Nyx, Warden of Azurite" once per turn.
+[18843519] to: 2 level 4 Cyberse Monsters.If this card is Xyz Summoned: Place 1 Azurite Counter on each “Azurite” monster you control. You can detach 1 material from this card; Special Summon 1 “Azurite” monster from your Deck in Defense Position, but it cannot activate its effects, also, you cannot Special Summon Monsters for the rest of this turn, except Cyberse monsters, also, you cannot Link Summon Link-4 or higher Link Monsters for the rest of the turn. If this card is sent to the GY: You can place 2 Azurite Counters on a monster you control. You can only activate each effect of "Nyx, Warden of Azurite" once per turn
+[18843519] note: property 'effect' of card id 5447104 (Oblivion, Singularity of Azurite) was changed
+[18843519] from: 3 Level 4 “Azurite” monsters.Once per turn: You can detach 1 material; place 2 Azurite Counters on this card. You can remove 1 Azurite Counters from this card; target one card your opponent controls; banish it, face-down. You can only activate this effect of Oblivion, Singularity of Azurite once per turn. If this card has 4 or more Azurite Counters: It cannot be targeted or destroyed by card effects, except by "Azurite" cards.
+[18843519] to: 2 Level 4 “Azurite” monsters.Once per turn: You can detach 1 material from this card; place 2 Azurite Counters on this card. You can remove 2 Azurite Counters from this card and target 1 card your opponent controls (Quick Effect); banish it. You can only activate this effect of Oblivion, Singularity of Azurite twice per turn. While this card has 4 or more Azurite Counters, it cannot be destroyed by card effects.
+[18843519] note: property 'effect' of card id 5447109 (Sabre, Core of Azurite) was changed
+[18843519] from: 2 Level 4 Cyberse Monsters.While this card has material, it gains 300 ATK for each Azurite Counter on monsters you control. Once per turn: You can detach 1 material from this card, then target 1 “Azurite” monster in your GY or banishment; Special Summon it, and if you do, place an Azurite counter on it. You can only use each effect of “Sabre, Core of Azurite” once per turn.
+[18843519] to: 2 Level 4 Cyberse monstersOther “Azurite” monsters you control with Azurite Counters cannot be targeted or destroyed by card effects. You can detach 1 material from this card, then target 1 “Azurite” monster in your GY or that is banished; Special Summon it, then apply the following effect based on where you Special Summoned it from, also, you cannot Link Summon Link-4 or higher Link Monsters for the rest of the turn.● GY: Place 1 Azurite Counter on it, then draw 1 card.● Banishment: Add 1 “Azurite” monster from your Deck to your hand.You can only use each effect of “Sabre, Core of Azurite” once per turn.
+[18843519] note: property 'atk' of card id 5447109 (Sabre, Core of Azurite) was changed
+[18843519] from: 2500
+[18843519] to: 2300
+[19091747] note: property 'effect' of card id 5046281 (Fortunate Hirano) was changed
+[19091747] from: 1 Tuner + 1+ non-Tuner monstersIf this card is Synchro Summoned: You can send the top 6 cards of your opponent's Deck to the GY, then apply the following effects based on the different card types (Monster, Spell, or Trap) sent to the GY this way. Cards sent to the GY by this effect cannot use their effects while you control this face-up card.● 1: Take 1000 Damage.● 2+: Set 1 card from your opponent's GY to your field.● 3: Draw 1 card, then you can Special Summon 1 monster from your hand.If 2 cards with the same card type are sent to either GY at the same time: You can target 1 card your opponent controls; destroy it. You can only use each effect of "Fortunate Hirano" once per turn.
+[19091747] to: 1 Tuner + 1+ non-Tuner monstersIf this card is Synchro Summoned: You can send the top 6 cards of your opponent's Deck to the GY, then apply the following effects based on the different card types (Monster, Spell, or Trap) sent to the GY this way. Cards sent to the GY by this effect cannot activate their effects while you control this face-up card.● 1: Take 1000 Damage.● 2+: Set 1 card from your opponent's GY to your field.● 3: Draw 1 card, then you can Special Summon 1 monster from your hand.If 2 cards with the same card type are sent to either GY at the same time: You can target 1 card your opponent controls; destroy it. You can only use each effect of "Fortunate Hirano" once per turn.
+[19091747] note: [+] added new card 5324283 (Abyssal Hunters, Under Tides)
+[19091747] note: [+] added new card 5570438 (Yu, Twelfth Fragment of the Feranmut)
+[19091747] note: [+] added new card 5498663 (Guardian Of The Earth's Core)
+[19091747] note: [+] added new card 5498683 (Projective 72: Rotation Station)
+[19091747] note: property 'effect' of card id 4318550 (Monoceros Caeli, the All-Devouring Narwhal) was changed
+[19091747] from: 1+ Fish Tuners + 1+ non-Tuner monstersThis Synchro Summoned card can attack all monsters your opponent controls, once each. During the Main Phase (Quick Effect): You can target 1 card on the field or in either GY; banish it, and if you do, all WATER monsters you control gain 200 ATK until the end of the next turn, also this card cannot use this effect next turn. You can only use this effect of “Monoceros Caeli, the All-Devouring Narwhal” once per turn. You can only control 1 “Monoceros Caeli, the All-Devouring Narwhal”.
+[19091747] to: 1+ Fish Tuners + 1+ non-Tuner monsters(This card’s Attribute is also always treated as DARK.)This Synchro Summoned card cannot be destroyed by your opponent’s card effects. If this card is Synchro Summoned: You can banish any number of Fish monsters from your field and/or GY; this card gains 300 ATK for each and you gain 500 LP for each, also this card can declare up to that number of attacks on monsters your opponent controls during your next Battle Phase. When your opponent activates a card or effect (Quick Effect): You can Special Summon this banished card, and if you do, banish that opponent’s card. You can only use each effect of “Monoceros Caeli, the All-Devouring Narwhal” once per turn.
+[19281748] note: [+] added new card 4461529 (Jaunty Jelly of Shi-Zer-Mu)
+[19281748] note: [+] added new card 4461515 (Gailing Gryphon of Shi-Zer-Mu)
+[19281748] note: [+] added new card 4460869 (Malevolent Minnow of Shi-Zer-Mu)
+[19281748] note: [+] added new card 4460833 (Wallowing Whale of Shi-Zer-Mu)
+[19281748] note: [+] added new card 4460816 (Brine Barnacle of Shi-Zer-Mu)
+[19281748] note: [+] added new card 4460677 (Shi-Zer-Mu Discovery)
+[19281748] note: [+] added new card 4460405 (Shi-Zer-Mu, Wake of Worlds)
+[19281748] note: [+] added new card 5201491 (Garcia, First Mate of Stultifera Navis)
+[19281748] note: [+] added new card 5159547 (Oath to Find Stultifera Navis)
+[main] note: [-] removed old card 3149878 (Finflame Sharkrust)
+[main] note: [-] removed old card 3149715 (Finflame Magmarlin)
+[main] note: [-] removed old card 3149748 (Finflame Lavaiathan)
+[main] note: [-] removed old card 3147982 (Finflame Searquill)
+[main] note: [-] removed old card 3138781 (Finflame Mantleskipper)
+[main] note: [-] removed old card 3286894 (Finflame Magma Lake)
+[main] note: [-] removed old card 3293299 (Finflame Kindlemerging)
+[main] note: [-] removed old card 3150033 (Finflame Embersplash)
+[main] note: [-] removed old card 3206861 (Finflame Bottom Scorcher)
+[main] note: [-] removed old card 3149794 (Finflame Ascension)
+[main] note: [-] removed old card 4325917 (S:P Night Force)
+[main] note: [-] removed old card 3971152 (Aroates, God of the Wilds)
+[main] note: [-] removed old card 4405987 (Finflame Goldspark)
+[main] note: [-] removed old card 4327082 (Dragon Tribe Fusion)
+[main] note: [-] removed old card 2127278 (Jasilisk Warding)
