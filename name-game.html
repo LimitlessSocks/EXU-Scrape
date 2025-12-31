@@ -53,7 +53,6 @@
 <article>
     <h2>Guess <span class="guess-target-output">100</span> card names!</h2>
     <div id="start-area">
-        <div id="message" class="large"></div>
         <span>Format loaded: <span id="loaded-format">Loading&hellip;</span></span>
         <p>Card names are case insensitive, but punctuation sensitive. You can press the Enter key to submit, or use the button.</p>
         <p><label>I want to guess <input id="guess-target" value=100 min=1 type="number"> cards.</label></p>
@@ -73,10 +72,13 @@
                 <tr>
                     <th>Guess</th>
                     <th>Feedback</th>
+                    <th>Card name</th>
                 </tr>
             </thead>
             <tbody id="output"></tbody>
         </table>
+        <div id="message" class="large"></div>
+        <button id="go-back" class="large">Back</button>
     </div>
 </article>
 <div id="options" class="square-button right-button">

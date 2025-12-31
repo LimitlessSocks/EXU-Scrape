@@ -32,6 +32,11 @@ let onLoad = async function () {
         }
     };
     const init = () => {
+        $("#start-area").hide();
+        $("#options").show();
+        $("#play-area").show();
+        $("#message").text("");
+        
         Object.assign(GameState, {
             timerState: null,
             finalTime: null,
@@ -41,14 +46,23 @@ let onLoad = async function () {
         if(Number.isNaN(GameState.guessTarget) || GameState.guessTarget < 0 || GameState.guessTarget > Object.keys(CardViewer.Database.cards).length) {
             $("#guess-target").val(GameState.guessTarget = 100);
         }
+        
         syncTargetOutput();
+        
         // initialize cache
-        CardViewer.getCardByName("");
+        CardViewer.getCardByPermissiveName("");
         $("#output").empty();
     };
     $("#guess-target").on("input", syncTargetOutput);
     $("#guess-target").change(syncTargetOutput);
     syncTargetOutput();
+    
+    $("#go-back").click(() => {
+        stopTimer();
+        $("#start-area").show();
+        $("#options").show();
+        $("#play-area").hide();
+    });
     
     let updateTimer = (timestamp) => {
         if(!GameState.timeStart) {
@@ -62,25 +76,24 @@ let onLoad = async function () {
         updateTimer();
     };
     let stopTimer = () => {
+        if(!GameState.timeStart) {
+            return;
+        }
         GameState.finalTime = Date.now() - GameState.timeStart;
         GameState.timeStart = null;
         return GameState.finalTime;
     };
-    let toggle = () => {
-        $("#start-area").toggle();
-        $("#options").toggle();
-        $("#play-area")[0].classList.toggle("hidden");
-    };
     let shutdown = () => {
-        toggle();
+        $("#options").show();
+        $("#go-back").show();
         $("#message").text(`Congratulations! You guessed ${GameState.guessTarget} cards in ${GameState.finalTime / 1000} seconds!`);
     };
-    let submit = () => {
+    let submit = ({ probe } = { probe: false }) => {
         let userGuess = cardInput.val().trim();
         if(!userGuess) {
             return;
         }
-        let card = CardViewer.getCardByName(userGuess);
+        let card = CardViewer.getCardByPermissiveName(userGuess);
         let feedback;
         let feedbackClass;
         if(card) {
@@ -101,26 +114,29 @@ let onLoad = async function () {
             feedback = "No such card (spelling?)";
             feedbackClass = "wrong";
         }
-        $("#output").prepend($("<tr>").append(
-            $("<td>").text(userGuess),
-            $("<td>").text(feedback).addClass(feedbackClass),
-        ));
+        if(!probe || feedbackClass === "right") {
+            $("#output").prepend($("<tr>").append(
+                $("<td>").text(userGuess),
+                $("<td>").text(feedback).addClass(feedbackClass),
+                $("<td>").text(card ? card.name : ""),
+            ));
+            cardInput.val("");
+        }
         if(GameState.guessedCardNames.size === GameState.guessTarget) {
             stopTimer();
             shutdown();
         }
-        else {
-            cardInput.val("");
-        }
     };
     cardInput.keydown((ev) => {
         if(ev.originalEvent.key === "Enter") {
-            submit();
+            submit({ probe: false });
         }
     });
-    $("#submit").click(submit);
+    cardInput.on("input", () => {
+        submit({ probe: true });
+    });
+    $("#submit").click(() => submit({ probe: false }));
     $("#name100").click(() => {
-        toggle();
         init();
         cardInput.val("");
         cardInput.focus();

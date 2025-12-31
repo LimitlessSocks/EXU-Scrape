@@ -51,6 +51,24 @@ CardViewer.getCardByName = name => {
     ];
 };
 
+const stripToPermissiveName = str => str.toLowerCase().replace(/[^a-z0-9]/g, "");
+CardViewer.initCardIdsByPermissiveName = () => {
+    CardViewer.Database.cardsIdsByPermissiveName = {};
+    for(let card of Object.values(CardViewer.Database.cards)) {
+        let key = stripToPermissiveName(card.name);
+        CardViewer.Database.cardsIdsByPermissiveName[key] ??= [];
+        CardViewer.Database.cardsIdsByPermissiveName[key].push(card.id);
+    }
+};
+CardViewer.getCardByPermissiveName = name => {
+    if(!CardViewer.Database.cardsIdsByPermissiveName) {
+        CardViewer.initCardIdsByPermissiveName();
+    }
+    return CardViewer.Database.cards[
+        CardViewer.Database.cardsIdsByPermissiveName[stripToPermissiveName(name)]?.[0]
+    ];
+};
+
 CardViewer.getCardLink = card =>
     `https://limitlesssocks.github.io/EXU-Scrape/card?id=${card.id}`;
 
