@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3RKXFLZRZ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q3RKXFLZRZ');
+    </script>
+    <title>EXU Dev Tools</title>
+    <meta charset="UTF-8">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./card-viewer.js"></script>
+    <script src="./name-game.js"></script>
+    <link rel="STYLESHEET" href="./card-viewer.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        #start-area, #play-area {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .large {
+            font-size: 2em;
+        }
+        #play-area.hidden {
+            display: none;
+        }
+        .warn {
+            color: yellow;
+        }
+        .wrong {
+            color: red;
+        }
+        .right {
+            color: green;
+        }
+        tr, th {
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+<h1 class="title"><a href="./">EXU: Extinction Unleashed</a></h1>
+<article>
+    <h2>Guess <span class="guess-target-output">100</span> card names!</h2>
+    <div id="start-area">
+        <div id="message" class="large"></div>
+        <span>Format loaded: <span id="loaded-format">Loading&hellip;</span></span>
+        <p>Card names are case insensitive, but punctuation sensitive. You can press the Enter key to submit, or use the button.</p>
+        <p><label>I want to guess <input id="guess-target" value=100 min=1 type="number"> cards.</label></p>
+        <button class="large" id="name100">Start</button>
+        <!-- <button disabled>Name 100 according to filter (coming soon&trade;)</button> -->
+    </div>
+    <div id="play-area" class="hidden">
+        <div>
+            <input class="large" id="card-input">
+            <button class="large" id="submit">Enter</button>
+        </div>
+        <div>
+            Time: <span id="timer">XX:XX</span>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Guess</th>
+                    <th>Feedback</th>
+                </tr>
+            </thead>
+            <tbody id="output"></tbody>
+        </table>
+    </div>
+</article>
+<div id="options" class="square-button right-button">
+    <div id="showOptions" class="toggleIcon"><img src="./res/options.png" /></div>
+</div>
+</body>
+</html>
