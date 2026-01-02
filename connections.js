@@ -11,22 +11,22 @@ const Classifiers = [
     {
         type: ClassifierFrequency,
         format: val => `${val} ATK`,
-        fn: card => card.atk,
+        fn: card => CardViewer.Filters.isMonster(card) ? card.atk : null,
     },
     {
         type: ClassifierFrequency,
         format: val => `${val} DEF`,
-        fn: card => card.def,
+        fn: card => CardViewer.Filters.isMonster(card) ? card.def : null,
     },
     {
         type: ClassifierFrequency,
         format: val => `Level ${val}`,
-        fn: card => card.level,
+        fn: card => CardViewer.Filters.isMonster(card) ? card.level : null,
     },
     {
         type: ClassifierFrequency,
         format: val => `${val}-Attribute`,
-        fn: card => card.attribute,
+        fn: card => CardViewer.Filters.isMonster(card) ? card.attribute : null,
     },
     {
         type: ClassifierFrequency,
@@ -36,6 +36,7 @@ const Classifiers = [
     {
         type: ClassifierFrequency,
         format: val => `${val}`,
+        // e.g. Quick-Play Spell
         fn: card => CardViewer.Filters.isMonster(card) ? null : `${card.type} ${card.card_type}`,
     },
     {
@@ -46,7 +47,7 @@ const Classifiers = [
     {
         type: ClassifierFrequency,
         format: val => `${val} combined ATK/DEF`,
-        fn: card => +card.atk + +card.def,
+        fn: card => CardViewer.Filters.isMonster(card) ? +card.atk + +card.def : null,
     },
     {
         type: ClassifierFrequency,
