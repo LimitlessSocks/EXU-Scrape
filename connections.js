@@ -103,6 +103,10 @@ const isReturnValueValid = value =>
 const parseConnections = cardList => {
     const foundConnections = {};
     for(let card of cardList) {
+        if(!card) {
+            console.error("Could not find card", card);
+            continue;
+        }
         for(let classifier of Classifiers) {
             let { type, format, fn, isValid } = classifier;
             isValid ??= isReturnValueValid;
@@ -165,7 +169,10 @@ window.addEventListener("load", async function () {
         }
         
         connOutput.empty();
-        let conns = parseConnections(cardList.map(cardId => CardViewer.Database.cards[cardId]));
+        let cards = cardList.map(cardId =>
+            CardViewer.Database.cards[cardId] ?? console.error("Could not find card with ID", cardId)
+        ).filter(card => !!card);
+        let conns = parseConnections(cards);
         conns.forEach(([label, cards]) => {
             let connTag = cards.length < 3 || cards.length > 6 ? "ignore" : cards.length;
             let connBody = $(`<div class="connections-group connect-${connTag}">`).append(

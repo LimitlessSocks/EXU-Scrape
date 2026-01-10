@@ -1769,7 +1769,24 @@ CardViewer.Compose = {
     },
 };
 
+CardViewer.detectErrorForCompose = (card) => {
+    let message = null;
+    if(!card) {
+        message = "No card found";
+    }
+    if(!message) {
+        return null;
+    }
+    console.error("Compose error", card);
+    return $("<div>").text("Error rendering card: " + message);
+};
+
 CardViewer.composeResultSmall = function (card) {
+    let errorResult = CardViewer.detectErrorForCompose(card);
+    if(errorResult) {
+        return errorResult;
+    }
+    
     let name = CardViewer.Compose.getNameHeader(card);
     
     let { outer, inner } = CardViewer.Compose.makeResult(card);
@@ -1783,6 +1800,11 @@ CardViewer.composeResultSmall = function (card) {
 };
 
 CardViewer.composeResult = function (card) {
+    let errorResult = CardViewer.detectErrorForCompose(card);
+    if(errorResult) {
+        return errorResult;
+    }
+    
     let { outer, inner } = CardViewer.Compose.makeResult(card);
     
     let name = CardViewer.Compose.getNameHeader(card);
@@ -1817,6 +1839,11 @@ CardViewer.composeResult = function (card) {
 };
 
 CardViewer.composeResultDense = function (card) {
+    let errorResult = CardViewer.detectErrorForCompose(card);
+    if(errorResult) {
+        return errorResult;
+    }
+    
     let { outer, inner } = CardViewer.Compose.makeResult(card);
     outer.addClass("dense-result");
     

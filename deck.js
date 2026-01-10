@@ -576,6 +576,11 @@ CardViewer.Editor.recalculateView = function () {
 };
 
 CardViewer.composeResultCardPreview = function (card) {
+    let errorResult = CardViewer.detectErrorForCompose(card);
+    if(errorResult) {
+        return errorResult;
+    }
+    
     let img = $("<img class=img-result>").attr("src", card.src);
     let name = $("<h3 class=result-name>").text(card.name);
     
@@ -756,11 +761,15 @@ const getLinkArrowImages = function (arrows) {
 };
 
 CardViewer.composeResultDeckPreview = function (card) {
-    // console.log(card);
     if(!card) {
         console.warn("No card passed to deck preview (" + card + ")");
         return $("");
     }
+    let errorResult = CardViewer.detectErrorForCompose(card);
+    if(errorResult) {
+        return errorResult;
+    }
+    
     card.src = card.src || (
         "https://www.duelingbook.com/images/low-res/" + card.id + ".jpg"
     );

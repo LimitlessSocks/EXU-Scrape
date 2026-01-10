@@ -107,6 +107,10 @@ const getFirstMatchCard = (name) => {
 };
 
 CardViewer.composeResultMinimal = function (card) {
+    let errorResult = CardViewer.detectErrorForCompose(card);
+    if(errorResult) {
+        return errorResult;
+    }
     let res = CardViewer.composeResultSmall(card);
     let inner = res.find(".result-inner");
     if(card.card_type === "Monster") {
