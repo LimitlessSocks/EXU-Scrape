@@ -2172,7 +2172,7 @@ CardViewer.monkeyPatchFormat = formatData => {
         CardViewer.Database.cards[card.id] = {
             src,
             ...card,
-            exu_limit: banlist[card.id] ?? 3,
+            exu_limit: banlist[card.custom_id ?? card.id] ?? 3,
         };
     }
 };
@@ -2323,6 +2323,8 @@ CardViewer.attachGlobalSearchOptions = (el, options = {}) => {
             CardViewer.composeStrategy = CardViewer.composeResultDense;
         }
     }
+    
+    let prependPath = options.prependPath ?? "";
 
     // prompt behavior for the button
     let optionsPrompt = new Prompt("Options", () => {
@@ -2368,7 +2370,7 @@ CardViewer.attachGlobalSearchOptions = (el, options = {}) => {
                     <div class="label-text">Upload format:</div>
                     <div class="label-value small square-button">
                         <div class="toggleIcon">
-                            <img src="./res/upload.png"/>
+                            <img src="./${prependPath}/res/upload.png"/>
                         </div>
                     </div>
                 </label>
