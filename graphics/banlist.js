@@ -227,4 +227,20 @@ window.addEventListener("load", async function () {
     });
     
     updateDisplay();
+    
+    CardViewer.attachGlobalSearchOptions(
+        $("#showOptions"),
+        {
+            prependPath: "..",
+            monkeyPatch(data) {
+                // document.querySelector(".title a").textContent = `${data.name} Query`;
+                updateDisplay();
+            },
+            // denseToggle: updateDisplay,
+            formatSelect(data) {
+                // todo
+                updateDisplay();
+            },
+        },
+    );
 });
