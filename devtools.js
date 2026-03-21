@@ -61,7 +61,7 @@ let onLoad = async function () {
         
         await decklistsLoaded();
         // match against single card
-        const matchingLists = cardSourcesMatchingCards([ value ]);
+        let matchingLists = cardSourcesMatchingCards([ value ]);
         
         results.innerHTML = "";
         
