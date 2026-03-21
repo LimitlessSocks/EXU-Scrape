@@ -13,6 +13,8 @@ h2 {
     background-color: rgba(255,255,255,0.1);
     padding: 5px 10px;
     margin: 10px 0;
+    margin-top: 0;
+    text-align: center;
 }
 
 table td, table th {
@@ -21,4 +23,36 @@ table td, table th {
 
 #originalResults td:nth-child(3) {
     white-space: pre-wrap;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+section {
+    padding: 8px 0;
+    background-color: #111;
+    border: 1px solid;
+    border-radius: 8px;
+    border-width: 3px;
+    border-color: #555;
+}
+section.selected {
+    border-color: yellow;
+    border-width: 3px;
+}
+section > *:not(h2) {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.card-results {
+    display: flex;
+    flex-wrap: wrap;
+}
+.result {
+    cursor: pointer;
+}
+.marked {
+    filter: grayscale(100%) opacity(0.5);
 }

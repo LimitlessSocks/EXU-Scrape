@@ -1,66 +1,101 @@
 // todo
 let onLoad = async function () {
-    await CardViewer.Database.initialReadAll("./db.json");
+    const syncHighlight = () => {
+        let target;
+        try {
+            target = document.querySelector(window.location.hash);
+        }
+        catch {}
+        console.log(target, window.location.hash);
+        let section = target?.closest("section");
+        document.querySelectorAll("section").forEach(otherSection => {
+            otherSection.classList.toggle("selected", otherSection === section);
+        });
+    };
     
-    let totalComposite;
-    const MAX_LENGTH = 10;
+    document.querySelectorAll("a").forEach(el => el.addEventListener("click", () => {
+        setTimeout(syncHighlight, 50);
+    }));
+    syncHighlight();
+    
+    await CardViewer.Database.initialReadAll("./db.json");
+    let decklists;
+    let decklistsCallbacks = [];
+    const decklistsLoaded = () => 
+        decklists
+            ? Promise.resolve(decklists)
+            : new Promise(resolve => decklistsCallbacks.push(resolve));
+    
     fetch("./totalComposite.json").then(async (data) => {
-        let decklists = await data.json();
-        let originalToFind = document.getElementById("originalToFind");
-        let originalResults = document.getElementById("originalResults");
-        let results = originalResults.querySelector("tbody");
-        
-        const findResults = () => {
-            let { value } = originalToFind;
-            if(!value) {
-                return;
-            }
-            
-            value = value.toLowerCase();
-            
-            let messages = [];
-            
-            results.innerHTML = "";
-            let matchingLists = Object.entries(decklists).map(([id, decklist]) => {
-                let allCards = [].concat(decklist.main, decklist.side, decklist.extra);
-                let matches = allCards.filter(card => card.id == value || card.name?.toLowerCase()?.includes(value));
-                return { id, name: decklist.name, matches };
-            })
-            .filter(({ matches }) => matches.length !== 0);
-            
-            if(matchingLists.length > MAX_LENGTH) {
-                matchingLists = matchingLists.slice(0, MAX_LENGTH);
-                messages.push(`Showing first 10 of ${matchingLists.length} results`);
-            }
-            
-            for(let { id, name, matches } of matchingLists) {
-                let tr = document.createElement("tr");
-                let idTd = document.createElement("td");
-                let nameTd = document.createElement("td");
-                let matchTd = document.createElement("td");
-                
-                idTd.textContent = id;
-                nameTd.textContent = name;
-                matchTd.textContent = matches.map(match => [
-                    match.name,
-                    match.id,
-                    match.username,
-                    match.card_type,
-                    match.type,
-                ].join(" · ")).join("\n");
-                
-                tr.appendChild(idTd);
-                tr.appendChild(nameTd);
-                tr.appendChild(matchTd);
-                
-                results.appendChild(tr);
-            }
-        };
-        
-        findResults();
-        originalToFind.addEventListener("input", findResults);
-        
+        decklists = await data.json();
+        decklistsCallbacks.forEach(resolve => resolve(decklists));
     });
+    
+    
+    // takes an ID or a card name (case insensitive, punctuation sensitive)
+    const cardSourcesMatchingCards = (cardIdentifiers) => {
+        const decklistsWithMatches = Object.entries(decklists)
+            .map(([id, decklist]) => {
+                let allCards = [].concat(decklist.main, decklist.side, decklist.extra);
+                let matches = allCards.filter(card =>
+                    cardIdentifiers.some(cardIdentifier => card.id == cardIdentifier || card.name?.toLowerCase()?.includes(cardIdentifier.toLowerCase()))
+                );
+                return { id, name: decklist.name, matches };
+            });
+        console.log(decklistsWithMatches);
+        return decklistsWithMatches.filter(({ matches }) => matches.length !== 0);
+    };
+    
+    const MAX_LENGTH = 10;
+    let originalToFind = document.getElementById("originalToFind");
+    let originalResults = document.getElementById("originalResults");
+    let results = originalResults.querySelector("tbody");
+    
+    const findResults = async () => {
+        let { value } = originalToFind;
+        if(!value) {
+            return;
+        }
+        
+        let messages = [];
+        
+        await decklistsLoaded();
+        // match against single card
+        const matchingLists = cardSourcesMatchingCards([ value ]);
+        
+        results.innerHTML = "";
+        
+        if(matchingLists.length > MAX_LENGTH) {
+            matchingLists = matchingLists.slice(0, MAX_LENGTH);
+            messages.push(`Showing first 10 of ${matchingLists.length} results`);
+        }
+        
+        for(let { id, name, matches } of matchingLists) {
+            let tr = document.createElement("tr");
+            let idTd = document.createElement("td");
+            let nameTd = document.createElement("td");
+            let matchTd = document.createElement("td");
+            
+            idTd.textContent = id;
+            nameTd.textContent = name;
+            matchTd.textContent = matches.map(match => [
+                match.name,
+                match.id,
+                match.username,
+                match.card_type,
+                match.type,
+            ].join(" · ")).join("\n");
+            
+            tr.appendChild(idTd);
+            tr.appendChild(nameTd);
+            tr.appendChild(matchTd);
+            
+            results.appendChild(tr);
+        }
+    };
+    
+    findResults();
+    originalToFind.addEventListener("input", findResults);
     
     const updateCardNameToLinkOutput = () => {
         let value = $("#cardNameToLinkInput").val();
@@ -384,6 +419,53 @@ let onLoad = async function () {
     };
     genesysLflist.on("input", updateLflistOutput);
     updateLflistOutput();
+    
+    const separateCardNames = text =>
+        text.split("\n").flatMap(line => {
+            const splitByBars = line.split(" | ");
+            if(splitByBars.length > 1) {
+                return splitByBars;
+            }
+            return line;
+        }).join("\n");
+    
+    const listOfOriginalCardNames = document.getElementById("listOfOriginalCardNames");
+    const matchingListsOutput = $("#matchingListsOutput");
+    const updateCardMultiNamesOutput = async () => {
+        if(!listOfOriginalCardNames.value) {
+            return;
+        }
+        listOfOriginalCardNames.value = separateCardNames(listOfOriginalCardNames.value);
+        
+        let cardsToSearch = listOfOriginalCardNames.value.split("\n");
+        await decklistsLoaded();
+        console.log(cardsToSearch);
+        const matchingDecklists = cardSourcesMatchingCards(cardsToSearch);
+        matchingListsOutput.empty();
+        matchingDecklists.forEach(decklistInfo => {
+            const { id, name, matches } = decklistInfo;
+            const url = "https://www.duelingbook.com/deck?id=" + id;
+            const cards = $("<div class=card-results>");
+            matches
+                .sort((a, b) => a.name.localeCompare(b.name))
+                .forEach(matchCard => {
+                    const exuCard = CardViewer.Database.cards[matchCard.id];
+                    const result = CardViewer.composeResultSmall(exuCard);
+                    result.click(() => {
+                        result[0].classList.toggle("marked");
+                    });
+                    cards.append(result);
+                });
+            const fragment = $("<div>").append(
+                $(`<h3><a href="${url}" target="_blank">${escapeXMLString(name)}</a></h3>`),
+                cards,
+            );
+            matchingListsOutput.append(fragment);
+        });
+    };
+    
+    listOfOriginalCardNames.addEventListener("change", updateCardMultiNamesOutput);
+    updateCardMultiNamesOutput();
 };
 
 window.addEventListener("load", onLoad);
