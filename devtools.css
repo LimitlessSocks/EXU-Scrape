@@ -51,7 +51,7 @@ section > *:not(h2) {
     flex-wrap: wrap;
 }
 .result {
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .marked {
     filter: grayscale(100%) opacity(0.5);

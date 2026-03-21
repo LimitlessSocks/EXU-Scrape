@@ -32,13 +32,16 @@ let onLoad = async function () {
     });
     
     
+    const cardMatchesIdOrName = (card, cardIdentifier) =>
+        card.id == cardIdentifier || card.name?.toLowerCase()?.includes(cardIdentifier.toLowerCase());
+    
     // takes an ID or a card name (case insensitive, punctuation sensitive)
     const cardSourcesMatchingCards = (cardIdentifiers) => {
         const decklistsWithMatches = Object.entries(decklists)
             .map(([id, decklist]) => {
                 let allCards = [].concat(decklist.main, decklist.side, decklist.extra);
                 let matches = allCards.filter(card =>
-                    cardIdentifiers.some(cardIdentifier => card.id == cardIdentifier || card.name?.toLowerCase()?.includes(cardIdentifier.toLowerCase()))
+                    cardIdentifiers.some(cardIdentifier => cardMatchesIdOrName(card, cardIdentifier))
                 );
                 return { id, name: decklist.name, matches };
             });
@@ -433,6 +436,7 @@ let onLoad = async function () {
     const matchingListsOutput = $("#matchingListsOutput");
     const updateCardMultiNamesOutput = async () => {
         if(!listOfOriginalCardNames.value) {
+            matchingListsOutput.empty();
             return;
         }
         listOfOriginalCardNames.value = separateCardNames(listOfOriginalCardNames.value);
@@ -441,20 +445,44 @@ let onLoad = async function () {
         await decklistsLoaded();
         console.log(cardsToSearch);
         const matchingDecklists = cardSourcesMatchingCards(cardsToSearch);
+        const cardsWeCouldNotFind = cardsToSearch.filter(cardName =>
+            !matchingDecklists.some(({ matches }) => matches.some(card => cardMatchesIdOrName(card, cardName)))
+        );
+        
         matchingListsOutput.empty();
+        if(cardsWeCouldNotFind.length) {
+            matchingListsOutput.append($(`<div><h3>Unrecognized cards</h3><ul>${cardsWeCouldNotFind.map(name => `<li>${name}</li>`).join("\n")}</ul></div>`));
+        }
+        
         matchingDecklists.forEach(decklistInfo => {
             const { id, name, matches } = decklistInfo;
             const url = "https://www.duelingbook.com/deck?id=" + id;
             const cards = $("<div class=card-results>");
+            let flaggedTooMany = false;
             matches
                 .sort((a, b) => a.name.localeCompare(b.name))
                 .forEach(matchCard => {
                     const exuCard = CardViewer.Database.cards[matchCard.id];
-                    const result = CardViewer.composeResultSmall(exuCard);
-                    result.click(() => {
-                        result[0].classList.toggle("marked");
-                    });
-                    cards.append(result);
+                    if(!exuCard) {
+                        cards.append($("<div>").text(`Could not find card ${matchCard.name} with id ${matchCard.id} in our database`).css({padding:"8px",color:"red"}));
+                    }
+                    else if(cards.children().length > 15) {
+                        if(!flaggedTooMany) {
+                            flaggedTooMany = true;
+                            cards.append($("<div>").text("(Further card renders snipped for performance reasons)"));
+                        }
+                        cards.append($("<div>").text(exuCard?.name).css({padding:"8px"}));
+                    }
+                    else if(exuCard) {
+                        const result = CardViewer.composeResultSmall(exuCard);
+                        result.contextmenu((ev) => {
+                            // console.log(ev);
+                            // if(ev.button !== 2) return;
+                            result[0].classList.toggle("marked");
+                            ev.preventDefault();
+                        });
+                        cards.append(result);
+                    }
                 });
             const fragment = $("<div>").append(
                 $(`<h3><a href="${url}" target="_blank">${escapeXMLString(name)}</a></h3>`),
@@ -465,6 +493,7 @@ let onLoad = async function () {
     };
     
     listOfOriginalCardNames.addEventListener("change", updateCardMultiNamesOutput);
+    $("#submitCardNames").click(updateCardMultiNamesOutput);
     updateCardMultiNamesOutput();
 };
 
