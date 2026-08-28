@@ -1,3 +1,7 @@
+# Cloning
+
+This repository uses submodules. Make sure to run `git submodule init`.
+
 # Workflow
 
  1. Run `scrape-in-browser.js` on the EXU DuelingBook account, download `totalComposite.json` and move to this directory

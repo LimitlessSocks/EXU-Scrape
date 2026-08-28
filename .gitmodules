@@ -1,0 +1,3 @@
+[submodule "Flowo"]
+	path = Flowo
+	url = https://github.com/LimitlessSocks/Flowo.git
